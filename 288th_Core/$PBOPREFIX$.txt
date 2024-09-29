@@ -1,0 +1,6 @@
+//<'288th_Core.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=288th_Core;
+Mikero=DePbo.dll.9.10;
+version=24042917;
+//PboType=Arma Addon;
+//</properties>

@@ -1,0 +1,4 @@
+//<'KA_Shotgun_Fix.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=KA_Shotgun_Fix;
+//PboType=Arma Addon;
+//</properties>

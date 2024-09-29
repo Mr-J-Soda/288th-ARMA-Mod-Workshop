@@ -1,0 +1,2669 @@
+class CfgPatches
+{
+	class 288th_Weapons
+	{
+		author = "Soda / Misriah 288";
+		addonRootClass = "288th_Core";
+		units[] = {};
+		weapons[] =
+		{
+
+		};
+		magazines[] =
+		{
+
+		};
+		ammo[] =
+		{
+
+		};
+		requiredVersion = 0.1;
+		requiredAddons[] = {
+			"288th_Core"
+		};
+	};
+};
+class CfgCloudlets
+{
+	class ImpactSparksPlasmaBlue1;
+	class ImpactSparksPlasmaBlue2;
+	class ImpactSparksPlasmaOrange1 : ImpactSparksPlasmaBlue1
+	{
+		color[] = { {1.3,0.98,0.69,-25} };
+		emissiveColor[] = { {15,5,1,1} };
+	};
+	class ImpactSparksPlasmaOrange2 : ImpactSparksPlasmaBlue2
+	{
+		color[] = { {1.3,0.98,0.69,-25} };
+		emissiveColor[] = { {15,5,1,1} };
+	};
+	class ImpactSparksPlasmaYellow1 : ImpactSparksPlasmaBlue1
+	{
+		color[] = { {1.6,1.6,0.5,-25} };
+		emissiveColor[] = { {10,10,1,1} };
+	};
+	class ImpactSparksPlasmaYellow2 : ImpactSparksPlasmaBlue2
+	{
+		color[] = { {1.6,1.6,0.5,-25} };
+		emissiveColor[] = { {10,10,1,1} };
+	};
+	class ImpactSparksPlasmaPurple1 : ImpactSparksPlasmaBlue1
+	{
+		color[] = { {0.4,0.1,1.5,-25} };
+		emissiveColor[] = { {10,1,15,1} };
+	};
+	class ImpactSparksPlasmaPurple2 : ImpactSparksPlasmaBlue2
+	{
+		color[] = { {0.4,0.1,1.5,-25} };
+		emissiveColor[] = { {10,1,15,1} };
+	};
+	class ImpactSparksPlasmaWhite1 : ImpactSparksPlasmaBlue1
+	{
+		color[] = { {25,25,25,-25} };
+		emissiveColor[] = { {25,25,25,1} };
+	};
+	class ImpactSparksPlasmaWhite2 : ImpactSparksPlasmaBlue2
+	{
+		color[] = { {25,25,25,-25} };
+		emissiveColor[] = { {25,25,25,1} };
+	};
+	class ImpactSparksPlasmaBlack1 : ImpactSparksPlasmaBlue1
+	{
+		color[] = { {0,0,0,0.75} };
+		emissiveColor[] = { {0,0,0,1} };
+	};
+	class ImpactSparksPlasmaBlack2 : ImpactSparksPlasmaBlue2
+	{
+		color[] = { {0,0,0,0.75} };
+		emissiveColor[] = { {0,0,0,1} };
+	};
+};
+
+class CfgLights
+{
+	class RocketLight;
+	class LightPlasmaBlue;
+	class SparksLightPlasmaBlue;
+	class LightPlasmaOrange : LightPlasmaBlue
+	{
+		color[] = { 1.3,0.98,0.69 };
+	};
+	class SparksLightPlasmaOrange : SparksLightPlasmaBlue
+	{
+		color[] = { 1.3,0.98,0.69 };
+	};
+	class LightPlasmaYellow : LightPlasmaBlue
+	{
+		color[] = { 1.6,1.6,0.5 };
+	};
+	class SparksLightPlasmaYellow : SparksLightPlasmaBlue
+	{
+		color[] = { 1.6,1.6,0.5 };
+	};
+	class LightPlasmaPurple : LightPlasmaBlue
+	{
+		color[] = { 0.4,0.1,1.5 };
+	};
+	class SparksLightPlasmaPurple : SparksLightPlasmaBlue
+	{
+		color[] = { 0.4,0.1,1.5 };
+	};
+	class LightPlasmaWhite : LightPlasmaBlue
+	{
+		color[] = { 25,25,25 };
+	};
+	class SparksLightPlasmaWhite : SparksLightPlasmaBlue
+	{
+		color[] = { 25,25,25 };
+	};
+	class LightPlasmaBlack : LightPlasmaBlue
+	{
+		color[] = { 0,0,0 };
+	};
+	class SparksLightPlasmaBlack : SparksLightPlasmaBlue
+	{
+		color[] = { 0,0,0 };
+	};
+	class 288th_plasmaOrange
+	{
+		color[] = {1,0.37,0,1};
+		ambient[] = {1,0.37,0,1};
+		diffuse[] = {0.3,0.1,0};
+		brightness = 10;
+		intensity = 4000;
+		drawLight = 0;
+		class Attenuation
+		{
+			start = 0;
+			constant = 1;
+			linear = 0;
+			quadratic = 40;
+		};
+		position[] = {0,0.2,0};
+	};
+};
+
+class ImpactPlasmaWhite
+{
+	class Light1
+	{
+		simulation = "light";
+		type = "LightPlasmaWhite";
+		position[] = { 0,0,0 };
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.3;
+	};
+	class SparksLight
+	{
+		simulation = "light";
+		type = "SparksLightPlasmaWhite";
+		position[] = { 0,0,0 };
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.5;
+	};
+	class ImpactSparks1
+	{
+		simulation = "particles";
+		type = "ImpactSparksPlasmaWhite1";
+		position[] = { 0,0,0 };
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.2;
+	};
+	class ImpactSparks2
+	{
+		simulation = "particles";
+		type = "ImpactSparksPlasmaWhite2";
+		position[] = { 0,0,0 };
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.2;
+	};
+	class ImpactSmoke
+	{
+		simulation = "particles";
+		type = "ImpactSmoke";
+		position[] = { 0,0,0 };
+		intensity = 0;
+		interval = 1;
+		lifeTime = 0.2;
+	};
+};
+class ImpactPlasmaOrange
+{
+	class Light1
+	{
+		simulation = "light";
+		type = "LightPlasmaOrange";
+		position[] = {0,0,0};
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.3;
+	};
+	class SparksLight
+	{
+		simulation = "light";
+		type = "SparksLightPlasmaOrange";
+		position[] = {0,0,0};
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.5;
+	};
+	class ImpactSparks1
+	{
+		simulation = "particles";
+		type = "ImpactSparksPlasmaOrange1";
+		position[] = {0,0,0};
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.2;
+	};
+	class ImpactSparks2
+	{
+		simulation = "particles";
+		type = "ImpactSparksPlasmaOrange2";
+		position[] = {0,0,0};
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.2;
+	};
+	class ImpactSmoke
+	{
+		simulation = "particles";
+		type = "ImpactSmoke";
+		position[] = {0,0,0};
+		intensity = 0;
+		interval = 1;
+		lifeTime = 0.2;
+	};
+};
+class ImpactPlasmaYellow : ImpactPlasmaOrange
+{
+	class Light1 : Light1
+	{
+		type = "LightPlasmaYellow";
+	};
+	class SparksLight : SparksLight
+	{
+		type = "SparksLightPlasmaYellow";
+	};
+	class ImpactSparks1 : ImpactSparks1
+	{
+		type = "ImpactSparksPlasmaYellow1";
+	};
+	class ImpactSparks2 : ImpactSparks2
+	{
+		type = "ImpactSparksPlasmaYellow2";
+	};
+};
+class ImpactPlasmaPurple : ImpactPlasmaOrange
+{
+	class Light1 : Light1
+	{
+		type = "LightPlasmaPurple";
+	};
+	class SparksLight : SparksLight
+	{
+		type = "SparksLightPlasmaPurple";
+	};
+	class ImpactSparks1 : ImpactSparks1
+	{
+		type = "ImpactSparksPlasmaPurple1";
+	};
+	class ImpactSparks2 : ImpactSparks2
+	{
+		type = "ImpactSparksPlasmaPurple2";
+	};
+};
+class ImpactPlasmaBlack : ImpactPlasmaOrange
+{
+	class Light1 : Light1
+	{
+		type = "LightPlasmaBlack";
+	};
+	class SparksLight : SparksLight
+	{
+		type = "SparksLightPlasmaBlack";
+	};
+	class ImpactSparks1 : ImpactSparks1
+	{
+		type = "ImpactSparksPlasmaBlack1";
+	};
+	class ImpactSparks2 : ImpactSparks2
+	{
+		type = "ImpactSparksPlasmaBlack2";
+	};
+};
+class ImpactPlasmaSoda : ImpactPlasmaOrange
+{
+	class Light1 : Light1
+	{
+		type = "LightPlasmaBlack";
+	};
+	class SparksLight : SparksLight
+	{
+		type = "SparksLightPlasmaBlack";
+	};
+	class ImpactSparks1 : ImpactSparks1
+	{
+		type = "ImpactSparksPlasmaBlue1";
+	};
+	class ImpactSparks2 : ImpactSparks2
+	{
+		type = "ImpactSparksPlasmaBlue2";
+	};
+};
+class 288th_plasma_blue
+{
+	class JLTS_Blue_plasma
+	{
+		simulation = "light";
+		type = "288th_plasmaBlue";
+		position[] = {0,0,0};
+		intensity = 0;
+		interval = 1;
+		lifeTime = 6;
+	};
+};
+class 288th_plasma_yellow
+{
+	class JLTS_Yellow_plasma
+	{
+		simulation = "light";
+		type = "288th_plasmaYellow";
+		position[] = {0,0,0};
+		intensity = 0;
+		interval = 1;
+		lifeTime = 6;
+	};
+};
+class 288th_plasma_red
+{
+	class JLTS_Red_plasma
+	{
+		simulation = "light";
+		type = "288th_plasmaRed";
+		position[] = {0,0,0};
+		intensity = 0;
+		interval = 1;
+		lifeTime = 6;
+	};
+};
+class 288th_plasma_green
+{
+	class JLTS_Green_plasma
+	{
+		simulation = "light";
+		type = "288th_plasmaGreen";
+		position[] = {0,0,0};
+		intensity = 0;
+		interval = 1;
+		lifeTime = 6;
+	};
+};
+class 288th_plasma_orange
+{
+	class JLTS_Orange_plasma
+	{
+		simulation = "light";
+		type = "288th_plasmaOrange";
+		position[] = {0,0,0};
+		intensity = 0;
+		interval = 1;
+		lifeTime = 6;
+	};
+};
+
+class cfgAmmo
+{
+	// Ammo Base Classes
+	class BulletBase;
+	class SensorTemplateIR;
+	class M_Titan_AT;
+	class OPTRE_M41_Rocket_HEAT_SACLOS;
+	class OPTRE_M41_Rocket_HE;
+	class OPTRE_M41_Rocket_HEAT_Laser;
+	class OPTRE_M41_Rocket_HEAT_Thermal;
+	class ACE_SatchelCharge_Remote_Ammo_Thrown;
+	class SmokeShell;
+	class B_127x108_Ball;
+	class B_9x21_Ball;
+	class B_45ACP_Ball;
+	class B_762x51_Ball;
+	class OPTRE_FC_Bolt_Base;
+	class ACE_G_40mm_HE;
+	class OPTRE_MAC_Round;
+	class OPTRE_8Gauge_Pellets;
+	class B_30mm_APFSDS;
+	class OPTRE_25x130mm_Slug;
+	class G_40mm_HE;
+	class WNZ_EMP127_ammo;
+	class OPTRE_M_C2GMLS_AA;
+	class OPTRE_B_145x114_APFSDS;
+	class F_40mm_White;
+	class M_NLAW_AT_F;
+	class G_40mm_HEDP;
+	class B_338_Ball;
+
+	// Custom Ammo
+
+	//custom 6.5 Rifle Ammo
+	class 65x85_APFS : B_762x51_Ball
+	{
+		scope = 2;
+		hit = 32;
+		indirectHit = 0;
+		indirectHitRange = 0.0;
+		cost = 100;
+		typicalSpeed = 750;
+		caliber = 3;
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		timeToLive = 15;
+		tracerScale = 1.0;
+		tracerStartTime = 1;
+		tracerEndTime = 0.05;
+		tracersEvery = 3;
+		//airFriction = 0;
+		ACE_muzzleVelocities[] = {950,962,968,972,978};
+		ACE_barrelLengths[] = {330.2,406.4,508.0,609.6,660.4};
+	};
+	class 65x85_APFS_Tracers : 65x85_APFS
+	{
+		scope = 2;
+		hit = 32;
+		indirectHit = 0.1;
+		indirectHitRange = 0.0001;
+		cost = 100;
+		caliber = 3;
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		craterEffects = "";
+		explosive = 1;
+		explosionEffects = "";
+		explosionSoundEffect = "";
+		tracerStartTime = 0;
+		tracerEndTime = 10;
+		tracersEvery = 1;
+		tracerScale = 1.5;
+	};
+	class 65x85_HEDP : 65x85_APFS
+	{
+		craterEffects = "ExploAmmoCrater";
+		explosive = 0.25;
+		explosionEffects = "ExploAmmoExplosion";
+		explosionSoundEffect = "DefaultExplosion";
+		hit = 32;
+		indirectHit = 12;
+		indirectHitRange = 0.25;
+	};
+	class 65x85_DMR : 65x85_APFS
+	{
+		scope = 2;
+		hit = 25;
+		indirectHit = 8;
+		indirectHitRange = 0.15;
+		explosive = 0.05;
+		cost = 100;
+		typicalSpeed = 850;
+		caliber = 3;
+		craterEffects = "";
+		explosionEffects = "";
+		explosionSoundEffect = "";
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_green";
+		timeToLive = 12;
+		tracerScale = .95;
+		tracerStartTime = 1;
+		tracerEndTime = 0.05;
+	};
+	class 65x85_APFS_Incendiary : 65x85_APFS
+	{
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		timeToLive = 2;
+		effectFly = "KA_flametrail";
+	};
+	class 65x85_EHP : B_762x51_Ball
+	{
+		scope = 2;
+		hit = 30;
+		indirectHit = 0;
+		indirectHitRange = 0.0;
+		cost = 100;
+		typicalSpeed = 550;
+		caliber = 1.5;
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		timeToLive = 15;
+		tracerScale = 1.0;
+		tracerStartTime = 1;
+		tracerEndTime = 0.05;
+		tracersEvery = 3;
+		//airFriction = 0;
+		//ACE_muzzleVelocities[] = {950,962,968,972,978};
+		//ACE_barrelLengths[] = {330.2,406.4,508.0,609.6,660.4};
+	};
+	//custom 45ACP Ammo
+	class 45ACP : B_45ACP_Ball
+	{
+		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_Red.p3d";
+		scope = 2;
+		hit = 24;
+		indirectHit = 0;
+		indirectHitRange = 0.0;
+		cost = 100;
+		typicalSpeed = 600;
+		caliber = 3;
+		explosive = 0.0;
+		timeToLive = 10;
+		tracerScale = 0.7;
+		tracerstarttime = 0.05;
+		tracerendtime = 10;
+		tracersEvery = 1;
+	};
+	//Buckshot 
+	class 288th_Buckshot_Pellet : OPTRE_8Gauge_Pellets
+	{
+		cartridge = "FxCartridge_slug";
+		submunitionConeType[] = { "poissondisc",12 };
+		/*submunitionConeAngle[] = {0.5};
+		submunitionConeAngleHorizontal[] = {4};*/
+		//submunitionConeAngle = 0.8;
+		caliber = 4;
+		hit = 24;
+		thrustTime = 6;
+		thrust = 600;
+		timeToLive = 10;
+		submunitionAmmo = "B_50BW_Ball_F";
+		triggerDistance = 100;
+		triggerTime = 0.1;
+	};
+	class 288th_HEDP_Buckshot : 288th_Buckshot_Pellet
+	{
+		submunitionAmmo = "65x85_HEDP";
+	};
+	class 288th_Incendiary_Buckshot : 288th_Buckshot_Pellet
+	{
+		submunitionConeType[] = { "poissondisc",8 };
+		submunitionAmmo = "65x85_APFS_Incendiary";
+	};
+	class 288th_HV_Flechettes : 288th_Buckshot_Pellet
+	{
+		submunitionConeAngle = 0.6;
+		submunitionConeType[] = { "poissondisc",7 };
+		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
+
+	};
+	class 288th_HEDP_Small : 288th_Buckshot_Pellet
+	{
+		submunitionConeAngle = 0.6;
+		submunitionConeType[] = { "poissondisc",7 };
+		submunitionAmmo = "65x85_HEDP";
+	};
+	class 288th_Plasma_Rainbow_Buckshot : 288th_Buckshot_Pellet
+	{
+		submunitionConeType[] = { "poissondisc",8 };
+		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
+	};
+	//custom Plasma Bullets
+	class 288th_Plasma_Blue : 65x85_APFS
+	{
+		hit = 30;
+		scope = 1;
+		scopeArsenal = 1;
+		typicalSpeed = 750;
+		caliber = 3;
+		timeToLive = 15;
+		tracerScale = 1;
+		tracerStartTime = 0.0099999998;
+		tracerEndTime = 10;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		model = "\OPTRE_FC_Weapons\data\bolt_blue.p3d";
+		airFriction = 0;
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaBlue";
+			Hit_Foliage_Dead = "ImpactPlasmaBlue";
+			Hit_Foliage_Green_big = "ImpactPlasmaBlue";
+			Hit_Foliage_Palm = "ImpactPlasmaBlue";
+			Hit_Foliage_Pine = "ImpactPlasmaBlue";
+			hitFoliage = "ImpactPlasmaBlue";
+			hitGlass = "ImpactPlasmaBlue";
+			hitGlassArmored = "ImpactPlasmaBlue";
+			hitWood = "ImpactPlasmaBlue";
+			hitHay = "ImpactPlasmaBlue";
+			hitMetal = "ImpactPlasmaBlue";
+			hitMetalPlate = "ImpactPlasmaBlue";
+			hitBuilding = "ImpactPlasmaBlue";
+			hitPlastic = "ImpactPlasmaBlue";
+			hitRubber = "ImpactPlasmaBlue";
+			hitTyre = "ImpactPlasmaBlue";
+			hitConcrete = "ImpactPlasmaBlue";
+			hitMan = "ImpactPlasmaBlue";
+			hitGroundSoft = "ImpactPlasmaBlue";
+			hitGroundRed = "ImpactPlasmaBlue";
+			hitGroundHard = "ImpactPlasmaBlue";
+			hitWater = "ImpactPlasmaBlue";
+			hitVirtual = "ImpactPlasmaBlue";
+		};
+		soundImpactDefault1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		impactGroundSoft[] = {"soundImpactDefault1",1};
+		impactGroundHard[] = {"soundImpactDefault1",1};
+		impactMan[] = {"soundImpactDefault1",1};
+		impactIron[] = {"soundImpactDefault1",1};
+		impactArmor[] = {"soundImpactDefault1",1};
+		impactBuilding[] = {"soundImpactDefault1",1};
+		impactFoliage[] = {"soundImpactDefault1",1};
+		impactWood[] = {"soundImpactDefault1",1};
+		impactGlass[] = {"soundImpactDefault1",1};
+		impactGlassArmored[] = {"soundImpactDefault1",1};
+		impactConcrete[] = {"soundImpactDefault1",1};
+		impactTyre[] = {"soundImpactDefault1",1};
+		impactRubber[] = {"soundImpactDefault1",1};
+		impactPlastic[] = {"soundImpactDefault1",1};
+		impactDefault[] = {"soundImpactDefault1",1};
+		impactMetal[] = {"soundImpactDefault1",1};
+		impactMetalplate[] = {"soundImpactDefault1",1};
+		impactWater[] = {"soundImpactDefault1",1};
+		soundDefault1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1.25,1,100};
+		soundDefault2[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact2.ogg",1.25,1,100};
+		soundDefault3[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact3.ogg",1.25,1,100};
+		soundDefault4[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact4.ogg",1.25,1,100};
+		soundDefault5[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact5.ogg",1.25,1,100};
+		soundDefault6[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact6.ogg",1.25,1,100};
+		soundDefault7[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact7.ogg",1.25,1,100};
+		soundGroundSoft1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundGroundHard1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundGlass1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundGlassArmored1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundMetal1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundVehiclePlate1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundWood1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundHitBody1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1.1,1,100};
+		soundHitBuilding1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundHitFoliage1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundPlastic1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundConcrete1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundTyre1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundRubber1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundWater1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundMetalInt1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		soundVehiclePlateInt1[] = {"OPTRE_FC_Weapons\Data\sounds\Plasma_Impact1.ogg",1,1,100};
+		hitArmorInt[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitMetalInt[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitGroundSoft[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitGroundHard[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitMan[] = {"soundHitBody1",1};
+		hitArmor[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitBuilding[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitFoliage[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitWood[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitGlass[] = {"soundGlass1",1};
+		hitGlassArmored[] = {"soundGlassArmored1",1};
+		hitConcrete[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitTyre[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitRubber[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitPlastic[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitDefault[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitMetal[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitMetalplate[] = {"soundDefault1",0.2,"soundDefault3",0.2,"soundDefault5",0.2,"soundDefault6",0.2,"soundDefault7",0.2};
+		hitWater[] = {"soundWater1",1};
+	};
+	class 288th_Plasma_Green : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_green.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaGreen";
+			Hit_Foliage_Dead = "ImpactPlasmaGreen";
+			Hit_Foliage_Green_big = "ImpactPlasmaGreen";
+			Hit_Foliage_Palm = "ImpactPlasmaGreen";
+			Hit_Foliage_Pine = "ImpactPlasmaGreen";
+			hitFoliage = "ImpactPlasmaGreen";
+			hitGlass = "ImpactPlasmaGreen";
+			hitGlassArmored = "ImpactPlasmaGreen";
+			hitWood = "ImpactPlasmaGreen";
+			hitHay = "ImpactPlasmaGreen";
+			hitMetal = "ImpactPlasmaGreen";
+			hitMetalPlate = "ImpactPlasmaGreen";
+			hitBuilding = "ImpactPlasmaGreen";
+			hitPlastic = "ImpactPlasmaGreen";
+			hitRubber = "ImpactPlasmaGreen";
+			hitTyre = "ImpactPlasmaGreen";
+			hitConcrete = "ImpactPlasmaGreen";
+			hitMan = "ImpactPlasmaGreen";
+			hitGroundSoft = "ImpactPlasmaGreen";
+			hitGroundRed = "ImpactPlasmaGreen";
+			hitGroundHard = "ImpactPlasmaGreen";
+			hitWater = "ImpactPlasmaGreen";
+			hitVirtual = "ImpactPlasmaGreen";
+		};
+	};
+	class 288th_Plasma_Red : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaRed";
+			Hit_Foliage_Dead = "ImpactPlasmaRed";
+			Hit_Foliage_Green_big = "ImpactPlasmaRed";
+			Hit_Foliage_Palm = "ImpactPlasmaRed";
+			Hit_Foliage_Pine = "ImpactPlasmaRed";
+			hitFoliage = "ImpactPlasmaRed";
+			hitGlass = "ImpactPlasmaRed";
+			hitGlassArmored = "ImpactPlasmaRed";
+			hitWood = "ImpactPlasmaRed";
+			hitHay = "ImpactPlasmaRed";
+			hitMetal = "ImpactPlasmaRed";
+			hitMetalPlate = "ImpactPlasmaRed";
+			hitBuilding = "ImpactPlasmaRed";
+			hitPlastic = "ImpactPlasmaRed";
+			hitRubber = "ImpactPlasmaRed";
+			hitTyre = "ImpactPlasmaRed";
+			hitConcrete = "ImpactPlasmaRed";
+			hitMan = "ImpactPlasmaRed";
+			hitGroundSoft = "ImpactPlasmaRed";
+			hitGroundRed = "ImpactPlasmaRed";
+			hitGroundHard = "ImpactPlasmaRed";
+			hitWater = "ImpactPlasmaRed";
+			hitVirtual = "ImpactPlasmaRed";
+		};
+	};
+	class 288th_Plasma_Pink : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_purple.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaPink";
+			Hit_Foliage_Dead = "ImpactPlasmaPink";
+			Hit_Foliage_Green_big = "ImpactPlasmaPink";
+			Hit_Foliage_Palm = "ImpactPlasmaPink";
+			Hit_Foliage_Pine = "ImpactPlasmaPink";
+			hitFoliage = "ImpactPlasmaPink";
+			hitGlass = "ImpactPlasmaPink";
+			hitGlassArmored = "ImpactPlasmaPink";
+			hitWood = "ImpactPlasmaPink";
+			hitHay = "ImpactPlasmaPink";
+			hitMetal = "ImpactPlasmaPink";
+			hitMetalPlate = "ImpactPlasmaPink";
+			hitBuilding = "ImpactPlasmaPink";
+			hitPlastic = "ImpactPlasmaPink";
+			hitRubber = "ImpactPlasmaPink";
+			hitTyre = "ImpactPlasmaPink";
+			hitConcrete = "ImpactPlasmaPink";
+			hitMan = "ImpactPlasmaPink";
+			hitGroundSoft = "ImpactPlasmaPink";
+			hitGroundRed = "ImpactPlasmaPink";
+			hitGroundHard = "ImpactPlasmaPink";
+			hitWater = "ImpactPlasmaPink";
+			hitVirtual = "ImpactPlasmaPink";
+		};
+	};
+	class 288th_Plasma_Orange : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaOrange";
+			Hit_Foliage_Dead = "ImpactPlasmaOrange";
+			Hit_Foliage_Green_big = "ImpactPlasmaOrange";
+			Hit_Foliage_Palm = "ImpactPlasmaOrange";
+			Hit_Foliage_Pine = "ImpactPlasmaOrange";
+			hitFoliage = "ImpactPlasmaOrange";
+			hitGlass = "ImpactPlasmaOrange";
+			hitGlassArmored = "ImpactPlasmaOrange";
+			hitWood = "ImpactPlasmaOrange";
+			hitHay = "ImpactPlasmaOrange";
+			hitMetal = "ImpactPlasmaOrange";
+			hitMetalPlate = "ImpactPlasmaOrange";
+			hitBuilding = "ImpactPlasmaOrange";
+			hitPlastic = "ImpactPlasmaOrange";
+			hitRubber = "ImpactPlasmaOrange";
+			hitTyre = "ImpactPlasmaOrange";
+			hitConcrete = "ImpactPlasmaOrange";
+			hitMan = "ImpactPlasmaOrange";
+			hitGroundSoft = "ImpactPlasmaOrange";
+			hitGroundRed = "ImpactPlasmaOrange";
+			hitGroundHard = "ImpactPlasmaOrange";
+			hitWater = "ImpactPlasmaOrange";
+			hitVirtual = "ImpactPlasmaOrange";
+		};
+	};
+	class 288th_Plasma_Yellow : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaYellow";
+			Hit_Foliage_Dead = "ImpactPlasmaYellow";
+			Hit_Foliage_Green_big = "ImpactPlasmaYellow";
+			Hit_Foliage_Palm = "ImpactPlasmaYellow";
+			Hit_Foliage_Pine = "ImpactPlasmaYellow";
+			hitFoliage = "ImpactPlasmaYellow";
+			hitGlass = "ImpactPlasmaYellow";
+			hitGlassArmored = "ImpactPlasmaYellow";
+			hitWood = "ImpactPlasmaYellow";
+			hitHay = "ImpactPlasmaYellow";
+			hitMetal = "ImpactPlasmaYellow";
+			hitMetalPlate = "ImpactPlasmaYellow";
+			hitBuilding = "ImpactPlasmaYellow";
+			hitPlastic = "ImpactPlasmaYellow";
+			hitRubber = "ImpactPlasmaYellow";
+			hitTyre = "ImpactPlasmaYellow";
+			hitConcrete = "ImpactPlasmaYellow";
+			hitMan = "ImpactPlasmaYellow";
+			hitGroundSoft = "ImpactPlasmaYellow";
+			hitGroundRed = "ImpactPlasmaYellow";
+			hitGroundHard = "ImpactPlasmaYellow";
+			hitWater = "ImpactPlasmaYellow";
+			hitVirtual = "ImpactPlasmaYellow";
+		};
+	};
+	class 288th_Plasma_Purple : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaPurple";
+			Hit_Foliage_Dead = "ImpactPlasmaPurple";
+			Hit_Foliage_Green_big = "ImpactPlasmaPurple";
+			Hit_Foliage_Palm = "ImpactPlasmaPurple";
+			Hit_Foliage_Pine = "ImpactPlasmaPurple";
+			hitFoliage = "ImpactPlasmaPurple";
+			hitGlass = "ImpactPlasmaPurple";
+			hitGlassArmored = "ImpactPlasmaPurple";
+			hitWood = "ImpactPlasmaPurple";
+			hitHay = "ImpactPlasmaPurple";
+			hitMetal = "ImpactPlasmaPurple";
+			hitMetalPlate = "ImpactPlasmaPurple";
+			hitBuilding = "ImpactPlasmaPurple";
+			hitPlastic = "ImpactPlasmaPurple";
+			hitRubber = "ImpactPlasmaPurple";
+			hitTyre = "ImpactPlasmaPurple";
+			hitConcrete = "ImpactPlasmaPurple";
+			hitMan = "ImpactPlasmaPurple";
+			hitGroundSoft = "ImpactPlasmaPurple";
+			hitGroundRed = "ImpactPlasmaPurple";
+			hitGroundHard = "ImpactPlasmaPurple";
+			hitWater = "ImpactPlasmaPurple";
+			hitVirtual = "ImpactPlasmaPurple";
+		};
+	};
+	class 288th_Plasma_White : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaWhite";
+			Hit_Foliage_Dead = "ImpactPlasmaWhite";
+			Hit_Foliage_Green_big = "ImpactPlasmaWhite";
+			Hit_Foliage_Palm = "ImpactPlasmaWhite";
+			Hit_Foliage_Pine = "ImpactPlasmaWhite";
+			hitFoliage = "ImpactPlasmaWhite";
+			hitGlass = "ImpactPlasmaWhite";
+			hitGlassArmored = "ImpactPlasmaWhite";
+			hitWood = "ImpactPlasmaWhite";
+			hitHay = "ImpactPlasmaWhite";
+			hitMetal = "ImpactPlasmaWhite";
+			hitMetalPlate = "ImpactPlasmaWhite";
+			hitBuilding = "ImpactPlasmaWhite";
+			hitPlastic = "ImpactPlasmaWhite";
+			hitRubber = "ImpactPlasmaWhite";
+			hitTyre = "ImpactPlasmaWhite";
+			hitConcrete = "ImpactPlasmaWhite";
+			hitMan = "ImpactPlasmaWhite";
+			hitGroundSoft = "ImpactPlasmaWhite";
+			hitGroundRed = "ImpactPlasmaWhite";
+			hitGroundHard = "ImpactPlasmaWhite";
+			hitWater = "ImpactPlasmaWhite";
+			hitVirtual = "ImpactPlasmaWhite";
+		};
+	};
+	class 288th_Plasma_Black : 288th_Plasma_Blue
+	{
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaBlack";
+			Hit_Foliage_Dead = "ImpactPlasmaBlack";
+			Hit_Foliage_Green_big = "ImpactPlasmaBlack";
+			Hit_Foliage_Palm = "ImpactPlasmaBlack";
+			Hit_Foliage_Pine = "ImpactPlasmaBlack";
+			hitFoliage = "ImpactPlasmaBlack";
+			hitGlass = "ImpactPlasmaBlack";
+			hitGlassArmored = "ImpactPlasmaBlack";
+			hitWood = "ImpactPlasmaBlack";
+			hitHay = "ImpactPlasmaBlack";
+			hitMetal = "ImpactPlasmaBlack";
+			hitMetalPlate = "ImpactPlasmaBlack";
+			hitBuilding = "ImpactPlasmaBlack";
+			hitPlastic = "ImpactPlasmaBlack";
+			hitRubber = "ImpactPlasmaBlack";
+			hitTyre = "ImpactPlasmaBlack";
+			hitConcrete = "ImpactPlasmaBlack";
+			hitMan = "ImpactPlasmaBlack";
+			hitGroundSoft = "ImpactPlasmaBlack";
+			hitGroundRed = "ImpactPlasmaBlack";
+			hitGroundHard = "ImpactPlasmaBlack";
+			hitWater = "ImpactPlasmaBlack";
+			hitVirtual = "ImpactPlasmaBlack";
+		};
+	};
+	class 288th_Plasma_Rainbow : 65x85_APFS
+	{
+		hit = 1;
+		typicalSpeed = 600;
+		caliber = 0.1;
+		fuseDistance = 0;
+		triggerOnImpact = 1;
+		submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitSpeed = 750;
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionConeType[] = {"custom",1};
+		submunitionAmmo[] = {"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
+	};
+	class 288th_Plasma_Soda : B_762x51_Ball
+	{
+		hit = 40.0;
+		scope = 1;
+		scopeArsenal = 1;
+		typicalSpeed = 750;
+		caliber = 3.5;
+		//timeToLive = 10;
+		suppressionRadiusBulletClose = 15;
+		suppressionRadiusHit = 15;
+		//model = "\EMP_Systems\blue_tracers\tracer_blue";
+		//tracerStartTime = 0;
+		//tracerEndTime = 10;
+		tracersEvery = 1;
+		//tracerScale = 1.3;
+		coefGravity = 0;
+		sideairFriction = 0;
+		waterFriction = 0;
+		aiAmmoUsageFlags = "64 + 128 + 256";
+		cost = 15;
+		class HitEffects
+		{
+			Hit_Foliage_green = "ImpactPlasmaSoda";
+			Hit_Foliage_Dead = "ImpactPlasmaSoda";
+			Hit_Foliage_Green_big = "ImpactPlasmaSoda";
+			Hit_Foliage_Palm = "ImpactPlasmaSoda";
+			Hit_Foliage_Pine = "ImpactPlasmaSoda";
+			hitFoliage = "ImpactPlasmaSoda";
+			hitGlass = "ImpactPlasmaSoda";
+			hitGlassArmored = "ImpactPlasmaSoda";
+			hitWood = "ImpactPlasmaSoda";
+			hitHay = "ImpactPlasmaSoda";
+			hitMetal = "ImpactPlasmaSoda";
+			hitMetalPlate = "ImpactPlasmaSoda";
+			hitBuilding = "ImpactPlasmaSoda";
+			hitPlastic = "ImpactPlasmaSoda";
+			hitRubber = "ImpactPlasmaSoda";
+			hitTyre = "ImpactPlasmaSoda";
+			hitConcrete = "ImpactPlasmaSoda";
+			hitMan = "ImpactPlasmaSoda";
+			hitGroundSoft = "ImpactPlasmaSoda";
+			hitGroundRed = "ImpactPlasmaSoda";
+			hitGroundHard = "ImpactPlasmaSoda";
+			hitWater = "ImpactPlasmaSoda";
+			hitVirtual = "ImpactPlasmaSoda";
+		};
+		model = "\288th_Weapons\Data\Ammo\Laser_Blue\laser_blue.p3d";
+		cartridge = "";
+		lightcolor[] = {0.25,0.25,0.5};
+		flaresize = 5;
+		tracerscale = 1.1;
+		effectflare = "FlareShell";
+		tracerstarttime = 0.05;
+		tracerendtime = 10;
+		initTime = 0;
+		nvgonly = 0;
+		airlock = 1;
+		irtarget = 1;
+		effectfly = "288th_plasma_blue";
+		brightness = 1000;
+		timetolive = 5;
+		airfriction = 0;
+		deflecting = 0;
+		supersoniccracknear[] = {};
+		supersoniccrackfar[] = {};
+		soundSetSonicCrack[] = {};
+		visibleFire = 0;
+		ACE_bulletmass = 15;
+		//ACE_ballisticCoefficients[] = {1};
+		ACE_caliber = 7.823;
+		ACE_bulletLength = 31.496;
+		ACE_ammoTempMuzzleVelocityShifts[] = {-2.655,-2.547,-2.285,-2.012,-1.698,-1.28,-0.764,-0.153,0.596,1.517,2.619};
+		ACE_ballisticCoefficients[] = {0.243};
+		ACE_velocityBoundaries[] = {};
+		ACE_standardAtmosphere = "ICAO";
+		ACE_dragModel = 7;
+		ACE_muzzleVelocities[] = {838,892,910,919,924};
+		ACE_barrelLengths[] = {500};
+	};
+
+	//custom Railgun Ammo
+	class 288_Railgun : OPTRE_25x130mm_Slug
+	{
+		hit = 250;
+		indirectHit = 30;
+		indirectHitRange = 0.50;
+		caliber = 50;
+		timeToLive = 10;
+		typicalSpeed = 5000;
+	};
+	class 288_Railgun_1 : 288_Railgun
+	{
+		hit = 150;
+		indirectHit = 30;
+		indirectHitRange = 0.50;
+		caliber = 25;
+		timeToLive = 10;
+		typicalSpeed = 3000;
+		class CamShakeExplode {};
+		class CamShakeFire {};
+		class CamShakeHit {};
+		class CamShakePlayerFire {};
+	};
+
+	class 288th_EMP : WNZ_EMP127_ammo
+	{
+		hit = 25;
+		indirectHit = 0;
+		indirectHitRange = 0.0;
+		scope = 1;
+		scopeArsenal = 1;
+		timeToLive = 15;
+		typicalSpeed = 1000;
+		caliber = 5;
+		suppressionRadiusBulletClose = 15;
+		suppressionRadiusHit = 15;
+		model = "\EMP_Systems\blue_tracers\tracer_blue";
+		explosive = 0.1;
+		ExplosionEffects = "WNZ_EMPGrenadeExplosion";
+		CraterEffects = "GrenadeCrater";
+		CraterWaterEffects = "ImpactEffectsWaterExplosion";
+		SoundSetExplosion[] = { "EMP_Sparks_SoundSet_GL" };
+		tracerScale = 1;
+		tracerStartTime = 0.0099999998;
+		tracerEndTime = 10;
+		airFriction = -0.000103711;
+	};
+
+	// Custom M41 Ammo
+	class 288th_M41_Rocket_HEAT_SACLOS : M_Titan_AT
+	{
+		model = "OPTRE_weapons\rockets\M41_rocket";
+		warheadName = "TandemHEAT";
+		submunitionAmmo = "ammo_Penetrator_Titan_AT";
+		effectsMissile = "missile3";
+		/*simulation = "shotbullet";*/
+		timeToLive = 30;
+		cost = 500;
+		aiAmmoUsageFlags = "128 + 512 + 256";
+		allowAgainstInfantry = 0;
+		HIT = 1000;
+		indirectHit = 40;
+		indirectHitRange = 6;
+		explosive = 0.25;
+		fuseDistance = 20;
+		irLock = 0;
+		airLock = 2;
+		lockType = 1;
+		laserLock = 0;
+		nvLock = 0;
+		cmImmunity = 0.85;
+		manualControl = 1;
+		maxControlRange = 5000;
+		weaponLockSystem = "2 + 16";
+		simulationStep = 0.002;
+		airFriction = 0.145;
+		sideAirFriction = 0.3;
+		maneuvrability = 14;
+		coefGravity = 1;
+		missileKeepLockedCone = 360;
+		missileLockCone = 270;
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 20;
+		missileLockMaxSpeed = 350;
+		trackOversteer = 0.9;
+		trackLead = 0.8;
+		initTime = 0.1;
+		thrustTime = 10;
+		thrust = 100;
+		maxSpeed = 200;
+		typicalSpeed = 175;
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent : SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange = 0;
+							maxRange = 5000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = 1;
+						};
+						class GroundTarget
+						{
+							minRange = 0;
+							maxRange = 5000;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+						maxTrackableSpeed = 340;
+						angleRangeHorizontal = 60;
+						angleRangeVertical = 60;
+						maxTrackableATL = 4000;
+					};
+				};
+			};
+		};
+		class ace_missileguidance
+		{
+			enabled = 1;
+			canVanillaLock = 0;
+			onFired = "ace_hot_fnc_onFired";
+			minDeflection = 0.00025;
+			maxDeflection = 0.007;
+			incDeflection = 0.0005;
+			defaultSeekerType = "SACLOS";
+			seekerTypes[] = {"SACLOS"};
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL","LOBL"};
+			seekerAngle = 30;
+			seekerAccuracy = 1;
+			seekerMinRange = 75;
+			seekerMaxRange = 2500;
+			seekLastTargetPos = 0;
+			correctionDistance = 15;
+			offsetFromCrosshair[] = {0,0,0.5};
+			defaultAttackProfile = "WIRE";
+			attackProfiles[] = {"WIRE"};
+		};
+	};
+	class 288th_M41_Rocket_HE : 288th_M41_Rocket_HEAT_SACLOS
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		hit = 150;
+		indirectHit = 100;
+		indirectHitRange = 10;
+		explosive = 1;
+		simulation = "shotRocket";
+		irLock = 0;
+		airLock = 0;
+		cmImmunity = 0.85;
+		manualControl = 0;
+		weaponLockSystem = 0;
+		class ace_missileguidance
+		{
+			enabled = 0;
+		};
+	};
+	class 288th_M41_Rocket_Flame : 288th_M41_Rocket_HEAT_SACLOS
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		hit = 50;
+		indirectHit = 50;
+		indirectHitRange = 5;
+		explosive = 1;
+		simulation = "shotRocket";
+		irLock = 0;
+		airLock = 0;
+		cmImmunity = 0.85;
+		manualControl = 0;
+		weaponLockSystem = 0;
+		explosionEffects = "KA_flameExplosion";
+		class ace_missileguidance
+		{
+			enabled = 0;
+		};
+	};
+	class 288th_M41_Rocket_HEAT_Laser : OPTRE_M41_Rocket_HEAT_Laser
+	{
+		HIT = 1000;
+		indirectHit = 40;
+		indirectHitRange = 6;
+		explosive = 0.25;
+		fuseDistance = 20;
+		irLock = 0;
+		airLock = 0;
+		laserLock = 1;
+		nvLock = 0;
+		cmImmunity = 0.85;
+		manualControl = 0;
+		maxControlRange = 10000;
+		weaponLockSystem = "4 + 16";
+		airFriction = 0.145;
+		sideAirFriction = 0.1;
+		maneuvrability = 14;
+		coefGravity = 1;
+		missileKeepLockedCone = 360;
+		missileLockCone = 300;
+		trackOversteer = 1;
+		trackLead = 0.5;
+		initTime = 0.1;
+		thrustTime = 10;
+		thrust = 10;
+		maxSpeed = 200;
+		typicalSpeed = 200;
+		class ace_missileguidance
+		{
+			enabled = 1;
+			minDeflection = 0.00025;
+			maxDeflection = 0.007;
+			incDeflection = 0.0005;
+			canVanillaLock = 0;
+			defaultSeekerType = "SALH";
+			seekerTypes[] = {"SALH"};
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL"};
+			seekerAngle = 300;
+			seekerAccuracy = 1;
+			seekerMinRange = 5;
+			seekerMaxRange = 2500;
+			defaultAttackProfile = "DIR";
+			attackProfiles[] = {"DIR"};
+		};
+	};
+	class 288th_M41_Rocket_HEAT_Thermal : OPTRE_M41_Rocket_HEAT_Thermal
+	{
+		HIT = 1000;
+		indirectHit = 40;
+		indirectHitRange = 6;
+		model = "\OPTRE_Weapons\Rockets\M41_rocket.p3d";
+		missileKeepLockedCone = 5;
+		missileLockCone = 20;
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 10;
+		missileLockMaxSpeed = 270;
+		trackOversteer = 0.6;
+		trackLead = 0.6;
+		maneuvrability = 4;
+		irLock = 1;
+		airLock = 1;
+		lockType = 0;
+		laserLock = 0;
+		nvLock = 0;
+		cmImmunity = 0.85;
+		manualControl = 0;
+		missileManualControlCone = 360;
+		maxControlRange = 5000;
+		weaponLockSystem = "2 + 16";
+		autoSeekTarget = 1;
+		lockSeekRadius = 0;
+		flightProfiles[] = {"LOALDistance"};
+		class Direct {};
+		class LOALDistance : Direct
+		{
+			lockSeekDistanceFromParent = 1;
+		};
+		aiAmmoUsageFlags = "128 + 256 + 512";
+		allowAgainstInfantry = 0;
+		class ace_missileguidance
+		{
+			enabled = 1;
+			minDeflection = 5e-05;
+			maxDeflection = 0.007;
+			incDeflection = "5E-005";
+			canVanillaLock = 1;
+			defaultSeekerType = "Optic";
+			seekerTypes[] = {"Optic","Thermal"};
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL","LOBL"};
+			seekerAngle = 90;
+			seekerAccuracy = 1;
+			seekerMinRange = 1;
+			seekerMaxRange = 5000;
+			seekLastTargetPos = 1;
+			showHintOnCycle = 1;
+			defaultAttackProfile = "DIR";
+			attackProfiles[] = {"DIR","JAV_TOP"};
+		};
+	};
+
+	class OPAEX_M41_Rocket_HEAT_SACLOS : M_Titan_AT
+	{
+		model = "OPTRE_weapons\rockets\M41_rocket";
+		warheadName = "TandemHEAT";
+		submunitionAmmo = "ammo_Penetrator_Titan_AT";
+		effectsMissile = "missile3";
+		timeToLive = 30;
+		cost = 500;
+		aiAmmoUsageFlags = "128 + 512 + 256";
+		allowAgainstInfantry = 0;
+		hit = 1400;
+		indirectHit = 40;
+		indirectHitRange = 4;
+		explosive = 0.25;
+		fuseDistance = 20;
+		irLock = 0;
+		airLock = 2;
+		lockType = 1;
+		laserLock = 0;
+		nvLock = 0;
+		cmImmunity = 1;
+		manualControl = 1;
+		maxControlRange = 5000;
+		weaponLockSystem = "2 + 16";
+		simulationStep = 0.002;
+		airFriction = 0.145;
+		sideAirFriction = 0.3;
+		maneuvrability = 14;
+		coefGravity = 1;
+		missileKeepLockedCone = 360;
+		missileLockCone = 270;
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 20;
+		missileLockMaxSpeed = 350;
+		trackOversteer = 1;
+		trackLead = 1;
+		initTime = 0.1;
+		thrustTime = 10;
+		thrust = 100;
+		maxSpeed = 200;
+		typicalSpeed = 175;
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent : SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange = 0;
+							maxRange = 5000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = 1;
+						};
+						class GroundTarget
+						{
+							minRange = 0;
+							maxRange = 5000;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+						maxTrackableSpeed = 340;
+						angleRangeHorizontal = 60;
+						angleRangeVertical = 60;
+						maxTrackableATL = 4000;
+					};
+				};
+			};
+		};
+		class ace_missileguidance
+		{
+			enabled = 1;
+			canVanillaLock = 0;
+			onFired = "ace_hot_fnc_onFired";
+			minDeflection = 0.00025;
+			maxDeflection = 0.007;
+			incDeflection = 0.0005;
+			defaultSeekerType = "SACLOS";
+			seekerTypes[] = {"SACLOS"};
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL","LOBL"};
+			seekerAngle = 30;
+			seekerAccuracy = 1;
+			seekerMinRange = 75;
+			seekerMaxRange = 2500;
+			seekLastTargetPos = 0;
+			correctionDistance = 15;
+			offsetFromCrosshair[] = {0,0,0.5};
+			defaultAttackProfile = "WIRE";
+			attackProfiles[] = {"WIRE"};
+		};
+	};
+	class OPAEX_M41_Rocket_HE : OPAEX_M41_Rocket_HEAT_SACLOS
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		hit = 150;
+		indirectHit = 100;
+		indirectHitRange = 10;
+		explosive = 1;
+		simulation = "shotRocket";
+		irLock = 0;
+		airLock = 0;
+		cmImmunity = 1;
+		manualControl = 0;
+		weaponLockSystem = 0;
+		class ace_missileguidance
+		{
+			enabled = 0;
+		};
+	};
+	class OPAEX_M41_Rocket_HEAT_Laser : OPTRE_M41_Rocket_HEAT_Laser
+	{
+		hit = 1400;
+		indirectHit = 40;
+		indirectHitRange = 4;
+		explosive = 0.25;
+		fuseDistance = 20;
+		irLock = 0;
+		airLock = 0;
+		laserLock = 1;
+		nvLock = 0;
+		cmImmunity = 1;
+		manualControl = 0;
+		maxControlRange = 10000;
+		weaponLockSystem = "4 + 16";
+		airFriction = 0.145;
+		sideAirFriction = 0.1;
+		maneuvrability = 14;
+		coefGravity = 1;
+		missileKeepLockedCone = 360;
+		missileLockCone = 300;
+		trackOversteer = 1;
+		trackLead = 0.5;
+		initTime = 0.1;
+		thrustTime = 10;
+		thrust = 10;
+		maxSpeed = 200;
+		typicalSpeed = 200;
+		class ace_missileguidance
+		{
+			enabled = 1;
+			minDeflection = 0.00025;
+			maxDeflection = 0.007;
+			incDeflection = 0.0005;
+			canVanillaLock = 0;
+			defaultSeekerType = "SALH";
+			seekerTypes[] = {"SALH"};
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL"};
+			seekerAngle = 300;
+			seekerAccuracy = 1;
+			seekerMinRange = 5;
+			seekerMaxRange = 2500;
+			defaultAttackProfile = "DIR";
+			attackProfiles[] = {"DIR"};
+		};
+	};
+	class OPAEX_M41_Rocket_HEAT_Thermal : OPAEX_M41_Rocket_HEAT_SACLOS
+	{
+		hit = 1400;
+		indirectHit = 40;
+		indirectHitRange = 4;
+		explosive = 0.25;
+		fuseDistance = 20;
+		model = "\OPTRE_Weapons\Rockets\M41_rocket.p3d";
+		missileKeepLockedCone = 5;
+		missileLockCone = 20;
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 10;
+		missileLockMaxSpeed = 270;
+		trackOversteer = 1;
+		trackLead = 1;
+		maneuvrability = 4;
+		irLock = 1;
+		airLock = 1;
+		lockType = 0;
+		laserLock = 0;
+		nvLock = 0;
+		cmImmunity = 1;
+		manualControl = 0;
+		missileManualControlCone = 360;
+		maxControlRange = 5000;
+		weaponLockSystem = "2 + 16";
+		autoSeekTarget = 1;
+		lockSeekRadius = 0;
+		flightProfiles[] = {"LOALDistance"};
+		class Direct {};
+		class LOALDistance : Direct
+		{
+			lockSeekDistanceFromParent = 1;
+		};
+		aiAmmoUsageFlags = "128 + 256 + 512";
+		allowAgainstInfantry = 0;
+		class ace_missileguidance
+		{
+			enabled = 1;
+			minDeflection = 5e-05;
+			maxDeflection = 0.007;
+			incDeflection = "5E-005";
+			canVanillaLock = 1;
+			defaultSeekerType = "Optic";
+			seekerTypes[] = {"Optic","Thermal"};
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL","LOBL"};
+			seekerAngle = 90;
+			seekerAccuracy = 1;
+			seekerMinRange = 1;
+			seekerMaxRange = 5000;
+			seekLastTargetPos = 1;
+			showHintOnCycle = 1;
+			defaultAttackProfile = "DIR";
+			attackProfiles[] = {"DIR","JAV_TOP"};
+		};
+	};
+
+	
+	class 288th_Class_4 : OPTRE_M_C2GMLS_AA
+	{
+		model = "OPTRE_weapons\Aircraft\ASGM2_missile_fly.p3d";
+		caliber = 1;
+		hit = 1400;
+		indirectHit = 600;
+		indirectHitRange = 12;
+		explosive = 0.50;
+		fuseDistance = 1;
+		warheadName = "HE";
+		submunitionAmmo = "ammo_Penetrator_Titan_AT";
+		aiAmmoUsageFlags = "128+256+512";
+		missileKeepLockedCone = 360;
+		missileLockCone = 225;
+		missileLockMaxDistance = 8000;
+		missileLockMinDistance = 75;
+		allowAgainstInfantry = 1;
+		airLock = 1;
+		irLock = 1;
+		weaponLockSystem = "1 + 2 + 16";
+		cmImmunity = 0.9;
+		cost = 100;
+		maxSpeed = 1000;
+		thrust = 500;
+	};
+
+	// M99 Gauss Rifle Ammo
+	class 288th_Gauss_Slug : OPTRE_25x130mm_Slug
+	{
+		scope = 2;
+		hit = 1300;
+		indirectHit = 100;
+		indirectHitRange = 0.25;
+		cost = 1000;
+		typicalSpeed = 5000;
+		caliber = 50;
+		explosive = 0.05;
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_white";
+		timeToLive = 10;
+		tracerScale = 1.5;
+		tracerStartTime = 0;
+		tracerEndTime = 15;
+		tracersEvery = 1;
+		airFriction = 0;
+		sideairFriction = 0;
+		coefGravity = 0.01;
+	};
+
+	//Microgrenade Rounds
+	class 288th_MicroGrenade : ACE_G_40mm_HE
+	{
+		scope = 2;
+		hit = 30;
+		indirectHit = 10;
+		indirectHitRange = 3;
+		typicalSpeed = 150;
+		caliber = 2.5;
+		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		timeToLive = 30;
+		tracerScale = 1;
+		tracerStartTime = 0;
+		tracerEndTime = 15;
+		tracersEvery = 1;
+		airFriction = 0;
+		sideairFriction = 0;
+		thrustTime = 2;
+		coefGravity = 0.75;
+	};
+
+	//288th 40mm Plasma HE
+	class 288th_Plasma_40mm : G_40mm_HE
+	{
+		hit = 100;
+		indirectHit = 8;
+		indirectHitRange = 6;
+		typicalSpeed = 250;
+		caliber = 5;
+		timeToLive = 15;
+		tracerScale = 1;
+		tracerStartTime = 0;
+		tracerEndTime = 15;
+		tracersEvery = 1;
+		airFriction = -0.001;
+		thrustTime = 2;
+		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
+	};
+
+	//288th 15x50mm Ammo
+	class 288th_15x50 : OPTRE_B_145x114_APFSDS
+	{
+		caliber = 4;
+		hit = 55;
+		typicalSpeed = 500;
+		timeToLive = 20;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale = 0.75;
+		airFriction = 0;
+		sideairFriction = 0;
+	};
+
+	//288th makeshift Ammo
+	class 288th_Makeshift_Ammo : OPTRE_B_145x114_APFSDS
+	{
+		hit = 75;
+		indirectHit = 30;
+		indirectHitRange = 0.50;
+		caliber = 8;
+		timeToLive = 10;
+		typicalSpeed = 2000;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale = 0.75;
+		airFriction = 0;
+		sideairFriction = 0;
+	};
+
+	class 288th_20mm_HE_Plus : G_40mm_HE
+	{
+		hit = 120;
+		indirectHit = 10;
+		indirectHitRange = 10;
+		caliber = 4;
+	};
+	class 288th_20mm_HE_Plasma : 288th_20mm_HE_Plus
+	{
+		explosionEffects = "ImpactPlasmaExpBlueBig";
+		SoundSetExplosion[] = {"\OPTRE_FC_Weapons\Data\sounds\Grenade_Explosion2.ogg",1,1,2000};
+		explosionSoundEffect = "{""\OPTRE_FC_Weapons\Data\sounds\Grenade_Explosion2.ogg"",1.0,1,2000}";
+	};
+	class 288th_20mm_HEDP : G_40mm_HEDP
+	{
+		caliber = 6;
+	};
+	class 288th_20mm_Slug : B_762x51_Ball
+	{
+		scope = 2;
+		caliber = 10;
+		explosive = 0;
+		hit = 30;
+		whistleOnFire = 1;
+		whistleDist = 14;
+		timeToLive = 15;
+		tracerScale = 3;
+		tracerStartTime = 0.05;
+		tracerEndTime = 1;
+		tracersEvery = 1;
+		model = "\A3\weapons_f\ammo\UGL_slug";
+		indirectHit = 50;
+		indirectHitRange = 0.25;
+		aiAmmoUsageFlags = "128 + 256 + 512";
+		airLock = 1;
+		suppressionRadiusHit = 24;
+		typicalSpeed = 185;
+	};
+
+	class 288th_AC_8 : 288th_20mm_HE_Plus
+	{
+		hit = 75;
+		indirectHit = 15;
+		indirectHitRange = 10;
+		caliber = 2.75;
+		explosionEffects = "ImpactPlasmaExpBlueBig";
+		SoundSetExplosion[] = {"\OPTRE_FC_Weapons\Data\sounds\Grenade_Explosion2.ogg",1,1,2000};
+		explosionSoundEffect = "{""\OPTRE_FC_Weapons\Data\sounds\Grenade_Explosion2.ogg"",1.0,1,2000}";
+		explosive = 0.5;
+		coefGravity = 0;
+		airFriction = 0;
+		sideairFriction = 0;
+		waterFriction = 0;
+		typicalSpeed = 800;
+		timeToLive = 5;
+		suppressionRadiusBulletClose = 15;
+		suppressionRadiusHit = 15;
+		fuseDistance = 0;
+		class CamShakeExplode {};
+		class CamShakeFire {};
+		class CamShakeHit {};
+		class CamShakePlayerFire {};
+	};
+
+	class 288th_308_rifle_yellow: B_338_Ball
+	{
+		hit = 32;
+		indirectHit = 0;
+		indirectHitRange = 0.0;
+		caliber = 3;
+		model = "\288th_Weapons\Data\Ammo\Laser_Yellow\laser_yellow.p3d";
+		cartridge = "";
+		lightcolor[] = {0.25,0.25,0.5};
+		flaresize = 5;
+		tracerscale = 1.1;
+		effectflare = "FlareShell";
+		tracerstarttime = 0.05;
+		tracerendtime = 10;
+		initTime = 0;
+		nvgonly = 0;
+		airlock = 1;
+		irtarget = 1;
+		effectfly = "288th_plasma_yellow";
+		brightness = 1000;
+		timetolive = 10;
+		/*airfriction = 0;
+		coefgravity = 0;*/
+		deflecting = 0;
+		supersoniccracknear[] = {};
+		supersoniccrackfar[] = {};
+		soundSetSonicCrack[] = {};
+		//soundSetBulletFly[] = {"288th_plasma_bullet_flyby_soundSet"};
+	};
+};
+
+class CfgMagazines
+{
+	class Default;
+	class B_65x39_Caseless;
+	class OPTRE_M41_Twin_HEAT_SACLOS;
+	class OPTRE_4Rnd_145x114_APFSDS_Mag;
+	class OPTRE_M9_Frag;
+	class SmokeShell;
+	class 30Rnd_65x39_caseless_black_mag;
+	class 50Rnd_570x28_SMG_03;
+	class 100Rnd_65x39_caseless_black_mag;
+	class 30Rnd_9x21_Mag;
+	class 5Rnd_127x108_Mag;
+	class 30Rnd_45ACP_Mag_SMG_01;
+	class 20Rnd_762x51_Mag;
+	class 30Rnd_762x39_AK12_Mag_F;
+	class 10Rnd_127x54_Mag;
+	class TCF_8Rnd_127x40_Mag_FG;
+	class TCF_8Rnd_127x40_Mag_FR;
+	class OPTRE_32Rnd_762x51_Mag;
+	class OPTRE_FC_Railgun_Slug;
+	class OPTRE_12Rnd_127x40_Mag;
+	class TCF_12Rnd_127x40_Mag_NARQ;
+	class OPTRE_15Rnd_762x51_Mag;
+	class OPTRE_6Rnd_8Gauge_Pellet;
+	class OPTRE_100Rnd_95x40_Box;
+	class 6Rnd_45ACP_Cylinder;
+	class TCF_1Rnd_50x137_HEAT;
+	class 3Rnd_HE_Grenade_shell;
+	class 200Rnd_65x39_cased_Box;
+	class OPTRE_6Rnd_8Gauge_Pellets;
+	class OPTRE_6Rnd_8Gauge_Slugs;
+	class TCF_100Rnd_762x51_Mag;
+	class OPTRE_64Rnd_57x31_Mag;
+	class 7Rnd_408_Mag;
+
+	class TCF_20Rnd_65x48_Mag: OPTRE_32Rnd_762x51_Mag
+	{
+		dlc = "TCF";
+		author = "Baseplate & Hivemind";
+		scope = 2;
+		scopeArsenal = 2;
+		ammo = "TCF_B_65x48_Ball";
+		initspeed = 940;
+		count = 20;
+		mass = 8;
+		displayname = "20Rnd 6.5x48mm Magazine";
+		displaynameshort = "6.5x48mm";
+		descriptionShort = "20 Round Magazine<br/>6.5x48mm";
+		tracersEvery = 0;
+		model = "\OPTRE_Weapons\Commando\Commando_Mag.p3d";
+		modelSpecial = "\OPTRE_Weapons\Commando\Commando_Mag.p3d";
+		modelSpecialIsProxy = 1;
+		hiddenSelections[] = {"camoMag"};
+		hiddenSelectionsTextures[] = {"\optre_weapons\commando\data\commando_olive_co.paa"};
+		hiddenSelectionsMaterials[] = {"\optre_weapons\commando\data\commando.rvmat"};
+	};
+
+	//288th Standard 6.5x85 Mags
+	class 288th_Stanag : 30Rnd_65x39_caseless_black_mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 800;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd APFS 6.5x85 Mag";
+		displaynameshort = "6.5x85 APFS Mag";
+		descriptionshort = "A standard magazine loaded with 6.5x85 APFS";
+		ammo = "65x85_APFS";
+		count = 30;
+		mass = 15;
+	};
+	class 288th_Incendiary_Mag : 288th_Stanag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 20rnd Incendiary 6.5x85 Mag";
+		displaynameshort = "6.5x85 Incendiary Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with Incendiary ammo";
+		initSpeed = 800;
+		ammo = "65x85_APFS_Incendiary";
+		count = 20;
+		lastRoundsTracer = 0;
+	};
+	class 288th_EHP_Mag : 288th_Stanag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 30rnd EHP 6.5x85 Mag";
+		displaynameshort = "6.5x85 EHP Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with External Hollow-Point ammo";
+		initSpeed = 550;
+		ammo = "65x85_EHP";
+		count = 30;
+		lastRoundsTracer = 0;
+	};
+	class 288th_Stanag_LMG : 100Rnd_65x39_caseless_black_mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 750;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 150rnd 6.5x85 Drum";
+		displaynameshort = "288th Standard Drum";
+		descriptionshort = "A large LMG drum loaded with 6.5x85 APFS";
+		ammo = "65x85_APFS";
+		count = 150;
+		mass = 30;
+	};
+
+	//288th 65x85 Mag MA5P
+	class 288th_65x85_Mag_MA5P : 50Rnd_570x28_SMG_03
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 50Rnd 6.5x85 APFS Mag";
+		displaynameshort = "6.5x85 APFS";
+		descriptionshort = "Magazine for the MA5P";
+		initSpeed = 750;
+		ammo = "65x85_APFS";
+		count = 50;
+		mass = 18;
+	};
+	class 288th_65x85_Mag_MA5P_Tracer : 288th_65x85_Mag_MA5P
+	{
+		displayname = "[288th DJP] 50Rnd 6.5x85 APFS Tracer Mag";
+		displaynameshort = "6.5x85 APFS Tracers";
+		descriptionshort = "Tracer Magazine for the MA5P";
+		initSpeed = 750;
+		ammo = "65x85_APFS_Tracers";
+	};
+	class 288th_65x85_Mag_MA5P_EHP : 288th_65x85_Mag_MA5P
+	{
+		displayname = "[288th DJP] 50Rnd 6.5x85 EHP Mag";
+		displaynameshort = "6.5x85 EHP";
+		descriptionshort = "EHP Magazine for the MA5P";
+		initSpeed = 550;
+		ammo = "65x85_EHP";
+	};
+	class 288th_65x85_Mag_MA5P_Plasma_Purple : 288th_65x85_Mag_MA5P
+	{
+		displayname = "[288th DJP] 50Rnd Purple Plasma Mag";
+		displaynameshort = "6.5x85 Purple Plasma Mag";
+		descriptionshort = "Purple Plasma Magazine for the MA5P";
+		initSpeed = 750;
+		ammo = "288th_Plasma_Purple";
+	};
+	class 288th_65x85_Mag_MA5P_Plasma_Black : 288th_65x85_Mag_MA5P
+	{
+		displayname = "[288th DJP] 50Rnd Black Plasma Mag";
+		displaynameshort = "6.5x85 Black Plasma Mag";
+		descriptionshort = "Black Plasma Magazine for the MA5P";
+		initSpeed = 750;
+		ammo = "288th_Plasma_Black";
+	};
+
+	// 288th DMR/BR
+	class 288th_762_Mag : 20Rnd_762x51_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 20rnd .308 Mag";
+		displaynameshort = ".308";
+		descriptionshort = "Magazine for the Snowfox";
+		initSpeed = 750;
+		tracersEvery = 1;
+		ammo = "288th_308_rifle_yellow";
+		count = 20;
+		mass = 8;
+	};
+	class 288th_DMR_M395 : OPTRE_15Rnd_762x51_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 15rnd 6.5x85 APFS Mag";
+		displaynameshort = "6.5x85mm";
+		descriptionshort = "Custom 6.5x85 Magazine";
+		initSpeed = 850;
+		ammo = "65x85_DMR";
+		count = 15;
+		mass = 8;
+		lastRoundsTracer = 3;
+	};
+
+	//288th Plasma Mags
+	class 288th_Plasma_Blue_Mag : 288th_Stanag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 30rnd Blue Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Blue Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with blue plasma tips";
+		initSpeed = 900;
+		ammo = "288th_Plasma_Blue";
+		lastRoundsTracer = 0;
+	};
+	class 288th_Plasma_Red_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Red Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Red Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with red plasma tips";
+		ammo = "288th_Plasma_Red";
+	};
+	class 288th_Plasma_Green_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Green Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Green Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with green plasma tips";
+		ammo = "288th_Plasma_Green";
+	};
+	class 288th_Plasma_Pink_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Pink Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Pink Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with pink plasma tips";
+		ammo = "288th_Plasma_Pink";
+	};
+	class 288th_Plasma_Orange_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Orange Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Orange Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with orange plasma tips";
+		ammo = "288th_Plasma_Orange";
+	};
+	class 288th_Plasma_Yellow_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Yellow Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Yellow Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with yellow plasma tips";
+		ammo = "288th_Plasma_Yellow";
+	};
+	class 288th_Plasma_Purple_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Purple Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Purple Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with purple plasma tips";
+		ammo = "288th_Plasma_Purple";
+	};
+	class 288th_Plasma_White_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd White Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 White Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with white plasma tips";
+		ammo = "288th_Plasma_White";
+	};
+	class 288th_Plasma_Black_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Black Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Black Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with black plasma tips";
+		ammo = "288th_Plasma_Black";
+	};
+	class 288th_Plasma_Rainbow_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 30rnd Rainbow Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Rainbow Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with random color plasma tips";
+		ammo = "288th_Plasma_Rainbow";
+	};
+
+	
+	class 288th_Plasma_Soda_Mag : 288th_Plasma_Blue_Mag
+	{
+		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30rnd.p3d";
+		modelSpecialIsProxy = 1;
+		nameSound = "magazine";
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
+		quickReload = 1;
+		displayname = "[288th DJP] Soda's Custom 6.5x85 Mag";
+		displaynameshort = "Soda's 6.5x85 Plasma Mag";
+		descriptionshort = "A specially modified 6.5x85 mag";
+		ammo = "288th_Plasma_Soda";
+		tracersEvery = 1;
+		lastRoundsTracer = 50;
+		count = 200;
+		mass = 15;
+	};
+	class 288th_Soda_Buckshot : 288th_Stanag
+	{
+		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30rnd.p3d";
+		modelSpecialIsProxy = 1;
+		nameSound = "magazine";
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
+		quickReload = 0;
+		displayname = "[288th DJP] Soda's Custom Buckshot Mag";
+		displaynameshort = "Soda's Custom Buckshot Mag";
+		descriptionshort = "A specially modified buckshot mag";
+		ammo = "288th_Buckshot_Pellet";
+		tracersEvery = 0;
+		lastRoundsTracer = 0;
+		count = 200;
+		mass = 15;
+	};
+
+	//288th .45ACP M7 Mags
+	class 288th_45ACP_Mag_AP : 30Rnd_45ACP_Mag_SMG_01
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 60rnd 45ACP Mag";
+		displaynameshort = ".45ACP";
+		descriptionshort = "Magazines for the M7V SMGs";
+		tracersEvery = 1;
+		initSpeed = 600;
+		ammo = "45ACP";
+		count = 60;
+		mass = 8;
+	};
+	class 288th_45ACP_Mag_EHP : 288th_45ACP_Mag_AP
+	{
+		displayname = "[288th DJP] 60rnd 45ACP EHP Mag";
+		displaynameshort = ".45ACP EHP";
+		descriptionshort = "EHP Magazines for the M7 SMGs";
+		tracersEvery = 0;
+		initSpeed = 550;
+		ammo = "65x85_EHP";
+	};
+
+	// Improved M41 Ammo
+	class 288th_M41_Twin_HEAT_SACLOS : OPTRE_M41_Twin_HEAT_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] M41 HEAT (SACLOS) Twin Rockets";
+		displaynameshort = "HEAT (SACLOS)";
+		descriptionshort = "High Explosive Anti Tank<br/>SACLOS";
+		ammo = "288th_M41_Rocket_HEAT_SACLOS";
+		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\heat_saclos.paa";
+		model = "\OPTRE_Weapons\Rockets\M41_tube.p3d";
+		modelSpecial = "\OPTRE_Weapons\Rockets\M41_tube.p3d";
+		modelSpecialIsProxy = 1;
+		hiddenSelections[] = { "camo_tubes","camo_details" };
+		hiddenSelectionsTextures[] = { "\288th_Weapons\Data\Weapons\Launchers\SACLOS.paa","\optre_weapons\rockets\data\logos_ca.paa" };
+		count = 2;
+		mass = 80;
+	};
+	class 288th_M41_Twin_HE : 288th_M41_Twin_HEAT_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		descriptionshort = "High Explosive Anti Personnel<br/>Un-guided";
+		displayname = "[288th DJP] M41 HE (Un-guided) Twin Rockets";
+		displaynameshort = "High Explosive Dumb-fire";
+		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\he.paa";
+		hiddenSelectionsTextures[] = { "\OPTRE_Weapons\Rockets\data\mag_types\he.paa","\optre_weapons\rockets\data\logos_ca.paa" };
+		ammo = "288th_M41_Rocket_HE";
+		mass = 60;
+	};
+	class 288th_M41_Twin_Flame : 288th_M41_Twin_HEAT_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		descriptionshort = "Incendiary Anti Personnel<br/>Un-guided";
+		displayname = "[288th DJP] M41 Incendiary (Un-guided) Twin Rockets";
+		displaynameshort = "Incendiary Dumb-fire";
+		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\he.paa";
+		hiddenSelectionsTextures[] = {"\OPTRE_Weapons\Rockets\data\mag_types\heap.paa","optre_weapons\rockets\data\logos_ca.paa"};
+		ammo = "288th_M41_Rocket_Flame";
+		mass = 60;
+	};
+	class 288th_M41_Twin_HEAT_SALH : 288th_M41_Twin_HEAT_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] M41 HEAT (SALH) Twin Rockets";
+		displaynameshort = "HEAT (SALH)";
+		descriptionshort = "High Explosive Anti Tank<br/>SALH";
+		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\heat_salh.paa";
+		hiddenSelectionsTextures[] = { "\288th_Weapons\Data\Weapons\Launchers\SALH.paa","\optre_weapons\rockets\data\logos_ca.paa" };
+		ammo = "288th_M41_Rocket_HEAT_Laser";
+	};
+	class 288th_M41_Twin_HEAT_Thermal : 288th_M41_Twin_HEAT_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] M41 HEAT (Heat-Seeking) Twin Rockets";
+		displaynameshort = "HEAT (Heat-seeking)";
+		descriptionshort = "High Explosive Anti Tank<br/>Heat-Seeking";
+		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\heat_thermal.paa";
+		hiddenSelectionsTextures[] = { "\OPTRE_Weapons\Rockets\data\mag_types\heat.paa","\optre_weapons\rockets\data\logos_ca.paa" };
+		ammo = "288th_M41_Rocket_HEAT_Thermal";
+	};
+
+	// 288th Cricket Rockets
+	class 288th_M57_Cricket_SACLOS : TCF_1Rnd_50x137_HEAT
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] M57 (SACLOS)";
+		displaynameshort = "HEAT (SACLOS)";
+		descriptionshort = "High Explosive Anti Tank<br/>SACLOS";
+		ammo = "288th_M41_Rocket_HEAT_SACLOS";
+		count = 1;
+		mass = 30;
+		initSpeed = 150;
+		allowedSlots[] = { 901,701 };
+		maxLeadSpeed = 300;
+	};
+	class 288th_M57_Cricket_HE : 288th_M57_Cricket_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		descriptionshort = "High Explosive Anti Personnel<br/>Un-guided";
+		displayname = "[288th DJP] M57 HE (Un-guided)";
+		displaynameshort = "High Explosive Dumb-fire";
+		ammo = "288th_M41_Rocket_HE";
+		mass = 25;
+	};
+	class 288th_M57_Cricket_Flame : 288th_M57_Cricket_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		descriptionshort = "Incendiary Anti Personnel<br/>Un-guided";
+		displayname = "[288th DJP] M57 Incendiary (Un-guided)";
+		displaynameshort = "Incendiary Dumb-fire";
+		ammo = "288th_M41_Rocket_Flame";
+		mass = 25;
+	};
+	class 288th_M57_Cricket_SALH : 288th_M57_Cricket_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] M57 HEAT (SALH)";
+		displaynameshort = "HEAT (SALH)";
+		descriptionshort = "High Explosive Anti Tank<br/>SALH";
+		ammo = "288th_M41_Rocket_HEAT_Laser";
+	};
+	class 288th_M57_Cricket_Thermal : 288th_M57_Cricket_SACLOS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] M57 HEAT (Heat-Seeking)";
+		displaynameshort = "HEAT (Heat-seeking)";
+		descriptionshort = "High Explosive Anti Tank<br/>Heat-Seeking";
+		ammo = "288th_M41_Rocket_HEAT_Thermal";
+	};
+
+	//Microgrenade Mag
+	class 288th_10rnd_Microgrenade : 30Rnd_65x39_caseless_black_mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 200;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 10rnd Microgrenade Mag";
+		displaynameshort = "Microgrenade Mag";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "288th_MicroGrenade";
+		count = 10;
+		mass = 15;
+	};
+
+	//288th Shotgun ammo
+	class 288th_Buckshot : OPTRE_32Rnd_762x51_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "\OPTRE_Weapons\bulldog\drum.p3d";
+		modelSpecial = "\OPTRE_Weapons\bulldog\drum.p3d";
+		modelSpecialIsProxy = 1;
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd Buckshot Magazine";
+		displaynameshort = "Buckshot";
+		descriptionshort = "30 round 8 guage buckshot";
+		ammo = "288th_Buckshot_Pellet";
+		count = 30;
+		mass = 20;
+	};
+	class 288th_Slug : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd Slug Magazine";
+		displaynameshort = "Slugs";
+		descriptionshort = "30 round 8 guage slugs";
+		ammo = "65x85_APFS";
+		count = 30;
+		mass = 20;
+	};
+	class 288th_Slug_Incendiary : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd Incendiary Slug Magazine";
+		displaynameshort = "Incendiary Slugs";
+		descriptionshort = "20 round 8 guage incendiary slugs";
+		ammo = "65x85_APFS_Incendiary";
+		count = 20;
+		mass = 20;
+	};
+	class 288th_Slug_HEDP : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd HEDP Slug Magazine";
+		displaynameshort = "HEDP Slugs";
+		descriptionshort = "30 round 8 guage HEDP slugs";
+		ammo = "65x85_HEDP";
+		mass = 20;
+	};
+	class 288th_HEDP_Buckshot : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd HEDP Buckshot Magazine";
+		displaynameshort = "HEDP Buckshot";
+		descriptionshort = "30 round 8 guage HEDP buckshot";
+		ammo = "288th_HEDP_Buckshot";
+		count = 30;
+		mass = 20;
+	};
+	class 288th_Incendiary_Buckshot : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 30rnd Incendiary Buckshot Magazine";
+		displaynameshort = "Incendiary Buckshot";
+		descriptionshort = "20 round 8 guage Incendiary slugs";
+		ammo = "288th_Incendiary_Buckshot";
+		count = 20;
+		mass = 20;
+	};
+	class 288th_HV_Flechettes : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 8rnd Flechettes Magazine";
+		displaynameshort = "Flechettes";
+		descriptionshort = "8 round 6 guage flechettes";
+		ammo = "288th_HV_Flechettes";
+		count = 8;
+		mass = 12;
+	};
+	class 288th_HEDP_Small : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 8rnd HEDP Buckshot Magazine";
+		displaynameshort = "HEDP";
+		descriptionshort = "8 round 6 guage HEDP buckshot";
+		ammo = "288th_HEDP_Small";
+		count = 8;
+		mass = 12;
+	};
+	class 288th_Loose_Buckshot : OPTRE_6Rnd_8Gauge_Pellets
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 12Rnd 8 Gauge Rainbow Pellets";
+		count = 12;
+		ammo = "288th_Plasma_Rainbow_Buckshot";
+		displaynameshort = "Rainbow Buckshot";
+		descriptionshort = "12 Rounds of Rainbow Buckshot";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs : OPTRE_6Rnd_8Gauge_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 12Rnd 8 Gauge Slugs";
+		count = 12;
+		ammo = "65x85_APFS";
+		descriptionshort = "12 Round Slugs";
+		mass = 12;
+	};
+	class 288th_Loose_Incendiary_Buckshot : 288th_Loose_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP]12Rnd 8 Gauge Incendiary Pellets";
+		count = 12;
+		ammo = "288th_Incendiary_Buckshot";
+		displaynameshort = "Incendiary Buckshot";
+		descriptionshort = "12 Rounds of Incendiary Buckshot";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs_Incendiary : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 12Rnd 8 Gauge Incendiary Slugs";
+		count = 12;
+		displaynameshort = "Incendiary Slugs";
+		ammo = "65x85_APFS_Incendiary";
+		descriptionshort = "12 Round Incendiary Slugs";
+		mass = 12;
+	};
+	class 288th_Loose_HEDP_Buckshot : 288th_Loose_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 12Rnd 8 Gauge HEDP Pellets";
+		count = 12;
+		ammo = "288th_HEDP_Buckshot";
+		displaynameshort = "HEDP Buckshot";
+		descriptionshort = "12 Rounds of HEDP Buckshot";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs_HEDP : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th DJP] 12Rnd 8 Gauge HEDP Slugs";
+		count = 12;
+		displaynameshort = "HEDP Slugs";
+		ammo = "65x85_HEDP";
+		descriptionshort = "12 Round HEDP Slugs";
+		mass = 12;
+	};
+
+	//288th Railgun Mag
+	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
+	{
+		displayName = "[288th DJP] Railgun Slugs";
+		displayNameShort = "16x65mm Slugs";
+		ammo = "288_Railgun";
+		descriptionshort = "16x65mm Slugs for the 288th Railgun";
+		count = 5;
+		initspeed = 5000;
+		mass = 10;
+	};
+	class 288th_Railgun_Mag_1 : 288th_Railgun_Mag
+	{
+		displayName = "[288th DJP] Railgun Slugs?";
+		displayNameShort = "16x65mm Slugs?";
+		descriptionshort = "16x65mm Slugs for the 288th Railgun?";
+		ammo = "288_Railgun_1";
+		count = 5;
+		initspeed = 3000;
+		mass = 8;
+	};
+
+	// Improved M6 Ammo
+	class 288th_32Rnd_127x40_Mag_NARQ : TCF_12Rnd_127x40_Mag_NARQ
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		displayName = "[288th DJP] 32 Rnd 12.7x40mm NARQ Magazine";
+		displayNameShort = "12.7x40mm NARQ";
+		descriptionshort = "32 Rnd 12.7x40mm NARQ Magazine";
+		count = 32;
+		tracersEvery = 0;
+		mass = 12;
+		picture = "\OPTRE_Weapons\M6D\Data\icons\magazine\mag_base.paa";
+	};
+	class 288th_32Rnd_127x40 : OPTRE_12Rnd_127x40_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 32rnd 12.7x40mm Magazine";
+		descriptionshort = "32 Rnd 12.7x40mm Magazine";
+		displayNameShort = "12.7x40mm";
+		count = 32;
+		mass = 12;
+	};
+	class 288th_32Rnd_127x40_AP : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "TCF_B_127x40_AP";
+		displayname = "[288th DJP] 32rnd 12.7x40mm AP Magazine";
+		displayNameShort = "12.7x40mm AP";
+		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Magazine";
+		initSpeed = 640;
+		count = 32;
+		mass = 12;
+	};
+	class 288th_32Rnd_127x40_EHP : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "65x85_EHP";
+		displayname = "[288th DJP] 32rnd 12.7x40mm EHP Magazine";
+		displayNameShort = "12.7x40mm EHP";
+		descriptionshort = "32 Rnd 12.7x40mm External Hollow-Point Magazine";
+		initSpeed = 550;
+		count = 32;
+		mass = 12;
+	};
+	class 288th_32Rnd_127x40_APT : 288th_32Rnd_127x40_AP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 32rnd 12.7x40mm AP Magazine (Tracer)";
+		displayNameShort = "12.7x40mm APT";
+		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Tracer Magazine";
+		tracersEvery = 1;
+		lastRoundsTracer = 32;
+		initSpeed = 640;
+		count = 32;
+		mass = 12;
+	};
+	class 288th_8Rnd_127_HI_P : OPTRE_12Rnd_127x40_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 8rnd 12.7x40mm HI-P Magazine";
+		descriptionshort = "8Rnd 12.7x40mm HI-P Magazine";
+		displayNameShort = "12.7x40mm HI-P";
+		ammo = "288th_15x50";
+		count = 8;
+		mass = 8;
+	};
+
+	//288th Plasma 3rnd GL
+	class 288th_GL_Mag : 3Rnd_HE_Grenade_shell
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_Plasma_40mm";
+		displayName = "[288th DJP] 3GL Plasma HE Shell";
+		displayNameShort = "3GL Plasma HE Shell";
+		count = 3;
+		descriptionShort = "I probbaly shouldn't have made this";
+		picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_red_CA.paa";
+	};
+
+	//M73X Box Mag
+	class 288th_500Rnd_65x85_Box : OPTRE_100Rnd_95x40_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		initspeed = 900;
+		ammo = "65x85_APFS_Tracers";
+		count = 500;
+		displayname = "[288th DJP] 500Rnd 6.5x85mm Box Magazine";
+		displaynameshort = "6.5x85mm";
+		descriptionShort = "500 Round Box Magazine<br/>6.5x85mm";
+		mass = 125;
+		tracersEvery = 1;
+		lastRoundsTracer = 500;
+	};
+
+	//M50 HMG Box
+	class 288th_75Rnd_15x50_Box : TCF_100Rnd_762x51_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		initspeed = 500;
+		ammo = "288th_15x50";
+		count = 75;
+		displayname = "[288th DJP] 75Rnd 15x50mm Box Magazine";
+		displaynameshort = "15x50mm";
+		descriptionShort = "75 Round Box Magazine<br/>15x50mm";
+		mass = 85;
+		tracersEvery = 1;
+		lastRoundsTracer = 75;
+	};
+
+	//288th M12H Mag
+	class 288th_M12H_Mag : OPTRE_64Rnd_57x31_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		initspeed = 640;
+		ammo = "45ACP";
+		count = 65;
+		displayname = "[288th DJP] 65Rnd 12.7x30mm Magazine";
+		displaynameshort = "12.7x30";
+		descriptionShort = "Magazine for the M12H";
+		mass = 8;
+	};
+
+	//288th AutoGL Mag
+	class 288th_AutoGL_Mag : 200Rnd_65x39_cased_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		displayName = "[288th DJP] 30Rnd 20mm HE M318 Box";
+		displaynameshort = "30Rnd 20mm HE";
+		picture = "\A3\Weapons_F\Data\UI\M_200Rnd_65x39_CA.paa";
+		count = 30;
+		ammo = "G_40mm_HE";
+		initSpeed = 220;
+		maxLeadSpeed = 25;
+		tracersEvery = 0;
+		lastRoundsTracer = 0;
+		descriptionShort = "30Rnd 20mm HE Grenade Box";
+		mass = 70;
+		modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100rnd.p3d";
+		modelSpecialIsProxy = 1;
+	};
+	class 288th_AutoGL_Smoke_Mag : 288th_AutoGL_Mag
+	{
+		displayName = "[288th DJP] 30Rnd 20mm Impact Smoke M318 Box";
+		displaynameshort = "30Rnd 20mm W Smoke";
+		ammo = "OPTRE_40mm_Smoke";
+		descriptionShort = "30Rnd 20mm Smoke Grenade Box";
+		mass = 50;
+	};
+
+	class 288th_15Rnd_50BW_Mag : 288th_Stanag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		displayName = "[288th DJP] 15Rnd .50 Beowulf";
+		displaynameshort = "15Rnd .50";
+		descriptionShort = "15Rnd .50 Beowulf";
+		ammo = "B_50BW_Ball_F";
+		count = 15;
+		initSpeed = 580;
+		tracersEvery = 0;
+		lastRoundsTracer = 0;
+		mass = 12;
+	};
+	//288th Experimental Mags
+	class 288th_Scrapmag : 288th_Railgun_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "\A3\weapons_f\empty";
+		scope = 1;
+		scopeArsenal = 1;
+		displayName = "[288th DJP] Makeshift Ammo Cache";
+		displayNameShort = "Makeshift Ammo Cache";
+		ammo = "288th_Makeshift_Ammo";
+		descriptionshort = "A makeshift ammo cache";
+		count = 75;
+		initspeed = 2000;
+		mass = 120;
+	};
+	class 288th_Big_Iron_Mag : 6Rnd_45ACP_Cylinder
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		initspeed = 400;
+		ammo = "45ACP";
+		count = 100;
+		displayname = "[288th DJP] Big Iron Ammo";
+		displaynameshort = "Big Iron Ammo";
+		descriptionShort = "Bullets for the Big Iron";
+		mass = 150;
+	};
+	class 288th_7Rnd_Gauss_Slug_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "\OPTRE_Weapons\Sniper\SRS99C_Mag.p3d";
+		displayname = "[288th DJP] 7Rnd 5.4mm APDS";
+		displaynameshort = "APDS";
+		ammo = "288th_Gauss_Slug";
+		count = 7;
+		initSpeed = 5000;
+		picture = "\OPTRE_weapons\ar\icons\magazine.paa";
+		descriptionshort = "7 Round Magazine<br>5.4mm<br>Armor Piercing Discarding Sabot";
+		mass = 40;
+		tracersEvery = 1;
+		lastRoundsTracer = 7;
+	};
+	class 288th_Autocannon_mag: 7Rnd_408_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "\A3\weapons_f\empty";
+		scope = 2;
+		scopeArsenal = 2;
+		picture = "\A3\Weapons_F_Mark\Data\UI\M_338_CA.paa";
+		displayName = "[288th DJP] AC-8 Ammo";
+		displayNameShort = "10Rnd AC-8";
+		ammo = "288th_AC_8";
+		descriptionshort = "A 10Rnd AC-8 ammo mag";
+		count = 10;
+		mass = 20;
+		allowedslots[] = {901};
+	};
+	class 288th_EMP : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th DJP] 15Rnd EMP Mag";
+		displaynameshort = "EMP Mag";
+		descriptionshort = "A specially modified EMP mag, use with caution";
+		ammo = "288th_EMP";
+		lastRoundsTracer = 5;
+		count = 15;
+		mass = 12;
+	};
+	class 288th_testmag : B_65x39_Caseless
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 50;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th DJP] 50rnd Test Mag";
+		displaynameshort = "288th Test Mag";
+		descriptionshort = "A test magazine loaded with who knows what";
+		ammo = "OPTRE_c7_remote_ammo_thrown_sticky";
+		count = 50;
+		mass = 1;
+		tracersEvery = 1;
+	};
+};
