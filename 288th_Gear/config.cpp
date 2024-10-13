@@ -39,7 +39,6 @@ class CfgGlasses
 class cfgWeapons
 {
 	class OPTRE_UNSC_Army_Uniform_OLI;
-	class UniformItem;
 	class HeadgearItem;
 	class OPTRE_UNSC_CH252D_Helmet;
 	class OPTRE_UNSC_CH252D_Helmet_dp;
@@ -50,6 +49,7 @@ class cfgWeapons
 	class TCF_SLIM_UNSCA_BLK_UNI;
 	class VES_CH252A;
 	class TCF_Reach_Scout_Helmet;
+	class UniformItem;
 
 	class TFAR_anprc152_1;
 	class Integrated_radio: TFAR_anprc152_1

@@ -6,4 +6,4 @@ _this call ace_medical_treatment_fnc_bandage;
 _this call ace_medical_treatment_fnc_bandage;
 _this call ace_medical_treatment_fnc_bandage;
 _this call ace_medical_treatment_fnc_bandage;
-_this call ace_medical_treatment_fnc_ivBag;
+//_this call ace_medical_treatment_fnc_ivBag;

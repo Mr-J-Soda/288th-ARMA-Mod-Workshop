@@ -15,12 +15,6 @@ class CfgPatches
 
 class CfgWeapons
 {
-	//--------------------------------------------------------------------------------------------//
-	
-	// Base Scopes
-
-	//--------------------------------------------------------------------------------------------//
-
 	class InventoryOpticsItem_Base_F;
 	class OPTRE_M73_Smartlink;
 	class OPTRE_M6C_Scope;
@@ -31,6 +25,28 @@ class CfgWeapons
 	class muzzle_snds_H;
 	class InventoryMuzzleItem_Base_F;
 	class OPTRE_M45_Flashlight;
+
+	class InventoryItem_Base_F;
+	class ItemCore;
+	class U_BasicBody;
+	class UniformItem: InventoryItem_Base_F
+	{
+		type = 801;
+		uniformType = "Neopren";
+	};
+	class Uniform_Base: ItemCore
+	{
+		scope = 0;
+		allowedSlots[] = {901};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "B_Soldier_F";
+			containerClass = "Supply0";
+			uniformType = "Neopren";
+			mass = 0;
+		};
+	};
 
 	//--------------------------------------------------------------------------------------------//
 	
@@ -703,4 +719,20 @@ class CfgMarkers
 		scopeCurator = 1;
         markerClass = "Halo_map_markers_Facs_SA";
     };
+};
+class CfgMovesBasic;
+class CfgMovesMaleSdr: CfgMovesBasic
+{
+	class States
+	{
+		class LadderCivilStatic;
+		class LadderCivilUpLoop: LadderCivilStatic
+		{
+			speed = "1.05/(2/3)";
+		};
+	};
+};
+class CfgAnimation
+{
+	ladderSpeed = "0.5/(1/3)";
 };

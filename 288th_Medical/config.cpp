@@ -855,14 +855,14 @@ class ACE_Medical_Treatment
 		{
 			volume = 2500;
 		};
-		class 288th_Biofoam : PlasmaIV
+		/*class 288th_Biofoam : PlasmaIV
 		{
 			volume = 125;
 		};
 		class 288th_Medic_Biofoam : PlasmaIV
 		{
 			volume = 25;
-		};
+		};*/
 		class 288th_Emergency_MedKit : PlasmaIV
 		{
 			volume = 2000;

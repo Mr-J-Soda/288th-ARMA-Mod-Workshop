@@ -45,4 +45,131 @@ class CfgFunctions
 			class PelicanUnLoadValidate{};
 		};
 	};
+	class PLP
+	{
+		class Arsenal
+		{
+			class ArsenalSearch
+			{
+				file = "288th_Core\Functions\fn_ArsenalSearch.sqf";
+				postInit = 1;
+			};
+		};
+	};
+};
+class Extended_PreStart_EventHandlers
+{
+	class ace_advanced_fatigue
+	{
+		init = "";
+	};
+};
+class Extended_PreInit_EventHandlers
+{
+	class ace_advanced_fatigue
+	{
+		init = "";
+	};
+};
+class Extended_DisplayLoad_EventHandlers
+{
+	class RscDisplayMission
+	{
+		ace_advanced_fatigue = "";
+	};
+};
+class Extended_PostInit_EventHandlers
+{
+	HIG_droneAlt_Post_Init = "HIG_droneAlt_Post_Init_Var = [] execVM ""\288th_Core\Functions\init.sqf""";
+	RS_Init = "RS_Init_Var = [] execVM ""\288th_Core\Functions\RemoveStamina.sqf""";
+	class ace_advanced_fatigue
+	{
+		init = "";
+	};
+};
+class CfgImprecision
+{
+	class Primary
+	{
+		verticalRadius = 0;
+		horizontalRadius = 0;
+	};
+	class Secondary
+	{
+		verticalRadius = 0;
+		horizontalRadius = 0;
+	};
+};
+class CfgMarkerColors
+{
+	class Default
+	{
+		scope = 1;
+	};
+	class atlas_ColorCyan: Default
+	{
+		name = "Cyan";
+		color[] = {0,1,1,1};
+		scope = 2;
+	};
+	class atlas_ColorGrey: Default
+	{
+		name = "Grey";
+		color[] = {0.518,0.537,0.549,1};
+		scope = 2;
+	};
+	class atlas_ColorGold: Default
+	{
+		name = "Gold";
+		color[] = {1,0.843,0,1};
+		scope = 2;
+	};
+	class atlas_ColorMagenta: Default
+	{
+		name = "Magenta";
+		color[] = {1,0,1,1};
+		scope = 2;
+	};
+	class atlas_ColorNavy: Default
+	{
+		name = "Navy";
+		color[] = {0,0,0.502,1};
+		scope = 2;
+	};
+	class atlas_ColorOlive: Default
+	{
+		name = "Olive";
+		color[] = {0.502,0.502,0,1};
+		scope = 2;
+	};
+	class atlas_ColorBrown: Default
+	{
+		name = "Brown";
+		color[] = {0.5,0.25,0,1};
+		scope = 2;
+	};
+	class atlas_ColorOrange: Default
+	{
+		name = "Orange";
+		color[] = {1,0.647,0,1};
+		scope = 2;
+	};
+	class atlas_ColorPink: Default
+	{
+		name = "Pink";
+		color[] = {1,0.753,0.796,1};
+		scope = 2;
+	};
+	class atlas_ColorTeal: Default
+	{
+		name = "Teal";
+		color[] = {0,0.502,0.502,1};
+		scope = 2;
+	};
+	class atlas_ColorMonument: Default
+	{
+		name = "Monument";
+		color[] = {0.3,0.3,0.3,1};
+		scope = 2;
+	};
 };

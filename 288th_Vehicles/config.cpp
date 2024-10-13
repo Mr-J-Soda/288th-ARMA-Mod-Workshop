@@ -330,7 +330,49 @@ class cfgVehicles
 	};
 	class B_Plane_Fighter_01_F;
 	class OPTRE_Pelican_armed;
-	class OPTRE_M494;
+	class Tank: LandVehicle
+	{
+		class NewTurret;
+		class Sounds;
+		class HitPoints;
+	};
+	class Tank_F: Tank
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewGunner;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+		class AnimationSources;
+		class ViewPilot;
+		class ViewOptics;
+		class RCWSOptics;
+		class ViewCargo;
+		class HeadLimits;
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitLTrack;
+			class HitRTrack;
+		};
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class EventHandlers;
+	};
+	class APC_Tracked_03_base_F: Tank_F{};
+	class I_APC_Tracked_03_base_F: APC_Tracked_03_base_F{};
+	class OPTRE_M494: I_APC_Tracked_03_base_F{};
 	class OPTRE_M808S;
 	class B_APC_Wheeled_01_base_F;
 	class B_APC_Wheeled_01_cannon_F : B_APC_Wheeled_01_base_F
@@ -454,7 +496,7 @@ class cfgVehicles
 	class OPTRE_AU_44_Mortar;
 	class TCF_UNSC_Nightingale;
 	class OPTRE_YSS_1000_A;
-	class B_UGV_02_Demining_F;
+	class UGV_02_Demining_Base_F;
 	class B_UAV_05_F;
 	class O_MBT_02_railgun_base_F;
 	class OPTRE_M12G1_LRV;
@@ -2295,6 +2337,399 @@ class cfgVehicles
 				forceHideGunner = 1;
 				gunnerForceOptics = 0;
 				usePip = 1;
+			};
+		};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				armor = 2.5;
+				material = -1;
+				name = "telo";
+				visual = "hull";
+				passThrough = 1;
+				minimalHit = 0.2;
+				explosionShielding = 0.4;
+				radius = 0.3;
+			};
+			class HitERA_Front
+			{
+				simulation = "Armor_ERA_Light";
+				armorComponent = "ERA_F";
+				name = "ERA_F_point";
+				armor = -100;
+				minimalHit = 1;
+				radius = 0.3;
+				passThrough = 0;
+				visual = "-";
+				explosionShielding = 2;
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_F_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Left_1: HitERA_Front
+			{
+				name = "ERA_L_1_point";
+				armorComponent = "ERA_L_1a";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_L_1_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Left_2: HitERA_Front
+			{
+				name = "ERA_L_2_point";
+				armorComponent = "ERA_L_1b";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_L_2_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Left_3: HitERA_Front
+			{
+				name = "ERA_L_3_point";
+				armorComponent = "ERA_L_2a";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_L_3_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Left_4: HitERA_Front
+			{
+				name = "ERA_L_4_point";
+				armorComponent = "ERA_L_2b";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_L_4_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Left_5: HitERA_Front
+			{
+				name = "ERA_L_5_point";
+				armorComponent = "ERA_L_3a";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_L_4_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Right_1: HitERA_Front
+			{
+				name = "ERA_R_1_point";
+				armorComponent = "ERA_R_1a";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_R_1_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Right_2: HitERA_Front
+			{
+				name = "ERA_R_2_point";
+				armorComponent = "ERA_R_1b";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_R_2_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Right_3: HitERA_Front
+			{
+				name = "ERA_R_3_point";
+				armorComponent = "ERA_R_2a";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_R_3_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Right_4: HitERA_Front
+			{
+				name = "ERA_R_4_point";
+				armorComponent = "ERA_R_2b";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_R_4_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitERA_Right_5: HitERA_Front
+			{
+				name = "ERA_R_5_point";
+				armorComponent = "ERA_R_3a";
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					effectRadius = 1;
+					ignoreFuel = 1;
+					class Explo
+					{
+						simulation = "particles";
+						type = "MineExplosionParticles";
+						position = "era_R_5_pos";
+						lifeTime = 0.01;
+						interval = 1;
+						intensity = 0.01;
+					};
+					class Smoke: Explo
+					{
+						type = "ERASmoke";
+						lifeTime = 0.05;
+					};
+					class Sound: Explo
+					{
+						simulation = "sound";
+						type = "ERA_Explosion";
+						lifeTime = 1;
+					};
+				};
+			};
+			class HitLTrack: HitLTrack
+			{
+				armor = 2.0;
+				material = -1;
+				name = "pasL";
+				passThrough = 0;
+				minimalHit = 0.1;
+				explosionShielding = 0.5;
+				radius = 0.75;
+			};
+			class HitRTrack: HitRTrack
+			{
+				armor = 2.0;
+				material = -1;
+				name = "pasP";
+				passThrough = 0;
+				minimalHit = 0.1;
+				explosionShielding = 0.5;
+				radius = 0.75;
+			};
+			class HitEngine: HitEngine
+			{
+				armor = 2;
+				material = -1;
+				name = "engine";
+				visual = "-";
+				passThrough = 1;
+				minimalHit = 0.2;
+				explosionShielding = 0.4;
+				radius = 0.3;
 			};
 		};
 	};
@@ -7623,7 +8058,7 @@ class cfgVehicles
 			dissasembleTo[] = { "288th_Remote_AU_44_Bag" };
 		};
 	};
-	class 288th_Ed_1E : B_UGV_02_Demining_F{
+	class 288th_Ed_1E : UGV_02_Demining_Base_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		displayName = "ED-1E (288th)";
@@ -7655,7 +8090,7 @@ class cfgVehicles
 		{
 			class Ed_1E_Pickup
 			{
-				displayNameDefault = "Pick Up Ed_1E";
+				displayNameDefault = "Pick Up Ed-1E";
 				priority = 6;
 				showWindow = 1;
 				hideOnUse = 1;
@@ -7674,7 +8109,7 @@ class cfgVehicles
 		canHideDriver = -1;
 		canUseScanners = 1;
 		clutchStrength = 15;
-		cost = 2000;
+		cost = 200;
 		engineMOI = 2.35;
 		enginePower = 50;
 		engineStartSpeed = 5;
