@@ -267,6 +267,10 @@ class cfgVehicles
 
 	class 288th_Jumppack_S10_SOLA : SC_Jumppack_RO_Black
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
@@ -281,6 +285,10 @@ class cfgVehicles
 	};
 	class 288th_Jumppack_S10_SOLA_RTO : SC_Jumppack_RO_Black
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
@@ -302,6 +310,10 @@ class cfgVehicles
 	};
 	class 288th_Jumppack_S12_SOLA : SC_Jumppack_RO_Black
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
@@ -320,6 +332,10 @@ class cfgVehicles
 	};
 	class 288th_Jumppack_S12_SOLA_RTO : 288th_Jumppack_S12_SOLA
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		displayName = "[288th DJP] S12 SOLA RTO Jumppack";
@@ -350,10 +366,17 @@ class cfgVehicles
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
+		tf_isolatedAmount = 0.65;
+		tf_range = 40000;
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "rt1523g_radio_dialog";
+		tf_subtype = "digital_lr";
 		NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 200; 
-        NSM_jumppack_recharge = 5;
+        NSM_jumppack_recharge = 50;
 		NSM_jumppack_jump_types[] = 
 		{
             {
@@ -367,7 +390,8 @@ class cfgVehicles
                     0		//can prone jump [bool, 0 = false, 1 = true] (5)
                 }
             },
-            {"Short Jump",{25,7,20,0,1,1}}
+            {"Short Jump",{25,7,20,0,1,1}},
+			{"Vertical Jump",{0,20,25,0,0,0}},
         };
 		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[] = {{"spine3",{0,-0.3,-0.1}}};
@@ -397,6 +421,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] Flightpack";
 		maximumLoad = 600;
+		tf_hasLRradio = 0;
 		NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 250; 
         NSM_jumppack_recharge = 1;

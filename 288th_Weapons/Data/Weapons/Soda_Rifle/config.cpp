@@ -193,6 +193,7 @@ class cfgWeapons
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_LMG";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_LMG";
 		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
+		pictureMjolnirHud = "288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
 		HUD_BulletInARows = 4;
 		HUD_TotalPosibleBullet = 200;
 		class LinkedItems
