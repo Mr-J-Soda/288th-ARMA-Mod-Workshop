@@ -390,7 +390,7 @@ class cfgAmmo
 	class SmokeShell;
 	class B_127x108_Ball;
 	class B_9x21_Ball;
-	class B_45ACP_Ball;
+	//class B_45ACP_Ball;
 	class B_762x51_Ball;
 	class OPTRE_FC_Bolt_Base;
 	class ACE_G_40mm_HE;
@@ -419,7 +419,7 @@ class cfgAmmo
 		cost = 100;
 		typicalSpeed = 750;
 		caliber = 3;
-		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 15;
 		tracerScale = 1.0;
 		tracerStartTime = 1;
@@ -437,7 +437,7 @@ class cfgAmmo
 		indirectHitRange = 0.0001;
 		cost = 100;
 		caliber = 3;
-		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		craterEffects = "";
 		explosive = 1;
 		explosionEffects = "";
@@ -470,7 +470,7 @@ class cfgAmmo
 		craterEffects = "";
 		explosionEffects = "";
 		explosionSoundEffect = "";
-		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_green";
+		model = "\288th_Weapons\Data\Ammo\Laser_Green\laser_green.p3d";
 		timeToLive = 12;
 		tracerScale = .95;
 		tracerStartTime = 1;
@@ -478,7 +478,7 @@ class cfgAmmo
 	};
 	class 65x85_APFS_Incendiary : 65x85_APFS
 	{
-		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 2;
 		effectFly = "KA_flametrail";
 	};
@@ -490,19 +490,19 @@ class cfgAmmo
 		indirectHitRange = 0.0;
 		cost = 100;
 		typicalSpeed = 550;
-		caliber = 1.5;
-		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		caliber = 1.0;
+		model = "\288th_Weapons\Data\Ammo\Laser_orange\laser_orange.p3d";
 		timeToLive = 15;
 		tracerScale = 1.0;
-		tracerStartTime = 1;
-		tracerEndTime = 0.05;
-		tracersEvery = 3;
+		tracerStartTime = .1;
+		tracerEndTime = 10;
+		tracersEvery = 1;
 		//airFriction = 0;
 		//ACE_muzzleVelocities[] = {950,962,968,972,978};
 		//ACE_barrelLengths[] = {330.2,406.4,508.0,609.6,660.4};
 	};
 	//custom 45ACP Ammo
-	class 45ACP : B_45ACP_Ball
+	class 45ACP : B_762x51_Ball
 	{
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_Red.p3d";
 		scope = 2;
@@ -550,7 +550,6 @@ class cfgAmmo
 		submunitionConeAngle = 0.6;
 		submunitionConeType[] = { "poissondisc",7 };
 		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
-
 	};
 	class 288th_HEDP_Small : 288th_Buckshot_Pellet
 	{
@@ -1564,7 +1563,7 @@ class cfgAmmo
 		indirectHitRange = 3;
 		typicalSpeed = 150;
 		caliber = 2.5;
-		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_red";
+		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 30;
 		tracerScale = 1;
 		tracerStartTime = 0;
@@ -2042,7 +2041,7 @@ class CfgMagazines
 		displayname = "[288th DJP] 60rnd 45ACP EHP Mag";
 		displaynameshort = ".45ACP EHP";
 		descriptionshort = "EHP Magazines for the M7 SMGs";
-		tracersEvery = 0;
+		tracersEvery = 1;
 		initSpeed = 550;
 		ammo = "65x85_EHP";
 	};

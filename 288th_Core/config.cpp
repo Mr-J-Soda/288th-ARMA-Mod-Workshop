@@ -173,3 +173,19 @@ class CfgMarkerColors
 		scope = 2;
 	};
 };
+class CfgMovesBasic;
+class CfgMovesMaleSdr: CfgMovesBasic
+{
+	class States
+	{
+		class TransAnimBase;
+		class AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon: TransAnimBase
+		{
+			speed = 2;
+		};
+		class AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon_end: AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon
+		{
+			speed = 3;
+		};
+	};
+};

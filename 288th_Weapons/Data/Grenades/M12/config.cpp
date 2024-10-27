@@ -53,8 +53,25 @@ class CfgAmmo
 		explosionEffects = "KA_flameExplosion";
         //effectsSmoke = "ACE_Incendiary";
     };
-    class 288_shield_beacon_single : B_IRStrobe
+    class 288th_shield_beacon_single : B_IRStrobe
     {
+        hit = 0.001;
+        indirectHit = 0.001;
+        indirectHitRange = 0.001;
+        caliber = 0.001;
+        irLock = 0;
+        class NVGMarkers 
+        {
+            class Blinking1 
+            {
+                ambient = [0.005,0.005,0.005,1];
+                blinking = 0;
+                brightness = 0.002;
+                color = [0.01,0.01,0.01,1];
+                name = "cerveny pozicni blik";
+                onlyInNvg = 1;
+            };
+        };
     };
 };
 
@@ -263,12 +280,12 @@ class CfgMagazines
 		descriptionShort = "$STR_ace_chemlights_UltraHiOrange_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_ultrahiorange_x_ca.paa";
 	};
-    class 288_shield_beacon_single : B_IR_Grenade
+    class 288th_shield_beacon_single : B_IR_Grenade
     {
-        author = "Eta";
-        displayName = "[288] XB-1S Shield Beacon";
-        displayNameShort = "[288] XB-1S";
-        ammo = "288_shield_beacon_single";
+        author = "Avisa / Misriah 288";
+        displayName = "[288th DJP] Shield Beacon";
+        displayNameShort = "Shield Beacon";
+        ammo = "288th_shield_beacon_single";
         descriptionShort = "Shield Beacon, spawns an energy shield";
         sound[] = { "", 0.000316228, 1 };
         reloadSound[] = { "", 0.000316228, 1 };
@@ -281,7 +298,7 @@ class cfgWeapons
     class Throw : GrenadeLauncher
     {
         class ThrowMuzzle;
-        muzzles[] += {"288th_Chemlight_HiRedMuzzle","288th_Chemlight_HiYellowMuzzle","288th_Chemlight_HiWhiteMuzzle","288th_Chemlight_HiBlueMuzzle","288th_Chemlight_HiGreenMuzzle","288th_Chemlight_UltraHiOrangeMuzzle","288th_M12FragMuzzle","288th_M14","288th_Taser","288th_Taser_Impact","288th_Smoke_White","288th_Smoke_Red","288th_Smoke_Green","288th_Smoke_Yellow","288th_Smoke_Purple","288th_Smoke_Blue","288th_Smoke_Orange","288th_Impact_Smoke_White","288th_Shield_Single"};
+        muzzles[] += {"288th_Shield_Single","288th_Chemlight_HiRedMuzzle","288th_Chemlight_HiYellowMuzzle","288th_Chemlight_HiWhiteMuzzle","288th_Chemlight_HiBlueMuzzle","288th_Chemlight_HiGreenMuzzle","288th_Chemlight_UltraHiOrangeMuzzle","288th_M12FragMuzzle","288th_M14","288th_Taser","288th_Taser_Impact","288th_Smoke_White","288th_Smoke_Red","288th_Smoke_Green","288th_Smoke_Yellow","288th_Smoke_Purple","288th_Smoke_Blue","288th_Smoke_Orange","288th_Impact_Smoke_White"};
         class 288th_M12FragMuzzle : ThrowMuzzle
         {
             magazines[] = { "288th_M12_Frag" };
@@ -366,7 +383,7 @@ class cfgWeapons
 		};
         class 288th_Shield_Single : ThrowMuzzle
         {
-            magazines[] = {"288_shield_beacon_single"};
+            magazines[] = {"288th_shield_beacon_single"};
         };
     };
 };

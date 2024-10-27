@@ -3459,7 +3459,7 @@ class cfgVehicles
 				magazines[] = { "288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag" };
 			};
 		};
-		class HitPoints: HitPoints
+		/*class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
 			{
@@ -3639,7 +3639,7 @@ class cfgVehicles
 				explosionShielding = 4;
 				passThrough = 0;
 			};
-		};
+		};*/
 	};
 	class 288th_APC_76 : 288th_IFV_76{
 		editorSubcategory = "288th_Eden_APC";
@@ -8069,6 +8069,8 @@ class cfgVehicles
 		faction = "288th_UNSC";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Drone";
+		crew = "B_UAV_AI";
+		editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\B_UGV_02_Demining_F.jpg";
 		accelAidForceCoef = 0.7;
 		accelAidForceSpd = 0.1;
 		accelAidForceYOffset = -0.8;

@@ -5,7 +5,7 @@ waitUntil { not isNull player };
 EH_ShotsFired_Shield_Single = player addEventHandler ["FiredMan", {
 
   _AmmoType = _this select 4;
-  if (_AmmoType == "288_shield_beacon_single") then {
+  if (_AmmoType == "288th_shield_beacon_single") then {
   _Projectile = _this select 6;
   [_Projectile] spawn {
     _Projectile = _this select 0;

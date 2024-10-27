@@ -375,7 +375,7 @@ class cfgVehicles
 		tf_subtype = "digital_lr";
 		NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
-		NSM_jumppack_energy_capacity = 200; 
+		NSM_jumppack_energy_capacity = 50; 
         NSM_jumppack_recharge = 50;
 		NSM_jumppack_jump_types[] = 
 		{
@@ -384,14 +384,14 @@ class cfgVehicles
                 {
                     12,		//forward velo  [meters/second] (0)
                     20,		//verticle velo [meters/second] (1)
-                    50,		//cost          [no units]      (2)
+                    1,		//cost          [no units]      (2)
                     0,		//angle         [degrees]       (3)
                     0,		//directional   [bool, 0 = false, 1 = true] (4)
                     0		//can prone jump [bool, 0 = false, 1 = true] (5)
                 }
             },
-            {"Short Jump",{25,7,20,0,1,1}},
-			{"Vertical Jump",{0,20,25,0,0,0}},
+            {"Short Jump",{25,7,0,1,1,1}},
+			{"Vertical Jump",{0,20,1,0,0,0}},
         };
 		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[] = {{"spine3",{0,-0.3,-0.1}}};
@@ -423,17 +423,17 @@ class cfgVehicles
 		maximumLoad = 600;
 		tf_hasLRradio = 0;
 		NSM_jumppack_spam_delay = 1;
-		NSM_jumppack_energy_capacity = 250; 
+		NSM_jumppack_energy_capacity = 300; 
         NSM_jumppack_recharge = 1;
 		NSM_jumppack_jump_types[] = 
 		{
-			{"Short Jump",{25,7,25,0,1,1}}
+			{"Short Jump",{25,7,20,0,1,1}}
             {
                 "Vertical Jump",// Name of jump
                 {
                     0,		//forward velo  [meters/second] (0)
                     20,		//verticle velo [meters/second] (1)
-                    25,		//cost          [no units]      (2)
+                    20,		//cost          [no units]      (2)
                     0,		//angle         [degrees]       (3)
                     0,		//directional   [bool, 0 = false, 1 = true] (4)
                     0		//can prone jump [bool, 0 = false, 1 = true] (5)

@@ -271,7 +271,7 @@ class cfgWeapons
 				iconPinpoint = "Bottom";
 			};
 		};
-		modes[] = {"FullAuto","Single"};
+		modes[] = {"FullAuto"};
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};

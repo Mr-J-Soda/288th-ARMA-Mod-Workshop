@@ -371,7 +371,7 @@ class cfgWeapons
 		displayName = "[288th DJP] AR3X";
 		descriptionshort = "Special Oni Derived Armament AR3X";
 		baseWeapon = "288th_AR3X";
-		magazines[] ={"288th_Stanag", "OPTRE_15Rnd_762x51_Mag"};
+		magazines[] ={"288th_Stanag", /*"OPTRE_15Rnd_762x51_Mag"*/};
 		magazineWell[] = { 288th_Standard };
 		recoil = "recoil_lim";
 		visionMode[] ={	"Normal","NVG"	};
