@@ -491,7 +491,6 @@ class cfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		picture = "\OPTRE_Weapons\M6D\Data\icons\magazine\mag_base.paa";
 		displayName = "[288th DJP] 16 Rnd Short Taser Magazine";
 		displayNameShort = "Short Taser";
 		descriptionshort = "16 Rnd 12.7x40mm Short Taser Magazine";
@@ -500,9 +499,12 @@ class cfgMagazines
 		ammo = "288th_Taser_ammo";
 		initSpeed = 254;
 		tracersEvery=1;
-		model = "\OPTRE_Weapons\Pistol\m6_magazine.p3d";
-		modelSpecial = "\OPTRE_Weapons\Pistol\m6_magazine.p3d";
+		model = "\OPTRE_Weapons_Pistols\M6D\m6_extended_magazine.p3d";
+		modelSpecial = "\OPTRE_Weapons_Pistols\M6D\m6_extended_magazine.p3d";
 		modelSpecialIsProxy = 1;
+		hiddenSelections[] = {"camoMag"};
+		hiddenSelectionsTextures[] = {"\OPTRE_Weapons_Pistols\M6D\Data\M6D_Magazine_co.paa"};
+		picture = "\OPTRE_Weapons_Pistols\M6D\Data\icons\magazine\mag_base.paa";
 	};
 	class 288th_Taser_Long_Mag: 288th_Taser_Mag
 	{

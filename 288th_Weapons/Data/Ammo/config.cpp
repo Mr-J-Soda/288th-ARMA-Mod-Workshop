@@ -2396,7 +2396,12 @@ class CfgMagazines
 		count = 32;
 		tracersEvery = 0;
 		mass = 12;
-		picture = "\OPTRE_Weapons\M6D\Data\icons\magazine\mag_base.paa";
+		model = "\OPTRE_Weapons_Pistols\M6D\m6_extended_magazine.p3d";
+		modelSpecial = "\OPTRE_Weapons_Pistols\M6D\m6_extended_magazine.p3d";
+		modelSpecialIsProxy = 1;
+		hiddenSelections[] = {"camoMag"};
+		hiddenSelectionsTextures[] = {"\OPTRE_Weapons_Pistols\M6D\Data\M6D_Magazine_co.paa"};
+		picture = "\OPTRE_Weapons_Pistols\M6D\Data\icons\magazine\mag_base.paa";
 	};
 	class 288th_32Rnd_127x40 : OPTRE_12Rnd_127x40_Mag
 	{

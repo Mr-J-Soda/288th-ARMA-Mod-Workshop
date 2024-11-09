@@ -117,13 +117,13 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M6S SmartLink Scope";
+		displayName = "[288th DJP] M6C SmartLink Scope";
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
 			mass = 1;
 			opticType = 1;
 			optics = 1;
-			modelOptics = "\OPTRE_Weapons\Pistol\m6c_scope";
+			modelOptics = "\OPTRE_Weapons_Pistols\M6C\m6c_scope.p3d";
 			inertia = 0.1;
 			class OpticsModes
 			{

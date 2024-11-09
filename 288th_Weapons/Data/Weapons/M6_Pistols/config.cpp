@@ -326,14 +326,8 @@ class cfgWeapons
 		};
 		magazineWell[] = { 288th_M6C };
 		recoil = "recoil_288_pistols";
-		hiddenSelections[] =
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[] =
-		{
-			"\optre_weapons\pistol\data\m6c_m6c_co.paa"
-		};
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"\OPTRE_Weapons_Pistols\M6C\data\M6C_M6C_co.paa"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic

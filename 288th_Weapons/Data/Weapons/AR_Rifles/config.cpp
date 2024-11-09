@@ -1849,4 +1849,108 @@ class cfgWeapons
 			maxRangeProbab = 0.2;
 		};*/
 	};
+	/*class muzzle_snds_h;
+	class muzzle_snds_68x43: muzzle_snds_h
+	{
+		model = "\A3\weapons_f\acc\acca_snds_l_F";
+	};
+	class Rifle;
+	class arifle_MX_Base_F: Rifle_Base_F
+	{
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class MuzzleSlot;
+		};
+		class Single;
+		class FullAuto;
+	};
+	class arifle_MXC_F: arifle_MX_Base_F{};
+	class tb_arifle_scarlk_base: arifle_MXC_F
+	{
+		scope = 0;
+		magazines[] = {"30Rnd_68x43","30Rnd_68x43_Tracer"};
+		handanim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_02\data\Anim\SMG_02.rtm"};
+		reloadAction = "GestureReloadSMG_02";
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\reload_sting",1.0,1,10};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[] = {"muzzle_snds_68x43"};
+			};
+		};
+		modes[] = {"Single","Burst","FullAuto"};
+		class Single: Single
+		{
+			reloadTime = 0.05;
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+		};
+		class FullAuto: FullAuto
+		{
+			reloadTime = 0.15;
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+		};
+		class Burst: FullAuto
+		{
+			reloadTime = 0.05;
+			autoFire = 0;
+			burst = 3;
+			displayName = "Burst";
+			textureType = "burst";
+			recoil = "recoil_auto_primary_2outof10";
+			recoilProne = "recoil_auto_primary_prone_2outof10";
+		};
+		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.5011872,1,15};
+		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0.5011872,1,15};
+		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0.5011872,1,15};
+		bullet4[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_04",0.5011872,1,15};
+		bullet5[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_01",0.39810717,1,15};
+		bullet6[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_02",0.39810717,1,15};
+		bullet7[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_03",0.39810717,1,15};
+		bullet8[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_04",0.39810717,1,15};
+		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01",0.25118864,1,15};
+		bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0.25118864,1,15};
+		bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0.25118864,1,15};
+		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.25118864,1,15};
+		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
+		/*class Library
+		{
+			libtextdesc = "Scar LK<br />Caliber: 6.5x39 mm";
+		};*
+	};
+	class tb_arifle_scarlk: tb_arifle_scarlk_base
+	{
+		scope = 2;
+		author = "Rehasher";
+		baseWeapon = "tb_arifle_scarlk";
+		displayName = "Scar LK";
+		model = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\ScarLK_F.p3d";
+		picture = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\data\UI\gear_scarlk_x_ca.paa";
+		hiddenSelections[] = {"weapon"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\Data\ScarLK_CO.paa"};
+	};*/
 };

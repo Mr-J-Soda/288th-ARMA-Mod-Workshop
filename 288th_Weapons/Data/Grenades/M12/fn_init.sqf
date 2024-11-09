@@ -15,6 +15,7 @@ EH_ShotsFired_Shield_Single = player addEventHandler ["FiredMan", {
     private _pos = [getpos _Projectile select 0, getpos _Projectile select 1, 1];
     deleteVehicle _Projectile;
     private _shield_spawn = createVehicle ["OPTRE_FC_Energy_shield", _pos, [], 0, "CAN_COLLIDE"];
+    //createVehicleCrew _veh;
     _shield_spawn setObjectScale 1;
 
     sleep 120;
