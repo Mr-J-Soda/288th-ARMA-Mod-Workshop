@@ -374,8 +374,9 @@ class cfgVehicles
 	class I_APC_Tracked_03_base_F: APC_Tracked_03_base_F{};
 	class OPTRE_M494: I_APC_Tracked_03_base_F{};
 	class OPTRE_M808S;
-	class B_APC_Wheeled_01_base_F;
-	class B_APC_Wheeled_01_cannon_F : B_APC_Wheeled_01_base_F
+	/*class B_APC_Wheeled_01_base_F;*/
+	class B_APC_Wheeled_01_cannon_F;
+	/*: B_APC_Wheeled_01_base_F
 	{
 		class AnimationSources;
 		class Sounds;
@@ -394,7 +395,7 @@ class cfgVehicles
 			class HitRMWheel;
 			class HitRF2Wheel;
 		};
-	};
+	};*/
 	class I_APC_Wheeled_03_cannon_F;
 	class UGV_01_rcws_base_F;
 	class B_UGV_01_rcws_F : UGV_01_rcws_base_F
@@ -9464,7 +9465,7 @@ class cfgVehicles
 		canDeactivateMines = 1;
 		engineer = 1;
 		attendant = 1;
-		class HitPoints : HitPoints
+		/*class HitPoints : HitPoints
 		{
 			class HitNeck : HitNeck
 			{
@@ -9498,7 +9499,7 @@ class cfgVehicles
 			{
 				armor = 12;
 			};
-		};
+		};*/
 		class Wounds
 		{
 			tex[] = {};
@@ -9556,7 +9557,7 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		class HitPoints : HitPoints
+		/*class HitPoints : HitPoints
 		{
 			class HitNeck : HitNeck
 			{
@@ -9590,7 +9591,7 @@ class cfgVehicles
 			{
 				armor = 12;
 			};
-		};
+		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -9637,7 +9638,7 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		class HitPoints : HitPoints
+		/*class HitPoints : HitPoints
 		{
 			class HitNeck : HitNeck
 			{
@@ -9671,7 +9672,7 @@ class cfgVehicles
 			{
 				armor = 12;
 			};
-		};
+		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};

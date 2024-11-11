@@ -127,6 +127,7 @@ class cfgWeapons
 	class PointerSlot_Rail;
 	class UnderBarrelSlot_Rail;
 	class OPTRE_Riot_Shield_Icon_Attachments;
+	class OPTRE_M6C_Riot_Shield;
 
 	// Improved M6C Pistol
 	class 288th_M6C : OPTRE_M6C
@@ -395,24 +396,210 @@ class cfgWeapons
 			};
 		};
 	};
-	class 288th_M6C_Riot_Shield: 288th_M6C
+	class 288th_M6C_Riot_Shield: OPTRE_M6C_Riot_Shield
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		baseWeapon = "288th_M6C_Riot_Shield";
 		displayName = "[288th DJP] Riot Shield (M6C)";
 		model = "\OPTRE_Weapons\RiotShield\riotshield_M6C.p3d";
 		hiddenSelections[] = {"camoShield","camoWindshield","camo1"};
-		hiddenSelectionsTextures[] = {"OPTRE_Weapons\RiotShield\data\police\body_co.paa","OPTRE_Weapons\riotshield\data\body_ca.paa","\optre_weapons\pistol\data\m6c_m6c_co.paa"};
+		hiddenSelectionsTextures[] = {"OPTRE_Weapons\RiotShield\data\Body_co.paa","OPTRE_Weapons\riotshield\data\body_ca.paa","\optre_weapons\pistol\data\m6c_m6c_co.paa"};
 		hiddenSelectionsMaterials[] = {"OPTRE_Weapons\RiotShield\data\body.rvmat","OPTRE_Weapons\riotshield\data\glass.rvmat","optre_weapons\pistol\data\m6c_m6c.rvmat"};
 		handAnim[] = {"OFP2_ManSkeleton","\OPTRE_Weapons\RiotShield\data\anim\m6c_human.rtm","Spartan_ManSkeleton","\OPTRE_Weapons\RiotShield\data\anim\spartan\m6c_spartan.rtm"};
 		type = 1;
 		inertia = 0.5;
 		dexterity = 1.25;
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+		cursor = "OPTRE_M6C";
+		HUD_BulletInARows = 2;
+		HUD_TotalPosibleBullet = 32;
+		modes[] = { "Single","FullAuto" };
+		class Single: Mode_SemiAuto
+		{
+			sounds[] =
+			{
+				"StandardSound",
+				"SilencedSound",
+				"CompSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"",1.0,1,200};
+				closure2[] = {"",1.0,1,200};
+				soundClosure[] = {"closure1",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\OPTRE_Weapons\Pistol\data\sounds\Magnum_1.wss",1.3,1,200};
+				soundBegin[] = {"begin1",1};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_interior",1.4125376,1,1400};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_trees",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_forest",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_meadows",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_houses",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_01",1.0,1,600};
+				begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_02",1.0,1,600};
+				begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_03",1.0,1,600};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin2",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_interior",1.0,1,600};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_trees",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_forest",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_meadows",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_houses",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			class CompSound: BaseSoundModeType
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_01",1.0,1,600};
+				begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_02",1.0,1,600};
+				begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_03",1.0,1,600};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_interior",1.0,1,600};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_trees",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_forest",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_meadows",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_houses",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			displayName = "Single";
+			autoFire = 0;
+			textureType = "semi";
+			multiplier = 1;
+			burst = 1;
+			burstRangeMax = 1;
+			dispersion = 5e-05;
+			recoil = "288th_M6C_recoil";
+			recoilProne = "288th_M6C_recoil";
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 500;
+			aiRateOfFireDispersion = 1;
+			soundContinuous = false;
+			soundBurst = false;
+			useAction = false;
+			useActionTitle = "";
+			showToPlayer = true;
+			artilleryDispersion = 0;
+			artilleryCharge = 0;
+			reloadTime = 0.025;
+			minRange = 100;
+			minRangeProbab = 0.5;
+			midRange = 250;
+			midRangeProbab = 0.1;
+			maxRange = 500;
+			maxRangeProbab = 0.050000001;
+			distanceZoomMin = 100;
+			distanceZoomMax = 1000;
+		};
+		class FullAuto: Single
+		{
+			displayName = "FullAuto";
+			autoFire = 1;
+			textureType = "fullAuto";
+			reloadTime = 0.075;
+		};
+		magazines[] =
+		{
+			"288th_32Rnd_127x40",
+			"288th_32Rnd_127x40_AP",
+			"288th_32Rnd_127x40_APT",
+			"288th_32Rnd_127x40_Mag_NARQ",
+			"TCF_12Rnd_127x40_Mag_NARQ"
+		};
+		magazineWell[] = { 288th_M6C };
+		recoil = "recoil_288_pistols";
 		class OpticsModes
 		{
 			class ironsight
@@ -486,9 +673,61 @@ class cfgWeapons
 			};
 			scale[] = {0};
 		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "288th_M7_Sight";
+			};
+			class LinkedItemsMuzzle
+			{
+				slot = "MuzzleSlot";
+				item = "OPTRE_M6C_compensator";
+			};
+			class LinkedItemsPointer
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M6C_Laser";
+			};
+		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 20;
+			class MuzzleSlot : MuzzleSlot_556
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleitems[] =
+				{
+					"OPTRE_M6C_compensator"
+				};
+			};
+			class CowsSlot : CowsSlot_Rail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleitems[] =
+				{
+					"Optre_Evo_sight",
+					"Optre_Recon_Sight",
+					"Optre_Recon_Sight_Red",
+					"Optre_Recon_Sight_Green",
+					"optre_m7_sight",
+					"288th_M7_Sight",
+					"288th_M6C_Scope",
+					"optre_m6c_scope",
+					"OPTRE_M6G_Scope",
+					"OPTRE_M12_Optic",
+				};
+			};
+			class PointerSlot : PointerSlot_Rail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
+				compatibleitems[] =
+				{
+					"OPTRE_M6C_Laser",
+					"OPTRE_M6G_Flashlight"
+				};
+			};
 			class UnderBarrelSlot: OPTRE_Riot_Shield_Icon_Attachments{};
 		};
 	};

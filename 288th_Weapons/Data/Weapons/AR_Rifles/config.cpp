@@ -35,8 +35,19 @@ class cfgWeapons
 {
 
 	// Weapons
+	class WeaponSlotsInfo;
 	class Rifle_Base_F;
-	class arifle_MX_Black_F;
+	class Rifle;
+	class arifle_MX_Base_F: Rifle_Base_F
+	{
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class MuzzleSlot;
+		};
+		class Single;
+		class FullAuto;
+	};
+	class arifle_MXC_F: arifle_MX_Base_F{};
 	class arifle_MX_SW_Black_F;
 	class arifle_MXM_Black_F;
 	class arifle_AK12_F;
@@ -54,7 +65,6 @@ class cfgWeapons
 	class srifle_DMR_03_F;
 	class OPTRE_DMR_Base;
 	// Attachment Slots
-	class WeaponSlotsInfo;
 	class MuzzleSlot;
 	class CowsSlot;
 	class PointerSlot;
@@ -85,7 +95,7 @@ class cfgWeapons
 	};
 
 	// 288th AR1X
-	class 288th_AR1X : arifle_MX_Black_F
+	class 288th_AR1X : arifle_MXC_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -95,8 +105,14 @@ class cfgWeapons
 		canShootInWater = 1;
 		displayName = "[288th DJP] AR1X";
 		descriptionshort = "Special Oni Derived Armament AR1X";
-		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleblak.paa","\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleshortblak.paa"};
+		model = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\ScarLK_F.p3d";
+		picture = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\data\UI\gear_scarlk_x_ca.paa";
+		hiddenSelections[] = {"weapon"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\Data\ScarLK_CO.paa"};
+		reloadAction = "GestureReloadSMG_02";
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\reload_sting",1.0,1,10};
+		/*hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleblak.paa","\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleshortblak.paa"};*/
 		baseWeapon = "288th_AR1X";
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = { 288th_Standard };
@@ -202,6 +218,68 @@ class cfgWeapons
 				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
 				iconPinpoint = "Bottom";
 			};
+		};
+		modes[] = {"Single","Burst","FullAuto"};
+		class Single: Single
+		{
+			/*reloadTime = 0.05;*/
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.3;
+		};
+		class FullAuto: FullAuto
+		{
+			/*reloadTime = 0.15;*/
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 0;
+			minRangeProbab = 0.9;
+			midRange = 15;
+			midRangeProbab = 0.7;
+			maxRange = 30;
+			maxRangeProbab = 0.1;
+			aiRateOfFire = 1e-06;
+		};
+		class Burst: FullAuto
+		{
+			reloadTime = 0.05;
+			autoFire = 0;
+			burst = 3;
+			displayName = "Burst";
+			textureType = "burst";
+			recoil = "recoil_auto_primary_2outof10";
+			recoilProne = "recoil_auto_primary_prone_2outof10";
 		};
 	};
 
@@ -1937,10 +2015,10 @@ class cfgWeapons
 		bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0.25118864,1,15};
 		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.25118864,1,15};
 		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
-		/*class Library
+		class Library
 		{
 			libtextdesc = "Scar LK<br />Caliber: 6.5x39 mm";
-		};*
+		};
 	};
 	class tb_arifle_scarlk: tb_arifle_scarlk_base
 	{

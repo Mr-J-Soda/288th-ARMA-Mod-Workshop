@@ -267,10 +267,10 @@ class cfgVehicles
 
 	class 288th_Jumppack_S10_SOLA : SC_Jumppack_RO_Black
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
@@ -285,10 +285,10 @@ class cfgVehicles
 	};
 	class 288th_Jumppack_S10_SOLA_RTO : SC_Jumppack_RO_Black
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
@@ -310,10 +310,10 @@ class cfgVehicles
 	};
 	class 288th_Jumppack_S12_SOLA : SC_Jumppack_RO_Black
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
@@ -332,10 +332,10 @@ class cfgVehicles
 	};
 	class 288th_Jumppack_S12_SOLA_RTO : 288th_Jumppack_S12_SOLA
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		displayName = "[288th DJP] S12 SOLA RTO Jumppack";
