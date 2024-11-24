@@ -113,18 +113,18 @@ class cfgWeapons
 			};
 			class StandardSound : BaseSoundModeType
 			{
-				begin1[] = { "\OPTRE_FC_Weapons\Railgun\Data\sounds\Railgun.wss",1.0,1,2000 };
-				soundBegin[] = { "begin1",2.0 };
+				begin1[] = {"288th_Weapons\Data\Weapons\SRS99\M99A2S3.OGG",2.5,1,1500};
+				soundBegin[] = {"begin1",1};
 			};
 			class SilencedSound : BaseSoundModeType
 			{
-				begin1[] = { "\OPTRE_FC_Weapons\Railgun\Data\sounds\Railgun.wss",1.0,1,2000 };
-				soundBegin[] = { "begin1",2.0 };
+				begin1[] = {"288th_Weapons\Data\Weapons\SRS99\M99A2S3.OGG",2.5,1,1500};
+				soundBegin[] = {"begin1",1};
 			};
 			class CompSound : BaseSoundModeType
 			{
-				begin1[] = { "\OPTRE_FC_Weapons\Railgun\Data\sounds\Railgun.wss",1.0,1,2000 };
-				soundBegin[] = { "begin1",2.0 };
+				begin1[] = {"288th_Weapons\Data\Weapons\SRS99\M99A2S3.OGG",2.5,1,1500};
+				soundBegin[] = {"begin1",1};
 			};
 			displayName = "Single";
 			autoFire = 0;
@@ -145,7 +145,7 @@ class cfgWeapons
 			showToPlayer = true;
 			artilleryDispersion = 0;
 			artilleryCharge = 0;
-			reloadTime = 1.5;
+			reloadTime = 2;
 			minRange = 100;
 			minRangeProbab = 0.5;
 			midRange = 250;

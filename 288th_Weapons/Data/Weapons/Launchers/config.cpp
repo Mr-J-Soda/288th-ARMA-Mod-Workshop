@@ -69,7 +69,7 @@ class cfgWeapons
 	{
 		canLock = 2;
 		weaponLockDelay = 2;
-		weaponLockSystem = 2;
+		weaponLockSystem = "2 + 16";
 		cmImmunity = 0.75;
 		lockAcquire = 1;
 		magazines[] ={"288th_M41_Twin_HEAT_SACLOS"};

@@ -58,6 +58,7 @@ class cfgWeapons
 	class SC_Rifle_AR12;
 	class 288th_M6C;
 	class 288th_CQS_48X;
+	class 288th_M45TAC;
 	class OPTRE_M393_DMR;
 	class TCF_ARMX_GL_light;
 	class UGL_F;
@@ -1003,6 +1004,25 @@ class cfgWeapons
 			{
 				soundSetShot[] = {"DMR05_Shot_SoundSet","DMR05_tail_SoundSet","DMR05_InteriorTail_SoundSet"};
 			};
+		};
+	};
+
+	class 288th_M28A3_RG : 288th_M28A3_BR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] RG's M28A3";
+		baseWeapon = "288th_M28A3_RG";
+		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\V_MA4_CO_GREEN","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};
+		class secondary : 288th_M45TAC
+		{
+			displayName = "Shotgun Modification";
+			modes[] =
+			{
+				"Single"
+			};
+			magazineWell[] = { 288th_M45TAC };
+			magazines[] = { "288th_Loose_Buckshot","288th_Loose_Slugs" };
 		};
 	};
 

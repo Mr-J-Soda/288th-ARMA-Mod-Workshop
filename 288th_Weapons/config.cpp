@@ -376,10 +376,10 @@ class cfgWeapons
 
 	class 288th_M99A2S3 : OPTRE_M99A2S3
 	{
-		class Single : Single
+		/*class Single : Single
 		{
 			reloadTime = 2;
-		};
+		};*/
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
@@ -442,6 +442,66 @@ class cfgWeapons
 		magazines[] =
 		{
 			"288th_7Rnd_Gauss_Slug_Mag"
+		};
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\SRS99\M99A2S3.OGG",2.5,1,1500};
+				soundBegin[] = {"begin1",1};
+				class SoundTails
+				{
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_forest",1,1,2200};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_houses",1,1,2200};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_interior",1.99526,1,2200};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_meadows",1,1,2200};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_trees",1,1,2200};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+				};
+			};
+			reloadTime = 2;
+			dispersion = 0;
+			recoil = "recoil_single_gm6";
+			recoilProne = "recoil_single_gm6";
+			minRange = 2;
+			minRangeProbab = 0.25;
+			midRange = 800;
+			midRangeProbab = 0.75;
+			maxRange = 2000;
+			maxRangeProbab = 0.25;
 		};
 	};
 

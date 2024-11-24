@@ -1231,7 +1231,7 @@ class cfgAmmo
 			attackProfiles[] = {"DIR"};
 		};
 	};
-	class 288th_M41_Rocket_HEAT_Thermal : OPTRE_M41_Rocket_HEAT_Thermal
+	class 288th_M41_Rocket_HEAT_Thermal : M_Titan_AT
 	{
 		HIT = 1000;
 		indirectHit = 40;
