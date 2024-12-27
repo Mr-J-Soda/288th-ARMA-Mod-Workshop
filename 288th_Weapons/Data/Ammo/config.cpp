@@ -332,7 +332,7 @@ class 288th_plasma_yellow
 	class JLTS_Yellow_plasma
 	{
 		simulation = "light";
-		type = "288th_plasmaYellow";
+		type = "288th_plasmaOrange";
 		position[] = {0,0,0};
 		intensity = 0;
 		interval = 1;
@@ -2568,21 +2568,49 @@ class CfgMagazines
 		mass = 50;
 	};
 
-	class 288th_15Rnd_50BW_Mag : 288th_Stanag
+	//288th Revolver Ammo
+	class 288th_Big_Iron_Mag : 6Rnd_45ACP_Cylinder
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th DJP] 15Rnd .50 Beowulf";
-		displaynameshort = "15Rnd .50";
-		descriptionShort = "15Rnd .50 Beowulf";
-		ammo = "B_50BW_Ball_F";
-		count = 15;
-		initSpeed = 580;
-		tracersEvery = 0;
-		lastRoundsTracer = 0;
-		mass = 12;
+		scopeArsenal = 2;
+		initspeed = 400;
+		ammo = "45ACP";
+		count = 100;
+		displayname = "[288th DJP] Big Iron Ammo";
+		displaynameshort = "Big Iron Ammo";
+		descriptionShort = "Bullets for the Big Iron";
+		mass = 150;
 	};
+	class 288th_Temp_Yellow_Tracer : 6Rnd_45ACP_Cylinder
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		initspeed = 400;
+		tracersEvery = 1;
+		count = 7;
+		ammo = "288th_308_rifle_yellow";
+		displayname = "[288th DJP] 6Rnd Yellow Tracer Ammo";
+		displaynameshort = "Yellow Tracer Ammo";
+		descriptionShort = "Temp's Yellow Tracers";
+	};
+	class 288th_Temp_Purple_Plasma : 6Rnd_45ACP_Cylinder
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		initspeed = 400;
+		count = 7;
+		ammo = "288th_Plasma_Purple";
+		displayname = "[288th DJP] 6Rnd Purple Plasma Ammo";
+		displaynameshort = "Purple Plasma Ammo";
+		descriptionShort = "Temp's Purple Plasma";
+	};
+
 	//288th Experimental Mags
 	class 288th_Scrapmag : 288th_Railgun_Mag
 	{
@@ -2599,19 +2627,20 @@ class CfgMagazines
 		initspeed = 2000;
 		mass = 120;
 	};
-	class 288th_Big_Iron_Mag : 6Rnd_45ACP_Cylinder
+	class 288th_15Rnd_50BW_Mag : 288th_Stanag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		scopeArsenal = 2;
-		initspeed = 400;
-		ammo = "45ACP";
-		count = 100;
-		displayname = "[288th DJP] Big Iron Ammo";
-		displaynameshort = "Big Iron Ammo";
-		descriptionShort = "Bullets for the Big Iron";
-		mass = 150;
+		displayName = "[288th DJP] 15Rnd .50 Beowulf";
+		displaynameshort = "15Rnd .50";
+		descriptionShort = "15Rnd .50 Beowulf";
+		ammo = "B_50BW_Ball_F";
+		count = 15;
+		initSpeed = 580;
+		tracersEvery = 0;
+		lastRoundsTracer = 0;
+		mass = 12;
 	};
 	class 288th_7Rnd_Gauss_Slug_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag
 	{

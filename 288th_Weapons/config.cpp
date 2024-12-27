@@ -332,6 +332,7 @@ class cfgWeapons
 	class asdg_MuzzleSlot_338;
 	class asdg_OpticRail1913;
 	class asdg_UnderSlot;
+	class asdg_FrontSideRail;
 	class OPTRE_Riot_Shield_Icon_Attachments;
 	class SlotInfo;
 	class Default;

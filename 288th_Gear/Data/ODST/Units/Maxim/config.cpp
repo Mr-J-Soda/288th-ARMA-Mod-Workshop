@@ -1338,4 +1338,124 @@ class cfgWeapons
 			};
 		};
 	};
+	class 288th_M52D_Maxim_Glitch : 288th_M52D_Maxim_Rifleman
+	{
+		dlc = "288thDJP_Aux";
+		Scope = 2;
+		scopeArsenal = 2;
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] M52D Maxim (Glitch)";
+		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
+		hiddenSelectionsTextures[] =
+		{
+			"OPTRE_UNSC_Units\army\data\vest_odst_co.paa",
+			"OPTRE_UNSC_Units\army\data\armor_odst_co.paa",
+			"288th_Gear\Data\ODST\Units\Maxim\ODST_Maxim_Legs.paa",
+			"OPTRE_UNSC_Units\army\data\ghillie_woodland_co.paa",
+			"288th_Gear\Data\ODST\Units\Maxim\ODST_Maxim_Armor.paa"
+		};
+		class ItemInfo : VestItem
+		{
+			vestType = "Rebreather";
+			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
+			hiddenSelections[] =
+			{
+				"camo",
+				"camo2",
+				"camo3",
+				"camo4",
+				"camo5",
+				"A_KneesMarLeft",
+				"A_KneesMarRight",
+				"A_Ghillie",
+				"AS_LargeLeft",
+				"AS_LargeRight",
+				"AS_MediumLeft",
+				"AS_MediumRight",
+				//"AS_ODSTLeft",
+				//"AS_ODSTRight",
+				"AS_ODSTCQBLeft",
+				"AS_ODSTCQBRight",
+				"AS_ODSTSniperLeft",
+				"AS_ODSTSniperRight",
+				"AS_SmallLeft",
+				"AS_SmallRight",
+				"AP_AR",
+				"AP_BR",
+				"AP_Canteen",
+				"AP_GL",
+				"AP_Knife",
+				//"AP_MGThigh",
+				"AP_AR",
+				"AP_Pack",
+				"AP_Pistol",
+				"AP_Rounds",
+				//"AP_SG",
+				"AP_SMG",
+				"AP_Sniper",
+				"AP_Thigh",
+				//"AP_Smoke",
+				"APO_AR",
+				"APO_BR",
+				"APO_Knife",
+				"APO_SMG",
+				"APO_Sniper",
+				//"CustomKit_Scorch"
+			};
+			containerClass = "Supply250";
+			modelSides[] = { 6 };
+			mass = 5;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 45;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
 };

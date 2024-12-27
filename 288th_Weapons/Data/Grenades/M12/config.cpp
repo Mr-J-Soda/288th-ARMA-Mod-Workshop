@@ -73,6 +73,15 @@ class CfgAmmo
             };
         };
     };
+    class 288th_rat : B_IRStrobe
+    {
+        hit = 10;
+        indirectHit = 0.001;
+        indirectHitRange = 0.001;
+        caliber = 1;
+        irLock = 0;
+        model = "288th_Weapons\Data\Grenades\Rat\rat.p3d";
+    };
 };
 
 class CfgMagazines
@@ -290,6 +299,17 @@ class CfgMagazines
         sound[] = { "", 0.000316228, 1 };
         reloadSound[] = { "", 0.000316228, 1 };
     };
+    class 288th_Rat : B_IR_Grenade
+    {
+        author = "Soda / Misriah 288";
+        displayName = "[288th DJP] Rat";
+        displayNameShort = "Rat";
+        ammo = "288th_rat";
+        descriptionShort = "Oh shit, it's a rat!";
+        model = "288th_Weapons\Data\Grenades\Rat\rat.p3d";
+        sound[] = { "", 0.000316228, 1 };
+        reloadSound[] = { "", 0.000316228, 1 };
+    };
 };
 
 class cfgWeapons
@@ -298,7 +318,7 @@ class cfgWeapons
     class Throw : GrenadeLauncher
     {
         class ThrowMuzzle;
-        muzzles[] += {"288th_Shield_Single","288th_Chemlight_HiRedMuzzle","288th_Chemlight_HiYellowMuzzle","288th_Chemlight_HiWhiteMuzzle","288th_Chemlight_HiBlueMuzzle","288th_Chemlight_HiGreenMuzzle","288th_Chemlight_UltraHiOrangeMuzzle","288th_M12FragMuzzle","288th_M14","288th_Taser","288th_Taser_Impact","288th_Smoke_White","288th_Smoke_Red","288th_Smoke_Green","288th_Smoke_Yellow","288th_Smoke_Purple","288th_Smoke_Blue","288th_Smoke_Orange","288th_Impact_Smoke_White"};
+        muzzles[] += {"288th_Rat","288th_Shield_Single","288th_Chemlight_HiRedMuzzle","288th_Chemlight_HiYellowMuzzle","288th_Chemlight_HiWhiteMuzzle","288th_Chemlight_HiBlueMuzzle","288th_Chemlight_HiGreenMuzzle","288th_Chemlight_UltraHiOrangeMuzzle","288th_M12FragMuzzle","288th_M14","288th_Taser","288th_Taser_Impact","288th_Smoke_White","288th_Smoke_Red","288th_Smoke_Green","288th_Smoke_Yellow","288th_Smoke_Purple","288th_Smoke_Blue","288th_Smoke_Orange","288th_Impact_Smoke_White"};
         class 288th_M12FragMuzzle : ThrowMuzzle
         {
             magazines[] = { "288th_M12_Frag" };
@@ -384,6 +404,10 @@ class cfgWeapons
         class 288th_Shield_Single : ThrowMuzzle
         {
             magazines[] = {"288th_shield_beacon_single"};
+        };
+        class 288th_Rat : ThrowMuzzle
+        {
+            magazines[] = {"288th_Rat"};
         };
     };
 };

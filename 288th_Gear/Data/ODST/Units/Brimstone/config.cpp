@@ -171,6 +171,24 @@ class cfgWeapons
 		};
 		grad_slingHelmet_allow = true;
 	};
+	class 288th_Brimstone_Helmet_Galaxy : 288th_Brimstone_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] CH252A Brimstone (Galaxy)";
+		optreVarietys[] =
+		{
+			"",
+			"",
+			"_broken"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"288th_Gear\Data\ODST\Units\Brimstone\Airborn_Brimstone_Helmet",
+			"288th_Gear\Data\ODST\Units\Brimstone\CH252A_Galaxy_Visor"
+		};
+		grad_slingHelmet_allow = true;
+	};
 
 	class 288th_M52D_Brimstone_Rifleman : 288th_Armor_ODST_Rifleman
 	{

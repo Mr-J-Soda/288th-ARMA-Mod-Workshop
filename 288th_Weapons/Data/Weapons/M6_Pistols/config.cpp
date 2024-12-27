@@ -58,6 +58,14 @@ class CfgMagazineWells
 			"288th_Big_Iron_Mag"
 		};
 	};
+	class 288th_Temp_Big_Iron
+	{
+		CfgMagazines[] =
+		{
+			"288th_Temp_Yellow_Tracer",
+			"288th_Temp_Purple_Plasma"
+		};
+	};
 	class 288th_HP
 	{
 		CfgMagazines[] =
@@ -947,6 +955,140 @@ class cfgWeapons
 				iconPinpoint = "Bottom";
 			};
 		};
+	};
+
+	// Temp's Big Iron
+	class 288th_Temp_Iron: hgun_Pistol_heavy_02_F
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th DJP] Temp's Big Iron";
+		descriptionshort = "A big iron on her hip";
+		baseWeapon = "288th_Temp_Iron";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\M6_Pistols\Temp\signalis_Eu_K508_black_co.paa"};
+		pictureWire = "\TCF_WEAPONRY\Weapons\Handguns\M33\V_M33_HUD_CA";
+		cursor = "OPTRE_M6C";
+		magazineWell[] = { 288th_Temp_Big_Iron };
+		magazines[] =
+		{
+			"288th_Temp_Yellow_Tracer",
+			"288th_Temp_Purple_Plasma"
+		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "288th_M6C_Scope";
+			};
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 10;
+			class CowsSlot : CowsSlot_Rail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleitems[] =
+				{
+					"Optre_Recon_Sight",
+					"Optre_Recon_Sight_Red",
+					"Optre_Recon_Sight_Green",
+					"Optre_Recon_Sight_Desert",
+					"Optre_Recon_Sight_UNSC",
+					"Optre_Recon_Sight_Snow",
+					"optre_m6c_scope",
+					"288th_M6C_Scope",
+				};
+			};
+			class PointerSlot : PointerSlot_Rail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
+				compatibleitems[] =
+				{
+					
+				};
+			};
+			class UnderBarrelSlot : UnderBarrelSlot_Rail
+			{
+				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+				compatibleItems[] =
+				{
+
+				};
+				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+				iconPinpoint = "Bottom";
+			};
+		};
+		/*modes[] = { "Single" };
+		class Single: Mode_SemiAuto 
+		{
+			aiRateOfFire = 2;
+			aiRateOfFireDistance = 25;
+			dispersion = 5e-05;
+			maxRange = 50;
+			maxRangeProbab = 0.1;
+			midRange = 25;
+			midRangeProbab = 0.6;
+			minRange = 5;
+			minRangeProbab = 0.3;
+			recoil = "recoil_pistol_heavy";
+			recoilProne = "recoil_prone_pistol_heavy";
+			reloadTime = 0.25;
+			displayName = "Semi";
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType{};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"OPTRE_SniperRifle_SoundSet","DMR05_tail_SoundSet","DMR05_InteriorTail_SoundSet"};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+				begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_01",1.0,1,300};
+				begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_02",1.0,1,300};
+				begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_03",1.0,1,300};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_interior",1.0,1,300};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_trees",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_forest",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_meadows",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_houses",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};*/
 	};
 
 	// 288th SSP9

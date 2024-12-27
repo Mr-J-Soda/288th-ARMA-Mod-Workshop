@@ -208,6 +208,71 @@ class cfgWeapons
 		grad_slingHelmet_allow = true;
 		ctab_camera=1;
 	};
+	class 288th_CH252D_ODST_Trans : 288th_CH252D_ODST_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] CH252D ODST Helmet - Trans";
+		hiddenSelectionsTextures[] =
+		{
+			"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
+			"288th_Gear\Data\ODST\Visors\ODST_Base_Visor.paa",
+			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
+			"optre_unsc_units\army\data\soft_packs_co.paa"
+		};
+		hiddenSelections[] =
+		{
+			"camo",
+			"camo2",
+			"camo3",
+			"camo4",
+			"H_Ghillie"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel = "\OPTRE_UNSC_Units\Army\odst_helmet.p3d";
+			hiddenSelectionsTextures[] =
+			{
+				"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
+				"288th_Gear\Data\ODST\Visors\ODST_Base_Visor.paa",
+				"optre_unsc_units\army\data\ghillie_woodland_co.paa",
+				"optre_unsc_units\army\data\soft_packs_co.paa"
+			};
+			hiddenSelections[] =
+			{
+				"camo",
+				"camo2",
+				"camo3",
+				"camo4",
+				"H_Ghillie"
+			};
+		};
+		grad_slingHelmet_allow = true;
+	};
+	class 288th_CH252D_ODST_Trans_dp : 288th_CH252D_ODST_Base_dp
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] CH252D ODST Helmet - Trans";
+		hiddenSelectionsTextures[] =
+		{
+			"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel = "\OPTRE_UNSC_Units\Army\odst_helmet_dp.p3d";
+			hiddenSelections[] =
+			{
+				"camo",
+				"H_Ghillie"
+			};
+		};
+		grad_slingHelmet_allow = true;
+	};
 	class 288th_Armor_ODST_Rifleman : OPTRE_UNSC_M52D_Armor
 	{
 		dlc = "288thDJP_Aux";
@@ -330,6 +395,23 @@ class cfgWeapons
 					passThrough = 0.1;
 				};
 			};
+		};
+	};
+	class 288th_Armor_ODST_Trans : 288th_Armor_ODST_Rifleman
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayName = "[288th DJP] M52D ODST Armor - Trans";
+		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
+		hiddenSelectionsTextures[] =
+		{
+			"OPTRE_UNSC_Units\army\data\vest_odst_co.paa",
+			"OPTRE_UNSC_Units\army\data\armor_odst_co.paa",
+			"288th_Gear\Data\ODST\Trans\ODST_Trans_Legs.paa",
+			"OPTRE_UNSC_Units\army\data\ghillie_woodland_co.paa",
+			"288th_Gear\Data\ODST\Trans\ODST_Trans_Armor.paa"
 		};
 	};
 

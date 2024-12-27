@@ -407,10 +407,10 @@ class cfgWeapons
 		canlock = 2;
 		airLock = 1;
 		aiAmmoUsageFlags = "128 + 256";
-		weaponLockDelay = 2;
+		weaponLockDelay = 1;
 		cursor = "EmptyCursor";
 		cursorAim = "OPTRE_AGM502";
-		reloadTime = 1.5;
+		reloadTime = 1;
 	};
 	class 288th_M318_20mm_Autocannon : autocannon_Base_F
 	{
