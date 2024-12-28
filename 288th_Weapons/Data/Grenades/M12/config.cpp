@@ -95,6 +95,7 @@ class CfgMagazines
 		scopeArsenal = 2;
 		scopeCurator = 2;
         dlc = "288thDJP_Aux";
+        author = "Soda / Misriah 288";
         mass = 8;
         displayName = "[288th DJP] M12 HE-DP Grenade";
         descriptionShort = "Hand Grenade";
