@@ -50,7 +50,7 @@ class cfgWeapons
 	class arifle_MXC_F: arifle_MX_Base_F{};
 	class arifle_MX_SW_Black_F;
 	class arifle_MXM_Black_F;
-	class arifle_AK12_F;
+	class arifle_AK12U_F;
 	class SMG_03C_TR_black;
 	class srifle_LRR_F;
 	class srifle_DMR_07_blk_F;
@@ -708,119 +708,6 @@ class cfgWeapons
 		};
 	};
 
-	// 288th MA5P
-	class 288th_MA5P : SMG_03C_TR_black
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		canShootInWater = 1;
-		displayName = "[288th DJP] MA5P Carbine";
-		descriptionshort = "Special Oni Derived Armament MA5P";
-		baseWeapon = "288th_MA5P";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\P9000_v5.paa"};
-		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_tr_ca.paa";
-		UiPicture = "\A3\Weapons_F\data\UI\icon_regular_CA.paa";
-		magazines[] =
-		{
-			"288th_65x85_Mag_MA5P",
-			"288th_65x85_Mag_MA5P_Tracer"
-		};
-		magazineWell[] = { 288th_MA5P };
-		visionMode[] =
-		{
-			"Normal",
-			"NVG",
-		};
-		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
-		HUD_BulletInARows = 2;
-		HUD_TotalPosibleBullet = 50;
-		cursor = "OPTRE_MA5";
-		class WeaponSlotsInfo
-		{
-			mass = 30;
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor",
-					"OPTRE_M12_Suppressor",
-					"OPTRE_M6C_compensator"
-				};
-			};
-			class CowsSlot : CowsSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleitems[] =
-				{
-					"Optre_Evo_Sight",
-					"Optre_Evo_Sight_Riser",
-					"Optre_Recon_Sight",
-					"Optre_Recon_Sight_Red",
-					"Optre_Recon_Sight_Green",
-					"Optre_Recon_Sight_Desert",
-					"Optre_Recon_Sight_UNSC",
-					"Optre_Recon_Sight_Snow",
-					"288th_M6C_Scope",
-					"288th_M7_Sight",
-					"optic_aco_grn",
-					"optic_aco",
-					"optic_yorris",
-					"optic_aco_smg",
-					"optic_aco_grn_smg",
-					"optre_m393_eotech",
-					"optre_m7_sight",
-					"optre_m392_scope",
-					"TCF_SENT_CG",
-					"TCF_SENT_CGRed",
-					"TCF_SENT_CGGre",
-					"OPTRE_M12_Optic",
-					"TCF_M393_EOTECH_v2"
-				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M12_Laser",
-					"acc_flashlight",
-					"acc_pointer_ir"
-				};
-			};
-			class UnderBarrelSlot : UnderBarrelSlot_Rail
-			{
-				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-
-				};
-				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
-				iconPinpoint = "Bottom";
-			};
-		};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "Optre_Evo_Sight_Riser";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "optre_ma5suppressor";
-			};
-		};
-	};
-
 	// 288th Type 115 battle rifle
 	class 288th_M28A3_BR : TCF_M28A2
 	{
@@ -1189,7 +1076,7 @@ class cfgWeapons
 	};
 
 	// 288th AR1K
-	class 288th_AR1K : arifle_AK12_F
+	class 288th_AR1K : arifle_AK12U_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";

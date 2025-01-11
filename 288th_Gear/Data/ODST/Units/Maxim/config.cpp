@@ -257,15 +257,15 @@ class cfgWeapons
 		grad_slingHelmet_allow = true;
 	};
 
-	class 288th_EOD_Maxim_Glitch : OPTRE_UNSC_EOD_Helmet
+	class 288th_EOD_Maxim : OPTRE_UNSC_EOD_Helmet
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Maxim EOD Helmet (Glitch)";
+		displayName = "[288th DJP] Maxim EOD Helmet";
 		scope = 2;
 		scopeArsenal = 2;
 		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\Glitch\ODST_Glitch_helmet","288th_Gear\Data\ODST\Units\Maxim\Glitch\EOD_Visor_co.paa" };
+		hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\EOD\ODST_EOD_helmet","288th_Gear\Data\ODST\Units\Maxim\EOD\EOD_Visor_co.paa" };
 		optreVarietys[] = { "_dp","","_broken" };
 		optreHUDStyle = "ODST_1";
 		
@@ -276,7 +276,7 @@ class cfgWeapons
 			modelSides[] = { 6 };
 			passThrough = 0.1;
 			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\Glitch\ODST_Glitch_helmet","288th_Gear\Data\ODST\Units\Maxim\Glitch\EOD_Visor_co.paa" };
+			hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\EOD\ODST_EOD_helmet","288th_Gear\Data\ODST\Units\Maxim\EOD\EOD_Visor_co.paa" };
 			class HitpointsProtectionInfo
 			{
 				class Face
@@ -298,22 +298,22 @@ class cfgWeapons
 		grad_slingHelmet_allow = true;
 		ctab_camera=1;
 	};
-	class 288th_EOD_Maxim_Glitch_dp : OPTRE_UNSC_EOD_Helmet
+	class 288th_EOD_Maxim_EOD_dp : OPTRE_UNSC_EOD_Helmet
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Maxim EOD Helmet (Glitch)";
+		displayName = "[288th DJP] Maxim EOD Helmet (EOD)";
 		scope = 1;
 		scopeArsenal = 1;
 		scopeCurator = 1;
 		
 		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\Glitch\ODST_Glitch_helmet","288th_Gear\Data\ODST\Units\Maxim\Glitch\EOD_Visor_co.paa" };
+		hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\EOD\ODST_EOD_helmet","288th_Gear\Data\ODST\Units\Maxim\EOD\EOD_Visor_co.paa" };
 		class ItemInfo : ItemInfo
 		{
 			uniformModel = "\OPTRE_UNSC_Units\Army\EOD_Helmet.p3d";
 			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\Glitch\ODST_Glitch_helmet","288th_Gear\Data\ODST\Units\Maxim\Glitch\EOD_Visor_co.paa" };
+			hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\EOD\ODST_EOD_helmet","288th_Gear\Data\ODST\Units\Maxim\EOD\EOD_Visor_co.paa" };
 			mass = 5;
 			class HitpointsProtectionInfo
 			{
@@ -1284,126 +1284,6 @@ class cfgWeapons
 			};
 			containerClass = "Supply250";
 			modelSides[] = {6};
-			mass = 5;
-			class HitpointsProtectionInfo
-			{
-				class Neck
-				{
-					hitpointName = "HitNeck";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Arms
-				{
-					hitpointName = "HitArms";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Chest
-				{
-					hitpointName = "HitChest";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Diaphragm
-				{
-					hitpointName = "HitDiaphragm";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Abdomen
-				{
-					hitpointName = "HitAbdomen";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Pelvis
-				{
-					hitpointName = "HitPelvis";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Body
-				{
-					hitpointName = "HitBody";
-					armor = 45;
-					passThrough = 0.1;
-				};
-				class Legs
-				{
-					hitpointName = "HitLegs";
-					armor = 45;
-					passThrough = 0.1;
-				};
-			};
-		};
-	};
-	class 288th_M52D_Maxim_Glitch : 288th_M52D_Maxim_Rifleman
-	{
-		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
-		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Glitch)";
-		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
-		hiddenSelectionsTextures[] =
-		{
-			"OPTRE_UNSC_Units\army\data\vest_odst_co.paa",
-			"OPTRE_UNSC_Units\army\data\armor_odst_co.paa",
-			"288th_Gear\Data\ODST\Units\Maxim\ODST_Maxim_Legs.paa",
-			"OPTRE_UNSC_Units\army\data\ghillie_woodland_co.paa",
-			"288th_Gear\Data\ODST\Units\Maxim\ODST_Maxim_Armor.paa"
-		};
-		class ItemInfo : VestItem
-		{
-			vestType = "Rebreather";
-			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
-			hiddenSelections[] =
-			{
-				"camo",
-				"camo2",
-				"camo3",
-				"camo4",
-				"camo5",
-				"A_KneesMarLeft",
-				"A_KneesMarRight",
-				"A_Ghillie",
-				"AS_LargeLeft",
-				"AS_LargeRight",
-				"AS_MediumLeft",
-				"AS_MediumRight",
-				//"AS_ODSTLeft",
-				//"AS_ODSTRight",
-				"AS_ODSTCQBLeft",
-				"AS_ODSTCQBRight",
-				"AS_ODSTSniperLeft",
-				"AS_ODSTSniperRight",
-				"AS_SmallLeft",
-				"AS_SmallRight",
-				"AP_AR",
-				"AP_BR",
-				"AP_Canteen",
-				"AP_GL",
-				"AP_Knife",
-				//"AP_MGThigh",
-				"AP_AR",
-				"AP_Pack",
-				"AP_Pistol",
-				"AP_Rounds",
-				//"AP_SG",
-				"AP_SMG",
-				"AP_Sniper",
-				"AP_Thigh",
-				//"AP_Smoke",
-				"APO_AR",
-				"APO_BR",
-				"APO_Knife",
-				"APO_SMG",
-				"APO_Sniper",
-				//"CustomKit_Scorch"
-			};
-			containerClass = "Supply250";
-			modelSides[] = { 6 };
 			mass = 5;
 			class HitpointsProtectionInfo
 			{

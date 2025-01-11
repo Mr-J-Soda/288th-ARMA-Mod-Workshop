@@ -114,17 +114,6 @@ class CfgMagazineWells
 			"288th_7Rnd_Gauss_Slug_Mag"
 		};
 	};
-	class 288th_MA5P
-	{
-		CfgMagazines[] =
-		{
-			"288th_65x85_Mag_MA5P",
-			"288th_65x85_Mag_MA5P_Tracer",
-			"288th_65x85_Mag_MA5P_EHP",
-			"288th_65x85_Mag_MA5P_Plasma_Purple",
-			"288th_65x85_Mag_MA5P_Plasma_Black"
-		};
-	};
 	class 288th_shotgun
 	{
 		CfgMagazines[] =
@@ -656,9 +645,9 @@ class cfgWeapons
 	};
 	class 288th_PKMP : SC_Rifle_PKMP
 	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		maxZeroing = 1000;
@@ -1445,6 +1434,7 @@ class cfgWeapons
 		displayName = "[288th DJP] M45 Confetti";
 		descriptionshort = "Special Oni Derived Armament M45";
 		fireSpreadAngle = 1;
+		canShootInWater = 1;
 		magazineWell[] = { 288th_M45TAC };
 		magazines[] = { "288th_Loose_Buckshot","288th_Loose_Slugs" };
 		baseWeapon = "288th_M45TAC";
@@ -2012,196 +2002,5 @@ class cfgWeapons
 		Eye = "OPTRE_EYE_HUD_AmmoCount_DMR";
 		HUD_BulletInARows = 5;
 		HUD_TotalPosibleBullet = 10;
-	};
-
-	class ej_barrett_base;
-	class 288th_Harken_M107: ej_barrett_base
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		baseWeapon = "288th_Harken_M107";
-		displayName = "[288th DJP] Harken's M107";
-		description = "UNSC M107";
-		descriptionShort = "Anti-Material Special Applications Rifle";
-		magazines[] = {"OPTRE_4Rnd_145x114_APFSDS_Mag","OPTRE_4Rnd_145x114_HVAP_Mag","OPTRE_4Rnd_145x114_HEDP_Mag"};
-		magazineWell[] = {"OPTRE_Magwell_SRS99D"};
-		cursor = "OPTRE_SRS99";
-		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\Sniper\SNIPER.paa";
-		//pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SniperRifles\SRS99C.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_Snipor";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_Snipor";
-		Eye = "OPTRE_ODST_EYE_AmmoCount_Snipor";
-		HUD_BulletInARows = 4;
-		HUD_TotalPosibleBullet = 4;
-		modes[]={"BarretSingle"};
-		reloadAction="GestureReloadDMR05";
-		selectionfireanim="muzzleflash";
-		weaponinfotype="RscWeaponZeroing";
-		weaponsoundeffect="";
-		weight=0;
-		muzzles[]={"this"};
-		reloadMagazineSound[] = {"\OPTRE_Wbk_WeaponImprovements\reload\srs99_reload.ogg",2,1,25};
-		ACE_barrelTwist = 690;
-		ACE_barrelLength = 877;
-		ACE_overheating_mrbs = 6900;
-		ACE_overheating_slowdownFactor = 1;
-		ACE_overheating_allowSwapBarrel = 0;
-		ACE_overheating_dispersion = 0.025;
-		ACE_twistDirection = 1;
-		ace_railHeightAboveBore = 1.9685;
-		ace_railBaseAngle = 0.025;
-		ace_ironSightBaseAngle = -0.138;
-		ace_overheating_closedBolt = 0;
-		class GunClouds
-		{
-			cloudletaccy=0;
-			cloudletalpha=0.30000001;
-			cloudletanimperiod=1;
-			cloudletcolor[]={1,1,1,0};
-			cloudletduration=0.050000001;
-			cloudletfadein=0;
-			cloudletfadeout=0.1;
-			cloudletgrowup=0.050000001;
-			cloudletmaxyspeed=100;
-			cloudletminyspeed=-100;
-			cloudletshape="cloudletClouds";
-			cloudletsize=1;
-			deltat=0;
-			initt=0;
-			interval=-0.02;
-			size=0.30000001;
-			sourcesize=0.02;
-			timetolive=0;
-			class Table
-			{
-				class T0
-				{
-					color[]={1,1,1,0};
-					maxt=0;
-				};
-			};
-		};
-		class BarretSingle: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound",
-				"SilencedSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="DefaultRifle";
-				closure1[]=
-				{
-					"A3\sounds_f\weapons\closure\closure_rifle_2",
-					0.25118864,
-					1,
-					10
-				};
-				closure2[]=
-				{
-					"A3\sounds_f\weapons\closure\closure_rifle_3",
-					0.25118864,
-					1,
-					10
-				};
-				soundClosure[]=
-				{
-					"closure1",
-					0.5,
-					"closure2",
-					0.5
-				};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[]=
-				{
-					"DaggerBarrett\sound\m107.wav",
-					1.7782794,
-					1,
-					1200
-				};
-				begin2[]=
-				{
-					"DaggerBarrett\sound\m107.wav",
-					1.7782794,
-					1,
-					1200
-				};
-				begin3[]=
-				{
-					"DaggerBarrett\sound\m107.wav",
-					1.7782794,
-					1,
-					1200
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.5,
-					"begin2",
-					0.5,
-					"begin3",
-					0.5
-				};
-				
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				begin1[]=
-				{
-					"DaggerBarrett\sound\m107suppressed.wav",
-					0.80000001,
-					1,
-					300
-				};
-				begin2[]=
-				{
-					"DaggerBarrett\sound\m107suppressed.wav",
-					0.80000001,
-					1,
-					300
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.333,
-					"begin2",
-					0.333
-				};
-			};
-			displayname="Semi";
-			dispersion = 0.00015;
-			maxrange=2500;
-			maxrangeprobab=0.2;
-			midrange=2500;
-			midrangeprobab=0.69999999;
-			minrange=2;
-			minrangeprobab=0.30000001;
-			multiplier=1;
-			reloadtime=0.150000001;
-		};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_SRS99M_Scope";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "50Suppressor_ej";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "acc_pointer_IR";
-			};
-		};
 	};
 };

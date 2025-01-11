@@ -777,7 +777,7 @@ class cfgWeapons
 		};
 		cursor = "OPTRE_M7";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\SMG\SMG_IRON.paa";
-		handAnim[] = { "OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_01\data\Anim\SMG_01.rtm" };
+		//handAnim[] = { "OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_01\data\Anim\SMG_01.rtm" };
 		class LinkedItems
 		{
 			class LinkedItemsOptic

@@ -1094,7 +1094,7 @@ class cfgVehicles
 		weapons[] = { "CMFlareLauncher","OPTRE_missiles_Anvil1" };
 		magazines[] = { "168Rnd_CMFlare_Chaff_Magazine","168Rnd_CMFlare_Chaff_Magazine","168Rnd_CMFlare_Chaff_Magazine" };
 		slingLoadMaxCargoMass = 500000;
-		textureList[] = { "standard",1,"colorgreen",0,"colorblack",0,"colorsnow",0,"colortan",0,"Maxim",0, };
+		textureList[] = { "standard",1,"colorgreen",0,"colorblack",0,"colorsnow",0,"colortan",0 };
 		class textureSources
 		{
 			class standard
@@ -1146,13 +1146,13 @@ class cfgVehicles
 				textures[] = { "OPTRE_Vehicles\Pelican\data\PelicanExterior_innie_CO.paa" };
 				factions[] = { "OPTRE_Ins" };
 			};
-			class Maxim
+			/*class Maxim
 			{
 				displayName = "Maxim";
 				author = "Fletcher";
 				textures[] = { "\288th_Vehicles\Pelican\MaximPelicanExterior_Black_CO.paa" };
 				factions[] = { "288th_UNSC" };
-			};
+			};*/
 		};
 		class UserActions
 		{
@@ -6990,7 +6990,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		forceInGarage = 1;
-		displayName = "M2A1 MBT (288th)";
+		displayName = "WIP M2A1 MBT (288th)";
 		faction = "288th_UNSC";
 		vehicleClass = "OPTRE_UNSC_Armored_class";
 		crew = "288th_SW_Crewman";
@@ -7096,7 +7096,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		forceInGarage = 1;
-		displayName = "T-150X Futura (288th)";
+		displayName = "WIP T-150X Futura (288th)";
 		simulation = "tankX";
 		enableRadio = 1;
 		enableGPS = 1;
@@ -8443,9 +8443,9 @@ class cfgVehicles
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Props";
 		transportMaxWeapons = 50;
-		transportMaxMagazines = 50;
-		maximumLoad = 3500;
-		transportMaxBackpacks = 10;
+		transportMaxMagazines = 100;
+		maximumLoad = 2000;
+		transportMaxBackpacks = 50;
 		transportAmmo = 1;
 		transportRepair = 0;
 		transportFuel = 0;
@@ -8456,7 +8456,7 @@ class cfgVehicles
 			class xx_288th_Stanag
 			{
 				magazine = "288th_Stanag";
-				count = 20;
+				count = 30;
 			};
 			class xx_288th_45ACP_Mag_AP
 			{
@@ -8468,9 +8468,9 @@ class cfgVehicles
 				magazine = "288th_32Rnd_127x40";
 				count = 10;
 			};
-			class xx_288th_32Rnd_127x40_Mag_NARQ
+			class xx_288th_Taser_Long_Mag
 			{
-				magazine = "288th_32Rnd_127x40_Mag_NARQ";
+				magazine = "288th_Taser_Long_Mag";
 				count = 5;
 			};
 		};
@@ -8494,42 +8494,42 @@ class cfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_288th_Black_Uniform_S
+			class xx_288th_Black_Uniform_S
 			{
 				name = "288th_Black_Uniform_S";
 				count = 5;
 			};
-			class _xx_288th_CH252D_ODST_Base
+			class xx_288th_CH252D_ODST_Base
 			{
 				name = "288th_CH252D_ODST_Base";
 				count = 5;
 			};
-			class _xx_288th_Armor_ODST_Rifleman
+			class xx_288th_Armor_ODST_Rifleman
 			{
 				name = "288th_Armor_ODST_Rifleman";
 				count = 5;
 			};
-			class _xx_288th_ILCS_Backpack
+			class xx_288th_ILCS_Backpack
 			{
 				name = "288th_ILCS_Backpack";
 				count = 5;
 			};
-			class _xx_288th_Mk5_NVG
+			class xx_288th_Mk5_NVG
 			{
 				name = "288th_Mk5_NVG";
 				count = 5;
 			};
-			class _xx_kat_IFAK
+			class xx_kat_IFAK
 			{
 				name = "kat_IFAK";
 				count = 5;
 			};
-			class _xx_kat_AFAK
+			class xx_kat_AFAK
 			{
 				name = "kat_AFAK";
 				count = 5;
 			};
-			class _xx_kat_MFAK
+			class xx_kat_MFAK
 			{
 				name = "kat_MFAK";
 				count = 5;

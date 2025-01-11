@@ -48,7 +48,6 @@ class cfgWeapons
 	class 288th_M7V_SMG;
 	class 288th_CQS_48X;
 	class 288th_SSP9;
-	class 288th_MA5P;
 	// Attachment Slots
 	class WeaponSlotsInfo;
 	class MuzzleSlot;
@@ -191,17 +190,4 @@ class cfgWeapons
 			};
 		};
 	};
-	/*class 288th_MA5P_SW : 288th_MA5P
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_M7_Sight";
-			};
-		};
-	};*/
 };

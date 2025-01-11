@@ -1828,54 +1828,6 @@ class CfgMagazines
 		mass = 30;
 	};
 
-	//288th 65x85 Mag MA5P
-	class 288th_65x85_Mag_MA5P : 50Rnd_570x28_SMG_03
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopearsenal = 2;
-		displayname = "[288th DJP] 50Rnd 6.5x85 APFS Mag";
-		displaynameshort = "6.5x85 APFS";
-		descriptionshort = "Magazine for the MA5P";
-		initSpeed = 750;
-		ammo = "65x85_APFS";
-		count = 50;
-		mass = 18;
-	};
-	class 288th_65x85_Mag_MA5P_Tracer : 288th_65x85_Mag_MA5P
-	{
-		displayname = "[288th DJP] 50Rnd 6.5x85 APFS Tracer Mag";
-		displaynameshort = "6.5x85 APFS Tracers";
-		descriptionshort = "Tracer Magazine for the MA5P";
-		initSpeed = 750;
-		ammo = "65x85_APFS_Tracers";
-	};
-	class 288th_65x85_Mag_MA5P_EHP : 288th_65x85_Mag_MA5P
-	{
-		displayname = "[288th DJP] 50Rnd 6.5x85 EHP Mag";
-		displaynameshort = "6.5x85 EHP";
-		descriptionshort = "EHP Magazine for the MA5P";
-		initSpeed = 550;
-		ammo = "65x85_EHP";
-	};
-	class 288th_65x85_Mag_MA5P_Plasma_Purple : 288th_65x85_Mag_MA5P
-	{
-		displayname = "[288th DJP] 50Rnd Purple Plasma Mag";
-		displaynameshort = "6.5x85 Purple Plasma Mag";
-		descriptionshort = "Purple Plasma Magazine for the MA5P";
-		initSpeed = 750;
-		ammo = "288th_Plasma_Purple";
-	};
-	class 288th_65x85_Mag_MA5P_Plasma_Black : 288th_65x85_Mag_MA5P
-	{
-		displayname = "[288th DJP] 50Rnd Black Plasma Mag";
-		displaynameshort = "6.5x85 Black Plasma Mag";
-		descriptionshort = "Black Plasma Magazine for the MA5P";
-		initSpeed = 750;
-		ammo = "288th_Plasma_Black";
-	};
-
 	// 288th DMR/BR
 	class 288th_762_Mag : 20Rnd_762x51_Mag
 	{
@@ -2034,7 +1986,7 @@ class CfgMagazines
 		initSpeed = 600;
 		ammo = "45ACP";
 		count = 60;
-		mass = 8;
+		mass = 10;
 	};
 	class 288th_45ACP_Mag_EHP : 288th_45ACP_Mag_AP
 	{

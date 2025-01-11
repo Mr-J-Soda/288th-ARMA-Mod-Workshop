@@ -189,6 +189,12 @@ class cfgWeapons
 		};
 		grad_slingHelmet_allow = true;
 	};
+	class 288th_Brimstone_Helmet_Ghost : 288th_Brimstone_Helmet_Galaxy
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] CH252A Brimstone (Ghost)";
+	};
 
 	class 288th_M52D_Brimstone_Rifleman : 288th_Armor_ODST_Rifleman
 	{

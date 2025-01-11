@@ -75,7 +75,7 @@ class cfgVehicles
 		displayName = "[288th DJP] ILCS Backpack";
 		model = "\OPTRE_weapons\backpacks\ODST_ruck.p3d";
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		hiddenSelections[] =
 		{
@@ -108,7 +108,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] AN/PRC-521";
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -151,7 +151,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] AN/PRC-521 - Medic";
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -197,7 +197,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] Mil-Tech Radio (Black)";
 		allowedSlots[] = { 901 };
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		tf_isolatedAmount = 0.65;
 		tf_range = 40000;
@@ -231,7 +231,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] Mil-Tech Radio (Woodland)";
 		allowedSlots[] = { 901 };
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		tf_isolatedAmount = 0.65;
 		tf_range = 40000;
@@ -276,7 +276,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] S10 SOLA Jumppack";
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -294,7 +294,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] S10 SOLA RTO Jumppack";
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		tf_isolatedAmount = 0.65;
 		tf_range = 40000;
@@ -323,7 +323,7 @@ class cfgVehicles
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "\288th_Gear\Data\Backpacks\jetpack_co.paa" };
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -362,7 +362,7 @@ class cfgVehicles
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "\288th_Gear\Data\Backpacks\jetpack_co.paa" };
 		allowedSlots[] = {901};
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -420,7 +420,7 @@ class cfgVehicles
 		scopeCurator = 2;
 		isbackpack = 1;
 		displayName = "[288th DJP] Flightpack";
-		maximumLoad = 600;
+		maximumLoad = 500;
 		tf_hasLRradio = 0;
 		NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 300; 
@@ -465,7 +465,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th DJP] Kitbag";
 		allowedSlots[] = { 901 };
-		maximumLoad = 600;
+		maximumLoad = 500;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
