@@ -16,14 +16,14 @@ class CfgMusicClasses
 {
 	class 288th_Music_List
 	{
-		displayName = "288th DJP Toons";
+		displayName = "288th DJP Jams";
 	};
 };
 
 class CfgMusic
 {
-	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme};
-	class Daredevil_AC7 //This is arbitrary
+	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis};
+	class Daredevil_AC7
 	{
 		name	= "Daredevil Ace Combat 7";
 		// filename, volume, pitch
@@ -119,5 +119,29 @@ class CfgMusic
         musicClass = "288th_Music_List";
         duration=192;
 		//https://www.youtube.com/watch?v=D8emyoFwjjU
+	};
+	class Steel_Haze
+	{
+		name	= "Steel Haze";
+		sound[]	= { "\288th_Music\Steel-Haze.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=217;
+		//https://www.youtube.com/watch?v=FkGcXc4XeIA
+	};
+	class The_Only_Way
+	{
+		name	= "The Only Way Out Is Through";
+		sound[]	= { "\288th_Music\The_Only_Way.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=367;
+		//https://www.youtube.com/watch?v=FhbPiKGSxPc
+	};
+	class Cyberpsychosis
+	{
+		name	= "Cyberpsychosis";
+		sound[]	= { "\288th_Music\Cyberpsychosis.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=161;
+		//https://www.youtube.com/watch?v=9mKCj4Nigpg
 	};
 };

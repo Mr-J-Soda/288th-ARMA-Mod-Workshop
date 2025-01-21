@@ -46,6 +46,7 @@ class cfgWeapons
 			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 			"optre_unsc_units\army\data\soft_packs_co.paa"
 		};
+		subItems[] = {"Example_NVG"};
 		class ItemInfo: HeadgearItem
 		{
 			uniformModel = "\OPTRE_UNSC_Units\Army\odst_helmet.p3d";
@@ -525,115 +526,4 @@ class cfgWeapons
 			};
 		};
 	};
-
-	/*class 288th_Ram_Helmet : OPTRE_UNSC_Scout_Helmet
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] UNSC Scout Helmet (Ram)";
-		hiddenSelectionsTextures[] =
-		{
-			"288th_Gear\Data\ODST\Helmets\Scout_Ram_Helmet.paa",
-			"288th_Gear\Data\ODST\Visors\Ram_Visor.paa"
-		};
-		class HitpointsProtectionInfo
-		{
-			class Face
-			{
-				armor = 45;
-				hitpointName = "HitFace";
-				passThrough = 0.1;
-			};
-			class Head
-			{
-				armor = 45;
-				hitPointName = "HitHead";
-				passThrough = 0.1;
-			};
-		};
-	};
-
-	class 288th_Armor_ODST_RAM : 288th_Armor_ODST_Rifleman
-	{
-		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
-		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D ODST Armor - Ram";
-		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
-		hiddenSelectionsTextures[] =
-		{
-			"288th_Gear\Data\ODST\Vests\ODST_Brimstone_vest",
-			"288th_Gear\Data\ODST\Vests\ODST_Brimstone_vest2",
-			"288th_Gear\Data\ODST\Armor\ODST_Ram_Legs.paa",
-			"OPTRE_UNSC_Units\army\data\ghillie_woodland_co.paa",
-			"288th_Gear\Data\ODST\Armor\ODST_Ram_Armor.paa"
-		};
-		class ItemInfo : VestItem
-		{
-			vestType = "Rebreather";
-			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
-			mass = 5;
-			modelSides[] = { 6 };
-			containerClass = "Supply250";
-			hiddenSelections[] =
-			{
-				"camo",
-				"camo2",
-				"camo3",
-				"camo4",
-				"camo5",
-				//"A_Base",
-				//"A_ChestArmor",
-				"A_Ghillie",
-				//"A_KneesLeft",
-				//"A_KneesRight",
-				"A_KneesMarLeft",
-				"A_KneesMarRight",
-				//"A_ODST",
-				//"A_ShinArmorLeft",
-				//"A_ShinArmorRight",
-				//"A_TacPad",
-				//"A_ThighArmorLeft",
-				//"A_ThighArmorRight",
-				"AS_BaseLeft",
-				"AS_BaseRight",
-				"AS_LargeLeft",
-				"AS_LargeRight",
-				"AS_MediumLeft",
-				"AS_MediumRight",
-				"AS_ODSTCQBLeft",
-				//"AS_ODSTCQBRight",
-				"AS_ODSTLeft",
-				"AS_ODSTRight",
-				//"AS_ODSTSniperLeft",
-				"AS_ODSTSniperRight",
-				"AS_SmallLeft",
-				"AS_SmallRight",
-				"AP_AR",
-				"AP_BR",
-				"AP_Canteen",
-				"AP_GL",
-				//"AP_Knife",
-				"AP_MGThigh",
-				"AP_AR",
-				"AP_Pack",
-				"AP_Pistol",
-				"AP_Rounds",
-				"AP_SG",
-				"AP_SMG",
-				"AP_Sniper",
-				//"AP_Thigh",
-				//"AP_Frag",
-				//"AP_Smoke",
-				"APO_AR",
-				"APO_BR",
-				//"APO_Knife",
-				//"APO_SMG",
-				//"APO_Sniper",
-				"CustomKit_Scorch"
-			};
-		};
-	};*/
-
 };

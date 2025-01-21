@@ -1,3 +1,7 @@
+class ace_missileguidance_type_HOT;
+class ace_missileguidance_type_Hellfire;
+class SensorTemplateIR;
+
 class CfgPatches
 {
 	class 288th_Weapons
@@ -402,12 +406,30 @@ class cfgAmmo
 	class WNZ_EMP127_ammo;
 	class OPTRE_M_C2GMLS_AA;
 	class OPTRE_B_145x114_APFSDS;
-	class F_40mm_White;
 	class M_NLAW_AT_F;
 	class G_40mm_HEDP;
 	class B_338_Ball;
+	class FlareCore;
+    class FlareBase: FlareCore {
+        timeToLive = 90;
+        brightness = 150000;
+		intensity = 200000;
+        flareSize = 50;
+    };
+    class F_40mm_White: FlareBase {
+        timeToLive = 90;
+        brightness = 150000;
+		intensity = 200000;
+        flareSize = 50;
+    };
+    class Flare_82mm_AMOS_White: FlareCore {
+        timeToLive = 90;
+        brightness = 80000;
+		intensity = 200000;
+        flareSize = 50;
+    };
 
-	// Custom Ammo
+	
 
 	//custom 6.5 Rifle Ammo
 	class 65x85_APFS : B_762x51_Ball
@@ -428,6 +450,14 @@ class cfgAmmo
 		//airFriction = 0;
 		ACE_muzzleVelocities[] = {950,962,968,972,978};
 		ACE_barrelLengths[] = {330.2,406.4,508.0,609.6,660.4};
+		/*submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitSpeed = 750;
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionConeType[] = {"custom",1};
+		submunitionAmmo = "288th_M41_Rocket_HE";
+		triggerDistance = 10;
+		triggerTime = 0.1;*/
 	};
 	class 65x85_APFS_Tracers : 65x85_APFS
 	{
@@ -1050,99 +1080,79 @@ class cfgAmmo
 	};
 
 	// Custom M41 Ammo
-	class 288th_M41_Rocket_HEAT_SACLOS : M_Titan_AT
+	class 288th_M41_Rocket_HEAT_SACLOS: M_Titan_AT
 	{
-		model = "OPTRE_weapons\rockets\M41_rocket";
-		warheadName = "TandemHEAT";
-		submunitionAmmo = "ammo_Penetrator_Titan_AT";
-		effectsMissile = "missile3";
-		/*simulation = "shotbullet";*/
-		timeToLive = 30;
-		cost = 500;
-		aiAmmoUsageFlags = "128 + 512 + 256";
-		allowAgainstInfantry = 0;
-		HIT = 1000;
-		indirectHit = 40;
-		indirectHitRange = 6;
-		explosive = 0.25;
-		fuseDistance = 20;
-		irLock = 0;
-		airLock = 2;
-		lockType = 1;
-		laserLock = 0;
-		nvLock = 0;
-		cmImmunity = 0.85;
-		manualControl = 1;
-		maxControlRange = 5000;
-		weaponLockSystem = "2 + 16";
-		simulationStep = 0.002;
-		airFriction = 0.145;
-		sideAirFriction = 0.3;
-		maneuvrability = 14;
-		coefGravity = 1;
-		missileKeepLockedCone = 360;
-		missileLockCone = 270;
-		missileLockMaxDistance = 5000;
-		missileLockMinDistance = 20;
-		missileLockMaxSpeed = 350;
-		trackOversteer = 0.9;
-		trackLead = 0.8;
-		initTime = 0.1;
-		thrustTime = 10;
-		thrust = 100;
-		maxSpeed = 200;
-		typicalSpeed = 175;
+		warheadName="TandemHEAT";
+		submunitionAmmo="ammo_Penetrator_Titan_AT_long";
+		effectsMissile="missile3";
+		timeToLive=30;
+		cost=500;
+		aiAmmoUsageFlags="128 + 512 + 256";
+		allowAgainstInfantry=0;
+		HIT=1000;
+		indirectHit=40;
+		indirectHitRange=6;
+		explosive=0.25;
+		fuseDistance=20;
+		irLock=0;
+		airLock=2;
+		lockType=1;
+		laserLock=0;
+		nvLock=0;
+		cmImmunity=0.85000002;
+		manualControl=1;
+		maxControlRange=5000;
+		weaponLockSystem="2 + 16";
+		simulationStep=0.0020000001;
+		airFriction=0.145;
+		sideAirFriction=0.30000001;
+		maneuvrability=14;
+		coefGravity=1;
+		missileKeepLockedCone=360;
+		missileLockCone=270;
+		missileLockMaxDistance=5000;
+		missileLockMinDistance=20;
+		missileLockMaxSpeed=350;
+		trackOversteer=0.89999998;
+		trackLead=0.80000001;
+		initTime=0.1;
+		thrustTime=10;
+		thrust=100;
+		maxSpeed=270;
+		typicalSpeed=175;
 		class Components
 		{
 			class SensorsManagerComponent
 			{
 				class Components
 				{
-					class IRSensorComponent : SensorTemplateIR
+					class IRSensorComponent: SensorTemplateIR
 					{
 						class AirTarget
 						{
-							minRange = 0;
-							maxRange = 5000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = 1;
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
 						};
 						class GroundTarget
 						{
-							minRange = 0;
-							maxRange = 5000;
-							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef = 1;
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
 						};
-						maxTrackableSpeed = 340;
-						angleRangeHorizontal = 60;
-						angleRangeVertical = 60;
-						maxTrackableATL = 4000;
+						maxTrackableSpeed=340;
+						angleRangeHorizontal=60;
+						angleRangeVertical=60;
+						maxTrackableATL=4000;
 					};
 				};
 			};
 		};
-		class ace_missileguidance
+		class ace_missileguidance: ace_missileguidance_type_HOT
 		{
-			enabled = 1;
-			canVanillaLock = 0;
-			onFired = "ace_hot_fnc_onFired";
-			minDeflection = 0.00025;
-			maxDeflection = 0.007;
-			incDeflection = 0.0005;
-			defaultSeekerType = "SACLOS";
-			seekerTypes[] = {"SACLOS"};
-			defaultSeekerLockMode = "LOAL";
-			seekerLockModes[] = {"LOAL","LOBL"};
-			seekerAngle = 30;
-			seekerAccuracy = 1;
-			seekerMinRange = 75;
-			seekerMaxRange = 2500;
-			seekLastTargetPos = 0;
-			correctionDistance = 15;
-			offsetFromCrosshair[] = {0,0,0.5};
-			defaultAttackProfile = "WIRE";
-			attackProfiles[] = {"WIRE"};
+			enabled=1;
 		};
 	};
 	class 288th_M41_Rocket_HE : 288th_M41_Rocket_HEAT_SACLOS

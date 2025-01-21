@@ -44,8 +44,8 @@ class cfgWeapons
 		//MJOLNIR_isHelmet = 1; 
 		//MJOLNIR_helmetOverlay = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudBackground.paa";    //Filepath for the hud overlay texture
     	//MJOLNIR_helmetOutline = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudHelmetOutline.paa";    //Filepath for the hud outline texture
-		/*subItems[] = {"TFAR_anprc152_1"};
-		ace_hearing_protection = 1.00;  // Protection against deafening (0 to 1, higher means more protection)
+		subItems[] = {"Example_NVG"};
+		/*ace_hearing_protection = 1.00;  // Protection against deafening (0 to 1, higher means more protection)
         ace_hearing_lowerVolume = 0.00;  // Muffling of the sound (0 to 1, higher means more muffling)*/
 		hiddenSelections[] = {"camo","camo2","camo3","camo4","H_Ghillie"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Units\Onyx\ODST_Onyx_Helmet.paa","288th_Gear\Data\ODST\Units\Onyx\ODST_Onyx_Visor.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa" };

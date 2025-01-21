@@ -22,6 +22,7 @@ class CfgWeapons
 	class optic_Hamr;
 	class optic_ico_01_black_f;
 	class optre_srs99_scope;
+	class optic_AMS;
 	class muzzle_snds_H;
 	class InventoryMuzzleItem_Base_F;
 	class OPTRE_M45_Flashlight;
@@ -516,6 +517,63 @@ class CfgWeapons
 			};
 		};
 	};
+	class 288th_SS_6_Scope : optic_AMS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayName = "[288th DJP] SS-6 with Smartlink";
+		inertia = 0.1;
+		class ItemInfo : InventoryOpticsItem_Base_F
+		{
+			mass = 1;
+			modelOptics = "\A3\Weapons_F\empty";
+			optics = 1;
+			class OpticsModes
+			{
+				class M15SLRDS
+				{
+					opticsID = 1;
+					useModelOptics = 0;
+					opticsZoomMin = 0.375;
+					opticsZoomMax = 1.1;
+					opticsZoomInit = 0.75;
+					memoryPointCamera = "eye";
+					opticsFlare = 0;
+					opticsDisablePeripherialVision = 0;
+					distanceZoomMin = 100;
+					distanceZoomMax = 100;
+					cameraDir = "";
+					visionMode[] = {};
+					opticsPPEffects[] =
+					{
+						""
+					};
+				};
+				class M15_Zoom : M15SLRDS
+				{
+					opticsID = 2;
+					useModelOptics = 1;
+					opticsZoomMin = 0.015575;
+					opticsZoomMax = 0.1246;
+					opticsZoomInit = 0.1246;
+					discretefov[] = { 0.1246,0.0623,0.046725001,0.03115,0.015575 };
+					discreteinitIndex = 0;
+					discreteDistance[] = { 100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000 };
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 100;
+					distanceZoomMax = 2000;
+					memoryPointCamera = "opticView2";
+					modelOptics[] =
+					{
+						"\288th_Fixes\FZSOScopeFix\Optic\BR_Optic"
+					};
+					visionMode[] = {};
+				};
+			};
+		};
+	};
 	class Invisable_Supresser_288th : muzzle_snds_H
 	{
 		dlc = "288thDJP_Aux";
@@ -579,7 +637,7 @@ class CfgWeapons
 class SlotInfo;
 class CowsSlot : SlotInfo
 {
-	compatibleItems[] += {"288th_M73_Smartlink", "288th_M6C_Scope", "288th_M7_Sight", "288th_M12_Sight", "288th_Hamr_Scope", "288th_SRS99M_Scope", "OPTRE_M7_Sight", "OPTRE_HMG38_CarryHandle", "OPTRE_M12_Optic", "OPTRE_M12_Optic_Red", "OPTRE_M12_Optic_Green", "OPTRE_M6C_Scope", "OPTRE_M6G_Scope", "Optre_Recon_Sight", "Optre_Recon_Sight_Red", "Optre_Recon_Sight_Green", "Optre_Recon_Sight_Desert", "Optre_Recon_Sight_UNSC", "Optre_Recon_Sight_Snow", "OPTRE_BR45_Scope", "OPTRE_BR55HB_Scope", "OPTRE_BR55HB_Scope_Grey", "OPTRE_BMR_Scope", "OPTRE_M392_Scope", "OPTRE_M393_Scope", "OPTRE_M393_ACOG", "OPTRE_M393_EOTECH", "OPTRE_SRM_Sight", "OPTRE_SRS99C_Scope", "OPTRE_SRS99_Scope", "OPTRE_M73_SmartLink", "OPTRE_MA5_SmartLink", "OPTRE_MA5C_SmartLink", "OPTRE_MA5_BUIS"};
+	compatibleItems[] += {"288th_M73_Smartlink", "288th_M6C_Scope", "288th_M7_Sight", "288th_M12_Sight", "288th_Hamr_Scope", "288th_SRS99M_Scope", "288th_SS_6_Scope", "OPTRE_M7_Sight", "OPTRE_HMG38_CarryHandle", "OPTRE_M12_Optic", "OPTRE_M12_Optic_Red", "OPTRE_M12_Optic_Green", "OPTRE_M6C_Scope", "OPTRE_M6G_Scope", "Optre_Recon_Sight", "Optre_Recon_Sight_Red", "Optre_Recon_Sight_Green", "Optre_Recon_Sight_Desert", "Optre_Recon_Sight_UNSC", "Optre_Recon_Sight_Snow", "OPTRE_BR45_Scope", "OPTRE_BR55HB_Scope", "OPTRE_BR55HB_Scope_Grey", "OPTRE_BMR_Scope", "OPTRE_M392_Scope", "OPTRE_M393_Scope", "OPTRE_M393_ACOG", "OPTRE_M393_EOTECH", "OPTRE_SRM_Sight", "OPTRE_SRS99C_Scope", "OPTRE_SRS99_Scope", "OPTRE_M73_SmartLink", "OPTRE_MA5_SmartLink", "OPTRE_MA5C_SmartLink", "OPTRE_MA5_BUIS"};
 };
 class CowsSlot_Rail : CowsSlot
 {
@@ -591,6 +649,7 @@ class CowsSlot_Rail : CowsSlot
 		288th_M12_Sight = 1;
 		288th_Hamr_Scope = 1;
 		288th_SRS99M_Scope = 1;
+		288th_SS_6_Scope = 1;
 		OPTRE_M7_Sight = 1;
 		OPTRE_HMG38_CarryHandle = 1;
 		OPTRE_M12_Optic = 1;

@@ -501,6 +501,7 @@ class cfgWeapons
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleitems[] =
 				{
+					"288th_SS_6_Scope",
 					"Optre_Recon_Sight",
 					"Optre_Recon_Sight_Red",
 					"Optre_Recon_Sight_Green",
@@ -1469,6 +1470,7 @@ class cfgWeapons
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleitems[] =
 				{
+					"288th_SS_6_Scope",
 					"Optre_Recon_Sight",
 					"Optre_Recon_Sight_Red",
 					"Optre_Recon_Sight_Green",

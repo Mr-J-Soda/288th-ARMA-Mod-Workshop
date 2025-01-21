@@ -19,6 +19,36 @@ class CfgPatches
 	};
 };
 
+/*class CfgGlasses 
+{
+	class OPTRE_HUD_Glasses;
+	class 288thCommandNetworkModule : OPTRE_HUD_Glasses 
+	{
+		dlc = "288thDJP_Aux";
+		author = "Monarch Kinnie / Misriah 288";
+		displayName = "Helmet attachment - Command Network Module";
+		ace_resistance = 2;
+		ace_protection = 1;
+		mass = 1;
+		model = "288th_Gear\Data\ODST\Attachments\CNM\V_CNM.P3D";
+		hiddenSelections[] =
+		{
+			"camo",
+			"camo2"
+		};
+		hiddenSelectionTextures[] =
+		{
+			"288th_Gear\Data\ODST\Attachments\CNM\V_CNM.paa",
+			"288th_Gear\Data\ODST\Attachments\CNM\V_CNMCO.paa"
+		};
+		hiddenSelectionMaterials[] =
+		{
+			"288th_Gear\Data\ODST\Attachments\CNM\V_CNM.rvmat",
+			"",
+			""
+		};
+	};
+};
 class CfgGlasses
 {
 	class G_Balaclava_TI_blk_F;
@@ -35,7 +65,7 @@ class CfgGlasses
 		ACE_Protection = 1;
 		ACE_OverlayCracked = "";
 	};
-};
+};*/
 class cfgWeapons
 {
 	class OPTRE_UNSC_Army_Uniform_OLI;
@@ -103,15 +133,15 @@ class cfgWeapons
 	};
 	class 288th_CH252D_ODST_Base : OPTRE_UNSC_CH252D_Helmet
 	{
-		ace_hearing_protection = 1;
-		ace_hearing_lowerVolume = 0.8;
+		/*ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0.8;*/
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		displayName = "[288th DJP] CH252D ODST Helmet - Black";
 		/*hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Helmets\ODST_Base_Helmet.paa",
-			"288th_Gear\Data\ODST\Visors\ODST_Base_Visor.paa",
+			"288th_Gear\Data\ODST\BasicTextures\ODST_Base_Visor.paa",
 			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 			"optre_unsc_units\army\data\soft_packs_co.paa"
 		};*/
@@ -128,7 +158,7 @@ class cfgWeapons
 			/*hiddenSelectionsTextures[] =
 			{
 				"288th_Gear\Data\ODST\Helmets\ODST_Base_Helmet.paa",
-				"288th_Gear\Data\ODST\Visors\ODST_Base_Visor.paa",
+				"288th_Gear\Data\ODST\BasicTextures\ODST_Base_Visor.paa",
 				"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 				"optre_unsc_units\army\data\soft_packs_co.paa"
 			};
@@ -165,7 +195,7 @@ class cfgWeapons
 			};
 		};
 		grad_slingHelmet_allow = true;
-		ctab_camera=1;
+		ctab_camera = 1;
 	};
 	class 288th_CH252D_ODST_Base_dp : OPTRE_UNSC_CH252D_Helmet_dp
 	{
@@ -206,7 +236,7 @@ class cfgWeapons
 			};
 		};
 		grad_slingHelmet_allow = true;
-		ctab_camera=1;
+		ctab_camera = 1;
 	};
 	class 288th_CH252D_ODST_Trans : 288th_CH252D_ODST_Base
 	{
@@ -218,7 +248,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
-			"288th_Gear\Data\ODST\Visors\ODST_Base_Visor.paa",
+			"288th_Gear\Data\ODST\BasicTextures\ODST_Base_Visor.paa",
 			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 			"optre_unsc_units\army\data\soft_packs_co.paa"
 		};
@@ -236,7 +266,7 @@ class cfgWeapons
 			hiddenSelectionsTextures[] =
 			{
 				"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
-				"288th_Gear\Data\ODST\Visors\ODST_Base_Visor.paa",
+				"288th_Gear\Data\ODST\BasicTextures\ODST_Base_Visor.paa",
 				"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 				"optre_unsc_units\army\data\soft_packs_co.paa"
 			};
@@ -461,7 +491,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = \
 		{ \
 			288th_Gear\Data\ODST\Helmets\ODST_##USER##_Helmet.paa, \
-			288th_Gear\Data\ODST\Visors\ODST_##USER##_Visor.paa, \
+			288th_Gear\Data\ODST\BasicTextures\ODST_##USER##_Visor.paa, \
 			optre_unsc_units\army\data\ghillie_woodland_co.paa, \
 			optre_unsc_units\army\data\soft_packs_co.paa \
 		}; \
