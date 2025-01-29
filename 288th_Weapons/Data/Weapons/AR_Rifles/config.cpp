@@ -116,7 +116,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleblak.paa","\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleshortblak.paa"};*/
 		baseWeapon = "288th_AR1X";
 		magazines[] = {"288th_Stanag"};
-		magazineWell[] = { 288th_Standard };
+		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_lim";
 		visionMode[] = {"Normal","NVG"};
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
@@ -298,10 +298,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR2X";
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxlmgblak.paa"};
-		magazines[] =
-		{
-			"288th_Stanag"
-		};
+		magazines[] = {"288th_Stanag"};
 		magazineWell[] = { 288th_Standard_LMG };
 		recoil = "recoil_lim";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
@@ -450,8 +447,8 @@ class cfgWeapons
 		displayName = "[288th DJP] AR3X";
 		descriptionshort = "Special Oni Derived Armament AR3X";
 		baseWeapon = "288th_AR3X";
-		magazines[] ={"288th_Stanag", /*"OPTRE_15Rnd_762x51_Mag"*/};
-		magazineWell[] = { 288th_Standard };
+		magazines[] = {"288th_Stanag"};
+		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_lim";
 		visionMode[] ={	"Normal","NVG"	};
 		hiddenSelections[] = {"camo1"};
@@ -572,8 +569,8 @@ class cfgWeapons
 		displayName = "[288th DJP] AR4X";
 		descriptionshort = "Special Oni Derived Armament AR4X";
 		baseWeapon = "288th_AR4X";
-		magazines[] ={	"288th_Stanag",	};
-		magazineWell[] = { 288th_Standard };
+		magazines[] = {"288th_Stanag"};
+		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_lim";
 		visionMode[] =	{"Normal","NVG"};
 		hiddenSelections[] = {"camo1","camo2"};
@@ -719,11 +716,8 @@ class cfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		magazines[] =
-		{
-			"288th_Stanag"
-		};
-		magazineWell[] = { 288th_Standard };
+		magazines[] = {"288th_Stanag"};
+		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_lim";
 		pictureWire = "288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
@@ -946,12 +940,9 @@ class cfgWeapons
 		displayName = "[288th DJP] AR12";
 		baseWeapon = "288th_AR12";
 		descriptionshort = "Special Oni Derived Armament AR12";
-		magazines[] =
-		{
-			"288th_Stanag",
-		};
-		magazineWell[] = { 288th_Standard };
 		recoil = "recoil_lim";
+		magazineWell[] = {"288th_Standard"};
+		magazines[] = {"288th_Stanag"};
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
@@ -1089,7 +1080,7 @@ class cfgWeapons
 		descriptionshort = "Special Oni Derived Armament AR1K";
 		baseWeapon = "288th_AR1K";
 		magazines[] = {"288th_Stanag"};
-		magazineWell[] = { 288th_Standard };
+		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_lim";
 		//hiddenSelectionsTextures = ["\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"];
 		visionMode[] = {"Normal","NVG"};
@@ -1549,7 +1540,7 @@ class cfgWeapons
 		{
 			"288th_Plasma_White_Mag"
 		};
-		magazineWell[] = { 288th_Standard };
+		magazineWell[] = {"288th_Standard"};
 		modes[] = { "Single","FullAutoSlow" };
 		visionMode[] =
 		{

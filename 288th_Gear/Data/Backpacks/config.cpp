@@ -568,6 +568,23 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
+	class 288th_Remote_M12_Bag : 288th_ILCS_Backpack
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		displayName = "[288th DJP] Remote M12 MLMS Backpack";
+		mass = 100;
+		maximumLoad = 0;
+		class assembleInfo
+		{
+			primary = 1;
+			base = "";
+			assembleTo = "288th_Remote_M12_MLMS";
+			displayName = "Remote M12 MLMS";
+			dissasembleTo[] = {};
+		};
+	};
 	class 288th_SupplyPod_Bag : 288th_ILCS_Backpack
 	{
 		scope = 2;

@@ -46,7 +46,6 @@ class CfgMagazineWells
 {
 	class 288th_Standard
 	{
-		// Magazines listed by mod
 		CfgMagazines[] =
 		{
 			"288th_Stanag",
@@ -59,7 +58,6 @@ class CfgMagazineWells
 			"288th_Plasma_Pink_Mag",
 			"288th_Plasma_White_Mag",
 			"288th_Plasma_Black_Mag",
-			"288th_Plasma_Rainbow_Mag",
 			"288th_EHP_Mag",
 			"288th_EMP",
 			"288th_Incendiary_Mag"
@@ -79,7 +77,6 @@ class CfgMagazineWells
 			"288th_Plasma_Pink_Mag",
 			"288th_Plasma_White_Mag",
 			"288th_Plasma_Black_Mag",
-			"288th_Plasma_Rainbow_Mag",
 			"288th_EHP_Mag",
 			"288th_EMP",
 			"288th_Incendiary_Mag",

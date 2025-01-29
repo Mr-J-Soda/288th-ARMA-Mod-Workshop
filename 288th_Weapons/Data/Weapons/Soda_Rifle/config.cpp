@@ -40,7 +40,6 @@ class CfgMagazineWells
 			"288th_Plasma_Pink_Mag",
 			"288th_Plasma_White_Mag",
 			"288th_Plasma_Black_Mag",
-			"288th_Plasma_Rainbow_Mag",
 			"288th_Plasma_Soda_Mag",
 			"288th_Soda_Buckshot",
 			"288th_EMP",

@@ -8988,6 +8988,35 @@ class cfgVehicles
 			};
 		};
 	};
+	class 288th_Remote_M12_MLMS : 288th_M12_MLMS{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+		side = 1;
+		isUav = 1;
+		hasDriver = 1;
+		getInRadius = 0;
+		armor = 300;
+		uavCameraGunnerPos = "GunnerView";
+		uavCameraGunnerDir = "Barrel";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Turret";
+		/*faction = "288th_UNSC";
+		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		displayName = "Remote M12 MLMS (288th)";
+		crew = "B_UAV_AI";
+		availableForSupportTypes = "[""Artillery""]";
+		class assembleInfo
+		{
+			primary = 1;
+			base = "";
+			assembleTo = "";
+			displayName = "";
+			dissasembleTo[] = { "288th_Remote_M12_Bag" };
+		};
+	};
 	class 288th_M989: OPTRE_M914_RV
 	{
 		dlc = "288th";
@@ -10798,7 +10827,44 @@ class cfgVehicles
 			};
 		};
 	};
-	class V12_S1000RR2018_base;
+	class V12_S1000RR2018_base : Car_F
+	{
+		class UserActions
+		{
+			class Flip
+			{
+				displayNameDefault = "Press SPACEBAR to flip";
+				displayName = "Press SPACEBAR to flip";
+				position = "";
+				radius = 15;
+				onlyForPlayer = 1;
+				condition = "(alive this) AND !(canmove this)";
+				statement = "this setposATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 5]; this setVectorUp surfaceNormal getposATL this;";
+			};
+			class wheelief
+			{
+				displayName = "Wheeling (G)";
+				position = "drivewheel";
+				radius = 2;
+				onlyForPlayer = 0;
+				condition = "player IN this && ((this animationSourcePhase 'rouarrier') < 0.5) && speed this > 20";
+				shortcut = "landGear";
+				showWindow = 0;
+				statement = "this animateSource [""rouarrier"",1]";
+			};
+			class wheelie
+			{
+				displayName = "";
+				position = "drivewheel";
+				radius = 2;
+				onlyForPlayer = 0;
+				condition = "player IN this && ((this animationSourcePhase 'rouarrier') >= 0.5)";
+				shortcut = "commandBack";
+				showWindow = 0;
+				statement = "this animateSource [""rouarrier"",0]";
+			};
+		};
+	};
 	class V12_S1000RR2018_Rouge: V12_S1000RR2018_base
 	{
 		scope = 2;
@@ -10806,14 +10872,8 @@ class cfgVehicles
 		crew = "C_man_1";
 		side = 3;
 		faction = "288th_UNSC";
-	};
-	class V12_S1000RR2018_noir: V12_S1000RR2018_base
-	{
-		scope = 2;
-		scopeCurator = 2;
-		crew = "C_man_1";
-		side = 3;
-		faction = "288th_UNSC";
+		hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0.682353,0,0,1.0,CO)"};
+		hiddenSelectionsMaterials[] = {"V12_S1000RR2018\Data\rvmats\car.rvmat"};
 	};
 	class V12_S1000RR2018_Origine: V12_S1000RR2018_base
 	{
@@ -10822,14 +10882,8 @@ class cfgVehicles
 		crew = "C_man_1";
 		side = 3;
 		faction = "288th_UNSC";
-	};
-	class V12_S1000RR2018_BrosserG: V12_S1000RR2018_base
-	{
-		scope = 2;
-		scopeCurator = 2;
-		crew = "C_man_1";
-		side = 3;
-		faction = "288th_UNSC";
+		hiddenSelectionsTextures[] = {"V12_S1000RR2018\Data\textures\remap.paa"};
+		hiddenSelectionsMaterials[] = {"V12_S1000RR2018\Data\rvmats\car.rvmat"};
 	};
 	class V12_S1000RR2018_BrosserD: V12_S1000RR2018_base
 	{
@@ -10847,14 +10901,6 @@ class cfgVehicles
 		side = 3;
 		faction = "288th_UNSC";
 	};
-	class V12_S1000RR2018_BC: V12_S1000RR2018_base
-	{
-		scope = 2;
-		scopeCurator = 2;
-		crew = "C_man_1";
-		side = 3;
-		faction = "288th_UNSC";
-	};
 	class V12_S1000RR2018_OR: V12_S1000RR2018_base
 	{
 		scope = 2;
@@ -10863,13 +10909,36 @@ class cfgVehicles
 		side = 3;
 		faction = "288th_UNSC";
 	};
-	class V12_S1000RR2018_MAT: V12_S1000RR2018_base
+
+	class WBK_Antlion_1;
+	class WBK_Antlion_1_NoLeap;
+	class WBK_Antlion_1_1: WBK_Antlion_1
 	{
-		scope = 2;
-		scopeCurator = 2;
-		crew = "C_man_1";
-		side = 3;
-		faction = "288th_UNSC";
+		side = 0;
+		displayName = "Antlion";
+	};
+	class WBK_Antlion_1_NoLeap_1: WBK_Antlion_1_NoLeap
+	{
+		side = 0;
+		displayName = "Antlion (No-Leap)";
+	};
+	class WBK_Antlion_1__0: WBK_Antlion_1
+	{
+		side = 2;
+	};
+	class WBK_Antlion_1_NoLeap_0: WBK_Antlion_1_NoLeap
+	{
+		side = 2;
+		displayName = "Antlion (No-Leap)";
+	};
+	class WBK_AntlionGuardian_1;
+	class WBK_AntlionGuardian_1_1: WBK_AntlionGuardian_1
+	{
+		side = 1;
+	};
+	class WBK_AntlionGuardian_1_0: WBK_AntlionGuardian_1
+	{
+		side = 0;
 	};
 };
 

@@ -108,8 +108,9 @@ class cfgWeapons
 		displayName = "[288th DJP] Uniform - Black";
 		
 		ACE_GForceCoef = 0.1;
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		class ItemInfo : UniformItem
 		{
 			uniformClass = "288th_Black_Soldier";

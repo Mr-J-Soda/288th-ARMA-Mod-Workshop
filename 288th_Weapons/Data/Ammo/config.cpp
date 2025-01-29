@@ -564,7 +564,7 @@ class cfgAmmo
 		timeToLive = 10;
 		submunitionAmmo = "B_50BW_Ball_F";
 		triggerDistance = 100;
-		triggerTime = 0.1;
+		triggerTime = 0.05;
 	};
 	class 288th_HEDP_Buckshot : 288th_Buckshot_Pellet
 	{
@@ -936,20 +936,6 @@ class cfgAmmo
 			hitWater = "ImpactPlasmaBlack";
 			hitVirtual = "ImpactPlasmaBlack";
 		};
-	};
-	class 288th_Plasma_Rainbow : 65x85_APFS
-	{
-		hit = 1;
-		typicalSpeed = 600;
-		caliber = 0.1;
-		fuseDistance = 0;
-		triggerOnImpact = 1;
-		submunitionDirectionType = "SubmunitionModelDirection";
-		submunitionInitSpeed = 750;
-		submunitionParentSpeedCoef = 0;
-		submunitionInitialOffset[] = {0,0,0};
-		submunitionConeType[] = {"custom",1};
-		submunitionAmmo[] = {"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
 	};
 	class 288th_Plasma_Soda : B_762x51_Ball
 	{
@@ -1938,15 +1924,6 @@ class CfgMagazines
 		descriptionshort = "A custom designed 6.5x85 mag loaded with black plasma tips";
 		ammo = "288th_Plasma_Black";
 	};
-	class 288th_Plasma_Rainbow_Mag : 288th_Plasma_Blue_Mag
-	{
-		displayname = "[288th DJP] 30rnd Rainbow Plasma 6.5x85 Mag";
-		displaynameshort = "6.5x85 Rainbow Plasma Mag";
-		descriptionshort = "A custom designed 6.5x85 mag loaded with random color plasma tips";
-		ammo = "288th_Plasma_Rainbow";
-	};
-
-	
 	class 288th_Plasma_Soda_Mag : 288th_Plasma_Blue_Mag
 	{
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
@@ -2553,7 +2530,7 @@ class CfgMagazines
 		scopeArsenal = 2;
 		initspeed = 400;
 		tracersEvery = 1;
-		count = 7;
+		count = 6;
 		ammo = "288th_308_rifle_yellow";
 		displayname = "[288th DJP] 6Rnd Yellow Tracer Ammo";
 		displaynameshort = "Yellow Tracer Ammo";
@@ -2566,7 +2543,7 @@ class CfgMagazines
 		scope = 2;
 		scopeArsenal = 2;
 		initspeed = 400;
-		count = 7;
+		count = 6;
 		ammo = "288th_Plasma_Purple";
 		displayname = "[288th DJP] 6Rnd Purple Plasma Ammo";
 		displaynameshort = "Purple Plasma Ammo";

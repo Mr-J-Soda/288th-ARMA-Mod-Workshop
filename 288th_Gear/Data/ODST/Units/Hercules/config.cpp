@@ -198,6 +198,59 @@ class cfgWeapons
 			mass = 5;
 		};
 	};
+	class 288th_CH252_Hercules_Kelkuza : 288th_CH252_Hercules
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th DJP] CH252 Hercules Helmet (Kelkuza)";
+		model = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
+		subItems[] = {"288th_Mk6_NVG"};
+		hiddenSelectionsTextures[] =
+		{
+			"288th_Gear\Data\ODST\Units\Hercules\ODST_Hercules_Helmet.paa",
+			"288th_Gear\Data\ODST\Units\Hercules\ODST_Kel_Visor.paa",
+			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
+			"optre_unsc_units\army\data\soft_packs_co.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
+			hiddenSelectionsTextures[] =
+			{
+				"288th_Gear\Data\ODST\Units\Hercules\ODST_Hercules_Helmet.paa",
+				"288th_Gear\Data\ODST\Units\Hercules\ODST_Kel_Visor.paa",
+				"optre_unsc_units\army\data\ghillie_woodland_co.paa",
+				"optre_unsc_units\army\data\soft_packs_co.paa"
+			};
+			hiddenSelections[] =
+			{
+				"camo",
+				"camo2",
+				"camo3",
+				"camo4",
+				"H_Ghillie",
+				"H_Collar"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 45;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+					explosionShielding = 0.1;
+				};
+				class Head
+				{
+					armor = 45;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+					explosionShielding = 0.1;
+				};
+			};
+			mass = 5;
+		};
+	};
 
 	class 288th_M52D_Hercules_Rifleman : 288th_Armor_ODST_Rifleman
 	{
