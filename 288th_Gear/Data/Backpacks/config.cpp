@@ -26,8 +26,6 @@ class cfgVehicles
 	class OPTRE_ILCS_Rucksack_Black;
 	class OPTRE_ANPRC_521_Black;
 	class B_Soldier_base_F;
-	class SC_MercerJumppack_Black;
-	class SC_Jumppack_RO_Black;
 	class TCF_wnato_kitbag;
 	class TCF_RUCKSACK_UNSC_URB_RAD_F;
 	class TCF_RUCKSACK_UNSC_CLS_RAD_F;
@@ -265,88 +263,6 @@ class cfgVehicles
 		tf_range = 100000;
 	};
 
-	class 288th_Jumppack_S10_SOLA : SC_Jumppack_RO_Black
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		scopeCurator = 2;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		isbackpack = 1;
-		displayName = "[288th DJP] S10 SOLA Jumppack";
-		allowedSlots[] = {901};
-		maximumLoad = 500;
-		mass = 30;
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		sc_jumppack = 1;
-		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };
-	};
-	class 288th_Jumppack_S10_SOLA_RTO : SC_Jumppack_RO_Black
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		scopeCurator = 2;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		isbackpack = 1;
-		displayName = "[288th DJP] S10 SOLA RTO Jumppack";
-		allowedSlots[] = {901};
-		maximumLoad = 500;
-		mass = 30;
-		tf_isolatedAmount = 0.65;
-		tf_range = 40000;
-		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
-		tf_encryptionCode = "tf_west_radio_code";
-		tf_dialog = "rt1523g_radio_dialog";
-		tf_subtype = "digital_lr";
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		sc_jumppack = 1;
-		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };
-	};
-	class 288th_Jumppack_S12_SOLA : SC_Jumppack_RO_Black
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		scopeCurator = 2;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		isbackpack = 1;
-		displayName = "[288th DJP] S12 SOLA Jumppack";
-		model = "\OPTRE_weapons\backpacks\jetpack.p3d";
-		picture = "\OPTRE_weapons\backpacks\icons\icon_jetpack_ca.paa";
-		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\288th_Gear\Data\Backpacks\jetpack_co.paa" };
-		allowedSlots[] = {901};
-		maximumLoad = 500;
-		mass = 30;
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		sc_jumppack = 1;
-		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };
-	};
-	class 288th_Jumppack_S12_SOLA_RTO : 288th_Jumppack_S12_SOLA
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		scopeCurator = 2;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] S12 SOLA RTO Jumppack";
-		tf_isolatedAmount = 0.65;
-		tf_range = 40000;
-		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
-		tf_encryptionCode = "tf_west_radio_code";
-		tf_dialog = "rt1523g_radio_dialog";
-		tf_subtype = "digital_lr";
-	};
 	class 288th_Test_Jetpack : NSM_neutral_XD_1_backpack
 	{
 		dlc = "288thDJP_Aux";

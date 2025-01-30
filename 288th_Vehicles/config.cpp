@@ -10922,13 +10922,22 @@ class cfgVehicles
 		side = 0;
 		displayName = "Antlion (No-Leap)";
 	};
-	class WBK_Antlion_1__0: WBK_Antlion_1
+	class WBK_Antlion_1_0: WBK_Antlion_1
 	{
 		side = 2;
 	};
 	class WBK_Antlion_1_NoLeap_0: WBK_Antlion_1_NoLeap
 	{
 		side = 2;
+		displayName = "Antlion (No-Leap)";
+	};
+	class WBK_Antlion_1_3: WBK_Antlion_1
+	{
+		side = 3;
+	};
+	class WBK_Antlion_1_NoLeap_3: WBK_Antlion_1_NoLeap
+	{
+		side = 3;
 		displayName = "Antlion (No-Leap)";
 	};
 	class WBK_AntlionGuardian_1;
@@ -10939,6 +10948,10 @@ class cfgVehicles
 	class WBK_AntlionGuardian_1_0: WBK_AntlionGuardian_1
 	{
 		side = 0;
+	};
+	class WBK_AntlionGuardian_1_3: WBK_AntlionGuardian_1
+	{
+		side = 3;
 	};
 };
 
