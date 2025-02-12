@@ -39,7 +39,7 @@ class cfgWeapons
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th DJP] Biofoam Canister";
+		displayName = "[288th] Biofoam Canister";
 		picture = "\OPTRE_weapons\items\icons\biofoam.paa";
 		model = "\OPTRE_Weapons\items\Biofoam.p3d";
 		descriptionShort = "Self-sealing coagulant foam to stop bleeding and haemorrhaging";
@@ -65,7 +65,7 @@ class cfgWeapons
 	{
 		scope = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Emergency Medkit";
+		displayName = "[288th] Emergency Medkit";
 		descriptionShort = "A single use high capacity medkit loaded with medical supplies";
 		picture = "\OPTRE_weapons\items\icons\medkit.paa";
 		model = "\OPTRE_Weapons\items\MedKit.p3d";
@@ -79,7 +79,7 @@ class cfgWeapons
 	{
 		scope = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Corpsman Biofoam";
+		displayName = "[288th] Corpsman Biofoam";
 		descriptionShort = "A high capacity Corpsman Biofoam";
 		picture = "\OPTRE_weapons\items\icons\biofoam.paa";
 		model = "\OPTRE_Weapons\items\Biofoam.p3d";
@@ -93,7 +93,7 @@ class cfgWeapons
 	{
 		scope = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Stim Autoinjector";
+		displayName = "[288th] Stim Autoinjector";
 		descriptionShort = "A single use quick acting medical injector";
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -104,7 +104,7 @@ class cfgWeapons
 	{
 		scope = 1;
 		scopeArsenal = 1;
-		displayName = "[288th DJP] Stim Autoinjector?";
+		displayName = "[288th] Stim Autoinjector?";
 		descriptionShort = "A single use quick acting medical injector?";
 	};
 };

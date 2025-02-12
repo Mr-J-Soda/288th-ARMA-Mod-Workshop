@@ -54,7 +54,7 @@ class cfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		displayName = "[288th DJP] NSFW M392";
+		displayName = "[288th] NSFW M392";
 		descriptionshort = "Special Oni Derived Armament M392";
 		model = "\OPTRE_Weapons\DMR\M392.p3d";
 		baseWeapon = "288th_M392_NSFW";

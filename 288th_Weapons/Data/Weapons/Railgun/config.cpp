@@ -75,7 +75,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] ARC-920 Railgun";
+		displayName = "[288th] ARC-920 Railgun";
 		descriptionshort = "Special Oni Derived Armament ARC-920 Railgun";
 		baseWeapon = "288th_Railgun";
 		magazines[] =

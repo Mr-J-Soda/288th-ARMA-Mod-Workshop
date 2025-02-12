@@ -49,6 +49,15 @@ class CfgMagazineWells
 			"288th_M57_Cricket_Flame"
 		};
 	};
+	class 288th_RR553
+	{
+		CfgMagazines[] =
+		{
+			"288th_1Rnd_50x137_HE",
+			"288th_1Rnd_50x137_HEAT",
+			"288th_1Rnd_50x137_PEN"
+		};
+	};
 };
 
 class cfgWeapons
@@ -57,6 +66,7 @@ class cfgWeapons
 	class TCF_M57_Pilum_b;
 	class OPAEX_SpartanLaser;
 	class TCF_M96_LAW;
+	class launch_MRAWS_green_F;
 	class MuzzleSlot;
 	class CowsSlot;
 	class PointerSlot;
@@ -92,7 +102,7 @@ class cfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		displayname = "[288th DJP] M41 SSR MAV/AW";
+		displayname = "[288th] M41 SSR MAV/AW";
 		descriptionshort = "AT/AA Handheld ATGM/SAM Launcher";
 		baseWeapon = "288th_M41_Launcher";
 		picture = "\OPTRE_weapons\rockets\icons\launcher.paa";
@@ -167,7 +177,7 @@ class cfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		displayname = "[288th DJP] M57 'Cricket'";
+		displayname = "[288th] M57 'Cricket'";
 		descriptionshort = "Light AT/AA Launcher";
 		baseWeapon = "288th_M57_Launcher";
 		cmImmunity = 0.95;
@@ -195,25 +205,24 @@ class cfgWeapons
 		};
 	};
 
-	// 288th LAW
-	/*class 288th_M96_LAW_Blk: TCF_M96_LAW
+	// Recoilless Rifle
+	class 288th_Recoilless: launch_MRAWS_green_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		baseWeapon = "288th_M96_LAW_Blk";
-		displayName = "[288th DJP] M96 LAW";
-		picture = "\TCF_WEAPONRY\Weapons\icons\atb_Icon.paa";
-		UiPicture = "\TCF_WEAPONRY\Weapons\icons\atb_Icon.paa";
-		magazines[] = {"TCF_M96_HEAT"};
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"TCF_WEAPONRY\Weapons\Launchers\m96\data\M96_Blk_co.paa"};
-		hiddenSelectionMaterials[] = {""};
-		class WeaponSlotsInfo
-		{
-			mass = 30;
-		};
-	};*/
+		pictureWire = "288th_Weapons\Data\Weapons\Launchers\hopper_wire.paa";
+		cursor = "OPTRE_M41R";
+		displayname = "[288th] RR-553 Recoilless";
+		baseWeapon = "288th_Recoilless";
+		magazines[] = {"288th_1Rnd_50x137_HE","288th_1Rnd_50x137_HEAT","288th_1Rnd_50x137_PEN"};
+		magazineWell[] = {288th_RR553};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\Launchers\launch_MRAWS_01_F_co.paa","288th_Weapons\Data\Weapons\Launchers\launch_MRAWS_02_F_co.paa"};
+		ace_overpressure_angle = 0;
+		ace_overpressure_range = 0;
+		ace_overpressure_damage = 0;
+		ace_reloadlaunchers_enabled = 1;
+	};
 };

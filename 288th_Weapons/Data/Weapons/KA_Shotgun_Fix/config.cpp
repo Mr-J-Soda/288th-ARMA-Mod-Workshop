@@ -68,7 +68,7 @@ class CfgMagazines
 	class CA_Magazine;
 	class KA_VC1_Flamethrower_Mag: CA_Magazine
 	{
-		displayName = "[288th DJP] Flamethrower Fuel Cell";
+		displayName = "[288th] Flamethrower Fuel Cell";
 		ammo = "KA_VC1_Flamethrower_Ammo";
 		model = "\KA_Flamethrower\VC1_Flamethrower_mag.p3d";
 		type = "3*256";
@@ -108,7 +108,7 @@ class CfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] VC1 Flamethrower";
+		displayName = "[288th] VC1 Flamethrower";
 		fireSpreadAngle = 1;
 		discreteDistance[] = {10};
 		scope = 1;
@@ -118,7 +118,7 @@ class CfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] VC1 Flamethrower";
+		displayName = "[288th] VC1 Flamethrower";
 		magazines[] ={"288th_VC1_Flamethrower_Mag"};
 		fireSpreadAngle = 1;
 		discreteDistance[] = {10};

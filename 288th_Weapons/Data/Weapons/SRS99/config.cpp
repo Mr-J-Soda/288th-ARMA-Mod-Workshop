@@ -34,7 +34,7 @@ class CfgWeapons
 		dlc = "288thDJP_Aux";
 		author = "Festive Neira / Misriah 288";
 		model = "\OPTRE_Weapons\Sniper\SRS99C.p3d";
-		displayName = "[288th DJP] SRS99C-S2";
+		displayName = "[288th] SRS99C-S2";
 		descriptionshort = "14.5mm Handheld Anti-Materiel Precision Rifle";
 		picture = "\OPTRE_weapons\sniper\icons\sniper2.paa";
 		magazines[] = 

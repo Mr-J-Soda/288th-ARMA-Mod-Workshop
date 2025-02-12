@@ -34,9 +34,13 @@ class cfgWeapons
 	
 	class 288th_CH252_Hercules : 288th_CH252_Marine
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252 Hercules Helmet";
+		displayName = "[288th] CH252 Hercules Helmet";
 		model = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -96,9 +100,13 @@ class cfgWeapons
 	};
 	class 288th_CH252_Hercules_Orion : 288th_CH252_Hercules
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252 Hercules Helmet (Blue)";
+		displayName = "[288th] CH252 Hercules Helmet (Blue)";
 		model = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -148,9 +156,13 @@ class cfgWeapons
 	};
 	class 288th_CH252_Hercules_Wendigo : 288th_CH252_Hercules
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252 Hercules Helmet (Green)";
+		displayName = "[288th] CH252 Hercules Helmet (Green)";
 		model = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -200,9 +212,13 @@ class cfgWeapons
 	};
 	class 288th_CH252_Hercules_Kelkuza : 288th_CH252_Hercules
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252 Hercules Helmet (Kelkuza)";
+		displayName = "[288th] CH252 Hercules Helmet (Kelkuza)";
 		model = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
 		subItems[] = {"288th_Mk6_NVG"};
 		hiddenSelectionsTextures[] =
@@ -254,11 +270,13 @@ class cfgWeapons
 
 	class 288th_M52D_Hercules_Rifleman : 288th_Armor_ODST_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Hercules (Rifleman)";
+		displayName = "[288th] M52D Hercules (Rifleman)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -370,11 +388,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Hercules_Demolitions : 288th_M52D_Hercules_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Hercules (Demolitions)";
+		displayName = "[288th] M52D Hercules (Demolitions)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -486,11 +506,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Hercules_Marksman : 288th_M52D_Hercules_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Hercules (Marksman)";
+		displayName = "[288th] M52D Hercules (Marksman)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -600,11 +622,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Hercules_Sniper : 288th_M52D_Hercules_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		Scope = 2;
-		scopeArsenal = 2;
-		displayName = "[288th DJP] M52D Hercules (Sniper)";
+		displayName = "[288th] M52D Hercules (Sniper)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -717,11 +741,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Hercules_Medic : 288th_M52D_Hercules_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Hercules (Medic)";
+		displayName = "[288th] M52D Hercules (Medic)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -830,11 +856,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Hercules_Ghillie : 288th_M52D_Hercules_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Hercules (Ghillie)";
+		displayName = "[288th] M52D Hercules (Ghillie)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{

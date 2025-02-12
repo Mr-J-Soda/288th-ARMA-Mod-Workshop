@@ -73,7 +73,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] Snowfox";
+		displayName = "[288th] Snowfox";
 		descriptionshort = "Special Oni Derived Armament Snowfox";
 		baseWeapon = "288th_Snowfox";
 		recoil = "recoil_lim";
@@ -397,7 +397,7 @@ class cfgWeapons
 	class 288th_Snowfox_Stevens : 288th_Snowfox
 	{
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Steven's Snowfox";
+		displayName = "[288th] Steven's Snowfox";
 		descriptionshort = "Special Oni Derived Armament Snowfox";
 		baseWeapon = "288th_Snowfox_Stevens";
 		hiddenSelectionsTextures[] =

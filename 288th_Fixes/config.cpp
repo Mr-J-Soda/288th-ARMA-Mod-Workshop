@@ -61,7 +61,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M73 Smart Link Scope";
+		displayName = "[288th] M73 Smart Link Scope";
 		inertia = 0.1;
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
@@ -118,7 +118,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M6C SmartLink Scope";
+		displayName = "[288th] M6C SmartLink Scope";
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
 			mass = 1;
@@ -176,7 +176,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] MA5 Smart Link Optic";
+		displayName = "[288th] MA5 Smart Link Optic";
 		model = "\OPTRE_Weapons\AR\MA5_smartlink";
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
@@ -235,7 +235,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] MA5 Smart Link Optic (Grey)";
+		displayName = "[288th] MA5 Smart Link Optic (Grey)";
 		model = "\OPTRE_Weapons\AR\MA5C_smartlink";
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
@@ -294,7 +294,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M7 Reflex with Smartlink";
+		displayName = "[288th] M7 Reflex with Smartlink";
 		model = "\OPTRE_Weapons\SMG\m7_sights";
 		picture = "\OPTRE_weapons\smg\icons\scope";
 		inertia = 0.1;
@@ -353,7 +353,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M12 Reflex with Smartlink";
+		displayName = "[288th] M12 Reflex with Smartlink";
 		picture = "\OPTRE_weapons\smg\icons\m12_scope.paa";
 		model = "\OPTRE_Weapons\smg\m12_holo.p3d";
 		inertia = 0.1;
@@ -412,7 +412,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Mark 4 HAMR with Smartlink";
+		displayName = "[288th] Mark 4 HAMR with Smartlink";
 		inertia = 0.1;
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
@@ -466,7 +466,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] SRS99M-S1 with Smartlink";
+		displayName = "[288th] SRS99M-S1 with Smartlink";
 		inertia = 0.1;
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
@@ -523,7 +523,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] SS-6 with Smartlink";
+		displayName = "[288th] SS-6 with Smartlink";
 		inertia = 0.1;
 		class ItemInfo : InventoryOpticsItem_Base_F
 		{
@@ -580,7 +580,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Invisable Supresser";
+		displayName = "[288th] Invisable Supresser";
 		inertia = 0.1;
 		model = "\A3\weapons_f\empty";
 		class ItemInfo : InventoryMuzzleItem_Base_F
@@ -627,7 +627,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Invisable Flashlight";
+		displayName = "[288th] Invisable Flashlight";
 		inertia = 0.1;
 		model = "\A3\weapons_f\empty";
 	};

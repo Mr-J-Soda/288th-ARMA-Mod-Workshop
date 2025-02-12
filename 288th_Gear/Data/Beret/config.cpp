@@ -29,7 +29,7 @@ class cfgWeapons
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th DJP] Beret (Unit)";
+		displayName = "[288th] Beret (Unit)";
 		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_H_Beret_Colonel_ca.paa";
 		model = "a3\characters_f_epb\BLUFOR\headgear_beret02";
 		hiddenSelections[] = {"Camo"};
@@ -54,25 +54,37 @@ class cfgWeapons
 
 	class 288th_beret_Brim : 288th_Beret_Base
 	{
-		displayName = "[288th DJP] Beret (Brimstone)";
+		displayName = "[288th] Beret (Brimstone)";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Beret\Brimstoneberet.paa"};
 	};
 	class 288th_beret_Herc : 288th_Beret_Base
 	{
-		displayName = "[288th DJP] Beret (Hercules)";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] Beret (Hercules)";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Beret\Herculesberet.paa"};
 	};
 	class 288th_beret_Maxim : 288th_Beret_Base
 	{
-		displayName = "[288th DJP] Beret (Maxim)";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] Beret (Maxim)";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Beret\maximberet.paa"};
 	};
 	class 288th_beret_Onyx : 288th_Beret_Base
 	{
-		displayName = "[288th DJP] Beret (Onyx)";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] Beret (Onyx)";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Beret\Onyxberet.paa"};
 	};

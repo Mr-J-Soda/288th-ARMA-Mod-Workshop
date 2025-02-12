@@ -257,7 +257,7 @@ class CfgPatches
 };*/
 class CfgGlasses
 {
-	class G_Bandanna_Oli;
+	/*class G_Bandanna_Oli;
 	class 41st_Shemagh_Black: G_Bandanna_oli
 	{
 		scope = 1;
@@ -510,7 +510,7 @@ class CfgGlasses
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-	};
+	};*/
 	class None;
 	class kat_Armband_Red_Cross_Goggles: None
 	{

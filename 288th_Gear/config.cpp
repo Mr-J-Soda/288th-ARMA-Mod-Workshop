@@ -56,7 +56,7 @@ class CfgGlasses
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Balaclava Black";
+		displayName = "[288th] Balaclava Black";
 		model = "\A3\Characters_F_Bootcamp\Guerrilla\g_balaclava_clean.p3d";
 		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_G_Balaclava_clean_ca.paa";
 		mass = 1;
@@ -105,7 +105,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Uniform - Black";
+		displayName = "[288th] Uniform - Black";
 		
 		ACE_GForceCoef = 0.1;
 		scope = 1;
@@ -122,7 +122,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Uniform (Slim) - Black";
+		displayName = "[288th] Uniform (Slim) - Black";
 		
 		ACE_GForceCoef = 0.1;
 		class ItemInfo : UniformItem
@@ -138,7 +138,7 @@ class cfgWeapons
 		ace_hearing_lowerVolume = 0.8;*/
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Black";
+		displayName = "[288th] CH252D ODST Helmet - Black";
 		/*hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Helmets\ODST_Base_Helmet.paa",
@@ -204,7 +204,7 @@ class cfgWeapons
 		ace_hearing_lowerVolume = 0.8;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Black";
+		displayName = "[288th] CH252D ODST Helmet - Black";
 		/*hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Helmets\ODST_Base_Helmet.paa"
@@ -245,7 +245,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Trans";
+		displayName = "[288th] CH252D ODST Helmet - Trans";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
@@ -288,7 +288,7 @@ class cfgWeapons
 		scopeArsenal = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Trans";
+		displayName = "[288th] CH252D ODST Helmet - Trans";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Trans\ODST_Trans_Helmet.paa",
@@ -310,7 +310,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52D ODST Armor - Black";
+		displayName = "[288th] M52D ODST Armor - Black";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		/*hiddenSelectionsTextures[] =
 		{
@@ -434,7 +434,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52D ODST Armor - Trans";
+		displayName = "[288th] M52D ODST Armor - Trans";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -455,7 +455,7 @@ class cfgWeapons
 	#define CREATEUNI(DESIGNATION) \
 	class 288th_##DESIGNATION##_Uniform : 288th_Black_Uniform \
 	{ \
-		displayName = [288th DJP] Uniform - DESIGNATION; \
+		displayName = [288th] Uniform - DESIGNATION; \
 		 \
 		ACE_GForceCoef = 0.1; \
 		class ItemInfo : UniformItem \
@@ -467,7 +467,7 @@ class cfgWeapons
 	}; \
 	class 288th_##DESIGNATION##_Uniform_S : 288th_Black_Uniform_S \
 	{ \
-		displayName = [288th DJP] Uniform (Slim) - DESIGNATION; \
+		displayName = [288th] Uniform (Slim) - DESIGNATION; \
 		 \
 		ACE_GForceCoef = 0.1; \
 		class ItemInfo : UniformItem \
@@ -487,7 +487,7 @@ class cfgWeapons
 	#define CUSTOMODST(USER, HIDDEN) \
 	class 288th_CH252D_ODST_##USER : 288th_CH252D_ODST_Base \
 	{ \
-		displayName = [288th DJP] CH252D ODST Helmet - USER; \
+		displayName = [288th] CH252D ODST Helmet - USER; \
 		  \
 		hiddenSelectionsTextures[] = \
 		{ \
@@ -516,7 +516,7 @@ class cfgWeapons
 	}; \
 	class 288th_CH252D_ODST_##USER##_dp : 288th_CH252D_ODST_Base_dp \
 	{ \
-		displayName = [288th DJP] CH252D ODST Helmet - USER; \
+		displayName = [288th] CH252D ODST Helmet - USER; \
 		  \
 		hiddenSelectionsTextures[] = \
 		{ \
@@ -542,7 +542,7 @@ class cfgWeapons
 	}; \
 	class 288th_Armor_ODST_##USER : 288th_Armor_ODST_Rifleman \
 	{ \
-		displayName = [288th DJP] M52D ODST Armor - USER; \
+		displayName = [288th] M52D ODST Armor - USER; \
 		hiddenSelectionsTextures[] = \
 		{ \
 			288th_Gear\Data\ODST\Vests\ODST_##USER##_Vest.paa, \
@@ -702,7 +702,7 @@ class cfgVehicles
 		uniformclass = "288th_Black_Uniform";
 		scope = 1;
 		faceType = "Man_A3";
-		displayName = "[288th DJP] Uniform - Black";
+		displayName = "[288th] Uniform - Black";
 		model = "\OPTRE_UNSC_Units\Army\uniform.p3d";
 		hiddenSelections[] =
 		{
@@ -722,7 +722,7 @@ class cfgVehicles
 		uniformclass = "288th_Black_Uniform";
 		scope = 1;
 		faceType = "Man_A3";
-		displayName = "[288th DJP] Uniform (Slim) - Black";
+		displayName = "[288th] Uniform (Slim) - Black";
 		model = "\OPTRE_UNSC_Units\Army\uniform.p3d";
 		hiddenSelections[] =
 		{
@@ -750,7 +750,7 @@ class cfgVehicles
 	class 288th_##DESIGNATION##_Soldier : 288th_Black_Soldier \
 	{ \
 		uniformclass = 288th_##DESIGNATION##_Uniform; \
-		displayName = [288th DJP] Uniform - DESIGNATION; \
+		displayName = [288th] Uniform - DESIGNATION; \
 		hiddenSelectionsTextures[] = \
 		{ \
 			288th_Gear\Data\ODST\Uniforms\ODST_##DESIGNATION##_Uniform.paa, \
@@ -760,7 +760,7 @@ class cfgVehicles
 	class 288th_##DESIGNATION##_Soldier_S : 288th_Black_Soldier_S \
 	{ \
 		uniformclass = 288th_##DESIGNATION##_Uniform_S; \
-		displayName = [288th DJP] Uniform (Slim) - DESIGNATION; \
+		displayName = [288th] Uniform (Slim) - DESIGNATION; \
 		hiddenSelectionsTextures[] = \
 		{ \
 			288th_Gear\Data\ODST\Uniforms\ODST_##DESIGNATION##_Uniform.paa, \

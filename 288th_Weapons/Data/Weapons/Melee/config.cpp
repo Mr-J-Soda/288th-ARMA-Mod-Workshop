@@ -60,7 +60,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] Shovel";
+		displayName = "[288th] Shovel";
 		descriptionshort = "It's a Shovel";
 		baseWeapon = "288th_Shovel";
 		IMS_Melee_Param_Damage = 1.0;
@@ -110,7 +110,7 @@ class cfgWeapons
 		ace_arsenal_hide = 0;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Captured Energy Sword";
+		displayName = "[288th] Captured Energy Sword";
 		baseWeapon = "288th_Energy_Sword";
 		model = "288th_Weapons\Data\Weapons\Melee\EnergySword_mlod.p3d";
 		IMS_WeaponType = "Energy_Sword";

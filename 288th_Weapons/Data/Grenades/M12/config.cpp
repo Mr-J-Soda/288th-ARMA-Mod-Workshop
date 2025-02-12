@@ -88,7 +88,7 @@ class CfgMagazines
         dlc = "288thDJP_Aux";
         author = "Soda / Misriah 288";
         mass = 8;
-        displayName = "[288th DJP] M12 HE-DP Grenade";
+        displayName = "[288th] M12 HE-DP Grenade";
         descriptionShort = "Hand Grenade";
         displayNameShort = "M12 Frag";
         model = "\OPTRE_Weapons\explosives\m9_grenade.p3d";
@@ -106,7 +106,7 @@ class CfgMagazines
 		scopeCurator = 2;
         dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M14 Incendiary Grenade";
+		displayname = "[288th] M14 Incendiary Grenade";
 		descriptionShort = "$STR_ace_grenades_Incendiary_Description";
 		displayNameShort = "M14 Incendiary";
 		model = "\z\ace\addons\grenades\models\ace_anm14th3.p3d";
@@ -122,7 +122,7 @@ class CfgMagazines
 		scopeCurator = 2;
         dlc = "288thDJP_Aux";
         author = "Soda / Misriah 288";
-        displayName = "[288th DJP] M4 Smoke Grenade (White)";
+        displayName = "[288th] M4 Smoke Grenade (White)";
         picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_white_ca.paa";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
         model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
@@ -133,7 +133,7 @@ class CfgMagazines
     };
     class 288th_Red_Smoke_Mag : 288th_White_Smoke_Mag
     {
-        displayName = "[288th DJP] M4 Smoke Grenade (Red)";
+        displayName = "[288th] M4 Smoke Grenade (Red)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
    		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_red_ca.paa";
 		model = "\A3\Weapons_f\ammo\smokegrenade_red";
@@ -143,7 +143,7 @@ class CfgMagazines
     };
     class 288th_Green_Smoke_Mag : 288th_White_Smoke_Mag
     {
-        displayName = "[288th DJP] M4 Smoke Grenade (Green)";
+        displayName = "[288th] M4 Smoke Grenade (Green)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
    		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_Green_ca.paa";
 		model = "\A3\Weapons_f\ammo\smokegrenade_Green";
@@ -153,7 +153,7 @@ class CfgMagazines
     };
     class 288th_Yellow_Smoke_Mag : 288th_White_Smoke_Mag
     {
-        displayName = "[288th DJP] M4 Smoke Grenade (Yellow)";
+        displayName = "[288th] M4 Smoke Grenade (Yellow)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
    		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_Yellow_ca.paa";
 		model = "\A3\Weapons_f\ammo\smokegrenade_Yellow";
@@ -163,7 +163,7 @@ class CfgMagazines
     };
     class 288th_Purple_Smoke_Mag : 288th_White_Smoke_Mag
     {
-        displayName = "[288th DJP] M4 Smoke Grenade (Purple)";
+        displayName = "[288th] M4 Smoke Grenade (Purple)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
    		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_Purple_ca.paa";
 		model = "\A3\Weapons_f\ammo\smokegrenade_Purple";
@@ -173,7 +173,7 @@ class CfgMagazines
     };
     class 288th_Blue_Smoke_Mag : 288th_White_Smoke_Mag
     {
-        displayName = "[288th DJP] M4 Smoke Grenade (Blue)";
+        displayName = "[288th] M4 Smoke Grenade (Blue)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
    		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_Blue_ca.paa";
 		model = "\A3\Weapons_f\ammo\smokegrenade_Blue";
@@ -183,7 +183,7 @@ class CfgMagazines
     };
     class 288th_Orange_Smoke_Mag : 288th_White_Smoke_Mag
     {
-        displayName = "[288th DJP] M4 Smoke Grenade (Orange)";
+        displayName = "[288th] M4 Smoke Grenade (Orange)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
    		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_Orange_ca.paa";
 		model = "\A3\Weapons_f\ammo\smokegrenade_Orange";
@@ -198,7 +198,7 @@ class CfgMagazines
 		scopeCurator = 2;
         dlc = "288thDJP_Aux";
         author = "Soda / Misriah 288";
-        displayName = "[288th DJP] M4 Impact Smoke Grenade (White)";
+        displayName = "[288th] M4 Impact Smoke Grenade (White)";
         picture = "\A3\Weapons_f\Data\UI\gear_UGL_Smokeshell_white_CA.paa";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
@@ -221,7 +221,7 @@ class CfgMagazines
 		ACE_Chemlight_Shield = "";
 		author = "Soda / Misriah 288";
 		ammo = "ACE_G_Chemlight_HiRed_Infinite";
-		displayName = "[288th DJP] Chemlight (Red)";
+		displayName = "[288th] Chemlight (Red)";
 		displayNameShort = "$STR_ace_chemlights_HiRed_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiRed_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hired_x_ca.paa";
@@ -232,7 +232,7 @@ class CfgMagazines
 		ACE_Chemlight_Shield = "";
 		author = "Soda / Misriah 288";
 		ammo = "ACE_G_Chemlight_HiYellow_Infinite";
-		displayName = "[288th DJP] Chemlight (Yellow)";
+		displayName = "[288th] Chemlight (Yellow)";
 		displayNameShort = "$STR_ace_chemlights_HiYellow_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiYellow_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hiyellow_x_ca.paa";
@@ -243,7 +243,7 @@ class CfgMagazines
 		ACE_Chemlight_Shield = "";
 		author = "Soda / Misriah 288";
 		ammo = "ACE_G_Chemlight_HiWhite_Infinite";
-		displayName = "[288th DJP] Chemlight (White)";
+		displayName = "[288th] Chemlight (White)";
 		displayNameShort = "$STR_ace_chemlights_HiWhite_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiWhite_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hiwhite_x_ca.paa";
@@ -254,7 +254,7 @@ class CfgMagazines
 		ACE_Chemlight_Shield = "";
 		author = "Soda / Misriah 288";
 		ammo = "ACE_G_Chemlight_HiBlue_Infinite";
-		displayName = "[288th DJP] Chemlight (Blue)";
+		displayName = "[288th] Chemlight (Blue)";
 		displayNameShort = "$STR_ace_chemlights_HiBlue_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiBlue_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hiblue_x_ca.paa";
@@ -265,7 +265,7 @@ class CfgMagazines
 		ACE_Chemlight_Shield = "";
 		author = "Soda / Misriah 288";
 		ammo = "ACE_G_Chemlight_HiGreen_Infinite";
-		displayName = "[288th DJP] Chemlight (Green)";
+		displayName = "[288th] Chemlight (Green)";
 		displayNameShort = "$STR_ace_chemlights_HiGreen_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiGreen_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_higreen_x_ca.paa";
@@ -276,7 +276,7 @@ class CfgMagazines
 		ACE_Chemlight_Shield = "";
 		author = "Soda / Misriah 288";
 		ammo = "ACE_G_Chemlight_UltraHiOrange_Infinite";
-		displayName = "[288th DJP] Chemlight (Orange)";
+		displayName = "[288th] Chemlight (Orange)";
 		displayNameShort = "$STR_ace_chemlights_UltraHiOrange_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_UltraHiOrange_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_ultrahiorange_x_ca.paa";
@@ -284,7 +284,7 @@ class CfgMagazines
     class 288th_shield_beacon_single : B_IR_Grenade
     {
         author = "Avisa / Misriah 288";
-        displayName = "[288th DJP] Shield Beacon";
+        displayName = "[288th] Shield Beacon";
         displayNameShort = "Shield Beacon";
         ammo = "288th_shield_beacon_single";
         descriptionShort = "Shield Beacon, spawns an energy shield";

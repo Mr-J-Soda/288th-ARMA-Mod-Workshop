@@ -231,7 +231,7 @@ class cfgWeapons
 	};
 	class 288th_M73X_V : OPTRE_M247H_RCWS
 	{
-		displayName = "[288th DJP] M73X HMG";
+		displayName = "[288th] M73X HMG";
 		descriptionShort = "HMG";
 		magazines[] = { "288th_500Rnd_65x85_Box" };
 		modes[] = { "FullAutoFast" };
@@ -264,7 +264,7 @@ class cfgWeapons
 	};
 	class 288th_M73X_V_1 : LMG_coax
 	{
-		displayName = "[288th DJP] M73X HMG";
+		displayName = "[288th] M73X HMG";
 		descriptionShort = "HMG";
 		magazines[] = { "288th_500Rnd_65x85_Box" };
 		modes[] = { "FullAutoFast" };
@@ -297,7 +297,7 @@ class cfgWeapons
 	};
 	class 288th_M73X_V_2 : OPTRE_M247T_Coax
 	{
-		displayName = "[288th DJP] M73X HMG";
+		displayName = "[288th] M73X HMG";
 		descriptionShort = "HMG";
 		magazines[] = { "288th_500Rnd_65x85_Box" };
 		modes[] = { "FullAutoFast" };
@@ -364,7 +364,7 @@ class cfgWeapons
 	};
 	class 288th_M41_V : OPTRE_missiles_Anvil2
 	{
-		displayName = "[288th DJP] M41 SSR";
+		displayName = "[288th] M41 SSR";
 		descriptionShort = "ATGM/SAM";
 		magazines[] = { "288th_M41_Twin_HEAT_SACLOS","288th_M41_Twin_HEAT_SALH","288th_M41_Twin_HEAT_Thermal" };
 		cmImmunity = 0.95;
@@ -802,7 +802,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] VC1 Flamethrower";
+		displayName = "[288th] VC1 Flamethrower";
 		magazines[] ={"288th_VC1_Flamethrower_Mag"};
 		fireSpreadAngle = 1;
 		discreteDistance[] = {10};

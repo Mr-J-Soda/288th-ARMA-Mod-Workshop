@@ -491,7 +491,7 @@ class cfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th DJP] 16 Rnd Short Taser Magazine";
+		displayName = "[288th] 16 Rnd Short Taser Magazine";
 		displayNameShort = "Short Taser";
 		descriptionshort = "16 Rnd 12.7x40mm Short Taser Magazine";
 		count = 16;
@@ -508,7 +508,7 @@ class cfgMagazines
 	};
 	class 288th_Taser_Long_Mag: 288th_Taser_Mag
 	{
-		displayName = "[288th DJP] 16 Rnd Long Taser Magazine";
+		displayName = "[288th] 16 Rnd Long Taser Magazine";
 		displayNameShort = "Long Taser";
 		descriptionshort = "16 Rnd 12.7x40mm Long Taser Magazine";
 		ammo = "288th_Taser_ammo_long";
@@ -521,7 +521,7 @@ class cfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		model = "\EMP_Systems\WNZ_EMPGrenade\EMP_Grenade.p3d";  
-		displayName = "[288th DJP] Taser Grenade - Impact Fuse";
+		displayName = "[288th] Taser Grenade - Impact Fuse";
 		picture = "\EMP_Systems\WNZ_EMPGrenade\EMP_Grenade_Icon.paa";
 		displayNameShort = "Taser Impact";
 		ammo = "288th_Taser_Impact_Grenade_ammo";
@@ -533,7 +533,7 @@ class cfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		model = "\EMP_Systems\WNZ_EMPGrenade\EMP_Grenade.p3d";  
-		displayName = "[288th DJP] Taser Grenade";
+		displayName = "[288th] Taser Grenade";
 		picture = "\EMP_Systems\WNZ_EMPGrenade\EMP_Grenade_Icon.paa";
 		displayNameShort = "Taser";
 		ammo = "288th_Taser_Grenade_ammo";

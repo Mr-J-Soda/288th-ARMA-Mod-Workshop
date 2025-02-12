@@ -39,9 +39,13 @@ class cfgWeapons
 
 	class 288th_CH252D_ODST_Maxim : 288th_CH252D_ODST_Base
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Maxim";
+		displayName = "[288th] CH252D Maxim";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Maxim\ODST_Maxim_Helmet.paa",
@@ -98,9 +102,13 @@ class cfgWeapons
 	};
 	class 288th_CH252D_ODST_Maxim_dp : 288th_CH252D_ODST_Base_dp
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Maxim";
+		displayName = "[288th] CH252D Maxim";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Maxim\ODST_Maxim_Helmet.paa",
@@ -149,9 +157,13 @@ class cfgWeapons
 	};
 	class 288th_CH252D_ODST_Maxim_Tempest : 288th_CH252D_ODST_Maxim
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Maxim (Tempest)";
+		displayName = "[288th] CH252D Maxim (Tempest)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Maxim\Tempest\ODST_Tempest_Helmet.paa",
@@ -207,9 +219,13 @@ class cfgWeapons
 	};
 	class 288th_CH252D_ODST_Maxim_Tempest_dp : 288th_CH252D_ODST_Maxim_dp
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Maxim (Tempest)";
+		displayName = "[288th] CH252D Maxim (Tempest)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Maxim\Tempest\ODST_Tempest_Helmet.paa",
@@ -258,9 +274,13 @@ class cfgWeapons
 	};
 	class 288th_CH252D_ODST_Maxim_Stevens : 288th_CH252D_ODST_Maxim
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Maxim (Stevens)";
+		displayName = "[288th] CH252D Maxim (Stevens)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Maxim\Stevens\ODST_Stevens_Helmet.paa",
@@ -316,9 +336,13 @@ class cfgWeapons
 	};
 	class 288th_CH252D_ODST_Maxim_Stevens_dp : 288th_CH252D_ODST_Maxim_dp
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Maxim (Stevens)";
+		displayName = "[288th] CH252D Maxim (Stevens)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Maxim\Stevens\ODST_Stevens_Helmet.paa",
@@ -368,11 +392,13 @@ class cfgWeapons
 
 	class 288th_EOD_Maxim : OPTRE_UNSC_EOD_Helmet
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Maxim EOD Helmet";
-		scope = 2;
-		scopeArsenal = 2;
+		displayName = "[288th] Maxim EOD Helmet";
 		hiddenSelections[] = { "camo1","camo2" };
 		hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\EOD\ODST_EOD_helmet","288th_Gear\Data\ODST\Units\Maxim\EOD\EOD_Visor_co.paa" };
 		optreVarietys[] = { "_dp","","_broken" };
@@ -409,13 +435,13 @@ class cfgWeapons
 	};
 	class 288th_EOD_Maxim_EOD_dp : OPTRE_UNSC_EOD_Helmet
 	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] Maxim EOD Helmet (EOD)";
 		scope = 1;
 		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Maxim EOD Helmet (EOD)";
 		hiddenSelections[] = { "camo1","camo2" };
 		hiddenSelectionsTextures[] = { "288th_Gear\Data\ODST\Units\Maxim\EOD\ODST_EOD_helmet","288th_Gear\Data\ODST\Units\Maxim\EOD\EOD_Visor_co.paa" };
 		class ItemInfo : ItemInfo
@@ -448,11 +474,13 @@ class cfgWeapons
 
 	class 288th_M52D_Maxim_Rifleman : 288th_Armor_ODST_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Rifleman)";
+		displayName = "[288th] M52D Maxim (Rifleman)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -564,11 +592,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Maxim_Demolitions : 288th_M52D_Maxim_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Demolitions)";
+		displayName = "[288th] M52D Maxim (Demolitions)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -680,11 +710,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Maxim_Marksman : 288th_M52D_Maxim_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Marksman)";
+		displayName = "[288th] M52D Maxim (Marksman)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -794,11 +826,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Maxim_Sniper : 288th_M52D_Maxim_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		Scope = 2;
-		scopeArsenal = 2;
-		displayName = "[288th DJP] M52D Maxim (Sniper)";
+		displayName = "[288th] M52D Maxim (Sniper)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -911,11 +945,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Maxim_Medic : 288th_M52D_Maxim_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Medic)";
+		displayName = "[288th] M52D Maxim (Medic)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -1024,11 +1060,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Maxim_Ghillie : 288th_M52D_Maxim_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Ghillie)";
+		displayName = "[288th] M52D Maxim (Ghillie)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -1151,11 +1189,13 @@ class cfgWeapons
 	};
 	class 288th_M52D_Maxim_Temp : 288th_M52D_Maxim_Sniper
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		Scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Maxim (Tempest)";
+		displayName = "[288th] M52D Maxim (Tempest)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{

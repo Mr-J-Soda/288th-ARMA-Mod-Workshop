@@ -74,10 +74,6 @@ class CfgEditorSubcategories
 	{
 		displayName = "665th Serra Recon Rangers";
 	};*/
-	class 288th_Eden_Bot
-	{
-		displayName = "XM-27";
-	};
 	class 288th_Eden_Turret
 	{
 		displayName = "Turrets";
@@ -7706,42 +7702,36 @@ class cfgVehicles
 				displayName = "Standard";
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
-				factions[] = { "288th_UNSC" };
 			};
 			class colornight
 			{
 				displayName = "Black";
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extupper_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m68_turret_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\hog_apc_night_co.paa"};
-				factions[] = { "288th_UNSC" };
 			};
 			class colorwood
 			{
 				displayName = "Green";
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\woodland\M12HogMaav_extupper_wood_co.paa","\OPTRE_Vehicles\Warthog\data\woodland\M12HogMaav_extunder_wood_co.paa","\OPTRE_Vehicles\Warthog\data\woodland\m68_turret_woodland_co.paa","\OPTRE_Vehicles\Warthog\data\woodland\m12_turret_woodland_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\woodland\M12HogMaav_interior_wood_co.paa","\OPTRE_Vehicles\Warthog\data\woodland\hog_apc_wood_co.paa"};
-				factions[] = { "288th_UNSC" };
 			};
 			class colorsnow
 			{
 				displayName = "White";
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\snow\M12HogMaav_extupper_snow_co.paa","\OPTRE_Vehicles\Warthog\data\snow\M12HogMaav_extunder_snow_co.paa","\OPTRE_Vehicles\Warthog\data\snow\m68_turret_snow_co.paa","\OPTRE_Vehicles\Warthog\data\snow\m12_turret_snow_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\snow\M12HogMaav_interior_snow_co.paa","","\OPTRE_Vehicles\Warthog\data\snow\hog_apc_snow_co.paa"};
-				factions[] = { "288th_UNSC" };
 			};
 			class colorsand
 			{
 				displayName = "Tan";
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\sand\M12HogMaav_extupper_sand_co.paa","\OPTRE_Vehicles\Warthog\data\sand\M12HogMaav_extunder_sand_co.paa","\OPTRE_Vehicles\Warthog\data\sand\m68_turret_sand_co.paa","\OPTRE_Vehicles\Warthog\data\sand\m12_turret_sand_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\sand\M12HogMaav_interior_sand_co.paa","\OPTRE_Vehicles\Warthog\data\sand\hog_apc_desert_co.paa"};
-				factions[] = { "288th_UNSC" };
 			};
 			class CMA
 			{
 				displayName = "CMA";
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extupper_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m68_turret_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa"};
-				faction = "288th_UNSC";
 			};
 		};
 		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
@@ -8432,7 +8422,7 @@ class cfgVehicles
 		hiddenSelectionsTextures[] = { "OPTRE_Frigate\data\decals_ca.paa","OPTRE_Frigate\data\Paris_back_co.paa","OPTRE_Frigate\data\Paris_front_co.paa","OPTRE_Frigate\data\Armament_co.paa" };
 		featureType = 2;
 	};
-	class 288th_SupplyPod : OPTRE_Ammo_SupplyPod_Empty{
+	/*class 288th_SupplyPod : OPTRE_Ammo_SupplyPod_Empty{
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -8544,7 +8534,7 @@ class cfgVehicles
 			displayName = "";
 			dissasembleTo[] = { "" };
 		};
-	};
+	};*/
 
 	class 288th_M12_MLMS: OPTRE_M12R_AA
 	{
@@ -10580,66 +10570,6 @@ class cfgVehicles
 		facewearList[] = { "TCF_URB_Shemagh",1, };
 	};*/
 
-	class 288th_XM_27 : SC_BaseMan_Warbot_Heavy{
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "XM-27 (Chappie)";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Bot";
-		icon = "iconMan";
-		impactDamageMultiplier = 0.05;
-		canCarryBackPack = 1;
-		oxygenCapacity = 500;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		canDeactivateMines = 1;
-		engineer = 1;
-		attendant = 1;
-		genericNames = "288th_XM_27";
-		faction = "288th_UNSC";
-		weapons[] = { "288th_AR1X_SW","288th_SSP9_SW","Binocular","Throw","Put" };
-		respawnWeapons[] = { "288th_AR1X_SW","288th_SSP9_SW","Binocular","Throw","Put" };
-		uniformClass = "SC_Workerbot_Uniform_UNSC";
-		linkedItems[] = { "288th_Bot_Armor","SC_Workerbot_Head_UNSC","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = { "288th_Bot_Armor","SC_Workerbot_Head_UNSC","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		magazines[] = {"288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		backpack = "288th_RTO_Invisible";
-		headgearList[] = { "SC_Workerbot_Head_UNSC",1, };
-	};
-	class 288th_XM_27_Security : 288th_XM_27{
-		displayName = "XM-27 (Security)";
-		weapons[] = { "288th_M7K_SMG","288th_SSP9_SW","Binocular","Throw","Put" };
-		respawnWeapons[] = { "288th_M7K_SMG","288th_SSP9_SW","Binocular","Throw","Put" };
-		uniformClass = "SC_Workerbot_Uniform_Security";
-		linkedItems[] = { "288th_Bot_Armor","SC_Workerbot_Head_Security","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = { "288th_Bot_Armor","SC_Workerbot_Head_Security","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		magazines[] = { "288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40", "288th_45ACP_Mag_AP","288th_32Rnd_127x40", "288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = { "288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40", "288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		backpack = "SC_Workerbot_Powerpack";
-		headgearList[] = { "SC_Workerbot_Head_Security",1, };
-	};
-	class 288th_XM_27_Industrial : 288th_XM_27{
-		displayName = "XM-27 (Industrial)";
-		weapons[] = { "288th_M7K_SMG","288th_SSP9_SW","Binocular","Throw","Put" };
-		respawnWeapons[] = { "288th_M7K_SMG","288th_SSP9_SW","Binocular","Throw","Put" };
-		uniformClass = "SC_Workerbot_Uniform";
-		linkedItems[] = { "288th_Bot_Armor","SC_Workerbot_Head","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = { "288th_Bot_Armor","SC_Workerbot_Head","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		magazines[] = { "288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40", "288th_45ACP_Mag_AP","288th_32Rnd_127x40", "288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = { "288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40", "288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		backpack = "SC_Workerbot_Powerpack";
-		headgearList[] = { "SC_Workerbot_Head",1, };
-	};
-
 	class 288th_Pvt_Green: OPTRE_UNSC_Army_Soldier_WDL{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -10914,43 +10844,61 @@ class cfgVehicles
 	class WBK_Antlion_1_NoLeap;
 	class WBK_Antlion_1_1: WBK_Antlion_1
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 0;
 		displayName = "Antlion";
 	};
 	class WBK_Antlion_1_NoLeap_1: WBK_Antlion_1_NoLeap
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 0;
 		displayName = "Antlion (No-Leap)";
 	};
 	class WBK_Antlion_1_0: WBK_Antlion_1
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 2;
 	};
 	class WBK_Antlion_1_NoLeap_0: WBK_Antlion_1_NoLeap
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 2;
 		displayName = "Antlion (No-Leap)";
 	};
 	class WBK_Antlion_1_3: WBK_Antlion_1
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 3;
 	};
 	class WBK_Antlion_1_NoLeap_3: WBK_Antlion_1_NoLeap
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 3;
 		displayName = "Antlion (No-Leap)";
 	};
 	class WBK_AntlionGuardian_1;
 	class WBK_AntlionGuardian_1_1: WBK_AntlionGuardian_1
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 1;
 	};
 	class WBK_AntlionGuardian_1_0: WBK_AntlionGuardian_1
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 0;
 	};
 	class WBK_AntlionGuardian_1_3: WBK_AntlionGuardian_1
 	{
+		scope = 2;
+		scopeCurator = 2;
 		side = 3;
 	};
 };
@@ -10985,7 +10933,7 @@ class CfgWeapons
 			primary = 1;
 		};*/
 		ACE_isTool = 1;
-		displayName = "[288th DJP] Ed-1E Kit";
+		displayName = "[288th] Ed-1E Kit";
 		descriptionShort = "Deployable Ed-1E";
 		picture = "\A3\Supplies_F_Enoch\Bags\Data\UI\icon_B_UGV_02_demining_ca";
 		//editorPreview = "\Cytech\Cytech_Gamemode_Assets\Cytech_Inventory\Cytech_Keycards\data\UI\Security_Keycard_CA.paa";
@@ -11421,51 +11369,6 @@ class CfgWorlds
 {
 	class GenericNames
 	{
-		class 288th_XM_27
-		{
-			class FirstNames
-			{
-				A = "XM-27";
-				B = "XM-27";
-				C = "XM-27";
-				D = "XM-27";
-				E = "XM-27";
-				F = "XM-27";
-				G = "XM-27";
-				H = "XM-27";
-				I = "XM-27";
-				J = "XM-27";
-				K = "XM-27";
-				L = "XM-27";
-				M = "XM-27";
-				N = "XM-27";
-				O = "XM-27";
-				P = "XM-27";
-				Q = "XM-27";
-				R = "XM-27";
-				S = "XM-27";
-				T = "XM-27";
-				U = "XM-27";
-				V = "XM-27";
-				W = "XM-27";
-				X = "XM-27";
-				Y = "XM-27";
-				Z = "XM-27";
-			};
-			class LastNames
-			{
-				0 = "Chappie";
-				1 = "Chappie";
-				2 = "Chappie";
-				3 = "Chappie";
-				4 = "Chappie";
-				5 = "Chappie";
-				6 = "Chappie";
-				7 = "Chappie";
-				8 = "Chappie";
-				9 = "Chappie";
-			};
-		};
 		class Pvt_Green
 		{
 			class FirstNames

@@ -434,39 +434,23 @@ class cfgAmmo
 	//custom 6.5 Rifle Ammo
 	class 65x85_APFS : B_762x51_Ball
 	{
-		scope = 2;
-		hit = 32;
-		indirectHit = 0;
-		indirectHitRange = 0.0;
-		cost = 100;
-		typicalSpeed = 750;
-		caliber = 3;
+		caliber = 4.0;
+		hit = 13;
+		typicalSpeed = 600;
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 15;
 		tracerScale = 1.0;
 		tracerStartTime = 1;
 		tracerEndTime = 0.05;
 		tracersEvery = 3;
-		//airFriction = 0;
 		ACE_muzzleVelocities[] = {950,962,968,972,978};
 		ACE_barrelLengths[] = {330.2,406.4,508.0,609.6,660.4};
-		/*submunitionDirectionType = "SubmunitionModelDirection";
-		submunitionInitSpeed = 750;
-		submunitionParentSpeedCoef = 0;
-		submunitionInitialOffset[] = {0,0,0};
-		submunitionConeType[] = {"custom",1};
-		submunitionAmmo = "288th_M41_Rocket_HE";
-		triggerDistance = 10;
-		triggerTime = 0.1;*/
 	};
 	class 65x85_APFS_Tracers : 65x85_APFS
 	{
-		scope = 2;
-		hit = 32;
-		indirectHit = 0.1;
-		indirectHitRange = 0.0001;
-		cost = 100;
-		caliber = 3;
+		caliber = 4.0;
+		hit = 13;
+		typicalSpeed = 600;
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		craterEffects = "";
 		explosive = 1;
@@ -483,20 +467,21 @@ class cfgAmmo
 		explosive = 0.25;
 		explosionEffects = "ExploAmmoExplosion";
 		explosionSoundEffect = "DefaultExplosion";
-		hit = 32;
+		hit = 18;
 		indirectHit = 12;
 		indirectHitRange = 0.25;
 	};
 	class 65x85_DMR : 65x85_APFS
 	{
-		scope = 2;
-		hit = 25;
+		caliber = 4.0;
+		hit = 13;
+		typicalSpeed = 600;
 		indirectHit = 8;
 		indirectHitRange = 0.15;
 		explosive = 0.05;
 		cost = 100;
-		typicalSpeed = 850;
-		caliber = 3;
+		//typicalSpeed = 850;
+		//caliber = 1.75;
 		craterEffects = "";
 		explosionEffects = "";
 		explosionSoundEffect = "";
@@ -514,13 +499,12 @@ class cfgAmmo
 	};
 	class 65x85_EHP : B_762x51_Ball
 	{
-		scope = 2;
-		hit = 30;
+		hit = 20;
 		indirectHit = 0;
 		indirectHitRange = 0.0;
 		cost = 100;
 		typicalSpeed = 550;
-		caliber = 1.0;
+		caliber = 2.0;
 		model = "\288th_Weapons\Data\Ammo\Laser_orange\laser_orange.p3d";
 		timeToLive = 15;
 		tracerScale = 1.0;
@@ -536,12 +520,12 @@ class cfgAmmo
 	{
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_Red.p3d";
 		scope = 2;
-		hit = 24;
+		hit = 14;
 		indirectHit = 0;
 		indirectHitRange = 0.0;
 		cost = 100;
 		typicalSpeed = 600;
-		caliber = 3;
+		caliber = 2;
 		explosive = 0.0;
 		timeToLive = 10;
 		tracerScale = 0.7;
@@ -575,18 +559,6 @@ class cfgAmmo
 		submunitionConeType[] = { "poissondisc",8 };
 		submunitionAmmo = "65x85_APFS_Incendiary";
 	};
-	class 288th_HV_Flechettes : 288th_Buckshot_Pellet
-	{
-		submunitionConeAngle = 0.6;
-		submunitionConeType[] = { "poissondisc",7 };
-		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
-	};
-	class 288th_HEDP_Small : 288th_Buckshot_Pellet
-	{
-		submunitionConeAngle = 0.6;
-		submunitionConeType[] = { "poissondisc",7 };
-		submunitionAmmo = "65x85_HEDP";
-	};
 	class 288th_Plasma_Rainbow_Buckshot : 288th_Buckshot_Pellet
 	{
 		submunitionConeType[] = { "poissondisc",8 };
@@ -595,11 +567,6 @@ class cfgAmmo
 	//custom Plasma Bullets
 	class 288th_Plasma_Blue : 65x85_APFS
 	{
-		hit = 30;
-		scope = 1;
-		scopeArsenal = 1;
-		typicalSpeed = 750;
-		caliber = 3;
 		timeToLive = 15;
 		tracerScale = 1;
 		tracerStartTime = 0.0099999998;
@@ -939,10 +906,10 @@ class cfgAmmo
 	};
 	class 288th_Plasma_Soda : B_762x51_Ball
 	{
-		hit = 40.0;
+		hit = 20.0;
 		scope = 1;
 		scopeArsenal = 1;
-		typicalSpeed = 750;
+		typicalSpeed = 1200;
 		caliber = 3.5;
 		//timeToLive = 10;
 		suppressionRadiusBulletClose = 15;
@@ -1281,6 +1248,38 @@ class cfgAmmo
 			defaultAttackProfile = "DIR";
 			attackProfiles[] = {"DIR","JAV_TOP"};
 		};
+	};
+
+	//Custom RR-553 Ammo
+	class R_MRAAWS_HEAT_F;
+	class 288th_50x137_HEAT: R_MRAAWS_HEAT_F
+	{
+		model = "\A3\weapons_f\launchers\RPG32\pg32v_rocket.p3d";
+		caliber = 10;
+		hit = 950;
+		indirectHit = 200;
+		indirectHitRange = 0.05;
+		timeToLive = 30;
+		allowAgainstInfantry = 0;
+	};
+	class R_MRAAWS_HE_F;
+	class 288th_50X137_HE: R_MRAAWS_HE_F
+	{
+		caliber = 0;
+		hit = 400;
+		indirectHit = 200;
+		indirectHitRange = 5;
+		allowAgainstInfantry = 1;
+	};
+	class 288th_50x137_PEN: 288th_50X137_HE
+	{
+		caliber = 30;
+		hit = 1500;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		explosive = 0;
+		fuseDistance = 0;
+		allowAgainstInfantry = 0;
 	};
 
 	class OPAEX_M41_Rocket_HEAT_SACLOS : M_Titan_AT
@@ -1775,10 +1774,10 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		initSpeed = 800;
+		initSpeed = 600;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd APFS 6.5x85 Mag";
+		displayname = "[288th] 30rnd APFS 6.5x85 Mag";
 		displaynameshort = "6.5x85 APFS Mag";
 		descriptionshort = "A standard magazine loaded with 6.5x85 APFS";
 		ammo = "65x85_APFS";
@@ -1789,10 +1788,10 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 20rnd Incendiary 6.5x85 Mag";
+		displayname = "[288th] 20rnd Incendiary 6.5x85 Mag";
 		displaynameshort = "6.5x85 Incendiary Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with Incendiary ammo";
-		initSpeed = 800;
+		initSpeed = 600;
 		ammo = "65x85_APFS_Incendiary";
 		count = 20;
 		lastRoundsTracer = 0;
@@ -1801,7 +1800,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 30rnd EHP 6.5x85 Mag";
+		displayname = "[288th] 30rnd EHP 6.5x85 Mag";
 		displaynameshort = "6.5x85 EHP Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with External Hollow-Point ammo";
 		initSpeed = 550;
@@ -1813,10 +1812,10 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		initSpeed = 750;
+		initSpeed = 600;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 150rnd 6.5x85 Drum";
+		displayname = "[288th] 150rnd 6.5x85 Drum";
 		displaynameshort = "288th Standard Drum";
 		descriptionshort = "A large LMG drum loaded with 6.5x85 APFS";
 		ammo = "65x85_APFS";
@@ -1831,10 +1830,10 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 20rnd .308 Mag";
+		displayname = "[288th] 20rnd .308 Mag";
 		displaynameshort = ".308";
 		descriptionshort = "Magazine for the Snowfox";
-		initSpeed = 750;
+		initSpeed = 600;
 		tracersEvery = 1;
 		ammo = "288th_308_rifle_yellow";
 		count = 20;
@@ -1846,7 +1845,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 15rnd 6.5x85 APFS Mag";
+		displayname = "[288th] 15rnd 6.5x85 APFS Mag";
 		displaynameshort = "6.5x85mm";
 		descriptionshort = "Custom 6.5x85 Magazine";
 		initSpeed = 850;
@@ -1861,65 +1860,65 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 30rnd Blue Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Blue Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Blue Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with blue plasma tips";
-		initSpeed = 900;
+		initSpeed = 600;
 		ammo = "288th_Plasma_Blue";
 		lastRoundsTracer = 0;
 	};
 	class 288th_Plasma_Red_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Red Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Red Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Red Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with red plasma tips";
 		ammo = "288th_Plasma_Red";
 	};
 	class 288th_Plasma_Green_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Green Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Green Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Green Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with green plasma tips";
 		ammo = "288th_Plasma_Green";
 	};
 	class 288th_Plasma_Pink_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Pink Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Pink Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Pink Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with pink plasma tips";
 		ammo = "288th_Plasma_Pink";
 	};
 	class 288th_Plasma_Orange_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Orange Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Orange Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Orange Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with orange plasma tips";
 		ammo = "288th_Plasma_Orange";
 	};
 	class 288th_Plasma_Yellow_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Yellow Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Yellow Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Yellow Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with yellow plasma tips";
 		ammo = "288th_Plasma_Yellow";
 	};
 	class 288th_Plasma_Purple_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Purple Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Purple Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Purple Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with purple plasma tips";
 		ammo = "288th_Plasma_Purple";
 	};
 	class 288th_Plasma_White_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd White Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd White Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 White Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with white plasma tips";
 		ammo = "288th_Plasma_White";
 	};
 	class 288th_Plasma_Black_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 30rnd Black Plasma 6.5x85 Mag";
+		displayname = "[288th] 30rnd Black Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Black Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with black plasma tips";
 		ammo = "288th_Plasma_Black";
@@ -1932,11 +1931,12 @@ class CfgMagazines
 		nameSound = "magazine";
 		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
 		quickReload = 1;
-		displayname = "[288th DJP] Soda's Custom 6.5x85 Mag";
+		displayname = "[288th] Soda's Custom 6.5x85 Mag";
 		displaynameshort = "Soda's 6.5x85 Plasma Mag";
 		descriptionshort = "A specially modified 6.5x85 mag";
 		ammo = "288th_Plasma_Soda";
 		tracersEvery = 1;
+		initspeed = 1200;
 		lastRoundsTracer = 50;
 		count = 200;
 		mass = 15;
@@ -1949,7 +1949,7 @@ class CfgMagazines
 		nameSound = "magazine";
 		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
 		quickReload = 0;
-		displayname = "[288th DJP] Soda's Custom Buckshot Mag";
+		displayname = "[288th] Soda's Custom Buckshot Mag";
 		displaynameshort = "Soda's Custom Buckshot Mag";
 		descriptionshort = "A specially modified buckshot mag";
 		ammo = "288th_Buckshot_Pellet";
@@ -1966,7 +1966,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 60rnd 45ACP Mag";
+		displayname = "[288th] 60rnd 45ACP Mag";
 		displaynameshort = ".45ACP";
 		descriptionshort = "Magazines for the M7V SMGs";
 		tracersEvery = 1;
@@ -1977,7 +1977,7 @@ class CfgMagazines
 	};
 	class 288th_45ACP_Mag_EHP : 288th_45ACP_Mag_AP
 	{
-		displayname = "[288th DJP] 60rnd 45ACP EHP Mag";
+		displayname = "[288th] 60rnd 45ACP EHP Mag";
 		displaynameshort = ".45ACP EHP";
 		descriptionshort = "EHP Magazines for the M7 SMGs";
 		tracersEvery = 1;
@@ -1990,7 +1990,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M41 HEAT (SACLOS) Twin Rockets";
+		displayname = "[288th] M41 HEAT (SACLOS) Twin Rockets";
 		displaynameshort = "HEAT (SACLOS)";
 		descriptionshort = "High Explosive Anti Tank<br/>SACLOS";
 		ammo = "288th_M41_Rocket_HEAT_SACLOS";
@@ -2008,7 +2008,7 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		descriptionshort = "High Explosive Anti Personnel<br/>Un-guided";
-		displayname = "[288th DJP] M41 HE (Un-guided) Twin Rockets";
+		displayname = "[288th] M41 HE (Un-guided) Twin Rockets";
 		displaynameshort = "High Explosive Dumb-fire";
 		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\he.paa";
 		hiddenSelectionsTextures[] = { "\OPTRE_Weapons\Rockets\data\mag_types\he.paa","\optre_weapons\rockets\data\logos_ca.paa" };
@@ -2020,7 +2020,7 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		descriptionshort = "Incendiary Anti Personnel<br/>Un-guided";
-		displayname = "[288th DJP] M41 Incendiary (Un-guided) Twin Rockets";
+		displayname = "[288th] M41 Incendiary (Un-guided) Twin Rockets";
 		displaynameshort = "Incendiary Dumb-fire";
 		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\he.paa";
 		hiddenSelectionsTextures[] = {"\OPTRE_Weapons\Rockets\data\mag_types\heap.paa","optre_weapons\rockets\data\logos_ca.paa"};
@@ -2031,7 +2031,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M41 HEAT (SALH) Twin Rockets";
+		displayname = "[288th] M41 HEAT (SALH) Twin Rockets";
 		displaynameshort = "HEAT (SALH)";
 		descriptionshort = "High Explosive Anti Tank<br/>SALH";
 		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\heat_salh.paa";
@@ -2042,7 +2042,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M41 HEAT (Heat-Seeking) Twin Rockets";
+		displayname = "[288th] M41 HEAT (Heat-Seeking) Twin Rockets";
 		displaynameshort = "HEAT (Heat-seeking)";
 		descriptionshort = "High Explosive Anti Tank<br/>Heat-Seeking";
 		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\heat_thermal.paa";
@@ -2055,7 +2055,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M57 (SACLOS)";
+		displayname = "[288th] M57 (SACLOS)";
 		displaynameshort = "HEAT (SACLOS)";
 		descriptionshort = "High Explosive Anti Tank<br/>SACLOS";
 		ammo = "288th_M41_Rocket_HEAT_SACLOS";
@@ -2070,7 +2070,7 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		descriptionshort = "High Explosive Anti Personnel<br/>Un-guided";
-		displayname = "[288th DJP] M57 HE (Un-guided)";
+		displayname = "[288th] M57 HE (Un-guided)";
 		displaynameshort = "High Explosive Dumb-fire";
 		ammo = "288th_M41_Rocket_HE";
 		mass = 25;
@@ -2080,7 +2080,7 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		descriptionshort = "Incendiary Anti Personnel<br/>Un-guided";
-		displayname = "[288th DJP] M57 Incendiary (Un-guided)";
+		displayname = "[288th] M57 Incendiary (Un-guided)";
 		displaynameshort = "Incendiary Dumb-fire";
 		ammo = "288th_M41_Rocket_Flame";
 		mass = 25;
@@ -2089,7 +2089,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M57 HEAT (SALH)";
+		displayname = "[288th] M57 HEAT (SALH)";
 		displaynameshort = "HEAT (SALH)";
 		descriptionshort = "High Explosive Anti Tank<br/>SALH";
 		ammo = "288th_M41_Rocket_HEAT_Laser";
@@ -2098,10 +2098,51 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] M57 HEAT (Heat-Seeking)";
+		displayname = "[288th] M57 HEAT (Heat-Seeking)";
 		displaynameshort = "HEAT (Heat-seeking)";
 		descriptionshort = "High Explosive Anti Tank<br/>Heat-Seeking";
 		ammo = "288th_M41_Rocket_HEAT_Thermal";
+	};
+
+	// 288th RR-553 Rockets
+	class MRAWS_HEAT_F;
+	class 288th_1Rnd_50x137_HEAT: MRAWS_HEAT_F
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ammo = "288th_50x137_HEAT";
+		count = 1;
+		displayname = "[288th] 50x137mm HEAT Rocket";
+		descriptionShort = "1 Rocket<br>50x137mm<br>High Explosive Anti-Tank<br>Unguided";
+		mass = 30;
+		allowedSlots[] = {901,701};
+	};
+	class MRAWS_HE_F;
+	class 288th_1Rnd_50x137_HE: MRAWS_HE_F
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "288th_50X137_HE";
+		count = 1;
+		displayname = "[288th] 50x137mm HE Rocket";
+		displaynameshort = "HE";
+		descriptionShort = "1 Rocket<br>50x137mm<br>High Explosive<br>Unguided";
+		mass = 30;
+		allowedSlots[] = {901,701};
+	};
+	class 288th_1Rnd_50x137_PEN: 288th_1Rnd_50x137_HE
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "288th_50x137_PEN";
+		count = 1;
+		displayname = "[288th] 50x137mm Penetrator Rocket";
+		displaynameshort = "Penetrator";
+		descriptionShort = "1 Rocket<br>50x137mm<br>Anti-Tank<br>Unguided";
+		mass = 30;
+		allowedSlots[] = {901,701};
 	};
 
 	//Microgrenade Mag
@@ -2112,7 +2153,7 @@ class CfgMagazines
 		initSpeed = 200;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 10rnd Microgrenade Mag";
+		displayname = "[288th] 10rnd Microgrenade Mag";
 		displaynameshort = "Microgrenade Mag";
 		descriptionshort = "A experimental mag loaded with Microgrenades";
 		ammo = "288th_MicroGrenade";
@@ -2131,7 +2172,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd Buckshot Magazine";
+		displayname = "[288th] 30rnd Buckshot Magazine";
 		displaynameshort = "Buckshot";
 		descriptionshort = "30 round 8 guage buckshot";
 		ammo = "288th_Buckshot_Pellet";
@@ -2145,7 +2186,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd Slug Magazine";
+		displayname = "[288th] 30rnd Slug Magazine";
 		displaynameshort = "Slugs";
 		descriptionshort = "30 round 8 guage slugs";
 		ammo = "65x85_APFS";
@@ -2159,7 +2200,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd Incendiary Slug Magazine";
+		displayname = "[288th] 30rnd Incendiary Slug Magazine";
 		displaynameshort = "Incendiary Slugs";
 		descriptionshort = "20 round 8 guage incendiary slugs";
 		ammo = "65x85_APFS_Incendiary";
@@ -2173,7 +2214,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd HEDP Slug Magazine";
+		displayname = "[288th] 30rnd HEDP Slug Magazine";
 		displaynameshort = "HEDP Slugs";
 		descriptionshort = "30 round 8 guage HEDP slugs";
 		ammo = "65x85_HEDP";
@@ -2186,7 +2227,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd HEDP Buckshot Magazine";
+		displayname = "[288th] 30rnd HEDP Buckshot Magazine";
 		displaynameshort = "HEDP Buckshot";
 		descriptionshort = "30 round 8 guage HEDP buckshot";
 		ammo = "288th_HEDP_Buckshot";
@@ -2200,46 +2241,18 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 30rnd Incendiary Buckshot Magazine";
+		displayname = "[288th] 30rnd Incendiary Buckshot Magazine";
 		displaynameshort = "Incendiary Buckshot";
 		descriptionshort = "20 round 8 guage Incendiary slugs";
 		ammo = "288th_Incendiary_Buckshot";
 		count = 20;
 		mass = 20;
 	};
-	class 288th_HV_Flechettes : 288th_Buckshot
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		initSpeed = 500;
-		scope = 2;
-		scopearsenal = 2;
-		displayname = "[288th DJP] 8rnd Flechettes Magazine";
-		displaynameshort = "Flechettes";
-		descriptionshort = "8 round 6 guage flechettes";
-		ammo = "288th_HV_Flechettes";
-		count = 8;
-		mass = 12;
-	};
-	class 288th_HEDP_Small : 288th_Buckshot
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		initSpeed = 500;
-		scope = 2;
-		scopearsenal = 2;
-		displayname = "[288th DJP] 8rnd HEDP Buckshot Magazine";
-		displaynameshort = "HEDP";
-		descriptionshort = "8 round 6 guage HEDP buckshot";
-		ammo = "288th_HEDP_Small";
-		count = 8;
-		mass = 12;
-	};
 	class 288th_Loose_Buckshot : OPTRE_6Rnd_8Gauge_Pellets
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 12Rnd 8 Gauge Rainbow Pellets";
+		displayname = "[288th] 12Rnd 8 Gauge Rainbow Pellets";
 		count = 12;
 		ammo = "288th_Plasma_Rainbow_Buckshot";
 		displaynameshort = "Rainbow Buckshot";
@@ -2250,7 +2263,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 12Rnd 8 Gauge Slugs";
+		displayname = "[288th] 12Rnd 8 Gauge Slugs";
 		count = 12;
 		ammo = "65x85_APFS";
 		descriptionshort = "12 Round Slugs";
@@ -2260,7 +2273,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP]12Rnd 8 Gauge Incendiary Pellets";
+		displayname = "[288th]12Rnd 8 Gauge Incendiary Pellets";
 		count = 12;
 		ammo = "288th_Incendiary_Buckshot";
 		displaynameshort = "Incendiary Buckshot";
@@ -2271,7 +2284,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 12Rnd 8 Gauge Incendiary Slugs";
+		displayname = "[288th] 12Rnd 8 Gauge Incendiary Slugs";
 		count = 12;
 		displaynameshort = "Incendiary Slugs";
 		ammo = "65x85_APFS_Incendiary";
@@ -2282,7 +2295,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 12Rnd 8 Gauge HEDP Pellets";
+		displayname = "[288th] 12Rnd 8 Gauge HEDP Pellets";
 		count = 12;
 		ammo = "288th_HEDP_Buckshot";
 		displaynameshort = "HEDP Buckshot";
@@ -2293,7 +2306,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th DJP] 12Rnd 8 Gauge HEDP Slugs";
+		displayname = "[288th] 12Rnd 8 Gauge HEDP Slugs";
 		count = 12;
 		displaynameshort = "HEDP Slugs";
 		ammo = "65x85_HEDP";
@@ -2304,7 +2317,7 @@ class CfgMagazines
 	//288th Railgun Mag
 	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
 	{
-		displayName = "[288th DJP] Railgun Slugs";
+		displayName = "[288th] Railgun Slugs";
 		displayNameShort = "16x65mm Slugs";
 		ammo = "288_Railgun";
 		descriptionshort = "16x65mm Slugs for the 288th Railgun";
@@ -2314,7 +2327,7 @@ class CfgMagazines
 	};
 	class 288th_Railgun_Mag_1 : 288th_Railgun_Mag
 	{
-		displayName = "[288th DJP] Railgun Slugs?";
+		displayName = "[288th] Railgun Slugs?";
 		displayNameShort = "16x65mm Slugs?";
 		descriptionshort = "16x65mm Slugs for the 288th Railgun?";
 		ammo = "288_Railgun_1";
@@ -2329,7 +2342,7 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th DJP] 32 Rnd 12.7x40mm NARQ Magazine";
+		displayName = "[288th] 32 Rnd 12.7x40mm NARQ Magazine";
 		displayNameShort = "12.7x40mm NARQ";
 		descriptionshort = "32 Rnd 12.7x40mm NARQ Magazine";
 		count = 32;
@@ -2348,7 +2361,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 32rnd 12.7x40mm Magazine";
+		displayname = "[288th] 32rnd 12.7x40mm Magazine";
 		descriptionshort = "32 Rnd 12.7x40mm Magazine";
 		displayNameShort = "12.7x40mm";
 		count = 32;
@@ -2361,7 +2374,7 @@ class CfgMagazines
 		scope = 2;
 		scopearsenal = 2;
 		ammo = "TCF_B_127x40_AP";
-		displayname = "[288th DJP] 32rnd 12.7x40mm AP Magazine";
+		displayname = "[288th] 32rnd 12.7x40mm AP Magazine";
 		displayNameShort = "12.7x40mm AP";
 		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Magazine";
 		initSpeed = 640;
@@ -2375,7 +2388,7 @@ class CfgMagazines
 		scope = 2;
 		scopearsenal = 2;
 		ammo = "65x85_EHP";
-		displayname = "[288th DJP] 32rnd 12.7x40mm EHP Magazine";
+		displayname = "[288th] 32rnd 12.7x40mm EHP Magazine";
 		displayNameShort = "12.7x40mm EHP";
 		descriptionshort = "32 Rnd 12.7x40mm External Hollow-Point Magazine";
 		initSpeed = 550;
@@ -2388,7 +2401,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 32rnd 12.7x40mm AP Magazine (Tracer)";
+		displayname = "[288th] 32rnd 12.7x40mm AP Magazine (Tracer)";
 		displayNameShort = "12.7x40mm APT";
 		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Tracer Magazine";
 		tracersEvery = 1;
@@ -2403,7 +2416,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 8rnd 12.7x40mm HI-P Magazine";
+		displayname = "[288th] 8rnd 12.7x40mm HI-P Magazine";
 		descriptionshort = "8Rnd 12.7x40mm HI-P Magazine";
 		displayNameShort = "12.7x40mm HI-P";
 		ammo = "288th_15x50";
@@ -2419,7 +2432,7 @@ class CfgMagazines
 		scope = 2;
 		scopearsenal = 2;
 		ammo = "288th_Plasma_40mm";
-		displayName = "[288th DJP] 3GL Plasma HE Shell";
+		displayName = "[288th] 3GL Plasma HE Shell";
 		displayNameShort = "3GL Plasma HE Shell";
 		count = 3;
 		descriptionShort = "I probbaly shouldn't have made this";
@@ -2433,10 +2446,10 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		initspeed = 900;
+		initSpeed = 600;
 		ammo = "65x85_APFS_Tracers";
 		count = 500;
-		displayname = "[288th DJP] 500Rnd 6.5x85mm Box Magazine";
+		displayname = "[288th] 500Rnd 6.5x85mm Box Magazine";
 		displaynameshort = "6.5x85mm";
 		descriptionShort = "500 Round Box Magazine<br/>6.5x85mm";
 		mass = 125;
@@ -2454,7 +2467,7 @@ class CfgMagazines
 		initspeed = 500;
 		ammo = "288th_15x50";
 		count = 75;
-		displayname = "[288th DJP] 75Rnd 15x50mm Box Magazine";
+		displayname = "[288th] 75Rnd 15x50mm Box Magazine";
 		displaynameshort = "15x50mm";
 		descriptionShort = "75 Round Box Magazine<br/>15x50mm";
 		mass = 85;
@@ -2469,10 +2482,9 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		initspeed = 640;
 		ammo = "45ACP";
 		count = 65;
-		displayname = "[288th DJP] 65Rnd 12.7x30mm Magazine";
+		displayname = "[288th] 65Rnd 12.7x30mm Magazine";
 		displaynameshort = "12.7x30";
 		descriptionShort = "Magazine for the M12H";
 		mass = 8;
@@ -2484,7 +2496,7 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th DJP] 30Rnd 20mm HE M318 Box";
+		displayName = "[288th] 30Rnd 20mm HE M318 Box";
 		displaynameshort = "30Rnd 20mm HE";
 		picture = "\A3\Weapons_F\Data\UI\M_200Rnd_65x39_CA.paa";
 		count = 30;
@@ -2500,7 +2512,7 @@ class CfgMagazines
 	};
 	class 288th_AutoGL_Smoke_Mag : 288th_AutoGL_Mag
 	{
-		displayName = "[288th DJP] 30Rnd 20mm Impact Smoke M318 Box";
+		displayName = "[288th] 30Rnd 20mm Impact Smoke M318 Box";
 		displaynameshort = "30Rnd 20mm W Smoke";
 		ammo = "OPTRE_40mm_Smoke";
 		descriptionShort = "30Rnd 20mm Smoke Grenade Box";
@@ -2517,7 +2529,7 @@ class CfgMagazines
 		initspeed = 400;
 		ammo = "45ACP";
 		count = 100;
-		displayname = "[288th DJP] Big Iron Ammo";
+		displayname = "[288th] Big Iron Ammo";
 		displaynameshort = "Big Iron Ammo";
 		descriptionShort = "Bullets for the Big Iron";
 		mass = 150;
@@ -2532,7 +2544,7 @@ class CfgMagazines
 		tracersEvery = 1;
 		count = 6;
 		ammo = "288th_308_rifle_yellow";
-		displayname = "[288th DJP] 6Rnd Yellow Tracer Ammo";
+		displayname = "[288th] 6Rnd Yellow Tracer Ammo";
 		displaynameshort = "Yellow Tracer Ammo";
 		descriptionShort = "Temp's Yellow Tracers";
 	};
@@ -2545,7 +2557,7 @@ class CfgMagazines
 		initspeed = 400;
 		count = 6;
 		ammo = "288th_Plasma_Purple";
-		displayname = "[288th DJP] 6Rnd Purple Plasma Ammo";
+		displayname = "[288th] 6Rnd Purple Plasma Ammo";
 		displaynameshort = "Purple Plasma Ammo";
 		descriptionShort = "Temp's Purple Plasma";
 	};
@@ -2558,7 +2570,7 @@ class CfgMagazines
 		model = "\A3\weapons_f\empty";
 		scope = 1;
 		scopeArsenal = 1;
-		displayName = "[288th DJP] Makeshift Ammo Cache";
+		displayName = "[288th] Makeshift Ammo Cache";
 		displayNameShort = "Makeshift Ammo Cache";
 		ammo = "288th_Makeshift_Ammo";
 		descriptionshort = "A makeshift ammo cache";
@@ -2566,27 +2578,12 @@ class CfgMagazines
 		initspeed = 2000;
 		mass = 120;
 	};
-	class 288th_15Rnd_50BW_Mag : 288th_Stanag
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		displayName = "[288th DJP] 15Rnd .50 Beowulf";
-		displaynameshort = "15Rnd .50";
-		descriptionShort = "15Rnd .50 Beowulf";
-		ammo = "B_50BW_Ball_F";
-		count = 15;
-		initSpeed = 580;
-		tracersEvery = 0;
-		lastRoundsTracer = 0;
-		mass = 12;
-	};
 	class 288th_7Rnd_Gauss_Slug_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		model = "\OPTRE_Weapons\Sniper\SRS99C_Mag.p3d";
-		displayname = "[288th DJP] 7Rnd 5.4mm APDS";
+		displayname = "[288th] 7Rnd 5.4mm APDS";
 		displaynameshort = "APDS";
 		ammo = "288th_Gauss_Slug";
 		count = 7;
@@ -2605,7 +2602,7 @@ class CfgMagazines
 		scope = 2;
 		scopeArsenal = 2;
 		picture = "\A3\Weapons_F_Mark\Data\UI\M_338_CA.paa";
-		displayName = "[288th DJP] AC-8 Ammo";
+		displayName = "[288th] AC-8 Ammo";
 		displayNameShort = "10Rnd AC-8";
 		ammo = "288th_AC_8";
 		descriptionshort = "A 10Rnd AC-8 ammo mag";
@@ -2615,7 +2612,7 @@ class CfgMagazines
 	};
 	class 288th_EMP : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th DJP] 15Rnd EMP Mag";
+		displayname = "[288th] 15Rnd EMP Mag";
 		displaynameshort = "EMP Mag";
 		descriptionshort = "A specially modified EMP mag, use with caution";
 		ammo = "288th_EMP";
@@ -2623,14 +2620,14 @@ class CfgMagazines
 		count = 15;
 		mass = 12;
 	};
-	class 288th_testmag : B_65x39_Caseless
+	class 288th_testmag : 288th_Stanag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		initSpeed = 50;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th DJP] 50rnd Test Mag";
+		displayname = "[288th] 50rnd Test Mag";
 		displaynameshort = "288th Test Mag";
 		descriptionshort = "A test magazine loaded with who knows what";
 		ammo = "OPTRE_c7_remote_ammo_thrown_sticky";

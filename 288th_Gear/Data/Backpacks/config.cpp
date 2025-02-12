@@ -70,7 +70,7 @@ class cfgVehicles
 		scopeCurator = 2;
 		isbackpack = 1;
 		picture = "\OPTRE_weapons\backpacks\icons\rucksack_black.paa";
-		displayName = "[288th DJP] ILCS Backpack";
+		displayName = "[288th] ILCS Backpack";
 		model = "\OPTRE_weapons\backpacks\ODST_ruck.p3d";
 		allowedSlots[] = {901};
 		maximumLoad = 500;
@@ -104,7 +104,7 @@ class cfgVehicles
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
-		displayName = "[288th DJP] AN/PRC-521";
+		displayName = "[288th] AN/PRC-521";
 		allowedSlots[] = {901};
 		maximumLoad = 500;
 		mass = 30;
@@ -147,7 +147,7 @@ class cfgVehicles
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
-		displayName = "[288th DJP] AN/PRC-521 - Medic";
+		displayName = "[288th] AN/PRC-521 - Medic";
 		allowedSlots[] = {901};
 		maximumLoad = 500;
 		mass = 30;
@@ -193,7 +193,7 @@ class cfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		isbackpack = 1;
-		displayName = "[288th DJP] Mil-Tech Radio (Black)";
+		displayName = "[288th] Mil-Tech Radio (Black)";
 		allowedSlots[] = { 901 };
 		maximumLoad = 500;
 		mass = 30;
@@ -227,7 +227,7 @@ class cfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		isbackpack = 1;
-		displayName = "[288th DJP] Mil-Tech Radio (Woodland)";
+		displayName = "[288th] Mil-Tech Radio (Woodland)";
 		allowedSlots[] = { 901 };
 		maximumLoad = 500;
 		mass = 30;
@@ -258,7 +258,7 @@ class cfgVehicles
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] AN/PRC-521 (Zeus)";
+		displayName = "[288th] AN/PRC-521 (Zeus)";
 		model = "\A3\weapons_f\empty";
 		tf_range = 100000;
 	};
@@ -272,7 +272,7 @@ class cfgVehicles
 		scopeCurator = 1;
 		ace_arsenal_hide = 0;
 		isbackpack = 1;
-		displayName = "[288th DJP] Test Jetpack";
+		displayName = "[288th] Test Jetpack";
 		model = "\OPTRE_weapons\backpacks\jetpack.p3d";
 		picture = "\OPTRE_weapons\backpacks\icons\icon_jetpack_ca.paa";
 		hiddenSelections[] = { "camo" };
@@ -335,7 +335,7 @@ class cfgVehicles
 		scopeArsenal = 2;
 		scopeCurator = 2;
 		isbackpack = 1;
-		displayName = "[288th DJP] Flightpack";
+		displayName = "[288th] Flightpack";
 		maximumLoad = 500;
 		tf_hasLRradio = 0;
 		NSM_jumppack_spam_delay = 1;
@@ -359,7 +359,7 @@ class cfgVehicles
 	};
 	class 288th_Flightpack_RTO : 288th_Flightpack
 	{
-		displayName = "[288th DJP] Flightpack RTO";
+		displayName = "[288th] Flightpack RTO";
 		tf_isolatedAmount = 0.65;
 		tf_range = 40000;
 		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
@@ -373,13 +373,14 @@ class cfgVehicles
 
 	class 288th_Kitbag : TCF_wnato_kitbag
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		scopeCurator = 2;
 		isbackpack = 1;
-		displayName = "[288th DJP] Kitbag";
+		displayName = "[288th] Kitbag";
 		allowedSlots[] = { 901 };
 		maximumLoad = 500;
 		mass = 30;
@@ -399,29 +400,12 @@ class cfgVehicles
 		};
 	};
 
-	/*class 288th_MQ_49_AD : 288th_ILCS_Backpack
-	{
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		displayName = "[288th DJP] MQ-94 Assault Drone Backpack";
-		mass = 10;
-		maximumLoad = 0;
-		class assembleInfo
-		{
-			primary = 1;
-			base = "";
-			assembleTo = "288th_MQ_94";
-			displayName = "MQ-94 Assault Drone";
-			dissasembleTo[] = {};
-		};
-	};*/
 	class 288th_Remote_M41_Bag : 288th_ILCS_Backpack
 	{
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Remote M41 LAAG Backpack";
+		displayName = "[288th] Remote M41 LAAG Backpack";
 		mass = 100;
 		maximumLoad = 0;
 		class assembleInfo
@@ -438,7 +422,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Remote M68 Gauss Backpack";
+		displayName = "[288th] Remote M68 Gauss Backpack";
 		mass = 100;
 		maximumLoad = 0;
 		class assembleInfo
@@ -455,7 +439,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Remote M79 AA Backpack";
+		displayName = "[288th] Remote M79 AA Backpack";
 		mass = 100;
 		maximumLoad = 0;
 		class assembleInfo
@@ -472,7 +456,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Remote AU-44 Backpack";
+		displayName = "[288th] Remote AU-44 Backpack";
 		mass = 100;
 		maximumLoad = 0;
 		class assembleInfo
@@ -489,7 +473,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Remote M12 MLMS Backpack";
+		displayName = "[288th] Remote M12 MLMS Backpack";
 		mass = 100;
 		maximumLoad = 0;
 		class assembleInfo
@@ -501,12 +485,12 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
-	class 288th_SupplyPod_Bag : 288th_ILCS_Backpack
+	/*class 288th_SupplyPod_Bag : 288th_ILCS_Backpack
 	{
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] Deployable Supply Pod";
+		displayName = "[288th] Deployable Supply Pod";
 		mass = 500;
 		maximumLoad = 0;
 		class assembleInfo
@@ -517,7 +501,7 @@ class cfgVehicles
 			displayName = "Supply Pod";
 			dissasembleTo[] = {};
 		};
-	};
+	};*/
 
 	class OPTRE_S12_SOLA_Jetpack: OPTRE_ILCS_Rucksack_Black
 	{
@@ -564,7 +548,7 @@ class cfgVehicles
 	#define CREATEBACK(DESIGNATION) \
 	class 288th_ICLS_Backpack_##DESIGNATION : 288th_ILCS_Backpack \
 	{ \
-		displayName = [288th DJP] ILCS Backpack - DESIGNATION; \
+		displayName = [288th] ILCS Backpack - DESIGNATION; \
 		hiddenSelectionsTextures[] = \
 		{ \
 			288th_Gear\Data\Backpacks\ODST_##DESIGNATION##_Backpack.paa, \

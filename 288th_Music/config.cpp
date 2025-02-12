@@ -144,4 +144,12 @@ class CfgMusic
         duration=161;
 		//https://www.youtube.com/watch?v=9mKCj4Nigpg
 	};
+	class Vode_An
+	{
+		name	= "Vode An";
+		sound[]	= { "\288th_Music\Vode_An.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=239;
+		//https://www.youtube.com/watch?v=wG-FR3_fmPU
+	};
 };

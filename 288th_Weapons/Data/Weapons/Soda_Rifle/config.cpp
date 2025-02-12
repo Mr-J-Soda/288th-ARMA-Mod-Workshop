@@ -168,11 +168,11 @@ class cfgWeapons
 		dispersion = 0;
 		distanceZoomMax = 1000;
 		distanceZoomMin = 100;
-		/*initSpeed = 30;*/
+		//initSpeed = 30;
 		//autoReload = true;
 		cursor = "test";
 		recoil = "recoil_M7V_SMG";
-		displayName = "[288th DJP] Soda's M28A3";
+		displayName = "[288th] Soda's M28A3";
 		descriptionshort = "Special Oni Derived Armament";
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\Soda_Rifle\V_MA4_CO.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};

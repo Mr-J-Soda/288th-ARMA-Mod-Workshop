@@ -29,9 +29,11 @@ class cfgWeapons
 
 	class 288th_CH252D_ODST_Onyx : 288th_CH252D_ODST_Base
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		scope = 2;
-		scopeArsenal = 2;
 		optreVarietys[] =
 		{
 			"",
@@ -39,7 +41,7 @@ class cfgWeapons
 			"_broken"
 		};
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D Onyx";
+		displayName = "[288th] CH252D Onyx";
 		//optreHUDStyle = "";
 		//MJOLNIR_isHelmet = 1; 
 		//MJOLNIR_helmetOverlay = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudBackground.paa";    //Filepath for the hud overlay texture
@@ -55,11 +57,13 @@ class cfgWeapons
 	};
 	class 288th_Armor_ODST_Onyx : 288th_Armor_ODST_Rifleman
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
-		scope = 2;
-		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D Onyx";
+		displayName = "[288th] M52D Onyx";
 		//MJOLNIR_isarmor = 1;
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		descriptionShort = "An upgraded variant of the standard issue M52D, first fielded in 2525.";

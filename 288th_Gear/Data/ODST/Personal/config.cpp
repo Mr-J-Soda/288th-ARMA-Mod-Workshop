@@ -32,7 +32,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Dummy";
+		displayName = "[288th] CH252D ODST Helmet - Dummy";
 		optreVarietys[] =
 		{
 			"",
@@ -85,7 +85,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Dummy";
+		displayName = "[288th] CH252D ODST Helmet - Dummy";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Personal\Dummy\ODST_Dummy_Helmet.paa",
@@ -145,7 +145,7 @@ class cfgWeapons
 		Scope = 2;
 		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D ODST Armor - Dummy";
+		displayName = "[288th] M52D ODST Armor - Dummy";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{
@@ -315,7 +315,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Error";
+		displayName = "[288th] CH252D ODST Helmet - Error";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Personal\Error\ODST_Error_Helmet.paa",
@@ -360,7 +360,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252D ODST Helmet - Error";
+		displayName = "[288th] CH252D ODST Helmet - Error";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Personal\Error\ODST_Error_Helmet.paa",
@@ -411,7 +411,7 @@ class cfgWeapons
 		Scope = 2;
 		scopeArsenal = 2;
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M52D ODST Armor - Error";
+		displayName = "[288th] M52D ODST Armor - Error";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		hiddenSelectionsTextures[] =
 		{

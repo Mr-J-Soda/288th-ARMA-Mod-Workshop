@@ -243,7 +243,7 @@ class cfgMagazines
 		author = "Soda / Misriah 288";
 		icon = "288th_Weapons\Data\Grenades\Quackbang\duckicon.paa";
 		model = "288th_Weapons\Data\Grenades\Quackbang\Rubberduck4.p3d";  
-		displayName = "[288th DJP] Quackbang Grenade";
+		displayName = "[288th] Quackbang Grenade";
 		picture = "288th_Weapons\Data\Grenades\Quackbang\duckicon.paa";
 		displayNameShort = "Quackbang";
 		ammo = "QBGrenade_ammo";

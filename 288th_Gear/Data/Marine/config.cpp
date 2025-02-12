@@ -23,14 +23,14 @@ class cfgWeapons
 {
 	class OPTRE_UNSC_CH252_Helmet2_Vacuum_MAR;
 	class 288th_Armor_ODST_Rifleman;
-	class ItemInfo;
+	//class ItemInfo;
 	class VestItem;
 
 	class 288th_CH252_Marine : OPTRE_UNSC_CH252_Helmet2_Vacuum_MAR
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] CH252 Marine Helmet";
+		displayName = "[288th] CH252 Marine Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\Marine\Marine_test_Helmet.paa",
@@ -47,7 +47,7 @@ class cfgWeapons
 			"_broken"
 		};
 		optreHUDStyle = "ODST_1";
-		class ItemInfo : ItemInfo
+		/*class ItemInfo : ItemInfo
 		{
 			uniformModel = "\OPTRE_UNSC_Units\Army\helmet_p.p3d";
 			hiddenSelections[] =
@@ -84,15 +84,17 @@ class cfgWeapons
 				};
 			};
 			mass = 5;
-		};
+		};*/
 	};
 	class 288th_CH252_Marine_OSHA : 288th_CH252_Marine
 	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
 		scope = 1;
 		scopeArsenal = 1;
-		displayName = "[288th DJP] CH252 Marine Helmet (OSHA)";
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] CH252 Marine Helmet (OSHA)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\Marine\OSHA\Marine_OSHA_Helmet.paa",
@@ -109,7 +111,7 @@ class cfgWeapons
 			"_broken"
 		};
 		optreHUDStyle = "ODST_1";
-		class ItemInfo : ItemInfo
+		/*class ItemInfo : ItemInfo
 		{
 			hiddenSelections[] =
 			{
@@ -143,9 +145,9 @@ class cfgWeapons
 					passThrough = 0.1;
 					explosionShielding = 0.1;
 				};
-			};*/
+			};
 			mass = 5;
-		};
+		};*/
 	};
 
 	class 288th_Armor_Marine : 288th_Armor_ODST_Rifleman
@@ -154,7 +156,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Team Leader)";
+		displayName = "[288th] M52A Marine (Team Leader)";
 		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
 		picture = "\OPTRE_UNSC_Units\Army\icons\Army_vest_wdl.paa";
 		hiddenSelectionsTextures[] =
@@ -265,11 +267,13 @@ class cfgWeapons
 	};
 	class 288th_Armor_Marine_OSHA : 288th_Armor_Marine
 	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
 		scope = 1;
 		scopeArsenal = 1;
-		displayName = "[288th DJP] M52A Marine (OSHA)";
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52A Marine (OSHA)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\Marine\OSHA\Marine_OSHA_Vest.paa",
@@ -341,11 +345,13 @@ class cfgWeapons
 	};
 	class 288th_Armor_Marine_OSHA_H : 288th_Armor_Marine
 	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
 		scope = 1;
 		scopeArsenal = 1;
-		displayName = "[288th DJP] M52A Marine (OSHA)";
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52A Marine (OSHA)";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\Marine\OSHA\Marine_OSHA_Vest_H.paa",
@@ -421,7 +427,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Rifleman)";
+		displayName = "[288th] M52A Marine (Rifleman)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";
@@ -489,7 +495,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Marksman)";
+		displayName = "[288th] M52A Marine (Marksman)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";
@@ -557,7 +563,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (AutoRifleman)";
+		displayName = "[288th] M52A Marine (AutoRifleman)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";
@@ -625,7 +631,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Breacher)";
+		displayName = "[288th] M52A Marine (Breacher)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";
@@ -693,7 +699,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Grenadier)";
+		displayName = "[288th] M52A Marine (Grenadier)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";
@@ -761,7 +767,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Medic)";
+		displayName = "[288th] M52A Marine (Medic)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";
@@ -829,7 +835,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[288th DJP] M52A Marine (Sniper)";
+		displayName = "[288th] M52A Marine (Sniper)";
 		class ItemInfo : VestItem
 		{
 			vestType = "Rebreather";

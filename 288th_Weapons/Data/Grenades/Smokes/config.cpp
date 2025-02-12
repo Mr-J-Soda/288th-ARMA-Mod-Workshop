@@ -30,7 +30,7 @@ class CfgMagazines
     {
         dlc = "288thDJP_Aux";
         author = "Festive Neira / Misriah 288";
-        displayName = "[288th DJP] M2 Smoke Grenade (Multicolor)";
+        displayName = "[288th] M2 Smoke Grenade (Multicolor)";
         picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_white_ca.paa";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
         model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";

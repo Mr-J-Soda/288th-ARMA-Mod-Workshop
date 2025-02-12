@@ -104,7 +104,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] AR1X";
+		displayName = "[288th] AR1X";
 		descriptionshort = "Special Oni Derived Armament AR1X";
 		model = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\ScarLK_F.p3d";
 		picture = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\data\UI\gear_scarlk_x_ca.paa";
@@ -112,8 +112,6 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\Data\ScarLK_CO.paa"};
 		reloadAction = "GestureReloadSMG_02";
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\reload_sting",1.0,1,10};
-		/*hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleblak.paa","\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleshortblak.paa"};*/
 		baseWeapon = "288th_AR1X";
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = {"288th_Standard"};
@@ -293,7 +291,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] AR2X";
+		displayName = "[288th] AR2X";
 		descriptionshort = "Special Oni Derived Armament AR2X";
 		baseWeapon = "288th_AR2X";
 		hiddenSelections[] = {"camo1"};
@@ -444,7 +442,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] AR3X";
+		displayName = "[288th] AR3X";
 		descriptionshort = "Special Oni Derived Armament AR3X";
 		baseWeapon = "288th_AR3X";
 		magazines[] = {"288th_Stanag"};
@@ -566,7 +564,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] AR4X";
+		displayName = "[288th] AR4X";
 		descriptionshort = "Special Oni Derived Armament AR4X";
 		baseWeapon = "288th_AR4X";
 		magazines[] = {"288th_Stanag"};
@@ -711,7 +709,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M28A3 Battle Rifle";
+		displayName = "[288th] M28A3 Battle Rifle";
 		baseWeapon = "288th_M28A3_BR";
 		scope = 2;
 		scopeArsenal = 2;
@@ -893,7 +891,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] RG's M28A3";
+		displayName = "[288th] RG's M28A3";
 		baseWeapon = "288th_M28A3_RG";
 		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\V_MA4_CO_GREEN","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};
 		class secondary : 288th_M45TAC
@@ -912,7 +910,7 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] M28A3 Breacher Battle Rifle";
+		displayName = "[288th] M28A3 Breacher Battle Rifle";
 		baseWeapon = "288th_M28A3_Breach";
 		class secondary : 288th_CQS_48X
 		{
@@ -929,144 +927,6 @@ class cfgWeapons
 		};
 	};
 
-	// 288th AR12
-	class 288th_AR12 : SC_Rifle_AR12 
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th DJP] AR12";
-		baseWeapon = "288th_AR12";
-		descriptionshort = "Special Oni Derived Armament AR12";
-		recoil = "recoil_lim";
-		magazineWell[] = {"288th_Standard"};
-		magazines[] = {"288th_Stanag"};
-		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
-		HUD_BulletInARows = 2;
-		HUD_TotalPosibleBullet = 30;
-		cursor = "OPTRE_MA5";
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_M7_Sight";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "Ace_muzzle_mzls_B";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "OPTRE_M12_Laser";
-			};
-		};
-		class WeaponSlotsInfo
-		{
-			mass = 50;
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor",
-					"Ace_muzzle_mzls_B",
-					"OPTRE_M12_Suppressor",
-					"muzzle_snds_M"
-				};
-			};
-			class CowsSlot : CowsSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleitems[] =
-				{
-					"Optre_Evo_Sight",
-					"Optre_Evo_Sight_Riser",
-					"Optre_Recon_Sight",
-					"Optre_Recon_Sight_Red",
-					"Optre_Recon_Sight_Green",
-					"Optre_Recon_Sight_Desert",
-					"Optre_Recon_Sight_UNSC",
-					"Optre_Recon_Sight_Snow",
-					"288th_M6C_Scope",
-					"288th_M7_Sight",
-					"288th_Hamr_Scope",
-					"optic_dms",
-					"optic_aco_grn",
-					"optic_aco",
-					"optic_holosight_blk_f",
-					"optic_khs_blk",
-					"optic_hamr",
-					"optic_sos",
-					"optic_lrps",
-					"optic_erco_blk_f",
-					"optic_ams",
-					"optic_yorris",
-					"optic_aco_smg",
-					"optic_aco_grn_smg",
-					"optic_holosight_smg_blk_f",
-					"optic_mrd_black",
-					"optre_m393_eotech",
-					"optre_m7_sight",
-					"optre_m392_scope",
-					"optre_br55hb_scope",
-					"OPTRE_BR45_Scope",
-					"OPTRE_M12_Optic",
-					"TCF_M393_EOTECH_v2",
-					"SC_Reflex_Chevron_R",
-					"SC_Reflex_C_Blue",
-					"SC_Reflex_C_Red",
-					"SC_Reflex_C1_Red",
-					"SC_Reflex_R_Blue",
-					"SC_Reflex_R_Green",
-					"SC_Reflex_R_Yellow",
-					"SC_T1",
-					"SC_TSO55",
-					"SC_X11"
-				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M12_Laser",
-					"acc_flashlight",
-					"acc_pointer_ir"
-				};
-			};
-			class UnderBarrelSlot : UnderBarrelSlot_Rail
-			{
-				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-					"bipod_01_F_blk",
-					"bipod_02_F_blk",
-					"bipod_03_F_blk",
-				};
-				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
-				iconPinpoint = "Bottom";
-			};
-		};
-		hiddenSelections[] =
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[] =
-		{
-			"288th_Weapons\Data\Weapons\AR_Rifles\AR12_Body_Mars.paa",
-			"sc_weapons\data\ar12\textures\camo1_co.paa"
-		};
-	};
-
 	// 288th AR1K
 	class 288th_AR1K : arifle_AK12U_F
 	{
@@ -1076,7 +936,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] AR1K";
+		displayName = "[288th] AR1K";
 		descriptionshort = "Special Oni Derived Armament AR1K";
 		baseWeapon = "288th_AR1K";
 		magazines[] = {"288th_Stanag"};
@@ -1191,7 +1051,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th DJP] M12H";
+		displayName = "[288th] M12H";
 		descriptionshort = "Special Oni Derived Armament M12H";
 		baseWeapon = "288th_M12H";
 		magazines[] = { "288th_M12H_Mag" };
@@ -1296,7 +1156,7 @@ class cfgWeapons
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		canShootInWater = 1;
-		displayName = "[288th DJP] Error's M395";
+		displayName = "[288th] Error's M395";
 		descriptionshort = "Error's's DMR";
 		magazines[] = { "288th_DMR_M395", "OPTRE_15Rnd_762x51_Mag" };
 		magazineWell[] = { "" };
@@ -1409,120 +1269,6 @@ class cfgWeapons
 		};
 	};
 
-	// 288th Smith's Gun
-	class 288th_Smith : 288th_AR3X
-	{
-		displayName = "[288th DJP] Smith's AR3X";
-		descriptionshort = "Smith's Modified AR3X";
-		baseWeapon = "288th_Smith";
-		magazines[] =
-		{
-			"288th_15Rnd_50BW_Mag"
-		};
-		magazineWell[] = { 288th_Beowolf };
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_DMR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_DMR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_DMR";
-		HUD_BulletInARows = 1;
-		HUD_TotalPosibleBullet = 15;
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_M7_Sight";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "optre_ma5suppressor";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "ACE_DBAL_A3_Red";
-			};
-		};
-		class WeaponSlotsInfo
-		{
-			mass = 85;
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor",
-					"OPTRE_M6C_compensator",
-					"muzzle_snds_M"
-				};
-			};
-			class CowsSlot : CowsSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleitems[] =
-				{
-					"288th_SS_6_Scope",
-					"Optre_Recon_Sight",
-					"Optre_Recon_Sight_Red",
-					"Optre_Recon_Sight_Green",
-					"Optre_Recon_Sight_Desert",
-					"Optre_Recon_Sight_UNSC",
-					"Optre_Recon_Sight_Snow",
-					"288th_M6C_Scope",
-					"288th_M7_Sight",
-					"288th_Hamr_Scope",
-					"optic_dms",
-					"optic_aco_grn",
-					"optic_aco",
-					"optic_holosight_blk_f",
-					"optic_khs_blk",
-					"optic_hamr",
-					"optic_sos",
-					"optic_lrps",
-					"optic_erco_blk_f",
-					"optic_ams",
-					"optic_yorris",
-					"optic_aco_smg",
-					"optic_aco_grn_smg",
-					"optic_holosight_smg_blk_f",
-					"optic_mrd_black",
-					"optre_m393_eotech",
-					"optre_m7_sight",
-					"optre_m392_scope",
-					"optre_br55hb_scope",
-					"OPTRE_BR45_Scope",
-					"OPTRE_M12_Optic",
-					"TCF_M393_EOTECH_v2",
-					"optic_nightstalker",
-					"optic_KHS_blk"
-				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"ACE_DBAL_A3_Red",
-					"ACE_DBAL_A3_Green",
-					"ACE_SPIR",
-					"acc_flashlight"
-				};
-			};
-			class UnderBarrelSlot : UnderBarrelSlot_Rail
-			{
-				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-					"bipod_01_F_blk",
-					"bipod_02_F_blk",
-					"bipod_03_F_blk",
-				};
-				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
-				iconPinpoint = "Bottom";
-			};
-		};
-	};
-
 	class 288th_OSHA_Rifle : srifle_DMR_03_F
 	{
 		dlc = "288thDJP_Aux";
@@ -1533,7 +1279,7 @@ class cfgWeapons
 		canShootInWater = 1;
 		picture = "288th_Weapons\Data\UI\gear_DMR_03_X_CA.paa";
 		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		displayName = "[288th DJP] OSHA Rifle";
+		displayName = "[288th] OSHA Rifle";
 		descriptionshort = "A rifle used by OSHA Marines";
 		baseWeapon = "288th_OSHA_Rifle";
 		magazines[] =
@@ -1827,108 +1573,4 @@ class cfgWeapons
 			maxRangeProbab = 0.2;
 		};*/
 	};
-	/*class muzzle_snds_h;
-	class muzzle_snds_68x43: muzzle_snds_h
-	{
-		model = "\A3\weapons_f\acc\acca_snds_l_F";
-	};
-	class Rifle;
-	class arifle_MX_Base_F: Rifle_Base_F
-	{
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot;
-		};
-		class Single;
-		class FullAuto;
-	};
-	class arifle_MXC_F: arifle_MX_Base_F{};
-	class tb_arifle_scarlk_base: arifle_MXC_F
-	{
-		scope = 0;
-		magazines[] = {"30Rnd_68x43","30Rnd_68x43_Tracer"};
-		handanim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_02\data\Anim\SMG_02.rtm"};
-		reloadAction = "GestureReloadSMG_02";
-		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\reload_sting",1.0,1,10};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleItems[] = {"muzzle_snds_68x43"};
-			};
-		};
-		modes[] = {"Single","Burst","FullAuto"};
-		class Single: Single
-		{
-			reloadTime = 0.05;
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
-				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
-				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
-		};
-		class FullAuto: FullAuto
-		{
-			reloadTime = 0.15;
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
-				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
-				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
-		};
-		class Burst: FullAuto
-		{
-			reloadTime = 0.05;
-			autoFire = 0;
-			burst = 3;
-			displayName = "Burst";
-			textureType = "burst";
-			recoil = "recoil_auto_primary_2outof10";
-			recoilProne = "recoil_auto_primary_prone_2outof10";
-		};
-		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.5011872,1,15};
-		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0.5011872,1,15};
-		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0.5011872,1,15};
-		bullet4[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_04",0.5011872,1,15};
-		bullet5[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_01",0.39810717,1,15};
-		bullet6[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_02",0.39810717,1,15};
-		bullet7[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_03",0.39810717,1,15};
-		bullet8[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_04",0.39810717,1,15};
-		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01",0.25118864,1,15};
-		bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0.25118864,1,15};
-		bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0.25118864,1,15};
-		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.25118864,1,15};
-		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
-		class Library
-		{
-			libtextdesc = "Scar LK<br />Caliber: 6.5x39 mm";
-		};
-	};
-	class tb_arifle_scarlk: tb_arifle_scarlk_base
-	{
-		scope = 2;
-		author = "Rehasher";
-		baseWeapon = "tb_arifle_scarlk";
-		displayName = "Scar LK";
-		model = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\ScarLK_F.p3d";
-		picture = "288th_Weapons\Data\Weapons\AR_Rifles\Scar\data\UI\gear_scarlk_x_ca.paa";
-		hiddenSelections[] = {"weapon"};
-		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\Data\ScarLK_CO.paa"};
-	};*/
 };
