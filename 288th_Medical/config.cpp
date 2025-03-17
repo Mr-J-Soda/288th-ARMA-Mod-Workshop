@@ -72,7 +72,7 @@ class cfgWeapons
 		descriptionUse = "Applying Medkit...";
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 20;
+			mass = 16;
 		};
 	};
 	class 288th_Medic_Biofoam : OPTRE_Biofoam
@@ -863,10 +863,10 @@ class ACE_Medical_Treatment
 		{
 			volume = 25;
 		};*/
-		class 288th_Emergency_MedKit : PlasmaIV
+		/*class 288th_Emergency_MedKit : PlasmaIV
 		{
 			volume = 2000;
-		};
+		};*/
 	};
 };
 class ACE_Medical_Treatment_Actions

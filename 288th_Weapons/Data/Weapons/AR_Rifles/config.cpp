@@ -677,7 +677,7 @@ class cfgWeapons
 			displayName = "AR4X Underbarrel Launcher";
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazineWell[] = { 288th_GL };
+			magazineWell[] = { "288th_GL","UGL_40x36","CBA_40mm_M203","CBA_40mm_EGLM" };
 			magazines[] = 
 			{ 
 				"3Rnd_HE_Grenade_shell",
@@ -694,7 +694,8 @@ class cfgWeapons
 				"3Rnd_SmokeBlue_Grenade_shell",
 				"3Rnd_SmokeOrange_Grenade_shell",
 				"WNZ_EMP40mm_3GL_Grenade_Magazine",
-				"288th_GL_Mag"
+				"288th_GL_Mag",
+				"288th_Potato"
 			};
 			cameraDir = "OP_look";
 			discreteDistance[] = { 50,75,100,150,200,250,300,350,400 };

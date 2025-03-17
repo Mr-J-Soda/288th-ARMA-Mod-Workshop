@@ -16,7 +16,9 @@ switch true do {
 		_loaded = true;
 	};
 	case (_veh isKindOf "OPTRE_M12A1_LRV" or _veh isKindOf "OPTRE_M12_LRV" or _veh isKindOf "OPTRE_M12G1_LRV" or _veh isKindOf "OPTRE_M12R_AA" or _veh isKindOf "OPTRE_M813_TT" or _veh isKindOf "OPTRE_M12_FAV_APC" or _veh isKindOf "O_MBT_02_railgun_F" or _veh isKindOf "288th_Futura") : {
-		_veh attachTo [_pelican,[0,-3.25,0.25]];
+		//_veh attachTo [_pelican,[0,-7.2, -1.7805]];
+		_veh attachTo [_pelican,[0.15,-6,-1.44]];
+		//_veh attachTo [_pelican,[0,-3.25,0.25]];
 		//0 = [vehicle player, 15, 0] call BIS_fnc_setPitchBank;
 		_loaded = true;
 	};
@@ -43,8 +45,8 @@ switch true do {
 		_veh attachTo [_pelican,[0,-6,-0.6]];
 		_loaded = true;
 	};
-	case (_veh isKindOf "optre_hornet_base") : {
-		_veh attachTo [_pelican,[0,-5,-0.35]];
+	case (_veh isKindOf "optre_hornet_base" or _veh isKindOf "OPTRE_EscapePod_Base") : {
+		_veh attachTo [_pelican,[0,-6,-0.85]];
 		_loaded = true;
 	};
 	case (_veh isKindOf "optre_catfish_unarmed_f" or _veh isKindOf "optre_catfish_mg_f") : {

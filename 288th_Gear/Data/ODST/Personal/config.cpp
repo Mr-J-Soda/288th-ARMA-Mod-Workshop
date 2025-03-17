@@ -46,7 +46,7 @@ class cfgWeapons
 			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 			"optre_unsc_units\army\data\soft_packs_co.paa"
 		};
-		subItems[] = {"Example_NVG"};
+		subItems[] = {"288th_Mk5_NVG"};
 		class ItemInfo: HeadgearItem
 		{
 			uniformModel = "\OPTRE_UNSC_Units\Army\odst_helmet.p3d";

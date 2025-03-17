@@ -70,10 +70,6 @@ class CfgEditorSubcategories
 	{
 		displayName = "Silver Wolves";
 	};
-	/*class 288th_Eden_Rangers
-	{
-		displayName = "665th Serra Recon Rangers";
-	};*/
 	class 288th_Eden_Turret
 	{
 		displayName = "Turrets";
@@ -94,9 +90,9 @@ class CfgEditorSubcategories
 	{
 		displayName = "Artillery";
 	};
-	class 288th_Eden_OSHA
+	class 288th_Eden_Memes
 	{
-		displayName = "OSHA";
+		displayName = "Memes";
 	};
 	class 288th_Named
 	{
@@ -136,13 +132,9 @@ class CfgVehicleClasses
 	{
 		displayName = "Silver Wolves";
 	};
-	/*class 288th_Subgroups_Rangers
+	class 288th_Subgroups_Memes
 	{
-		displayName = "665th Serra Recon Rangers";
-	};*/
-	class 288th_Subgroups_OSHA
-	{
-		displayName = "OSHA";
+		displayName = "Memes";
 	};
 };
 class CBA_Extended_EventHandlers_base;
@@ -3457,187 +3449,6 @@ class cfgVehicles
 				magazines[] = { "288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag" };
 			};
 		};
-		/*class HitPoints: HitPoints
-		{
-			class HitHull: HitHull
-			{
-				armor = 1.6;
-				material = -1;
-				armorComponent = "hit_hull";
-				name = "hit_hull_point";
-				visual = "zbytek";
-				passThrough = 1;
-				minimalHit = 0.1;
-				explosionShielding = 0.2;
-				radius = 0.2;
-			};
-			class HitEngine: HitEngine
-			{
-				armor = 0.75;
-				material = -1;
-				armorComponent = "hit_engine";
-				name = "hit_engine_point";
-				visual = "-";
-				passThrough = 0.1;
-				minimalHit = 0.1;
-				explosionShielding = 0.5;
-				radius = 0.3;
-			};
-			class HitFuel: HitFuel
-			{
-				armor = 0.75;
-				material = -1;
-				armorComponent = "hit_fuel";
-				name = "hit_fuel_point";
-				visual = "-";
-				passThrough = 0.3;
-				minimalHit = 0.1;
-				explosionShielding = 0.6;
-				radius = 0.2;
-			};
-			class HitSLAT_Left_1
-			{
-				simulation = "Armor_SLAT";
-				armorComponent = "cage_left_1_geo";
-				name = "cage_left_1_point";
-				armor = -200;
-				minimalHit = 0.3;
-				passThrough = 0;
-				visual = "-";
-				explosionShielding = 2;
-				radius = 0.25;
-			};
-			class HitSLAT_Left_2: HitSLAT_Left_1
-			{
-				armorComponent = "cage_left_2_geo";
-				name = "cage_left_2_point";
-			};
-			class HitSLAT_Left_3: HitSLAT_Left_1
-			{
-				armorComponent = "cage_left_3_geo";
-				name = "cage_left_3_point";
-			};
-			class HitSLAT_Right_1: HitSLAT_Left_1
-			{
-				armorComponent = "cage_right_1_geo";
-				name = "cage_right_1_point";
-			};
-			class HitSLAT_Right_2: HitSLAT_Left_1
-			{
-				armorComponent = "cage_right_2_geo";
-				name = "cage_right_2_point";
-			};
-			class HitSLAT_Right_3: HitSLAT_Left_1
-			{
-				armorComponent = "cage_right_3_geo";
-				name = "cage_right_3_point";
-			};
-			class HitSLAT_top_back: HitSLAT_Left_1
-			{
-				armorComponent = "cage_top_back_geo";
-				name = "cage_top_back_point";
-			};
-			class HitSLAT_top_left: HitSLAT_Left_1
-			{
-				armorComponent = "cage_top_left_geo";
-				name = "cage_top_left_point";
-			};
-			class HitSLAT_top_right: HitSLAT_Left_1
-			{
-				armorComponent = "cage_top_right_geo";
-				name = "cage_top_right_point";
-			};
-			class HitSLAT_back: HitSLAT_Left_1
-			{
-				armorComponent = "cage_back_geo";
-				name = "cage_back_point";
-			};
-			class HitSLAT_front: HitSLAT_Left_1
-			{
-				armorComponent = "cage_front_geo";
-				name = "cage_front_point";
-			};
-			class HitLFWheel: HitLFWheel
-			{
-				radius = 0.33;
-				visual = "wheel_1_1_hide";
-				armorComponent = "wheel_1_1_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitLF2Wheel: HitLF2Wheel
-			{
-				radius = 0.33;
-				visual = "wheel_1_2_hide";
-				armorComponent = "wheel_1_2_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitLMWheel: HitLMWheel
-			{
-				radius = 0.33;
-				visual = "wheel_1_3_hide";
-				armorComponent = "wheel_1_3_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitLBWheel: HitLBWheel
-			{
-				radius = 0.33;
-				visual = "wheel_1_4_hide";
-				armorComponent = "wheel_1_4_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitRFWheel: HitRFWheel
-			{
-				radius = 0.33;
-				visual = "wheel_2_1_hide";
-				armorComponent = "wheel_2_1_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitRF2Wheel: HitRF2Wheel
-			{
-				radius = 0.33;
-				visual = "wheel_2_2_hide";
-				armorComponent = "wheel_2_2_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitRMWheel: HitRMWheel
-			{
-				radius = 0.33;
-				visual = "wheel_2_3_hide";
-				armorComponent = "wheel_2_3_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-			class HitRBWheel: HitRBWheel
-			{
-				radius = 0.33;
-				visual = "wheel_2_4_hide";
-				armorComponent = "wheel_2_4_hide";
-				armor = -150;
-				minimalHit = -0.016;
-				explosionShielding = 4;
-				passThrough = 0;
-			};
-		};*/
 	};
 	class 288th_APC_76 : 288th_IFV_76{
 		editorSubcategory = "288th_Eden_APC";
@@ -9472,41 +9283,6 @@ class cfgVehicles
 		canDeactivateMines = 1;
 		engineer = 1;
 		attendant = 1;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		class Wounds
 		{
 			tex[] = {};
@@ -9537,13 +9313,6 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR1X_SW","","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"ACE_EarPlugs",1},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{"288th_Kitbag",{}},"288th_CH252_Marine"," ",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_AT : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9564,41 +9333,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -9618,13 +9352,6 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR1X_SW","","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{"288th_M57_Launcher","","","TCF_M57_QAS2",{"288th_M57_Cricket_SACLOS",1},{},""},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"ACE_EarPlugs",1},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{"288th_Kitbag",{{"288th_M57_Cricket_SACLOS",3,1},{"288th_M57_Cricket_Thermal",3,1}}},"288th_CH252_Marine","",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_Medic : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9645,41 +9372,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -9699,13 +9391,6 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR1X_SW","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"ACE_EarPlugs",1},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine_Medic",{}},{"288th_Kitbag",{{"288th_Emergency_MedKit",1},{"288th_Biofoam",50},{"288th_PlasmaIV",2},{"kat_AFAK",1},{"kat_X_AED",1},{"kat_CaffeineItem",1},{"kat_IO_FAST",10},{"kat_PainkillerItem",1},{"ACE_personalAidKit",1},{"ACE_plasmaIV",4},{"ACE_plasmaIV_250",4},{"ACE_plasmaIV_500",4},{"ACE_surgicalKit",1},{"kat_larynx",5},{"kat_chestSeal",5},{"kat_accuvac",5},{"kat_IV_16",10},{"ACE_splint",10},{"ACE_tourniquet",10},{"kat_Carbonate",1,10}}},"288th_CH252_Marine",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_Marksman : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9726,41 +9411,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -9778,13 +9428,6 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR3X_SW","","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"ACE_EarPlugs",1},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine_Marksman",{}},{"288th_Kitbag",{}},"288th_CH252_Marine","0",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_Autorifleman : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9805,41 +9448,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -9857,13 +9465,6 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_M73X_SW","288th_M7_Sight",{"288th_500Rnd_65x85_Box",500},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"ACE_EarPlugs",1},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1}}},{"288th_Armor_Marine_AutoRifleman",{{"288th_500Rnd_65x85_Box",2,500}}},{"288th_Kitbag",{{"288th_500Rnd_65x85_Box",3,500}}},"288th_CH252_Marine",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_Crewman : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9884,41 +9485,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -9934,13 +9500,6 @@ class cfgVehicles
 		magazines[] = {"288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40" };
 		respawnMagazines[] = {"288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40" };
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_M7V_SMG_SW","OPTRE_M6C_compensator","acc_flashlight_smg_01","288th_M7_Sight",{"288th_45ACP_Mag_AP",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_45ACP_Mag_AP",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_Breacher : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9961,41 +9520,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10013,13 +9537,6 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_CQS_48X_SW","ACE_muzzle_mzls_B","","288th_M7_Sight",{"288th_Buckshot",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Buckshot",4,30},{"288th_Slug",4,30}}},{"288th_Armor_Marine_Breacher",{}},{"288th_Kitbag",{}},"288th_CH252_Marine","G_Aviator",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
 	};
 	class 288th_SW_Grenadier : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -10040,41 +9557,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10092,13 +9574,7 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR4X_SW","","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{"3Rnd_HE_Grenade_shell",3},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",6,30},{"3Rnd_HE_Grenade_shell",3,3}}},{"288th_Armor_Marine_Grenadier",{{"3Rnd_Smoke_Grenade_shell",3,3}}},{"288th_Kitbag",{}},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
+		 
 	};
 	class 288th_SW_RTO : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -10119,41 +9595,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10171,13 +9612,7 @@ class cfgVehicles
 
 		backpack = "288th_RTO_pack_Black";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR1X_SW","","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{"288th_RTO_pack_Black",{}},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
+		 
 	};
 	class 288th_SW_FL : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -10198,41 +9633,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10250,13 +9650,7 @@ class cfgVehicles
 
 		backpack = "288th_RTO_pack_Black";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR1X_SW","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine",{}},{"288th_Kitbag",{}},"288th_CH252_Marine","G_Balaclava_blk",{"OPTRE_Smartfinder","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
+		 
 	};
 	class 288th_SW_SL : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -10277,41 +9671,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10329,13 +9688,7 @@ class cfgVehicles
 
 		backpack = "288th_RTO_pack_Black";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_AR1X_SW","OPTRE_M12_Laser","288th_M7_Sight",{"288th_Stanag",30},{},""},{},{"288th_M6C","OPTRE_M6C_compensator","OPTRE_M6C_Laser","288th_M7_Sight",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30},{"288th_32Rnd_127x40",3,32}}},{"288th_Armor_Marine",{}},{"288th_RTO_pack_Black",{}},"288th_CH252_Marine","G_Balaclava_blk",{"OPTRE_Smartfinder","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
+		 
 	};
 	class 288th_SW_Hellbringer : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -10356,41 +9709,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10410,165 +9728,8 @@ class cfgVehicles
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",1, };
-		facewearList[] = { "288th_Balaclava",1, };
-
-		/*ALiVE_orbatCreator_loadout[] = {{"288th_VC1_Flamethrower","","OPTRE_M12_Laser","288th_M7_Sight",{"288th_VC1_Flamethrower_Mag",30},{},""},{"288th_M57_Launcher","","","TCF_M57_QAS2",{"288th_M57_Cricket_SACLOS",1},{},""},{"288th_SSP9_SW","ACE_muzzle_mzls_smg_01","","SC_Reflex_C_Blue",{"288th_32Rnd_127x40",32},{},""},{"288th_Black_Uniform_S",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"ACE_EarPlugs",1},{"288th_32Rnd_127x40",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Stanag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{"288th_Kitbag",{{"288th_M57_Cricket_SACLOS",3,1},{"288th_M57_Cricket_Thermal",3,1}}},"288th_CH252_Marine","",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
-
-		// custom attributes (do not delete)
-		ALiVE_orbatCreator_owned = 1;*/
-
+		 
 	};
-
-	/*class 288th_Rangers_Rifleman : OPTRE_UNSC_Army_Soldier_WDL{
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Ranger Rifleman";
-		side = 2;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Rangers";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		canDeactivateMines = 1;
-		engineer = 1;
-		attendant = 1;
-		class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
-		uniformClass = "VES_BDU_R_Urban_Slim";
-
-		Items[] = { "VES_M52A_URB_Rifleman_C","OPTRE_FC_VX19_Helmet_Urban","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
-
-		linkedItems[] = {"VES_M52A_URB_Rifleman_C","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = {"VES_M52A_URB_Rifleman_C","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		weapons[] = {"OPTRE_MA5B","TCF_M6D_Black","Binocular","Throw","Put"};
-		respawnWeapons[] = {"OPTRE_MA5B","TCF_M6D_Black","Binocular","Throw","Put"};
-
-		magazines[] = {"OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag", };
-		respawnMagazines[] = {"OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		backpack = "OPTRE_UNSC_Rucksack";
-		headgearList[] = { "OPTRE_FC_VX19_Helmet_Urban",1, };
-		facewearList[] = { "TCF_URB_Shemagh",1, };
-	};
-	class 288th_Rangers_AT : 288th_Rangers_Rifleman{
-		displayName = "Ranger AT/AA";
-
-		Items[] = { "VES_M52A_MAR_Security_A","OPTRE_FC_VX19_Helmet_Urban","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
-
-		linkedItems[] = {"VES_M52A_MAR_Security_A","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = {"VES_M52A_MAR_Security_A","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		weapons[] = {"OPTRE_MA5B","TCF_M6D_Black","288th_M57_Launcher","Binocular","Throw","Put"};
-		respawnWeapons[] = {"OPTRE_MA5B","TCF_M6D_Black","Binocular","Throw","Put"};
-
-		magazines[] = {"OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M57_Cricket_SACLOS","288th_M57_Cricket_Thermal","288th_M57_Cricket_HE","288th_M57_Cricket_SACLOS","288th_M57_Cricket_Thermal","288th_M57_Cricket_HE" };
-		respawnMagazines[] = {"OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		backpack = "OPTRE_UNSC_Rucksack";
-		headgearList[] = { "OPTRE_FC_VX19_Helmet_Urban",1, };
-		facewearList[] = { "TCF_URB_Shemagh",1, };
-	};
-	class 288th_Rangers_AutoRifleman : 288th_Rangers_Rifleman{
-		displayName = "Ranger AutoRifleman";
-
-		Items[] = { "VES_M52A_MAR_Security_A","OPTRE_FC_VX19_Helmet_Urban","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
-
-		linkedItems[] = {"VES_M52A_MAR_Security_A","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = {"VES_M52A_MAR_Security_A","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		weapons[] = {"OPTRE_M73","TCF_M6D_Black","Binocular","Throw","Put"};
-		respawnWeapons[] = {"OPTRE_M73","TCF_M6D_Black","Binocular","Throw","Put"};
-
-		magazines[] = {"OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_100Rnd_95x40_Box","OPTRE_100Rnd_95x40_Box","OPTRE_100Rnd_95x40_Box","OPTRE_100Rnd_95x40_Box","OPTRE_100Rnd_95x40_Box","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = {"OPTRE_100Rnd_95x40_Box","OPTRE_8Rnd_127x40_Mag","OPTRE_100Rnd_95x40_Box","OPTRE_8Rnd_127x40_Mag","OPTRE_100Rnd_95x40_Box","OPTRE_8Rnd_127x40_Mag","OPTRE_100Rnd_95x40_Box","OPTRE_8Rnd_127x40_Mag", "OPTRE_100Rnd_95x40_Box","OPTRE_8Rnd_127x40_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		backpack = "OPTRE_UNSC_Rucksack";
-		headgearList[] = { "OPTRE_FC_VX19_Helmet_Urban",1, };
-		facewearList[] = { "TCF_URB_Shemagh",1, };
-	};
-	class 288th_Rangers_Marksman : 288th_Rangers_Rifleman{
-		displayName = "Ranger Marksman";
-
-		Items[] = { "VES_M52A_URB_Sniper_B","OPTRE_FC_VX19_Helmet_Urban","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
-
-		linkedItems[] = {"VES_M52A_URB_Sniper_B","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = {"VES_M52A_URB_Sniper_B","TCF_URB_Shemagh","OPTRE_FC_VX19_Helmet_Urban","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		weapons[] = {"OPTRE_Commando_Black","TCF_M6D_Black","Binocular","Throw","Put"};
-		respawnWeapons[] = {"OPTRE_Commando_Black","TCF_M6D_Black","Binocular","Throw","Put"};
-
-		magazines[] = {"OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","Commando_20Rnd_65_Mag","Commando_20Rnd_65_Mag","Commando_20Rnd_65_Mag","Commando_20Rnd_65_Mag","Commando_20Rnd_65_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = {"Commando_20Rnd_65_Mag","OPTRE_8Rnd_127x40_Mag","Commando_20Rnd_65_Mag","OPTRE_8Rnd_127x40_Mag","Commando_20Rnd_65_Mag","OPTRE_8Rnd_127x40_Mag","Commando_20Rnd_65_Mag","OPTRE_8Rnd_127x40_Mag", "Commando_20Rnd_65_Mag","OPTRE_8Rnd_127x40_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		backpack = "OPTRE_UNSC_Rucksack";
-		headgearList[] = { "OPTRE_FC_VX19_Helmet_Urban",1, };
-		facewearList[] = { "TCF_URB_Shemagh",1, };
-	};
-	class 288th_Rangers_TeamLead : 288th_Rangers_Rifleman{
-		displayName = "Ranger Team Lead";
-
-		Items[] = { "VES_M52A_URB_Grenadier_A","VES_CH252D","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
-
-		linkedItems[] = {"VES_M52A_URB_Grenadier_A","TCF_URB_Shemagh","VES_CH252D","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnlinkedItems[] = {"VES_M52A_URB_Grenadier_A","TCF_URB_Shemagh","VES_CH252D","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		weapons[] = {"OPTRE_MA5BGL","TCF_M6D_Black","Binocular","Throw","Put"};
-		respawnWeapons[] = {"OPTRE_MA5BGL","TCF_M6D_Black","Binocular","Throw","Put"};
-
-		magazines[] = {"OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_60Rnd_762x51_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = {"OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag", "OPTRE_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-
-		backpack = "OPTRE_UNSC_Rucksack";
-		headgearList[] = { "VES_CH252D",1, };
-		facewearList[] = { "TCF_URB_Shemagh",1, };
-	};*/
 
 	class 288th_Pvt_Green: OPTRE_UNSC_Army_Soldier_WDL{
 		dlc = "288th";
@@ -10618,7 +9779,7 @@ class cfgVehicles
 		displayName = "OSHA Marine";
 		side = 2;
 		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_OSHA";
+		editorSubcategory = "288th_Eden_Memes";
 		impactDamageMultiplier = 0.2;
 		canCarryBackPack = 1;
 		oxygenCapacity = 80;
@@ -10629,41 +9790,6 @@ class cfgVehicles
 		primaryAmmoCoef = 10;
 		secondaryAmmoCoef = 3;
 		handgunAmmoCoef = 5;
-		/*class HitPoints : HitPoints
-		{
-			class HitNeck : HitNeck
-			{
-				armor = 8;
-			};
-			class HitPelvis : HitPelvis
-			{
-				armor = 16;
-			};
-			class HitAbdomen : HitAbdomen
-			{
-				armor = 8;
-			};
-			class HitDiaphragm : HitDiaphragm
-			{
-				armor = 8;
-			};
-			class HitChest : HitChest
-			{
-				armor = 8;
-			};
-			class HitArms : HitArms
-			{
-				armor = 12;
-			};
-			class HitHands : HitHands
-			{
-				armor = 12;
-			};
-			class HitLegs : HitLegs
-			{
-				armor = 12;
-			};
-		};*/
 		faction = "288th_UNSC";
 
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
@@ -10713,7 +9839,7 @@ class cfgVehicles
 		ALiVE_orbatCreator_loadout[] = {{"288th_OSHA_Rifle","OPTRE_M6C_compensator","acc_flashlight_smg_01","288th_M7_Sight",{"288th_Plasma_White_Mag",30},{},""},{},{"OPTRE_M6G","","OPTRE_M6G",{"OPTRE_8Rnd_127x40_Mag",32},{},""},{"OPTRE_UNSC_Army_Uniform_T_URB",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"OPTRE_8Rnd_127x40_Mag",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Plasma_White_Mag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
 		// custom attributes (do not delete)
 		ALiVE_orbatCreator_owned = 1;
-		facewearList[] = { "288th_Balaclava",1, };
+		 
 
 	};
 	class 288th_Forklift : OPTRE_forklift{
@@ -10722,7 +9848,7 @@ class cfgVehicles
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_OSHA";
+		editorSubcategory = "288th_Eden_Memes";
 		faction = "288th_UNSC";
 		crew = "288th_OSHA_Marine_H";
 		side = 2;

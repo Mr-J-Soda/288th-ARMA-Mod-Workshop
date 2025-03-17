@@ -969,13 +969,13 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class optre_hgun_sas10_f: Pistol_Base_F
+	/*class optre_hgun_sas10_f: Pistol_Base_F
 	{
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-	};
+	};*/
 	class optre_hgun_comet_f: Pistol_Base_F
 	{
 		scope = 1;

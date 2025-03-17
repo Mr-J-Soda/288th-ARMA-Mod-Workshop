@@ -25,6 +25,7 @@ class cfgVehicles
 	class Weapon_Bag_Base;
 	class OPTRE_ILCS_Rucksack_Black;
 	class OPTRE_ANPRC_521_Black;
+	class OPTRE_ANPRC_515;
 	class B_Soldier_base_F;
 	class TCF_wnato_kitbag;
 	class TCF_RUCKSACK_UNSC_URB_RAD_F;
@@ -105,6 +106,49 @@ class cfgVehicles
 		author = "Soda / Misriah 288";
 		isbackpack = 1;
 		displayName = "[288th] AN/PRC-521";
+		allowedSlots[] = {901};
+		maximumLoad = 500;
+		mass = 30;
+		transportMaxWeapons = 20;
+		transportMaxMagazines = 200;
+		tf_isolatedAmount = 0.65;
+		tf_range = 40000;
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "rt1523g_radio_dialog";
+		tf_subtype = "digital_lr";
+		hiddenSelections[] =
+		{
+			"camo",
+			"camo2",
+			"B_Medic",
+			"B_Addons"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"optre_unsc_units\army\data\soft_backpack_co.paa",
+			"optre_unsc_units\army\data\commopack_Blk_co.paa"
+		};
+		class DestructionEffects
+		{
+		};
+		class TransportMagazines
+		{
+		};
+		class TransportWeapons
+		{
+		};
+		class TransportItems
+		{
+		};
+	};
+	class 288th_RTO_pack_1 : OPTRE_ANPRC_515
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		isbackpack = 1;
+		displayName = "[288th] AN/PRC-515";
 		allowedSlots[] = {901};
 		maximumLoad = 500;
 		mass = 30;

@@ -46,7 +46,7 @@ class cfgWeapons
 		//MJOLNIR_isHelmet = 1; 
 		//MJOLNIR_helmetOverlay = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudBackground.paa";    //Filepath for the hud overlay texture
     	//MJOLNIR_helmetOutline = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudHelmetOutline.paa";    //Filepath for the hud outline texture
-		subItems[] = {"Example_NVG"};
+		subItems[] = {"288th_Mk5_NVG"};
 		/*ace_hearing_protection = 1.00;  // Protection against deafening (0 to 1, higher means more protection)
         ace_hearing_lowerVolume = 0.00;  // Muffling of the sound (0 to 1, higher means more muffling)*/
 		hiddenSelections[] = {"camo","camo2","camo3","camo4","H_Ghillie"};

@@ -47,7 +47,7 @@ class cfgWeapons
 	class Rifle_Base_F;
 	class SMG_01_F;
 	class optre_m7;
-	class SC_Rifle_Ghoul;
+	class SMG_05_F;
 	class OPTRE_M7_Riot_Shield;
 	class hgun_PDW2000_F;
 	// Attachment Slots
@@ -100,6 +100,7 @@ class cfgWeapons
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 60;
 		handAnim[] = { "OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_01\data\Anim\SMG_01.rtm" };
+		
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -175,7 +176,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class 288th_M7K_SMG : SC_Rifle_Ghoul
+	class 288th_M7K_SMG : SMG_05_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -203,6 +204,7 @@ class cfgWeapons
 		Eye = "OPTRE_EYE_HUD_AmmoCount_SMG";
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 60;
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M7V_SMG\signalis_type84_black_co.paa","288th_Weapons\Data\Weapons\M7V_SMG\signalis_type84_black_acc_co.paa"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -225,7 +227,8 @@ class cfgWeapons
 				compatibleitems[] =
 				{
 					"optre_ma5suppressor",
-					"ace_muzzle_mzls_smg_01"
+					"optre_m6_silencer",
+					"OPTRE_M12_Suppressor"
 				};
 			};
 			class CowsSlot : CowsSlot_Rail
@@ -239,9 +242,15 @@ class cfgWeapons
 					"Optre_Recon_Sight_Green",
 					"288th_M6C_Scope",
 					"288th_M7_Sight",
+					"optic_aco",
+					"optic_arco_blk_f",
+					"optic_erco_blk_f",
+					"optic_yorris",
+					"optic_aco_smg",
+					"optic_aco_grn_smg",
 					"optre_m7_sight",
-					"OPTRE_M12_Optic",
-					"SC_Reflex_Chevron_R"
+					"optre_m392_scope",
+					"OPTRE_M12_Optic"
 				};
 			};
 			class PointerSlot : PointerSlot_Rail
@@ -263,37 +272,6 @@ class cfgWeapons
 				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
 				iconPinpoint = "Bottom";
 			};
-		};
-		modes[] = {"FullAuto"};
-		class Single: Mode_SemiAuto
-		{
-			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				SoundSetShot[] = {"SMGVermin_Shot_SoundSet","SMGVermin_Tail_SoundSet","SMGVermin_InteriorTail_SoundSet"};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				SoundSetShot[] = {"SMGVermin_silencerShot_SoundSet","SMGVermin_silencerTail_SoundSet","SMGVermin_silencerInteriorTail_SoundSet"};
-			};
-			reloadTime = 0.085;
-			dispersion = 5e-05;
-		};
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				SoundSetShot[] = {"SMGVermin_Shot_SoundSet","SMGVermin_Tail_SoundSet","SMGVermin_InteriorTail_SoundSet"};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				SoundSetShot[] = {"SMGVermin_silencerShot_SoundSet","SMGVermin_silencerTail_SoundSet","SMGVermin_silencerInteriorTail_SoundSet"};
-			};
-			reloadTime = 0.085;
-			dispersion = 5e-05;
 		};
 	};
 	class 288th_M7X_SMG: OPTRE_M7

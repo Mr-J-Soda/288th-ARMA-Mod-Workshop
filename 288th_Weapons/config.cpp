@@ -60,7 +60,7 @@ class CfgMagazineWells
 			"288th_Plasma_Black_Mag",
 			"288th_EHP_Mag",
 			"288th_EMP",
-			"288th_Incendiary_Mag"
+			//"288th_Incendiary_Mag"
 		};
 	};
 	class 288th_Standard_LMG
@@ -79,7 +79,7 @@ class CfgMagazineWells
 			"288th_Plasma_Black_Mag",
 			"288th_EHP_Mag",
 			"288th_EMP",
-			"288th_Incendiary_Mag",
+			//"288th_Incendiary_Mag",
 			"288th_Stanag_LMG"
 		};
 	};
@@ -307,31 +307,13 @@ class cfgWeapons
 	class Default;
 	class MineDetector;
 	class UGL_F;
+	class optre_m319n;
 	//--------------------------------------------------------------------------------------------//
 
 	// WEAPONS!!!!!
 
 	//--------------------------------------------------------------------------------------------//
 
-
-	class 288th_Reinfoced_Detector : MineDetector
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		displayName = "[288th] Reinfoced Mine Detector";
-		descriptionshort = "Reinfoced Detector";
-		baseWeapon = "288th_Reinfoced_Detector";
-		detectRange = 30;
-		class ItemInfo
-		{
-			mass = 25;
-		};
-		picture = "\A3\Weapons_F\Items\data\UI\gear_MineDetector_CA.paa";
-		model = "\a3\Weapons_F\Ammo\mag_minedetector.p3d";
-	};
 	class OPTRE_M73: OPTRE_MachineGun_Base
 	{
 		class LinkedItems
@@ -1596,5 +1578,17 @@ class cfgWeapons
 		Eye = "OPTRE_EYE_HUD_AmmoCount_DMR";
 		HUD_BulletInARows = 5;
 		HUD_TotalPosibleBullet = 10;
+	};
+
+	class 288th_M319X : optre_m319n
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M319X";
+		descriptionShort = "Grenade Launcher";
+		baseWeapon = "288th_M319X";
+		hiddenSelections[] = {"camoBody","camoLogo","camosight","camoreticle","camoScope"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\GL\gl_co.paa","optre_weapons\gl\data\logos_ca.paa","optre_weapons\br\data\gl\sight_co.paa","optre_weapons\br\data\gl\ubgl_reticle.paa","optre_weapons\gl\data\scope_co.paa"};
+		magazines[] = {"288th_Potato","M319_HE_Grenade_Shell","M319_HEDP_Grenade_Shell","M319_HEDPC_Grenade_Shell","M319_HEAT_Grenade_Shell","M319_Buckshot","M319_Smoke","M319_Smoke_Orange","M319_Smoke_Green","M319_Smoke_Red","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 	};
 };

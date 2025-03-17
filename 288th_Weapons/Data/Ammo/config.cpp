@@ -387,9 +387,9 @@ class cfgAmmo
 	class SensorTemplateIR;
 	class M_Titan_AT;
 	class OPTRE_M41_Rocket_HEAT_SACLOS;
-	class OPTRE_M41_Rocket_HE;
+	class OPTRE_M41_Rocket_HEAP;
 	class OPTRE_M41_Rocket_HEAT_Laser;
-	class OPTRE_M41_Rocket_HEAT_Thermal;
+	class OPTRE_M41_Rocket_HEAT_G;
 	class ACE_SatchelCharge_Remote_Ammo_Thrown;
 	class SmokeShell;
 	class B_127x108_Ball;
@@ -1033,6 +1033,7 @@ class cfgAmmo
 	};
 
 	// Custom M41 Ammo
+
 	class 288th_M41_Rocket_HEAT_SACLOS: M_Titan_AT
 	{
 		warheadName="TandemHEAT";
@@ -1108,7 +1109,7 @@ class cfgAmmo
 			enabled=1;
 		};
 	};
-	class 288th_M41_Rocket_HE : 288th_M41_Rocket_HEAT_SACLOS
+	class 288th_M41_Rocket_HE : OPTRE_M41_Rocket_HEAP
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "64 + 128";
@@ -1127,7 +1128,7 @@ class cfgAmmo
 			enabled = 0;
 		};
 	};
-	class 288th_M41_Rocket_Flame : 288th_M41_Rocket_HEAT_SACLOS
+	class 288th_M41_Rocket_Flame : 288th_M41_Rocket_HE
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "64 + 128";
@@ -1194,20 +1195,20 @@ class cfgAmmo
 			attackProfiles[] = {"DIR"};
 		};
 	};
-	class 288th_M41_Rocket_HEAT_Thermal : M_Titan_AT
+	class 288th_M41_Rocket_HEAT_Thermal : OPTRE_M41_Rocket_HEAT_G
 	{
 		HIT = 1000;
 		indirectHit = 40;
 		indirectHitRange = 6;
 		model = "\OPTRE_Weapons\Rockets\M41_rocket.p3d";
-		missileKeepLockedCone = 5;
-		missileLockCone = 20;
+		missileKeepLockedCone = 25;
+		missileLockCone = 30;
 		missileLockMaxDistance = 5000;
 		missileLockMinDistance = 10;
 		missileLockMaxSpeed = 270;
 		trackOversteer = 0.6;
 		trackLead = 0.6;
-		maneuvrability = 4;
+		/*maneuvrability = 4;
 		irLock = 1;
 		airLock = 1;
 		lockType = 0;
@@ -1247,7 +1248,7 @@ class cfgAmmo
 			showHintOnCycle = 1;
 			defaultAttackProfile = "DIR";
 			attackProfiles[] = {"DIR","JAV_TOP"};
-		};
+		};*/
 	};
 
 	//Custom RR-553 Ammo
@@ -1284,7 +1285,79 @@ class cfgAmmo
 
 	class OPAEX_M41_Rocket_HEAT_SACLOS : M_Titan_AT
 	{
-		model = "OPTRE_weapons\rockets\M41_rocket";
+		warheadName="TandemHEAT";
+		submunitionAmmo="ammo_Penetrator_Titan_AT_long";
+		effectsMissile="missile3";
+		timeToLive=30;
+		cost=500;
+		aiAmmoUsageFlags="128 + 512 + 256";
+		allowAgainstInfantry=0;
+		HIT=1000;
+		indirectHit=40;
+		indirectHitRange=6;
+		explosive=0.25;
+		fuseDistance=20;
+		irLock=0;
+		airLock=2;
+		lockType=1;
+		laserLock=0;
+		nvLock=0;
+		cmImmunity=0.85000002;
+		manualControl=1;
+		maxControlRange=5000;
+		weaponLockSystem="2 + 16";
+		simulationStep=0.0020000001;
+		airFriction=0.145;
+		sideAirFriction=0.30000001;
+		maneuvrability=14;
+		coefGravity=1;
+		missileKeepLockedCone=360;
+		missileLockCone=270;
+		missileLockMaxDistance=5000;
+		missileLockMinDistance=20;
+		missileLockMaxSpeed=350;
+		trackOversteer=0.89999998;
+		trackLead=0.80000001;
+		initTime=0.1;
+		thrustTime=10;
+		thrust=100;
+		maxSpeed=270;
+		typicalSpeed=175;
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=340;
+						angleRangeHorizontal=60;
+						angleRangeVertical=60;
+						maxTrackableATL=4000;
+					};
+				};
+			};
+		};
+		class ace_missileguidance: ace_missileguidance_type_HOT
+		{
+			enabled=1;
+		};
+		/*model = "OPTRE_weapons\rockets\M41_rocket";
 		warheadName = "TandemHEAT";
 		submunitionAmmo = "ammo_Penetrator_Titan_AT";
 		effectsMissile = "missile3";
@@ -1374,9 +1447,9 @@ class cfgAmmo
 			offsetFromCrosshair[] = {0,0,0.5};
 			defaultAttackProfile = "WIRE";
 			attackProfiles[] = {"WIRE"};
-		};
+		};*/
 	};
-	class OPAEX_M41_Rocket_HE : OPAEX_M41_Rocket_HEAT_SACLOS
+	class OPAEX_M41_Rocket_HE : OPTRE_M41_Rocket_HEAP
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "64 + 128";
@@ -1387,7 +1460,7 @@ class cfgAmmo
 		simulation = "shotRocket";
 		irLock = 0;
 		airLock = 0;
-		cmImmunity = 1;
+		cmImmunity = 0.85;
 		manualControl = 0;
 		weaponLockSystem = 0;
 		class ace_missileguidance
@@ -1654,6 +1727,12 @@ class cfgAmmo
 		suppressionRadiusHit = 24;
 		typicalSpeed = 185;
 	};
+	
+	//Baked Potato Ammo
+    class 288th_Potato : 288th_Buckshot_Pellet
+    {
+        submunitionAmmo = "288th_Plasma_40mm";
+    };
 
 	class 288th_AC_8 : 288th_20mm_HE_Plus
 	{
@@ -1743,7 +1822,7 @@ class CfgMagazines
 	class 200Rnd_65x39_cased_Box;
 	class OPTRE_6Rnd_8Gauge_Pellets;
 	class OPTRE_6Rnd_8Gauge_Slugs;
-	class TCF_100Rnd_762x51_Mag;
+	class TCF_100Rnd_762x51_Mag_M33;
 	class OPTRE_64Rnd_57x31_Mag;
 	class 7Rnd_408_Mag;
 
@@ -1774,7 +1853,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		initSpeed = 600;
+		initspeed = 600;
 		scope = 2;
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd APFS 6.5x85 Mag";
@@ -1784,18 +1863,18 @@ class CfgMagazines
 		count = 30;
 		mass = 15;
 	};
-	class 288th_Incendiary_Mag : 288th_Stanag
+	/*class 288th_Incendiary_Mag : 288th_Stanag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		displayname = "[288th] 20rnd Incendiary 6.5x85 Mag";
 		displaynameshort = "6.5x85 Incendiary Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with Incendiary ammo";
-		initSpeed = 600;
+		initspeed = 600;
 		ammo = "65x85_APFS_Incendiary";
 		count = 20;
 		lastRoundsTracer = 0;
-	};
+	};*/
 	class 288th_EHP_Mag : 288th_Stanag
 	{
 		dlc = "288thDJP_Aux";
@@ -1803,7 +1882,7 @@ class CfgMagazines
 		displayname = "[288th] 30rnd EHP 6.5x85 Mag";
 		displaynameshort = "6.5x85 EHP Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with External Hollow-Point ammo";
-		initSpeed = 550;
+		initspeed = 550;
 		ammo = "65x85_EHP";
 		count = 30;
 		lastRoundsTracer = 0;
@@ -1812,7 +1891,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		initSpeed = 600;
+		initspeed = 600;
 		scope = 2;
 		scopearsenal = 2;
 		displayname = "[288th] 150rnd 6.5x85 Drum";
@@ -1833,7 +1912,7 @@ class CfgMagazines
 		displayname = "[288th] 20rnd .308 Mag";
 		displaynameshort = ".308";
 		descriptionshort = "Magazine for the Snowfox";
-		initSpeed = 600;
+		initspeed = 600;
 		tracersEvery = 1;
 		ammo = "288th_308_rifle_yellow";
 		count = 20;
@@ -1848,7 +1927,7 @@ class CfgMagazines
 		displayname = "[288th] 15rnd 6.5x85 APFS Mag";
 		displaynameshort = "6.5x85mm";
 		descriptionshort = "Custom 6.5x85 Magazine";
-		initSpeed = 850;
+		initspeed = 600;
 		ammo = "65x85_DMR";
 		count = 15;
 		mass = 8;
@@ -1863,7 +1942,7 @@ class CfgMagazines
 		displayname = "[288th] 30rnd Blue Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Blue Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with blue plasma tips";
-		initSpeed = 600;
+		initspeed = 600;
 		ammo = "288th_Plasma_Blue";
 		lastRoundsTracer = 0;
 	};
@@ -1970,7 +2049,7 @@ class CfgMagazines
 		displaynameshort = ".45ACP";
 		descriptionshort = "Magazines for the M7V SMGs";
 		tracersEvery = 1;
-		initSpeed = 600;
+		initspeed = 600;
 		ammo = "45ACP";
 		count = 60;
 		mass = 10;
@@ -1981,7 +2060,7 @@ class CfgMagazines
 		displaynameshort = ".45ACP EHP";
 		descriptionshort = "EHP Magazines for the M7 SMGs";
 		tracersEvery = 1;
-		initSpeed = 550;
+		initspeed = 550;
 		ammo = "65x85_EHP";
 	};
 
@@ -2314,6 +2393,22 @@ class CfgMagazines
 		mass = 12;
 	};
 
+	//288th potato
+	class 288th_Potato : 288th_Buckshot
+    {
+        dlc = "288thDJP_Aux";
+        author = "Soda / Misriah 288";
+        scope = 2;
+        scopearsenal = 2;
+        ammo = "288th_Potato";
+        displayName = "[288th DJP] Potato";
+        displayNameShort = "Tater tots AWAY!";
+        count = 1;
+        descriptionShort = "Smith said no, Soda says yes";
+        mass = 8;
+        initSpeed = 150;
+        picture = "288th_Weapons\Data\Ammo\gear_ugl_potat_ca";
+    };
 	//288th Railgun Mag
 	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
 	{
@@ -2377,7 +2472,7 @@ class CfgMagazines
 		displayname = "[288th] 32rnd 12.7x40mm AP Magazine";
 		displayNameShort = "12.7x40mm AP";
 		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Magazine";
-		initSpeed = 640;
+		initspeed = 640;
 		count = 32;
 		mass = 12;
 	};
@@ -2391,7 +2486,7 @@ class CfgMagazines
 		displayname = "[288th] 32rnd 12.7x40mm EHP Magazine";
 		displayNameShort = "12.7x40mm EHP";
 		descriptionshort = "32 Rnd 12.7x40mm External Hollow-Point Magazine";
-		initSpeed = 550;
+		initspeed = 550;
 		count = 32;
 		mass = 12;
 	};
@@ -2406,7 +2501,7 @@ class CfgMagazines
 		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Tracer Magazine";
 		tracersEvery = 1;
 		lastRoundsTracer = 32;
-		initSpeed = 640;
+		initspeed = 640;
 		count = 32;
 		mass = 12;
 	};
@@ -2446,7 +2541,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		initSpeed = 600;
+		initspeed = 600;
 		ammo = "65x85_APFS_Tracers";
 		count = 500;
 		displayname = "[288th] 500Rnd 6.5x85mm Box Magazine";
@@ -2458,7 +2553,7 @@ class CfgMagazines
 	};
 
 	//M50 HMG Box
-	class 288th_75Rnd_15x50_Box : TCF_100Rnd_762x51_Mag
+	class 288th_75Rnd_15x50_Box : TCF_100Rnd_762x51_Mag_M33
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -2520,7 +2615,7 @@ class CfgMagazines
 	};
 
 	//288th Revolver Ammo
-	class 288th_Big_Iron_Mag : 6Rnd_45ACP_Cylinder
+	/*class 288th_Big_Iron_Mag : 6Rnd_45ACP_Cylinder
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -2533,7 +2628,7 @@ class CfgMagazines
 		displaynameshort = "Big Iron Ammo";
 		descriptionShort = "Bullets for the Big Iron";
 		mass = 150;
-	};
+	};*/
 	class 288th_Temp_Yellow_Tracer : 6Rnd_45ACP_Cylinder
 	{
 		dlc = "288thDJP_Aux";
@@ -2563,7 +2658,7 @@ class CfgMagazines
 	};
 
 	//288th Experimental Mags
-	class 288th_Scrapmag : 288th_Railgun_Mag
+	/*class 288th_Scrapmag : 288th_Railgun_Mag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -2577,7 +2672,7 @@ class CfgMagazines
 		count = 75;
 		initspeed = 2000;
 		mass = 120;
-	};
+	};*/
 	class 288th_7Rnd_Gauss_Slug_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag
 	{
 		dlc = "288thDJP_Aux";
