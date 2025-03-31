@@ -58,6 +58,7 @@ class cfgWeapons
 		descriptionshort = "Special Oni Derived Armament M392";
 		model = "\OPTRE_Weapons\DMR\M392.p3d";
 		baseWeapon = "288th_M392_NSFW";
+		recoil = "recoil_Assault";
 		hiddenSelections[] =
 		{
 			"camo"

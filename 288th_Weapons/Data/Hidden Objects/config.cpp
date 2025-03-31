@@ -934,6 +934,13 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
+	class SC_Rifle_PKMP: SC_BaseRifle
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
 	class 41st_bayonet2_weapon
 	{
 		scope = 1;

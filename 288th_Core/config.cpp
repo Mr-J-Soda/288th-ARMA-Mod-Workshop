@@ -57,10 +57,10 @@ class CfgFunctions
 		};
 	};
 	class eta_SilentCallouts_fnc
-  {
+	{
 		class eta_silence_functions
 		{
-			file = "288th_Core\Functions\eta_silence_functions";
+			file = "288th_Core\Functions";
 			class eta_silence_init{postInit = 1;};
 		};
 	};

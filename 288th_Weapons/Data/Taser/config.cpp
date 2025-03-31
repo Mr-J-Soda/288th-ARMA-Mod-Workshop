@@ -80,6 +80,10 @@ class CfgCloudlets
 	{
 		beforeDestroyScript = "\288th_Weapons\Data\Taser\scripts\unco_Long.sqf";
 	};
+	class 288th_TaserExp_KO: 288th_TaserExp
+	{
+		beforeDestroyScript = "\288th_Weapons\Data\Taser\scripts\unco_KO.sqf";
+	};
 	class 288th_TaserExp_Grenade: 288th_TaserExp
 	{
 		beforeDestroyScript = "\288th_Weapons\Data\Taser\scripts\unco_Grenade.sqf";
@@ -146,6 +150,28 @@ class 288th_TaserExplosion_Long
 		particleFSLoop = 0;
 	};
 };
+class 288th_TaserExplosion_KO
+{
+	class Light1
+	{
+		position[] = {0,0,0};
+		simulation = "light";
+		type = "288th_TaserLight";
+		intensity = 0.25;
+		interval = 0.2;
+		lifeTime = 0.75;
+	};
+	class Exp1
+	{
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "288th_TaserExp_KO";
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.5;
+		particleFSLoop = 0;
+	};
+};
 class 288th_TaserExplosion_Grenade
 {
 	class Light1
@@ -204,7 +230,7 @@ class CfgAmmo
 		airLock = 0;
 		caliber = 1.4;
 		typicalSpeed = 280;
-		timeToLive = 45;
+		timeToLive = 15;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
 		minRange = 3;
 		minRangeProbab = 1;
@@ -225,6 +251,12 @@ class CfgAmmo
 	class 288th_Taser_ammo_Long: 288th_Taser_ammo
 	{
 		ExplosionEffects="288th_TaserExplosion_Long";
+	};
+	class 288th_Taser_ammo_KO: 288th_Taser_ammo
+	{
+		ExplosionEffects="288th_TaserExplosion_KO";
+		timeToLive = 0.75;
+		typicalSpeed = 180;
 	};
 	class 288th_Taser_Impact_Grenade_ammo  : GrenadeHand 
 	{

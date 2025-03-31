@@ -12,59 +12,6 @@ class CfgPatches
 		requiredAddons[] = {"288th_Core"};
 	};
 };
-/*class CfgMarkerClasses
-{
-    class 288thRDF_Map_Markers
-	{
-		displayName="Warhound Markers";
-    };
-};
-class CfgMarkers
-{
-    class 288thRDF_Marker
-    {
-		name="[288th] 288th RDF";
-        icon="Warhound_Markers\data\288th_RDF.paa";
-        color[]={0,0,0,1};
-        size=40;
-        shadow = 0;
-        scope = 2;
-		scopeCurator = 2;
-        markerClass = "288thRDF_Map_Markers";
-    };
-    class 288thRDF_Pike_Actual_Marker: 288thRDF_Marker
-    {
-        name="[288th] Pike Actual";
-        icon="Warhound_Markers\data\Pike\Pike_Actual.paa";
-    };
-    class 288thRDF_Pike_1_Marker: 288thRDF_Marker
-    {
-        name="[288th] Pike 1-1";
-        icon="Warhound_Markers\data\Pike\Pike_1.paa";
-    };
-    class 288thRDF_Pike_2_Marker: 288thRDF_Marker
-    {
-        name="[288th] Pike 1-2";
-        icon="Warhound_Markers\data\Pike\Pike_2.paa";
-    };
-    class 288thRDF_Pike_3_Marker: 288thRDF_Marker
-    {
-        name="[288th] Pike 1-3";
-        icon="Warhound_Markers\data\Pike\Pike_3.paa";
-    };
-    class 288thRDF_Lancer_Marker: 288thRDF_Marker
-    {
-        name="[288th] Lancer";
-        icon="Warhound_Markers\data\Support\Lancer.paa";
-    };
-    class 288thRDF_Orca_Marker: 288thRDF_Marker
-    {
-        name="[288th] Orca";
-        icon="Warhound_Markers\data\Support\Orca.paa";
-    };
-	//#include "data\Pike\config.hpp"
-	//#include "data\Support\config.hpp"
-};*/
 
 class CfgWeapons {
     class ACE_ItemCore;

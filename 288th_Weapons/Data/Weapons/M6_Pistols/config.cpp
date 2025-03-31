@@ -71,6 +71,13 @@ class CfgMagazineWells
 			"288th_8Rnd_127_HI_P"
 		};
 	};
+	class 288th_Desert_Falcon
+	{
+		CfgMagazines[] =
+		{
+			"288th_7Rnd_50_AE"
+		};
+	};
 };
 
 class Single;
@@ -104,6 +111,7 @@ class CfgRecoils
 		muzzleInner[] = { 0,0,0.050000001,0.050000001 };
 		permanent = "0.05*0.4";
 	};
+	deagleBase[] = {0,0.01,0.15,0.005,0.01,0.15,0.1,0,-0.003,0.13,0,0};
 };
 
 class cfgWeapons
@@ -220,6 +228,7 @@ class cfgWeapons
 			{
 				SoundSetShot[] = {"4Five_silencerShot_SoundSet","4Five_silencerTail_SoundSet","4Five_silencerInteriorTail_SoundSet"};
 			};
+			dispersion = 5e-05;
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
@@ -232,6 +241,7 @@ class cfgWeapons
 		};
 		class FullAuto: Single
 		{
+			dispersion = 5e-05;
 			displayName = "FullAuto";
 			autoFire = 1;
 			textureType = "fullAuto";
@@ -353,6 +363,7 @@ class cfgWeapons
 			{
 				SoundSetShot[] = {"4Five_silencerShot_SoundSet","4Five_silencerTail_SoundSet","4Five_silencerInteriorTail_SoundSet"};
 			};
+			dispersion = 5e-05;
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
@@ -365,6 +376,7 @@ class cfgWeapons
 		};
 		class FullAuto: Single
 		{
+			dispersion = 5e-05;
 			displayName = "FullAuto";
 			autoFire = 1;
 			textureType = "fullAuto";
@@ -788,6 +800,7 @@ class cfgWeapons
 			{
 				SoundSetShot[] = {"4Five_silencerShot_SoundSet","4Five_silencerTail_SoundSet","4Five_silencerInteriorTail_SoundSet"};
 			};
+			dispersion = 5e-05;
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
@@ -800,6 +813,7 @@ class cfgWeapons
 		};
 		class FullAuto: Single
 		{
+			dispersion = 5e-05;
 			displayName = "FullAuto";
 			autoFire = 1;
 			textureType = "fullAuto";
@@ -898,6 +912,7 @@ class cfgWeapons
 			{
 				SoundSetShot[] = {"4Five_silencerShot_SoundSet","4Five_silencerTail_SoundSet","4Five_silencerInteriorTail_SoundSet"};
 			};
+			dispersion = 5e-05;
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
@@ -910,6 +925,7 @@ class cfgWeapons
 		};
 		class FullAuto: Single
 		{
+			dispersion = 5e-05;
 			displayName = "FullAuto";
 			autoFire = 1;
 			textureType = "fullAuto";
@@ -1013,6 +1029,7 @@ class cfgWeapons
 			{
 				SoundSetShot[] = {"4Five_silencerShot_SoundSet","4Five_silencerTail_SoundSet","4Five_silencerInteriorTail_SoundSet"};
 			};
+			dispersion = 5e-05;
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
@@ -1025,6 +1042,7 @@ class cfgWeapons
 		};
 		class FullAuto: Single
 		{
+			dispersion = 5e-05;
 			displayName = "FullAuto";
 			autoFire = 1;
 			textureType = "fullAuto";
@@ -1092,4 +1110,174 @@ class cfgWeapons
 			mass = 18;
 		};
 	};
+
+	/*class Pistol;
+	class Pistol_Base_F: Pistol
+	{
+		class WeaponSlotsInfo;
+	};
+	class 288th_Desert_Falcon: Pistol_Base_F
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		_generalMacro = "Desert_Falcon";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		model = "288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\Desert_Eagle.p3d";
+		picture = "288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\UI\gun.paa";
+		Uipicture = "288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\UI\gun.paa";
+		magazines[] = {"288th_7Rnd_50_AE"};
+		magazineWell[] = { 288th_Desert_Falcon };
+		displayname = "[288th] Desert Falcon";
+		reloadAction = "GestureReloadPistol";
+		recoil = "recoil_pistol_zubr";
+		descriptionShort = "Desert Falcon";
+		inertia = 0.3;
+		initSpeed = -1;
+		dexterity = 1.85;
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_PistolSmart";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_PistolSmart";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_PistolSmart";
+		cursor = "OPTRE_M6C";
+		HUD_BulletInARows=1;
+		HUD_TotalPosibleBullet=8;
+		class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				slot = "MuzzleSlot";
+				item = "Invisable_Supresser_288th";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class MuzzleSlot{};
+			class CowsSlot{};
+			class PointerSlot{};
+			mass = 40;
+		};
+		class Library
+		{
+			libTextDesc = "Desert_Falcon";
+		};
+		drySound[] = {"A3\Sounds_F\weapons\pistol_heavy_02\dry",0.7,1,20};
+		reloadMagazineSound[] = {"288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\sound\de_reload.wss",1.2,1,20};
+		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0,0,0};
+		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0,0,0};
+		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0,0,0};
+		bullet4[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_04",0,0,0};
+		bullet5[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_01",0,0,0};
+		bullet6[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_02",0,0,0};
+		bullet7[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_03",0,0,0};
+		bullet8[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_04",0,0,0};
+		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01",0,0,0};
+		bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0,0,0};
+		bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0,0,0};
+		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0,0,0};
+		soundBullet[] = {"bullet1",0,"bullet2",0,"bullet3",0,"bullet4",0,"bullet5",0,"bullet6",0,"bullet7",0,"bullet8",0,"bullet9",0,"bullet10",0,"bullet11",0,"bullet12",0};
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultHandgun";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_handgun_6",1.0351422,1,30};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_handgun_6",1.0351422,1.1,30};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\sound\desert_eagle_shot.wss",1,1,700};
+				soundBegin[] = {"begin1",1};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_interior",1.4125376,1,1400};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_trees",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_forest",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_meadows",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_houses",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\sound\desert_eagle_shot.wss",1,1,700};
+				soundBegin[] = {"begin1",1};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_interior",1.4125376,1,1400};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_trees",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_forest",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_meadows",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_houses",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			recoil = "deagleBase";
+			recoilProne = "deagleBase";
+			reloadTime = 0.2;
+			dispersion = 0.00028500002;
+			minRange = 2;
+			minRangeProbab = 0.1;
+			midRange = 30;
+			midRangeProbab = 0.8;
+			maxRange = 50;
+			maxRangeProbab = 0.04;
+			distanceZoomMin = 56;
+			distanceZoomMax = 56;
+			aiRateOfFire = 2.9;
+			aiRateOfFireDistance = 50;
+		};
+	};*/
 };

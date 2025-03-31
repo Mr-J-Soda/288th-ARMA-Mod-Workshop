@@ -285,7 +285,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Gear\Data\ODST\Units\Brimstone\ODST\ODST_Brimstone_Helmet",
-			"288th_Gear\Data\ODST\Units\Brimstone\ODST\ODST_Visor_Red_J",
+			"288th_Gear\Data\ODST\Units\Brimstone\ODST\ODST_Visor_Red",
 			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
 			"optre_unsc_units\army\data\soft_packs_co.paa"
 		};

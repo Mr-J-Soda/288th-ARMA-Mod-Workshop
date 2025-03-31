@@ -55,7 +55,8 @@ class CfgMagazineWells
 		{
 			"288th_1Rnd_50x137_HE",
 			"288th_1Rnd_50x137_HEAT",
-			"288th_1Rnd_50x137_PEN"
+			"288th_1Rnd_50x137_PEN",
+			"WNZ_EMP_MAAWS_Mag"
 		};
 	};
 };

@@ -115,7 +115,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR1X";
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = {"288th_Standard"};
-		recoil = "recoil_lim";
+		recoil = "recoil_Assault";
 		visionMode[] = {"Normal","NVG"};
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
@@ -298,7 +298,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxlmgblak.paa"};
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = { 288th_Standard_LMG };
-		recoil = "recoil_lim";
+		recoil = "recoil_Assault";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
@@ -447,7 +447,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR3X";
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = {"288th_Standard"};
-		recoil = "recoil_lim";
+		recoil = "recoil_Assault";
 		visionMode[] ={	"Normal","NVG"	};
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxmblak.paa"};
@@ -553,6 +553,58 @@ class cfgWeapons
 				iconPinpoint = "Bottom";
 			};
 		};
+		modes[] = {"Single","FullAuto"};
+		class Single: Mode_SemiAuto
+		{
+			/*reloadTime = 0.05;*/
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.3;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			/*reloadTime = 0.15;*/
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 0;
+			minRangeProbab = 0.9;
+			midRange = 15;
+			midRangeProbab = 0.7;
+			maxRange = 30;
+			maxRangeProbab = 0.1;
+			aiRateOfFire = 1e-06;
+		};
 	};
 
 	// 288th AR4X
@@ -569,7 +621,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR4X";
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = {"288th_Standard"};
-		recoil = "recoil_lim";
+		recoil = "recoil_Assault";
 		visionMode[] =	{"Normal","NVG"};
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxrifleblak.paa","\A3\Weapons_F_EPB\Rifles\MX_Black\Data\GLX_Black_CO.paa"};
@@ -672,6 +724,68 @@ class cfgWeapons
 				iconPinpoint = "Bottom";
 			};
 		};
+		modes[] = {"Single","Burst","FullAuto"};
+		class Single: Mode_SemiAuto
+		{
+			/*reloadTime = 0.05;*/
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.3;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			/*reloadTime = 0.15;*/
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
+				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 0;
+			minRangeProbab = 0.9;
+			midRange = 15;
+			midRangeProbab = 0.7;
+			maxRange = 30;
+			maxRangeProbab = 0.1;
+			aiRateOfFire = 1e-06;
+		};
+		class Burst: FullAuto
+		{
+			reloadTime = 0.05;
+			autoFire = 0;
+			burst = 3;
+			displayName = "Burst";
+			textureType = "burst";
+			recoil = "recoil_auto_primary_2outof10";
+			recoilProne = "recoil_auto_primary_prone_2outof10";
+		};
 		class GL_3GL_F : UGL_F
 		{
 			displayName = "AR4X Underbarrel Launcher";
@@ -717,7 +831,8 @@ class cfgWeapons
 		ace_arsenal_hide = 0;
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = {"288th_Standard"};
-		recoil = "recoil_lim";
+		recoil = "recoil_Assault";
+		picture = "\A3\Weapons_F_Exp\Rifles\ARX\Data\UI\arifle_ARX_blk_F_X_CA";
 		pictureWire = "288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
@@ -942,7 +1057,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR1K";
 		magazines[] = {"288th_Stanag"};
 		magazineWell[] = {"288th_Standard"};
-		recoil = "recoil_lim";
+		recoil = "recoil_Assault";
 		//hiddenSelectionsTextures = ["\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"];
 		visionMode[] = {"Normal","NVG"};
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
@@ -1146,432 +1261,5 @@ class cfgWeapons
 				iconPinpoint = "Bottom";
 			};
 		};
-	};
-
-	// 288th Error's DMR
-	class 288th_DMR_Error : OPTRE_M393_DMR
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		canShootInWater = 1;
-		displayName = "[288th] Error's M395";
-		descriptionshort = "Error's's DMR";
-		magazines[] = { "288th_DMR_M395", "OPTRE_15Rnd_762x51_Mag" };
-		magazineWell[] = { "" };
-		recoil = "recoil_lim";
-		picture = "\OPTRE_Weapons\DMR\icons\M395_Icon.paa";
-		baseWeapon = "288th_DMR_Error";
-		hiddenSelections[] = { "camo","camo1","camo2" };
-		hiddenSelectionsTextures[] = { "288th_Weapons\Data\Weapons\AR_Rifles\Error\mainbody1e_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Error\mainbody2e_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Error\muzzlee_co.paa" };
-		modes[] = { "Single" };
-		class Single : Mode_SemiAuto
-		{
-			sounds[] = { "StandardSound","SilencedSound" };
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = { "closure1",0.5,"closure2",0.5 };
-			};
-			class StandardSound : BaseSoundModeType
-			{
-				soundSetShot[] = { "OPTRE_DMR_SoundSet","SyndikatLMG_Tail_SoundSet","SyndikatLMG_InteriorTail_SoundSet" };
-				begin1[] = { "\OPTRE_Weapons\DMR\Data\sounds\DMR_1.ogg",2.5,1,1500 };
-				soundBegin[] = { "begin1",1 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",2.2387211,1,1800 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			class SilencedSound : BaseSoundModeType
-			{
-				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
-				begin1[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",0.7943282,1,400 };
-				begin2[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",0.7943282,1,400 };
-				begin3[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",0.7943282,1,400 };
-				soundBegin[] = { "begin1",0.33,"begin2",0.33,"begin1",0.34 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",1.0,1,400 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			reloadTime = 0.04;
-			dispersion = 5e-05;
-			recoil = "recoil_single_ebr";
-			recoilProne = "recoil_single_prone_ebr";
-			minRange = 2;
-			minRangeProbab = 0.3;
-			midRange = 300;
-			midRangeProbab = 0.7;
-			maxRange = 1000;
-			maxRangeProbab = 0.05;
-		};
-	};
-
-	class 288th_OSHA_Rifle : srifle_DMR_03_F
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		canShootInWater = 1;
-		picture = "288th_Weapons\Data\UI\gear_DMR_03_X_CA.paa";
-		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		displayName = "[288th] OSHA Rifle";
-		descriptionshort = "A rifle used by OSHA Marines";
-		baseWeapon = "288th_OSHA_Rifle";
-		magazines[] =
-		{
-			"288th_Plasma_White_Mag"
-		};
-		magazineWell[] = {"288th_Standard"};
-		modes[] = { "Single","FullAutoSlow" };
-		visionMode[] =
-		{
-			"Normal",
-			"NVG"
-		};
-		hiddenSelections[] = { "Camo1","Camo2" };
-		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
-		HUD_BulletInARows = 2;
-		HUD_TotalPosibleBullet = 30;
-		cursor = "OPTRE_MA5";
-		hiddenSelectionsTextures[] =
-		{
-			"288th_Weapons\Data\Weapons\AR_Rifles\DMR_03_01_Blue_CO.paa",
-			"288th_Weapons\Data\Weapons\AR_Rifles\DMR_03_02_Blue_CO.paa"
-		};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_M12_Sight";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "OPTRE_M12_Laser";
-			};
-		};
-		class WeaponSlotsInfo
-		{
-			mass = 50;
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor",
-					"OPTRE_M12_Suppressor",
-					"ACE_muzzle_mzls_B"
-				};
-			};
-			class CowsSlot : CowsSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleitems[] =
-				{
-					"288th_M7_Sight",
-					"288th_Hamr_Scope",
-					"288th_M12_Sight",
-					"optic_Holosight",
-					"optic_NVS",
-					"optic_ERCO_snd_F",
-					"optic_Hamr",
-					"OPTRE_BMR_Scope",
-					"OPTRE_M392_Scope",
-					"OPTRE_BR55HB_Scope",
-					"OPTRE_BR45_Scope",
-					"OPTRE_SRS99C_Scope",
-					"OPTRE_SRM_Sight",
-					"OPTRE_M7_Sight"
-				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M12_Laser",
-					"acc_flashlight"
-				};
-			};
-			class UnderBarrelSlot : UnderBarrelSlot_Rail
-			{
-				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-					"bipod_01_F_snd"
-				};
-				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
-				iconPinpoint = "Bottom";
-			};
-		};
-		/*class Single : Mode_SemiAuto
-		{
-			sounds[] = { "StandardSound","SilencedSound" };
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = { "closure1",0.5,"closure2",0.5 };
-			};
-			class StandardSound : BaseSoundModeType
-			{
-				soundSetShot[] = { "OPTRE_DMR_SoundSet","SyndikatLMG_Tail_SoundSet","SyndikatLMG_InteriorTail_SoundSet" };
-				begin1[] = { "\OPTRE_Weapons\DMR\Data\sounds\DMR_1.ogg",2.5,1,1500 };
-				soundBegin[] = { "begin1",1 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",2.2387211,1,1800 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			class SilencedSound : BaseSoundModeType
-			{
-				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
-				begin1[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",0.7943282,1,400 };
-				begin2[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",0.7943282,1,400 };
-				begin3[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",0.7943282,1,400 };
-				soundBegin[] = { "begin1",0.33,"begin2",0.33,"begin1",0.34 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",1.0,1,400 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			reloadTime = 0.1;
-			dispersion = 0.00122;
-			initSpeed = 940;
-			minRange = 2;
-			minRangeProbab = 0.3;
-			midRange = 350;
-			midRangeProbab = 0.7;
-			maxRange = 500;
-			maxRangeProbab = 0.05;
-		};
-		class FullAutoSlow : Mode_FullAuto
-		{
-			sounds[] = { "StandardSound","SilencedSound" };
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = { "closure1",0.5,"closure2",0.5 };
-			};
-			class StandardSound : BaseSoundModeType
-			{
-				soundSetShot[] = { "OPTRE_DMR_SoundSet","SyndikatLMG_Tail_SoundSet","SyndikatLMG_InteriorTail_SoundSet" };
-				begin1[] = { "\OPTRE_Weapons\DMR\Data\sounds\DMR_1.ogg",2.5,1,1500 };
-				soundBegin[] = { "begin1",1 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",2.2387211,1,1800 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			class SilencedSound : BaseSoundModeType
-			{
-				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
-				begin1[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",0.7943282,1,400 };
-				begin2[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",0.7943282,1,400 };
-				begin3[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",0.7943282,1,400 };
-				soundBegin[] = { "begin1",0.33,"begin2",0.33,"begin1",0.34 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",1.0,1,400 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			dispersion = 0.00122;
-			reloadTime = 0.15;
-			minRange = 2;
-			minRangeProbab = 0.5;
-			midRange = 150;
-			midRangeProbab = 0.7;
-			maxRange = 250;
-			maxRangeProbab = 0.2;
-		};*/
 	};
 };

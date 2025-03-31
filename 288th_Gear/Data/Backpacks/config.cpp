@@ -26,8 +26,10 @@ class cfgVehicles
 	class OPTRE_ILCS_Rucksack_Black;
 	class OPTRE_ANPRC_521_Black;
 	class OPTRE_ANPRC_515;
+	class optre_UNSC_Rucksack_Heavy;
 	class B_Soldier_base_F;
 	class TCF_wnato_kitbag;
+	class ace_gunbag;
 	class TCF_RUCKSACK_UNSC_URB_RAD_F;
 	class TCF_RUCKSACK_UNSC_CLS_RAD_F;
 	class TCF_RUCKSACK_UNSC_DUN_RAD_F;
@@ -443,6 +445,22 @@ class cfgVehicles
 		{
 		};
 	};
+	class 288th_gunbag: ace_gunbag
+	{
+		ace_gunbag = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		isbackpack = 1;
+		displayName = "[288th] Recon Gunbag";
+		hiddenSelections[] = {"Camo","insignia"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\Recon_Gunbag.paa"};
+		icon = "\z\ace\addons\gunbag\ui\gunbag_icon_ca.paa";
+		mass = 30;
+		maximumLoad = 300;
+		model = "\z\ace\addons\gunbag\data\ace_gunbag.p3d";
+		picture = "\z\ace\addons\gunbag\ui\gunbag_ca.paa";
+		scope = 2;
+	};
 
 	class 288th_Remote_M41_Bag : 288th_ILCS_Backpack
 	{
@@ -526,6 +544,23 @@ class cfgVehicles
 			base = "";
 			assembleTo = "288th_Remote_M12_MLMS";
 			displayName = "Remote M12 MLMS";
+			dissasembleTo[] = {};
+		};
+	};
+	class 288th_Boat_Bag : optre_UNSC_Rucksack_Heavy
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		displayName = "[288th] Deployable Boat Backpack";
+		mass = 100;
+		maximumLoad = 0;
+		class assembleInfo
+		{
+			primary = 1;
+			base = "";
+			assembleTo = "B_Boat_Transport_01_F";
+			displayName = "Rubber Boat";
 			dissasembleTo[] = {};
 		};
 	};

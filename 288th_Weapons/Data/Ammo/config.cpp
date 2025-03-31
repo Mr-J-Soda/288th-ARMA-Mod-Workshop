@@ -392,10 +392,12 @@ class cfgAmmo
 	class OPTRE_M41_Rocket_HEAT_G;
 	class ACE_SatchelCharge_Remote_Ammo_Thrown;
 	class SmokeShell;
+	class B_127x108_APDS;
 	class B_127x108_Ball;
 	class B_9x21_Ball;
-	//class B_45ACP_Ball;
+	class B_45ACP_Ball;
 	class B_762x51_Ball;
+	class  ACE_762x51_Ball_Subsonic;
 	class OPTRE_FC_Bolt_Base;
 	class ACE_G_40mm_HE;
 	class OPTRE_MAC_Round;
@@ -459,7 +461,7 @@ class cfgAmmo
 		tracerStartTime = 0;
 		tracerEndTime = 10;
 		tracersEvery = 1;
-		tracerScale = 1.5;
+		tracerScale = 1.0;
 	};
 	class 65x85_HEDP : 65x85_APFS
 	{
@@ -491,11 +493,45 @@ class cfgAmmo
 		tracerStartTime = 1;
 		tracerEndTime = 0.05;
 	};
+	class 65x85_SS :  ACE_762x51_Ball_Subsonic
+	{
+		airFriction = -0.00060194;
+        caliber = 2;
+        hit = 9;
+        typicalSpeed = 320;
+        visibleFire = 1;
+        audibleFire = 5;
+        dangerRadiusBulletClose = 4;
+        suppressionRadiusBulletClose = 2;
+        ACE_caliber = 7.823;
+        ACE_bulletLength = 34.036;
+        ACE_bulletMass = 12.96;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655,-2.547,-2.285,-2.012,-1.698,-1.28,-0.764,-0.153,0.596,1.517,2.619};
+        ACE_ballisticCoefficients[] = {0.235};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {305,325,335,340};
+        ACE_barrelLengths[] = {406.4,508.0,609.6,660.4};
+        class CamShakeExplode
+        {
+            power = 2.23607;
+            duration = 0.4;
+            frequency = 20;
+            distance = 6.7082;
+        };
+	};
 	class 65x85_APFS_Incendiary : 65x85_APFS
 	{
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 2;
 		effectFly = "KA_flametrail";
+	};
+	class 65x85_APFS_flechette : 65x85_APFS
+	{
+		timeToLive = 5;
+		caliber = 5.0;
+		hit = 5;
 	};
 	class 65x85_EHP : B_762x51_Ball
 	{
@@ -511,13 +547,12 @@ class cfgAmmo
 		tracerStartTime = .1;
 		tracerEndTime = 10;
 		tracersEvery = 1;
-		//airFriction = 0;
-		//ACE_muzzleVelocities[] = {950,962,968,972,978};
-		//ACE_barrelLengths[] = {330.2,406.4,508.0,609.6,660.4};
 	};
+
 	//custom 45ACP Ammo
 	class 45ACP : B_762x51_Ball
 	{
+		cartridge = "FxCartridge_9mm";
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_Red.p3d";
 		scope = 2;
 		hit = 14;
@@ -533,10 +568,27 @@ class cfgAmmo
 		tracerendtime = 10;
 		tracersEvery = 1;
 	};
+
+	//custom 50AE round
+	class 288th_50_AE_Ball: B_45ACP_Ball
+	{
+		hit = 8.1;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		visibleFire = 9;
+		audibleFire = 9;
+		visibleFireTime = 3;
+		cost = 50;
+		caliber = 3;
+		deflecting = 30;
+		typicalSpeed = 470;
+		airFriction = -0.0016;
+	};
+
 	//Buckshot 
 	class 288th_Buckshot_Pellet : OPTRE_8Gauge_Pellets
 	{
-		cartridge = "FxCartridge_slug";
+		//cartridge = "288th_fx_slug_red";
 		submunitionConeType[] = { "poissondisc",12 };
 		/*submunitionConeAngle[] = {0.5};
 		submunitionConeAngleHorizontal[] = {4};*/
@@ -546,21 +598,31 @@ class cfgAmmo
 		thrustTime = 6;
 		thrust = 600;
 		timeToLive = 10;
-		submunitionAmmo = "B_50BW_Ball_F";
+		//submunitionAmmo = "B_50BW_Ball_F";
+		submunitionAmmo = "65x85_EHP";
 		triggerDistance = 100;
 		triggerTime = 0.05;
 	};
 	class 288th_HEDP_Buckshot : 288th_Buckshot_Pellet
 	{
+		//cartridge = "288th_fx_slug_purple";
 		submunitionAmmo = "65x85_HEDP";
 	};
 	class 288th_Incendiary_Buckshot : 288th_Buckshot_Pellet
 	{
+		//cartridge = "288th_fx_slug_dred";
 		submunitionConeType[] = { "poissondisc",8 };
 		submunitionAmmo = "65x85_APFS_Incendiary";
 	};
+	class 288th_flechette_Buckshot : 288th_Buckshot_Pellet
+	{
+		//cartridge = "288th_fx_slug_dred";
+		submunitionConeType[] = { "poissondisc",10 };
+		submunitionAmmo = "65x85_APFS_flechette";
+	};
 	class 288th_Plasma_Rainbow_Buckshot : 288th_Buckshot_Pellet
 	{
+		//cartridge = "288th_fx_slug_red";
 		submunitionConeType[] = { "poissondisc",8 };
 		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
 	};
@@ -917,7 +979,7 @@ class cfgAmmo
 		//model = "\EMP_Systems\blue_tracers\tracer_blue";
 		//tracerStartTime = 0;
 		//tracerEndTime = 10;
-		tracersEvery = 1;
+		tracersEvery = 0.75;
 		//tracerScale = 1.3;
 		coefGravity = 0;
 		sideairFriction = 0;
@@ -1010,14 +1072,14 @@ class cfgAmmo
 
 	class 288th_EMP : WNZ_EMP127_ammo
 	{
-		hit = 25;
+		hit = 0.1;
 		indirectHit = 0;
 		indirectHitRange = 0.0;
 		scope = 1;
 		scopeArsenal = 1;
 		timeToLive = 15;
-		typicalSpeed = 1000;
-		caliber = 5;
+		typicalSpeed = 500;
+		caliber = 0.1;
 		suppressionRadiusBulletClose = 15;
 		suppressionRadiusHit = 15;
 		model = "\EMP_Systems\blue_tracers\tracer_blue";
@@ -1031,6 +1093,15 @@ class cfgAmmo
 		tracerEndTime = 10;
 		airFriction = -0.000103711;
 	};
+	class 288th_KO_shell : 288th_EMP
+	{
+		typicalSpeed = 400;
+		submunitionConeAngle = 0.01;
+		submunitionConeType[] = { "poissondisc",4 };
+		submunitionAmmo = "288th_Taser_ammo_KO";
+		triggerDistance = 0.5;
+		triggerTime = 0.01;
+	};
 
 	// Custom M41 Ammo
 
@@ -1043,11 +1114,11 @@ class cfgAmmo
 		cost=500;
 		aiAmmoUsageFlags="128 + 512 + 256";
 		allowAgainstInfantry=0;
-		HIT=1000;
-		indirectHit=40;
-		indirectHitRange=6;
-		explosive=0.25;
-		fuseDistance=20;
+		hit = 1400;
+		indirectHit = 40;
+		indirectHitRange = 4;
+		explosive = 0.25;
+		fuseDistance = 20;
 		irLock=0;
 		airLock=2;
 		lockType=1;
@@ -1072,7 +1143,7 @@ class cfgAmmo
 		initTime=0.1;
 		thrustTime=10;
 		thrust=100;
-		maxSpeed=270;
+		maxSpeed=300;
 		typicalSpeed=175;
 		class Components
 		{
@@ -1165,7 +1236,6 @@ class cfgAmmo
 		weaponLockSystem = "4 + 16";
 		airFriction = 0.145;
 		sideAirFriction = 0.1;
-		maneuvrability = 14;
 		coefGravity = 1;
 		missileKeepLockedCone = 360;
 		missileLockCone = 300;
@@ -1176,6 +1246,7 @@ class cfgAmmo
 		thrust = 10;
 		maxSpeed = 200;
 		typicalSpeed = 200;
+		maneuvrability = 25;
 		class ace_missileguidance
 		{
 			enabled = 1;
@@ -1197,58 +1268,53 @@ class cfgAmmo
 	};
 	class 288th_M41_Rocket_HEAT_Thermal : OPTRE_M41_Rocket_HEAT_G
 	{
-		HIT = 1000;
+		hit = 1400;
 		indirectHit = 40;
-		indirectHitRange = 6;
+		indirectHitRange = 4;
+		explosive = 0.25;
 		model = "\OPTRE_Weapons\Rockets\M41_rocket.p3d";
-		missileKeepLockedCone = 25;
-		missileLockCone = 30;
+		missileKeepLockedCone = 360;
+		missileLockCone = 300;
 		missileLockMaxDistance = 5000;
 		missileLockMinDistance = 10;
-		missileLockMaxSpeed = 270;
-		trackOversteer = 0.6;
-		trackLead = 0.6;
-		/*maneuvrability = 4;
-		irLock = 1;
-		airLock = 1;
-		lockType = 0;
-		laserLock = 0;
-		nvLock = 0;
+		missileLockMaxSpeed = 300;
 		cmImmunity = 0.85;
-		manualControl = 0;
-		missileManualControlCone = 360;
-		maxControlRange = 5000;
-		weaponLockSystem = "2 + 16";
-		autoSeekTarget = 1;
-		lockSeekRadius = 0;
-		flightProfiles[] = {"LOALDistance"};
-		class Direct {};
-		class LOALDistance : Direct
+		maneuvrability = 20;
+		fuseDistance = 20;
+		trackOversteer=0.89999998;
+		trackLead=0.80000001;
+		initTime=0.1;
+		thrustTime=15;
+		class Components
 		{
-			lockSeekDistanceFromParent = 1;
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=340;
+						angleRangeHorizontal=60;
+						angleRangeVertical=60;
+						maxTrackableATL=4000;
+					};
+				};
+			};
 		};
-		aiAmmoUsageFlags = "128 + 256 + 512";
-		allowAgainstInfantry = 0;
-		class ace_missileguidance
-		{
-			enabled = 1;
-			minDeflection = 5e-05;
-			maxDeflection = 0.007;
-			incDeflection = "5E-005";
-			canVanillaLock = 1;
-			defaultSeekerType = "Optic";
-			seekerTypes[] = {"Optic","Thermal"};
-			defaultSeekerLockMode = "LOAL";
-			seekerLockModes[] = {"LOAL","LOBL"};
-			seekerAngle = 90;
-			seekerAccuracy = 1;
-			seekerMinRange = 1;
-			seekerMaxRange = 5000;
-			seekLastTargetPos = 1;
-			showHintOnCycle = 1;
-			defaultAttackProfile = "DIR";
-			attackProfiles[] = {"DIR","JAV_TOP"};
-		};*/
 	};
 
 	//Custom RR-553 Ammo
@@ -1292,11 +1358,11 @@ class cfgAmmo
 		cost=500;
 		aiAmmoUsageFlags="128 + 512 + 256";
 		allowAgainstInfantry=0;
-		HIT=1000;
-		indirectHit=40;
-		indirectHitRange=6;
-		explosive=0.25;
-		fuseDistance=20;
+		hit = 1400;
+		indirectHit = 40;
+		indirectHitRange = 4;
+		explosive = 0.25;
+		fuseDistance = 20;
 		irLock=0;
 		airLock=2;
 		lockType=1;
@@ -1321,7 +1387,7 @@ class cfgAmmo
 		initTime=0.1;
 		thrustTime=10;
 		thrust=100;
-		maxSpeed=270;
+		maxSpeed=300;
 		typicalSpeed=175;
 		class Components
 		{
@@ -1357,97 +1423,6 @@ class cfgAmmo
 		{
 			enabled=1;
 		};
-		/*model = "OPTRE_weapons\rockets\M41_rocket";
-		warheadName = "TandemHEAT";
-		submunitionAmmo = "ammo_Penetrator_Titan_AT";
-		effectsMissile = "missile3";
-		timeToLive = 30;
-		cost = 500;
-		aiAmmoUsageFlags = "128 + 512 + 256";
-		allowAgainstInfantry = 0;
-		hit = 1400;
-		indirectHit = 40;
-		indirectHitRange = 4;
-		explosive = 0.25;
-		fuseDistance = 20;
-		irLock = 0;
-		airLock = 2;
-		lockType = 1;
-		laserLock = 0;
-		nvLock = 0;
-		cmImmunity = 1;
-		manualControl = 1;
-		maxControlRange = 5000;
-		weaponLockSystem = "2 + 16";
-		simulationStep = 0.002;
-		airFriction = 0.145;
-		sideAirFriction = 0.3;
-		maneuvrability = 14;
-		coefGravity = 1;
-		missileKeepLockedCone = 360;
-		missileLockCone = 270;
-		missileLockMaxDistance = 5000;
-		missileLockMinDistance = 20;
-		missileLockMaxSpeed = 350;
-		trackOversteer = 1;
-		trackLead = 1;
-		initTime = 0.1;
-		thrustTime = 10;
-		thrust = 100;
-		maxSpeed = 200;
-		typicalSpeed = 175;
-		class Components
-		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
-					class IRSensorComponent : SensorTemplateIR
-					{
-						class AirTarget
-						{
-							minRange = 0;
-							maxRange = 5000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = 1;
-						};
-						class GroundTarget
-						{
-							minRange = 0;
-							maxRange = 5000;
-							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef = 1;
-						};
-						maxTrackableSpeed = 340;
-						angleRangeHorizontal = 60;
-						angleRangeVertical = 60;
-						maxTrackableATL = 4000;
-					};
-				};
-			};
-		};
-		class ace_missileguidance
-		{
-			enabled = 1;
-			canVanillaLock = 0;
-			onFired = "ace_hot_fnc_onFired";
-			minDeflection = 0.00025;
-			maxDeflection = 0.007;
-			incDeflection = 0.0005;
-			defaultSeekerType = "SACLOS";
-			seekerTypes[] = {"SACLOS"};
-			defaultSeekerLockMode = "LOAL";
-			seekerLockModes[] = {"LOAL","LOBL"};
-			seekerAngle = 30;
-			seekerAccuracy = 1;
-			seekerMinRange = 75;
-			seekerMaxRange = 2500;
-			seekLastTargetPos = 0;
-			correctionDistance = 15;
-			offsetFromCrosshair[] = {0,0,0.5};
-			defaultAttackProfile = "WIRE";
-			attackProfiles[] = {"WIRE"};
-		};*/
 	};
 	class OPAEX_M41_Rocket_HE : OPTRE_M41_Rocket_HEAP
 	{
@@ -1485,7 +1460,6 @@ class cfgAmmo
 		weaponLockSystem = "4 + 16";
 		airFriction = 0.145;
 		sideAirFriction = 0.1;
-		maneuvrability = 14;
 		coefGravity = 1;
 		missileKeepLockedCone = 360;
 		missileLockCone = 300;
@@ -1496,6 +1470,7 @@ class cfgAmmo
 		thrust = 10;
 		maxSpeed = 200;
 		typicalSpeed = 200;
+		maneuvrability = 25;
 		class ace_missileguidance
 		{
 			enabled = 1;
@@ -1515,61 +1490,54 @@ class cfgAmmo
 			attackProfiles[] = {"DIR"};
 		};
 	};
-	class OPAEX_M41_Rocket_HEAT_Thermal : OPAEX_M41_Rocket_HEAT_SACLOS
+	class OPAEX_M41_Rocket_HEAT_Thermal : OPTRE_M41_Rocket_HEAT_G
 	{
 		hit = 1400;
 		indirectHit = 40;
 		indirectHitRange = 4;
 		explosive = 0.25;
-		fuseDistance = 20;
 		model = "\OPTRE_Weapons\Rockets\M41_rocket.p3d";
-		missileKeepLockedCone = 5;
-		missileLockCone = 20;
+		missileKeepLockedCone = 360;
+		missileLockCone = 300;
 		missileLockMaxDistance = 5000;
 		missileLockMinDistance = 10;
-		missileLockMaxSpeed = 270;
-		trackOversteer = 1;
-		trackLead = 1;
-		maneuvrability = 4;
-		irLock = 1;
-		airLock = 1;
-		lockType = 0;
-		laserLock = 0;
-		nvLock = 0;
-		cmImmunity = 1;
-		manualControl = 0;
-		missileManualControlCone = 360;
-		maxControlRange = 5000;
-		weaponLockSystem = "2 + 16";
-		autoSeekTarget = 1;
-		lockSeekRadius = 0;
-		flightProfiles[] = {"LOALDistance"};
-		class Direct {};
-		class LOALDistance : Direct
+		missileLockMaxSpeed = 300;
+		cmImmunity = 0.85;
+		maneuvrability = 20;
+		fuseDistance = 20;
+		trackOversteer=0.89999998;
+		trackLead=0.80000001;
+		initTime=0.1;
+		thrustTime=15;
+		class Components
 		{
-			lockSeekDistanceFromParent = 1;
-		};
-		aiAmmoUsageFlags = "128 + 256 + 512";
-		allowAgainstInfantry = 0;
-		class ace_missileguidance
-		{
-			enabled = 1;
-			minDeflection = 5e-05;
-			maxDeflection = 0.007;
-			incDeflection = "5E-005";
-			canVanillaLock = 1;
-			defaultSeekerType = "Optic";
-			seekerTypes[] = {"Optic","Thermal"};
-			defaultSeekerLockMode = "LOAL";
-			seekerLockModes[] = {"LOAL","LOBL"};
-			seekerAngle = 90;
-			seekerAccuracy = 1;
-			seekerMinRange = 1;
-			seekerMaxRange = 5000;
-			seekLastTargetPos = 1;
-			showHintOnCycle = 1;
-			defaultAttackProfile = "DIR";
-			attackProfiles[] = {"DIR","JAV_TOP"};
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=5000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=340;
+						angleRangeHorizontal=60;
+						angleRangeVertical=60;
+						maxTrackableATL=4000;
+					};
+				};
+			};
 		};
 	};
 
@@ -1612,8 +1580,8 @@ class cfgAmmo
 		caliber = 50;
 		explosive = 0.05;
 		model = "\A3\Weapons_f\Data\bullettracer\shell_tracer_white";
-		timeToLive = 10;
-		tracerScale = 1.5;
+		timeToLive = 5;
+		tracerScale = 0.75;
 		tracerStartTime = 0;
 		tracerEndTime = 15;
 		tracersEvery = 1;
@@ -1749,7 +1717,7 @@ class cfgAmmo
 		sideairFriction = 0;
 		waterFriction = 0;
 		typicalSpeed = 800;
-		timeToLive = 5;
+		timeToLive = 3;
 		suppressionRadiusBulletClose = 15;
 		suppressionRadiusHit = 15;
 		fuseDistance = 0;
@@ -1766,7 +1734,7 @@ class cfgAmmo
 		indirectHitRange = 0.0;
 		caliber = 3;
 		model = "\288th_Weapons\Data\Ammo\Laser_Yellow\laser_yellow.p3d";
-		cartridge = "";
+		//cartridge = "";
 		lightcolor[] = {0.25,0.25,0.5};
 		flaresize = 5;
 		tracerscale = 1.1;
@@ -1780,13 +1748,10 @@ class cfgAmmo
 		effectfly = "288th_plasma_yellow";
 		brightness = 1000;
 		timetolive = 10;
-		/*airfriction = 0;
-		coefgravity = 0;*/
 		deflecting = 0;
 		supersoniccracknear[] = {};
 		supersoniccrackfar[] = {};
 		soundSetSonicCrack[] = {};
-		//soundSetBulletFly[] = {"288th_plasma_bullet_flyby_soundSet"};
 	};
 };
 
@@ -1825,6 +1790,8 @@ class CfgMagazines
 	class TCF_100Rnd_762x51_Mag_M33;
 	class OPTRE_64Rnd_57x31_Mag;
 	class 7Rnd_408_Mag;
+	class SC_200Rnd_338_Mag;
+	class OPTRE_12Rnd_12Gauge_Smoke;
 
 	class TCF_20Rnd_65x48_Mag: OPTRE_32Rnd_762x51_Mag
 	{
@@ -2240,7 +2207,7 @@ class CfgMagazines
 		mass = 15;
 	};
 
-	//288th Shotgun ammo
+	//288th autoshotgun shells
 	class 288th_Buckshot : OPTRE_32Rnd_762x51_Mag
 	{
 		dlc = "288thDJP_Aux";
@@ -2253,8 +2220,9 @@ class CfgMagazines
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd Buckshot Magazine";
 		displaynameshort = "Buckshot";
-		descriptionshort = "30 round 8 guage buckshot";
+		descriptionshort = "30 Round Buckshot";
 		ammo = "288th_Buckshot_Pellet";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\red\icon_shells_red.paa";
 		count = 30;
 		mass = 20;
 	};
@@ -2267,8 +2235,9 @@ class CfgMagazines
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd Slug Magazine";
 		displaynameshort = "Slugs";
-		descriptionshort = "30 round 8 guage slugs";
-		ammo = "65x85_APFS";
+		descriptionshort = "30 Round Slugs";
+		ammo = "B_127x99_SLAP";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\green\icon_shells_green.paa";
 		count = 30;
 		mass = 20;
 	};
@@ -2281,9 +2250,40 @@ class CfgMagazines
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd Incendiary Slug Magazine";
 		displaynameshort = "Incendiary Slugs";
-		descriptionshort = "20 round 8 guage incendiary slugs";
+		descriptionshort = "30 Round Incendiary Slugs";
 		ammo = "65x85_APFS_Incendiary";
-		count = 20;
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dgreen\icon_shells_dgreen.paa";
+		count = 30;
+		mass = 20;
+	};
+	class 288th_Slug_Flechette : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd Flechette Slug Magazine";
+		displaynameshort = "Flechette Slugs";
+		descriptionshort = "30 Round Flechette Slugs";
+		ammo = "65x85_APFS_Flechette";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\black\icon_shells_black.paa";
+		count = 30;
+		mass = 20;
+	};
+	class 288th_Slug_Taser : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd Taser Slug Magazine";
+		displaynameshort = "Taser Slugs";
+		descriptionshort = "30 Round Taser Slugs";
+		ammo = "288th_Taser_ammo_Long";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\blue\icon_shells_blue.paa";
+		count = 30;
 		mass = 20;
 	};
 	class 288th_Slug_HEDP : 288th_Buckshot
@@ -2295,8 +2295,64 @@ class CfgMagazines
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd HEDP Slug Magazine";
 		displaynameshort = "HEDP Slugs";
-		descriptionshort = "30 round 8 guage HEDP slugs";
+		descriptionshort = "30 Round HEDP Slugs";
 		ammo = "65x85_HEDP";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\yellow\icon_shells_yellow.paa";
+		mass = 20;
+	};
+	class 288th_Slug_EMP : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd EMP Slug Magazine";
+		displaynameshort = "EMP Slugs";
+		descriptionshort = "30 Round EMP Slugs";
+		ammo = "288th_EMP";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Cyan\icon_shells_Cyan.paa";
+		mass = 20;
+	};
+	class 288th_Slug_SS : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd Sub-Sonic Slug Magazine";
+		displaynameshort = "SS Slugs";
+		descriptionshort = "30 Round Sub-Sonic Slugs";
+		ammo = "65x85_SS";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\drab\icon_shells_drab.paa";
+		mass = 20;
+	};
+	class 288th_Slug_KO : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 400;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd KNock-Out Slug Magazine";
+		displaynameshort = "KO Shells";
+		descriptionshort = "30 Round KO Shells";
+		ammo = "288th_KO_shell";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\KO\icon_shells_ko.paa";
+		mass = 20;
+	};
+	class 288th_Slug_Smoke : OPTRE_12Rnd_12Gauge_Smoke
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd Smoke Slug Magazine";
+		displaynameshort = "Smoke Slugs";
+		descriptionshort = "30 Round Smoke Slugs";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\white\icon_shells_white.paa";
 		mass = 20;
 	};
 	class 288th_HEDP_Buckshot : 288th_Buckshot
@@ -2308,8 +2364,9 @@ class CfgMagazines
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd HEDP Buckshot Magazine";
 		displaynameshort = "HEDP Buckshot";
-		descriptionshort = "30 round 8 guage HEDP buckshot";
+		descriptionshort = "30 Round HEDP Buckshot";
 		ammo = "288th_HEDP_Buckshot";
+		picture = "288th_Weapons\Data\Ammo\Shotgun_Shells\purple\icon_shells_purple.paa";
 		count = 30;
 		mass = 20;
 	};
@@ -2322,29 +2379,64 @@ class CfgMagazines
 		scopearsenal = 2;
 		displayname = "[288th] 30rnd Incendiary Buckshot Magazine";
 		displaynameshort = "Incendiary Buckshot";
-		descriptionshort = "20 round 8 guage Incendiary slugs";
+		descriptionshort = "30 Round Incendiary Buckshot";
 		ammo = "288th_Incendiary_Buckshot";
-		count = 20;
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dred\icon_shells_dred.paa";
+		count = 30;
 		mass = 20;
 	};
+	class 288th_Flechette_Buckshot : 288th_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initSpeed = 500;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 30rnd Flechette Buckshot Magazine";
+		displaynameshort = "Flechette Buckshot";
+		descriptionshort = "30 Round Flechette Buckshot";
+		ammo = "288th_Flechette_Buckshot";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\orange\icon_shells_orange.paa";
+		count = 30;
+		mass = 20;
+	};
+
+	//288th M45 and KSG shells
 	class 288th_Loose_Buckshot : OPTRE_6Rnd_8Gauge_Pellets
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 12Rnd 8 Gauge Rainbow Pellets";
+		displayname = "[288th] 12Rnd Rainbow Buckshot";
 		count = 12;
 		ammo = "288th_Plasma_Rainbow_Buckshot";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\red\icon_shells_red.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\red\shell_pile_8.p3d";
 		displaynameshort = "Rainbow Buckshot";
 		descriptionshort = "12 Rounds of Rainbow Buckshot";
+		mass = 12;
+	};
+	class 288th_Loose_Normal_Buckshot : 288th_Loose_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Buckshot";
+		count = 12;
+		ammo = "288th_Buckshot_Pellet";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\red\icon_shells_red.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\red\shell_pile_8.p3d";
+		displaynameshort = "Buckshot";
+		descriptionshort = "12 Rounds of Buckshot";
 		mass = 12;
 	};
 	class 288th_Loose_Slugs : OPTRE_6Rnd_8Gauge_Slugs
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 12Rnd 8 Gauge Slugs";
+		displayname = "[288th] 12Rnd Slugs";
 		count = 12;
-		ammo = "65x85_APFS";
+		ammo = "B_127x99_SLAP";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\green\icon_shells_green.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\green\shell_pile_8.p3d";
 		descriptionshort = "12 Round Slugs";
 		mass = 12;
 	};
@@ -2352,9 +2444,11 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th]12Rnd 8 Gauge Incendiary Pellets";
+		displayname = "[288th] 12Rnd Incendiary Buckshot";
 		count = 12;
 		ammo = "288th_Incendiary_Buckshot";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dred\icon_shells_dred.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dred\shell_pile_8.p3d";
 		displaynameshort = "Incendiary Buckshot";
 		descriptionshort = "12 Rounds of Incendiary Buckshot";
 		mass = 12;
@@ -2363,20 +2457,37 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 12Rnd 8 Gauge Incendiary Slugs";
+		displayname = "[288th] 12Rnd Incendiary Slugs";
 		count = 12;
 		displaynameshort = "Incendiary Slugs";
 		ammo = "65x85_APFS_Incendiary";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dgreen\icon_shells_dgreen.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dgreen\shell_pile_8.p3d";
 		descriptionshort = "12 Round Incendiary Slugs";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs_EMP : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd EMP Slugs";
+		count = 12;
+		displaynameshort = "EMP Slugs";
+		ammo = "288th_EMP";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Cyan\icon_shells_Cyan.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Cyan\shell_pile_8.p3d";
+		descriptionshort = "12 Round EMP Slugs";
 		mass = 12;
 	};
 	class 288th_Loose_HEDP_Buckshot : 288th_Loose_Buckshot
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 12Rnd 8 Gauge HEDP Pellets";
+		displayname = "[288th] 12Rnd HEDP Buckshot";
 		count = 12;
 		ammo = "288th_HEDP_Buckshot";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\purple\icon_shells_purple.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\purple\shell_pile_8.p3d";
 		displaynameshort = "HEDP Buckshot";
 		descriptionshort = "12 Rounds of HEDP Buckshot";
 		mass = 12;
@@ -2385,14 +2496,93 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 12Rnd 8 Gauge HEDP Slugs";
+		displayname = "[288th] 12Rnd HEDP Slugs";
 		count = 12;
 		displaynameshort = "HEDP Slugs";
 		ammo = "65x85_HEDP";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\yellow\icon_shells_yellow.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\yellow\shell_pile_8.p3d";
 		descriptionshort = "12 Round HEDP Slugs";
 		mass = 12;
 	};
-
+	class 288th_Loose_Slugs_Taser : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Taser Slugs";
+		count = 12;
+		displaynameshort = "Taser Slugs";
+		ammo = "288th_Taser_ammo_Long";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\blue\icon_shells_blue.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\blue\shell_pile_8.p3d";
+		descriptionshort = "12 Round Taser Slugs";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs_KO : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Knock-Out Shell";
+		count = 12;
+		displaynameshort = "KO Shell";
+		ammo = "288th_KO_shell";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\KO\icon_shells_ko.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\KO\shell_pile_8.p3d";
+		descriptionshort = "12 Round KO Slugs";
+		initspeed = 400;
+		mass = 12;
+	};
+	class 288th_Loose_Slug_Smoke : OPTRE_12Rnd_12Gauge_Smoke
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Smoke Slugs";
+		count = 12;
+		displaynameshort = "Smoke Slugs";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\white\icon_shells_white.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\white\shell_pile_8.p3d";
+		descriptionshort = "12 Round Smoke Slugs";
+		mass = 12;
+	};
+	class 288th_Loose_flechette_Buckshot : 288th_Loose_Buckshot
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Flechette Buckshot";
+		count = 12;
+		ammo = "288th_Flechette_Buckshot";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Orange\icon_shells_Orange.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Orange\shell_pile_8.p3d";
+		displaynameshort = "Flechette Buckshot";
+		descriptionshort = "12 Rounds of Flechette Buckshot";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs_flechette : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Flechette Slugs";
+		count = 12;
+		displaynameshort = "Flechette Slugs";
+		ammo = "65x85_APFS_flechette";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Black\icon_shells_Black.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\Black\shell_pile_8.p3d";
+		descriptionshort = "12 Round Flechette Slugs";
+		mass = 12;
+	};
+	class 288th_Loose_Slugs_SS : 288th_Loose_Slugs
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 12Rnd Sub-Sonic Slugs";
+		count = 12;
+		displaynameshort = "Sub-Sonic Slugs";
+		ammo = "65x85_SS";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\drab\icon_shells_drab.paa";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\drab\shell_pile_8.p3d";
+		descriptionshort = "12 Round Sub-Sonic Slugs";
+		mass = 12;
+	};
 	//288th potato
 	class 288th_Potato : 288th_Buckshot
     {
@@ -2407,7 +2597,7 @@ class CfgMagazines
         descriptionShort = "Smith said no, Soda says yes";
         mass = 8;
         initSpeed = 150;
-        picture = "288th_Weapons\Data\Ammo\gear_ugl_potat_ca";
+        picture = "288th_Weapons\Data\Ammo\m_gear_ugl_potat_ca";
     };
 	//288th Railgun Mag
 	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
@@ -2544,12 +2734,35 @@ class CfgMagazines
 		initspeed = 600;
 		ammo = "65x85_APFS_Tracers";
 		count = 500;
-		displayname = "[288th] 500Rnd 6.5x85mm Box Magazine";
+		displayname = "[288th] 500Rnd 6.5x85mm Box Tracers";
 		displaynameshort = "6.5x85mm";
-		descriptionShort = "500 Round Box Magazine<br/>6.5x85mm";
+		descriptionShort = "500 Round Box Tracer<br/>6.5x85mm";
 		mass = 125;
 		tracersEvery = 1;
 		lastRoundsTracer = 500;
+	};
+	class 288th_500Rnd_65x85_Box_Normal : 288th_500Rnd_65x85_Box
+	{
+		ammo = "65x85_APFS";
+		displayname = "[288th] 500Rnd 6.5x85mm Box";
+		displaynameshort = "6.5x85mm";
+		descriptionShort = "500 Round Box<br/>6.5x85mm";
+		mass = 125;
+		tracersEvery = 0;
+		lastRoundsTracer = 10;
+	};
+
+	//PKMP Box
+	class 288th_200Rnd_308_Mag: SC_200Rnd_338_Mag
+	{
+		author = "Scion Conflict Mod Team";
+		displayname = "[288th] 200Rnd .308 Box";
+		displaynameshort = ".308";
+		descriptionShort = "200 Round Box .308";
+		ammo = "288th_308_rifle_yellow";
+		tracersEvery = 3;
+		lastRoundsTracer = 20;
+		mass = 75;
 	};
 
 	//M50 HMG Box
@@ -2562,9 +2775,9 @@ class CfgMagazines
 		initspeed = 500;
 		ammo = "288th_15x50";
 		count = 75;
-		displayname = "[288th] 75Rnd 15x50mm Box Magazine";
+		displayname = "[288th] 75Rnd 15x50mm Box";
 		displaynameshort = "15x50mm";
-		descriptionShort = "75 Round Box Magazine<br/>15x50mm";
+		descriptionShort = "75 Round Box<br/>15x50mm";
 		mass = 85;
 		tracersEvery = 1;
 		lastRoundsTracer = 75;
@@ -2591,44 +2804,28 @@ class CfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th] 30Rnd 20mm HE M318 Box";
-		displaynameshort = "30Rnd 20mm HE";
+		displayName = "[288th] 50Rnd 20mm HE M318 Box";
+		displaynameshort = "50Rnd 20mm HE";
 		picture = "\A3\Weapons_F\Data\UI\M_200Rnd_65x39_CA.paa";
-		count = 30;
+		count = 50;
 		ammo = "G_40mm_HE";
 		initSpeed = 220;
 		maxLeadSpeed = 25;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
-		descriptionShort = "30Rnd 20mm HE Grenade Box";
-		mass = 70;
+		descriptionShort = "50Rnd 20mm HE Grenade Box";
+		mass = 80;
 		modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100rnd.p3d";
 		modelSpecialIsProxy = 1;
 	};
 	class 288th_AutoGL_Smoke_Mag : 288th_AutoGL_Mag
 	{
-		displayName = "[288th] 30Rnd 20mm Impact Smoke M318 Box";
-		displaynameshort = "30Rnd 20mm W Smoke";
+		displayName = "[288th] 50Rnd 20mm Impact Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm W Smoke";
 		ammo = "OPTRE_40mm_Smoke";
-		descriptionShort = "30Rnd 20mm Smoke Grenade Box";
-		mass = 50;
+		descriptionShort = "50Rnd 20mm Smoke Grenade Box";
+		mass = 60;
 	};
-
-	//288th Revolver Ammo
-	/*class 288th_Big_Iron_Mag : 6Rnd_45ACP_Cylinder
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		initspeed = 400;
-		ammo = "45ACP";
-		count = 100;
-		displayname = "[288th] Big Iron Ammo";
-		displaynameshort = "Big Iron Ammo";
-		descriptionShort = "Bullets for the Big Iron";
-		mass = 150;
-	};*/
 	class 288th_Temp_Yellow_Tracer : 6Rnd_45ACP_Cylinder
 	{
 		dlc = "288thDJP_Aux";
@@ -2637,7 +2834,7 @@ class CfgMagazines
 		scopeArsenal = 2;
 		initspeed = 400;
 		tracersEvery = 1;
-		count = 6;
+		count = 9;
 		ammo = "288th_308_rifle_yellow";
 		displayname = "[288th] 6Rnd Yellow Tracer Ammo";
 		displaynameshort = "Yellow Tracer Ammo";
@@ -2650,29 +2847,12 @@ class CfgMagazines
 		scope = 2;
 		scopeArsenal = 2;
 		initspeed = 400;
-		count = 6;
+		count = 7;
 		ammo = "288th_Plasma_Purple";
 		displayname = "[288th] 6Rnd Purple Plasma Ammo";
 		displaynameshort = "Purple Plasma Ammo";
 		descriptionShort = "Temp's Purple Plasma";
 	};
-
-	//288th Experimental Mags
-	/*class 288th_Scrapmag : 288th_Railgun_Mag
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		model = "\A3\weapons_f\empty";
-		scope = 1;
-		scopeArsenal = 1;
-		displayName = "[288th] Makeshift Ammo Cache";
-		displayNameShort = "Makeshift Ammo Cache";
-		ammo = "288th_Makeshift_Ammo";
-		descriptionshort = "A makeshift ammo cache";
-		count = 75;
-		initspeed = 2000;
-		mass = 120;
-	};*/
 	class 288th_7Rnd_Gauss_Slug_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag
 	{
 		dlc = "288thDJP_Aux";
@@ -2730,4 +2910,101 @@ class CfgMagazines
 		mass = 1;
 		tracersEvery = 1;
 	};
+
+	//Desert Falcon Mag
+	class 11Rnd_45ACP_Mag;
+	class 288th_7Rnd_50_AE: 11Rnd_45ACP_Mag
+	{
+		displayName = "[288th] .50 AE";
+		displaynameshort = "50 AE Mag";
+		descriptionshort = ".50 AE";
+		picture = "\288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\UI\mag.paa";
+		model = "\288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\Desert_Eagle-MAG.p3d";
+		type = 16;
+		ammo = "288th_50_AE_Ball";
+		count = 7;
+		initSpeed = 470;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+	};
 };
+
+/*class CfgVehicles
+{
+	class FxCartridge;
+	class 288th_fx_slug_black: FxCartridge
+	{
+		author = "Soda / Misriah 288";
+		mapSize = 0.03;
+		_generalMacro = "288th_fx_slug_black";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\black\shell_pile_1";
+		submerged = 0;
+		submergeSpeed = 0;
+		timeToLive = 5;
+		disappearAtContact = "false";
+		airRotation = 1.5;
+	};
+	class 288th_fx_slug_orange: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\orange\shell_pile_1";
+	};
+	class 288th_fx_slug_white: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\white\shell_pile_1";
+	};
+	class 288th_fx_slug_red: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\red\shell_pile_1";
+	};
+	class 288th_fx_slug_yellow: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\yellow\shell_pile_1";
+	};
+	class 288th_fx_slug_purple: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\purple\shell_pile_1";
+	};
+	class 288th_fx_slug_blue: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\blue\shell_pile_1";
+	};
+	class 288th_fx_slug_green: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\green\shell_pile_1";
+	};
+	class 288th_fx_slug_dgreen: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dgreen\shell_pile_1";
+	};
+	class 288th_fx_slug_gold: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\gold\shell_pile_1";
+	};
+	class 288th_fx_slug_db: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\db\shell_pile_1";
+	};
+	class 288th_fx_slug_dred: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\dred\shell_pile_1";
+	};
+	class 288th_fx_slug_drab: 288th_fx_slug_black
+	{
+		author = "Soda / Misriah 288";
+		model = "\288th_Weapons\Data\Ammo\Shotgun_Shells\drab\shell_pile_1";
+	};
+};*/

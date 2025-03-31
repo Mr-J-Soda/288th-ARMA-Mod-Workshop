@@ -1689,6 +1689,7 @@ class cfgVehicles
 		wheelDestroyRadiusCoef = 100;
 		armor = 100;
 		canFloat = 1;
+		maximumLoad = 10000;
 		class TransportBackpacks {};
 		class TransportMagazines {};
 		class TransportWeapons {};
@@ -3626,30 +3627,6 @@ class cfgVehicles
 					"\288th_Vehicles\Stomper\Maxim\UGV_3_Maxim",
 					"\288th_Vehicles\Stomper\Maxim\UGV_2_Maxim",
 					"\288th_Vehicles\Stomper\Maxim\UGV_1_Maxim"
-				};
-			};
-			class Bees
-			{
-				displayName = "Bees";
-				author = "Misriah 288 DJP";
-				factions[] = { "288th_UNSC" };
-				textures[] =
-				{
-					"\288th_Vehicles\Stomper\Bees\UGV_01_ext_Black_yellowstripe_CO.paa",
-					"\288th_Vehicles\Stomper\Bees\UGV_01_int_Black_yellowstripe_CO.paa",
-					"\288th_Vehicles\Stomper\Bees\Turret_Black_yellowstripe_CO.paa"
-				};
-			};
-			class Beach
-			{
-				displayName = "Beach";
-				author = "Misriah 288 DJP";
-				factions[] = { "288th_UNSC" };
-				textures[] =
-				{
-					"\288th_Vehicles\Stomper\Beach\UGV_01_ext_NL_CO.paa",
-					"\288th_Vehicles\Stomper\Beach\UGV_01_int_NL_CO.paa",
-					"\288th_Vehicles\Stomper\Beach\Turret_NL_CO.paa"
 				};
 			};
 			class UNSC
@@ -6788,113 +6765,6 @@ class cfgVehicles
 			};
 		};
 	};
-	class 288th_MBT : B_MBT_01_cannon_F{
-		_generalMacro="288th_MBT";
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Tank";
-		scope = 2;
-		scopeCurator = 2;
-		forceInGarage = 1;
-		displayName = "WIP M2A1 MBT (288th)";
-		faction = "288th_UNSC";
-		vehicleClass = "OPTRE_UNSC_Armored_class";
-		crew = "288th_SW_Crewman";
-		cost = 50000;
-		damageResistance = 0.04;
-		crewVulnerable = 0.01;
-		crewExplosionProtection = 0.1;
-		armor = 800;
-		armorLights = 3;
-		armorStructural = 7;
-		accelAidForceCoef = 3.0;
-		accelAidForceYOffset = -2.0;
-		accelAidForceSpd = 3.2;
-		maxSpeed = 90;
-		fuelCapacity = 50;
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {"OPTRE_105mm_M556","288th_M73X_V_2","SmokeLauncher"};
-				magazines[] = {"OPTRE_60Rnd_105mm_HEAT","OPTRE_60Rnd_105mm_APBC","OPTRE_60Rnd_105mm_SAPHE","288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag"};
-			};
-		};
-		hiddenSelections[] = {"Camo1","Camo2","CamoNet"};
-		hiddenSelectionsTextures[] = {"A3\Armor_F_Exp\MBT_01\data\MBT_01_body_olive_CO.paa","A3\Armor_F_Exp\MBT_01\data\MBT_01_tow_olive_CO.paa","A3\Armor_F\Data\camonet_NATO_Green_CO.paa"};
-		textureList[] = {"Olive",1,"Sand",0,"multitarn",0,"Green",0,"Snow",0,};
-		/*class TextureSources {
-			class Olive {
-				author = "Misriah 288 DJP";
-				displayName = "Olive";
-				textures = ["A3\Armor_F_Exp\MBT_01\data\MBT_01_body_olive_CO.paa","A3\Armor_F_Exp\MBT_01\data\MBT_01_tow_olive_CO.paa","A3\Armor_F\Data\camonet_NATO_Green_CO.paa"];
-			};
-			class Sand {
-				author = "Misriah 288 DJP";
-				displayName = "Sand";
-				textures = ["A3\armor_f_gamma\MBT_01\Data\MBT_01_body_CO.paa","A3\armor_f_gamma\MBT_01\Data\MBT_01_tow_CO.paa","A3\Armor_F\Data\camonet_NATO_Desert_CO.paa"];
-			};
-			class multitarn {
-				author = "Misriah 288 DJP";
-				displayName = "Multitarn";
-				textures = ["288th_Vehicles\MBT\mbt_01_body_multicam.paa","288th_Vehicles\MBT\mbt_01_tow_multicam.paa","\A3\Armor_F\Data\camonet_greenbeige_co.paa"];
-				};
-			class Green {
-				author = "Misriah 288 DJP";
-				displayName = "Green";
-				textures = ["288th_Vehicles\MBT\natoenhanced_slammer_01C_co.paa","288th_Vehicles\MBT\natoenhanced_slammer_02C_co.paa","288th_Vehicles\MBT\natoenhanced_slammer_03_co.paa"];
-			};
-			class Snow {
-				author = "Misriah 288 DJP";
-				displayName = "Snow";
-				hiddenSelectionsTextures[]={"288th_Vehicles\MBT\mbt_01_body_co.paa","288th_Vehicles\MBT\mbt_01_tow_co.paa","288th_Vehicles\MBT\NATO_WINTER_CAMONET.paa"};
-			};
-		};*/
-		class TransportMagazines
-		{
-			class _xx_SmokeShell
-			{
-				magazine = "SmokeShell";
-				count = 0;
-			};
-			class _xx_SmokeShellBlue
-			{
-				magazine = "SmokeShellBlue";
-				count = 0;
-			};
-			class _xx_30Rnd_65x39_caseless_mag
-			{
-				magazine = "30Rnd_65x39_caseless_mag";
-				count = 0;
-			};
-		};
-		class TransportWeapons
-		{
-			class _xx_arifle_MXC_F
-			{
-				weapon = "arifle_MXC_F";
-				count = 0;
-			};
-		};
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name = "FirstAidKit";
-				count = 0;
-			};
-		};
-		enginePower=3000; //Default=1230
-		maxFordingDepth=1.6;
-		peakTorque=5339; //Default=5000
-		idleRpm=1400; //Default=1400
-		redRpm=3000; //Default=3300
-		minOmega=__EVAL((1400 * 2 * PI) / 60);
-		maxOmega=__EVAL((3000 * 2 * PI) / 60);
-		engineLosses=5; //Default=25
-		transmissionLosses=5; //Default=15
-	};
 	class 288th_Futura : O_MBT_02_railgun_base_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -8029,7 +7899,7 @@ class cfgVehicles
 		clutchStrength = 15;
 		cost = 200;
 		engineMOI = 2.35;
-		enginePower = 50;
+		enginePower = 100;
 		engineStartSpeed = 5;
 		engineStartupDelay = 2.5;
 		hiddenSelections = ["Camo_1","Camo_2","Camo_3"];
@@ -8170,6 +8040,33 @@ class cfgVehicles
 		TFAR_hasIntercom = 0;
 		threat = [0.4,0,0];
 		visualSize = 0.1;
+		class ACE_Actions
+		{
+			class ACE_MainActions
+			{
+				condition = "alive _target";
+				displayName = "Interactions";
+				distance = 2.5;
+				position = "[0,0,0]";
+				selection = "";
+				class ACE_Pickup_Edit
+				{
+					displayName = "Pick Up ED-1E";
+					showDisabled = 0;
+					distance = 2.75;
+					condition = "player == vehicle player && player canAdd ""ED_1E_Kit"" ";
+					statement = "player addItem 'ED_1E_Kit'; deleteVehicle this";
+				};
+			};
+		};
+		class assembleInfo 
+		{
+			assembleTo = "";
+			base = "";
+			displayName = "";
+			dissasembleTo = ["ED_1E_Kit"];
+			primary = 0;
+		};
 		/*class assembleInfo
 		{
 			primary = 0;
@@ -8789,35 +8686,6 @@ class cfgVehicles
 			};
 		};
 	};
-	class 288th_Remote_M12_MLMS : 288th_M12_MLMS{
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		scope = 2;
-		scopeCurator = 2;
-		forceInGarage = 1;
-		side = 1;
-		isUav = 1;
-		hasDriver = 1;
-		getInRadius = 0;
-		armor = 300;
-		uavCameraGunnerPos = "GunnerView";
-		uavCameraGunnerDir = "Barrel";
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Turret";
-		/*faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";*/
-		displayName = "Remote M12 MLMS (288th)";
-		crew = "B_UAV_AI";
-		availableForSupportTypes = "[""Artillery""]";
-		class assembleInfo
-		{
-			primary = 1;
-			base = "";
-			assembleTo = "";
-			displayName = "";
-			dissasembleTo[] = { "288th_Remote_M12_Bag" };
-		};
-	};
 	class 288th_M989: OPTRE_M914_RV
 	{
 		dlc = "288th";
@@ -8989,6 +8857,35 @@ class cfgVehicles
 					maxFov = 1.1;
 				};
 			};
+		};
+	};
+	class 288th_Remote_M12_MLMS : 288th_Static_MLMS{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+		side = 1;
+		isUav = 1;
+		hasDriver = 1;
+		getInRadius = 0;
+		armor = 300;
+		uavCameraGunnerPos = "GunnerView";
+		uavCameraGunnerDir = "Barrel";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Turret";
+		/*faction = "288th_UNSC";
+		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		displayName = "Remote M12 MLMS (288th)";
+		crew = "B_UAV_AI";
+		availableForSupportTypes = "[""Artillery""]";
+		class assembleInfo
+		{
+			primary = 1;
+			base = "";
+			assembleTo = "";
+			displayName = "";
+			dissasembleTo[] = { "288th_Remote_M12_Bag" };
 		};
 	};
 	class 288th_Catfish_MLMS: optre_catfish_aa_f
@@ -9801,13 +9698,13 @@ class cfgVehicles
 		linkedItems[] = {"288th_Armor_Marine_OSHA","288th_CH252_Marine_OSHA","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 		respawnlinkedItems[] = {"288th_Armor_Marine_OSHA","288th_CH252_Marine_OSHA","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 
-		weapons[] = {"288th_OSHA_Rifle","OPTRE_M6G","Binocular","Throw","Put" };
-		respawnWeapons[] = {"288th_OSHA_Rifle","OPTRE_M6G","Binocular","Throw","Put" };
+		weapons[] = {"OPTRE_MA5C_AC","OPTRE_M6G","Binocular","Throw","Put" };
+		respawnWeapons[] = {"OPTRE_MA5C_AC","OPTRE_M6G","Binocular","Throw","Put" };
 
-		magazines[] = {"288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag" };
-		respawnMagazines[] = {"288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag" };
+		magazines[] = {"OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag" };
+		respawnMagazines[] = {"OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag" };
 
-		ALiVE_orbatCreator_loadout[] = {{"288th_OSHA_Rifle","OPTRE_M6C_compensator","acc_flashlight_smg_01","288th_M7_Sight",{"288th_Plasma_White_Mag",30},{},""},{},{"OPTRE_M6G","","OPTRE_M6G",{"OPTRE_8Rnd_127x40_Mag",32},{},""},{"OPTRE_UNSC_Army_Uniform_T_URB",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"OPTRE_8Rnd_127x40_Mag",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Plasma_White_Mag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
+		ALiVE_orbatCreator_loadout[] = {{"OPTRE_MA5C_AC","OPTRE_M6C_compensator","acc_flashlight_smg_01","288th_M7_Sight",{"OPTRE_32Rnd_762x51_Mag_Tracer",30},{},""},{},{"OPTRE_M6G","","OPTRE_M6G",{"OPTRE_8Rnd_127x40_Mag",32},{},""},{"OPTRE_UNSC_Army_Uniform_T_URB",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"OPTRE_8Rnd_127x40_Mag",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"OPTRE_32Rnd_762x51_Mag_Tracer",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
 
 		backpack = "";
 		headgearList[] = { "288th_CH252_Marine_OSHA",1, };
@@ -9830,13 +9727,13 @@ class cfgVehicles
 		linkedItems[] = {"288th_Armor_Marine_OSHA_H","288th_CH252_Marine_OSHA","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 		respawnlinkedItems[] = {"288th_Armor_Marine_OSHA","288th_CH252_Marine_OSHA","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 
-		weapons[] = {"288th_OSHA_Rifle","OPTRE_M6G","Binocular","Throw","Put" };
-		respawnWeapons[] = {"288th_OSHA_Rifle","OPTRE_M6G","Binocular","Throw","Put" };
+		weapons[] = {"OPTRE_MA5C_AC","OPTRE_M6G","Binocular","Throw","Put" };
+		respawnWeapons[] = {"OPTRE_MA5C_AC","OPTRE_M6G","Binocular","Throw","Put" };
 
-		magazines[] = {"288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag" };
-		respawnMagazines[] = {"288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag","288th_Plasma_White_Mag","OPTRE_8Rnd_127x40_Mag" };
+		magazines[] = {"OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag" };
+		respawnMagazines[] = {"OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_32Rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag" };
 
-		ALiVE_orbatCreator_loadout[] = {{"288th_OSHA_Rifle","OPTRE_M6C_compensator","acc_flashlight_smg_01","288th_M7_Sight",{"288th_Plasma_White_Mag",30},{},""},{},{"OPTRE_M6G","","OPTRE_M6G",{"OPTRE_8Rnd_127x40_Mag",32},{},""},{"OPTRE_UNSC_Army_Uniform_T_URB",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"OPTRE_8Rnd_127x40_Mag",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"288th_Plasma_White_Mag",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
+		ALiVE_orbatCreator_loadout[] = {{"OPTRE_MA5C_AC","OPTRE_M6C_compensator","acc_flashlight_smg_01","288th_M7_Sight",{"OPTRE_32Rnd_762x51_Mag_Tracer",30},{},""},{},{"OPTRE_M6G","","OPTRE_M6G",{"OPTRE_8Rnd_127x40_Mag",32},{},""},{"OPTRE_UNSC_Army_Uniform_T_URB",{{"288th_Biofoam",20},{"ACE_CableTie",5},{"OPTRE_8Rnd_127x40_Mag",3,32},{"288th_M12_Frag",5,1},{"288th_White_Smoke_Mag",5,1},{"288th_White_Smoke_Mag",2,1},{"288th_White_Smoke_Mag",2,1},{"OPTRE_32Rnd_762x51_Mag_Tracer",10,30}}},{"288th_Armor_Marine_Rifleman",{}},{},"288th_CH252_Marine","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"}};
 		// custom attributes (do not delete)
 		ALiVE_orbatCreator_owned = 1;
 		 

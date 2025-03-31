@@ -121,27 +121,60 @@ class CfgMagazineWells
 			"288th_HEDP_Buckshot",
 			"288th_Incendiary_Buckshot",
 			"288th_Slug_Incendiary",
-			"OPTRE_12Rnd_12Gauge_Smoke"
+			"288th_Flechette_Buckshot",
+			"288th_Slug_Flechette",
+			"288th_Slug_EMP",
+			"288th_Slug_Taser",
+			"288th_Slug_SS",
+			"288th_Slug_Smoke",
+			"288th_Slug_KO"
 		};
 	};
 	class 288th_M45TAC
 	{
 		CfgMagazines[] =
 		{
+			"288th_Loose_Normal_Buckshot",
 			"288th_Loose_Buckshot",
 			"288th_Loose_Slugs",
 			"288th_Loose_HEDP_Buckshot",
 			"288th_Loose_Slugs_HEDP",
 			"288th_Loose_Incendiary_Buckshot",
 			"288th_Loose_Slugs_Incendiary",
-			"OPTRE_12Rnd_12Gauge_Smoke"
+			"288th_Loose_flechette_Buckshot",
+			"288th_Loose_Slugs_flechette",
+			"288th_Loose_Slugs_EMP",
+			"288th_Loose_Slugs_Taser",
+			"288th_Loose_Slugs_SS",
+			"288th_Loose_Slugs_KO",
+			"288th_Loose_Slug_Smoke"
+		};
+	};
+	class 288th_KSG_12
+	{
+		CfgMagazines[] =
+		{
+			"288th_Loose_Normal_Buckshot",
+			"288th_Loose_Slugs",
+			"288th_Loose_HEDP_Buckshot",
+			"288th_Loose_Slugs_HEDP",
+			"288th_Loose_Incendiary_Buckshot",
+			"288th_Loose_Slugs_Incendiary",
+			"288th_Loose_flechette_Buckshot",
+			"288th_Loose_Slugs_flechette",
+			"288th_Loose_Slugs_EMP",
+			"288th_Loose_Slugs_Taser",
+			"288th_Loose_Slugs_SS",
+			"288th_Loose_Slugs_KO",
+			"288th_Loose_Slug_Smoke"
 		};
 	};
 	class 288th_M73X
 	{
 		CfgMagazines[] =
 		{
-			"288th_500Rnd_65x85_Box"
+			"288th_500Rnd_65x85_Box",
+			"288th_500Rnd_65x85_Box_Normal"
 		};
 	};
 	class 288th_M50
@@ -180,13 +213,6 @@ class CfgMagazineWells
 		CfgMagazines[] =
 		{
 			"288th_M12H_Mag"
-		};
-	};
-	class 288th_scrapped
-	{
-		CfgMagazines[] =
-		{
-			"288th_Scrapmag"
 		};
 	};
 	class 288th_AC_8
@@ -285,6 +311,7 @@ class cfgWeapons
 	class TCF_M33_T;
 	class OPTRE_M247;
 	class SC_Rifle_SSR55C;
+	class SC_Rifle_PKMP;
 	class SC_Rifle_Bastard;
 	class OPTRE_MachineGun_Base;
 	class srifle_DMR_04_F;
@@ -470,7 +497,7 @@ class cfgWeapons
 		descriptionshort = "Special Oni Derived Armament M73X";
 		recoil = "recoil_lim";
 		magazineWell[] = { 288th_M73X };
-		magazines[] = { "288th_500Rnd_65x85_Box" };
+		magazines[] = { "288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box_Normal" };
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M73X\M73_co.paa"};
 		HUD_BulletInARows = 5;
@@ -542,6 +569,80 @@ class cfgWeapons
 		};
 	};
 
+	class 288th_PKMP: SC_Rifle_PKMP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		displayName = "[288th] PKMP MMG";
+		baseWeapon = "288th_PKMP";
+		maxZeroing = 1000;
+		descriptionshort = "Special Oni Derived Armament PKMP";
+		magazines[] = {"288th_200Rnd_308_Mag"};
+		//recoil = "recoil_Assault";
+		recoil = "recoil_lim";
+		//recoil = "recoil_mmg_01";
+		hiddenSelections[] = {"camo","camo1"};
+		hiddenSelectionsTextures[] = {"sc_weapons_2\data\pkmp\textures\body_co.paa","sc_weapons_2\data\pkmp\textures\mag_co.paa"};
+		modes[] = { "FullAutoFast","FullAutoSlow" };
+		class FullAutoSlow : Mode_FullAuto
+		{
+			class BaseSoundModeType;
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] = { "MMG02_Shot_SoundSet","MMG02_Tail_SoundSet","MMG02_InteriorTail_SoundSet" };
+			};
+			class SilencedSound : BaseSoundModeType
+			{
+				soundsetshot[] = { "MMG02_silencerShot_SoundSet","MMG02_silencerTail_SoundSet","MMG02_silencerInteriorTail_SoundSet" };
+			};
+			dispersion = 5e-05;
+			reloadTime = 0.15;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 150;
+			midRangeProbab = 0.7;
+			maxRange = 250;
+			maxRangeProbab = 0.2;
+		};
+		class FullAutoFast : FullAutoSlow
+		{
+			reloadTime = 0.1;
+			textureType = "fastAuto";
+		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "288th_M7_Sight";
+			};
+			class LinkedItemsMuzzle
+			{
+				slot = "MuzzleSlot";
+				item = "ACE_muzzle_mzls_B";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 140;
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleitems[] = { "optre_ma5suppressor","ACE_muzzle_mzls_B" };
+			};
+			class CowsSlot : CowsSlot
+			{
+				compatibleitems[] = { "288th_SS_6_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","288th_M6C_Scope","288th_M7_Sight","optic_arco_ak_blk_f","optic_dms","optic_aco_grn","optic_aco","optic_arco_blk_f","optic_holosight_blk_f","optic_mrco","optic_khs_blk","optic_hamr","optic_sos","optic_lrps","optic_nightstalker","optic_erco_blk_f","optic_ams","optic_yorris","optic_ico_01_black_f","optic_aco_smg","optic_aco_grn_smg","optic_holosight_smg_blk_f","optic_mrd_black","ace_optic_lrps_2d","ace_optic_lrps_pip","ace_optic_sos_2d","ace_optic_sos_pip","ace_optic_mrco_2d","ace_optic_hamr_2d","ace_optic_hamr_pip","optre_srs99_scope","optre_srs99c_scope","optre_m393_eotech","optre_m73_smartlink","optre_m7_sight","optre_m393_acog","optre_hmg38_carryhandle","optre_m393_scope","optre_m392_scope","optre_br55hb_scope","OPTRE_BR45_Scope","optre_m6c_scope","OPTRE_M6G_Scope","OPTRE_BMR_Scope","OPTRE_M12_Optic","OPTRE_MA5_BUIS","OPTRE_M12_Optic","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","OPTRE_SRM_Sight","TCF_M393_EOTECH_v2"};
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				compatibleitems[] = { "bipod_01_F_blk","bipod_02_F_blk","bipod_03_F_blk" };
+			};
+		};
+	};
+
 	class 288th_M50 : TCF_M33_T
 	{
 		dlc = "288thDJP_Aux";
@@ -562,6 +663,7 @@ class cfgWeapons
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 75;
 		cursor = "OPTRE_M73";
+		maxZeroing = 1000;
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -643,6 +745,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = { "a3\Weapons_F_Enoch\Machineguns\M200\Data\1st_person_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\Body_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\grip_black_co.paa" };
 		cursor = "EmptyCursor";
 		cursorAim = "OPTRE_M638";
+		maxZeroing = 1000;
 		class WeaponSlotsInfo
 		{
 			mass = 95;
@@ -1108,7 +1211,7 @@ class cfgWeapons
 		modes[] = { "Single" };
 		class Single : Mode_SemiAuto
 		{
-			sounds[] = { "StandardSound" };
+			sounds[] = { "StandardSound","SilencedSound" };
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
@@ -1119,6 +1222,10 @@ class cfgWeapons
 			class StandardSound : BaseSoundModeType
 			{
 				soundsetshot[] = { "OPTRE_Shotgun_SoundSet","M320_Tail_SoundSet","M320_InteriorTail_SoundSet" };
+			};
+			class SilencedSound : BaseSoundModeType
+			{
+				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
 			};
 			reloadTime = 1.25;
 			dispersion = 5e-05;
@@ -1316,8 +1423,8 @@ class cfgWeapons
 		baseWeapon = "288th_Eugen_XM54";
 		descriptionshort = "Eugen's custom 'XM54' Shotgun";
 		maxZeroing = 1000;
-		magazineWell[] = { 288th_M45TAC };
-		magazines[] = { "288th_Loose_Buckshot","288th_Loose_Slugs" };
+		magazineWell[] = { "288th_KSG_12" };
+		magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
 		visionMode[] ={"Normal","NVG"};
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_PistolSmart";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_PistolSmart";
