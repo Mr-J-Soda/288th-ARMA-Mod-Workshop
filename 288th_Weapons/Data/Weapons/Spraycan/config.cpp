@@ -128,4 +128,14 @@ class ACE_Tags
 		};
 		icon="288th_Weapons\Data\Weapons\Spraycan\unsafearea.paa";
 	};
+	class 288th_FieldCode_Trapped
+	{
+		displayName="Trapped";
+		requiredItem="288th_Spraypaint";
+		textures[]=
+		{
+			"288th_Weapons\Data\Weapons\Spraycan\trapped.paa"
+		};
+		icon="288th_Weapons\Data\Weapons\Spraycan\trapped.paa";
+	};
 };

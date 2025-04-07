@@ -454,10 +454,6 @@ class cfgAmmo
 		hit = 13;
 		typicalSpeed = 600;
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
-		craterEffects = "";
-		explosive = 1;
-		explosionEffects = "";
-		explosionSoundEffect = "";
 		tracerStartTime = 0;
 		tracerEndTime = 10;
 		tracersEvery = 1;
@@ -525,7 +521,7 @@ class cfgAmmo
 	{
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 2;
-		effectFly = "KA_flametrail";
+		effectFly = "288th_flametrail";
 	};
 	class 65x85_APFS_flechette : 65x85_APFS
 	{
@@ -567,22 +563,6 @@ class cfgAmmo
 		tracerstarttime = 0.05;
 		tracerendtime = 10;
 		tracersEvery = 1;
-	};
-
-	//custom 50AE round
-	class 288th_50_AE_Ball: B_45ACP_Ball
-	{
-		hit = 8.1;
-		indirectHit = 0;
-		indirectHitRange = 0;
-		visibleFire = 9;
-		audibleFire = 9;
-		visibleFireTime = 3;
-		cost = 50;
-		caliber = 3;
-		deflecting = 30;
-		typicalSpeed = 470;
-		airFriction = -0.0016;
 	};
 
 	//Buckshot 
@@ -1144,7 +1124,7 @@ class cfgAmmo
 		thrustTime=10;
 		thrust=100;
 		maxSpeed=300;
-		typicalSpeed=175;
+		typicalSpeed=200;
 		class Components
 		{
 			class SensorsManagerComponent
@@ -1194,6 +1174,8 @@ class cfgAmmo
 		cmImmunity = 0.85;
 		manualControl = 0;
 		weaponLockSystem = 0;
+		maxSpeed=300;
+		typicalSpeed=200;
 		class ace_missileguidance
 		{
 			enabled = 0;
@@ -1213,7 +1195,7 @@ class cfgAmmo
 		cmImmunity = 0.85;
 		manualControl = 0;
 		weaponLockSystem = 0;
-		explosionEffects = "KA_flameExplosion";
+		explosionEffects = "288th_flameExplosion";
 		class ace_missileguidance
 		{
 			enabled = 0;
@@ -1244,8 +1226,8 @@ class cfgAmmo
 		initTime = 0.1;
 		thrustTime = 10;
 		thrust = 10;
-		maxSpeed = 200;
-		typicalSpeed = 200;
+		maxSpeed=300;
+		typicalSpeed=200;
 		maneuvrability = 25;
 		class ace_missileguidance
 		{
@@ -1285,6 +1267,8 @@ class cfgAmmo
 		trackLead=0.80000001;
 		initTime=0.1;
 		thrustTime=15;
+		maxSpeed=300;
+		typicalSpeed=200;
 		class Components
 		{
 			class SensorsManagerComponent
@@ -1388,7 +1372,7 @@ class cfgAmmo
 		thrustTime=10;
 		thrust=100;
 		maxSpeed=300;
-		typicalSpeed=175;
+		typicalSpeed=200;
 		class Components
 		{
 			class SensorsManagerComponent
@@ -1438,6 +1422,8 @@ class cfgAmmo
 		cmImmunity = 0.85;
 		manualControl = 0;
 		weaponLockSystem = 0;
+		maxSpeed=300;
+		typicalSpeed=200;
 		class ace_missileguidance
 		{
 			enabled = 0;
@@ -1468,8 +1454,8 @@ class cfgAmmo
 		initTime = 0.1;
 		thrustTime = 10;
 		thrust = 10;
-		maxSpeed = 200;
-		typicalSpeed = 200;
+		maxSpeed=300;
+		typicalSpeed=200;
 		maneuvrability = 25;
 		class ace_missileguidance
 		{
@@ -1509,6 +1495,8 @@ class cfgAmmo
 		trackLead=0.80000001;
 		initTime=0.1;
 		thrustTime=15;
+		maxSpeed=300;
+		typicalSpeed=200;
 		class Components
 		{
 			class SensorsManagerComponent
@@ -1861,12 +1849,24 @@ class CfgMagazines
 		initspeed = 600;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 150rnd 6.5x85 Drum";
-		displaynameshort = "288th Standard Drum";
-		descriptionshort = "A large LMG drum loaded with 6.5x85 APFS";
+		displayname = "[288th] 150rnd 6.5x85 Mag";
+		displaynameshort = "288th Standard Mag";
+		descriptionshort = "A large LMG Mag loaded with 6.5x85 APFS";
 		ammo = "65x85_APFS";
 		count = 150;
 		mass = 30;
+	};
+	class 288th_EHP_LMG : 288th_Stanag_LMG
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		initspeed = 600;
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 150rnd 6.5x85 EHP Mag";
+		displaynameshort = "6.5x85 EHP Mag";
+		descriptionshort = "A large LMG Mag loaded with External Hollow-Point ammo";
+		ammo = "65x85_EHP";
 	};
 
 	// 288th DMR/BR
@@ -2048,6 +2048,8 @@ class CfgMagazines
 		hiddenSelectionsTextures[] = { "\288th_Weapons\Data\Weapons\Launchers\SACLOS.paa","\optre_weapons\rockets\data\logos_ca.paa" };
 		count = 2;
 		mass = 80;
+		initSpeed = 200;
+		maxLeadSpeed = 400;
 	};
 	class 288th_M41_Twin_HE : 288th_M41_Twin_HEAT_SACLOS
 	{
@@ -2107,9 +2109,9 @@ class CfgMagazines
 		ammo = "288th_M41_Rocket_HEAT_SACLOS";
 		count = 1;
 		mass = 30;
-		initSpeed = 150;
 		allowedSlots[] = { 901,701 };
-		maxLeadSpeed = 300;
+		initSpeed = 200;
+		maxLeadSpeed = 400;
 	};
 	class 288th_M57_Cricket_HE : 288th_M57_Cricket_SACLOS
 	{
@@ -2752,19 +2754,6 @@ class CfgMagazines
 		lastRoundsTracer = 10;
 	};
 
-	//PKMP Box
-	class 288th_200Rnd_308_Mag: SC_200Rnd_338_Mag
-	{
-		author = "Scion Conflict Mod Team";
-		displayname = "[288th] 200Rnd .308 Box";
-		displaynameshort = ".308";
-		descriptionShort = "200 Round Box .308";
-		ammo = "288th_308_rifle_yellow";
-		tracersEvery = 3;
-		lastRoundsTracer = 20;
-		mass = 75;
-	};
-
 	//M50 HMG Box
 	class 288th_75Rnd_15x50_Box : TCF_100Rnd_762x51_Mag_M33
 	{
@@ -2826,6 +2815,8 @@ class CfgMagazines
 		descriptionShort = "50Rnd 20mm Smoke Grenade Box";
 		mass = 60;
 	};
+
+	//Temp cursed revolver ammo
 	class 288th_Temp_Yellow_Tracer : 6Rnd_45ACP_Cylinder
 	{
 		dlc = "288thDJP_Aux";
@@ -2834,7 +2825,7 @@ class CfgMagazines
 		scopeArsenal = 2;
 		initspeed = 400;
 		tracersEvery = 1;
-		count = 9;
+		count = 3;
 		ammo = "288th_308_rifle_yellow";
 		displayname = "[288th] 6Rnd Yellow Tracer Ammo";
 		displaynameshort = "Yellow Tracer Ammo";
@@ -2847,12 +2838,14 @@ class CfgMagazines
 		scope = 2;
 		scopeArsenal = 2;
 		initspeed = 400;
-		count = 7;
+		count = 1;
 		ammo = "288th_Plasma_Purple";
 		displayname = "[288th] 6Rnd Purple Plasma Ammo";
 		displaynameshort = "Purple Plasma Ammo";
 		descriptionShort = "Temp's Purple Plasma";
 	};
+	
+	//Experimental ammo
 	class 288th_7Rnd_Gauss_Slug_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag
 	{
 		dlc = "288thDJP_Aux";
@@ -2869,7 +2862,7 @@ class CfgMagazines
 		tracersEvery = 1;
 		lastRoundsTracer = 7;
 	};
-	class 288th_Autocannon_mag: 7Rnd_408_Mag
+	/*class 288th_Autocannon_mag: 7Rnd_408_Mag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -2884,7 +2877,7 @@ class CfgMagazines
 		count = 10;
 		mass = 20;
 		allowedslots[] = {901};
-	};
+	};*/
 	class 288th_EMP : 288th_Plasma_Blue_Mag
 	{
 		displayname = "[288th] 15Rnd EMP Mag";
@@ -2909,26 +2902,6 @@ class CfgMagazines
 		count = 50;
 		mass = 1;
 		tracersEvery = 1;
-	};
-
-	//Desert Falcon Mag
-	class 11Rnd_45ACP_Mag;
-	class 288th_7Rnd_50_AE: 11Rnd_45ACP_Mag
-	{
-		displayName = "[288th] .50 AE";
-		displaynameshort = "50 AE Mag";
-		descriptionshort = ".50 AE";
-		picture = "\288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\UI\mag.paa";
-		model = "\288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\Desert_Eagle-MAG.p3d";
-		type = 16;
-		ammo = "288th_50_AE_Ball";
-		count = 7;
-		initSpeed = 470;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
 	};
 };
 

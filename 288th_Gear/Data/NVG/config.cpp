@@ -2489,4 +2489,13 @@ class cfgWeapons
 		displayName = "[288th] Mark 8 Interface";
 		thermalMode[] = { 7 };
 	};
+
+	//Custom NVGS
+	class 288th_Whiskey_NVG : 288th_MK5_MVI
+	{
+		dlc = "288DJP";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Custom NVG (Whiskey)";
+		thermalMode[] = { 0,1 };
+	};
 };

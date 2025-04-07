@@ -47,6 +47,7 @@ class cfgWeapons
 	class Rifle_Base_F;
 	class SMG_01_F;
 	class optre_m7;
+	class OPTRE_M7_Folded;
 	class SMG_05_F;
 	class OPTRE_M7_Riot_Shield;
 	class hgun_PDW2000_F;
@@ -107,11 +108,6 @@ class cfgWeapons
 			{
 				slot = "CowsSlot";
 				item = "288th_M7_Sight";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "OPTRE_M6C_compensator";
 			};
 			class LinkedItemsPointer
 			{
@@ -211,11 +207,6 @@ class cfgWeapons
 			{
 				slot = "CowsSlot";
 				item = "Optre_Evo_sight_riser";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "optre_ma5suppressor";
 			};
 		};
 		class WeaponSlotsInfo
@@ -372,6 +363,107 @@ class cfgWeapons
 		};
 		aiDispersionCoefY = 10;
 		aiDispersionCoefX = 10;
+	};
+	class 288th_M7X_SMG_Folded: OPTRE_M7_Folded
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] M7X SMG";
+		descriptionshort = "Special Oni Derived Armament M7X SMG";
+		baseWeapon = "288th_M7X_SMG_Folded";
+		magazines[] ={288th_45ACP_Mag_AP};
+		magazineWell[] = { 288th_M7V_SMG };
+		//recoil = "recoil_M7V_SMG";
+		visionMode[] ={"Normal","NVG"};
+		cursor = "OPTRE_M7";
+		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\SMG\SMG_IRON.paa";
+		//pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SubMachineGuns\M7_icon.paa";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_SMG";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_SMG";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_SMG";
+		HUD_BulletInARows = 3;
+		HUD_TotalPosibleBullet = 60;
+		hiddenSelections[] = {"camo","camo1"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M7V_SMG\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
+		class GunParticles
+		{
+			class EffectShotCloud
+			{
+				positionName = "Nabojnicestart";
+				directionName = "Nabojniceend";
+				effectName = "CaselessAmmoCloud";
+			};
+		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "288th_M7_Sight";
+			};
+			class LinkedItemsAcc
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M7_Laser";
+			};
+			class LinkedItemsMuzzle
+			{
+				slot = "MuzzleSlot";
+				item = "OPTRE_M7_Silencer";
+			};
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 30;
+			class MuzzleSlot : MuzzleSlot_556
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleitems[] =
+				{
+					"OPTRE_M7_Silencer"
+				};
+			};
+			class CowsSlot : CowsSlot_Rail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleitems[] =
+				{
+					"Optre_Recon_Sight",
+					"Optre_Recon_Sight_Red",
+					"Optre_Recon_Sight_Green",
+					"288th_M7_Sight",
+					"optre_m7_sight"
+				};
+			};
+			class PointerSlot : PointerSlot_Rail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
+				compatibleitems[] =
+				{
+					"OPTRE_M7_Laser",
+					"OPTRE_M7_Vis_Red_Laser",
+					"OPTRE_M7_Flashlight"
+				};
+			};
+			class UnderBarrelSlot : UnderBarrelSlot_Rail
+			{
+				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+				compatibleItems[] =
+				{
+
+				};
+				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+				iconPinpoint = "Bottom";
+			};
+		};
+		aiDispersionCoefY = 10;
+		aiDispersionCoefX = 10;
+		handAnim[] = {"OFP2_ManSkeleton"};
+		reloadAction = "GestureReloadPistol";
 	};
 	class 288th_M7X_Riot_Shield: OPTRE_M7_Riot_Shield
 	{
@@ -544,18 +636,4 @@ class cfgWeapons
 		autoReload = true;
 		magazineReloadTime = 2.0;
 	};
-
-	// 288th M7V SMG Sidearm
-	/*class 288th_M7V_SMG_2 : 288th_M7V_SMG
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		canShootInWater = 1;
-		type = 2;
-		displayName = "[288th] M7V SMG";
-		baseWeapon = "288th_M7V_SMG_2";
-		model = "\A3\Weapons_F_beta\Smgs\SMG_01\SMG_01_F.p3d";
-	};*/
 };

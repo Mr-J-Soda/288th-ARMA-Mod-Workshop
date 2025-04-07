@@ -798,21 +798,6 @@ class cfgWeapons
 			burst = 50;
 		};
 	};*/
-	class 288th_VC1_Flamethrower_V: KA_VC1_Flamethrower
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] VC1 Flamethrower";
-		magazines[] ={"288th_VC1_Flamethrower_Mag"};
-		fireSpreadAngle = 1;
-		discreteDistance[] = {10};
-		scope = 1;
-		scopeArsenal = 1;
-		autoReload = true;
-		magazineReloadTime = 2;
-		cursor = "EmptyCursor";
-		cursorAim = "OPTRE_GRNDLNCH";
-	};
 	class 288th_Railgun_V: OPTRE_M68_GAUSS
 	{
 		cursor = "EmptyCursor";

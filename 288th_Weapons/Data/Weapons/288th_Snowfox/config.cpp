@@ -104,18 +104,13 @@ class cfgWeapons
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_DMR";
 		Eye = "OPTRE_EYE_HUD_AmmoCount_DMR";
 		HUD_BulletInARows = 1;
-		HUD_TotalPosibleBullet = 15;
+		HUD_TotalPosibleBullet = 20;
 		class LinkedItems
 		{
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
 				item = "288th_M12_Sight";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "optre_ma5suppressor";
 			};
 			class LinkedItemsPointer
 			{
@@ -141,6 +136,7 @@ class cfgWeapons
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleitems[] =
 				{
+					"288th_Hamr_Scope",
 					"288th_SS_6_Scope",
 					"Optre_Recon_Sight",
 					"Optre_Recon_Sight_Red",
@@ -417,11 +413,6 @@ class cfgWeapons
 			{
 				slot = "CowsSlot";
 				item = "288th_SS_6_Scope";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "optre_ma5suppressor";
 			};
 			class LinkedItemsPointer
 			{

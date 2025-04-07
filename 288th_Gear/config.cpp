@@ -682,6 +682,10 @@ class cfgWeapons
 	CREATEUNI(Gray);
 	CREATEUNI(Snow);
 	CREATEUNI(Woodland);
+	CREATEUNI(White);
+	CREATEUNI(Yellow);
+	CREATEUNI(Green);
+	CREATEUNI(Blue);
 
 	//--------------------------------------------------------------------------------------------//
 };
@@ -778,6 +782,10 @@ class cfgVehicles
 	CREATESOLD(Gray);
 	CREATESOLD(Snow);
 	CREATESOLD(Woodland);
+	CREATESOLD(White);
+	CREATESOLD(Yellow);
+	CREATESOLD(Green);
+	CREATESOLD(Blue);
 
 	//--------------------------------------------------------------------------------------------//
 };

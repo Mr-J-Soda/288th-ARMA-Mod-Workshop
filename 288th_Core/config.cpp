@@ -197,3 +197,44 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 	};
 };
+class CfgMarkerClasses
+{
+    class 288th_Markers
+	{
+		displayName="288th Markers";
+    };
+};
+class CfgMarkers
+{
+    class 288th_BS_Marker
+    {
+		name="[288th] Brimstone Command";
+        icon="\288th_Core\Logos\Brim_Logo_ODST.paa";
+        color[]={0,0,0,1};
+        size=45;
+        shadow = 0;
+        scope = 2;
+		scopeCurator = 2;
+        markerClass = "288th_Markers";
+    };
+	class 288th_WT_Marker: 288th_BS_Marker
+	{
+		name="[288th] White Team";
+		icon="\288th_Core\Logos\WT_Logo_Blank.paa";
+	};
+	class 288th_YT_Marker: 288th_BS_Marker
+	{
+		name="[288th] Yellow Team";
+		icon="\288th_Core\Logos\YT_Logo_ODST.paa";
+	};
+	class 288th_BT_Marker: 288th_BS_Marker
+	{
+		name="[288th] Blue Team";
+		icon="\288th_Core\Logos\BT_Logo_Blank.paa";
+	};
+	class 288th_GT_Marker: 288th_BS_Marker
+	{
+		name="[288th] Green Team";
+		icon="\288th_Core\Logos\GT_Logo_Blank.paa";
+	};
+};

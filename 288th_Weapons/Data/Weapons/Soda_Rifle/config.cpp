@@ -202,11 +202,6 @@ class cfgWeapons
 				slot = "CowsSlot";
 				item = "288th_M12_Sight";
 			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "Invisable_Supresser_288th";
-			};
 			class LinkedItemsPointer
 			{
 				slot = "PointerSlot";

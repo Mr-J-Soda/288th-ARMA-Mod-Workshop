@@ -35,6 +35,7 @@ class PointerSlot;
 class cfgWeapons
 {
 	class OPTRE_M392_DMR;
+	class OPTRE_M393_DMR;
 
 	class WeaponSlotsInfo;
 	class MuzzleSlot;
@@ -75,11 +76,6 @@ class cfgWeapons
 			{
 				slot = "CowsSlot";
 				item = "optre_m393_eotech";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "optre_ma5suppressor";
 			};
 			class LinkedItemsPointer
 			{

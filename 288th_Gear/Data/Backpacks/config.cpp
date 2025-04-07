@@ -300,6 +300,33 @@ class cfgVehicles
 		};
 	};
 
+	//invisable bags
+	class 288th_Invisible_Backpack : 288th_ILCS_Backpack
+    {
+        dlc = "288thDJP_Aux";
+        author = "Soda / Misriah 288";
+        picture = "\OPTRE_weapons\backpacks\icons\rucksack_black.paa";
+        displayName = "[288th] Storage Upgrade";
+        model = "\A3\weapons_f\empty";
+        allowedSlots[] = {901};
+        maximumLoad = 500;
+        mass = 30;
+    };
+	class 288th_RTO_Invisible : 288th_RTO_pack
+    {
+        displayName = "[288th] Radio Upgrade";
+        model = "\A3\weapons_f\empty";
+        maximumLoad = 500;
+        mass = 30;
+        tf_isolatedAmount = 0.65;
+        tf_range = 30000;
+        tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio = 1;
+        tf_encryptionCode = "tf_west_radio_code";
+        tf_dialog = "rt1523g_radio_dialog";
+        tf_subtype = "digital_lr";
+    };
+
 	class 288th_Zeus_pack : 288th_RTO_pack
 	{
 		dlc = "288thDJP_Aux";
@@ -309,6 +336,7 @@ class cfgVehicles
 		tf_range = 100000;
 	};
 
+	//Jumppacks
 	class 288th_Test_Jetpack : NSM_neutral_XD_1_backpack
 	{
 		dlc = "288thDJP_Aux";
@@ -564,23 +592,6 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
-	/*class 288th_SupplyPod_Bag : 288th_ILCS_Backpack
-	{
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		displayName = "[288th] Deployable Supply Pod";
-		mass = 500;
-		maximumLoad = 0;
-		class assembleInfo
-		{
-			primary = 1;
-			base = "";
-			assembleTo = "288th_SupplyPod";
-			displayName = "Supply Pod";
-			dissasembleTo[] = {};
-		};
-	};*/
 
 	class OPTRE_S12_SOLA_Jetpack: OPTRE_ILCS_Rucksack_Black
 	{
@@ -598,8 +609,8 @@ class cfgVehicles
 		tf_encryptionCode = "tf_west_radio_code";
 		tf_dialog = "rt1523g_radio_dialog";
 		tf_subtype = "digital_lr";
-		sc_jumppack = 1;
-		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };
+		/*sc_jumppack = 1;
+		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };*/
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"optre_weapons\backpacks\data\jetpack_co.paa"};
 	};
@@ -617,8 +628,8 @@ class cfgVehicles
 		tf_encryptionCode = "tf_west_radio_code";
 		tf_dialog = "rt1523g_radio_dialog";
 		tf_subtype = "digital_lr";
-		sc_jumppack = 1;
-		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };
+		/*sc_jumppack = 1;
+		sc_particles[] = { {-0.22,-0.25,0.1},{0.22,-0.25,0.1} };*/
 		model = "\OPTRE_weapons\backpacks\jetpack_on.p3d";
 		hiddenSelections[] = {"camo1","camo"};
 		hiddenSelectionsTextures[] = {"optre_vehicles\pelican\data\bolt_blue_ca.paa","optre_weapons\backpacks\data\jetpack_co.paa"};

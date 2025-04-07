@@ -874,6 +874,37 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
+	class M2_weapon_01_Base_F;
+	class M2_Flamethrower_01_F: M2_weapon_01_Base_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class Flammenwerfer41_weapon_01_Base_F;
+	class 41_Flammenwerfer_02_F: Flammenwerfer41_weapon_01_Base_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class Bag_Base;
+	class 41_Flammenwerfer_Balloons: Bag_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class M2_Flamethrower_Balloons_Pipe: Bag_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
 	class optrep_br55hb
 	{
 		scope = 1;
@@ -1581,419 +1612,798 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	/*{
-		class hgun_pistol_signal_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	class SC_Backpack_Warbot;
+	class SC_RebornUnits_Skimmer_Drone_Operator_pack: SC_Backpack_Warbot
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class hgun_pistol_01_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_PXR10;
+	class SC_PXR10_LR_West: SC_PXR10
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class hgun_p07_blk_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Security_Team_Leader_pack: SC_PXR10_LR_West
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class hgun_p07_khk_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_EnforcerRucksack;
+	class SC_RebornUnits_Security_Rifleman_pack: SC_EnforcerRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class hgun_esd_01_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class B_AssaultPack_blk;
+	class SC_RebornUnits_Security_Shotgun_Specialist_pack: B_AssaultPack_blk
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_katana
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Sniper_pack: B_AssaultPack_blk
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class tcf_m2311
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Sniper_Anti_Materiel_pack: B_AssaultPack_blk
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_M33
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Spotter_pack: SC_PXR10_LR_West
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_R6V_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Crewman_pack: B_AssaultPack_blk
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_rpg7_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Squad_Leader_pack: SC_PXR10_LR_West
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_0_titan_ghax_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_PTC;
+	class SC_RebornUnits_Medic_pack: SC_PTC
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_0_short_ghex_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_ColonistRucksack;
+	class SC_RebornUnits_Team_Leader_Kodiak_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_mpml
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Rifleman_AT_pack: B_AssaultPack_blk
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_zytherfluxcannon
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Rifleman_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_MRAWS_olive_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Rifleman_CQC_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_M57_Pilum
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Rifleman_ARG47_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_M30DFL
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Rifleman_ARG88_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_RPG32_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Rifleman_Kodiak_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_O_Titan_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Marksman_pack: B_AssaultPack_blk
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_B_Titan_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Team_Leader_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_nlaw_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Grenadier_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_I_Titan_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Ammo_Bearer_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_O_titan_short_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Machinegunner_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_I_titan_short_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Demoman_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class launch_B_titan_short_f
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_AA_Specialist_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_boceanbeamrifle
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Combat_Engineer_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class optre_fc_railgun
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class B_LegStrapBag_black_F;
+	class SC_RebornUnits_Logistics_Driver_pack: B_LegStrapBag_black_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_MF2500
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_Shotgunner_pack: SC_ColonistRucksack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_MF2500_C
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class I_UAV_01_backpack_F;
+	class SC_RebornUnits_UAV_Operater_Recon_pack: I_UAV_01_backpack_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_MF2500_GL
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_SkimmerDroneJumpjet;
+	class SC_RebornUnits_Skimmer_pack: SC_SkimmerDroneJumpjet
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_MA39S
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_BoceanTribalQuiver;
+	class SC_Bocean_Units_Bocean_Tribesman_pack: SC_BoceanTribalQuiver
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_MA39SGL
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_Bocean_Units_Bocean_Tribesman_1_pack: SC_BoceanTribalQuiver
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_M99
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_Bocean_Units_Bocean_Tribesman_2_pack: SC_BoceanTribalQuiver
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class OPTRE_M99A2S3
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_BoceanTribalQuiver_Obsidian;
+	class SC_Bocean_Units_Bocean_Tribesman_3_pack: SC_BoceanTribalQuiver_Obsidian
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARM37
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_BoceanTribalQuiver_Gray;
+	class SC_Bocean_Units_Bocean_Tribesman_4_pack: SC_BoceanTribalQuiver_Gray
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARM37_DMR
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_Bocean_Units_Bocean_Tribesman_5_pack: SC_BoceanTribalQuiver
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARM37_GL
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_Backpack_SMR_Green;
+	class SC_RebornUnits_SE_C_Engineer_G_pack: SC_Backpack_SMR_Green
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARM37_SHT
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_Backpack_SMR_Desert;
+	class SC_RebornUnits_SE_C_Engineer_D_pack: SC_Backpack_SMR_Desert
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARMX
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_WarbotRocketRack;
+	class SC_RebornUnits_SE_C_Rifleman_AT_D_pack: SC_WarbotRocketRack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARMX_GL
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Rifleman_AT_G_pack: SC_WarbotRocketRack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARMX_GL_light
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Anti_Air_Specialist_D_pack: SC_WarbotRocketRack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class TCF_ARMX_light
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Anti_Air_Specialist_G_pack: SC_WarbotRocketRack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_Rifle_SSR55
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Medic_F_pack: SC_RebornUnits_Medic_pack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_Rifle_SSR55C
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Medic_G_pack: SC_RebornUnits_Medic_pack
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_sg7
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_Civilians_SC_Civilian_Medic_pack: SC_PTC
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_ravager
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Squad_Leader_G_pack: SC_PXR10
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_Rifle_specterrm1_gl
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_RebornUnits_SE_C_Squad_Leader_D_pack: SC_PXR10
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_orgurrepeater
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SC_MercerJumppack;
+	class SC_MercerJumppack_Black: SC_MercerJumppack
+	{
+		displayName = "Mercer Jump-Pack (Black)";
+	};
+	class SC_MercerJumppack_Sand: SC_MercerJumppack
+	{
+		displayName = "Mercer Jump-Pack (Sand)";
+	};
+	class WRS_Weapon_Sniper_Bolt;
+	class SA_SR10: WRS_Weapon_Sniper_Bolt 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_raicr
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WRS_Weapon_LMG;
+	class SA_HMG83: WRS_Weapon_LMG 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_specterm1
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SA_HMG83_Dev: WRS_Weapon_LMG 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_Rifle_Bastard
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WRS_Weapon_AR_2;
+	class SA_SG8: WRS_Weapon_AR_2 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_arg88
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WRS_Weapon_AUG;
+	class SA_PD6: WRS_Weapon_AUG 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_arg88m
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WRS_Weapon_AR_Ver1;
+	class SA_CR7: WRS_Weapon_AR_Ver1 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class sc_rifle_arg47
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WBK_SciFi_Pistol;
+	class SA_SP8: WBK_SciFi_Pistol 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_Rifle_AR12
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WRS_Weapon_Revolver;
+	class SA_AP6: WRS_Weapon_Revolver 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class SC_Rifle_AR12C
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class WRS_Weapon_AR;
+	class SA_TR7: WRS_Weapon_AR 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class srifle_DMR_02_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class SA_TR7T: WRS_Weapon_AR 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class arifle_RPK12_F
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class TKE_UCNMMG;
+	class SA_HMG78: TKE_UCNMMG 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-		class OPTRE_BR37
-		{
-			scope = 1;
-			scopeArsenal = 1;
+	};
+	class TKE_KMCSMG;
+	class SA_SC12: TKE_KMCSMG 
+	{
+		scope = 1;
+		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		};
-	};*/
+	};
+	class TKE_UCNRifle2;
+	class SA_SA5: TKE_UCNRifle2 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class TKE_UCNRifle4;
+	class SA_SA5_UBL: TKE_UCNRifle4 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class TKE_UCNRifle3;
+	class SA_SA5_C: TKE_UCNRifle3 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class WRS_Weapon_ShotGun;
+	class SA_SG12: WRS_Weapon_ShotGun 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class TKE_MDRifle;
+	class SA_SA4: TKE_MDRifle 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class TKE_MDRifleV2;
+	class SA_SA4_UBL: TKE_MDRifleV2 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class TKE_MDLMG;
+	class SA_SA4H_SW: TKE_MDLMG 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_ARX_base_F;
+	class SA_TR13: arifle_ARX_base_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class hgun_ACPC2_F;
+    class SA_SP1: hgun_ACPC2_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class hgun_Pistol_01_F;
+    class SA_VS1: hgun_Pistol_01_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class hgun_Pistol_heavy_02_F;
+    class SA_AP3: hgun_Pistol_heavy_02_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+    class SA_VR12: arifle_AK12_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_AK12_GL_F;
+    class SA_VR12_GL: arifle_AK12_GL_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_AK12U_F;
+    class SA_VR12_K: arifle_AK12U_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_RPK12_F;
+	class SA_VR12_RPK: arifle_RPK12_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SA_VR12_U: arifle_TRG20_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MSBS65_base_F;
+	class SA_TR12: arifle_MSBS65_base_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MSBS65_Mark_base_F;
+	class SA_TR12M: arifle_MSBS65_Mark_base_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MSBS65_GL_base_F;
+	class SA_TR12GL: arifle_MSBS65_GL_base_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MSBS65_UBS_black_F;
+	class SA_TR12SG: arifle_MSBS65_UBS_black_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class srifle_GM6_F;
+	class SA_SR14: srifle_GM6_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class srifle_DMR_04_F;
+    class SA_CAMR: srifle_DMR_04_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SMG_01_F;
+	class SA_PD8: SMG_01_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SMG_02_F;
+	class SA_PD10: SMG_02_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MX_F;
+	class SA_SA1: arifle_MX_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MX_GL_F;
+	class SA_SA1_GL: arifle_MX_GL_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_MX_SW_F;
+	class SA_SA1_SW: arifle_MX_SW_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class sgun_HunterShotgun_01_F;
+	class SA_HG8: sgun_HunterShotgun_01_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_Katiba_F;
+	class SA_VR6: arifle_Katiba_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_Katiba_GL_F;
+	class SA_VR6GL: arifle_Katiba_GL_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_Katiba_C_F;
+	class SA_VR6K: arifle_Katiba_C_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_CTAR_base_F;
+	class SA_VR8: arifle_CTAR_base_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SA_VR8GL: arifle_CTAR_GL_blk_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SA_VR8SW: arifle_CTARS_blk_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class hgun_PDW2000_F;
+	class SA_PD4: hgun_PDW2000_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class LMG_Mk200_black_F;
+	class SA_MG24: LMG_Mk200_black_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SMG_05_F;
+	class SA_PD5: SMG_05_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SMG_03C_black;
+	class SA_PD9: SMG_03C_black
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class srifle_DMR_05_blk_F;
+    class SA_MR10: srifle_DMR_05_blk_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class SA_MR10WG : srifle_DMR_05_blk_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class srifle_LRR_F;
+	class SA_SR12: srifle_LRR_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class arifle_SPAR_01_blk_F;
+	class SA_CR6: arifle_SPAR_01_blk_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class launch_MRAWS_olive_F;
+	class SA_RG12 : launch_MRAWS_olive_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class launch_B_Titan_short_F;
+	class SA_AL8 : launch_B_Titan_short_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
 };

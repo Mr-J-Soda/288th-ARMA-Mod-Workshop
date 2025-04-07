@@ -71,13 +71,6 @@ class CfgMagazineWells
 			"288th_8Rnd_127_HI_P"
 		};
 	};
-	class 288th_Desert_Falcon
-	{
-		CfgMagazines[] =
-		{
-			"288th_7Rnd_50_AE"
-		};
-	};
 };
 
 class Single;
@@ -87,6 +80,7 @@ class Mode_FullAuto;
 class MuzzleSlot;
 class CowsSlot;
 class PointerSlot;
+class GunParticles;
 
 class CfgRecoils
 {
@@ -128,7 +122,6 @@ class cfgWeapons
 	class TCF_M6GC;
 	class hgun_Pistol_heavy_01_F;
 	class hgun_Pistol_heavy_02_F;
-	class SC_Pistol_SSP9;
 	class tcf_M6D;
 	class OPTRE_M6D_Carbine_F;
 
@@ -216,6 +209,9 @@ class cfgWeapons
 		HUD_BulletInARows = 2;
 		HUD_TotalPosibleBullet = 32;
 		modes[] = { "Single","FullAuto" };
+		reloadAction = "SCI_FI_Pistol_Reload";
+		reloadMagazineSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
+		reloadSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
 		class Single: Single
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -326,203 +322,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class 288th_M6C_Riot_Shield: OPTRE_M6C_Riot_Shield
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeCurator = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		baseWeapon = "288th_M6C_Riot_Shield";
-		displayName = "[288th] Riot Shield (M6C)";
-		model = "\OPTRE_Weapons_Pistols\riotshields\riotshield_M6B.p3d";
-		hiddenSelections[] = {"camoShield","camoWindshield"};
-		hiddenSelectionsTextures[] = {"OPTRE_Weapons\RiotShield\data\Body_co.paa","OPTRE_Weapons\riotshield\data\body_ca.paa"};
-		hiddenSelectionsMaterials[] = {"OPTRE_Weapons\RiotShield\data\body.rvmat","OPTRE_Weapons\riotshield\data\glass.rvmat"};
-		handAnim[] = {"OFP2_ManSkeleton","\OPTRE_Weapons_Pistols\riotshields\data\anim\m6b_human.rtm","Spartan_ManSkeleton","\OPTRE_Weapons_Pistols\riotshields\data\anim\spartan\m6b_spartan.rtm"};
-		type = 1;
-		inertia = 0.5;
-		dexterity = 1.25;
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
-		cursor = "OPTRE_M6C";
-		HUD_BulletInARows = 2;
-		HUD_TotalPosibleBullet = 32;
-		modes[] = { "Single","FullAuto" };
-		class Single: Single
-		{
-			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[] = {"OPTRE_M6_Pistol_Shot_SoundSet","4Five_Tail_SoundSet","4Five_InteriorTail_SoundSet"};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				SoundSetShot[] = {"4Five_silencerShot_SoundSet","4Five_silencerTail_SoundSet","4Five_silencerInteriorTail_SoundSet"};
-			};
-			dispersion = 5e-05;
-			reloadTime = 0.075;
-			minRange = 10;
-			minRangeProbab = 0.5;
-			midRange = 25;
-			midRangeProbab = 0.1;
-			maxRange = 100;
-			maxRangeProbab = 0.05;
-			distanceZoomMin = 100;
-			distanceZoomMax = 100;
-		};
-		class FullAuto: Single
-		{
-			dispersion = 5e-05;
-			displayName = "FullAuto";
-			autoFire = 1;
-			textureType = "fullAuto";
-			reloadTime = 0.075;
-		};
-		magazines[] =
-		{
-			"288th_32Rnd_127x40",
-			"288th_32Rnd_127x40_AP",
-			"288th_32Rnd_127x40_APT",
-			"288th_32Rnd_127x40_Mag_NARQ",
-			//"TCF_12Rnd_127x40_Mag_NARQ"
-		};
-		magazineWell[] = { 288th_M6C };
-		recoil = "recoil_288_pistols";
-		class OpticsModes
-		{
-			class ironsight
-			{
-				cameraDir = "eye_dir";
-				discreteDistance[] = {100};
-				discreteDistanceCameraPoint[] = {"eye"};
-				discreteDistanceInitIndex = 0;
-				discretefov[] = {};
-				discreteInitIndex = 0;
-				distancezoommax = 100;
-				distancezoommin = 100;
-				maxZeroing = 100;
-				memorypointcamera = "eye";
-				opticsDisablePeripherialVision = 0;
-				opticsFlare = 0;
-				opticsID = 0;
-				opticsPPEffects[] = {"",""};
-				opticsZoomMin = 0.375;
-				opticsZoomMax = 1.1;
-				opticsZoomInit = 0.75;
-				useModelOptics = 0;
-				visionMode[] = {};
-			};
-			class shieldView
-			{
-				cameraDir = "eye2_dir";
-				discreteDistance[] = {100};
-				discreteDistanceCameraPoint[] = {"eye2"};
-				discreteDistanceInitIndex = 0;
-				discretefov[] = {};
-				discreteInitIndex = 0;
-				distancezoommax = 100;
-				distancezoommin = 100;
-				maxZeroing = 100;
-				memorypointcamera = "eye2";
-				opticsDisablePeripherialVision = 0;
-				opticsFlare = 0;
-				opticsID = 1;
-				opticsPPEffects[] = {"",""};
-				opticsZoomMin = 0.375;
-				opticsZoomMax = 1.1;
-				opticsZoomInit = 0.75;
-				useModelOptics = 0;
-				visionMode[] = {};
-			};
-		};
-		class FlashLight
-		{
-			color[] = {180,180,180};
-			ambient[] = {0.9,0.9,0.9};
-			intensity = 750;
-			size = 1;
-			innerAngle = 5;
-			outerAngle = 45;
-			coneFadeCoef = 10;
-			position = "flash_dir";
-			direction = "flash";
-			useFlare = 1;
-			flareSize = 1.5;
-			flareMaxDistance = 150;
-			dayLight = 0;
-			class Attenuation
-			{
-				start = 0;
-				constant = 0.5;
-				linear = 0.1;
-				quadratic = 0.2;
-				hardLimitStart = 100;
-				hardLimitEnd = 170;
-			};
-			scale[] = {0};
-		};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_M7_Sight";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "OPTRE_M6C_compensator";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "OPTRE_M6C_Laser";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass = 20;
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"OPTRE_M6C_compensator"
-				};
-			};
-			class CowsSlot : CowsSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleitems[] =
-				{
-					"Optre_Evo_sight",
-					"Optre_Recon_Sight",
-					"Optre_Recon_Sight_Red",
-					"Optre_Recon_Sight_Green",
-					"optre_m7_sight",
-					"288th_M7_Sight",
-					"288th_M6C_Scope",
-					"optre_m6c_scope",
-					"OPTRE_M6G_Scope",
-					"OPTRE_M12_Optic",
-				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M6C_Laser",
-					"OPTRE_M6G_Flashlight"
-				};
-			};
-			class UnderBarrelSlot: OPTRE_Riot_Shield_Icon_Attachments{};
-		};
-	};
+	//Halo 1 style Pistol
 	class 288th_M6D_PDWS : tcf_M6D
 	{
 		dlc = "288thDJP_Aux";
@@ -544,6 +344,9 @@ class cfgWeapons
 		cursor = "OPTRE_M6C";
 		HUD_BulletInARows=1;
 		HUD_TotalPosibleBullet=8;
+		reloadAction = "SCI_FI_Pistol_Reload";
+		reloadMagazineSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
+		reloadSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -741,7 +544,7 @@ class cfgWeapons
 	};
 
 	// 288th SSP9
-	class 288th_SSP9 : SC_Pistol_SSP9
+	/*class 288th_SSP9 : 288th_BasePistol
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -759,6 +562,29 @@ class cfgWeapons
 		HUD_BulletInARows = 2;
 		HUD_TotalPosibleBullet = 32;
 		cursor = "OPTRE_M6C";
+		inertia=0.1;
+		reloadMagazineSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07",
+			1,
+			1,
+			10
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Pistols\P07\dry_P07",
+			0.60000002,
+			1,
+			20
+		};
+		model="288th_Weapons\Data\Weapons\M6_Pistols\SSP9\ssp9.p3d";
+		hiddenSelections[]={"camo","camo1"};
+		hiddenSelectionsTextures[]=
+		{
+			"288th_Weapons\Data\Weapons\M6_Pistols\SSP9\gun_co.paa",
+			"288th_Weapons\Data\Weapons\M6_Pistols\SSP9\mag_co.paa"
+		};
+		picture="288th_Weapons\Data\Weapons\M6_Pistols\SSP9\icon_ssp9_ca.paa";
 		class FlashLight
 		{
 			//color[]={170,60,80};
@@ -853,12 +679,6 @@ class cfgWeapons
 					"Optre_Recon_Sight_Green",
 					"288th_M6C_Scope",
 					"optre_m6c_scope",
-					"SC_Reflex_R_Blue",
-					"SC_Reflex_C_Blue",
-					"SC_Reflex_C_Red",
-					"SC_Reflex_C1_Red",
-					"SC_Reflex_R_Green",
-					"SC_Reflex_R_Yellow",
 					"Optre_Evo_sight"
 				};
 				iconScale = 0.1;
@@ -869,10 +689,10 @@ class cfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "SC_Reflex_C_Blue";
+				item = "Optre_Evo_sight";
 			};
 		};
-	};
+	};*/
 
 	// 288th FNX-99 Tactical
 	class 288th_FNX_99_Tactical: hgun_Pistol_heavy_01_F
@@ -900,6 +720,9 @@ class cfgWeapons
 		HUD_BulletInARows = 2;
 		HUD_TotalPosibleBullet = 32;
 		modes[] = { "Single","FullAuto" };
+		reloadAction = "SCI_FI_Pistol_Reload";
+		reloadMagazineSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
+		reloadSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
 		class Single: Single
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -942,11 +765,6 @@ class cfgWeapons
 			{
 				slot = "CowsSlot";
 				item = "Optre_Recon_Sight";
-			};
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "ace_muzzle_mzls_smg_01";
 			};
 			class LinkedItemsAcc
 			{
@@ -1110,174 +928,4 @@ class cfgWeapons
 			mass = 18;
 		};
 	};
-
-	/*class Pistol;
-	class Pistol_Base_F: Pistol
-	{
-		class WeaponSlotsInfo;
-	};
-	class 288th_Desert_Falcon: Pistol_Base_F
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		_generalMacro = "Desert_Falcon";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		model = "288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\Desert_Eagle.p3d";
-		picture = "288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\UI\gun.paa";
-		Uipicture = "288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\UI\gun.paa";
-		magazines[] = {"288th_7Rnd_50_AE"};
-		magazineWell[] = { 288th_Desert_Falcon };
-		displayname = "[288th] Desert Falcon";
-		reloadAction = "GestureReloadPistol";
-		recoil = "recoil_pistol_zubr";
-		descriptionShort = "Desert Falcon";
-		inertia = 0.3;
-		initSpeed = -1;
-		dexterity = 1.85;
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_PistolSmart";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_PistolSmart";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_PistolSmart";
-		cursor = "OPTRE_M6C";
-		HUD_BulletInARows=1;
-		HUD_TotalPosibleBullet=8;
-		class LinkedItems
-		{
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "Invisable_Supresser_288th";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot{};
-			class CowsSlot{};
-			class PointerSlot{};
-			mass = 40;
-		};
-		class Library
-		{
-			libTextDesc = "Desert_Falcon";
-		};
-		drySound[] = {"A3\Sounds_F\weapons\pistol_heavy_02\dry",0.7,1,20};
-		reloadMagazineSound[] = {"288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\sound\de_reload.wss",1.2,1,20};
-		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0,0,0};
-		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0,0,0};
-		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0,0,0};
-		bullet4[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_04",0,0,0};
-		bullet5[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_01",0,0,0};
-		bullet6[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_02",0,0,0};
-		bullet7[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_03",0,0,0};
-		bullet8[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_04",0,0,0};
-		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01",0,0,0};
-		bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0,0,0};
-		bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0,0,0};
-		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0,0,0};
-		soundBullet[] = {"bullet1",0,"bullet2",0,"bullet3",0,"bullet4",0,"bullet5",0,"bullet6",0,"bullet7",0,"bullet8",0,"bullet9",0,"bullet10",0,"bullet11",0,"bullet12",0};
-		modes[] = {"Single"};
-		class Single: Mode_SemiAuto
-		{
-			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultHandgun";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_handgun_6",1.0351422,1,30};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_handgun_6",1.0351422,1.1,30};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\sound\desert_eagle_shot.wss",1,1,700};
-				soundBegin[] = {"begin1",1};
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_interior",1.4125376,1,1400};
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_trees",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_forest",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_meadows",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_houses",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\M6_Pistols\Desert_Falcon\sound\desert_eagle_shot.wss",1,1,700};
-				soundBegin[] = {"begin1",1};
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_interior",1.4125376,1,1400};
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_trees",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_forest",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_meadows",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\Zubr_tail_houses",1,1,1400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			recoil = "deagleBase";
-			recoilProne = "deagleBase";
-			reloadTime = 0.2;
-			dispersion = 0.00028500002;
-			minRange = 2;
-			minRangeProbab = 0.1;
-			midRange = 30;
-			midRangeProbab = 0.8;
-			maxRange = 50;
-			maxRangeProbab = 0.04;
-			distanceZoomMin = 56;
-			distanceZoomMax = 56;
-			aiRateOfFire = 2.9;
-			aiRateOfFireDistance = 50;
-		};
-	};*/
 };
