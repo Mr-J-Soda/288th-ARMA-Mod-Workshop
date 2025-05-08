@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_melee
 	{
 		author = "Festive Neira / Misriah 288";
 		addonRootClass = "288th_Core";

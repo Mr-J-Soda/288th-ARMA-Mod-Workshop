@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_ARs
 	{
 		author = "Festive Neira / Misriah 288";
 		addonRootClass = "288th_Core";
@@ -57,13 +57,17 @@ class cfgWeapons
 	class arifle_ARX_blk_F;
 	class 288th_M6C;
 	class 288th_CQS_48X;
-	class 288th_M45TAC;
+	class 288th_KSG_12;
 	class OPTRE_M393_DMR;
 	class TCF_ARMX_GL_light;
 	class UGL_F;
 	class OPTRE_M12_SOC;
 	class srifle_DMR_03_F;
 	class OPTRE_DMR_Base;
+	class WRS_Weapon_AR_Bronze;
+	class OPTRE_BR55HB;
+	class WRS_Weapon_AR_Ver1;
+	class arifle_MSBS65_UBS_Black_F;
 	// Attachment Slots
 	class MuzzleSlot;
 	class CowsSlot;
@@ -76,7 +80,9 @@ class cfgWeapons
 	class OPTRE_CowsSlot_Rail;
 	class asdg_SlotInfo;
 	class asdg_FrontSideRail;
+	class asdg_OpticRail1913;
 	class OPTRE_MuzzleSlot;
+	class asdg_MuzzleSlot_556;
 	class OPTRE_UnderBarrelSlot_rail;
 	class OPTRE_Pointers : asdg_FrontSideRail
 	{
@@ -813,7 +819,7 @@ class cfgWeapons
 		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_Assault";
 		picture = "\288th_Weapons\Data\Weapons\AR_Rifles\arifle_ARX_blk_F_X_CA.paa";
-		pictureWire = "288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
+		pictureWire = "\288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
 		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
@@ -990,15 +996,15 @@ class cfgWeapons
 		displayName = "[288th] RG's M28A3";
 		baseWeapon = "288th_M28A3_RG";
 		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\V_MA4_CO_GREEN","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};
-		class secondary : 288th_M45TAC
+		class secondary : 288th_KSG_12
 		{
 			displayName = "Shotgun Modification";
 			modes[] =
 			{
 				"Single"
 			};
-			magazineWell[] = { 288th_M45TAC };
-			magazines[] = { "288th_Loose_Buckshot","288th_Loose_Slugs" };
+			magazineWell[] = { 288th_KSG_12 };
+			magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
 			recoil = "recoil_ARX_secondary";
 			reloadAction = "GestureReloadARX2";
 		};
@@ -1122,7 +1128,7 @@ class cfgWeapons
 					SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
 				};
 				dispersion = 5e-05;
-				reloadTime = 0.15;
+				reloadTime = 0.25;
 				minRange = 2;
 				minRangeProbab = 0.5;
 				midRange = 150;
@@ -1134,6 +1140,84 @@ class cfgWeapons
 			reloadAction = "GestureReloadARX2";
 		};
 	};
+
+	// 288th AR1G
+    class 288th_AR1G : WRS_Weapon_AR_Bronze
+    {
+        dlc = "288thDJP_Aux";
+        author = "Soda / Misriah 288";
+        scope = 2;
+        scopeArsenal = 2;
+        ace_arsenal_hide = 0;
+        canShootInWater = 1;
+        displayName = "[288th] AR1G";
+        descriptionshort = "Special Oni Derived Armament AR1G";
+        baseWeapon = "288th_AR1G";
+        magazines[] = {"288th_Stanag"};
+        magazineWell[] = {"288th_Standard"};
+        recoil = "recoil_Assault";
+        //hiddenSelectionsTextures = ["\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"];
+        visionMode[] = {"Normal","NVG"};
+        pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
+        ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
+        Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
+        Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+        HUD_BulletInARows = 2;
+        HUD_TotalPosibleBullet = 30;
+        cursor = "OPTRE_MA5";
+        //picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12U_F_CA.paa";
+        class LinkedItems
+        {
+            class LinkedItemsOptic
+            {
+                slot = "CowsSlot";
+                item = "288th_M7_Sight";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: asdg_OpticRail1913
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				displayName = "$STR_A3_CowsSlot0";
+				compatibleitems[] =
+				{
+					"Optre_Recon_Sight",
+					"Optre_Recon_Sight_Red",
+					"Optre_Recon_Sight_Green",
+					"288th_M6C_Scope",
+					"288th_M7_Sight",
+					"288th_Hamr_Scope",
+					"optic_dms",
+					"optic_aco_grn",
+					"optic_aco",
+					"optic_holosight_blk_f",
+					"optic_khs_blk",
+					"optic_hamr",
+					"optic_sos",
+					"optic_lrps",
+					"optic_erco_blk_f",
+					"optic_ams",
+					"optic_yorris",
+					"optic_aco_smg",
+					"optic_aco_grn_smg",
+					"optic_holosight_smg_blk_f",
+					"optic_mrd_black",
+					"optre_m7_sight",
+					"optre_br55hb_scope",
+					"OPTRE_BR45_Scope",
+					"OPTRE_M12_Optic",
+				};
+			};
+			class MuzzleSlot{};
+			class UnderBarrelSlot{};
+			class PointerSlot: asdg_FrontSideRail
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "$STR_A3_PointerSlot0";
+			};
+		};
+    };
 
 	//288th M12H
 	class 288th_M12H : OPTRE_M12_SOC
@@ -1236,6 +1320,259 @@ class cfgWeapons
 				};
 				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
 				iconPinpoint = "Bottom";
+			};
+		};
+	};
+
+	//Butcher's BR55
+	class 288th_Butcher_BR55HB: OPTRE_BR55HB
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] Butchers Blaster";
+		descriptionshort = "Special Oni Derived Armament BR55HB";
+		baseWeapon = "288th_Butcher_BR55HB";
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Butcher\br55_1_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Butcher\br55_2_co.paa"};
+		magazines[] = {"OPTRE_36Rnd_95x40_Mag"};
+		magazineWell[] = {"OPTRE_Magwell_BR55"};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "OPTRE_BR45_Scope";
+			};
+		};
+	};
+
+	//Eugen's Commando
+	class 288th_Eugen_Commando: OPTRE_Commando
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] Eugen's Kommando";
+		descriptionshort = "Special Oni Derived Armament VK78";
+		baseWeapon = "288th_Eugen_Commando";
+		picture = "\OPTRE_Weapons\Commando\icons\vk78b_icon.paa";
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Eugen\commando_Eugen_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Eugen\commando2_black_co.paa"};
+		magazines[] = {"Commando_20Rnd_65_Mag","Commando_20Rnd_65_TracerY_Mag","Commando_20Rnd_65_TracerR_Mag","Commando_20Rnd_65_ReloadY_Mag","Commando_20Rnd_65_ReloadR_Mag","Command_20Rnd_65_TracerR_Mag"};
+		magazineWell[] = {"OPTRE_Magwell_Commando"};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "OPTRE_BR45_Scope";
+			};
+		};
+	};
+
+	//Steven's Grey Wolf
+	class 288th_Stevens_Rifle: WRS_Weapon_AR_Ver1
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] Stevens' Grey Wolf";
+		descriptionshort = "Special Oni Derived Armament Grey Wolf";
+		baseWeapon = "288th_Stevens_Rifle";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\Stevens\WRS_Greywolf_Black_CO_Test2"};
+		hiddenSelectionsMaterials[] = {"\WBK_SciFi_Weaponary\textures\greywolf\greywolf.rvmat"};
+		magazines[] = {"OPTRE_40Rnd_30x06_Mag","OPTRE_40Rnd_30x06_Mag_Tracer","OPTRE_100Rnd_30x06_Mag","OPTRE_100Rnd_30x06_Mag_Tracer"};
+		magazineWell[] = {"OPTRE_Magwell_HMG38"};
+		visionMode[] = {"Normal","NVG"};
+		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+		cursor = "OPTRE_MA5";
+		recoil = "recoil_Assault";
+		HUD_BulletInARows = 2;
+		HUD_TotalPosibleBullet = 40;
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "288th_Hamr_Scope";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: asdg_OpticRail1913
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				displayName = "$STR_A3_CowsSlot0";
+				compatibleitems[] =
+				{
+					"Optre_Recon_Sight",
+					"Optre_Recon_Sight_Red",
+					"Optre_Recon_Sight_Green",
+					"Optre_Recon_Sight_Desert",
+					"Optre_Recon_Sight_UNSC",
+					"Optre_Recon_Sight_Snow",
+					"288th_M6C_Scope",
+					"288th_M7_Sight",
+					"288th_Hamr_Scope",
+					"optic_dms",
+					"optic_aco_grn",
+					"optic_aco",
+					"optic_holosight_blk_f",
+					"optic_khs_blk",
+					"optic_hamr",
+					"optic_sos",
+					"optic_lrps",
+					"optic_erco_blk_f",
+					"optic_ams",
+					"optic_yorris",
+					"optic_aco_smg",
+					"optic_aco_grn_smg",
+					"optic_holosight_smg_blk_f",
+					"optic_mrd_black",
+					"optre_m393_eotech",
+					"optre_m7_sight",
+					"optre_m392_scope",
+					"optre_br55hb_scope",
+					"OPTRE_BR45_Scope",
+					"OPTRE_M12_Optic",
+					"TCF_M393_EOTECH_v2"
+				};
+			};
+			class MuzzleSlot: asdg_MuzzleSlot_556
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName = "$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleitems[] =
+				{
+					"optre_ma5suppressor",
+					"optre_m6_silencer"
+				};
+			};
+		};
+	};
+
+	//Smith's Grot
+	class 288th_Smith_Rifle: arifle_MSBS65_UBS_Black_F
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] MSBS Breacher Rifle";
+		descriptionshort = "Special Oni Derived Armament Grot";
+		baseWeapon = "288th_Smith_Rifle";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		magazines[] = {"288th_Stanag"};
+		magazineWell[] = {"288th_Standard"};
+		recoil = "recoil_Assault";
+		pictureWire = "\288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+		HUD_BulletInARows = 2;
+		HUD_TotalPosibleBullet = 30;
+		cursor = "OPTRE_MA5";
+		muzzles[] = {"this","UBS_F"};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "optic_ico_01_black_f";
+			};
+			class LinkedItemsPointer
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M12_Laser";
+			};
+		};
+		class UBS_F : 288th_KSG_12
+		{
+			modes[] ={"Single"};
+			magazineWell[] = { 288th_KSG_12 };
+			magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+			autoFire = 0;
+			ballisticsComputer = 0;
+			discreteDistance[] = {50};
+			discreteDistanceInitIndex = 0;
+			displayName = "$STR_A3_C_CfgWeapons_arifle_MSBS65_UBS_base_F_UBS_F0";
+			drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\LongRangeRifles\DMR07\DMR07_dry",0.562341,1,10};
+			fireSpreadAngle = 0.95;
+			maxZeroing = 50;
+			muzzleEnd = "konec granatometu";
+			muzzlePos = "usti granatometu";
+			recoil = "recoil_MSBS65_ubs";
+			reloadAction = "GestureReloadMSBS_UBS";
+			reloadMagazineSound[] = {"A3\Sounds_F_Enoch\Assets\Arsenal\Msbs65_01\Shotgun\Msbs65_Shotgun_Reload_01",3.98107,1,10};
+			reloadTime = 0.35;
+		};
+		modes[] = {"Single","FullAuto"};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.3;
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class SilencedSound
+			{
+				soundSetShot[] = {"Msbs65_01_Shot_Silencer_Auto_SoundSet","Msbs65_01_Tail_Int_Silencer_SoundSet"};
+			};
+			class StandardSound
+			{
+				soundSetShot[] = {"Msbs65_01_Shot_SoundSet","Msbs65_01_Tail_SoundSet","Mx_Tail_Contact_SoundSet"};
+			};
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime = 0.067;
+			dispersion = 5e-05;
+			minRange = 0;
+			minRangeProbab = 0.9;
+			midRange = 15;
+			midRangeProbab = 0.7;
+			maxRange = 30;
+			maxRangeProbab = 0.1;
+			aiRateOfFire = 1e-06;
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class SilencedSound
+			{
+				soundSetShot[] = {"Msbs65_01_Shot_Silencer_Auto_SoundSet","Msbs65_01_Tail_Int_Silencer_SoundSet"};
+			};
+			class StandardSound
+			{
+				soundSetShot[] = {"Msbs65_01_Shot_SoundSet","Msbs65_01_Tail_SoundSet","Mx_Tail_Contact_SoundSet"};
 			};
 		};
 	};

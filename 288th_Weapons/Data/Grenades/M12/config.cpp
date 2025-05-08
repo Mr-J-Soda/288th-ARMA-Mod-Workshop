@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class 288th_Weapons
+    class 288th_Weapons_Grenades_M12
     {
         author = "Soda / Misriah 288";
         addonRootClass = "288th_Core";

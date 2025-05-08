@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_Snowfox
 	{
 		author = "Festive Neira / Misriah 288";
 		addonRootClass = "288th_Core";
@@ -387,37 +387,6 @@ class cfgWeapons
 						volume = "(1-interior/1.4)*houses";
 					};
 				};
-			};
-		};
-	};
-	class 288th_Snowfox_Stevens : 288th_Snowfox
-	{
-		author = "Soda / Misriah 288";
-		displayName = "[288th] Steven's Snowfox";
-		descriptionshort = "Special Oni Derived Armament Snowfox";
-		baseWeapon = "288th_Snowfox_Stevens";
-		hiddenSelectionsTextures[] =
-		{
-			"288th_Weapons\Data\Weapons\288th_Snowfox\m14_ebr01_Fiy_Red_CO.paa",
-			"288th_Weapons\Data\Weapons\288th_Snowfox\m14_ebr01_Fiy_CO.paa"
-		};
-		magazines[] =
-		{
-			"288th_762_Mag"
-		};
-		magazineWell[] = { 288th_Snowfox };
-		cursor = "OPTRE_M392";
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_SS_6_Scope";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "OPTRE_M12_Laser";
 			};
 		};
 	};

@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_M7_SMG
 	{
 		author = "Festive Neira / Misriah 288";
 		addonRootClass = "288th_Core";
@@ -101,7 +101,6 @@ class cfgWeapons
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 60;
 		handAnim[] = { "OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_01\data\Anim\SMG_01.rtm" };
-		
 		class LinkedItems
 		{
 			class LinkedItemsOptic

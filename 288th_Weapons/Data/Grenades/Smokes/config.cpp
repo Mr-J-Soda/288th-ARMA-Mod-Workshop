@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class 288th_Weapons
+    class 288th_Weapons_Grenades_Smokes
     {
         author = "Soda / Misriah 288";
         addonRootClass = "288th_Core";
@@ -119,7 +119,7 @@ class CfgMagazines
     {
         displayName = "[288th] M4 Smoke (Cyan)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
-   		picture = "288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_cyan_ca.paa";
+   		picture = "\288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_cyan_ca.paa";
 		//model = "\A3\Weapons_f\ammo\smokegrenade_Orange";
 		ammo = "288th_Grenade_smoke_cyan";
         descriptionShort = "Smoke<br>Cyan";
@@ -129,7 +129,7 @@ class CfgMagazines
     {
         displayName = "[288th] M4 Smoke (Black)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
-        picture = "288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_black_ca.paa";
+        picture = "\288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_black_ca.paa";
 		//model = "\A3\Weapons_f\ammo\smokegrenade_Orange";
 		ammo = "288th_Grenade_smoke_Black";
         descriptionShort = "Smoke<br>Black";
@@ -139,7 +139,7 @@ class CfgMagazines
     {
         displayName = "[288th] M4 Smoke (Pink)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
-        picture = "288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_pink_ca.paa";
+        picture = "\288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_pink_ca.paa";
 		//model = "\A3\Weapons_f\ammo\smokegrenade_Orange";
 		ammo = "288th_Grenade_smoke_PInk";
         descriptionShort = "Smoke<br>Pink";
@@ -149,7 +149,7 @@ class CfgMagazines
     {
         displayName = "[288th] M4 Smoke (Brown)";
         pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
-        picture = "288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_brown_ca.paa";
+        picture = "\288th_Weapons\Data\Grenades\Smokes\gear_smokegrenade_brown_ca.paa";
 		//model = "\A3\Weapons_f\ammo\smokegrenade_Orange";
 		ammo = "288th_Grenade_smoke_Brown";
         descriptionShort = "Smoke<br>Brown";

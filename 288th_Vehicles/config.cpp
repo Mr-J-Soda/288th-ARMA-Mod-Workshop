@@ -29,7 +29,7 @@ class CfgEditorCategories
 {
 	class 288th_Eden
 	{
-		displayName = "288th DJP";
+		displayName = "288th";
 	};
 };
 class CfgEditorSubcategories
@@ -93,6 +93,10 @@ class CfgEditorSubcategories
 	class 288th_Eden_Memes
 	{
 		displayName = "Memes";
+	};
+	class 288th_Eden_Elite
+	{
+		displayName = "Sangheili";
 	};
 	class 288th_Named
 	{
@@ -7238,7 +7242,7 @@ class cfgVehicles
 		editorSubcategory = "288th_Eden_Turret";
 		/*faction = "288th_UNSC";
 		vehicleClass = "288th_Subgroups_LandVehicles";*/
-		displayName = "Remote AU-44 (288th)";
+		displayName = "Remote AU-144 (288th)";
 		crew = "B_UAV_AI";
 		availableForSupportTypes = "[""Artillery""]";
 		class Turrets: Turrets

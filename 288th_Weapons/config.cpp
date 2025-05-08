@@ -89,8 +89,8 @@ class cfgCloudlets
 		angleVar = 1;
 		animationName = "";
 		particleType = "Billboard";
-		timerPeriod = 3;
-		lifeTime = 3;
+		timerPeriod = 15;
+		lifeTime = 45;
 		moveVelocity[] = {0,0.025,0};
 		rotationVelocity = 0;
 		weight = 0.075;
@@ -1478,8 +1478,8 @@ class cfgWeapons
 		canShootInWater = 1;
 		displayName = "[288th] Whiskey's Gun...of all time";
 		descriptionshort = "Whiskey's DMR";
-		magazines[] ={"288th_32Rnd_127x40","288th_32Rnd_127x40_AP","288th_32Rnd_127x40_APT","288th_32Rnd_127x40_Mag_NARQ"};
-		magazineWell[] = { 288th_M6C };
+		/*magazines[] ={"288th_32Rnd_127x40","288th_32Rnd_127x40_AP","288th_32Rnd_127x40_APT","288th_32Rnd_127x40_Mag_NARQ"};
+		magazineWell[] = { 288th_M6C };*/
 		picture = "\OPTRE_Weapons\DMR\icons\M395_Icon.paa";
 		baseWeapon = "288th_DMR_Whiskey";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
@@ -1487,6 +1487,7 @@ class cfgWeapons
 		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
 		HUD_BulletInARows = 2;
 		HUD_TotalPosibleBullet = 32;
+		maxZeroing = 1000;
 		hiddenSelections[] = { "camo","camo1","camo2" };
 		hiddenSelectionsTextures[] = { "\288th_Weapons\Data\Weapons\M392\Whiskey\mainbody1e_co.paa","\288th_Weapons\Data\Weapons\M392\Whiskey\mainbody2e_co.paa","\288th_Weapons\Data\Weapons\M392\Whiskey\muzzlee_co.paa" };
 		class LinkedItems

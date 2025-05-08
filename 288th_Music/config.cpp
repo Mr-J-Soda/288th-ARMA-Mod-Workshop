@@ -22,7 +22,7 @@ class CfgMusicClasses
 
 class CfgMusic
 {
-	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis};
+	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface};
 	class Daredevil_AC7
 	{
 		name	= "Daredevil Ace Combat 7";
@@ -150,6 +150,14 @@ class CfgMusic
 		sound[]	= { "\288th_Music\Vode_An.ogg", db + 10, 1.0 };
         musicClass = "288th_Music_List";
         duration=239;
+		//https://www.youtube.com/watch?v=wG-FR3_fmPU
+	};
+	class Sharkface
+	{
+		name	= "Sharkface";
+		sound[]	= { "\288th_Music\Sharkface.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=86;
 		//https://www.youtube.com/watch?v=wG-FR3_fmPU
 	};
 };

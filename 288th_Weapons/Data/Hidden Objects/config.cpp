@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_Hidden_Objects
 	{
 		author = "Soda / Misriah 288";
 		addonRootClass = "288th_Core";
@@ -912,12 +912,27 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class ma5b_hogosha
+	class OPTRE_Commando_Black;
+	class optre_ma5b;
+	class commando_hogosha: OPTRE_Commando_Black
 	{
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
+	};
+	class ma5b_hogosha: optre_ma5b
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class itemWatch;
+	class rolex: itemWatch
+	{
+		scope = 2;
+		scopeArsenal = 2;
 	};
 	class Bat_Clear;
 	class SC_BoceanSpear: Bat_Clear
@@ -1350,8 +1365,10 @@ class cfgWeapons
 	class OPTRE_MA5C;
 	class OPTRE_MA5K: OPTRE_MA5C
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 	};
 	class TCF_MA5KF: OPTRE_MA5K
 	{
@@ -2400,6 +2417,173 @@ class cfgWeapons
 	};
 	class launch_B_Titan_short_F;
 	class SA_AL8 : launch_B_Titan_short_F 
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class launch_Titan_base;
+	class launch_Titan_short_base;
+	class launch_MRAWS_base_F;
+	class launch_MRAWS_olive_rail_F;
+	class kef_launch_Titan_blk_F: launch_Titan_base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class kef_launch_Titan_short_blk_F: launch_Titan_short_base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class kef_launch_MRAWS_black_F: launch_MRAWS_base_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class kef_launch_MRAWS_black_rail_F: launch_MRAWS_olive_rail_F
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class UavTerminal_base;
+	class kef_B_UCN_UavTerminal: UavTerminal_base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class kef_O_MD_UavTerminal: UavTerminal_base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class kef_I_HD_UavTerminal: UavTerminal_base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class NVGoggles;
+	class catears_nvg1: NVGoggles
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg1_helm: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg2: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg2_helm: catears_nvg2
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg3: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg3_helm: catears_nvg3
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg4: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg4_helm: catears_nvg4
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg5: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg5_helm: catears_nvg5
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg6: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg6_helm: catears_nvg6
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg7: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg7_helm: catears_nvg7
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg8: catears_nvg1
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class catears_nvg8_helm: catears_nvg8
 	{
 		scope = 1;
 		scopeArsenal = 1;

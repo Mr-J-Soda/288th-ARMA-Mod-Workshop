@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_Launchers
 	{
 		author = "Soda / Misriah 288";
 		addonRootClass = "288th_Core";
@@ -56,6 +56,17 @@ class CfgMagazineWells
 			"288th_1Rnd_50x137_HE",
 			"288th_1Rnd_50x137_HEAT",
 			"288th_1Rnd_50x137_PEN",
+			"288th_1Rnd_50x137_SACLOS_HEAT",
+			"288th_1Rnd_50x137_SACLOS_HE",
+			"288th_1Rnd_50x137_SACLOS_MT",
+			"288th_1Rnd_50x137_ILLUM",
+			"288th_1Rnd_50x137_SMOKE",
+			"288th_1Rnd_50x137_ASM",
+			"288th_1Rnd_50x137_HEDP",
+			"288th_1Rnd_50x137_MT",
+			"288th_1Rnd_50x137_AB100",
+			"288th_1Rnd_50x137_AB250",
+			"288th_1Rnd_50x137_AB500",
 			"WNZ_EMP_MAAWS_Mag"
 		};
 	};
@@ -220,6 +231,7 @@ class cfgWeapons
 		baseWeapon = "288th_Recoilless";
 		magazines[] = {"288th_1Rnd_50x137_HE","288th_1Rnd_50x137_HEAT","288th_1Rnd_50x137_PEN"};
 		magazineWell[] = {288th_RR553};
+		picture = "288th_Weapons\Data\Weapons\Launchers\icon_launch_MRAWS_black_F_X_CA.paa";
 		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\Launchers\launch_MRAWS_01_F_co.paa","288th_Weapons\Data\Weapons\Launchers\launch_MRAWS_02_F_co.paa"};
 		ace_overpressure_angle = 0;
 		ace_overpressure_range = 0;

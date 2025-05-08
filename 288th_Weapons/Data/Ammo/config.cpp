@@ -4,7 +4,7 @@ class SensorTemplateIR;
 
 class CfgPatches
 {
-	class 288th_Weapons
+	class 288th_Weapons_Ammo
 	{
 		author = "Soda / Misriah 288";
 		addonRootClass = "288th_Core";
@@ -437,7 +437,7 @@ class cfgAmmo
 	class 65x85_APFS : B_762x51_Ball
 	{
 		caliber = 4.0;
-		hit = 13;
+		hit = 16;
 		typicalSpeed = 600;
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		timeToLive = 15;
@@ -451,7 +451,7 @@ class cfgAmmo
 	class 65x85_APFS_Tracers : 65x85_APFS
 	{
 		caliber = 4.0;
-		hit = 13;
+		hit = 16;
 		typicalSpeed = 600;
 		model = "\288th_Weapons\Data\Ammo\Laser_Red\laser_red.p3d";
 		tracerStartTime = 0;
@@ -472,7 +472,7 @@ class cfgAmmo
 	class 65x85_DMR : 65x85_APFS
 	{
 		caliber = 4.0;
-		hit = 13;
+		hit = 16;
 		typicalSpeed = 600;
 		indirectHit = 8;
 		indirectHitRange = 0.15;
@@ -948,11 +948,11 @@ class cfgAmmo
 	};
 	class 288th_Plasma_Soda : B_762x51_Ball
 	{
-		hit = 20.0;
+		hit = 24.0;
 		scope = 1;
 		scopeArsenal = 1;
-		typicalSpeed = 1200;
-		caliber = 3.5;
+		typicalSpeed = 1000;
+		caliber = 4.5;
 		//timeToLive = 10;
 		suppressionRadiusBulletClose = 15;
 		suppressionRadiusHit = 15;
@@ -1331,6 +1331,148 @@ class cfgAmmo
 		explosive = 0;
 		fuseDistance = 0;
 		allowAgainstInfantry = 0;
+	};
+	class M_Titan_AP;
+	class ammo_Penetrator_MRAAWS;
+	class ammo_Penetrator_MRAAWS_HEAT55;
+	class R_MRAAWS_HEAT55_F;
+	
+	class MAA_M_GMM_HEAT: M_Titan_AT
+	{
+		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at_fly";
+		hit=150;
+		indirectHit=14;
+		indirectHitRange=3;
+		explosive=1;
+		warheadName="HE";
+		submunitionAmmo="ammo_Penetrator_MRAAWS";
+		submunitionDirectionType="SubmunitionModelDirection";
+		submunitionInitSpeed=1000;
+		submunitionParentSpeedCoef=0;
+		submunitionInitialOffset[]={0,0,-0.2};
+		cost=500;
+		initTime=0.1;
+		maxControlRange=2500;
+	};
+	
+	class MAA_M_GMM_HE: M_Titan_AP
+	{
+		hit=200;
+		indirectHit=50;
+		indirectHitRange=6;
+		warheadName="HE";
+	};
+	
+	class MAA_M_GMM_MT: M_Titan_AT
+	{
+		hit=200;
+		indirectHit=40;
+		indirectHitRange=5;
+		warheadName="HE";
+		submunitionAmmo="MAA_Penetrator_MT756";
+		CraterEffects="ArtyShellCrater";
+		ExplosionEffects="MortarExplosion";
+		explosionEffectsDir="explosionDir";
+	};
+	
+	class MAA_M_ASM509: R_MRAAWS_HE_F
+	{
+		hit=300;
+		indirectHit=50;
+		indirectHitRange=10;
+		warheadName="HE";
+		CraterEffects="ArtyShellCrater";
+		ExplosionEffects="MortarExplosion";
+		explosionEffectsDir="explosionDir";
+	};
+	
+	class MAA_M_HEDP502: R_MRAAWS_HEAT55_F
+	{
+		hit=150;
+		indirectHit=40;
+		caliber = 5;
+		indirectHitRange=6;
+		warheadName="HE";
+		submunitionAmmo="MAA_Penetrator_HEDP502";
+	};
+	
+	class MAA_Penetrator_HEDP502: ammo_Penetrator_MRAAWS_HEAT55
+	{
+		caliber=10;
+		hit=400;
+	};
+	
+	class MAA_M_ILLUM545: R_MRAAWS_HE_F
+	{
+		hit=30;
+		explosive=0;
+		brightness=120;
+		caliber=1;
+		indirectHit=0;
+		indirectHitRange=2;
+		submunitionAmmo="F_40mm_White";
+		triggerOnImpact=1;
+		ExplosionEffects="";
+		explosionEffectsDir="";
+		deleteParentWhenTriggered=1;
+		triggerTime=0.7;
+		triggerDistance=5;
+		submunitionInitialOffset[]={0,0,0.1};
+		submunitionInitSpeed=1;
+		//submunitionParentSpeedCoef = 1;
+	};
+	
+	class MAA_M_SMOKE469: R_MRAAWS_HE_F
+	{
+		hit=30;
+		explosive=0;
+		caliber=1;
+		indirectHit=0;
+		indirectHitRange=2;
+		submunitionAmmo="G_40mm_Smoke";
+		submunitionConeType[] = {"poissondisccenter",5};
+		submunitionConeAngle = 20;
+		submunitionConeAngleHorizontal = 50;
+		triggerDistance=5;
+		triggerOnImpact=1;
+		ExplosionEffects="";
+		explosionEffectsDir="";
+		deleteParentWhenTriggered=1;
+		submunitionInitSpeed=0;
+	};
+	
+	class MAA_M_MT756: R_MRAAWS_HEAT55_F
+	{
+		hit=200;
+		indirectHit=40;
+		indirectHitRange=5;
+		warheadName="HE";
+		submunitionAmmo="MAA_Penetrator_MT756";
+		CraterEffects="ArtyShellCrater";
+		ExplosionEffects="MortarExplosion";
+		explosionEffectsDir="explosionDir";
+	};
+	
+	class MAA_Penetrator_MT756: ammo_Penetrator_MRAAWS
+	{
+		caliber=40;
+		warheadName="TandemHEAT";
+		hit=600;
+	};
+	
+	class MAA_M_HE441_AB100: R_MRAAWS_HE_F
+	{
+		timeToLive=0.2857;
+	};
+	
+	class MAA_M_HE441_AB250: R_MRAAWS_HE_F
+	{
+		timeToLive=0.71425;
+	};
+	
+	class MAA_M_HE441_AB500: R_MRAAWS_HE_F
+	{
+		timeToLive=1.4285;
 	};
 
 	class OPAEX_M41_Rocket_HEAT_SACLOS : M_Titan_AT
@@ -2192,6 +2334,129 @@ class CfgMagazines
 		mass = 30;
 		allowedSlots[] = {901,701};
 	};
+	class Vorona_HEAT;
+	class Vorona_HE;
+	class MRAWS_HEAT55_F;
+	
+	class 288th_1Rnd_50x137_SACLOS_HEAT: Vorona_HEAT
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] SACLOS HEAT Rocket";
+		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at";
+		ammo="MAA_M_GMM_HEAT";
+		picture="\288th_Weapons\Data\Ammo\UI\GMMHEAT.paa";
+		displayNameShort="SACLOS HEAT";
+		descriptionShort="SACLOS HEAT Rocket";
+		mass=70;
+	};
+	
+	class 288th_1Rnd_50x137_SACLOS_HE: Vorona_HE
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] SACLOS HE Rocket";
+		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_ap";
+		ammo="MAA_M_GMM_HE";
+		displayNameShort="SACLOS HE";
+		picture="\288th_Weapons\Data\Ammo\UI\GMMHE.paa";
+		descriptionShort="SACLOS HE Rocket";
+		mass=50;
+	};
+	
+	class 288th_1Rnd_50x137_SACLOS_MT: Vorona_HEAT
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] SACLOS MT Rocket";
+		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_atl";
+		ammo="MAA_M_GMM_MT";
+		picture="\288th_Weapons\Data\Ammo\UI\GMMMT.paa";
+		displayNameShort="SACLOS MT";
+		descriptionShort="SACLOS Multi-Target Rocket";
+		mass=100;
+	};
+	
+	class 288th_1Rnd_50x137_ILLUM: MRAWS_HE_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] 50x137mm ILLUM Rocket";
+		model="\a3\Weapons_F_Tank\Launchers\MRAWS\rocket_MRAWS_HE_F_item.p3d";
+		ammo="MAA_M_ILLUM545";
+		picture="\288th_Weapons\Data\Ammo\UI\ILLUM545.paa";
+		displayNameShort="ILLUM";
+		descriptionShort="ILLUM Rocket";
+		mass=30;
+	};
+	
+	class 288th_1Rnd_50x137_SMOKE: MRAWS_HE_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] 50x137mm SMOKE Rocket";
+		model="\a3\Weapons_F_Tank\Launchers\MRAWS\rocket_MRAWS_HE_F_item.p3d";
+		ammo="MAA_M_SMOKE469";
+		picture="\288th_Weapons\Data\Ammo\UI\SMOKE469.paa";
+		displayNameShort="SMOKE";
+		descriptionShort="SMOKE Rocket";
+		mass=30;
+	};
+	
+	class 288th_1Rnd_50x137_ASM: MRAWS_HE_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] 50x137mm ASM  Rocket";
+		ammo="MAA_M_ASM509";
+		displayNameShort="ASM";
+		picture="\288th_Weapons\Data\Ammo\UI\ASM509.paa";
+		descriptionShort="Anti-Structure Rocket";
+		mass=50;
+	};
+	
+	class 288th_1Rnd_50x137_HEDP: MRAWS_HEAT55_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] 50x137mm HEDP Rocket";
+		ammo="MAA_M_HEDP502";
+		displayNameShort="HEDP";
+		picture="\288th_Weapons\Data\Ammo\UI\HEDP502.paa";
+		descriptionShort="HEDP Rocket";
+		mass=40;
+	};
+	
+	class 288th_1Rnd_50x137_MT: MRAWS_HEAT55_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] 50x137mm MT Rocket";
+		ammo="MAA_M_MT756";
+		displayNameShort="MT";
+		picture="\288th_Weapons\Data\Ammo\UI\MT756.paa";
+		descriptionShort="Multi-Target Rocket";
+		mass=90;
+	};
+	
+	class 288th_1Rnd_50x137_AB100: MRAWS_HE_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] HE 44 AB100 Rocket";
+		ammo="MAA_M_HE441_AB100";
+		displayNameShort="Airburst 100 m";
+		descriptionShort="HE 44 Rocket, Airburst 100 m";
+	};
+	
+	class 288th_1Rnd_50x137_AB250: MRAWS_HE_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] HE 44 AB250 Rocket";
+		ammo="MAA_M_HE441_AB250";
+		displayNameShort="Airburst 250 m";
+		descriptionShort="HE 44 Rocket, Airburst 250 m";
+	};
+	
+	class 288th_1Rnd_50x137_AB500: MRAWS_HE_F
+	{
+		author = "Soda / Misriah 288";
+		displayName="[288th] HE 44 AB500 Rocket";
+		ammo="MAA_M_HE441_AB500";
+		displayNameShort="Airburst 500 m";
+		descriptionShort="HE 44 Rocket, Airburst 500 m";
+	};
 
 	//Microgrenade Mag
 	class 288th_10rnd_Microgrenade : 30Rnd_65x39_caseless_black_mag
@@ -2368,7 +2633,7 @@ class CfgMagazines
 		displaynameshort = "HEDP Buckshot";
 		descriptionshort = "30 Round HEDP Buckshot";
 		ammo = "288th_HEDP_Buckshot";
-		picture = "288th_Weapons\Data\Ammo\Shotgun_Shells\purple\icon_shells_purple.paa";
+		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\purple\icon_shells_purple.paa";
 		count = 30;
 		mass = 20;
 	};
@@ -2599,7 +2864,7 @@ class CfgMagazines
         descriptionShort = "Smith said no, Soda says yes";
         mass = 8;
         initSpeed = 150;
-        picture = "288th_Weapons\Data\Ammo\m_gear_ugl_potat_ca";
+        picture = "\288th_Weapons\Data\Ammo\icon_potat_ca";
     };
 	//288th Railgun Mag
 	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
@@ -2825,7 +3090,7 @@ class CfgMagazines
 		scopeArsenal = 2;
 		initspeed = 400;
 		tracersEvery = 1;
-		count = 3;
+		count = 6;
 		ammo = "288th_308_rifle_yellow";
 		displayname = "[288th] 6Rnd Yellow Tracer Ammo";
 		displaynameshort = "Yellow Tracer Ammo";
@@ -2838,7 +3103,7 @@ class CfgMagazines
 		scope = 2;
 		scopeArsenal = 2;
 		initspeed = 400;
-		count = 1;
+		count = 6;
 		ammo = "288th_Plasma_Purple";
 		displayname = "[288th] 6Rnd Purple Plasma Ammo";
 		displaynameshort = "Purple Plasma Ammo";

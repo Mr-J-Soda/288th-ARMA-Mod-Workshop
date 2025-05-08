@@ -1,24 +1,24 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Data\Covies\config.bin
+//Produced from mikero's Dos Tools Dll version 9.87
+//https://mikero.bytex.digital/Downloads
+//'now' is Wed Apr 16 04:43:05 2025 : 'file' last modified on Mon Apr 14 19:54:27 2025
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
 class CfgPatches
 {
-	class 288th_Gear
+	class 288th_Gear_Covies
 	{
 		author = "Soda / Misriah 288";
 		addonRootClass = "288th_Core";
-		units[] =
-		{
-			
-		};
-		weapons[] = 
-		{
-			
-		};
+		units[] = {"288th_Elite_Minor","288th_Elite_Minor2","288th_Elite_Minor3","288th_Elite_MinorAA","288th_Elite_MinorAT","288th_Elite_Major","288th_Elite_Officer","288th_Elite_SpecOps","288th_Elite_SpecOps2","288th_Elite_SpecOps3","288th_Elite_SpecOps4","288th_Elite_Ultra","288th_Elite_Ultra2","288th_Elite_Ultra3"};
+		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {
-			"288th_Core"
-		};
+		requiredAddons[] = {"288th_Core"};
 	};
 };
-
 class cfgWeapons
 {
 	class ItemInfo;
@@ -34,12 +34,8 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Armor (Minor)";
-		hiddenSelectionsTextures[] = 
-		{
-			"\288th_Gear\Data\Covies\Minor_Body_Armor_CO.paa",
-			"\288th_Gear\Data\Covies\Minor_Legs_and_Arms_CO.paa"
-		};
+		displayName = "[288th] Sangheili Armor (Minor)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Minor_Body_Armor_CO.paa","\288th_Gear\Data\Covies\Minor_Legs_and_Arms_CO.paa"};
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
@@ -52,13 +48,10 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Helmet (Minor)";
-		hiddenSelectionsTextures[] = 
-		{
-			"\288th_Gear\Data\Covies\Minor_Helmet_CO.paa"
-		};
+		displayName = "[288th] Sangheili Helmet (Minor)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Minor_Helmet_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
-		grad_slingHelmet_allow = true;
+		grad_slingHelmet_allow = 1;
 	};
 	class 288th_Elite_Armor_Major: OPTRE_FC_Elite_Armor_Major
 	{
@@ -67,12 +60,8 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Armor (Major)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\Major_Body_Armor_SpecOps_CO.paa",
-			"\288th_Gear\Data\Covies\Major_Legs_and_Arms_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Armor (Major)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Major_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Major_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
@@ -85,13 +74,10 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Helmet (Major)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\Major_Helmet_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Helmet (Major)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Major_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
-		grad_slingHelmet_allow = true;
+		grad_slingHelmet_allow = 1;
 	};
 	class 288th_Elite_Armor_Officer: OPTRE_FC_Elite_Armor_Major
 	{
@@ -100,12 +86,8 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Armor (Officer)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\Officer_Body_Armor_SpecOps_CO.paa",
-			"\288th_Gear\Data\Covies\Officer_Legs_and_Arms_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Armor (Officer)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Officer_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Officer_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
@@ -118,13 +100,10 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Helmet (Officer)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\Officer_Helmet_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Helmet (Officer)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Officer_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
-		grad_slingHelmet_allow = true;
+		grad_slingHelmet_allow = 1;
 	};
 	class 288th_Elite_Armor_SpecOps: OPTRE_FC_Elite_Armor_Major
 	{
@@ -133,12 +112,8 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Armor (SpecOps)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\SpecOps_Body_Armor_SpecOps_CO.paa",
-			"\288th_Gear\Data\Covies\SpecOps_Legs_and_Arms_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Armor (SpecOps)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\SpecOps_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\SpecOps_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
@@ -151,13 +126,10 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Helmet (SpecOps)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\SpecOps_Helmet_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Helmet (SpecOps)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\SpecOps_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
-		grad_slingHelmet_allow = true;
+		grad_slingHelmet_allow = 1;
 	};
 	class 288th_Elite_Armor_Ultra: OPTRE_FC_Elite_Armor_Ultra
 	{
@@ -166,12 +138,8 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Armor (Ultra)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\Ultra_Body_Armor_SpecOps_CO.paa",
-			"\288th_Gear\Data\Covies\Ultra_Legs_and_Arms_SpecOps_CO.paa"
-		};
+		displayName = "[288th] Sangheili Armor (Ultra)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Ultra_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Ultra_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
@@ -184,16 +152,12 @@ class cfgWeapons
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
-		displayName="[288th] Sangheili Helmet (Ultra)";
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Gear\Data\Covies\Ultra_Helmet_Camo_CO.paa"
-		};
+		displayName = "[288th] Sangheili Helmet (Ultra)";
+		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Ultra_Helmet_Camo_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
-		grad_slingHelmet_allow = true;
+		grad_slingHelmet_allow = 1;
 	};
 };
-
 class CfgVehicles
 {
 	class OPTRE_FC_Elite_Minor;
@@ -210,7 +174,6 @@ class CfgVehicles
 	class OPTRE_FC_Elite_Ultra;
 	class OPTRE_FC_Elite_Ultra2;
 	class OPTRE_FC_Elite_Ultra3;
-
 	class 288th_Elite_Minor: OPTRE_FC_Elite_Minor
 	{
 		scope = 2;
@@ -218,6 +181,9 @@ class CfgVehicles
 		faceType = "Elite";
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_T25_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -233,6 +199,9 @@ class CfgVehicles
 		faceType = "Elite";
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_T51_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -247,6 +216,10 @@ class CfgVehicles
 		scopeCurator = 2;
 		faceType = "Elite";
 		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_T33_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -262,6 +235,9 @@ class CfgVehicles
 		faceType = "Elite";
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_AA_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -277,6 +253,9 @@ class CfgVehicles
 		faceType = "Elite";
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_AT_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -291,6 +270,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Major_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Major","288th_Elite_Helmet_Major","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Major","288th_Elite_Helmet_Major","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -306,6 +288,9 @@ class CfgVehicles
 		faceType = "Elite";
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Officer_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Officer","288th_Elite_Helmet_Officer","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Officer","288th_Elite_Helmet_Officer","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -320,6 +305,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_SO_T50_displayName";
 		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -334,6 +322,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_SO_T51_displayName";
 		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -348,6 +339,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_SO_G_displayName";
 		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -362,6 +356,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_SO_T60_displayName";
 		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -376,6 +373,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_T51_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -390,6 +390,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_G_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
@@ -404,6 +407,9 @@ class CfgVehicles
 		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_T60_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
 		respawnLinkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
