@@ -153,6 +153,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
+		canShootInWater = 1;
 		cursor = "OPTRE_M45";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\Shotgun\Shotgun.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_Shotgun";

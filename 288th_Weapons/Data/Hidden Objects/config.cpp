@@ -13,248 +13,180 @@ class CfgPatches
 	};
 };
 
-/*class CfgMagazines
+class cfgAmmo
+{
+	class M_Titan_AT;
+	class M_Titan_AP;
+	class M_Titan_AA;
+	class MissileBaseAAATAP : M_Titan_AT
+	{
+		class Components;
+		class SensorTemplateMan;
+		class SensorTemplateIR;
+		class Direct;
+	};
+
+	class B_40mm_APFSDS;
+	class WBK_WRS_WG1_40MM_Ammo: B_40mm_APFSDS
+	{
+		caliber=12;
+		hit=175;
+		tracerScale=4;
+		timeToLive=20;
+		effectsMissile="WBK_ShotTrail";
+		simulation="shotMissile";
+		simulationStep=0.0020000001;
+		artilleryCharge=0;
+		airLock=0;
+		cartridge="";
+		model="WRS_Mech\models\Creatures_Tracer_red.p3d";
+		fuseDistance=10;
+		thrustTime=1;
+	};
+	class B_127x99_Ball;
+	class WBK_WRS_WG1_B_127x99_Ball: B_127x99_Ball
+	{
+		timeToLive=20;
+		effectsMissile="WBK_ShotTrail";
+		simulation="shotMissile";
+		simulationStep=0.0020000001;
+		artilleryCharge=0;
+		airLock=0;
+		cartridge="";
+		model="WRS_Mech\models\Creatures_Tracer_red.p3d";
+		fuseDistance=10;
+		thrustTime=1;
+	};
+	class WBK_WRS_WGP1_AA: MissileBaseAAATAP
+	{
+		airLock=1;
+		effectsMissile="missile4";
+		model="\A3\Weapons_F_Tank\Launchers\Vorona\Vorona_missile_heat_fly";
+		fuseDistance=1;
+		thrustTime=200;
+		soundFly[]=	{"\WRS_Mech\sounds\missile_loop",1,1,100};
+		Hit = 600;
+		indirectHit = 60;
+		indirectHitRange = 6;
+		maxSpeed = 760;
+		cmImmunity = 0.99;
+		thrust = 40;
+		missileLockMaxSpeed = 250;
+		missileLockMinDistance = 10;
+		simulationStep = 0.004;
+		class Components : Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class VisualSensorComponent: SensorTemplateIR
+					{
+						componentType = "IRSensorComponent";
+						aimDown = 0;
+						class AirTarget
+							{
+								maxRange = 3500;
+								minRange = 500;
+								objectDistanceLimitCoef = -1;
+								viewDistanceLimitCoef = 1;
+							};
+						allowsMarking = 1;
+						angleRangeHorizontal = 3.7;
+						angleRangeVertical = 2.3;
+						groundNoiseDistanceCoef = -1;
+						class GroundTarget
+							{
+								maxRange = 2000;
+								minRange = 500;
+								objectDistanceLimitCoef = 1;
+								viewDistanceLimitCoef = 1;
+							};
+						maxFogSeeThrough = 0.995;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+10;
+						maxTrackableSpeed = 250;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+10;
+						minTrackableSpeed = -1e+10;
+						typeRecognitionDistance = 2000;
+						nightRangeCoef = 1;
+					};
+				};
+			};
+		};
+	};
+	class SmokeShellArty;
+	class WBK_WRS_WGP1_SmokeScreen: SmokeShellArty
+	{
+		effectsMissile="WBK_ShotTrail";
+		effectFly="WBK_ShotTrail";
+		model="\A3\Weapons_F_EPB\Ammo\I_IRstrobe_F.p3d";
+	};
+};
+class CfgMagazines
 {
 	class HandGrenade;
 	class MA_M9_Frag_Mag: HandGrenade
 	{
-		author = "Misriah Armory Dev Team";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		ammo = "MA_M9_Frag_Ammo";
-		mass = 8;
-		displayName = "[MA] M9 HE-DP Grenade";
-		descriptionShort = "Hand Grenade";
-		displayNameShort = "M9 Frag";
-		 
-		count = 1;
-		initSpeed = 20;
-	};
-	class OPTRE_FC_PlasmaGrenade: HandGrenade
-	{
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class GrenadeHand;
-	class SmokeShell : GrenadeHand
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-	};
+	class SmokeShell;
 	class MA_M8_Smoke_White: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_White";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (White)";
-		descriptionShort = "White Smoke Grenade";
-		displayNameShort = "M8 Smoke White";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
 	class MA_M8_Smoke_Red: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_Red";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (Red)";
-		descriptionShort = "Red Smoke Grenade";
-		displayNameShort = "M8 Smoke Red";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
 	class MA_M8_Smoke_Green: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_Green";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (Green)";
-		descriptionShort = "Red Smoke Grenade";
-		displayNameShort = "M8 Smoke Green";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
 	class MA_M8_Smoke_Yellow: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_Yellow";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (Yellow)";
-		descriptionShort = "Yellow Smoke Grenade";
-		displayNameShort = "M8 Smoke Yellow";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
 	class MA_M8_Smoke_Purple: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_Purple";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (Purple)";
-		descriptionShort = "Purple Smoke Grenade";
-		displayNameShort = "M8 Smoke Purple";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
 	class MA_M8_Smoke_Blue: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_Blue";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (Blue)";
-		descriptionShort = "Blue Smoke Grenade";
-		displayNameShort = "M8 Smoke Blue";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
 	class MA_M8_Smoke_Orange: SmokeShell
 	{
-		author = "Misriah Armory Dev Team";
 		scope = 1;
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-		ammo = "M8_Smoke_Shell_Orange";
-		mass = 8;
-		displayName = "[MA] M8 Smoke Grenade (Orange)";
-		descriptionShort = "Orange Smoke Grenade";
-		displayNameShort = "M8 Smoke Orange";
-		 
-		count = 1;
-		initSpeed = 20;
 	};
-	class OPTRE_M2_Smoke: SmokeShell
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (White)";
-		picture = "\A3\Weapons_f\data\ui\gear_smokegrenade_white_ca.paa";
-		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Throw\M2_SMOKE.paa";
-		//pictureMjolnirHud = "\OPTRE_Suit_Scripts\textures\weaponIcons\Grenades\Smoke_icon.paa";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_Smoke";
-		descriptionShort = "Smoke Grenade<br/>White";
-		displayNameShort = "White Smoke";
-		mass = 4;
-	};
-	class OPTRE_M2_Smoke_Blue: OPTRE_M2_Smoke
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (Blue)";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_BSmoke";
-		descriptionShort = "Smoke Grenade<br/>Blue";
-		displayNameShort = "Blue Smoke";
-	};
-	class OPTRE_M2_Smoke_Yellow: OPTRE_M2_Smoke
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (Yellow)";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_YSmoke";
-		descriptionShort = "Smoke Grenade<br/>Yellow";
-		displayNameShort = "Yellow Smoke";
-	};
-	class OPTRE_M2_Smoke_Red: OPTRE_M2_Smoke
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (Red)";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_RSmoke";
-		descriptionShort = "Smoke Grenade<br/>Red";
-		displayNameShort = "Red Smoke";
-	};
-	class OPTRE_M2_Smoke_Green: OPTRE_M2_Smoke
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (Green)";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_GSmoke";
-		descriptionShort = "Smoke Grenade<br/>Green";
-		displayNameShort = "Green Smoke";
-	};
-	class OPTRE_M2_Smoke_Orange: OPTRE_M2_Smoke
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (Orange)";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_OSmoke";
-		descriptionShort = "Smoke Grenade<br/>Orange";
-		displayNameShort = "Orange Smoke";
-	};
-	class OPTRE_M2_Smoke_Purple: OPTRE_M2_Smoke
-	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
-		dlc = "OPTRE";
-		displayName = "M2 Smoke Grenade (Purple)";
-		model = "\OPTRE_Weapons\explosives\m2_smk_grenade.p3d";
-		ammo = "OPTRE_G_M2_PSmoke";
-		descriptionShort = "Smoke Grenade<br/>Purple";
-		displayNameShort = "Purple Smoke";
-	};
-};*/
+};
+
 class CfgGlasses
 {
 	/*class G_Bandanna_Oli;
@@ -710,7 +642,7 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class OPTRE_Rifle_Base;
+	/*class OPTRE_Rifle_Base;
 	class OPTRE_FC_Plasma_Pistol: OPTRE_Rifle_Base
 	{
 		scope = 1;
@@ -873,7 +805,7 @@ class cfgWeapons
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-	};
+	};*/
 	class M2_weapon_01_Base_F;
 	class M2_Flamethrower_01_F: M2_weapon_01_Base_F
 	{
@@ -2584,6 +2516,391 @@ class cfgWeapons
 		scopeCurator = 1;
 	};
 	class catears_nvg8_helm: catears_nvg8
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+
+	class OPAEX_ItemCore;
+	class OPAEX_SprayCan: OPAEX_ItemCore
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_BananaCan: OPAEX_SprayCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_ChadCan: OPAEX_SprayCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_ODSTChadCan: OPAEX_ChadCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_ModLogoCan: OPAEX_SprayCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_KilroyCan: OPAEX_SprayCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_RandomCan: OPAEX_SprayCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class OPAEX_19thCan: OPAEX_SprayCan
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+
+
+	class ACE_bloodIV;
+    class kat_bloodIV_O: ACE_bloodIV 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_O_N: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_A: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_A_N: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_B: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_B_N: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_AB: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_AB_N: kat_bloodIV_O 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class ACE_bloodIV_500;
+    class kat_bloodIV_O_500: ACE_bloodIV_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_O_N_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_A_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_A_N_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_B_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_B_N_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_AB_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_AB_N_500: kat_bloodIV_O_500 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class ACE_bloodIV_250;
+    class kat_bloodIV_O_250: ACE_bloodIV_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_O_N_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_A_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_A_N_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_B_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_B_N_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_AB_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+    class kat_bloodIV_AB_N_250: kat_bloodIV_O_250 
+	{
+        scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+    };
+
+	class MA_Rifle_Base;
+	class MA_BR55_HB: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class MA_H4_SAW: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class MA_MA2B_AR: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class MA_MA5B: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class MA_M7_SMG: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	/*class MA_SG212: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};*/
+	class MA_M90_SG: MA_Rifle_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	class MA_Pistol_Base;
+	class MA_MK50_Sidekick: MA_Pistol_Base
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+	};
+	/*class MA_363_Sticky_Detonator: MA_Pistol_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		ace_overheating_mrbs = 3000000000;
+		ACE_Overheating_SlowdownFactor = 0;
+		ACE_Overheating_JamChance = 0;
+		ACE_Overheating_Dispersion = 0;
+		ACE_overheating_allowSwapBarrel = 0;
+		author = "Misriah Armory Dev Team & High";
+		model = "MA_Weapons\data\M363_Det.p3d";
+		picture = "\MA_Weapons\data\Sticky_Det\data\icons\Sticky_Detonator_Green.paa";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\MA_Weapons\data\Sticky_Det\data\M363_Det_CO.paa","\MA_Weapons\data\Sticky_Det\data\M363_Det_Mag_CO.paa"};
+		displayName = "[MA] M363 Sticky Detonator";
+		descriptionShort = "Sticky Detonator";
+		baseWeapon = "MA_363_Sticky_Detonator";
+		cursor = "GL_Crosshair";
+		recoil = "MA_recoil_Sidekick";
+		ace_clearJamAction = "GestureReloadCTAR";
+		reloadAction = "GestureReloadPistol";
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\reload_4_five",1.5,1,100};
+		magazineWell[] = {};
+		magazines[] = {"MA_363_Sticky_Charge"};
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"MA_Weapons\data\GRL45\GRL45_Fire.ogg",1.5,1,2000};
+				begin2[] = {"MA_Weapons\data\GRL45\GRL45_Fire.ogg",1.5,1.015,2000};
+				begin3[] = {"MA_Weapons\data\GRL45\GRL45_Fire.ogg",1.5,0.985,2000};
+				begin4[] = {"MA_Weapons\data\GRL45\GRL45_Fire.ogg",1.5,1.01,2000};
+				begin5[] = {"MA_Weapons\data\GRL45\GRL45_Fire.ogg",1.5,0.995,2000};
+				soundBegin[] = {"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+				beginwater1[] = {"MA_Weapons\data\GRL45\GRL45_Fire.ogg",1,1,400};
+				soundBeginWater[] = {"beginwater1",1};
+			};
+			reloadTime = 0.075;
+			dispersion = 0.00075;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 300;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.05;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 10;
+			class MuzzleSlot: MuzzleSlot
+			{
+				ccompatibleitems[] = {};
+			};
+			class CowsSlot: CowsSlot
+			{
+				compatibleitems[] = {};
+				iconPosition[] = {0.6,0.27};
+				iconScale = 0.15;
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleitems[] = {};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleitems[] = {};
+			};
+		};
+	};
+	class MA_363_Sticky_Detonator_Gray: MA_363_Sticky_Detonator
+	{
+		displayName = "[MA] M363 Sticky Detonator (Gray)";
+		baseWeapon = "MA_363_Sticky_Detonator_Gray";
+		model = "MA_Weapons\data\M363_Det.p3d";
+		picture = "\MA_Weapons\data\Sticky_Det\data\icons\Sticky_Detonator_Gray.paa";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\MA_Weapons\data\Sticky_Det\data\Gray_M363_Det_CO.paa","\MA_Weapons\data\Sticky_Det\data\M363_Det_Mag_CO.paa"};
+	};*/
+	class MA_GRL_45;
+	class MA_GRL_45_Bman: MA_GRL_45
 	{
 		scope = 1;
 		scopeArsenal = 1;

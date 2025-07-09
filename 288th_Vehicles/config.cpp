@@ -432,6 +432,11 @@ class cfgVehicles
 	class HitArms;
 	class HitHands;
 	class HitLegs;
+	class Items_base_F;
+	class Land_packing_crate_lg_blue: Items_base_F
+	{
+		maximumLoad = 10000;
+	};
 	class DefaultVehicleSystemsDisplayManagerLeft
 	{
 		class components;
@@ -488,7 +493,8 @@ class cfgVehicles
 	class OPTRE_AU_44_Mortar;
 	class TCF_UNSC_Nightingale;
 	class OPTRE_YSS_1000_A;
-	class UGV_02_Demining_Base_F;
+	class B_UGV_02_Demining_F;
+	class B_UGV_02_Science_F;
 	class B_UAV_05_F;
 	class O_MBT_02_railgun_base_F;
 	class OPTRE_M12G1_LRV;
@@ -500,6 +506,11 @@ class cfgVehicles
 	class AnimationSources;
 	class OPTRE_M12R_AA;
 	class B_MBT_01_cannon_F;
+	class B_HMG_01_F;
+	class B_HMG_01_high_F;
+	class I_MRAP_03_F;
+	class I_MRAP_03_gmg_F;
+	class I_MRAP_03_hmg_F;
 	class Ship;
 	class Boat_F: Ship
 	{
@@ -523,7 +534,7 @@ class cfgVehicles
 	{
 		class UserActions
 		{
-			class 288th_Ed_1E_deploy
+			class Ed_1E_deploy
 			{
 				displayNameDefault = "Deploy ED-1E";
 				priority = -10;
@@ -534,10 +545,51 @@ class cfgVehicles
 				radius = 5;
 				onlyForPlayer = 1;
 				condition = "this == player && alive this && isPlayer this && this == vehicle this && ""ED_1E_Kit"" in (items this )";
-				statement = "_pos = this getPos [1.5, getDir this]; _vehicle = (createVehicle [""288th_Ed_1E"", _pos, [], 0, ""FLY""]); _vehicle setDir (getDir this); createVehicleCrew _vehicle; this removeItem 'ED_1E_Kit';";
+				statement = "_pos = this getPos [1.5, getDir this]; _vehicle = (createVehicle [""288th_ED_1E"", _pos, [], 0, ""FLY""]); _vehicle setDir (getDir this); createVehicleCrew _vehicle; this removeItem 'ED_1E_Kit';";
+			};
+			class Ed_1F_deploy
+			{
+				displayNameDefault = "Deploy ED-1F";
+				priority = -10;
+				showWindow = 0;
+				hideOnUse = 1;
+				displayName = "Deploy ED-1F";
+				position = "action";
+				radius = 5;
+				onlyForPlayer = 1;
+				condition = "this == player && alive this && isPlayer this && this == vehicle this && ""ED_1F_Kit"" in (items this )";
+				statement = "_pos = this getPos [1.5, getDir this]; _vehicle = (createVehicle [""288th_ED_1F"", _pos, [], 0, ""FLY""]); _vehicle setDir (getDir this); createVehicleCrew _vehicle; this removeItem 'ED_1F_Kit';";
+			};
+			class Ed_1C_deploy
+			{
+				displayNameDefault = "Deploy ED-1C";
+				priority = -10;
+				showWindow = 0;
+				hideOnUse = 1;
+				displayName = "Deploy ED-1C";
+				position = "action";
+				radius = 5;
+				onlyForPlayer = 1;
+				condition = "this == player && alive this && isPlayer this && this == vehicle this && ""Ed_1C_Kit"" in (items this )";
+				statement = "_pos = this getPos [1.5, getDir this]; _vehicle = (createVehicle [""288th_Ed_1C"", _pos, [], 0, ""FLY""]); _vehicle setDir (getDir this); createVehicleCrew _vehicle; this removeItem 'Ed_1C_Kit';";
+			};
+			class MQ_94_deploy
+			{
+				displayNameDefault = "Deploy MQ-94";
+				priority = -10;
+				showWindow = 0;
+				hideOnUse = 1;
+				displayName = "Deploy MQ-94";
+				position = "action";
+				radius = 5;
+				onlyForPlayer = 1;
+				condition = "this == player && alive this && isPlayer this && this == vehicle this && ""MQ_94_Kit"" in (items this )";
+				statement = "_pos = this getPos [1.5, getDir this]; _vehicle = (createVehicle [""288th_MQ_94"", _pos, [], 0, ""FLY""]); _vehicle setDir (getDir this); createVehicleCrew _vehicle; this removeItem 'MQ_94_Kit';";
 			};
 		};
 	};
+
+	//Heli
 	class 288th_Hornet : OPTRE_UNSC_hornet_CAP{
 		armor = 225;
 		armorStructural = 2;
@@ -1670,6 +1722,8 @@ class cfgVehicles
 		tf_hasLRradio = 1;
 		enableRadio = 1;
 	};
+
+	//Misc
 	class 288th_mongoose_crate : OPTRE_M274_ATV{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -1990,7 +2044,7 @@ class cfgVehicles
 		faction = "288th_UNSC";
 		displayName = "M313 Rocket Elephant (288th)";
 		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Tank";
+		editorSubcategory = "288th_Eden_Misc";
 		mainRotorSpeed = 3;
 		backRotorSpeed = 3;
 		tf_hasLRradio = 1;
@@ -2103,6 +2157,8 @@ class cfgVehicles
 		};
 		textureList[] = { "standard",1,"colorgreen",1,"colorblack",1,"colortan",1 };
 	};
+
+	//APC/IFV
 	class 288th_Oryx : OPTRE_M494{
 		dlc = "288th";
 		author = "Soda / Misriah 288";
@@ -3402,312 +3458,8 @@ class cfgVehicles
 		};
 		class TransportItems{};
 	};
-	class 288th_Groundhog : B_UGV_01_rcws_F{
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		displayName = "M-6 ARV Groundhog (288th)";
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Drone";
-		forceInGarage = 1;
-		scope = 2;
-		scopeCurator = 2;
-		canAccessMineDetector = 1;
-		class SimpleObject
-		{
-			eden = 1;
-			animate[] = { {"damagehide",0},{"damagehidevez",0},{"damagehidehlaven",0},{"wheel_1_1_destruct",0},{"wheel_1_2_destruct",0},{"wheel_1_3_destruct",0},{"wheel_1_4_destruct",0},{"wheel_2_1_destruct",0},{"wheel_2_2_destruct",0},{"wheel_2_3_destruct",0},{"wheel_2_4_destruct",0},{"wheel_1_1_destruct_unhide",0},{"wheel_1_2_destruct_unhide",0},{"wheel_1_3_destruct_unhide",0},{"wheel_1_4_destruct_unhide",0},{"wheel_2_1_destruct_unhide",0},{"wheel_2_2_destruct_unhide",0},{"wheel_2_3_destruct_unhide",0},{"wheel_2_4_destruct_unhide",0},{"glass1_destruct",0},{"glass2_destruct",0},{"glass3_destruct",0},{"glass4_destruct",0},{"glass5_destruct",0},{"wheel_1_1",0},{"wheel_2_1",0},{"wheel_1_2",0},{"wheel_1_3",0},{"wheel_2_2",0},{"wheel_2_3",0},{"daylights",0},{"reverse_light",1},{"wheel_1_1_damage",0},{"wheel_1_2_damage",0},{"wheel_1_3_damage",0},{"wheel_1_4_damage",0},{"wheel_2_1_damage",0},{"wheel_2_2_damage",0},{"wheel_2_3_damage",0},{"wheel_2_4_damage",0},{"wheel_1_1_damper_damage_backanim",0},{"wheel_1_2_damper_damage_backanim",0},{"wheel_1_3_damper_damage_backanim",0},{"wheel_1_4_damper_damage_backanim",0},{"wheel_2_1_damper_damage_backanim",0},{"wheel_2_2_damper_damage_backanim",0},{"wheel_2_3_damper_damage_backanim",0},{"wheel_2_4_damper_damage_backanim",0},{"vehicletransported_antenna_hide",0},{"turrethide",1},{"damagehlaven",0},{"wheel_1_1_damper",0},{"wheel_2_1_damper",0},{"wheel_1_3_damper",0},{"wheel_2_3_damper",0},{"wheel_1_2_damper",0},{"wheel_2_2_damper",0},{"mg_muzzle",0},{"gmg_muzzle",0},{"muzzleflashrot",0},{"muzzleflashrot_2",0} };
-			hide[] = { "zasleh","light_l","light_r","zadni svetlo","brzdove svetlo","clan","podsvit pristroju","poskozeni" };
-			verticalOffset = 1.968;
-			verticalOffsetWorld = -0.121;
-			init = "[this, '', []] call bis_fnc_initVehicle";
-		};
-		crew = "B_UAV_AI";
-		typicalCargo[] = { "B_Soldier_F" };
-		side = 1;
-		setMass = 100;
-		wheelDamageThreshold = 100;
-		wheelDestroyThreshold = 100;
-		wheelDamageRadiusCoef = 100;
-		wheelDestroyRadiusCoef = 100;
-		armor = 250;
-		explosionShielding = 0.5;
-		canFloat = 1;
-		waterResistance = 0.09;
-		maxFordingDepth = 1;
-		rudderForceCoef = 0.175;
-		rudderForceCoefAtMaxSpeed = 0.025;
-		cost = 5000;
-		maxSpeed = 120;
-		maximumLoad = 5000;
-		frontRearSplit = 0.5;
-		frontBias = 1;
-		rearBias = 1;
-		centreBias = 1;
-		clutchStrength = 24;
-		enginePower = 1000;
-		maxOmega = 350;
-		peakTorque = 2250;
-		dampingRateFullThrottle = 0.08;
-		dampingRateZeroThrottleClutchEngaged = 2;
-		dampingRateZeroThrottleClutchDisengaged = 0.35;
-		torqueCurve[] = { {0.1,0.7},{0.2,0.9},{0.35,0.955},{0.5,1},{0.6,1},{0.7,0.955},{0.8,0.9},{1,0.6} };
-		changeGearMinEffectivity[] = { 0.95,0.0,0.85,0.85,0.85,0.85,0.85 };
-		switchTime = 0.25;
-		latency = 1;
-		waterLeakiness = 0;
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 500;
-		transportMaxBackpacks = 20;
-		tf_hasLRradio = 1;
-		tf_isolatedAmount = 0.40000001;
-		tf_range = 120000;
-		cargoCanControlUAV = 1;
-		faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";
-		hiddenSelections[] = { "camo1","camo2","camo3" };
-		hiddenSelectionsTextures[] = { "\288th_Vehicles\Stomper\Black\UGV_3_Turret","\288th_Vehicles\Stomper\Black\UGV_2_Black","\288th_Vehicles\Stomper\Black\UGV_1_Black" };
-		class textureSources
-		{
-			class Black
-			{
-				displayName = "Black";
-				author = "Misriah 288 DJP";
-				factions[] = { "288th_UNSC" };
-				textures[] =
-				{
-					"\288th_Vehicles\Stomper\Black\UGV_3_Turret",
-					"\288th_Vehicles\Stomper\Black\UGV_2_Black",
-					"\288th_Vehicles\Stomper\Black\UGV_1_Black"
-				};
-			};
-			class Urban
-			{
-				displayName = "Urban";
-				author = "Misriah 288 DJP";
-				factions[] = { "288th_UNSC" };
-				textures[] =
-				{
-					"\288th_Vehicles\Stomper\Urban\UGV_3_Turret",
-					"\288th_Vehicles\Stomper\Urban\UGV_2_Urban",
-					"\288th_Vehicles\Stomper\Urban\UGV_1_Urban"
-				};
-			};
-			class Maxim
-			{
-				displayName = "Maxim";
-				author = "Misriah 288 DJP";
-				factions[] = { "288th_UNSC" };
-				textures[] =
-				{
-					"\288th_Vehicles\Stomper\Maxim\UGV_3_Maxim",
-					"\288th_Vehicles\Stomper\Maxim\UGV_2_Maxim",
-					"\288th_Vehicles\Stomper\Maxim\UGV_1_Maxim"
-				};
-			};
-			class UNSC
-			{
-				displayName = "UNSC";
-				author = "Misriah 288 DJP";
-				factions[] = { "288th_UNSC" };
-				textures[] =
-				{
-					"\288th_Vehicles\Stomper\UNSC\UGV_01_ext_Olive_CO.paa",
-					"\288th_Vehicles\Stomper\UNSC\UGV_01_int_CO.paa",
-					"\288th_Vehicles\Stomper\UNSC\Turret_olive_CO.paa"
-				};
-			};
-		};
-		textureList[] = { "Black",1, "Urban",0, "Maxim",0, "Bees",0, "Beach",0, "UNSC",0, };
-		class TransportItems{};
-		class CargoTurret;
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class HitPoints
-				{
-					class HitTurret
-					{
-						armor = 10;
-						material = 1;
-						armorComponent = "hit_main_turret";
-						name = "hit_main_turret_point";
-						visual = "OtocVez";
-						passThrough = 0;
-						minimalHit = 0.03;
-						explosionShielding = 0.4;
-						radius = 0.25;
-						isTurret = 1;
-					};
-					class HitGun
-					{
-						armor = 10;
-						material = 1;
-						armorComponent = "hit_main_gun";
-						name = "hit_main_gun_point";
-						visual = "OtocHlaven";
-						passThrough = 0;
-						minimalHit = 0.03;
-						explosionShielding = 0.4;
-						radius = 0.2;
-						isGun = 1;
-					};
-				};
-				isCopilot = 0;
-				dontCreateAI = 0;
-				body = "mainTurret";
-				gun = "mainGun";
-				memoryPointGunnerOptics = "PiP1_pos";
-				memoryPointGun = "machinegun";
-				gunnerForceOptics = 1;
-				gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_F.p3d";
-				turretInfoType = "RscOptics_UGV_gunner";
-				weapons[] = { "288th_M318_20mm_Autocannon_Small","288th_M73X_V","Laserdesignator_mounted","SmokeLauncher" };
-				magazines[] = { "288th_350Rnd_20mm_HE","288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box","Laserbatteries","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag" };
-				soundServo[] = { "A3\Sounds_F\vehicles\soft\UGV_01\Servo_UGV_gunner",0.31622776,1,30 };
-				soundServoVertical[] = { "A3\Sounds_F\vehicles\soft\UGV_01\Servo_UGV_gunner_vertical",0.31622776,1,30 };
-				minElev = -12;
-				maxElev = 80;
-				forceHideGunner = 1;
-				outGunnerMayFire = 1;
-				discreteDistance[] = { 100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500 };
-				discreteDistanceInitIndex = 2;
-				stabilizedInAxes = 3;
-				class ViewOptics : RCWSOptics
-				{
-					visionMode[] = { "Normal","TI" };
-					initFov = 0.4667;
-					maxFov = 0.4667;
-					minFov = 0.035;
-					directionStabilized = 1;
-				};
-				class Components
-				{
-					class VehicleSystemsDisplayManagerComponentLeft : DefaultVehicleSystemsDisplayManagerLeft
-					{
-						class components
-						{
-							class EmptyDisplay
-							{
-								componentType = "EmptyDisplayComponent";
-							};
-							class MinimapDisplay
-							{
-								componentType = "MinimapDisplayComponent";
-								resource = "RscCustomInfoMiniMap";
-							};
-							class UAVDisplay
-							{
-								componentType = "UAVFeedDisplayComponent";
-							};
-						};
-					};
-					class VehicleSystemsDisplayManagerComponentRight : DefaultVehicleSystemsDisplayManagerRight
-					{
-						class components
-						{
-							class EmptyDisplay
-							{
-								componentType = "EmptyDisplayComponent";
-							};
-							class MinimapDisplay
-							{
-								componentType = "MinimapDisplayComponent";
-								resource = "RscCustomInfoMiniMap";
-							};
-							class UAVDisplay
-							{
-								componentType = "UAVFeedDisplayComponent";
-							};
-						};
-					};
-				};
-			};
-			class CargoTurret_01 : CargoTurret
-			{
-				gunnerAction = "passenger_flatground_4";
-				memoryPointsGetInGunner = "pos cargo";
-				memoryPointsGetInGunnerDir = "pos cargo dir";
-				gunnerName = "$STR_GETIN_POS_PASSENGER";
-				gunnerCompartments = "Compartment2";
-				proxyIndex = 1;
-				maxElev = 45;
-				minElev = -5;
-				maxTurn = 95;
-				minTurn = -60;
-				isPersonTurret = 1;
-			};
-		};
-		class HitPoints : Hitpoints
-		{
-			class HitHull
-			{
-				armor = 0.7;
-				material = 50;
-				armorComponent = "hit_hull";
-				name = "hit_hull_point";
-				visual = "zbytek";
-				passThrough = 1;
-				minimalHit = 0.2;
-				explosionShielding = 0.2;
-				radius = 0.3;
-			};
-			class HitEngine
-			{
-				armor = 2;
-				material = -1;
-				armorComponent = "hit_engine";
-				name = "hit_engine_point";
-				visual = "-";
-				passThrough = 0.5;
-				minimalHit = 0.2;
-				explosionShielding = 0.2;
-				radius = 0.3;
-			};
-			class HitFuel
-			{
-				armor = 1;
-				material = -1;
-				armorComponent = "hit_fuel";
-				name = "hit_fuel_point";
-				visual = "-";
-				passThrough = 0.3;
-				minimalHit = 0.1;
-				explosionShielding = 0.6;
-				radius = 0.3;
-			};
-			class HitLFWheel: HitLFWheel
-			{
-				armor = 1.5;
-				name = "wheel_1_1";
-			};
-			class HitLF2Wheel: HitLF2Wheel
-			{
-				armor = 1.5;
-				name = "wheel_1_2";
-			};
-			class HitLMWheel: HitLMWheel
-			{
-				armor = 1.5;
-				name = "wheel_1_3";
-			};
-			class HitRFWheel: HitRFWheel
-			{
-				armor = 1.5;
-				name = "wheel_2_1";
-			};
-			class HitRF2Wheel: HitRF2Wheel
-			{
-				armor = 1.5;
-				name = "wheel_2_2";
-			};
-			class HitRMWheel: HitRMWheel
-			{
-				armor = 1.5;
-				name = "wheel_2_3";
-			};
-		};
-	};
+
+	//Planes
 	class 288th_VAF19 : B_Plane_Fighter_01_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -6387,6 +6139,8 @@ class cfgVehicles
 		displayName = "YSS-1000-AS (VTOL) (Single) (288th)";
 		class Turrets{};
 	};
+
+	//Tanks
 	class 288th_M808S : OPTRE_M808S{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -6679,6 +6433,8 @@ class cfgVehicles
 			};
 		};
 	};
+
+	//cars
 	class 288th_Railgun_Warthog: OPTRE_M12G1_LRV{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -6687,7 +6443,7 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		forceInGarage = 1;
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Rifleman";
 		displayName = "M12G1X TOG (288th)";
 		transportSoldier = 0;
 		armor = 250;
@@ -6828,6 +6584,551 @@ class cfgVehicles
 		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","camo_details","camo_interior","camo_doors"};
 		hiddenSelectionsTextures[] = {"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
+	};
+	class 288th_salamander: I_MRAP_03_F{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		forceInGarage = 1;
+		side = 1;
+		armor = 250;
+		crew = "288th_SW_Rifleman";
+		displayName = "M201 Salamander (288th)";
+		clutchStrength = 20;
+		enginePower = 537;
+		maxOmega = 330;
+		peakTorque = 1500;
+		editorPreview = "288th_Vehicles\Salamander\Unarmed_Salamander.jpg";
+		textureList[] = {"colorstand",1,"colorWoodland",0,"Innie",0,"ArmyD",0,"Army",0,"Jackal",0,"Tauri",0,"Eridanus",0,"Digi",0};
+		class textureSources
+		{
+			class colorstand
+			{
+				displayName = "Standard";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa"};
+			};
+			class colorWoodland
+			{
+				displayName = "Woodland";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_02.paa"};
+			};
+			class Innie
+			{
+				displayName = "Innie";
+				author = "Misriah 288 DJP";
+				textures[] = { "288th_Vehicles\Salamander\URF_Innie.paa"};
+			};
+			class Army
+			{
+				displayName = "Army";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\arv_AR.paa"};
+			};
+			class ArmyD
+			{
+				displayName = "Desert";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\arv_AR_D.paa"};
+			};
+			class Jackal 
+			{
+				displayName = "JACKAL";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\JACKAL.paa"};
+        	};
+			class Tauri
+			{
+				displayName = "Tauri";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\tauri_Salamander_02.paa"};
+        	};
+			class Eridanus
+			{
+				displayName = "Eridanus";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_02_Alt.paa"};
+        	};
+			class Digi
+			{
+				displayName = "Digi";
+				author = "Misriah 288 DJP";
+				textures[] = {"\a3\soft_f_beta\mrap_03\data\mrap_03_ext_indp_co.paa"};
+        	};
+		};
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa"};
+	};
+	class 288th_salamander_Agl: I_MRAP_03_gmg_F{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		forceInGarage = 1;
+		side = 1;
+		armor = 250;
+		crew = "288th_SW_Rifleman";
+		displayName = "M201 AGL Salamander (288th)";
+		clutchStrength = 20;
+		enginePower = 537;
+		maxOmega = 330;
+		peakTorque = 1500;
+		editorPreview = "288th_Vehicles\Salamander\armed_Salamander.jpg";
+		textureList[] = {"colorstand",1,"colorWoodland",0,"Innie",0,"ArmyD",0,"Army",0,"Jackal",0,"Tauri",0,"Eridanus",0,"Digi",0};
+		class textureSources
+		{
+			class colorstand
+			{
+				displayName = "Standard";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa","288th_Vehicles\Salamander\OPTRE_GHMG_01.paa"};
+			};
+			class colorWoodland
+			{
+				displayName = "Woodland";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_02.paa","288th_Vehicles\Salamander\OPTRE_GHMG_02.paa"};
+			};
+			class Innie 
+			{
+				displayName = "Innie";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\URF_Innie.paa","288th_Vehicles\Salamander\URF_Innie_TURRET.paa"};
+        	};
+			class Army
+			{
+				displayName = "Army";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\arv_AR.paa","288th_Vehicles\Salamander\ARV_MG.paa"};
+			};
+			class ArmyD
+			{
+				displayName = "Desert";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\arv_AR_D.paa","288th_Vehicles\Salamander\ARV_MG.paa"};
+			};
+        	class Jackal 
+			{
+				displayName = "JACKAL";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\JACKAL.paa","288th_Vehicles\Salamander\JACKAL_TURRET.paa"};
+            };
+			class Tauri
+			{
+				displayName = "Tauri";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\tauri_Salamander_02.paa","288th_Vehicles\Salamander\tauri_GHMG_02.paa"};
+        	};
+			class Eridanus
+			{
+				displayName = "Eridanus";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_02_Alt.paa","288th_Vehicles\Salamander\OPTRE_GHMG_02_Alt.paa"};
+        	};
+			class Digi
+			{
+				displayName = "Digi";
+				author = "Misriah 288 DJP";
+				textures[] = {"\a3\soft_f_beta\mrap_03\data\mrap_03_ext_indp_co.paa","\a3\data_f\vehicles\turret_indp_co.paa"};
+        	};
+		};
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa","288th_Vehicles\Salamander\OPTRE_GHMG_01.paa"};
+	};
+	class 288th_salamander_HMG: I_MRAP_03_gmg_F{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		forceInGarage = 1;
+		side = 1;
+		armor = 250;
+		crew = "288th_SW_Rifleman";
+		displayName = "M201 HMG Salamander (288th)";
+		clutchStrength = 20;
+		enginePower = 537;
+		maxOmega = 330;
+		peakTorque = 1500;
+		editorPreview = "288th_Vehicles\Salamander\armed_Salamander.jpg";
+		textureList[] = {"colorstand",1,"colorWoodland",0,"Innie",0,"ArmyD",0,"Army",0,"Jackal",0,"Tauri",0,"Eridanus",0,"Digi",0};
+		class textureSources
+		{
+			class colorstand
+			{
+				displayName = "Standard";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa","288th_Vehicles\Salamander\OPTRE_GHMG_01.paa"};
+			};
+			class colorWoodland
+			{
+				displayName = "Woodland";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_02.paa","288th_Vehicles\Salamander\OPTRE_GHMG_02.paa"};
+			};
+			class Innie 
+			{
+				displayName = "Innie";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\URF_Innie.paa","288th_Vehicles\Salamander\URF_Innie_TURRET.paa"};
+        	};
+			class Army
+			{
+				displayName = "Army";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\arv_AR.paa","288th_Vehicles\Salamander\ARV_MG.paa"};
+			};
+			class ArmyD
+			{
+				displayName = "Desert";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\arv_AR_D.paa","288th_Vehicles\Salamander\ARV_MG.paa"};
+			};
+        	class Jackal 
+			{
+				displayName = "JACKAL";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\JACKAL.paa","288th_Vehicles\Salamander\JACKAL_TURRET.paa"};
+            };
+			class Tauri
+			{
+				displayName = "Tauri";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\tauri_Salamander_02.paa","288th_Vehicles\Salamander\tauri_GHMG_02.paa"};
+        	};
+			class Eridanus
+			{
+				displayName = "Eridanus";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_02_Alt.paa","288th_Vehicles\Salamander\OPTRE_GHMG_02_Alt.paa"};
+        	};
+			class Digi
+			{
+				displayName = "Digi";
+				author = "Misriah 288 DJP";
+				textures[] = {"\a3\soft_f_beta\mrap_03\data\mrap_03_ext_indp_co.paa","\a3\data_f\vehicles\turret_indp_co.paa"};
+        	};
+		};
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa","288th_Vehicles\Salamander\OPTRE_GHMG_01.paa"};
+	};
+
+	//Drones
+	class 288th_Groundhog : B_UGV_01_rcws_F{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		displayName = "M-6 ARV Groundhog (288th)";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Drone";
+		forceInGarage = 1;
+		scope = 2;
+		scopeCurator = 2;
+		canAccessMineDetector = 1;
+		class SimpleObject
+		{
+			eden = 1;
+			animate[] = { {"damagehide",0},{"damagehidevez",0},{"damagehidehlaven",0},{"wheel_1_1_destruct",0},{"wheel_1_2_destruct",0},{"wheel_1_3_destruct",0},{"wheel_1_4_destruct",0},{"wheel_2_1_destruct",0},{"wheel_2_2_destruct",0},{"wheel_2_3_destruct",0},{"wheel_2_4_destruct",0},{"wheel_1_1_destruct_unhide",0},{"wheel_1_2_destruct_unhide",0},{"wheel_1_3_destruct_unhide",0},{"wheel_1_4_destruct_unhide",0},{"wheel_2_1_destruct_unhide",0},{"wheel_2_2_destruct_unhide",0},{"wheel_2_3_destruct_unhide",0},{"wheel_2_4_destruct_unhide",0},{"glass1_destruct",0},{"glass2_destruct",0},{"glass3_destruct",0},{"glass4_destruct",0},{"glass5_destruct",0},{"wheel_1_1",0},{"wheel_2_1",0},{"wheel_1_2",0},{"wheel_1_3",0},{"wheel_2_2",0},{"wheel_2_3",0},{"daylights",0},{"reverse_light",1},{"wheel_1_1_damage",0},{"wheel_1_2_damage",0},{"wheel_1_3_damage",0},{"wheel_1_4_damage",0},{"wheel_2_1_damage",0},{"wheel_2_2_damage",0},{"wheel_2_3_damage",0},{"wheel_2_4_damage",0},{"wheel_1_1_damper_damage_backanim",0},{"wheel_1_2_damper_damage_backanim",0},{"wheel_1_3_damper_damage_backanim",0},{"wheel_1_4_damper_damage_backanim",0},{"wheel_2_1_damper_damage_backanim",0},{"wheel_2_2_damper_damage_backanim",0},{"wheel_2_3_damper_damage_backanim",0},{"wheel_2_4_damper_damage_backanim",0},{"vehicletransported_antenna_hide",0},{"turrethide",1},{"damagehlaven",0},{"wheel_1_1_damper",0},{"wheel_2_1_damper",0},{"wheel_1_3_damper",0},{"wheel_2_3_damper",0},{"wheel_1_2_damper",0},{"wheel_2_2_damper",0},{"mg_muzzle",0},{"gmg_muzzle",0},{"muzzleflashrot",0},{"muzzleflashrot_2",0} };
+			hide[] = { "zasleh","light_l","light_r","zadni svetlo","brzdove svetlo","clan","podsvit pristroju","poskozeni" };
+			verticalOffset = 1.968;
+			verticalOffsetWorld = -0.121;
+			init = "[this, '', []] call bis_fnc_initVehicle";
+		};
+		crew = "B_UAV_AI";
+		typicalCargo[] = { "B_Soldier_F" };
+		side = 1;
+		setMass = 100;
+		wheelDamageThreshold = 100;
+		wheelDestroyThreshold = 100;
+		wheelDamageRadiusCoef = 100;
+		wheelDestroyRadiusCoef = 100;
+		armor = 250;
+		explosionShielding = 0.5;
+		canFloat = 1;
+		waterResistance = 0.09;
+		maxFordingDepth = 1;
+		rudderForceCoef = 0.175;
+		rudderForceCoefAtMaxSpeed = 0.025;
+		cost = 5000;
+		maxSpeed = 120;
+		maximumLoad = 5000;
+		frontRearSplit = 0.5;
+		frontBias = 1;
+		rearBias = 1;
+		centreBias = 1;
+		clutchStrength = 24;
+		enginePower = 1000;
+		maxOmega = 350;
+		peakTorque = 2250;
+		dampingRateFullThrottle = 0.08;
+		dampingRateZeroThrottleClutchEngaged = 2;
+		dampingRateZeroThrottleClutchDisengaged = 0.35;
+		torqueCurve[] = { {0.1,0.7},{0.2,0.9},{0.35,0.955},{0.5,1},{0.6,1},{0.7,0.955},{0.8,0.9},{1,0.6} };
+		changeGearMinEffectivity[] = { 0.95,0.0,0.85,0.85,0.85,0.85,0.85 };
+		switchTime = 0.25;
+		latency = 1;
+		waterLeakiness = 0;
+		transportMaxWeapons = 20;
+		transportMaxMagazines = 500;
+		transportMaxBackpacks = 20;
+		tf_hasLRradio = 1;
+		tf_isolatedAmount = 0.40000001;
+		tf_range = 120000;
+		cargoCanControlUAV = 1;
+		faction = "288th_UNSC";
+		vehicleClass = "288th_Subgroups_LandVehicles";
+		hiddenSelections[] = { "camo1","camo2","camo3" };
+		hiddenSelectionsTextures[] = { "\288th_Vehicles\Stomper\Black\UGV_3_Turret","\288th_Vehicles\Stomper\Black\UGV_2_Black","\288th_Vehicles\Stomper\Black\UGV_1_Black" };
+		class textureSources
+		{
+			class Black
+			{
+				displayName = "Black";
+				author = "Misriah 288 DJP";
+				factions[] = { "288th_UNSC" };
+				textures[] =
+				{
+					"\288th_Vehicles\Stomper\Black\UGV_3_Turret",
+					"\288th_Vehicles\Stomper\Black\UGV_2_Black",
+					"\288th_Vehicles\Stomper\Black\UGV_1_Black"
+				};
+			};
+			class Urban
+			{
+				displayName = "Urban";
+				author = "Misriah 288 DJP";
+				factions[] = { "288th_UNSC" };
+				textures[] =
+				{
+					"\288th_Vehicles\Stomper\Urban\UGV_3_Turret",
+					"\288th_Vehicles\Stomper\Urban\UGV_2_Urban",
+					"\288th_Vehicles\Stomper\Urban\UGV_1_Urban"
+				};
+			};
+			class Maxim
+			{
+				displayName = "Maxim";
+				author = "Misriah 288 DJP";
+				factions[] = { "288th_UNSC" };
+				textures[] =
+				{
+					"\288th_Vehicles\Stomper\Maxim\UGV_3_Maxim",
+					"\288th_Vehicles\Stomper\Maxim\UGV_2_Maxim",
+					"\288th_Vehicles\Stomper\Maxim\UGV_1_Maxim"
+				};
+			};
+			class UNSC
+			{
+				displayName = "UNSC";
+				author = "Misriah 288 DJP";
+				factions[] = { "288th_UNSC" };
+				textures[] =
+				{
+					"\288th_Vehicles\Stomper\UNSC\UGV_01_ext_Olive_CO.paa",
+					"\288th_Vehicles\Stomper\UNSC\UGV_01_int_CO.paa",
+					"\288th_Vehicles\Stomper\UNSC\Turret_olive_CO.paa"
+				};
+			};
+		};
+		textureList[] = { "Black",1, "Urban",0, "Maxim",0, "Bees",0, "Beach",0, "UNSC",0, };
+		class TransportItems{};
+		class CargoTurret;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor = 10;
+						material = 1;
+						armorComponent = "hit_main_turret";
+						name = "hit_main_turret_point";
+						visual = "OtocVez";
+						passThrough = 0;
+						minimalHit = 0.03;
+						explosionShielding = 0.4;
+						radius = 0.25;
+						isTurret = 1;
+					};
+					class HitGun
+					{
+						armor = 10;
+						material = 1;
+						armorComponent = "hit_main_gun";
+						name = "hit_main_gun_point";
+						visual = "OtocHlaven";
+						passThrough = 0;
+						minimalHit = 0.03;
+						explosionShielding = 0.4;
+						radius = 0.2;
+						isGun = 1;
+					};
+				};
+				isCopilot = 0;
+				dontCreateAI = 0;
+				body = "mainTurret";
+				gun = "mainGun";
+				memoryPointGunnerOptics = "PiP1_pos";
+				memoryPointGun = "machinegun";
+				gunnerForceOptics = 1;
+				gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_F.p3d";
+				turretInfoType = "RscOptics_UGV_gunner";
+				weapons[] = { "288th_M318_20mm_Autocannon_Small","288th_M73X_V","Laserdesignator_mounted","SmokeLauncher" };
+				magazines[] = { "288th_350Rnd_20mm_HE","288th_500Rnd_65x85_Box","288th_500Rnd_65x85_Box","Laserbatteries","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag" };
+				soundServo[] = { "A3\Sounds_F\vehicles\soft\UGV_01\Servo_UGV_gunner",0.31622776,1,30 };
+				soundServoVertical[] = { "A3\Sounds_F\vehicles\soft\UGV_01\Servo_UGV_gunner_vertical",0.31622776,1,30 };
+				minElev = -12;
+				maxElev = 80;
+				forceHideGunner = 1;
+				outGunnerMayFire = 1;
+				discreteDistance[] = { 100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500 };
+				discreteDistanceInitIndex = 2;
+				stabilizedInAxes = 3;
+				class ViewOptics : RCWSOptics
+				{
+					visionMode[] = { "Normal","TI" };
+					initFov = 0.4667;
+					maxFov = 0.4667;
+					minFov = 0.035;
+					directionStabilized = 1;
+				};
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft : DefaultVehicleSystemsDisplayManagerLeft
+					{
+						class components
+						{
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+								resource = "RscCustomInfoMiniMap";
+							};
+							class UAVDisplay
+							{
+								componentType = "UAVFeedDisplayComponent";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight : DefaultVehicleSystemsDisplayManagerRight
+					{
+						class components
+						{
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+								resource = "RscCustomInfoMiniMap";
+							};
+							class UAVDisplay
+							{
+								componentType = "UAVFeedDisplayComponent";
+							};
+						};
+					};
+				};
+			};
+			class CargoTurret_01 : CargoTurret
+			{
+				gunnerAction = "passenger_flatground_4";
+				memoryPointsGetInGunner = "pos cargo";
+				memoryPointsGetInGunnerDir = "pos cargo dir";
+				gunnerName = "$STR_GETIN_POS_PASSENGER";
+				gunnerCompartments = "Compartment2";
+				proxyIndex = 1;
+				maxElev = 45;
+				minElev = -5;
+				maxTurn = 95;
+				minTurn = -60;
+				isPersonTurret = 1;
+			};
+		};
+		class HitPoints : Hitpoints
+		{
+			class HitHull
+			{
+				armor = 0.7;
+				material = 50;
+				armorComponent = "hit_hull";
+				name = "hit_hull_point";
+				visual = "zbytek";
+				passThrough = 1;
+				minimalHit = 0.2;
+				explosionShielding = 0.2;
+				radius = 0.3;
+			};
+			class HitEngine
+			{
+				armor = 2;
+				material = -1;
+				armorComponent = "hit_engine";
+				name = "hit_engine_point";
+				visual = "-";
+				passThrough = 0.5;
+				minimalHit = 0.2;
+				explosionShielding = 0.2;
+				radius = 0.3;
+			};
+			class HitFuel
+			{
+				armor = 1;
+				material = -1;
+				armorComponent = "hit_fuel";
+				name = "hit_fuel_point";
+				visual = "-";
+				passThrough = 0.3;
+				minimalHit = 0.1;
+				explosionShielding = 0.6;
+				radius = 0.3;
+			};
+			class HitLFWheel: HitLFWheel
+			{
+				armor = 1.5;
+				name = "wheel_1_1";
+			};
+			class HitLF2Wheel: HitLF2Wheel
+			{
+				armor = 1.5;
+				name = "wheel_1_2";
+			};
+			class HitLMWheel: HitLMWheel
+			{
+				armor = 1.5;
+				name = "wheel_1_3";
+			};
+			class HitRFWheel: HitRFWheel
+			{
+				armor = 1.5;
+				name = "wheel_2_1";
+			};
+			class HitRF2Wheel: HitRF2Wheel
+			{
+				armor = 1.5;
+				name = "wheel_2_2";
+			};
+			class HitRMWheel: HitRMWheel
+			{
+				armor = 1.5;
+				name = "wheel_2_3";
+			};
+		};
 	};
 	class 288th_Remote_M41 : OPTRE_Static_M41{
 		dlc = "288th";
@@ -7270,7 +7571,7 @@ class cfgVehicles
 			dissasembleTo[] = { "288th_Remote_AU_44_Bag" };
 		};
 	};
-	class 288th_Ed_1E : UGV_02_Demining_Base_F{
+	class 288th_Ed_1E : B_UGV_02_Demining_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		displayName = "ED-1E (288th)";
@@ -7305,14 +7606,14 @@ class cfgVehicles
 			class Ed_1E_Pickup
 			{
 				displayNameDefault = "Pick Up Ed-1E";
-				priority = 6;
+				priority = 1;
 				showWindow = 1;
 				hideOnUse = 1;
 				displayName = "Pick Up Ed-1E";
 				position = "action";
-				radius = 6.5;
+				radius = 10;
 				onlyForPlayer = 1;
-				condition = " this == cursorObject && alive this && player == vehicle player && player canadd ""ED_1E_Kit"" ";
+				condition = " this == cursorObject && alive this && player == vehicle player ";
 				statement = "player addItem 'ED_1E_Kit'; deleteVehicle this";
 			};
 		};
@@ -7328,9 +7629,9 @@ class cfgVehicles
 		enginePower = 100;
 		engineStartSpeed = 5;
 		engineStartupDelay = 2.5;
-		hiddenSelections = ["Camo_1","Camo_2","Camo_3"];
-		hiddenSelectionsMaterials = [];
-		hiddenSelectionsTextures = ["a3\soft_f_enoch\ugv_02\data\ugv_co.paa","a3\soft_f_enoch\ugv_02\data\tracks_co.paa","a3\soft_f_enoch\ugv_02\data\ugv2_mdf_ca.paa"];
+		hiddenSelections[] = {"Camo_1","Camo_2","Camo_3"};
+		hiddenSelectionsMaterials[] = {};
+		hiddenSelectionsTextures[] = {"a3\soft_f_enoch\ugv_02\data\ugv_co.paa","a3\soft_f_enoch\ugv_02\data\tracks_co.paa","a3\soft_f_enoch\ugv_02\data\ugv2_mdf_ca.paa"};
 		htMax = 180;
 		htMin = 60;
 		isUav = 1;
@@ -7464,7 +7765,7 @@ class cfgVehicles
 		tf_isolatedAmount = 1;
 		tf_range = 30000;
 		TFAR_hasIntercom = 0;
-		threat = [0.4,0,0];
+		threat[] = {0.4,0,0};
 		visualSize = 0.1;
 		class ACE_Actions
 		{
@@ -7479,7 +7780,7 @@ class cfgVehicles
 				{
 					displayName = "Pick Up ED-1E";
 					showDisabled = 0;
-					distance = 2.75;
+					distance = 6;
 					condition = "player == vehicle player && player canAdd ""ED_1E_Kit"" ";
 					statement = "player addItem 'ED_1E_Kit'; deleteVehicle this";
 				};
@@ -7490,7 +7791,7 @@ class cfgVehicles
 			assembleTo = "";
 			base = "";
 			displayName = "";
-			dissasembleTo = ["ED_1E_Kit"];
+			dissasembleTo[] = {"ED_1E_Kit"};
 			primary = 0;
 		};
 		/*class assembleInfo
@@ -7502,9 +7803,459 @@ class cfgVehicles
 			displayName = "";
 		};*/
 	};
+	class 288th_Ed_1C : B_UGV_02_Science_F{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		displayName = "ED-1C (288th)";
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+		side = 1;
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Drone";
+		accelAidForceCoef = 0.7;
+		accelAidForceSpd = 0.1;
+		accelAidForceYOffset = -0.8;
+		accuracy = 0.25;
+		accuracyDarkNightLightsOff = 0.001;
+		accuracyNightLightsOff = 0.006;
+		accuracyNightLightsOn = 0.1;
+		ace_tagging_canTag = 1;
+		airCapacity = 10;
+		allowTabLock = 1;
+		alwaysTarget = 0;
+		animated = 1;
+		armor = 75;
+		armorStructural = 25;
+		artilleryScanner = 0;
+		artilleryTarget = 0;
+		fuelCapacity = 10;
+		class UserActions
+		{
+			class Ed_1C_Pickup
+			{
+				displayNameDefault = "Pick Up ED-1C";
+				priority = 1;
+				showWindow = 1;
+				hideOnUse = 1;
+				displayName = "Pick Up ED-1C";
+				position = "action";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = " this == cursorObject && alive this && player == vehicle player ";
+				statement = "player addItem 'ED_1C_Kit'; deleteVehicle this";
+			};
+		};
+		cameraSmoothSpeed = 5;
+		camouflage = 0.25;
+		canAccessMineDetector = 1;
+		canFloat = 1;
+		canHideDriver = -1;
+		canUseScanners = 1;
+		clutchStrength = 15;
+		cost = 200;
+		engineMOI = 2.35;
+		enginePower = 100;
+		engineStartSpeed = 5;
+		engineStartupDelay = 2.5;
+		htMax = 180;
+		htMin = 60;
+		isUav = 1;
+		maxSpeed = 20;
+		nightVision = 1;
+		peakTorque = 1670;
+		tf_hasLRradio = 1;
+		tf_isolatedAmount = 1;
+		tf_range = 30000;
+		TFAR_hasIntercom = 0;
+		threat[] = {0.4,0,0};
+		visualSize = 0.1;
+		class ACE_Actions
+		{
+			class ACE_MainActions
+			{
+				condition = "alive _target";
+				displayName = "Interactions";
+				distance = 2.5;
+				position = "[0,0,0]";
+				selection = "";
+				class ACE_Pickup_Edit
+				{
+					displayName = "Pick Up ED-1C";
+					showDisabled = 0;
+					distance = 6;
+					condition = "player == vehicle player && player canAdd ""ED_1C_Kit"" ";
+					statement = "player addItem 'ED_1C_Kit'; deleteVehicle this";
+				};
+			};
+		};
+		class assembleInfo 
+		{
+			assembleTo = "";
+			base = "";
+			displayName = "";
+			dissasembleTo[] = {"ED_1c_Kit"};
+			primary = 0;
+		};
+	};
+	class 288th_Ed_1F : 288th_Ed_1E{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		displayName = "ED-1F (288th)";
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+		class UserActions
+		{
+			class Ed_1F_Pickup
+			{
+				displayNameDefault = "Pick Up ED-1F";
+				priority = 1;
+				showWindow = 1;
+				hideOnUse = 1;
+				displayName = "Pick Up ED-1F";
+				position = "action";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = " this == cursorObject && alive this && player == vehicle player ";
+				statement = "player addItem 'Ed_1F_Kit'; deleteVehicle this";
+			};
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				canAccessMineDetector = 1;
+				weapons[] = {"288th_CQS_48X_V","SmokeLauncher","Laserdesignator_mounted"};
+				magazines[] = {"Laserbatteries","288th_Buckshot","288th_Buckshot","288th_Buckshot","288th_Buckshot","288th_Buckshot","SmokeLauncherMag","SmokeLauncherMag"};
+				gunBeg = "gun_end";
+				gunEnd = "gun_start";
+				selectionFireAnim = "muzzleFlash";
+				memoryPointGunnerOptics = "cam_demining";
+				uavCameraGunnerPos = "cam_demining";
+				uavCameraGunnerDir = "cam_demining_dir";
+				memoryPointGun = "gun_end";
+				gunnerOpticsModel = "\A3\Weapons_F_beta\Binocular\lasermarker_optics";
+				turretInfoType = "RscOptics_UGV_02_Demining_gunner";
+				class OpticsIn
+				{
+					class CameraArm: ViewOptics
+					{
+						opticsDisplayName = "cam1";
+						gunnerOpticsModel = "\a3\Weapons_F_Enoch\Reticle\Optics_Gunner_UGV_02_demining_cam3_F";
+						initFov = 0.35;
+						minFov = 0.35;
+						maxFov = 0.35;
+					};
+					class CameraArmZoom: CameraArm
+					{
+						gunnerOpticsModel = "\a3\Weapons_F_Enoch\Reticle\Optics_Gunner_UGV_02_demining_cam3_zoom_F";
+						initFov = 0.0583333;
+						minFov = 0.0583333;
+						maxFov = 0.0583333;
+					};
+					class CameraBottom: ViewOptics
+					{
+						camPos = "driverview";
+						camDir = "driverview_dir";
+						opticsDisplayName = "cam2";
+						gunnerOpticsModel = "\a3\Weapons_F_Enoch\Reticle\Optics_Gunner_UGV_02_cam1_F";
+						initFov = 0.7;
+						minFov = 0.7;
+						maxFov = 0.7;
+					};
+					class CameraClaw: ViewOptics
+					{
+						camPos = "cam_rear";
+						camDir = "cam_rear_dir";
+						opticsDisplayName = "cam3";
+						gunnerOpticsModel = "\a3\Weapons_F_Enoch\Reticle\Optics_Gunner_UGV_02_cam2_F";
+						initFov = 0.35;
+						minFov = 0.35;
+						maxFov = 0.35;
+					};
+				};
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					{
+						defaultDisplay = "MineDetectorDisplay";
+						class Components
+						{
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+								resource = "RscCustomInfoMiniMap";
+							};
+							class MineDetectorDisplay
+							{
+								componentType = "MineDetectorDisplayComponent";
+								range = 50;
+								resource = "RscCustomInfoMineDetect";
+							};
+							class VehiclePrimaryGunnerDisplay
+							{
+								componentType = "TransportFeedDisplayComponent";
+								source = "PrimaryGunner";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType = "TransportFeedDisplayComponent";
+								source = "Driver";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					{
+						class Components
+						{
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+								resource = "RscCustomInfoMiniMap";
+							};
+							class MineDetectorDisplay
+							{
+								componentType = "MineDetectorDisplayComponent";
+								range = 50;
+								resource = "RscCustomInfoMineDetect";
+							};
+							class VehiclePrimaryGunnerDisplay
+							{
+								componentType = "TransportFeedDisplayComponent";
+								source = "PrimaryGunner";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType = "TransportFeedDisplayComponent";
+								source = "Driver";
+							};
+						};
+					};
+				};
+			};
+		};
+		class ACE_Actions
+		{
+			class ACE_MainActions
+			{
+				condition = "alive _target";
+				displayName = "Interactions";
+				distance = 2.5;
+				position = "[0,0,0]";
+				selection = "";
+				class ACE_Pickup_Edit
+				{
+					displayName = "Pick Up ED-1F";
+					showDisabled = 0;
+					distance = 6;
+					condition = "player == vehicle player && player canAdd ""ED_1F_Kit"" ";
+					statement = "player addItem 'ED_1F_Kit'; deleteVehicle this";
+				};
+			};
+		};
+		class assembleInfo 
+		{
+			assembleTo = "";
+			base = "";
+			displayName = "";
+			dissasembleTo[] = {"ED_1F_Kit"};
+			primary = 0;
+		};
+	};
+	class 288th_MQ_94 : TCF_UAV_01_F{
+        dlc = "288th";
+        author = "Misriah 288 DJP";
+        displayName = "MQ-94 Drone (288th)";
+        editorCategory = "288th_Eden";
+        editorSubcategory = "288th_Eden_Drone";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\B_UAV_01_F.jpg";
+        _generalMacro = "";
+        scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+        side = 1;
+        crew = "B_UAV_AI";
+        typicalCargo[] = { "B_UAV_AI" };
+        accuracy = 0.5;
+        fuelCapacity = 200;
+        cost = 10;
+		audible = 0.0085;
+        camouflage = 0.025;
+		class UserActions
+		{
+			class MQ_94_Pickup
+			{
+				displayNameDefault = "Pick Up MQ-94";
+				priority = 1;
+				showWindow = 1;
+				hideOnUse = 1;
+				displayName = "Pick Up MQ-94";
+				position = "action";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = " this == cursorObject && alive this && player == vehicle player ";
+				statement = "player addItem 'MQ_94_Kit'; deleteVehicle this";
+			};
+		};
+        /*hiddenSelectionsTextures[] = { "\288th_Vehicles\MQ_94\MQ_94_co.paa" };
+        textureList[] = { "Blufor",1 };*/
+    };
 
-	class 288th_M12_MLMS: OPTRE_M12R_AA
+	//Turrets
+	class 288th_SRS99XT: B_HMG_01_F
 	{
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+        side = 1;
+        crew = "288th_SW_Rifleman";
+		displayName = "SRS99XT (288th)";
+		hiddenSelections[] = {"camo1","camo2","camo3"};
+		hiddenSelectionsTextures[] = {"\288th_Vehicles\Turrets\StaticTurret_01_blk_CO.paa","\288th_Vehicles\Turrets\StaticTurret_02_blk_CO.paa","\288th_Vehicles\Turrets\StaticTurret_03_blk_CO.paa"};
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Turret";
+		class ace_csw 
+		{
+			ammoLoadTime = 5;
+			ammoUnloadTime = 5;
+			desiredAmmo = 100;
+			disassembleWeapon = "288th_SRS99D_Turret_Kit";  // Carryable weapon created above
+        	disassembleTurret = "";
+			enabled = 1;
+			magazineLocation = "_target selectionPosition 'magazine'";
+			proxyWeapon = "";
+		};
+		class assembleInfo 
+		{
+			assembleTo = "";
+			base = "";
+			displayName = "";
+			dissasembleTo[] = {"288th_SRS99D_Turret_Kit"};
+			primary = 0;
+		};
+		class Turrets: Turrets 
+		{
+			class MainTurret: MainTurret 
+			{
+				disableSoundAttenuation = 1;
+				discreteDistance = [100,200,300,400,600,800,1000,1200,1500,1600,1700,1800,1900,2000];
+				discreteDistanceInitIndex = 2;
+				displayName = "";
+				ejectDeadGunner = 1;
+				gunnerAction = "gunner_static_low01";
+				gunnergetInAction = "";
+				gunnergetOutAction = "";
+				gunnerLeftHandAnimName = "OtocHlaven_shake";
+				gunnerOpticsModel = "\a3\weapons_f_gamma\reticle\HMG_01_Optics_Gunner_F";
+				gunnerRightHandAnimName = "OtocHlaven_shake";
+				magazines[] = {"288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag"};
+				maxElev = 35;
+				minElev = -20;
+				optics = 1;
+				turretInfoType = "RscOptics_crows";
+				weapons[] = {"288th_SRS99XT"};
+				class ViewOptics: ViewOptics 
+				{
+					initAngleX = 0;
+					initAngleY = 0;
+					initFov = 0.117;
+					maxAngleX = 30;
+					maxAngleY = 100;
+					maxFov = 0.117;
+					minAngleX = -30;
+					minAngleY = -100;
+					minFov = 0.004;
+					thermalMode = [0,1];
+					visionMode = ["Normal","NVG","Ti"];
+				};
+			};
+		};
+	};
+	class 288th_SRS99XT_High: B_HMG_01_high_F
+	{
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+        side = 1;
+        crew = "288th_SW_Rifleman";
+		displayName = "SRS99XT [High] (288th)";
+		hiddenSelections[] = {"camo1","camo2","camo3"};
+		hiddenSelectionsTextures[] = {"\288th_Vehicles\Turrets\StaticTurret_01_blk_CO.paa","\288th_Vehicles\Turrets\StaticTurret_02_blk_CO.paa","\288th_Vehicles\Turrets\StaticTurret_03_blk_CO.paa"};
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Turret";
+		class ace_csw 
+		{
+			ammoLoadTime = 5;
+			ammoUnloadTime = 5;
+			desiredAmmo = 100;
+			disassembleWeapon = "288th_SRS99D_Turret_High_Kit";  // Carryable weapon created above
+        	disassembleTurret = ""; 
+			enabled = 1;
+			magazineLocation = "_target selectionPosition 'magazine'";
+			proxyWeapon = "";
+		};
+		class assembleInfo 
+		{
+			assembleTo = "";
+			base = "";
+			displayName = "";
+			dissasembleTo[] = {"288th_SRS99D_Turret_High_Kit"};
+			primary = 0;
+		};
+		class Turrets: Turrets 
+		{
+			class MainTurret: MainTurret 
+			{
+				gunnerAction = "gunner_standup01";
+				gunnergetInAction = "";
+				gunnergetOutAction = "";
+				initTurn = 0;
+				maxTurn = 360;
+				minTurn = -360;
+				disableSoundAttenuation = 1;
+				discreteDistance = [100,200,300,400,600,800,1000,1200,1500,1600,1700,1800,1900,2000];
+				discreteDistanceInitIndex = 2;
+				displayName = "";
+				ejectDeadGunner = 1;
+				gunnerLeftHandAnimName = "OtocHlaven_shake";
+				gunnerOpticsModel = "\a3\weapons_f_gamma\reticle\HMG_01_Optics_Gunner_F";
+				gunnerRightHandAnimName = "OtocHlaven_shake";
+				magazines[] = {"288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag","288th_SRS99XT_Mag"};
+				maxElev = 35;
+				minElev = -20;
+				optics = 1;
+				turretInfoType = "RscOptics_crows";
+				weapons[] = {"288th_SRS99XT"};
+				class ViewOptics: ViewOptics 
+				{
+					initAngleX = 0;
+					initAngleY = 0;
+					initFov = 0.117;
+					maxAngleX = 30;
+					maxAngleY = 100;
+					maxFov = 0.117;
+					minAngleX = -30;
+					minAngleY = -100;
+					minFov = 0.004;
+					thermalMode = [0,1];
+					visionMode = ["Normal","NVG","Ti"];
+				};
+			};
+		};
+	};
+
+	//artillery
+	class 288th_M12_MLMS: OPTRE_M12R_AA{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
@@ -7795,8 +8546,7 @@ class cfgVehicles
 		};
 		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
 	};
-	class 288th_M12_MLMS_AI: 288th_M12_MLMS
-	{
+	class 288th_M12_MLMS_AI: 288th_M12_MLMS{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
@@ -7945,8 +8695,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class 288th_M989: OPTRE_M914_RV
-	{
+	class 288th_M989: OPTRE_M914_RV{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
@@ -8034,8 +8783,7 @@ class cfgVehicles
 		};
 		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
 	};
-	class 288th_Static_MLMS: OPTRE_Static_AA
-	{
+	class 288th_Static_MLMS: OPTRE_Static_AA{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
@@ -8147,8 +8895,7 @@ class cfgVehicles
 			dissasembleTo[] = { "288th_Remote_M12_Bag" };
 		};
 	};
-	class 288th_Catfish_MLMS: optre_catfish_aa_f
-	{
+	class 288th_Catfish_MLMS: optre_catfish_aa_f{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
@@ -8416,6 +9163,7 @@ class cfgVehicles
 		};
 	};
 
+	//Wolves
 	class 288th_SW_Rifleman : OPTRE_UNSC_Soldier_Base{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -8846,46 +9594,6 @@ class cfgVehicles
 		headgearList[] = { "288th_CH252_Marine",1, };
 		 
 	};
-	/*class 288th_SW_Hellbringer : 288th_SW_Rifleman{
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Silver Wolves Hellbringer";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
-		uniformClass = "288th_Black_Uniform_S";
-
-		Items[] = { "288th_Armor_Marine_Rifleman","288th_CH252_Marine","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
-
-		linkedItems[] = {"288th_Armor_Marine_Rifleman","288th_Balaclava","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
-		respawnlinkedItems[] = {"288th_Armor_Marine_Rifleman","288th_Balaclava","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
-
-		weapons[] = {"288th_VC1_Flamethrower","288th_FNX_99_Tactical","Binocular","Throw","Put" };
-		respawnWeapons[] = {"288th_VC1_Flamethrower","288th_FNX_99_Tactical","Binocular","Throw","Put" };
-
-		magazines[] = { "288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40", "288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40", "288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = { "288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40", "288th_VC1_Flamethrower_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag", };
-
-		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
-		 
-	};*/
 
 	class 288th_Pvt_Green: OPTRE_UNSC_Army_Soldier_WDL{
 		dlc = "288th";
@@ -8900,7 +9608,7 @@ class cfgVehicles
 		canCarryBackPack = 1;
 		oxygenCapacity = 1000;
 		accuracy = 5;
-		sensitivity = 53;
+		sensitivity = 5;
 		camouflage = 0.15;
 		minFireTime = 3;
 		primaryAmmoCoef = 10;
@@ -8918,15 +9626,16 @@ class cfgVehicles
 		hiddenSelections[] = {"camo","camo2","insignia","clan"};
 		hiddenSelectionsTextures[] = {"OPTRE_UNSC_Units\Army\data\uniform_a_black_co.paa","OPTRE_UNSC_Units\Army\data\uniform_b_urban_co.paa"};
 
-		linkedItems[] = {"288th_Armor_ODST_Rifleman","288th_CH252D_ODST_Base","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
-		respawnLinkedItems[] = {"288th_Armor_ODST_Rifleman","288th_CH252D_ODST_Base","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		linkedItems[] = {"OPTRE_UNSC_M52D_Armor","OPTRE_UNSC_CH252D_Helmet","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		respawnLinkedItems[] = {"OPTRE_UNSC_M52D_Armor","OPTRE_UNSC_CH252D_Helmet","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 		weapons[] = {"OPTRE_BR55HB_ScopedRifle","OPTRE_M6G_SF","Throw","Put"};
 		respawnWeapons[] = {"OPTRE_BR55HB_ScopedRifle","OPTRE_M6G_SF","Throw","Put"};
-		magazines[] = {"OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag_Green","288th_White_Smoke_Mag_Green","288th_White_Smoke_Mag_Green","288th_White_Smoke_Mag_Green"};
-		respawnMagazines[] = {"OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag_Green","288th_White_Smoke_Mag_Green","288th_White_Smoke_Mag_Green","288th_White_Smoke_Mag_Green"};
-		backpack = "288th_ILCS_Backpack";
+		magazines[] = {"OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_Green_Smoke_Mag","288th_Green_Smoke_Mag","288th_Green_Smoke_Mag","288th_Green_Smoke_Mag"};
+		respawnMagazines[] = {"OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_36Rnd_95x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_Green_Smoke_Mag","288th_Green_Smoke_Mag","288th_Green_Smoke_Mag","288th_Green_Smoke_Mag"};
+		backpack = "OPTRE_ILCS_Rucksack_Black";
 	};
 
+	//OSHA
 	class 288th_OSHA_Marine : 288th_SW_Rifleman{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -9039,6 +9748,8 @@ class cfgVehicles
 			};
 		};
 	};
+
+	//Bikes
 	class V12_S1000RR2018_base : Car_F
 	{
 		class UserActions
@@ -9122,6 +9833,7 @@ class cfgVehicles
 		faction = "288th_UNSC";
 	};
 
+	//Bugs
 	class WBK_Antlion_1;
 	class WBK_Antlion_1_NoLeap;
 	class WBK_Antlion_1_1: WBK_Antlion_1
@@ -9144,18 +9856,18 @@ class cfgVehicles
 		scopeCurator = 2;
 		side = 2;
 	};
-	class WBK_Antlion_1_NoLeap_0: WBK_Antlion_1_NoLeap
-	{
-		scope = 2;
-		scopeCurator = 2;
-		side = 2;
-		displayName = "Antlion (No-Leap)";
-	};
 	class WBK_Antlion_1_3: WBK_Antlion_1
 	{
 		scope = 2;
 		scopeCurator = 2;
 		side = 3;
+	};
+	class WBK_Antlion_1_NoLeap_2: WBK_Antlion_1_NoLeap
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		displayName = "Antlion (No-Leap)";
 	};
 	class WBK_Antlion_1_NoLeap_3: WBK_Antlion_1_NoLeap
 	{
@@ -9171,7 +9883,7 @@ class cfgVehicles
 		scopeCurator = 2;
 		side = 1;
 	};
-	class WBK_AntlionGuardian_1_0: WBK_AntlionGuardian_1
+	class WBK_AntlionGuardian_1_2: WBK_AntlionGuardian_1
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -9188,9 +9900,13 @@ class cfgVehicles
 class CfgWeapons
 {
 	class ACE_fieldDressing;
-	class ToolKit;
+	class ItemCore;
 	class CBA_MiscItem_ItemInfo;
-	class ED_1E_Kit: ToolKit
+	class Launcher_Base_F;
+	class WeaponSlotsInfo;
+
+	//Drone Kits
+	class ED_1E_Kit: ItemCore
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -9206,6 +9922,14 @@ class CfgWeapons
 			type = 620;
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
+		class assembleInfo 
+		{
+			assembleTo = "288th_Ed_1E";
+			base = "";
+			displayName = "ED-1E";
+			dissasembleTo[] = {""};
+			primary = 1;
+		};
 		/*class assembleInfo
 		{
 			assembleTo = "288th_Ed_1d";
@@ -9215,11 +9939,119 @@ class CfgWeapons
 			primary = 1;
 		};*/
 		ACE_isTool = 1;
-		displayName = "[288th] Ed-1E Kit";
-		descriptionShort = "Deployable Ed-1E";
+		displayName = "[288th] ED-1E Kit";
+		descriptionShort = "Deployable ED-1E";
 		picture = "\A3\Supplies_F_Enoch\Bags\Data\UI\icon_B_UGV_02_demining_ca";
 		//editorPreview = "\Cytech\Cytech_Gamemode_Assets\Cytech_Inventory\Cytech_Keycards\data\UI\Security_Keycard_CA.paa";
 		model = "\a3\Soft_F_Enoch\UGV_02\UGV_02_F";
+	};
+	class ED_1F_Kit: ED_1E_Kit
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		class assembleInfo 
+		{
+			assembleTo = "288th_Ed_1F";
+			base = "";
+			displayName = "ED-1F";
+			dissasembleTo[] = {""};
+			primary = 1;
+		};
+		displayName = "[288th] ED-1F Kit";
+		descriptionShort = "Deployable ED-1F";
+	};
+	class ED_1C_Kit: ED_1E_Kit
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		class assembleInfo 
+		{
+			assembleTo = "288th_Ed_1C";
+			base = "";
+			displayName = "ED-1C";
+			dissasembleTo[] = {""};
+			primary = 1;
+		};
+		displayName = "[288th] ED-1C Kit";
+		descriptionShort = "Deployable ED-1C";
+		model = "\A3\Supplies_F_Enoch\Bags\B_UGV_02_S_F.p3d";
+		picture = "\A3\Supplies_F_Enoch\Bags\Data\UI\icon_B_UGV_02_science_ca";
+	};
+	class MQ_94_Kit: ED_1E_Kit
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		class assembleInfo 
+		{
+			assembleTo = "288th_MQ_94";
+			base = "";
+			displayName = "MQ-94";
+			dissasembleTo[] = {""};
+			primary = 1;
+		};
+		picture = "\288th_Vehicles\Icons\uav_img_5";
+		displayName = "[288th] MQ-94 Kit";
+		descriptionShort = "Deployable MQ-94";
+		model = "\TCF_VEHICLES\MQ_94\MQ_94.p3d";
+	};
+
+	//Turret Kit
+	class 288th_SRS99D_Turret_Kit: Launcher_Base_F
+	{
+		class ace_csw 
+		{
+			deploy = "288th_SRS99XT";
+			deployTime = 4;
+			pickupTime = 4;
+			type = "mount";
+		};
+		/*class ACE_CSW {
+            type = "weapon"; // Use "weapon" for weapons or "mount" for tripods - see below
+            deployTime = 4;  // How long it takes to deploy the weapon onto the tripod
+            pickupTime = 4;  // How long it takes to disassemble weapon from the tripod
+            class assembleTo {
+                // What tripod can this weapon deploy onto, and what vehicle will it spawn when it is deployed
+                ace_csw_m3Tripod = "prefix_hmg";
+            };
+        };*/
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "[288th] SRS99XT Kit";
+		model = "\z\ace\addons\apl\ACE_CSW_Bag.p3d";
+		modes = [];
+		picture = "\OPTRE_weapons\sniper\icons\sniper.paa";
+		class WeaponSlotsInfo: WeaponSlotsInfo 
+		{
+			mass = 250;
+		};
+	};
+	class 288th_SRS99D_Turret_High_Kit: 288th_SRS99D_Turret_Kit
+	{
+		class ace_csw 
+		{
+			deploy = "288th_SRS99XT_High";
+			deployTime = 4;
+			pickupTime = 4;
+			type = "mount";
+		};
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "[288th] SRS99XT Kit (High)";
 	};
 };
 

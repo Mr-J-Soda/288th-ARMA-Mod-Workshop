@@ -97,6 +97,7 @@ class CfgMagazines
 		displayNameShort = "$STR_ace_chemlights_HiRed_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiRed_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hired_x_ca.paa";
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
 	};
 	class 288th_Chemlight_HiYellow: ACE_Chemlight_HiYellow
 	{
@@ -108,6 +109,7 @@ class CfgMagazines
 		displayNameShort = "$STR_ace_chemlights_HiYellow_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiYellow_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hiyellow_x_ca.paa";
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
 	};
 	class 288th_Chemlight_HiWhite: ACE_Chemlight_HiWhite
 	{
@@ -119,6 +121,7 @@ class CfgMagazines
 		displayNameShort = "$STR_ace_chemlights_HiWhite_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiWhite_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hiwhite_x_ca.paa";
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
 	};
 	class 288th_Chemlight_HiBlue: ACE_Chemlight_HiBlue
 	{
@@ -130,6 +133,7 @@ class CfgMagazines
 		displayNameShort = "$STR_ace_chemlights_HiBlue_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiBlue_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_hiblue_x_ca.paa";
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
 	};
 	class 288th_Chemlight_HiGreen: ACE_Chemlight_HiGreen
 	{
@@ -141,6 +145,7 @@ class CfgMagazines
 		displayNameShort = "$STR_ace_chemlights_HiGreen_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_HiGreen_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_higreen_x_ca.paa";
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
 	};
 	class 288th_Chemlight_UltraHiOrange: ACE_Chemlight_UltraHiOrange
 	{
@@ -152,6 +157,7 @@ class CfgMagazines
 		displayNameShort = "$STR_ace_chemlights_UltraHiOrange_DisplayNameShort";
 		descriptionShort = "$STR_ace_chemlights_UltraHiOrange_DescriptionShort";
 		picture = "\z\ace\addons\chemlights\UI\ace_chemlight_ultrahiorange_x_ca.paa";
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
 	};
 };
 

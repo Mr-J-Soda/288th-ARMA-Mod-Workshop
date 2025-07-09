@@ -31,6 +31,7 @@ class CfgWeapons
 	// SRS99C Sniper Rifle W. Suppressor
 	class 288th_SRS99C : OPTRE_SRS99D
 	{
+		canShootInWater = 1;
 		dlc = "288thDJP_Aux";
 		author = "Festive Neira / Misriah 288";
 		model = "\OPTRE_Weapons\Sniper\SRS99C.p3d";
@@ -76,6 +77,23 @@ class CfgWeapons
 			"OPTRE_Weapons\Sniper\Data\Bipod_CO.paa",
 			"OPTRE_Weapons\Sniper\Data\Mag_CO.paa"
 		};
+	};
+	class 288th_SRS99XT : OPTRE_SRS99D
+	{
+		displayName = "[288th] SRS99XT";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		canShootInWater = 1;
+		dexterity = 2.2;
+		dispersion = 0;
+		autoReload = true;
+		magazineReloadTime = 2;
+		magazines[] = 
+		{ 
+			"288th_SRS99XT_Mag" 
+		};
+		magazineWell[] = { "" };
 	};
 
 };

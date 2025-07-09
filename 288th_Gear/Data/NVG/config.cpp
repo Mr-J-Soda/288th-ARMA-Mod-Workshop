@@ -2285,14 +2285,51 @@ class cfgWeapons
 	};
 	class 288th_Whiskey_NVG: 288th_MK5_MVI
 	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		dlc = "288DJP";
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Custom NVG (Whiskey)";
 		thermalMode[] = {0,1};
 	};
-	class catears_nvg1;
+	class 288th_Kelkuza_NVG: 288th_MK5_HURS_CNM
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288DJP";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Custom NVG (Kelkuza)";
+		thermalMode[] = {1};
+	};
+
+	class MA_ODST_CustomNVG_37;
+	class 288th_Glitch_NVG: MA_ODST_CustomNVG_37
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
+		dlc = "288DJP";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Custom NVG (Glitch)";
+		ace_nightVision_grain = 0;
+		ace_nightVision_blur = 0;
+		ace_nightVision_radBlur = 0;
+		ace_nightvision_border = "";
+		ace_nightvision_bluRadius = 0.05;
+		ace_nightvision_generation = 4;
+		ace_nightvision_eyeCups = 0;
+		thermalMode[] = {6};
+		visionMode[] = {"Normal","NVG","TI"};
+	};
+
+	class catears_nvg5;
 	class catears_nvg1_helm;
-	class 288th_Johnson_NVG: catears_nvg1
+	class 288th_Johnson_NVG: catears_nvg5
 	{
 		scope = 2;
 		scopeArsenal = 2;
@@ -2311,22 +2348,4 @@ class cfgWeapons
 		visionMode[] = {"Normal","NVG","TI"};
 		modelOptics = "";
 	};
-	/*class 288th_Johnson_NVG_ALT: catears_nvg1_helm
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		dlc = "288DJP";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] Custom NVG (Johnson ALT)";
-		ace_nightVision_grain = 0;
-		ace_nightVision_blur = 0;
-		ace_nightVision_radBlur = 0;
-		ace_nightvision_border = "";
-		ace_nightvision_bluRadius = 0.05;
-		ace_nightvision_generation = 4;
-		ace_nightvision_eyeCups = 0;
-		thermalMode[] = {0};
-		visionMode[] = {"Normal","NVG","TI"};
-	};*/
 };

@@ -22,7 +22,7 @@ class CfgMusicClasses
 
 class CfgMusic
 {
-	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface};
+	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop};
 	class Daredevil_AC7
 	{
 		name	= "Daredevil Ace Combat 7";
@@ -159,5 +159,61 @@ class CfgMusic
         musicClass = "288th_Music_List";
         duration=86;
 		//https://www.youtube.com/watch?v=wG-FR3_fmPU
+	};
+	class Artic_Battle_1
+	{
+		name	= "Artic Battle 1";
+		sound[]	= { "\288th_Music\Artic_Battle_1.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=480;
+		//No Link Found
+	};
+	class Artic_Battle_2
+	{
+		name	= "Artic Battle 2";
+		sound[]	= { "\288th_Music\Artic_Battle_2.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=600;
+		//No Link Found
+	};
+	class Artic_Battle_3
+	{
+		name	= "Artic Battle 3";
+		sound[]	= { "\288th_Music\Artic_Battle_3.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=540;
+		//No Link Found
+	};
+	class Mining_Facility
+	{
+		name	= "Mining Facility";
+		sound[]	= { "\288th_Music\Mining_Facility.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=170;
+		//No Link Found
+	};
+	class Crumbling_lies
+	{
+		name	= "Crumbling Lies";
+		sound[]	= { "\288th_Music\Crumbling_lies.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=252;
+		//No Link Found
+	};
+	class The_Union
+	{
+		name	= "The Union";
+		sound[]	= { "\288th_Music\The_Union.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=268;
+		//https://www.youtube.com/watch?v=ou_aig-j_1c
+	};
+	class Klendathu_Drop
+	{
+		name	= "Klendathu Drop";
+		sound[]	= { "\288th_Music\Klendathu-Drop.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=269;
+		//https://www.youtube.com/watch?v=EoljYKfTx5M
 	};
 };

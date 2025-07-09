@@ -460,7 +460,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class 288th_SRS99M_Scope : optre_srs99_scope
+	/*class 288th_SRS99M_Scope : optre_srs99_scope
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -516,7 +516,7 @@ class CfgWeapons
 				};
 			};
 		};
-	};
+	};*/
 	class 288th_SS_6_Scope : optic_AMS
 	{
 		dlc = "288thDJP_Aux";
@@ -637,7 +637,7 @@ class CfgWeapons
 class SlotInfo;
 class CowsSlot : SlotInfo
 {
-	compatibleItems[] += {"288th_M73_Smartlink", "288th_M6C_Scope", "288th_M7_Sight", "288th_M12_Sight", "288th_Hamr_Scope", "288th_SRS99M_Scope", "288th_SS_6_Scope", "OPTRE_M7_Sight", "OPTRE_HMG38_CarryHandle", "OPTRE_M12_Optic", "OPTRE_M12_Optic_Red", "OPTRE_M12_Optic_Green", "OPTRE_M6C_Scope", "OPTRE_M6G_Scope", "Optre_Recon_Sight", "Optre_Recon_Sight_Red", "Optre_Recon_Sight_Green", "Optre_Recon_Sight_Desert", "Optre_Recon_Sight_UNSC", "Optre_Recon_Sight_Snow", "OPTRE_BR45_Scope", "OPTRE_BR55HB_Scope", "OPTRE_BR55HB_Scope_Grey", "OPTRE_BMR_Scope", "OPTRE_M392_Scope", "OPTRE_M393_Scope", "OPTRE_M393_ACOG", "OPTRE_M393_EOTECH", "OPTRE_SRM_Sight", "OPTRE_SRS99C_Scope", "OPTRE_SRS99_Scope", "OPTRE_M73_SmartLink", "OPTRE_MA5_SmartLink", "OPTRE_MA5C_SmartLink", "OPTRE_MA5_BUIS"};
+	compatibleItems[] += {"288th_M73_Smartlink", "288th_M6C_Scope", "288th_M7_Sight", "288th_M12_Sight", "288th_Hamr_Scope", "288th_SS_6_Scope", "OPTRE_M7_Sight", "OPTRE_HMG38_CarryHandle", "OPTRE_M12_Optic", "OPTRE_M12_Optic_Red", "OPTRE_M12_Optic_Green", "OPTRE_M6C_Scope", "OPTRE_M6G_Scope", "Optre_Recon_Sight", "Optre_Recon_Sight_Red", "Optre_Recon_Sight_Green", "Optre_Recon_Sight_Desert", "Optre_Recon_Sight_UNSC", "Optre_Recon_Sight_Snow", "OPTRE_BR45_Scope", "OPTRE_BR55HB_Scope", "OPTRE_BR55HB_Scope_Grey", "OPTRE_BMR_Scope", "OPTRE_M392_Scope", "OPTRE_M393_Scope", "OPTRE_M393_ACOG", "OPTRE_M393_EOTECH", "OPTRE_SRM_Sight", "OPTRE_SRS99C_Scope", "OPTRE_SRS99_Scope", "OPTRE_M73_SmartLink", "OPTRE_MA5_SmartLink", "OPTRE_MA5C_SmartLink", "OPTRE_MA5_BUIS"};
 };
 class CowsSlot_Rail : CowsSlot
 {
@@ -648,7 +648,7 @@ class CowsSlot_Rail : CowsSlot
 		288th_M7_Sight = 1;
 		288th_M12_Sight = 1;
 		288th_Hamr_Scope = 1;
-		288th_SRS99M_Scope = 1;
+		//288th_SRS99M_Scope = 1;
 		288th_SS_6_Scope = 1;
 		OPTRE_M7_Sight = 1;
 		OPTRE_HMG38_CarryHandle = 1;

@@ -39,6 +39,10 @@ class CfgAmmo
 class CfgMagazines
 {
     class SmokeShell;
+	class Chemlight_Green: SmokeShell
+	{
+		pictureWire = "\288th_Weapons\Data\Grenades\Smokes\Chemlight.paa";
+	};
     class 288th_White_Smoke_Mag : SmokeShell
     {
         scope = 2;

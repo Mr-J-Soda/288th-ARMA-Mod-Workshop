@@ -191,7 +191,6 @@ class cfgWeapons
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_LMG";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_LMG";
 		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
-		picture = "\A3\Weapons_F_Exp\Rifles\ARX\Data\UI\arifle_ARX_blk_F_X_CA";
 		pictureMjolnirHud = "288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
 		HUD_BulletInARows = 4;
 		HUD_TotalPosibleBullet = 200;
@@ -235,6 +234,7 @@ class cfgWeapons
 			{
 				"Single"
 			};
+			picture = "";
 		};
 		ACE_barrelTwist = 270;
 		ACE_barrelLength = 578.6;
@@ -245,5 +245,6 @@ class cfgWeapons
 		ACE_overheating_dispersion = 0;
 		ACE_twistDirection = 1;
 		ace_overheating_closedBolt = 0;
+		//WBK_UseDisintegrate = true;
 	};
 };

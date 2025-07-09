@@ -93,6 +93,7 @@ class cfgWeapons
 			"NVG"
 		};
 		cursor = "OPTRE_M7";
+		picture = "\288th_Weapons\Data\Weapons\M7V_SMG\M7V\gear_SMG_01_X_CA";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\SMG\SMG_IRON.paa";
 		//pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SubMachineGuns\M7_icon.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_SMG";
@@ -193,6 +194,7 @@ class cfgWeapons
 		};
 		inertia = 0.25;
 		cursor = "OPTRE_M7";
+		picture = "\288th_Weapons\Data\Weapons\M7V_SMG\M7K\icon_SMG_05_F_X_CA";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\SMG\SMG_IRON.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_SMG";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_SMG";

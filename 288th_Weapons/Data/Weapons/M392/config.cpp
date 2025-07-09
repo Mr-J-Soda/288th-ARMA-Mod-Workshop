@@ -55,6 +55,7 @@ class cfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
+		canShootInWater = 1;
 		displayName = "[288th] NSFW M392";
 		descriptionshort = "Special Oni Derived Armament M392";
 		model = "\OPTRE_Weapons\DMR\M392.p3d";
@@ -68,8 +69,8 @@ class cfgWeapons
 		{
 			"288th_Weapons\data\Weapons\M392\dmr_nsfw"
 		};
-		magazines[] = { "288th_DMR_M395","OPTRE_15Rnd_762x51_Mag","288th_Stanag" };
-		magazineWell[] = { "" };
+		//magazines[] = { "288th_DMR_M395" };
+		//magazineWell[] = { "" };
 		class LinkedItems
 		{
 			class LinkedItemsOptic

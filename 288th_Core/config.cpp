@@ -235,6 +235,6 @@ class CfgMarkers
 	class 288th_GT_Marker: 288th_BS_Marker
 	{
 		name="[288th] Green Team";
-		icon="\288th_Core\Logos\GT_Logo_Blank.paa";
+		icon="\288th_Core\Logos\GT_Logo_ODST.paa";
 	};
 };

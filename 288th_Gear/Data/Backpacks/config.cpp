@@ -1,12 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Data\Backpacks\config.bin
-//Produced from mikero's Dos Tools Dll version 9.87
-//https://mikero.bytex.digital/Downloads
-//'now' is Wed Apr 16 04:43:05 2025 : 'file' last modified on Mon Apr 14 19:54:27 2025
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
 class CfgPatches
 {
 	class 288th_Gear_backpacks
@@ -62,52 +53,6 @@ class cfgVehicles
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class 288th_ILCS_Backpack: OPTRE_ILCS_Rucksack_Heavy
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		scopeCurator = 2;
-		isbackpack = 1;
-		displayName = "[288th] ILCS Backpack";
-		allowedSlots[] = {901};
-		maximumLoad = 500;
-		mass = 30;
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Basic_Backpack.paa","optre_weapons\items\data\biofoam_co.paa"};
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		class DestructionEffects{};
-		class TransportMagazines{};
-		class TransportWeapons{};
-		class TransportItems{};
-	};
-	class 288th_RTO_pack: OPTRE_ANPRC_521_Black
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		isbackpack = 1;
-		displayName = "[288th] AN/PRC-521";
-		allowedSlots[] = {901};
-		maximumLoad = 500;
-		mass = 30;
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		tf_isolatedAmount = 0.65;
-		tf_range = 40000;
-		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
-		tf_encryptionCode = "tf_west_radio_code";
-		tf_dialog = "rt1523g_radio_dialog";
-		tf_subtype = "digital_lr";
-		hiddenSelections[] = {"camo","camo2","B_Medic","B_Addons"};
-		hiddenSelectionsTextures[] = {"optre_unsc_units\army\data\soft_backpack_co.paa","optre_unsc_units\army\data\commopack_Blk_co.paa"};
-		class DestructionEffects{};
-		class TransportMagazines{};
-		class TransportWeapons{};
-		class TransportItems{};
-	};
 	class 288th_RTO_pack_1: OPTRE_ANPRC_515
 	{
 		dlc = "288thDJP_Aux";
@@ -128,31 +73,6 @@ class cfgVehicles
 		tf_subtype = "digital_lr";
 		hiddenSelections[] = {"camo","camo2","B_Medic","B_Addons"};
 		hiddenSelectionsTextures[] = {"optre_unsc_units\army\data\soft_backpack_co.paa","optre_unsc_units\army\data\commopack_Blk_co.paa"};
-		class DestructionEffects{};
-		class TransportMagazines{};
-		class TransportWeapons{};
-		class TransportItems{};
-	};
-	class 288th_MedicRTO_pack: OPTRE_ANPRC_521_Black
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		isbackpack = 1;
-		displayName = "[288th] AN/PRC-521 - Medic";
-		allowedSlots[] = {901};
-		maximumLoad = 500;
-		mass = 30;
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		tf_isolatedAmount = 0.65;
-		tf_range = 40000;
-		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
-		tf_encryptionCode = "tf_west_radio_code";
-		tf_dialog = "rt1523g_radio_dialog";
-		tf_subtype = "digital_lr";
-		hiddenSelections[] = {"camo","camo2","B_Medic","B_Addons"};
-		hiddenSelectionsTextures[] = {"optre_unsc_units\army\data\soft_backpack_co.paa","288th_Gear\Data\Backpacks\ODST_Medic_RTOpack.paa"};
 		class DestructionEffects{};
 		class TransportMagazines{};
 		class TransportWeapons{};
@@ -184,44 +104,134 @@ class cfgVehicles
 		class TransportWeapons{};
 		class TransportItems{};
 	};
-	class 288th_RTO_pack_Wood: TCF_RUCKSACK_UNSC_CLS_RAD_F
+
+	class MA_Backpack_Base;
+	class 288th_Rucksack_Radio: MA_Backpack_Base
 	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		scopeCurator = 2;
-		isbackpack = 1;
-		displayName = "[288th] Mil-Tech Radio (Woodland)";
-		allowedSlots[] = {901};
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] AN-PRC-497";
+		model = "MA_Armor\data\Backpacks\Marine_Rucksack\Marine_Rucksack.p3d";
+		picture = "\OPTRE_weapons\backpacks\icons\icon_b_anprc521_ca.paa";
 		maximumLoad = 500;
-		mass = 30;
-		tf_isolatedAmount = 0.65;
-		tf_range = 40000;
-		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
+		hiddenSelections[] = {"camo1","camo2","camo3","camo4","camo5"};
+		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Attachments_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Radio_Box_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Main_Shell_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Side_Box_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\Marine_Rucksack_CO.paa"};
 		tf_encryptionCode = "tf_west_radio_code";
 		tf_dialog = "rt1523g_radio_dialog";
 		tf_subtype = "digital_lr";
-		transportMaxWeapons = 20;
-		transportMaxMagazines = 200;
-		class DestructionEffects{};
-		class TransportMagazines{};
-		class TransportWeapons{};
-		class TransportItems{};
+		tf_range = 40000;
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel";
+		tf_hasLRradio = 1;
 	};
-	class 288th_Invisible_Backpack: 288th_ILCS_Backpack
+	class 288th_M52D_Rucksack: MA_Backpack_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack";
+		model = "MA_Armor\data\Backpacks\M52_Rucksack\M52_Rucksack.p3d";
+		picture = "\MA_Armor\data\Icons\ODST_Rucksack.paa";
+		maximumLoad = 500;
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Red: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Red)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_RD.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Orange: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Orange)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_OR.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Yellow: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Yellow)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_YW.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Green: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Green)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_GN.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Blue: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Blue)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_BL.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Purple: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Purple)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_PR.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Pink: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Pink)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_PK.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_Teal: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (Teal)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_TL.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+	class 288th_M52D_Rucksack_White: 288th_M52D_Rucksack
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D Rucksack (White)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_WT.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
+	};
+
+
+	class 288th_Invisible_Backpack: 288th_M52D_Rucksack
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		picture = "\OPTRE_weapons\backpacks\icons\rucksack_black.paa";
 		displayName = "[288th] Armor Upgrade (Storage)";
 		model = "\A3\weapons_f\empty";
 		allowedSlots[] = {901};
 		maximumLoad = 500;
 		mass = 30;
 	};
-	class 288th_RTO_Invisible: 288th_RTO_pack
+	class 288th_RTO_Invisible: 288th_RTO_pack_1
 	{
 		displayName = "[288th] Armor Upgrade (Radio)";
 		model = "\A3\weapons_f\empty";
@@ -235,7 +245,7 @@ class cfgVehicles
 		tf_dialog = "rt1523g_radio_dialog";
 		tf_subtype = "digital_lr";
 	};
-	class 288th_Zeus_pack: 288th_RTO_pack
+	class 288th_Zeus_pack: 288th_RTO_pack_1
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -273,7 +283,7 @@ class cfgVehicles
 		NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 50;
 		NSM_jumppack_recharge = 50;
-		NSM_jumppack_jump_types[] = {{"Forward Jump",{12,20,1,0,0,0}},{"Short Jump",{25,7,0,1,1,1}},{"Vertical Jump",{0,20,1,0,0,0}}};
+		NSM_jumppack_jump_types[] = {{"Short Jump",{25,7,0,1,1,1}},{"Forward Jump",{12,20,1,0,0,0}},{"Vertical Jump",{0,20,1,0,0,0}}};
 		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[] = {{"spine3",{0,-0.3,-0.1}}};
 		NSM_jumppack_sound_ignite[] = {"NSM_Main\sounds\cdv21Start.ogg"};
@@ -349,7 +359,7 @@ class cfgVehicles
 		picture = "\z\ace\addons\gunbag\ui\gunbag_ca.paa";
 		scope = 2;
 	};
-	class 288th_Remote_M41_Bag: 288th_ILCS_Backpack
+	class 288th_Remote_M41_Bag: 288th_M52D_Rucksack
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -366,7 +376,7 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
-	class 288th_Remote_M68_Bag: 288th_ILCS_Backpack
+	class 288th_Remote_M68_Bag: 288th_M52D_Rucksack
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -383,7 +393,7 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
-	class 288th_Remote_M79_Bag: 288th_ILCS_Backpack
+	class 288th_Remote_M79_Bag: 288th_M52D_Rucksack
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -400,7 +410,7 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
-	class 288th_Remote_AU_44_Bag: 288th_ILCS_Backpack
+	class 288th_Remote_AU_44_Bag: 288th_M52D_Rucksack
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -417,7 +427,7 @@ class cfgVehicles
 			dissasembleTo[] = {};
 		};
 	};
-	class 288th_Remote_M12_Bag: 288th_ILCS_Backpack
+	class 288th_Remote_M12_Bag: 288th_M52D_Rucksack
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -487,55 +497,5 @@ class cfgVehicles
 		model = "\OPTRE_weapons\backpacks\jetpack_on.p3d";
 		hiddenSelections[] = {"camo1","camo"};
 		hiddenSelectionsTextures[] = {"optre_vehicles\pelican\data\bolt_blue_ca.paa","optre_weapons\backpacks\data\jetpack_co.paa"};
-	};
-	class 288th_ICLS_Backpack_Red: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Red";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Red_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Orange: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Orange";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Orange_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Yellow: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Yellow";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Yellow_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Green: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Green";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Green_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Teal: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Teal";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Teal_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Blue: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Blue";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Blue_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Purple: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Purple";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Purple_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Pink: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Pink";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Pink_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_White: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - White";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_White_Backpack.paa"};
-	};
-	class 288th_ICLS_Backpack_Black: 288th_ILCS_Backpack
-	{
-		displayName = "[288th] ILCS Backpack - Black";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\ODST_Black_Backpack.paa"};
 	};
 };

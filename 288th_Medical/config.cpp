@@ -29,6 +29,7 @@ class cfgWeapons
 		displayName = "$STR_OPTRE_Ace_Medical_Biofoam_Canister";
 		descriptionShort = "Self-sealing coagulant foam to stop bleeding and haemorrhaging";
 		descriptionUse = "$STR_OPTRE_Ace_Medical_Biofoam";
+		ACE_isMedicalItem = 1;
 		class ItemInfo: CBA_MiscItem_ItemInfo
 		{
 			mass = 5;
@@ -44,6 +45,7 @@ class cfgWeapons
 		model = "\OPTRE_Weapons\items\Biofoam.p3d";
 		descriptionShort = "Self-sealing coagulant foam to stop bleeding and haemorrhaging";
 		descriptionUse = "Applying Biofoam...";
+		ACE_isMedicalItem = 1;
 		class ItemInfo: CBA_MiscItem_ItemInfo
 		{
 			mass = 1;
@@ -56,9 +58,58 @@ class cfgWeapons
 		displayName = "[288th] Plasma IV (2500ml)";
 		descriptionShort = "A volume-expanding blood supplement";
 		descriptionUse = "Give Plasma (2.5L)";
+		ACE_isMedicalItem = 1;
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 12;
+		};
+	};
+	class 288th_CoffeeIV_500 : 288th_PlasmaIV
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Coffee IV (500ml)";
+		descriptionShort = "Liquid caffeine in a bag";
+		descriptionUse = "Give Coffee 500ml";
+		picture = "\288th_Medical\Coffee\gear_Coffee_ca";
+		hiddenSelectionsTextures[] = {"\288th_Medical\Coffee\IVBag_coffee_500ml_ca.paa"};
+		ACE_isMedicalItem = 1;
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 5;
+		};
+	};
+	class 288th_CoffeeIV_1000 : 288th_CoffeeIV_500
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Coffee IV (1000ml)";
+		descriptionUse = "Give Coffee 1000ml";
+		ACE_isMedicalItem = 1;
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 10;
+		};
+	};
+	class 288th_CoffeeIV_250 : 288th_CoffeeIV_500
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Coffee IV (250ml)";
+		descriptionUse = "Give Coffee 250ml";
+		ACE_isMedicalItem = 1;
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 2.5;
 		};
 	};
 	class 288th_Emergency_MedKit : OPTRE_Biofoam
@@ -70,6 +121,7 @@ class cfgWeapons
 		picture = "\OPTRE_weapons\items\icons\medkit.paa";
 		model = "\OPTRE_Weapons\items\MedKit.p3d";
 		descriptionUse = "Applying Medkit...";
+		ACE_isMedicalItem = 1;
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 16;
@@ -84,6 +136,7 @@ class cfgWeapons
 		picture = "\OPTRE_weapons\items\icons\biofoam.paa";
 		model = "\OPTRE_Weapons\items\Biofoam.p3d";
 		descriptionUse = "Applying Corpsman Biofoam...";
+		ACE_isMedicalItem = 1;
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 20;
@@ -95,6 +148,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Stim Autoinjector";
 		descriptionShort = "A single use quick acting medical injector";
+		ACE_isMedicalItem = 1;
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 1;
@@ -106,7 +160,20 @@ class cfgWeapons
 		scopeArsenal = 1;
 		displayName = "[288th] Stim Autoinjector?";
 		descriptionShort = "A single use quick acting medical injector?";
+		ACE_isMedicalItem = 1;
 	};
+	/*class 288th_HelloKitt_Bandage: ElasticBandage
+	{
+		scope = 2;
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Hello Kitty Band-aid";
+		picture = "\288th_Medical\Hello_Kitty.paa";
+		ACE_isMedicalItem = 1;
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 0.6;
+		};
+	};*/
 };
 class cfgVehicles
 {
@@ -791,6 +858,7 @@ class ACE_Medical_Treatment
 				reopeningChance = 0;
 			};
 		};
+		//class 288th_HK_Bandage: ElasticBandage
 	};
 	class PlasmaIV;
 	class Morphine;
@@ -854,6 +922,18 @@ class ACE_Medical_Treatment
 		class 288th_PlasmaIV : PlasmaIV
 		{
 			volume = 2500;
+		};
+		class 288th_CoffeeIV_250 : PlasmaIV
+		{
+			volume = 250;
+		};
+		class 288th_CoffeeIV_500 : PlasmaIV
+		{
+			volume = 500;
+		};
+		class 288th_CoffeeIV_1000 : PlasmaIV
+		{
+			volume = 1000;
 		};
 		/*class 288th_Biofoam : PlasmaIV
 		{
@@ -925,8 +1005,26 @@ class ACE_Medical_Treatment_Actions
 	class 288th_PlasmaIV : PlasmaIV{
 		displayName = "Give Plasma IV (2500ml)";
 		displayNameProgress = "Transfusing Plasma";
-		treatmentTime = 10;
+		treatmentTime = 15;
 		items[] = { "288th_PlasmaIV" };
+	};
+	class 288th_CoffeeIV_250 : PlasmaIV{
+		displayName = "Give Coffee IV (250ml)";
+		displayNameProgress = "Transfusing Coffee";
+		treatmentTime = 6;
+		items[] = { "288th_CoffeeIV_250" };
+	};
+	class 288th_CoffeeIV_500 : PlasmaIV{
+		displayName = "Give Coffee IV (500ml)";
+		displayNameProgress = "Transfusing Coffee";
+		treatmentTime = 9;
+		items[] = { "288th_CoffeeIV_500" };
+	};
+	class 288th_CoffeeIV_1000 : PlasmaIV{
+		displayName = "Give Coffee IV (10500ml)";
+		displayNameProgress = "Transfusing Coffee";
+		treatmentTime = 12;
+		items[] = { "288th_CoffeeIV_1000" };
 	};
 	class 288th_Emergency_MedKit : OPTRE_Biofoam{
 		displayName = "Emergency MedKit";
@@ -1017,4 +1115,40 @@ class ACE_Medical_Treatment_Actions
 			"288th_Stim_1"
 		};
 	};
+	class FieldDressing: BasicBandage
+	{
+		items[] = {"288th_HelloKitt_Bandage"};
+	};
+};
+
+class ace_medical_replacementItems {
+    ItemType_401[] = {
+        {"ACE_fieldDressing", 2},
+		{"ACE_packingBandage", 4},
+		{"ACE_elasticBandage", 4},
+		{"ACE_quikClot", 1},
+        {"ACE_morphine", 2},
+		{"ACE_epinephrine", 1},
+        {"ACE_tourniquet", 2},
+		{"ACE_splint", 1},
+		{"ACE_EarPlugs", 1}
+    };
+    ItemType_619[] = {
+        {"ACE_fieldDressing", 6},
+        {"ACE_packingBandage", 10},
+		{"ACE_elasticBandage", 10},
+		{"ACE_quikClot", 4},
+        {"ACE_epinephrine", 4},
+        {"ACE_morphine", 8},
+		{"ACE_adenosine", 2},
+        {"ACE_salineIV_500", 4},
+		{"ACE_salineIV_250", 2},
+        {"ACE_tourniquet", 4},
+        {"ACE_splint", 2},
+		{"ACE_surgicalKit", 1},
+		{"ACE_bodyBag", 2}
+    };
+    ACE_atropine[] = {
+        {"ACE_adenosine", 1}
+    };
 };

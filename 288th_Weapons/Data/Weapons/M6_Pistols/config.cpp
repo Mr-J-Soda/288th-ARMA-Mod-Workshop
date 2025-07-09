@@ -199,6 +199,7 @@ class cfgWeapons
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
+		canShootInWater = 1;
 		displayname = "[288th] M6C/SOCOM Magnum";
 		descriptionshort = "12.7mm Automatic Handgun";
 		baseWeapon = "288th_M6C";
@@ -331,6 +332,7 @@ class cfgWeapons
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
+		canShootInWater = 1;
 		displayname = "[288th] M6D PDWS";
 		descriptionshort = "12.7mm High Power Handgun";
 		baseWeapon = "288th_M6D_PDWS";
@@ -406,6 +408,7 @@ class cfgWeapons
 		descriptionshort = "Special Oni Derived Armament Model 33";
 		baseWeapon = "288th_Model_33";
 		cursor = "OPTRE_M6G";
+		picture = "\288th_Weapons\Data\Weapons\M6_Pistols\Revolvers\gear_Pistol_heavy_02_X_CA";
 		pictureWire = "\TCF_WEAPONRY\Weapons\Handguns\M33\V_M33_HUD_CA";
 		HUD_BulletInARows = 1;
 		HUD_TotalPosibleBullet = 6;
@@ -488,6 +491,7 @@ class cfgWeapons
 		baseWeapon = "288th_Temp_Iron";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\M6_Pistols\Temp\signalis_Eu_K508_black_co.paa"};
+		picture = "\288th_Weapons\Data\Weapons\M6_Pistols\Revolvers\gear_Pistol_heavy_02_X_CA";
 		pictureWire = "\TCF_WEAPONRY\Weapons\Handguns\M33\V_M33_HUD_CA";
 		cursor = "OPTRE_M6C";
 		magazineWell[] = { 288th_Temp_Big_Iron };
@@ -552,6 +556,7 @@ class cfgWeapons
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
+		canShootInWater = 1;
 		baseWeapon = "288th_FNX_99_Tactical";
 		magazines[] ={"288th_32Rnd_127x40","288th_32Rnd_127x40_AP","288th_32Rnd_127x40_APT","288th_32Rnd_127x40_Mag_NARQ"};
 		magazineWell[] = { 288th_M6C };
@@ -672,6 +677,7 @@ class cfgWeapons
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
+		canShootInWater = 1;
 		picture = "\OPTRE_Weapons_Pistols\M6D_Carbine\Data\icons\weapon\black.paa";
 		baseWeapon = "288th_M6D_SMG";
 		displayName = "[288th] M6D SMG";

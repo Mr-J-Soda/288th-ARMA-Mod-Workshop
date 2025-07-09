@@ -9,16 +9,3 @@ _sparksound = ["spark2","spark3","spark4"] call BIS_fnc_selectRandom;
 "SoldierEB",
 "SoldierWB"
 ], _AOE]);
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

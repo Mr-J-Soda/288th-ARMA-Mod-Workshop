@@ -324,7 +324,7 @@ class 288th_plasma_blue
 	class JLTS_Blue_plasma
 	{
 		simulation = "light";
-		type = "288th_plasmaBlue";
+		type = "PlasmaLight_Blue";
 		position[] = {0,0,0};
 		intensity = 0;
 		interval = 1;
@@ -397,7 +397,7 @@ class cfgAmmo
 	class B_9x21_Ball;
 	class B_45ACP_Ball;
 	class B_762x51_Ball;
-	class  ACE_762x51_Ball_Subsonic;
+	class ACE_762x51_Ball_Subsonic;
 	class OPTRE_FC_Bolt_Base;
 	class ACE_G_40mm_HE;
 	class OPTRE_MAC_Round;
@@ -411,6 +411,7 @@ class cfgAmmo
 	class M_NLAW_AT_F;
 	class G_40mm_HEDP;
 	class B_338_Ball;
+	class B_127x99_Ball;
 	class FlareCore;
     class FlareBase: FlareCore {
         timeToLive = 90;
@@ -1025,6 +1026,12 @@ class cfgAmmo
 		ACE_muzzleVelocities[] = {838,892,910,919,924};
 		ACE_barrelLengths[] = {500};
 	};
+	class 288th_Soda_Buckshot : 288th_Buckshot_Pellet
+	{
+		//cartridge = "288th_fx_slug_dred";
+		submunitionConeType[] = { "poissondisc",12 };
+		submunitionAmmo = "288th_Plasma_Soda";
+	};
 
 	//custom Railgun Ammo
 	class 288_Railgun : OPTRE_25x130mm_Slug
@@ -1043,11 +1050,23 @@ class cfgAmmo
 		indirectHitRange = 0.50;
 		caliber = 25;
 		timeToLive = 10;
-		typicalSpeed = 3000;
+		typicalSpeed = 2000;
 		class CamShakeExplode {};
 		class CamShakeFire {};
 		class CamShakeHit {};
 		class CamShakePlayerFire {};
+	};
+	class 288_SRS99XT_Slugs : B_127x99_Ball
+	{
+		hit = 50;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		caliber = 10;
+		timeToLive = 10;
+		typicalSpeed = 1500;
+		coefGravity = 0;
+		airfriction = 0;
+		sideAirFriction = 0;
 	};
 
 	class 288th_EMP : WNZ_EMP127_ammo
@@ -1339,10 +1358,16 @@ class cfgAmmo
 	
 	class MAA_M_GMM_HEAT: M_Titan_AT
 	{
+		caliber = 10;
+		hit = 950;
+		indirectHit = 200;
+		indirectHitRange = 0.05;
+		timeToLive = 30;
+		allowAgainstInfantry = 0;
 		model="\A3\Weapons_F_beta\Launchers\titan\titan_missile_at_fly";
-		hit=150;
+		/*hit=150;
 		indirectHit=14;
-		indirectHitRange=3;
+		indirectHitRange=3;*/
 		explosive=1;
 		warheadName="HE";
 		submunitionAmmo="ammo_Penetrator_MRAAWS";
@@ -1917,33 +1942,14 @@ class CfgMagazines
 	class 200Rnd_65x39_cased_Box;
 	class OPTRE_6Rnd_8Gauge_Pellets;
 	class OPTRE_6Rnd_8Gauge_Slugs;
-	class TCF_100Rnd_762x51_Mag_M33;
+	class OPTRE_100Rnd_762x51_Box;
 	class OPTRE_64Rnd_57x31_Mag;
 	class 7Rnd_408_Mag;
 	class SC_200Rnd_338_Mag;
 	class OPTRE_12Rnd_12Gauge_Smoke;
-
-	class TCF_20Rnd_65x48_Mag: OPTRE_32Rnd_762x51_Mag
-	{
-		dlc = "TCF";
-		author = "Baseplate & Hivemind";
-		scope = 2;
-		scopeArsenal = 2;
-		ammo = "TCF_B_65x48_Ball";
-		initspeed = 940;
-		count = 20;
-		mass = 8;
-		displayname = "20Rnd 6.5x48mm Magazine";
-		displaynameshort = "6.5x48mm";
-		descriptionShort = "20 Round Magazine<br/>6.5x48mm";
-		tracersEvery = 0;
-		model = "\OPTRE_Weapons\Commando\Commando_Mag.p3d";
-		modelSpecial = "\OPTRE_Weapons\Commando\Commando_Mag.p3d";
-		modelSpecialIsProxy = 1;
-		hiddenSelections[] = {"camoMag"};
-		hiddenSelectionsTextures[] = {"\optre_weapons\commando\data\commando_olive_co.paa"};
-		hiddenSelectionsMaterials[] = {"\optre_weapons\commando\data\commando.rvmat"};
-	};
+	class TKE_100Rnd_ucnmmg_mag;
+	class OPTRE_50Rnd_127x99_M250_Box;
+	class OPTRE_200Rnd_127x99_M247H_Etilka;
 
 	//288th Standard 6.5x85 Mags
 	class 288th_Stanag : 30Rnd_65x39_caseless_black_mag
@@ -1953,7 +1959,7 @@ class CfgMagazines
 		initspeed = 600;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd APFS 6.5x85 Mag";
+		displayname = "[288th] 30Rnd APFS 6.5x85 Mag";
 		displaynameshort = "6.5x85 APFS Mag";
 		descriptionshort = "A standard magazine loaded with 6.5x85 APFS";
 		ammo = "65x85_APFS";
@@ -1964,7 +1970,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 20rnd Incendiary 6.5x85 Mag";
+		displayname = "[288th] 20Rnd Incendiary 6.5x85 Mag";
 		displaynameshort = "6.5x85 Incendiary Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with Incendiary ammo";
 		initspeed = 600;
@@ -1976,7 +1982,7 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 30rnd EHP 6.5x85 Mag";
+		displayname = "[288th] 30Rnd EHP 6.5x85 Mag";
 		displaynameshort = "6.5x85 EHP Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with External Hollow-Point ammo";
 		initspeed = 550;
@@ -1991,7 +1997,7 @@ class CfgMagazines
 		initspeed = 600;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 150rnd 6.5x85 Mag";
+		displayname = "[288th] 150Rnd 6.5x85 Mag";
 		displaynameshort = "288th Standard Mag";
 		descriptionshort = "A large LMG Mag loaded with 6.5x85 APFS";
 		ammo = "65x85_APFS";
@@ -2005,7 +2011,7 @@ class CfgMagazines
 		initspeed = 600;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 150rnd 6.5x85 EHP Mag";
+		displayname = "[288th] 150Rnd 6.5x85 EHP Mag";
 		displaynameshort = "6.5x85 EHP Mag";
 		descriptionshort = "A large LMG Mag loaded with External Hollow-Point ammo";
 		ammo = "65x85_EHP";
@@ -2018,7 +2024,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 20rnd .308 Mag";
+		displayname = "[288th] 20Rnd .308 Mag";
 		displaynameshort = ".308";
 		descriptionshort = "Magazine for the Snowfox";
 		initspeed = 600;
@@ -2027,28 +2033,13 @@ class CfgMagazines
 		count = 20;
 		mass = 8;
 	};
-	class 288th_DMR_M395 : OPTRE_15Rnd_762x51_Mag
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopearsenal = 2;
-		displayname = "[288th] 15rnd 6.5x85 APFS Mag";
-		displaynameshort = "6.5x85mm";
-		descriptionshort = "Custom 6.5x85 Magazine";
-		initspeed = 600;
-		ammo = "65x85_DMR";
-		count = 15;
-		mass = 8;
-		lastRoundsTracer = 3;
-	};
 
 	//288th Plasma Mags
 	class 288th_Plasma_Blue_Mag : 288th_Stanag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayname = "[288th] 30rnd Blue Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Blue Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Blue Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with blue plasma tips";
 		initspeed = 600;
@@ -2057,56 +2048,56 @@ class CfgMagazines
 	};
 	class 288th_Plasma_Red_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Red Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Red Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Red Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with red plasma tips";
 		ammo = "288th_Plasma_Red";
 	};
 	class 288th_Plasma_Green_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Green Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Green Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Green Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with green plasma tips";
 		ammo = "288th_Plasma_Green";
 	};
 	class 288th_Plasma_Pink_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Pink Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Pink Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Pink Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with pink plasma tips";
 		ammo = "288th_Plasma_Pink";
 	};
 	class 288th_Plasma_Orange_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Orange Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Orange Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Orange Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with orange plasma tips";
 		ammo = "288th_Plasma_Orange";
 	};
 	class 288th_Plasma_Yellow_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Yellow Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Yellow Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Yellow Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with yellow plasma tips";
 		ammo = "288th_Plasma_Yellow";
 	};
 	class 288th_Plasma_Purple_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Purple Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Purple Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Purple Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with purple plasma tips";
 		ammo = "288th_Plasma_Purple";
 	};
 	class 288th_Plasma_White_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd White Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd White Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 White Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with white plasma tips";
 		ammo = "288th_Plasma_White";
 	};
 	class 288th_Plasma_Black_Mag : 288th_Plasma_Blue_Mag
 	{
-		displayname = "[288th] 30rnd Black Plasma 6.5x85 Mag";
+		displayname = "[288th] 30Rnd Black Plasma 6.5x85 Mag";
 		displaynameshort = "6.5x85 Black Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with black plasma tips";
 		ammo = "288th_Plasma_Black";
@@ -2114,7 +2105,7 @@ class CfgMagazines
 	class 288th_Plasma_Soda_Mag : 288th_Plasma_Blue_Mag
 	{
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
-		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30rnd.p3d";
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30Rnd.p3d";
 		modelSpecialIsProxy = 1;
 		nameSound = "magazine";
 		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
@@ -2132,13 +2123,13 @@ class CfgMagazines
 	class 288th_Soda_Buckshot : 288th_Stanag
 	{
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
-		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30rnd.p3d";
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30Rnd.p3d";
 		modelSpecialIsProxy = 1;
 		nameSound = "magazine";
 		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
 		quickReload = 0;
-		displayname = "[288th] Soda's Custom Buckshot Mag";
-		displaynameshort = "Soda's Custom Buckshot Mag";
+		displayname = "[288th] Soda's Shreader Mag";
+		displaynameshort = "Soda's Shreader Mag";
 		descriptionshort = "A specially modified buckshot mag";
 		ammo = "288th_Buckshot_Pellet";
 		tracersEvery = 0;
@@ -2154,7 +2145,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 60rnd 45ACP Mag";
+		displayname = "[288th] 60Rnd 45ACP Mag";
 		displaynameshort = ".45ACP";
 		descriptionshort = "Magazines for the M7V SMGs";
 		tracersEvery = 1;
@@ -2165,7 +2156,7 @@ class CfgMagazines
 	};
 	class 288th_45ACP_Mag_EHP : 288th_45ACP_Mag_AP
 	{
-		displayname = "[288th] 60rnd 45ACP EHP Mag";
+		displayname = "[288th] 60Rnd 45ACP EHP Mag";
 		displaynameshort = ".45ACP EHP";
 		descriptionshort = "EHP Magazines for the M7 SMGs";
 		tracersEvery = 1;
@@ -2459,14 +2450,14 @@ class CfgMagazines
 	};
 
 	//Microgrenade Mag
-	class 288th_10rnd_Microgrenade : 30Rnd_65x39_caseless_black_mag
+	class 288th_10Rnd_Microgrenade : 30Rnd_65x39_caseless_black_mag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		initSpeed = 200;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 10rnd Microgrenade Mag";
+		displayname = "[288th] 10Rnd Microgrenade Mag";
 		displaynameshort = "Microgrenade Mag";
 		descriptionshort = "A experimental mag loaded with Microgrenades";
 		ammo = "288th_MicroGrenade";
@@ -2485,7 +2476,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Buckshot Magazine";
+		displayname = "[288th] 30Rnd Buckshot Magazine";
 		displaynameshort = "Buckshot";
 		descriptionshort = "30 Round Buckshot";
 		ammo = "288th_Buckshot_Pellet";
@@ -2500,7 +2491,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Slug Magazine";
+		displayname = "[288th] 30Rnd Slug Magazine";
 		displaynameshort = "Slugs";
 		descriptionshort = "30 Round Slugs";
 		ammo = "B_127x99_SLAP";
@@ -2515,7 +2506,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Incendiary Slug Magazine";
+		displayname = "[288th] 30Rnd Incendiary Slug Magazine";
 		displaynameshort = "Incendiary Slugs";
 		descriptionshort = "30 Round Incendiary Slugs";
 		ammo = "65x85_APFS_Incendiary";
@@ -2530,7 +2521,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Flechette Slug Magazine";
+		displayname = "[288th] 30Rnd Flechette Slug Magazine";
 		displaynameshort = "Flechette Slugs";
 		descriptionshort = "30 Round Flechette Slugs";
 		ammo = "65x85_APFS_Flechette";
@@ -2545,7 +2536,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Taser Slug Magazine";
+		displayname = "[288th] 30Rnd Taser Slug Magazine";
 		displaynameshort = "Taser Slugs";
 		descriptionshort = "30 Round Taser Slugs";
 		ammo = "288th_Taser_ammo_Long";
@@ -2560,7 +2551,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd HEDP Slug Magazine";
+		displayname = "[288th] 30Rnd HEDP Slug Magazine";
 		displaynameshort = "HEDP Slugs";
 		descriptionshort = "30 Round HEDP Slugs";
 		ammo = "65x85_HEDP";
@@ -2574,7 +2565,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd EMP Slug Magazine";
+		displayname = "[288th] 30Rnd EMP Slug Magazine";
 		displaynameshort = "EMP Slugs";
 		descriptionshort = "30 Round EMP Slugs";
 		ammo = "288th_EMP";
@@ -2588,7 +2579,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Sub-Sonic Slug Magazine";
+		displayname = "[288th] 30Rnd Sub-Sonic Slug Magazine";
 		displaynameshort = "SS Slugs";
 		descriptionshort = "30 Round Sub-Sonic Slugs";
 		ammo = "65x85_SS";
@@ -2602,7 +2593,7 @@ class CfgMagazines
 		initSpeed = 400;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd KNock-Out Slug Magazine";
+		displayname = "[288th] 30Rnd Knock-Out Slug Magazine";
 		displaynameshort = "KO Shells";
 		descriptionshort = "30 Round KO Shells";
 		ammo = "288th_KO_shell";
@@ -2616,7 +2607,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Smoke Slug Magazine";
+		displayname = "[288th] 30Rnd Smoke Slug Magazine";
 		displaynameshort = "Smoke Slugs";
 		descriptionshort = "30 Round Smoke Slugs";
 		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\white\icon_shells_white.paa";
@@ -2629,7 +2620,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd HEDP Buckshot Magazine";
+		displayname = "[288th] 30Rnd HEDP Buckshot Magazine";
 		displaynameshort = "HEDP Buckshot";
 		descriptionshort = "30 Round HEDP Buckshot";
 		ammo = "288th_HEDP_Buckshot";
@@ -2644,7 +2635,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Incendiary Buckshot Magazine";
+		displayname = "[288th] 30Rnd Incendiary Buckshot Magazine";
 		displaynameshort = "Incendiary Buckshot";
 		descriptionshort = "30 Round Incendiary Buckshot";
 		ammo = "288th_Incendiary_Buckshot";
@@ -2659,7 +2650,7 @@ class CfgMagazines
 		initSpeed = 500;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 30rnd Flechette Buckshot Magazine";
+		displayname = "[288th] 30Rnd Flechette Buckshot Magazine";
 		displaynameshort = "Flechette Buckshot";
 		descriptionshort = "30 Round Flechette Buckshot";
 		ammo = "288th_Flechette_Buckshot";
@@ -2858,7 +2849,7 @@ class CfgMagazines
         scope = 2;
         scopearsenal = 2;
         ammo = "288th_Potato";
-        displayName = "[288th DJP] Potato";
+        displayName = "[288th] Potato";
         displayNameShort = "Tater tots AWAY!";
         count = 1;
         descriptionShort = "Smith said no, Soda says yes";
@@ -2884,7 +2875,17 @@ class CfgMagazines
 		descriptionshort = "16x65mm Slugs for the 288th Railgun?";
 		ammo = "288_Railgun_1";
 		count = 5;
-		initspeed = 3000;
+		initspeed = 2000;
+		mass = 8;
+	};
+	class 288th_SRS99XT_Mag : 288th_Railgun_Mag
+	{
+		displayName = "[288th] 14.5x114mm Slugs";
+		displayNameShort = "14.5x114mm Slugs";
+		descriptionshort = "14.5x114mm Slugs for the 288th SRS99XT";
+		ammo = "288_SRS99XT_Slugs";
+		count = 4;
+		initspeed = 1000;
 		mass = 8;
 	};
 
@@ -2913,7 +2914,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 32rnd 12.7x40mm Magazine";
+		displayname = "[288th] 32Rnd 12.7x40mm Magazine";
 		descriptionshort = "32 Rnd 12.7x40mm Magazine";
 		displayNameShort = "12.7x40mm";
 		count = 32;
@@ -2926,7 +2927,7 @@ class CfgMagazines
 		scope = 2;
 		scopearsenal = 2;
 		ammo = "TCF_B_127x40_AP";
-		displayname = "[288th] 32rnd 12.7x40mm AP Magazine";
+		displayname = "[288th] 32Rnd 12.7x40mm AP Magazine";
 		displayNameShort = "12.7x40mm AP";
 		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Magazine";
 		initspeed = 640;
@@ -2940,7 +2941,7 @@ class CfgMagazines
 		scope = 2;
 		scopearsenal = 2;
 		ammo = "65x85_EHP";
-		displayname = "[288th] 32rnd 12.7x40mm EHP Magazine";
+		displayname = "[288th] 32Rnd 12.7x40mm EHP Magazine";
 		displayNameShort = "12.7x40mm EHP";
 		descriptionshort = "32 Rnd 12.7x40mm External Hollow-Point Magazine";
 		initspeed = 550;
@@ -2953,7 +2954,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 32rnd 12.7x40mm AP Magazine (Tracer)";
+		displayname = "[288th] 32Rnd 12.7x40mm AP Magazine (Tracer)";
 		displayNameShort = "12.7x40mm APT";
 		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Tracer Magazine";
 		tracersEvery = 1;
@@ -2968,7 +2969,7 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 8rnd 12.7x40mm HI-P Magazine";
+		displayname = "[288th] 8Rnd 12.7x40mm HI-P Magazine";
 		descriptionshort = "8Rnd 12.7x40mm HI-P Magazine";
 		displayNameShort = "12.7x40mm HI-P";
 		ammo = "288th_15x50";
@@ -2976,7 +2977,7 @@ class CfgMagazines
 		mass = 8;
 	};
 
-	//288th Plasma 3rnd GL
+	//288th Plasma 3Rnd GL
 	class 288th_GL_Mag : 3Rnd_HE_Grenade_shell
 	{
 		dlc = "288thDJP_Aux";
@@ -3001,26 +3002,64 @@ class CfgMagazines
 		initspeed = 600;
 		ammo = "65x85_APFS_Tracers";
 		count = 500;
-		displayname = "[288th] 500Rnd 6.5x85mm Box Tracers";
-		displaynameshort = "6.5x85mm";
-		descriptionShort = "500 Round Box Tracer<br/>6.5x85mm";
-		mass = 125;
+		displayname = "[288th] 500Rnd APFS 6.5x85 Box Tracers";
+		displaynameshort = "6.5x85 APFS";
+		descriptionShort = "500 Round Box Tracer<br/>6.5x85 APFS";
+		mass = 100;
 		tracersEvery = 1;
 		lastRoundsTracer = 500;
 	};
 	class 288th_500Rnd_65x85_Box_Normal : 288th_500Rnd_65x85_Box
 	{
 		ammo = "65x85_APFS";
-		displayname = "[288th] 500Rnd 6.5x85mm Box";
-		displaynameshort = "6.5x85mm";
-		descriptionShort = "500 Round Box<br/>6.5x85mm";
-		mass = 125;
+		displayname = "[288th] 500Rnd APFS 6.5x85 Box";
+		displaynameshort = "6.5x85 APFS";
+		descriptionShort = "500 Round Box<br/>6.5x85 APFS";
+		mass = 100;
+		tracersEvery = 0;
+		lastRoundsTracer = 10;
+	};
+	class 288th_500Rnd_65x85_Box_EHP : 288th_500Rnd_65x85_Box
+	{
+		displayname = "[288th] 500Rnd EHP 6.5x85 Box Tracers";
+		displaynameshort = "6.5x85 EHP";
+		descriptionShort = "500 Round Box<br/>6.5x85 EHP";
+		ammo = "65x85_EHP";
+		mass = 100;
+		lastRoundsTracer = 10;
+	};
+	class 288th_500Rnd_65x85_Box_EHP_Normal : 288th_500Rnd_65x85_Box
+	{
+		displayname = "[288th] 500Rnd EHP 6.5x85 Box";
+		displaynameshort = "6.5x85 EHP";
+		descriptionShort = "500 Round Box<br/>6.5x85 EHP";
+		ammo = "65x85_EHP";
+		mass = 100;
 		tracersEvery = 0;
 		lastRoundsTracer = 10;
 	};
 
+	//M99 MMG Box
+
+	class 288th_200Rnd_308_Box : TKE_100Rnd_ucnmmg_mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 200Rnd .308 Box";
+		displaynameshort = ".308";
+		descriptionShort = "200 Round Box<br/>.308";
+		count = 200;
+		ammo = "288th_308_rifle_yellow";
+		initSpeed = 807;
+		tracersEvery = 5;
+		lastRoundsTracer = 5;
+		mass = 40;
+	};
+
 	//M50 HMG Box
-	class 288th_75Rnd_15x50_Box : TCF_100Rnd_762x51_Mag_M33
+	class 288th_75Rnd_15x50_Box : OPTRE_50Rnd_127x99_M250_Box
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -3069,7 +3108,7 @@ class CfgMagazines
 		lastRoundsTracer = 0;
 		descriptionShort = "50Rnd 20mm HE Grenade Box";
 		mass = 80;
-		modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100rnd.p3d";
+		modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100Rnd.p3d";
 		modelSpecialIsProxy = 1;
 	};
 	class 288th_AutoGL_Smoke_Mag : 288th_AutoGL_Mag
@@ -3160,13 +3199,39 @@ class CfgMagazines
 		initSpeed = 50;
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 50rnd Test Mag";
+		displayname = "[288th] 50Rnd Test Mag";
 		displaynameshort = "288th Test Mag";
 		descriptionshort = "A test magazine loaded with who knows what";
 		ammo = "OPTRE_c7_remote_ammo_thrown_sticky";
 		count = 50;
 		mass = 1;
 		tracersEvery = 1;
+	};
+	class 288th_65x85_M247Z: OPTRE_200Rnd_127x99_M247H_Etilka
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] 500Rnd 6.5x85mm Box";
+		displayNameShort = "6.5x85mm APFS";
+		ammo = "65x85_APFS";
+		initSpeed = 600;
+		count = 500;
+		tracersEvery = 1;
+		lastRoundsTracer = 500;
+		descriptionshort = "500 Round Box Magazine<br>6.5x85mm";
+	};
+	class 288th_65x85_M247Z_HE: 288th_65x85_M247Z
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] 500Rnd 6.5x85mm HE Box";
+		displayNameShort = "6.5x85mm HE";
+		ammo = "65x85_HEDP";
+		initSpeed = 600;
+		count = 500;
+		tracersEvery = 1;
+		lastRoundsTracer = 500;
+		descriptionshort = "500 Round Box Magazine<br>6.5x85mm HE";
 	};
 };
 
