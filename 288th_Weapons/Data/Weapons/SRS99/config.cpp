@@ -81,9 +81,10 @@ class CfgWeapons
 	class 288th_SRS99XT : OPTRE_SRS99D
 	{
 		displayName = "[288th] SRS99XT";
-		scope = 1;
-		scopeArsenal = 1;
+		scope = 0;
+		scopeArsenal = 0;
 		ace_arsenal_hide = 1;
+		scopeCurator = 0;
 		canShootInWater = 1;
 		dexterity = 2.2;
 		dispersion = 0;

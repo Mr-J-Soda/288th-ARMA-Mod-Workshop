@@ -523,7 +523,7 @@ class cfgMagazines
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
-		displayName = "[288th] 16Rnd Short Taser Magazine";
+		displayName = "[288th] 16Rnd 12.7x40mm Short Taser";
 		displayNameShort = "Short Taser";
 		descriptionshort = "16 Rnd 12.7x40mm Short Taser Magazine";
 		count = 16;
@@ -540,7 +540,7 @@ class cfgMagazines
 	};
 	class 288th_Taser_Long_Mag: 288th_Taser_Mag
 	{
-		displayName = "[288th] 16Rnd Long Taser Magazine";
+		displayName = "[288th] 16Rnd 12.7x40mm Long Taser";
 		displayNameShort = "Long Taser";
 		descriptionshort = "16 Rnd 12.7x40mm Long Taser Magazine";
 		ammo = "288th_Taser_ammo_long";

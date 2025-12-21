@@ -22,7 +22,7 @@ class CfgMusicClasses
 
 class CfgMusic
 {
-	tracks[] = {Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop};
+	tracks[] = {KEYGEN_CHURCH,Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop,Battlefield_VI,Crazy_Train,Deadline,Hard_Reset};
 	class Daredevil_AC7
 	{
 		name	= "Daredevil Ace Combat 7";
@@ -215,5 +215,45 @@ class CfgMusic
         musicClass = "288th_Music_List";
         duration=269;
 		//https://www.youtube.com/watch?v=EoljYKfTx5M
+	};
+	class Battlefield_VI
+	{
+		name	= "Battlefield 6";
+		sound[]	= { "\288th_Music\Battlefield-6.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=193;
+		//https://www.youtube.com/watch?v=UJaosACDB2A
+	};
+	class Crazy_Train
+	{
+		name	= "Crazy Train";
+		sound[]	= { "\288th_Music\CRAZY-TRAIN.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=197;
+		//https://www.youtube.com/watch?v=MrzeAF94YFo
+	};
+	class Deadline
+	{
+		name	= "Deadline";
+		sound[]	= { "\288th_Music\Deadline.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=129;
+		//https://www.youtube.com/watch?v=q7_NFEeeEac
+	};
+	class KEYGEN_CHURCH
+	{
+		name	= "KEYGEN CHURCH";
+		sound[]	= { "\288th_Music\KEYGEN_CHURCH.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=233;
+		//https://www.youtube.com/watch?v=L5q4uYj-gyg
+	};
+	class Hard_Reset
+	{
+		name	= "Hard_Reset";
+		sound[]	= { "\288th_Music\HARD-RESET.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=198;
+		//https://www.youtube.com/watch?v=e7LYM4N_bxM
 	};
 };

@@ -148,7 +148,7 @@ class CfgWeapons
 		author = "Soda / Misriah 288";
 		displayName = "[288th] KSG 12";
 		descriptionShort="SHOTGUN";
-		magazineWell[] = { 288th_KSG_12 };
+		magazineWell[] = { 288th_Shotgun_Pump };
 		magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
 		scope = 2;
 		scopeArsenal = 2;

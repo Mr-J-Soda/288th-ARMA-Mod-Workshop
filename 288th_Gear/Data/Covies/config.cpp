@@ -1,12 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Data\Covies\config.bin
-//Produced from mikero's Dos Tools Dll version 9.87
-//https://mikero.bytex.digital/Downloads
-//'now' is Wed Apr 16 04:43:05 2025 : 'file' last modified on Mon Apr 14 19:54:27 2025
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
 class CfgPatches
 {
 	class 288th_Gear_Covies
@@ -31,9 +22,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Armor (Minor)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Minor_Body_Armor_CO.paa","\288th_Gear\Data\Covies\Minor_Legs_and_Arms_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -45,9 +36,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Helmet (Minor)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Minor_Helmet_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -57,9 +48,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Armor (Major)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Major_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Major_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -71,9 +62,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Helmet (Major)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Major_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -83,9 +74,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Armor (Officer)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Officer_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Officer_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -97,9 +88,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Helmet (Officer)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Officer_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -109,9 +100,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Armor (SpecOps)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\SpecOps_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\SpecOps_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -123,9 +114,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Helmet (SpecOps)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\SpecOps_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -135,9 +126,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Armor (Ultra)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Ultra_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Ultra_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -149,9 +140,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
 		displayName = "[288th] Sangheili Helmet (Ultra)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Ultra_Helmet_Camo_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -409,6 +400,264 @@ class CfgVehicles
 		faction = "288th_UNSC";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Elite";
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_T60_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T60_PulseCarbine","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T60_PulseCarbine","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_Minor_Indi: OPTRE_FC_Elite_Minor
+	{
+		scope = 2;
+		scopeCurator = 2;
+		faceType = "Elite";
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_T25_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_Minor2_Indi: OPTRE_FC_Elite_Minor2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		faceType = "Elite";
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_T51_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T51_Carbine","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T51_Carbine","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge"};
+		respawnMagazines[] = {"OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge"};
+	};
+	class 288th_Elite_Minor3_Indi: OPTRE_FC_Elite_Minor3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		faceType = "Elite";
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_T33_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_Needler","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_Needler","Throw","Put"};
+		magazines[] = {"OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag"};
+		respawnMagazines[] = {"OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag","OPTRE_FC_Needler_Mag"};
+	};
+	class 288th_Elite_MinorAA_Indi: OPTRE_FC_Elite_MinorAA
+	{
+		scope = 2;
+		scopeCurator = 2;
+		faceType = "Elite";
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_AA_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put","OPTRE_FC_T33_FuelRod_Cannon_Guided"};
+		respawnWeapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put","OPTRE_FC_T33_FuelRod_Cannon_Guided"};
+		magazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T33_FuelRod_Pack_Guided","OPTRE_FC_T33_FuelRod_Pack_Guided"};
+		respawnMagazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T33_FuelRod_Pack_Guided","OPTRE_FC_T33_FuelRod_Pack_Guided"};
+	};
+	class 288th_Elite_MinorAT_Indi: OPTRE_FC_Elite_MinorAT
+	{
+		scope = 2;
+		scopeCurator = 2;
+		faceType = "Elite";
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Minor_AT_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Minor","288th_Elite_Helmet_Minor","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put","OPTRE_FC_T33_FuelRod_Cannon"};
+		respawnWeapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put","OPTRE_FC_T33_FuelRod_Cannon"};
+		magazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T33_FuelRod_Pack","OPTRE_FC_T33_FuelRod_Pack"};
+		respawnMagazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T33_FuelRod_Pack","OPTRE_FC_T33_FuelRod_Pack"};
+	};
+	class 288th_Elite_Major_Indi: OPTRE_FC_Elite_Major
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Major_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Major","288th_Elite_Helmet_Major","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Major","288th_Elite_Helmet_Major","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T51_Repeater","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T51_Repeater","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_PlasmaGrenade","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_T51_Repeater_Battery","OPTRE_FC_PlasmaGrenade","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_Officer_Indi: OPTRE_FC_Elite_Officer
+	{
+		scope = 2;
+		scopeCurator = 2;
+		faceType = "Elite";
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Officer_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Officer","288th_Elite_Helmet_Officer","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Officer","288th_Elite_Helmet_Officer","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T25_Rifle","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_T25_Rifle_Battery","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_SpecOps_Indi: OPTRE_FC_Elite_SpecOps
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_SO_T50_displayName";
+		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T50_SRS","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T50_SRS","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_T50_SRS_Battery","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_SpecOps2_Indi: OPTRE_FC_Elite_SpecOps2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_SO_T51_displayName";
+		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T51_Carbine","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T51_Carbine","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_SpecOps3_Indi: OPTRE_FC_Elite_SpecOps3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_SO_G_displayName";
+		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T50_ConcussionRifle","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T50_ConcussionRifle","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_SpecOps4_Indi: OPTRE_FC_Elite_SpecOps4
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_SO_T60_displayName";
+		linkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_SpecOps","288th_Elite_Helmet_SpecOps","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T60_PulseCarbine","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T60_PulseCarbine","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_T60_Pulse_Carbine_Battery","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_Ultra_Indi: OPTRE_FC_Elite_Ultra
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_T51_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T51_Carbine","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T51_Carbine","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_T51_Ammo_Cartridge","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_Ultra2_Indi: OPTRE_FC_Elite_Ultra2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
+		vehicleClass = "OPTRE_FC_Infantry_class";
+		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_G_displayName";
+		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		respawnLinkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+		weapons[] = {"OPTRE_FC_T50_ConcussionRifle","Throw","Put"};
+		respawnWeapons[] = {"OPTRE_FC_T50_ConcussionRifle","Throw","Put"};
+		magazines[] = {"OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_PlasmaGrenade"};
+		respawnMagazines[] = {"OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_T50_6rnd_mag","OPTRE_FC_PlasmaGrenade"};
+	};
+	class 288th_Elite_Ultra3_Indi: OPTRE_FC_Elite_Ultra3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		faction = "288th_UNSC";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Elite";
+		side = 2;
 		vehicleClass = "OPTRE_FC_Infantry_class";
 		displayName = "$STR_OPTRE_FC_Units_Elite_Ultra_T60_displayName";
 		linkedItems[] = {"288th_Elite_Armor_Ultra","288th_Elite_Helmet_Ultra","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};

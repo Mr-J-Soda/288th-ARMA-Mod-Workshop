@@ -2,6 +2,52 @@ class ace_missileguidance_type_HOT;
 class ace_missileguidance_type_Hellfire;
 class SensorTemplateIR;
 
+class CfgSkeletons
+{
+	class trilaunchermissile_s
+	{
+		pivotsModel="";
+		isDiscrete = 0;
+		skeletonInherit = "";
+		skeletonBones[] =
+		{
+			"mainmissile","",
+			"secondaryMissiles", "mainmissile"
+		};
+	};
+	
+};
+class CfgModels
+{
+	class Default
+	{
+		sectionsInherit="";
+		sections[] = {};
+		skeletonName = "";
+	};
+	
+	class trilaunchermissile:Default {
+		skeletonName = "trilaunchermissile_s";
+		sectionsInherit = "";
+		sections[] = {"Camo1"};
+		class Animations {
+			class MissileRot
+			{
+				type="rotation";
+				source="time";    // use second muzzle zeroing for rotation
+				sourceAddress="loop"; // loop when phase out of bounds
+				selection="mainmissile";       // selection we want to rotate
+				axis="rocketrot_axis";       // has its own axis
+				minValue=0;
+				maxValue=1;
+				angle0="rad 360";
+				angle1="rad 0";
+			};
+		};
+	};
+
+};
+
 class CfgPatches
 {
 	class 288th_Weapons_Ammo
@@ -412,6 +458,9 @@ class cfgAmmo
 	class G_40mm_HEDP;
 	class B_338_Ball;
 	class B_127x99_Ball;
+	class OPTRE_B_762x51_Ball;
+	class OPTRE_12Gauge_Smoke;
+	class B_127x33_Ball;
 	class FlareCore;
     class FlareBase: FlareCore {
         timeToLive = 90;
@@ -420,11 +469,23 @@ class cfgAmmo
         flareSize = 50;
     };
     class F_40mm_White: FlareBase {
-        timeToLive = 90;
+        timeToLive = 120;
         brightness = 150000;
 		intensity = 200000;
         flareSize = 50;
     };
+	class F_40mm_Red;
+	class F_40mm_Green;
+	class F_40mm_Yellow;
+	class F_40mm_Cir: F_40mm_White
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.01,0.01,0.01,0};
+		smokeColor[] = {0.5,0.5,0.25,0};
+		brightness = 12;
+		intensity = 10000;
+        flareSize = 1;
+	};
     class Flare_82mm_AMOS_White: FlareCore {
         timeToLive = 90;
         brightness = 80000;
@@ -433,7 +494,6 @@ class cfgAmmo
     };
 
 	
-
 	//custom 6.5 Rifle Ammo
 	class 65x85_APFS : B_762x51_Ball
 	{
@@ -545,6 +605,10 @@ class cfgAmmo
 		tracerEndTime = 10;
 		tracersEvery = 1;
 	};
+	class 65x85_Silver : 65x85_APFS
+	{
+		hit = 17.5;
+	};
 
 	//custom 45ACP Ammo
 	class 45ACP : B_762x51_Ball
@@ -564,6 +628,15 @@ class cfgAmmo
 		tracerstarttime = 0.05;
 		tracerendtime = 10;
 		tracersEvery = 1;
+	};
+	class 45ACP_EHP : 45ACP
+	{
+		hit = 18;
+		caliber = 1.8;
+	};
+	class 45ACP_Silver : 45ACP
+	{
+		hit = 16.5;
 	};
 
 	//Buckshot 
@@ -607,6 +680,7 @@ class cfgAmmo
 		submunitionConeType[] = { "poissondisc",8 };
 		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
 	};
+	
 	//custom Plasma Bullets
 	class 288th_Plasma_Blue : 65x85_APFS
 	{
@@ -1102,10 +1176,11 @@ class cfgAmmo
 		triggerTime = 0.01;
 	};
 
-	// Custom M41 Ammo
+	//Custom M41 Ammo
 
 	class 288th_M41_Rocket_HEAT_SACLOS: M_Titan_AT
 	{
+		//model = "\288th_Weapons\Data\Ammo\trilaunchermissile.p3d";
 		warheadName="TandemHEAT";
 		submunitionAmmo="ammo_Penetrator_Titan_AT_long";
 		effectsMissile="missile3";
@@ -1181,6 +1256,7 @@ class cfgAmmo
 	};
 	class 288th_M41_Rocket_HE : OPTRE_M41_Rocket_HEAP
 	{
+		//model = "\288th_Weapons\Data\Ammo\trilaunchermissile.p3d";
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "64 + 128";
 		hit = 150;
@@ -1204,7 +1280,7 @@ class cfgAmmo
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "64 + 128";
-		hit = 50;
+		hit = 20;
 		indirectHit = 50;
 		indirectHitRange = 5;
 		explosive = 1;
@@ -1214,6 +1290,7 @@ class cfgAmmo
 		cmImmunity = 0.85;
 		manualControl = 0;
 		weaponLockSystem = 0;
+		WBK_UseDisintegrate = "true";
 		explosionEffects = "288th_flameExplosion";
 		class ace_missileguidance
 		{
@@ -1222,6 +1299,7 @@ class cfgAmmo
 	};
 	class 288th_M41_Rocket_HEAT_Laser : OPTRE_M41_Rocket_HEAT_Laser
 	{
+		//model = "\288th_Weapons\Data\Ammo\trilaunchermissile.p3d";
 		HIT = 1000;
 		indirectHit = 40;
 		indirectHitRange = 6;
@@ -1274,6 +1352,7 @@ class cfgAmmo
 		indirectHitRange = 4;
 		explosive = 0.25;
 		model = "\OPTRE_Weapons\Rockets\M41_rocket.p3d";
+		//model = "\288th_Weapons\Data\Ammo\trilaunchermissile.p3d";
 		missileKeepLockedCone = 360;
 		missileLockCone = 300;
 		missileLockMaxDistance = 5000;
@@ -1784,7 +1863,7 @@ class cfgAmmo
 		model = "\OPTRE_FC_Weapons\data\bolt_red.p3d";
 	};
 
-	//288th 15x50mm Ammo
+	//288th Hi-Magnum Ammo
 	class 288th_15x50 : OPTRE_B_145x114_APFSDS
 	{
 		caliber = 4;
@@ -1908,6 +1987,169 @@ class cfgAmmo
 		supersoniccrackfar[] = {};
 		soundSetSonicCrack[] = {};
 	};
+
+	//custom 8.6x70mm bullets
+	class 288th_86x70_Ball: OPTRE_B_762x51_Ball
+	{
+		hit = 14;
+	};
+	class 288th_86x70_AP: 288th_86x70_Ball
+	{
+		caliber = 3;
+		hit = 16;
+		typicalSpeed = 920;
+	};
+	class 288th_86x70_SLAP: 288th_86x70_Ball
+	{
+		airFriction = 0;
+		caliber = 3;
+		hit = 17;
+		typicalSpeed = 1000;
+		sideairFriction = 0;
+	};
+	class 288th_86x70_EHP: 288th_86x70_Ball
+	{
+		caliber = 0.5;
+		hit = 19;
+		typicalSpeed = 905;
+	};
+	class 288th_86x70_SS: 288th_86x70_Ball
+	{
+		hit = 12;
+		typicalSpeed = 340;
+		visibleFire = 2;
+		audibleFire = 15;
+		visibleFireTime = 6;
+		dangerRadiusBulletClose = 4;
+		suppressionRadiusBulletClose = 2;
+	};
+
+	//custom 12.7x40mm bullets
+	class 288th_127x40_Ball: B_127x33_Ball
+	{
+		caliber = 2;
+		hit = 12;
+		typicalSpeed = 620;
+		cartridge = "FxCartridge_small";
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+	};
+	class 288th_127x40_AP: 288th_127x40_Ball
+	{
+		caliber = 3;
+		hit = 10;
+	};
+	class 288th_127x40_HE: 288th_127x40_Ball
+	{
+		caliber = 3;
+		craterEffects = "ExploAmmoCrater";
+		explosive = 0.2;
+		explosionEffects = "ExploAmmoExplosion";
+		explosionSoundEffect = "DefaultExplosion";
+		hit = 10;
+		indirectHit = 18;
+		indirectHitRange = 0.025;
+	};
+	class 288th_127x40_HVAP: 288th_127x40_Ball
+	{
+		caliber = 3;
+		hit = 12;
+		typicalSpeed = 800;
+	};
+	class 288th_127x40_EHP: 288th_127x40_Ball
+	{
+		caliber = 1;
+		hit = 22;
+		typicalSpeed = 580;
+	};
+	class 288th_127x40_SAPHE: 288th_127x40_Ball
+	{
+		caliber = 2.5;
+		craterEffects = "ExploAmmoCrater";
+		explosive = 0.15;
+		explosionEffects = "ExploAmmoExplosion";
+		explosionSoundEffect = "DefaultExplosion";
+		hit = 16.5;
+		typicalSpeed = 620;
+	};
+	class 288th_127x40_SS: 288th_127x40_Ball
+	{
+		hit = 14;
+		typicalSpeed = 340;
+		visibleFire = 2;
+		audibleFire = 15;
+		visibleFireTime = 6;
+		dangerRadiusBulletClose = 4;
+		suppressionRadiusBulletClose = 2;
+	};
+	class 288th_127x40_SMK: OPTRE_12Gauge_Smoke
+	{
+		cartridge = "FxCartridge_small";
+	};
+	class 288th_127x40_FR: F_40mm_Red
+	{
+		cartridge = "FxCartridge_small";
+	};
+	class 288th_127x40_FO: F_40mm_White
+	{
+		cartridge = "FxCartridge_small";
+		scope = 2;
+		scopeArsenal = 2;
+		lightColor[] = {0.5,0.35,0.25,0};
+		smokeColor[] = {0.9132,0.1763,0.007,0.8};
+	};
+	class 288th_127x40_FY: F_40mm_Yellow
+	{
+		cartridge = "FxCartridge_small";
+	};
+	class 288th_127x40_FG: F_40mm_Green
+	{
+		cartridge = "FxCartridge_small";
+	};
+	class 288th_127x40_FB: F_40mm_White
+	{
+		cartridge = "FxCartridge_small";
+		scope = 2;
+		scopeArsenal = 2;
+		lightColor[] = {0.25,0.25,0.5,0};
+		smokeColor[] = {0.0355,0.1863,1,0.8};
+	};
+	class 288th_127x40_FP: F_40mm_White
+	{
+		cartridge = "FxCartridge_small";
+		scope = 2;
+		scopeArsenal = 2;
+		lightColor[] = {0.5,0.25,0.5,0};
+		smokeColor[] = {0.4622,0.0578,0.3154,0.8};
+	};
+	class 288th_127x40_FIR: F_40mm_Cir
+	{
+		cartridge = "FxCartridge_small";
+		scope = 2;
+		scopeArsenal = 2;
+		lightColor[] = {0.01,0.01,0.01,0};
+		smokeColor[] = {0.5,0.5,0.25,0};
+		brightness = 5;
+		intensity = 200;
+        flareSize = 1;
+	};
+	class 288th_127x40_FW: F_40mm_White
+	{
+		cartridge = "FxCartridge_small";
+	};
+	//custom 14.5x114 Sub-Sonic
+	class 288th_145x114_SS: OPTRE_B_145x114_APFSDS
+	{
+		caliber = 4;
+		hit = 55;
+		typicalSpeed = 340;
+		timeToLive = 20;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+		visibleFire = 2;
+		audibleFire = 15;
+		visibleFireTime = 6;
+		dangerRadiusBulletClose = 4;
+		suppressionRadiusBulletClose = 2;
+	};
 };
 
 class CfgMagazines
@@ -1932,7 +2174,6 @@ class CfgMagazines
 	class OPTRE_32Rnd_762x51_Mag;
 	class OPTRE_FC_Railgun_Slug;
 	class OPTRE_12Rnd_127x40_Mag;
-	class TCF_12Rnd_127x40_Mag_NARQ;
 	class OPTRE_15Rnd_762x51_Mag;
 	class OPTRE_6Rnd_8Gauge_Pellet;
 	class OPTRE_100Rnd_95x40_Box;
@@ -1950,6 +2191,7 @@ class CfgMagazines
 	class TKE_100Rnd_ucnmmg_mag;
 	class OPTRE_50Rnd_127x99_M250_Box;
 	class OPTRE_200Rnd_127x99_M247H_Etilka;
+	class OPTRE_60Rnd_762x51_Mag;
 
 	//288th Standard 6.5x85 Mags
 	class 288th_Stanag : 30Rnd_65x39_caseless_black_mag
@@ -1990,6 +2232,16 @@ class CfgMagazines
 		count = 30;
 		lastRoundsTracer = 0;
 	};
+	class 288th_Silver_Mag : 288th_Stanag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 30Rnd Silver 6.5x85 Mag";
+		displaynameshort = "6.5x85 Silver Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with silver tipped ammo";
+		ammo = "65x85_Silver";
+		count = 30;
+	};
 	class 288th_Stanag_LMG : 100Rnd_65x39_caseless_black_mag
 	{
 		dlc = "288thDJP_Aux";
@@ -2015,6 +2267,15 @@ class CfgMagazines
 		displaynameshort = "6.5x85 EHP Mag";
 		descriptionshort = "A large LMG Mag loaded with External Hollow-Point ammo";
 		ammo = "65x85_EHP";
+	};
+	class 288th_Silver_LMG : 288th_Stanag_LMG
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 6.5x85 Silver Mag";
+		displaynameshort = "6.5x85 Silver Mag";
+		descriptionshort = "A large LMG Mag loaded with Silver tipped ammo";
+		ammo = "65x85_Silver";
 	};
 
 	// 288th DMR/BR
@@ -2161,7 +2422,15 @@ class CfgMagazines
 		descriptionshort = "EHP Magazines for the M7 SMGs";
 		tracersEvery = 1;
 		initspeed = 550;
-		ammo = "65x85_EHP";
+		ammo = "45ACP_EHP";
+	};
+	class 288th_45ACP_Mag_Silver : 288th_45ACP_Mag_AP
+	{
+		displayname = "[288th] 60Rnd 45ACP Silver Mag";
+		displaynameshort = ".45ACP Silver";
+		descriptionshort = "Silver Magazines for the M7 SMGs";
+		tracersEvery = 1;
+		ammo = "45ACP_Silver";
 	};
 
 	// Improved M41 Ammo
@@ -2206,6 +2475,7 @@ class CfgMagazines
 		picture = "\OPTRE_Weapons\Rockets\icons\magazine\opaex\he.paa";
 		hiddenSelectionsTextures[] = {"\OPTRE_Weapons\Rockets\data\mag_types\heap.paa","optre_weapons\rockets\data\logos_ca.paa"};
 		ammo = "288th_M41_Rocket_Flame";
+		WBK_UseDisintegrate = "true";
 		mass = 60;
 	};
 	class 288th_M41_Twin_HEAT_SALH : 288th_M41_Twin_HEAT_SACLOS
@@ -2264,6 +2534,7 @@ class CfgMagazines
 		displayname = "[288th] M57 Incendiary (Un-guided)";
 		displaynameshort = "Incendiary Dumb-fire";
 		ammo = "288th_M41_Rocket_Flame";
+		WBK_UseDisintegrate = "true";
 		mass = 25;
 	};
 	class 288th_M57_Cricket_SALH : 288th_M57_Cricket_SACLOS
@@ -2449,7 +2720,7 @@ class CfgMagazines
 		descriptionShort="HE 44 Rocket, Airburst 500 m";
 	};
 
-	//Microgrenade Mag
+	//Microgrenade Mags
 	class 288th_10Rnd_Microgrenade : 30Rnd_65x39_caseless_black_mag
 	{
 		dlc = "288thDJP_Aux";
@@ -2463,6 +2734,127 @@ class CfgMagazines
 		ammo = "288th_MicroGrenade";
 		count = 10;
 		mass = 15;
+	};
+	class 288th_10Rnd_White_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd White Smoke Microgrenade";
+		displaynameshort = "White Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_Smoke";
+	};
+	class 288th_10Rnd_Red_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Red Smoke Microgrenade";
+		displaynameshort = "Red Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_SmokeRed";
+	};
+	class 288th_10Rnd_Green_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Green Smoke Microgrenade";
+		displaynameshort = "Green Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_SmokeGreen";
+	};
+	class 288th_10Rnd_Yellow_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Yellow Smoke Microgrenade";
+		displaynameshort = "Yellow Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_SmokeYellow";
+	};
+	class 288th_10Rnd_Purple_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Purple Smoke Microgrenade";
+		displaynameshort = "Purple Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_SmokePurple";
+	};
+	class 288th_10Rnd_Blue_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Blue Smoke Microgrenade";
+		displaynameshort = "Blue Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_SmokeBlue";
+	};
+	class 288th_10Rnd_Orange_Smoke_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Orange Smoke Microgrenade";
+		displaynameshort = "Orange Smoke Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "OPTRE_40mm_SmokeOrange";
+	};
+	class 288th_10Rnd_HE_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd HE Microgrenade";
+		displaynameshort = "HE Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "M319_HE";
+	};
+	class 288th_10Rnd_HEDP_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd HEDP Microgrenade";
+		displaynameshort = "HEDP Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "M319_HEDP";
+	};
+	class 288th_10Rnd_HEDPC_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd HEDP-C Microgrenade";
+		displaynameshort = "HEDP-C Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "M319_HEDPC";
+	};
+	class 288th_10Rnd_Heat_Microgrenade : 288th_10Rnd_Microgrenade
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 10Rnd Heat Microgrenade";
+		displaynameshort = "Heat Microgrenade";
+		descriptionshort = "A experimental mag loaded with Microgrenades";
+		ammo = "M319_HEAT";
 	};
 
 	//288th autoshotgun shells
@@ -2612,6 +3004,7 @@ class CfgMagazines
 		descriptionshort = "30 Round Smoke Slugs";
 		picture = "\288th_Weapons\Data\Ammo\Shotgun_Shells\white\icon_shells_white.paa";
 		mass = 20;
+		count = 30;
 	};
 	class 288th_HEDP_Buckshot : 288th_Buckshot
 	{
@@ -2841,6 +3234,7 @@ class CfgMagazines
 		descriptionshort = "12 Round Sub-Sonic Slugs";
 		mass = 12;
 	};
+
 	//288th potato
 	class 288th_Potato : 288th_Buckshot
     {
@@ -2857,68 +3251,32 @@ class CfgMagazines
         initSpeed = 150;
         picture = "\288th_Weapons\Data\Ammo\icon_potat_ca";
     };
-	//288th Railgun Mag
-	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
-	{
-		displayName = "[288th] Railgun Slugs";
-		displayNameShort = "16x65mm Slugs";
-		ammo = "288_Railgun";
-		descriptionshort = "16x65mm Slugs for the 288th Railgun";
-		count = 5;
-		initspeed = 5000;
-		mass = 10;
-	};
-	class 288th_Railgun_Mag_1 : 288th_Railgun_Mag
-	{
-		displayName = "[288th] Railgun Slugs?";
-		displayNameShort = "16x65mm Slugs?";
-		descriptionshort = "16x65mm Slugs for the 288th Railgun?";
-		ammo = "288_Railgun_1";
-		count = 5;
-		initspeed = 2000;
-		mass = 8;
-	};
-	class 288th_SRS99XT_Mag : 288th_Railgun_Mag
-	{
-		displayName = "[288th] 14.5x114mm Slugs";
-		displayNameShort = "14.5x114mm Slugs";
-		descriptionshort = "14.5x114mm Slugs for the 288th SRS99XT";
-		ammo = "288_SRS99XT_Slugs";
-		count = 4;
-		initspeed = 1000;
-		mass = 8;
-	};
 
 	// Improved M6 Ammo
-	class 288th_32Rnd_127x40_Mag_NARQ : TCF_12Rnd_127x40_Mag_NARQ
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		displayName = "[288th] 32 Rnd 12.7x40mm NARQ Magazine";
-		displayNameShort = "12.7x40mm NARQ";
-		descriptionshort = "32 Rnd 12.7x40mm NARQ Magazine";
-		count = 32;
-		tracersEvery = 0;
-		mass = 12;
-		model = "\OPTRE_Weapons_Pistols\M6D\m6_extended_magazine.p3d";
-		modelSpecial = "\OPTRE_Weapons_Pistols\M6D\m6_extended_magazine.p3d";
-		modelSpecialIsProxy = 1;
-		hiddenSelections[] = {"camoMag"};
-		hiddenSelectionsTextures[] = {"\OPTRE_Weapons_Pistols\M6D\Data\M6D_Magazine_co.paa"};
-		picture = "\OPTRE_Weapons_Pistols\M6D\Data\icons\magazine\mag_base.paa";
-	};
 	class 288th_32Rnd_127x40 : OPTRE_12Rnd_127x40_Mag
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 32Rnd 12.7x40mm Magazine";
-		descriptionshort = "32 Rnd 12.7x40mm Magazine";
+		ammo = "288th_127x40_Ball";
+		displayname = "[288th] 32Rnd 12.7x40mm";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm";
 		displayNameShort = "12.7x40mm";
+		initspeed = 640;
 		count = 32;
 		mass = 12;
+	};
+	class 288th_32Rnd_127x40_Tracer : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm (Tracers)";
+		displayNameShort = "12.7x40mm Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Tracers";
+		tracersEvery = 1;
 	};
 	class 288th_32Rnd_127x40_AP : 288th_32Rnd_127x40
 	{
@@ -2926,27 +3284,11 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		ammo = "TCF_B_127x40_AP";
-		displayname = "[288th] 32Rnd 12.7x40mm AP Magazine";
+		initspeed = 620;
+		ammo = "288th_127x40_AP";
+		displayname = "[288th] 32Rnd 12.7x40mm AP";
 		displayNameShort = "12.7x40mm AP";
-		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Magazine";
-		initspeed = 640;
-		count = 32;
-		mass = 12;
-	};
-	class 288th_32Rnd_127x40_EHP : 288th_32Rnd_127x40
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopearsenal = 2;
-		ammo = "65x85_EHP";
-		displayname = "[288th] 32Rnd 12.7x40mm EHP Magazine";
-		displayNameShort = "12.7x40mm EHP";
-		descriptionshort = "32 Rnd 12.7x40mm External Hollow-Point Magazine";
-		initspeed = 550;
-		count = 32;
-		mass = 12;
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Armor-Piercing";
 	};
 	class 288th_32Rnd_127x40_APT : 288th_32Rnd_127x40_AP
 	{
@@ -2954,15 +3296,226 @@ class CfgMagazines
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopearsenal = 2;
-		displayname = "[288th] 32Rnd 12.7x40mm AP Magazine (Tracer)";
-		displayNameShort = "12.7x40mm APT";
-		descriptionshort = "32 Rnd 12.7x40mm Armor Priecing Tracer Magazine";
+		displayname = "[288th] 32Rnd 12.7x40mm AP (Tracers)";
+		displayNameShort = "12.7x40mm AP Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Armor-Piercing Tracers";
 		tracersEvery = 1;
-		lastRoundsTracer = 32;
-		initspeed = 640;
-		count = 32;
-		mass = 12;
 	};
+	class 288th_32Rnd_127x40_HVAP : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 800;
+		ammo = "288th_127x40_HVAP";
+		displayname = "[288th] 32Rnd 12.7x40mm HVAP";
+		displayNameShort = "12.7x40mm HVAP";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>High-Velocity Armor-Piercing";
+	};
+	class 288th_32Rnd_127x40_HVAPT : 288th_32Rnd_127x40_HVAP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm HVAP (Tracers)";
+		displayNameShort = "12.7x40mm HVAP Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>High-Velocity Armor-Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_32Rnd_127x40_EHP : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 580;
+		ammo = "288th_127x40_EHP";
+		displayname = "[288th] 32Rnd 12.7x40mm EHP";
+		displayNameShort = "12.7x40mm EHP";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Expanded Hollow-Point";
+	};
+	class 288th_32Rnd_127x40_EHPT : 288th_32Rnd_127x40_EHP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm EHP (Tracers)";
+		displayNameShort = "12.7x40mm EHP Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Expanded Hollow-Point Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_32Rnd_127x40_SAPHE : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 620;
+		ammo = "288th_127x40_SAPHE";
+		displayname = "[288th] 32Rnd 12.7x40mm SAPHE";
+		displayNameShort = "12.7x40mm SAPHE";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Semi-Armor-Piercing High-Explosive";
+	};
+	class 288th_32Rnd_127x40_SAPHET : 288th_32Rnd_127x40_SAPHE
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm SAPHE (Tracers)";
+		displayNameShort = "12.7x40mm SAPHE Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Semi-Armor-Piercing High-Explosive Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_32Rnd_127x40_SS : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 340;
+		ammo = "288th_127x40_SS";
+		displayname = "[288th] 32Rnd 12.7x40mm SS";
+		displayNameShort = "12.7x40mm SS";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Sub-Sonic";
+	};
+	class 288th_32Rnd_127x40_SST : 288th_32Rnd_127x40_SS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm SS (Tracers)";
+		displayNameShort = "12.7x40mm SS Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Sub-Sonic Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_32Rnd_127x40_S : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm Silver";
+		displayNameShort = "12.7x40mm Silver";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Silver";
+	};
+	class 288th_32Rnd_127x40_ST : 288th_32Rnd_127x40_S
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 32Rnd 12.7x40mm Silver (Tracers)";
+		displayNameShort = "12.7x40mm Tracer";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Tracer";
+		tracersEvery = 1;
+	};
+	class 288th_16Rnd_127x40_FR : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 100;
+		ammo = "288th_127x40_FR";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (Red)";
+		displayNameShort = "12.7x40mm Flare Red";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (Red)";
+	};
+	class 288th_16Rnd_127x40_FO : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FO";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (Orange)";
+		displayNameShort = "12.7x40mm Flare Orange";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (Orange)";
+	};
+	class 288th_16Rnd_127x40_FY : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FY";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (Yellow)";
+		displayNameShort = "12.7x40mm Flare Yellow";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (Yellow)";
+	};
+	class 288th_16Rnd_127x40_FG : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FG";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (Green)";
+		displayNameShort = "12.7x40mm Flare Green";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (Green)";
+	};
+	class 288th_16Rnd_127x40_FB : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FB";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (Blue)";
+		displayNameShort = "12.7x40mm Flare Blue";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (Blue)";
+	};
+	class 288th_16Rnd_127x40_FP : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FP";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (Purple)";
+		displayNameShort = "12.7x40mm Flare Purple";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (Purple)";
+	};
+	class 288th_16Rnd_127x40_FW : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FW";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (White)";
+		displayNameShort = "12.7x40mm Flare White";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (White)";
+	};
+	class 288th_16Rnd_127x40_FIR : 288th_16Rnd_127x40_FR
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		ammo = "288th_127x40_FIR";
+		displayname = "[288th] 16Rnd 12.7x40mm Flare (IR)";
+		displayNameShort = "12.7x40mm Flare IR";
+		descriptionshort = "16 round Magazine<br/>12.7x40mm<br/>Flares (IR)";
+	};
+	class 288th_32Rnd_127x40_SMK : 288th_32Rnd_127x40
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 700;
+		ammo = "288th_127x40_SMK";
+		displayname = "[288th] 32Rnd 12.7x40mm Smoke (White)";
+		displayNameShort = "12.7x40mm Smoke White";
+		descriptionshort = "32 round Magazine<br/>12.7x40mm<br/>Smokes (Red)";
+	};
+
 	class 288th_8Rnd_127_HI_P : OPTRE_12Rnd_127x40_Mag
 	{
 		dlc = "288thDJP_Aux";
@@ -3005,6 +3558,7 @@ class CfgMagazines
 		displayname = "[288th] 500Rnd APFS 6.5x85 Box Tracers";
 		displaynameshort = "6.5x85 APFS";
 		descriptionShort = "500 Round Box Tracer<br/>6.5x85 APFS";
+		picture = "\OPTRE_Weapons_MG\m247\data\icons\magazine.paa";
 		mass = 100;
 		tracersEvery = 1;
 		lastRoundsTracer = 500;
@@ -3040,7 +3594,6 @@ class CfgMagazines
 	};
 
 	//M99 MMG Box
-
 	class 288th_200Rnd_308_Box : TKE_100Rnd_ucnmmg_mag
 	{
 		dlc = "288thDJP_Aux";
@@ -3054,41 +3607,559 @@ class CfgMagazines
 		ammo = "288th_308_rifle_yellow";
 		initSpeed = 807;
 		tracersEvery = 5;
-		lastRoundsTracer = 5;
+		lastRoundsTracer = 25;
 		mass = 40;
 	};
 
-	//M50 HMG Box
-	class 288th_75Rnd_15x50_Box : OPTRE_50Rnd_127x99_M250_Box
+	//8.6x70mm MMG Box
+	class 288th_120Rnd_86x70_Box : 288th_200Rnd_308_Box
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		initspeed = 500;
-		ammo = "288th_15x50";
-		count = 75;
-		displayname = "[288th] 75Rnd 15x50mm Box";
-		displaynameshort = "15x50mm";
-		descriptionShort = "75 Round Box<br/>15x50mm";
-		mass = 85;
+		displayname = "[288th] 120Rnd 8.6x70mm";
+		displaynameshort = "8.6x70mm";
+		descriptionShort = "120 Round Box<br/>8.6x70mm";
+		count = 120;
+		ammo = "288th_86x70_Ball";
+		initSpeed = 807;
+		tracersEvery = 5;
+		lastRoundsTracer = 20;
+		mass = 40;
+	};
+	class 288th_120Rnd_86x70_Box_Tracer : 288th_120Rnd_86x70_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm (Tracer)";
+		displaynameshort = "8.6x70mm Tracer";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Tracers";
+		ammo = "288th_86x70_Ball";
 		tracersEvery = 1;
-		lastRoundsTracer = 75;
+	};
+	class 288th_120Rnd_86x70_AP_Box : 288th_120Rnd_86x70_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm AP";
+		displaynameshort = "8.6x70mm AP";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Armor-Piercing";
+		ammo = "288th_86x70_AP";
+	};
+	class 288th_120Rnd_86x70_APT_Box : 288th_120Rnd_86x70_AP_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm AP (Tracer)";
+		displaynameshort = "8.6x70mm AP Tracer";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Armor-Piercing Tracers";
+		ammo = "288th_86x70_AP";
+		tracersEvery = 1;
+	};
+	class 288th_120Rnd_86x70_SLAP_Box : 288th_120Rnd_86x70_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm SLAP";
+		displaynameshort = "8.6x70mm SLAP";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Saboted Light Armor Penetrator";
+		ammo = "288th_86x70_SLAP";
+	};
+	class 288th_120Rnd_86x70_SLAPT_Box : 288th_120Rnd_86x70_SLAP_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm SLAP (Tracer)";
+		displaynameshort = "8.6x70mm SLAP Tracer";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Saboted Light Armor Penetrator Tracers";
+		ammo = "288th_86x70_SLAP";
+		tracersEvery = 1;
+	};
+	class 288th_120Rnd_86x70_EHP_Box : 288th_120Rnd_86x70_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm EHP";
+		displaynameshort = "8.6x70mm EHP";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Expanded Hollow-Point";
+		ammo = "288th_86x70_EHP";
+	};
+	class 288th_120Rnd_86x70_EHPT_Box : 288th_120Rnd_86x70_EHP_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm EHP (Tracer)";
+		displaynameshort = "8.6x70mm EHP Tracer";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Expanded Hollow-Point Tracers";
+		ammo = "288th_86x70_EHP";
+		tracersEvery = 1;
+	};
+	class 288th_120Rnd_86x70_SS_Box : 288th_120Rnd_86x70_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm SS";
+		displaynameshort = "8.6x70mm SS";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Subsonic";
+		ammo = "288th_86x70_SS";
+	};
+	class 288th_120Rnd_86x70_SST_Box : 288th_120Rnd_86x70_SS_Box
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 120Rnd 8.6x70mm SS (Tracer)";
+		displaynameshort = "8.6x70mm SS Tracer";
+		descriptionShort = "120 Round Box<br/>8.6x70mm<br/>Subsonic Tracers";
+		ammo = "288th_86x70_SS";
+		tracersEvery = 1;
 	};
 
-	//288th M12H Mag
-	class 288th_M12H_Mag : OPTRE_64Rnd_57x31_Mag
+	//15x50mm HMG Box
+	class 288th_75Rnd_15x50 : OPTRE_50Rnd_127x99_M250_Box
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
-		ammo = "45ACP";
+		initspeed = 1200;
+		ammo = "OPTRE_B_145x114_APFSDS";
+		count = 75;
+		displayname = "[288th] 75Rnd 15x50mm";
+		displaynameshort = "15x50mm APFSDS";
+		descriptionShort = "75 Round Box<br/>15x50mm";
+		mass = 85;
+		tracersEvery = 5;
+		lastRoundsTracer = 25;
+	};
+	class 288th_75Rnd_15x50_Tracer : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm (Tracer)";
+		displaynameshort = "15x50mm APFSDS Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_75Rnd_15x50_HVAP : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_HVAP";
+		initspeed = 850;
+		displayname = "[288th] 75Rnd 15x50mm HVAP";
+		displaynameshort = "15x50mm HVAP";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>High Velocity Armor Piercing";
+	};
+	class 288th_75Rnd_15x50_HVAPT : 288th_75Rnd_15x50_HVAP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm HVAP (Tracer)";
+		displaynameshort = "15x50mm HVAP Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>High Velocity Armor Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_75Rnd_15x50_HEDP : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_HEDP";
+		displayname = "[288th] 75Rnd 15x50mm HEDP";
+		displaynameshort = "15x50mm HEDP";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>High Explosive Dual Purpose";
+	};
+	class 288th_75Rnd_15x50_HEDPT : 288th_75Rnd_15x50_HEDP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm HEDP (Tracer)";
+		displaynameshort = "15x50mm HEDP Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>High Explosive Dual Purpose Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_75Rnd_15x50_AP : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_AP";
+		displayname = "[288th] 75Rnd 15x50mm AP";
+		displaynameshort = "15x50mm AP";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Armor Piercing";
+	};
+	class 288th_75Rnd_15x50_APT : 288th_75Rnd_15x50_AP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm AP (Tracer)";
+		displaynameshort = "15x50mm AP Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Armor Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_75Rnd_15x50_HE : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_HE";
+		displayname = "[288th] 75Rnd 15x50mm HE";
+		displaynameshort = "15x50mm HE";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>High Explosive";
+	};
+	class 288th_75Rnd_15x50_HET : 288th_75Rnd_15x50_HE
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm HE (Tracer)";
+		displaynameshort = "15x50mm HE Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>High Explosive Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_75Rnd_15x50_SS : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "288th_145x114_SS";
+		displayname = "[288th] 75Rnd 15x50mm SS";
+		displaynameshort = "15x50mm SS";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Sub-Sonic";
+	};
+	class 288th_75Rnd_15x50_SST : 288th_75Rnd_15x50_SS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm SS (Tracer)";
+		displaynameshort = "15x50mm SS Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Sub-Sonic Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_75Rnd_15x50_SLAP : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_SLAP";
+		displayname = "[288th] 75Rnd 15x50mm SLAP";
+		displaynameshort = "15x50mm SLAP";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Saboted Light Armor Penetrator";
+	};
+	class 288th_75Rnd_15x50_SLAPT : 288th_75Rnd_15x50_SLAP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 75Rnd 15x50mm SLAP (Tracer)";
+		displaynameshort = "15x50mm SLAP Tracer";
+		descriptionShort = "75 Round Box<br/>15x50mm<br/>Saboted Light Armor Penetrator Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50 : 288th_75Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		count = 150;
+		displayname = "[288th] 150Rnd 15x50mm";
+		displaynameshort = "15x50mm";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>";
+		//hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\M73X\50calMag_co.paa"};
+		mass = 170;
+		lastRoundsTracer = 50;
+	};
+	class 288th_150Rnd_15x50_Tracer : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm (Tracer)";
+		displaynameshort = "15x50mm Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/> Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50_HVAP : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_HVAP";
+		initspeed = 850;
+		displayname = "[288th] 150Rnd 15x50mm HVAP";
+		displaynameshort = "15x50mm HVAP";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>High Velocity Armor Piercing";
+	};
+	class 288th_150Rnd_15x50_HVAPT : 288th_150Rnd_15x50_HVAP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm HVAP (Tracer)";
+		displaynameshort = "15x50mm HVAP Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>High Velocity Armor Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50_HEDP : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_HEDP";
+		displayname = "[288th] 150Rnd 15x50mm HEDP";
+		displaynameshort = "15x50mm HEDP";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>High Explosive Dual Purpose";
+	};
+	class 288th_150Rnd_15x50_HEDPT : 288th_150Rnd_15x50_HEDP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm HEDP (Tracer)";
+		displaynameshort = "15x50mm HEDP Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>High Explosive Dual Purpose Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50_AP : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_AP";
+		displayname = "[288th] 150Rnd 15x50mm AP";
+		displaynameshort = "15x50mm AP";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>Armor Piercing";
+	};
+	class 288th_150Rnd_15x50_APT : 288th_150Rnd_15x50_AP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm AP (Tracer)";
+		displaynameshort = "15x50mm AP Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>Armor Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50_HE : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_HE";
+		displayname = "[288th] 150Rnd 15x50mm HE";
+		displaynameshort = "15x50mm HE";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>High Explosive";
+	};
+	class 288th_150Rnd_15x50_HET : 288th_150Rnd_15x50_HE
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm HE (Tracer)";
+		displaynameshort = "15x50mm HE Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>High Explosive Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50_SS : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "288th_145x114_SS";
+		displayname = "[288th] 150Rnd 15x50mm SS";
+		displaynameshort = "15x50mm SS";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>Sub-Sonic";
+	};
+	class 288th_150Rnd_15x50_SST : 288th_150Rnd_15x50_SS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm SS (Tracer)";
+		displaynameshort = "15x50mm SS Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>Sub-Sonic Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_150Rnd_15x50_SLAP : 288th_150Rnd_15x50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		ammo = "OPTRE_B_145x114_SLAP";
+		displayname = "[288th] 150Rnd 15x50mm SLAP";
+		displaynameshort = "15x50mm SLAP";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>Saboted Light Armor Penetrator";
+	};
+	class 288th_150Rnd_15x50_SLAPT : 288th_150Rnd_15x50_SLAP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayname = "[288th] 150Rnd 15x50mm SLAP (Tracer)";
+		displaynameshort = "15x50mm SLAP Tracer";
+		descriptionShort = "150 Round Box<br/>15x50mm<br/>Saboted Light Armor Penetrator Tracers";
+		tracersEvery = 1;
+	};
+
+	//12.7x30mm Mag
+	class 288th_65Rnd_127x30 : OPTRE_64Rnd_57x31_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ammo = "288th_127x40_Ball";
 		count = 65;
-		displayname = "[288th] 65Rnd 12.7x30mm Magazine";
-		displaynameshort = "12.7x30";
-		descriptionShort = "Magazine for the M12H";
+		displayname = "[288th] 65Rnd 12.7x30mm";
+		displaynameshort = "12.7x30mm";
+		descriptionShort = "65 round Magazine<br/>12.7x30mm";
+		initspeed = 640;
 		mass = 8;
+	};
+	class 288th_65Rnd_127x30_Tracer : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm (Tracers)";
+		displayNameShort = "12.7x30mm Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Tracer";
+		tracersEvery = 1;
+	};
+	class 288th_65Rnd_127x30_AP : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 620;
+		ammo = "288th_127x40_AP";
+		displayname = "[288th] 65Rnd 12.7x30mm AP";
+		displayNameShort = "12.7x30mm AP";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Armor-Piercing";
+	};
+	class 288th_65Rnd_127x30_APT : 288th_65Rnd_127x30_AP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm AP (Tracers)";
+		displayNameShort = "12.7x30mm AP Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Armor-Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_65Rnd_127x30_HVAP : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 800;
+		ammo = "288th_127x40_HVAP";
+		displayname = "[288th] 65Rnd 12.7x30mm HVAP";
+		displayNameShort = "12.7x30mm HVAP";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>High-Velocity Armor-Piercing";
+	};
+	class 288th_65Rnd_127x30_HVAPT : 288th_65Rnd_127x30_HVAP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm HVAP (Tracers)";
+		displayNameShort = "12.7x30mm HVAP Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>High-Velocity Armor-Piercing Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_65Rnd_127x30_EHP : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 580;
+		ammo = "288th_127x40_EHP";
+		displayname = "[288th] 65Rnd 12.7x30mm EHP";
+		displayNameShort = "12.7x30mm EHP";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Expanded Hollow-Point";
+	};
+	class 288th_65Rnd_127x30_EHPT : 288th_65Rnd_127x30_EHP
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm EHP (Tracers)";
+		displayNameShort = "12.7x30mm EHP Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Expanded Hollow-Point Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_65Rnd_127x30_SAPHE : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 620;
+		ammo = "288th_127x40_SAPHE";
+		displayname = "[288th] 65Rnd 12.7x30mm SAPHE";
+		displayNameShort = "12.7x30mm SAPHE";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Semi-Armor-Piercing High-Explosive";
+	};
+	class 288th_65Rnd_127x30_SAPHET : 288th_65Rnd_127x30_SAPHE
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm SAPHE (Tracers)";
+		displayNameShort = "12.7x30mm SAPHE Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Semi-Armor-Piercing High-Explosive Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_65Rnd_127x30_SS : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		initspeed = 340;
+		ammo = "288th_127x40_SS";
+		displayname = "[288th] 65Rnd 12.7x30mm SS";
+		displayNameShort = "12.7x30mm SS";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Sub-Sonic";
+	};
+	class 288th_65Rnd_127x30_SST : 288th_65Rnd_127x30_SS
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm SS (Tracers)";
+		displayNameShort = "12.7x30mm SS Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Sub-Sonic Tracers";
+		tracersEvery = 1;
+	};
+	class 288th_65Rnd_127x30_S : 288th_65Rnd_127x30
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm Silver";
+		displayNameShort = "12.7x30mm Silver";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Silver";
+	};
+	class 288th_65Rnd_127x30_ST : 288th_65Rnd_127x30_S
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[288th] 65Rnd 12.7x30mm Silver (Tracers)";
+		displayNameShort = "12.7x30mm Silver Tracer";
+		descriptionshort = "65 round Magazine<br/>12.7x30mm<br/>Silver Tracers";
+		tracersEvery = 1;
 	};
 
 	//288th AutoGL Mag
@@ -3107,17 +4178,80 @@ class CfgMagazines
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
 		descriptionShort = "50Rnd 20mm HE Grenade Box";
-		mass = 80;
+		mass = 40;
 		modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100Rnd.p3d";
 		modelSpecialIsProxy = 1;
 	};
-	class 288th_AutoGL_Smoke_Mag : 288th_AutoGL_Mag
+	class 288th_AutoGL_HEDP_Mag : 288th_AutoGL_Mag
 	{
-		displayName = "[288th] 50Rnd 20mm Impact Smoke M318 Box";
+		displayName = "[288th] 50Rnd 20mm HEDP M318 Box";
+		displaynameshort = "50Rnd 20mm HEDP";
+		ammo = "M319_HEDP";
+		descriptionShort = "50Rnd 20mm HEDP Grenade Box";
+	};
+	class 288th_AutoGL_HEDPC_Mag : 288th_AutoGL_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm HEDP-C M318 Box";
+		displaynameshort = "50Rnd 20mm HEDP-C";
+		ammo = "M319_HEDPC";
+		descriptionShort = "50Rnd 20mm HEDP-C Grenade Box";
+	};
+	class 288th_AutoGL_HEAT_Mag : 288th_AutoGL_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm HEAT M318 Box";
+		displaynameshort = "50Rnd 20mm HEAT";
+		ammo = "M319_HEAT";
+		descriptionShort = "50Rnd 20mm HEAT Grenade Box";
+	};
+	class 288th_AutoGL_W_Smoke_Mag : 288th_AutoGL_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm White Smoke M318 Box";
 		displaynameshort = "50Rnd 20mm W Smoke";
 		ammo = "OPTRE_40mm_Smoke";
-		descriptionShort = "50Rnd 20mm Smoke Grenade Box";
-		mass = 60;
+		descriptionShort = "50Rnd 20mm W Smoke Grenade Box";
+		mass = 30;
+	};
+	class 288th_AutoGL_R_Smoke_Mag : 288th_AutoGL_W_Smoke_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm Red Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm R Smoke";
+		ammo = "OPTRE_40mm_SmokeRed";
+		descriptionShort = "50Rnd 20mm R Smoke Grenade Box";
+	};
+	class 288th_AutoGL_O_Smoke_Mag : 288th_AutoGL_W_Smoke_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm Orange Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm O Smoke";
+		ammo = "OPTRE_40mm_SmokeOrange";
+		descriptionShort = "50Rnd 20mm O Smoke Grenade Box";
+	};
+	class 288th_AutoGL_Y_Smoke_Mag : 288th_AutoGL_W_Smoke_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm Yellow Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm Y Smoke";
+		ammo = "OPTRE_40mm_SmokeYellow";
+		descriptionShort = "50Rnd 20mm Y Smoke Grenade Box";
+	};
+	class 288th_AutoGL_G_Smoke_Mag : 288th_AutoGL_W_Smoke_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm Green Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm G Smoke";
+		ammo = "OPTRE_40mm_SmokeGreen";
+		descriptionShort = "50Rnd 20mm G Smoke Grenade Box";
+	};
+	class 288th_AutoGL_B_Smoke_Mag : 288th_AutoGL_W_Smoke_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm Blue Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm B Smoke";
+		ammo = "OPTRE_40mm_SmokeBlue";
+		descriptionShort = "50Rnd 20mm B Smoke Grenade Box";
+	};
+	class 288th_AutoGL_P_Smoke_Mag : 288th_AutoGL_W_Smoke_Mag
+	{
+		displayName = "[288th] 50Rnd 20mm Purple Smoke M318 Box";
+		displaynameshort = "50Rnd 20mm P Smoke";
+		ammo = "OPTRE_40mm_SmokePurple";
+		descriptionShort = "50Rnd 20mm P Smoke Grenade Box";
 	};
 
 	//Temp cursed revolver ammo
@@ -3147,6 +4281,32 @@ class CfgMagazines
 		displayname = "[288th] 6Rnd Purple Plasma Ammo";
 		displaynameshort = "Purple Plasma Ammo";
 		descriptionShort = "Temp's Purple Plasma";
+	};
+
+	//Fade MA5B 308 Mag
+	class 288th_60Rnd_308_Mag: OPTRE_60Rnd_762x51_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 60Rnd .308 Mag";
+		displaynameshort = ".308";
+		ammo = "288th_308_rifle_yellow";
+		descriptionshort = "60 Round Magazine<br/>.308";
+		initSpeed = 807;
+	};
+	class 288th_60Rnd_308_Tazer_Mag: 288th_60Rnd_308_Mag
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		displayname = "[288th] 60Rnd Tazer Mag";
+		displaynameshort = "Tazer";
+		ammo = "288th_Taser_ammo_long";
+		descriptionshort = "60 Round Magazine<br/>Tazer";
+		initSpeed = 254;
 	};
 	
 	//Experimental ammo
@@ -3232,6 +4392,38 @@ class CfgMagazines
 		tracersEvery = 1;
 		lastRoundsTracer = 500;
 		descriptionshort = "500 Round Box Magazine<br>6.5x85mm HE";
+	};
+
+	//288th Railgun Mag
+	class 288th_Railgun_Mag : OPTRE_FC_Railgun_Slug
+	{
+		displayName = "[288th] Railgun Slugs";
+		displayNameShort = "16x65mm Slugs";
+		ammo = "288_Railgun";
+		descriptionshort = "16x65mm Slugs for the 288th Railgun";
+		count = 5;
+		initspeed = 5000;
+		mass = 10;
+	};
+	class 288th_Railgun_Mag_1 : 288th_Railgun_Mag
+	{
+		displayName = "[288th] Railgun Slugs?";
+		displayNameShort = "16x65mm Slugs?";
+		descriptionshort = "16x65mm Slugs for the 288th Railgun?";
+		ammo = "288_Railgun_1";
+		count = 5;
+		initspeed = 2000;
+		mass = 8;
+	};
+	class 288th_SRS99XT_Mag : 288th_Railgun_Mag
+	{
+		displayName = "[288th] 14.5x114mm Slugs";
+		displayNameShort = "14.5x114mm Slugs";
+		descriptionshort = "14.5x114mm Slugs for the 288th SRS99XT";
+		ammo = "288_SRS99XT_Slugs";
+		count = 4;
+		initspeed = 1000;
+		mass = 8;
 	};
 };
 

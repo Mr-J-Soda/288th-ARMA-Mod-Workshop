@@ -58,9 +58,9 @@ class cfgWeapons
 	class arifle_ARX_blk_F;
 	class 288th_M6C;
 	class 288th_CQS_48X;
-	class 288th_KSG_12;
+	class 288th_M90A;
 	class OPTRE_M393_DMR;
-	class TCF_ARMX_GL_light;
+	class arifle_MX_GL_Black_F;
 	class UGL_F;
 	class OPTRE_M12_SOC;
 	class srifle_DMR_03_F;
@@ -69,8 +69,6 @@ class cfgWeapons
 	class OPTRE_BR55HB;
 	class OPTRE_MA5B;
 	class WRS_Weapon_AR_Ver1;
-	class arifle_MSBS65_UBS_Black_F;
-	class arifle_MSBS65_UBS_sand_F_flame;
 	class UBS_F;
 	// Attachment Slots
 	class MuzzleSlot;
@@ -87,6 +85,7 @@ class cfgWeapons
 	class asdg_OpticRail1913;
 	class OPTRE_MuzzleSlot;
 	class asdg_MuzzleSlot_556;
+	class OPTRE_M26_Shotgun_F;
 	class OPTRE_UnderBarrelSlot_rail;
 	class OPTRE_Pointers : asdg_FrontSideRail
 	{
@@ -239,7 +238,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -264,7 +263,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -300,7 +299,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR2X";
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxlmgblak.paa"};
-		magazines[] = {"288th_Stanag_LMG","288th_EHP_LMG"};
+		magazines[] = {"288th_Stanag_LMG","288th_EHP_LMG","288th_Silver_LMG"};
 		magazineWell[] = { "288th_Standard" };
 		recoil = "recoil_Assault";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
@@ -564,7 +563,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -589,7 +588,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -602,7 +601,7 @@ class cfgWeapons
 	};
 
 	// 288th AR4X
-	class 288th_AR4X : TCF_ARMX_GL_light
+	class 288th_AR4X : arifle_MX_GL_Black_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -730,7 +729,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -755,7 +754,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -834,6 +833,8 @@ class cfgWeapons
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\ARX\data\anim\arx.rtm"};
 		muzzles[] = {"this","Secondary"};
 		reloadAction = "GestureReloadARX";
+		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\M28A3\V_M28_CO.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co.paa"};
+
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -926,15 +927,7 @@ class cfgWeapons
 		class secondary : 288th_M6C
 		{
 			displayName = "M28A3 Underbarrel Sidearm";
-			magazines[] =
-			{
-				"288th_32Rnd_127x40",
-				"288th_32Rnd_127x40_AP",
-				"288th_32Rnd_127x40_APT",
-				"288th_32Rnd_127x40_Mag_NARQ",
-				"288th_16Rnd_Flare_Green",
-				"288th_16Rnd_Flare_Red"
-			};
+			magazines[] ={"288th_32Rnd_127x40"};
 			picture = "";
 			recoil = "recoil_ARX_secondary";
 			reloadAction = "GestureReloadARX2";
@@ -944,7 +937,7 @@ class cfgWeapons
 		modes[] = {"Single","FullAuto"};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -970,7 +963,7 @@ class cfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -1004,7 +997,7 @@ class cfgWeapons
 		displayName = "[288th] RG's M28A3";
 		baseWeapon = "288th_M28A3_RG";
 		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\V_MA4_CO_GREEN","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};
-		class secondary : 288th_KSG_12
+		class secondary : 288th_M90A
 		{
 			displayName = "Shotgun Modification";
 			modes[] =
@@ -1012,7 +1005,7 @@ class cfgWeapons
 				"Single"
 			};
 			picture = "";
-			magazineWell[] = { 288th_KSG_12 };
+			magazineWell[] = { 288th_Shotgun };
 			magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
 			recoil = "recoil_ARX_secondary";
 			reloadAction = "GestureReloadARX2";
@@ -1045,50 +1038,43 @@ class cfgWeapons
 		};
 	};
 
-	class 288th_M28A3_Kelkuza : 288th_M28A3_Breach
+	class 288th_M28A3_FOWL : 288th_M28A3_Breach
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] XM28A3 FOWL";
+		baseWeapon = "288th_M28A3_FOWL";
+		//hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_01_F_co.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co.paa"};
+		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\M28A3\V_XM28_CO.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co.paa"};
+		magazines[] = {"OPTRE_15Rnd_762x51_Mag"};
+		magazineWell[] = {"OPTRE_Magwell_M392_DMR"};
+		recoil = "recoil_ebr";
+		cursor = "OPTRE_M392";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_DMR";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_DMR";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_DMR";
+		HUD_BulletInARows = 1;
+		HUD_TotalPosibleBullet = 15;
+		modes[] = {"Single"};
+	};
+
+	class 288th_M28A3_Kelkuza : OPTRE_M26_Shotgun_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Kelkuza's Stomper";
 		baseWeapon = "288th_M28A3_Kelkuza";
-		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\Soda_Rifle\V_MA4_CO.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};
-		modes[] = { "Single","FullAutoSlow","FullAutoFast" };
+		modes[] = { "FullAutoSlow","FullAutoFast" };
 		visionMode[] ={"Normal","NVG"};
-		magazines[] = {"288th_Stanag_LMG","288th_EHP_LMG"};
+		magazines[] = {"288th_Stanag_LMG","288th_EHP_LMG","288th_Silver_LMG"};
 		magazineWell[] = { "288th_Standard" };
-		recoil = "recoil_Assault";
+		recoil = "recoil_M7V_SMG";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
 		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 150;
-		class Single: Single
-		{
-			/*reloadTime = 0.05;*/
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1,1500};
-				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLK.ogg",1,1.1,1500};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				begin1[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1,300};
-				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
-			reloadTime = 0.15;
-			dispersion = 5e-05;
-			minRange = 2;
-			minRangeProbab = 0.5;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 400;
-			maxRangeProbab = 0.3;
-		};
 		class FullAutoSlow : Mode_FullAuto
 		{
 			class BaseSoundModeType;
@@ -1113,10 +1099,11 @@ class cfgWeapons
 			maxRange = 250;
 			maxRangeProbab = 0.2;
 		};
+		muzzles[] = {"this","secondary"};
 		class FullAutoFast : FullAutoSlow
 		{
 			dispersion = 5e-05;
-			reloadTime = 0.075;
+			reloadTime = 0.06;
 			textureType = "fastAuto";
 		};
 		class secondary : 288th_CQS_48X
@@ -1149,188 +1136,17 @@ class cfgWeapons
 				maxRange = 250;
 				maxRangeProbab = 0.2;
 			};
-			recoil = "recoil_ARX_secondary";
-			reloadAction = "GestureReloadARX2";
-			reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
+			cursor = "OPTRE_M45";
+			recoil = "recoil_gm6";
+			fireSpreadAngle = 0.95;
+			autoFire = 0;
+			reloadTime = 0.35;
+			reloadAction = "OPTRE_GestureReload_M26_LMG_Shotgun";
+			drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\LongRangeRifles\DMR07\DMR07_dry",0.562341,1,10};
+			reloadMagazineSound[] = {"\OPTRE_Wbk_WeaponImprovements\reload\shotgun_reload.ogg",2,1,25};
 		};
 	};
 
-	class 288th_M28A3_Incendiary : arifle_MSBS65_UBS_sand_F_flame
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] M28A3 Incendiary Battle Rifle";
-		baseWeapon = "288th_M28A3_Incendiary";
-		muzzles[] = {"this","UBS_F"};
-		canShootInWater = 1;
-		class UBS_F: UBS_F
-    	{
-			displayName = "Flamethrower Modification";
-		};
-		model = "\A3\Weapons_F_Exp\Rifles\ARX\ARX_F.p3d";
-		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_01_F_co.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co.paa"};
-    	reloadAction = "GestureReloadARX";
-		reloadMagazineSound = ["A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\Type115_reload",1,1,10];
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		magazines[] = {"288th_Stanag"};
-		magazineWell[] = {"288th_Standard"};
-		recoil = "recoil_Assault";
-		picture = "\288th_Weapons\Data\Weapons\AR_Rifles\M28A3\arifle_ARX_blk_F_X_CA.paa";
-		pictureWire = "\288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
-		HUD_BulletInARows = 2;
-		HUD_TotalPosibleBullet = 30;
-		cursor = "OPTRE_MA5";
-		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\ARX\data\anim\arx.rtm"};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_M7_Sight";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "OPTRE_M12_Laser";
-			};
-		};
-		class WeaponSlotsInfo
-		{
-			mass = 50;
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor",
-					"optre_m6_silencer",
-					"OPTRE_M12_Suppressor",
-					"OPTRE_M6C_compensator",
-					"muzzle_snds_M"
-				};
-			};
-			class CowsSlot : CowsSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleitems[] =
-				{
-					"Optre_Recon_Sight",
-					"Optre_Recon_Sight_Red",
-					"Optre_Recon_Sight_Green",
-					"Optre_Recon_Sight_Desert",
-					"Optre_Recon_Sight_UNSC",
-					"Optre_Recon_Sight_Snow",
-					"288th_M6C_Scope",
-					"288th_M7_Sight",
-					"288th_Hamr_Scope",
-					"optic_dms",
-					"optic_aco_grn",
-					"optic_aco",
-					"optic_holosight_blk_f",
-					"optic_khs_blk",
-					"optic_hamr",
-					"optic_sos",
-					"optic_lrps",
-					"optic_erco_blk_f",
-					"optic_ams",
-					"optic_yorris",
-					"optic_aco_smg",
-					"optic_aco_grn_smg",
-					"optic_holosight_smg_blk_f",
-					"optic_mrd_black",
-					"optre_m393_eotech",
-					"optre_m7_sight",
-					"optre_m392_scope",
-					"optre_br55hb_scope",
-					"OPTRE_BR45_Scope",
-					"OPTRE_M12_Optic",
-					"TCF_M393_EOTECH_v2"
-				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M12_Laser",
-					"acc_flashlight",
-					"acc_pointer_ir"
-				};
-			};
-			class UnderBarrelSlot : UnderBarrelSlot_Rail
-			{
-				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-					"bipod_01_F_blk",
-					"bipod_02_F_blk",
-					"bipod_03_F_blk",
-				};
-				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
-				iconPinpoint = "Bottom";
-			};
-		};
-		modes[] = {"Single","FullAuto"};
-		class Single: Mode_SemiAuto
-		{
-			reloadTime = 0.067;
-			dispersion = 5e-05;
-			minRange = 2;
-			minRangeProbab = 0.5;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 400;
-			maxRangeProbab = 0.3;
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-			};
-			class SilencedSound
-			{
-				soundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
-			};
-			class StandardSound
-			{
-				soundSetShot[] = {"DMR05_Shot_SoundSet","DMR05_tail_SoundSet","DMR05_InteriorTail_SoundSet"};
-			};
-		};
-		class FullAuto: Mode_FullAuto
-		{
-			reloadTime = 0.067;
-			dispersion = 5e-05;
-			minRange = 0;
-			minRangeProbab = 0.9;
-			midRange = 15;
-			midRangeProbab = 0.7;
-			maxRange = 30;
-			maxRangeProbab = 0.1;
-			aiRateOfFire = 1e-06;
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-			};
-			class SilencedSound
-			{
-				soundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
-			};
-			class StandardSound
-			{
-				soundSetShot[] = {"DMR05_Shot_SoundSet","DMR05_tail_SoundSet","DMR05_InteriorTail_SoundSet"};
-			};
-		};
-	};
 
 	// 288th AR1G
     class 288th_AR1G : WRS_Weapon_AR_Bronze
@@ -1422,10 +1238,8 @@ class cfgWeapons
 		displayName = "[288th] M12H SMG";
 		descriptionshort = "Special Oni Derived Armament M12H";
 		baseWeapon = "288th_M12H";
-		magazines[] = { "288th_M12H_Mag" };
-		magazineWell[] = { "" };
-		//OPTRE_Magwell_M12_SOC
-		//recoil = "recoil_trg21";
+		magazines[] = { "288th_65Rnd_127x30" };
+		magazineWell[] = { "288th_M12H" };
 		recoil = "recoil_M7V_SMG";
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 64;
@@ -1542,7 +1356,7 @@ class cfgWeapons
 	};
 
 	//Steven's Grey Wolf
-	class 288th_Stevens_Rifle: WRS_Weapon_AR_Ver1
+	/*class 288th_Stevens_Rifle: WRS_Weapon_AR_Ver1
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -1627,7 +1441,7 @@ class cfgWeapons
 				};
 			};
 		};
-	};
+	};*/
 
 	//Smith's Grot
 	/*class 288th_Smith_Rifle: arifle_MSBS65_UBS_Black_F
@@ -1664,10 +1478,10 @@ class cfgWeapons
 				item = "OPTRE_M12_Laser";
 			};
 		};
-		class UBS_Smith : 288th_KSG_12
+		class UBS_Smith : 288th_M90A
 		{
 			modes[] ={"Single"};
-			magazineWell[] = { 288th_KSG_12 };
+			magazineWell[] = { 288th_Shotgun_Pump };
 			magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
@@ -1689,7 +1503,7 @@ class cfgWeapons
 		modes[] = {"Single","FullAuto"};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -1715,7 +1529,7 @@ class cfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime = 0.067;
+			reloadTime = 0.06;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -1867,6 +1681,59 @@ class cfgWeapons
 					soundSetShot[] = {"Msbs65_01_Ugl_Shot_SoundSet","Msbs65_01_Ugl_Tail_SoundSet","Msbs65_01_Ugl_InteriorTail_SoundSet"};
 				};
 				reloadTime = 0.1;
+			};
+		};
+	};
+	class 288th_Fade_MA5BGL: 288th_MA5BGL
+	{
+		canShootInWater = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Fade's MA5B-GL";
+		muzzles[] = {"this","288th_M301UGL"};
+		baseWeapon = "288th_Fade_MA5BGL";
+		magazines[] = {"288th_60Rnd_308_Mag"};
+		magazineWell[] = {"288th_MA5B_308"};
+		recoil = "recoil_lim";
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\weapon_co.paa",
+			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\smartlink_co.paa",
+			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\cover_co.paa",
+			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\ma5_reticle_red.paa"
+		};
+		class 288th_M301UGL: UGL_F
+		{
+			displayName = "Shotgun";
+			descriptionShort = "Shotgun";
+			cursor = "OPTRE_M45";
+			cursorAim = "EmptyCursor";
+			useModelOptics = 0;
+			useExternalOptic = 0;
+			cameraDir = "OP_look";
+			discreteDistance[] = {100,200,300,400};
+			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
+			discreteDistanceInitIndex = 0;
+			reloadAction = "GestureReloadMXUGL";
+			reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\MX_UGL_reload",1,1,10};
+			recoil = "recoil_lim";
+			magazines[] ={"288th_Buckshot","288th_Slug"};
+			magazineWell[] = { 288th_shotgun };
+			class Single: Single
+			{
+				sounds[] = {"StandardSound"};
+				class BaseSoundModeType
+				{
+					weaponSoundEffect = "DefaultRifle";
+					closure1[] = {};
+					closure2[] = {};
+					soundClosure[] = {"closure1",0.5,"closure2",0.5};
+				};
+				class StandardSound: BaseSoundModeType
+				{
+					soundSetShot[] = {"Msbs65_01_Ugl_Shot_SoundSet","Msbs65_01_Ugl_Tail_SoundSet","Msbs65_01_Ugl_InteriorTail_SoundSet"};
+				};
+				reloadTime = 0.2;
 			};
 		};
 	};

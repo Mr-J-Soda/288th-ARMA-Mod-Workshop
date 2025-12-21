@@ -32,12 +32,12 @@ class CfgAmmo
  		hit = 20;
         explosive = 1;
         indirectHit = 20;
-        indirectHitRange = 10;
+        indirectHitRange = 5;
         visibleFire = 0.5;
         audibleFire = 0.05;
         visibleFireTime = 1;
 		fuseDistance = 0;
-		explosionEffects = "KA_flameExplosion";
+		explosionEffects = "288th_flameExplosion";
         //effectsSmoke = "ACE_Incendiary";
     };
 };

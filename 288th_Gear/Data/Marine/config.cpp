@@ -24,11 +24,61 @@ class cfgWeapons
 		scopeCurator = 1;
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th] CH252 Marine Helmet";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\Marine_test_Helmet.paa","288th_Gear\Data\Marine\Marine_test_Visor.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
+		displayName = "[288th] CH252 Marine Helmet (Blue)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\Marine_test_Helmet.paa","288th_Gear\Data\Marine\Helmet_Visor_co.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
 		grad_slingHelmet_allow = 1;
 		optreVarietys[] = {"","","_broken"};
 		optreHUDStyle = "ODST_1";
+		class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 40;
+					passThrough = 0.1;
+					explosionShielding = 0.1;
+				};
+				class Face
+				{
+					hitpointName = "HitFace";
+					armor = 40;
+					passThrough = 0.1;
+					explosionShielding = 0.1;
+				};
+			};
+	};
+	class 288th_CH252_Marine_Red: 288th_CH252_Marine
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] CH252 Marine Helmet (Red)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\Marine_test_Helmet.paa","288th_Gear\Data\Marine\red_visor_co.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
+	};
+	class 288th_CH252_Marine_Silver: 288th_CH252_Marine
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] CH252 Marine Helmet (Silver)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\Marine_test_Helmet.paa","288th_Gear\Data\Marine\V_CH252_SLV_V_CO.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
+	};
+	class 288th_CH252_Marine_Gold: 288th_CH252_Marine
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] CH252 Marine Helmet (Gold)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\Marine_test_Helmet.paa","288th_Gear\Data\Marine\V_CH252_GLD_V_CO.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
 	};
 	class 288th_CH252_Marine_OSHA: 288th_CH252_Marine
 	{
@@ -39,10 +89,7 @@ class cfgWeapons
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		displayName = "[288th] CH252 Marine Helmet (OSHA)";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\OSHA\Marine_OSHA_Helmet.paa","288th_Gear\Data\Marine\Marine_test_Visor.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
-		grad_slingHelmet_allow = 1;
-		optreVarietys[] = {"","","_broken"};
-		optreHUDStyle = "ODST_1";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Marine\OSHA\Marine_OSHA_Helmet.paa","288th_Gear\Data\Marine\Helmet_Visor_co.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
 	};
 	class 288th_Armor_Marine: OPTRE_UNSC_M52D_Armor
 	{
@@ -69,55 +116,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -146,55 +193,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -223,55 +270,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -299,55 +346,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -375,55 +422,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -451,55 +498,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -527,55 +574,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -603,55 +650,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -679,55 +726,55 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};
@@ -755,55 +802,361 @@ class cfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Hands
 				{
 					hitpointName = "HitHands";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 45;
+					armor = 40;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 45;
+					armor = 40;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+
+	class 288th_Armor_Marine_Vest: 288th_Armor_Marine
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] M52A Marine (Vest)";
+		class ItemInfo: VestItem
+		{
+			vestType = "Rebreather";
+			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
+			hiddenSelections[] = {"camo","camo2","camo3","camo4","camo5","A_Ghillie","A_KneesLeft","A_KneesRight","A_KneesMarLeft","A_KneesMarRight","A_ODST","A_ShinArmorLeft","A_ShinArmorRight","A_TacPad","A_ThighArmorLeft","A_ThighArmorRight","AS_BaseLeft","AS_BaseRight","AS_LargeLeft","AS_LargeRight","AS_MediumLeft","AS_MediumRight","AS_ODSTCQBLeft","AS_ODSTCQBRight","AS_ODSTLeft","AS_ODSTRight","AS_ODSTSniperLeft","AS_ODSTSniperRight","AS_SmallLeft","AS_SmallRight","AP_AR","AP_BR","AP_Canteen","AP_GL","AP_Knife","AP_MGThigh","AP_AR","AP_Pack","AP_Pistol","AP_Rounds","AP_SG","AP_SMG","AP_Sniper","AP_Thigh","AP_Frag","AP_Smoke","APO_AR","APO_BR","APO_Knife","APO_SMG","APO_Sniper","CustomKit_Scorch"};
+			containerClass = "Supply250";
+			modelSides[] = {6};
+			mass = 5;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 40;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+	class 288th_Armor_Marine_Light: 288th_Armor_Marine
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] M52A Marine (Light)";
+		class ItemInfo: VestItem
+		{
+			vestType = "Rebreather";
+			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
+			hiddenSelections[] = {"camo","camo2","camo3","camo4","camo5","A_Ghillie","A_KneesMarLeft","A_KneesMarRight","A_ODST","A_ShinArmorLeft","A_ShinArmorRight","A_TacPad","A_ThighArmorLeft","A_ThighArmorRight","AS_LargeLeft","AS_LargeRight","AS_MediumLeft","AS_MediumRight","AS_SmallLeft","AS_SmallRight","AS_ODSTCQBLeft","AS_ODSTCQBRight","AS_ODSTLeft","AS_ODSTRight","AS_ODSTSniperLeft","AS_ODSTSniperRight","AP_AR","AP_BR","AP_Canteen","AP_GL","AP_Knife","AP_MGThigh","AP_AR","AP_Pack","AP_Pistol","AP_Rounds","AP_SG","AP_SMG","AP_Sniper","AP_Thigh","AP_Frag","AP_Smoke","APO_AR","APO_BR","APO_Knife","APO_SMG","APO_Sniper","CustomKit_Scorch"};
+			containerClass = "Supply250";
+			modelSides[] = {6};
+			mass = 5;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 40;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+	class 288th_Armor_Marine_Medium: 288th_Armor_Marine
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] M52A Marine (Medium)";
+		class ItemInfo: VestItem
+		{
+			vestType = "Rebreather";
+			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
+			hiddenSelections[] = {"camo","camo2","camo3","camo4","camo5","A_Ghillie","A_KneesMarLeft","A_KneesMarRight","A_ODST","A_ShinArmorLeft","A_ShinArmorRight","A_TacPad","AS_LargeLeft","AS_LargeRight","AS_ODSTCQBLeft","AS_ODSTCQBRight","AS_ODSTLeft","AS_ODSTRight","AS_ODSTSniperLeft","AS_ODSTSniperRight","AS_SmallLeft","AS_SmallRight","AP_AR","AP_BR","AP_Canteen","AP_GL","AP_Knife","AP_MGThigh","AP_AR","AP_Pack","AP_Pistol","AP_Rounds","AP_SG","AP_SMG","AP_Sniper","AP_Thigh","AP_Frag","AP_Smoke","APO_AR","APO_BR","APO_Knife","APO_SMG","APO_Sniper","CustomKit_Scorch"};
+			containerClass = "Supply250";
+			modelSides[] = {6};
+			mass = 5;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 40;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+	class 288th_Armor_Marine_Heavy: 288th_Armor_Marine
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "[288th] M52A Marine (Heavy)";
+		class ItemInfo: VestItem
+		{
+			vestType = "Rebreather";
+			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
+			hiddenSelections[] = {"camo","camo2","camo3","camo4","camo5","A_KneesMarLeft","A_KneesMarRight","A_Ghillie","A_ODST","A_TacPad","AS_LargeLeft","AS_LargeRight","AS_ODSTCQBLeft","AS_ODSTCQBRight","AS_ODSTLeft","AS_ODSTRight","AS_ODSTSniperLeft","AS_ODSTSniperRight","AS_SmallLeft","AS_SmallRight","AP_AR","AP_BR","AP_Canteen","AP_GL","AP_Knife","AP_MGThigh","AP_AR","AP_Pack","AP_Pistol","AP_Rounds","AP_SG","AP_SMG","AP_Sniper","AP_Thigh","AP_Frag","AP_Smoke","APO_AR","APO_BR","APO_Knife","APO_SMG","APO_Sniper","CustomKit_Scorch"};
+			containerClass = "Supply250";
+			modelSides[] = {6};
+			mass = 5;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 40;
 					passThrough = 0.1;
 				};
 			};

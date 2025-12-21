@@ -31,10 +31,28 @@ class CfgMagazineWells
 		CfgMagazines[] =
 		{
 			"288th_32Rnd_127x40",
+			"288th_32Rnd_127x40_Tracer",
 			"288th_32Rnd_127x40_AP",
 			"288th_32Rnd_127x40_APT",
-			"288th_32Rnd_127x40_Mag_NARQ",
+			"288th_32Rnd_127x40_HVAP",
+			"288th_32Rnd_127x40_HVAPT",
 			"288th_32Rnd_127x40_EHP",
+			"288th_32Rnd_127x40_EHPT",
+			"288th_32Rnd_127x40_SAPHE",
+			"288th_32Rnd_127x40_SAPHET",
+			"288th_32Rnd_127x40_SS",
+			"288th_32Rnd_127x40_SST",
+			"288th_32Rnd_127x40_S",
+			"288th_32Rnd_127x40_ST",
+			"288th_32Rnd_127x40_SMK",
+			"288th_16Rnd_127x40_FR",
+			"288th_16Rnd_127x40_FO",
+			"288th_16Rnd_127x40_FY",
+			"288th_16Rnd_127x40_FG",
+			"288th_16Rnd_127x40_FB",
+			"288th_16Rnd_127x40_FP",
+			"288th_16Rnd_127x40_FW",
+			"288th_16Rnd_127x40_FIR",
 			"288th_Taser_Mag",
 			"288th_Taser_Long_Mag"
 		};
@@ -124,14 +142,17 @@ class cfgWeapons
 	class hgun_Pistol_heavy_02_F;
 	class tcf_M6D;
 	class OPTRE_M6D_Carbine_F;
+	class Pistol_Base_F;
 
 	// Attachment Slots
 	class WeaponSlotsInfo;
+	class SlotInfo;
 	class MuzzleSlot;
 	class CowsSlot;
 	class PointerSlot;
 	class UnderBarrelSlot;
 	class MuzzleSlot_556;
+	class asdg_PistolOpticMount;
 	class CowsSlot_Rail;
 	class PointerSlot_Rail;
 	class UnderBarrelSlot_Rail;
@@ -229,12 +250,12 @@ class cfgWeapons
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
-			midRange = 25;
+			midRange = 250;
 			midRangeProbab = 0.1;
-			maxRange = 100;
+			maxRange = 500;
 			maxRangeProbab = 0.05;
 			distanceZoomMin = 100;
-			distanceZoomMax = 100;
+			distanceZoomMax = 500;
 		};
 		class FullAuto: Single
 		{
@@ -246,11 +267,7 @@ class cfgWeapons
 		};
 		magazines[] =
 		{
-			"288th_32Rnd_127x40",
-			"288th_32Rnd_127x40_AP",
-			"288th_32Rnd_127x40_APT",
-			"288th_32Rnd_127x40_Mag_NARQ",
-			//"TCF_12Rnd_127x40_Mag_NARQ"
+			"288th_32Rnd_127x40"
 		};
 		magazineWell[] = { 288th_M6C };
 		recoil = "recoil_288_pistols";
@@ -547,7 +564,7 @@ class cfgWeapons
 		};
 	};
 
-	// 288th FNX-99 Tactical
+	// 288th Alternat M6C Options
 	class 288th_FNX_99_Tactical: hgun_Pistol_heavy_01_F
 	{
 		dlc = "288thDJP_Aux";
@@ -558,7 +575,7 @@ class cfgWeapons
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
 		baseWeapon = "288th_FNX_99_Tactical";
-		magazines[] ={"288th_32Rnd_127x40","288th_32Rnd_127x40_AP","288th_32Rnd_127x40_APT","288th_32Rnd_127x40_Mag_NARQ"};
+		magazines[] ={"288th_32Rnd_127x40"};
 		magazineWell[] = { 288th_M6C };
 		recoil = "recoil_288_pistols";
 		displayname = "[288th] FNX-99 Tactical";
@@ -593,12 +610,12 @@ class cfgWeapons
 			reloadTime = 0.075;
 			minRange = 10;
 			minRangeProbab = 0.5;
-			midRange = 25;
+			midRange = 250;
 			midRangeProbab = 0.1;
-			maxRange = 100;
+			maxRange = 5000;
 			maxRangeProbab = 0.05;
 			distanceZoomMin = 100;
-			distanceZoomMax = 100;
+			distanceZoomMax = 500;
 		};
 		class FullAuto: Single
 		{
@@ -669,6 +686,8 @@ class cfgWeapons
 			};
 		};
 	};
+
+	//288th Sidearm SMG
 	class 288th_M6D_SMG: OPTRE_M6D_Carbine_F
 	{
 		dlc = "288thDJP_Aux";
@@ -721,14 +740,7 @@ class cfgWeapons
 			textureType = "fullAuto";
 			reloadTime = 0.075;
 		};
-		magazines[] =
-		{
-			"288th_32Rnd_127x40",
-			"288th_32Rnd_127x40_AP",
-			"288th_32Rnd_127x40_APT",
-			"288th_32Rnd_127x40_Mag_NARQ",
-			//"TCF_12Rnd_127x40_Mag_NARQ"
-		};
+		magazines[] ={"288th_32Rnd_127x40"};
 		magazineWell[] = { 288th_M6C };
 		recoil = "recoil_288_pistols";
 		class LinkedItems

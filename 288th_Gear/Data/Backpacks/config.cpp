@@ -18,12 +18,9 @@ class cfgVehicles
 	class OPTRE_ANPRC_515;
 	class optre_UNSC_Rucksack_Heavy;
 	class B_Soldier_base_F;
-	class TCF_wnato_kitbag;
+	class OPTRE_UNSC_Rucksack;
 	class ace_gunbag;
 	class TCF_RUCKSACK_UNSC_URB_RAD_F;
-	class TCF_RUCKSACK_UNSC_CLS_RAD_F;
-	class TCF_RUCKSACK_UNSC_DUN_RAD_F;
-	class TCF_RUCKSACK_UNSC_TUN_RAD_F;
 	class B_AssaultPack_blk;
 	class NSM_neutral_XD_1_backpack: B_AssaultPack_blk
 	{
@@ -220,6 +217,52 @@ class cfgVehicles
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO_WT.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
 	};
 
+	//IKEA Shark
+	class B_Kitbag_Base;
+	class 288th_Blahaj: B_Kitbag_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "288th_Gear\Data\Backpacks\IKEA\backpack_blahaj.p3d";
+		displayName = "[288th] Blahaj";
+		picture = "288th_Gear\Data\Backpacks\IKEA\blahaj_ico.paa";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\IKEA\blahaj_co.paa"};
+		maximumLoad = 500;
+		mass = 30;
+		autocenter = 0; 
+	};
+	class 288th_Blahaj_Pirate: 288th_Blahaj
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "288th_Gear\Data\Backpacks\IKEA\backpack_blahaj.p3d";
+		displayName = "[288th] Blahaj (Pirate)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\IKEA\Blahaj_Pirate_co.paa"};
+	};
+	class 288th_Blahaj_Green: 288th_Blahaj
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "288th_Gear\Data\Backpacks\IKEA\backpack_blahaj.p3d";
+		displayName = "[288th] Blahaj (Green)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\IKEA\Blahaj_Green_co.paa"};
+	};
+	class 288th_Blahaj_Lava: 288th_Blahaj
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		model = "288th_Gear\Data\Backpacks\IKEA\backpack_blahaj.p3d";
+		displayName = "[288th] Blahaj (Lava)";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\IKEA\Blahaj_Lava_co.paa"};
+	};
 
 	class 288th_Invisible_Backpack: 288th_M52D_Rucksack
 	{
@@ -323,7 +366,7 @@ class cfgVehicles
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
 	};
-	class 288th_Kitbag: TCF_wnato_kitbag
+	class 288th_Kitbag: OPTRE_UNSC_Rucksack
 	{
 		scope = 1;
 		scopeArsenal = 1;
@@ -342,6 +385,52 @@ class cfgVehicles
 		class TransportMagazines{};
 		class TransportWeapons{};
 		class TransportItems{};
+	};
+	class 288th_Kitbag_AT: 288th_Kitbag
+	{
+		scope = 1;
+		scopeArsenal = 0;
+		scopeCurator = 0;
+		ace_arsenal_hide = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		hiddenSelections[] = {"camo","camo2","B_Medic","B_Radio"};
+		class TransportItems
+		{
+			class _xx_288th_M41_Twin_HEAT_SACLOS
+			{
+				name = "288th_M41_Twin_HEAT_SACLOS";
+				count = 2;
+			};
+			class _xx_288th_M41_Twin_HE
+			{
+				name = "288th_M41_Twin_HE";
+				count = 2;
+			};
+			class _xx_288th_M41_Twin_HEAT_Thermal
+			{
+				name = "288th_M41_Twin_HEAT_Thermal";
+				count = 2;
+			};
+		};
+	};
+	class 288th_Kitbag_M247Z: 288th_Kitbag
+	{
+		scope = 1;
+		scopeArsenal = 0;
+		scopeCurator = 0;
+		ace_arsenal_hide = 1;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		hiddenSelections[] = {"camo","camo2","B_Medic","B_Radio"};
+		class TransportItems
+		{
+			class _xx_288th_65x85_M247Z
+			{
+				name = "288th_65x85_M247Z";
+				count = 2;
+			};
+		};
 	};
 	class 288th_gunbag: ace_gunbag
 	{

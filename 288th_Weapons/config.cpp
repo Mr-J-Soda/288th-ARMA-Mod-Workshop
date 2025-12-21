@@ -90,7 +90,7 @@ class cfgCloudlets
 		animationName = "";
 		particleType = "Billboard";
 		timerPeriod = 15;
-		lifeTime = 45;
+		lifeTime = 90;
 		moveVelocity[] = {0,0.025,0};
 		rotationVelocity = 0;
 		weight = 0.075;
@@ -198,7 +198,8 @@ class CfgMagazineWells
 			"288th_Plasma_White_Mag",
 			"288th_Plasma_Black_Mag",
 			"288th_EHP_Mag",
-			"288th_EMP",
+			"288th_Silver_Mag",
+			"288th_EMP"
 			//"288th_Incendiary_Mag"
 		};
 	};
@@ -269,7 +270,7 @@ class CfgMagazineWells
 			"288th_Loose_Slug_Smoke"
 		};
 	};
-	class 288th_KSG_12
+	class 288th_Shotgun_Pump
 	{
 		CfgMagazines[] =
 		{
@@ -309,7 +310,50 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_75Rnd_15x50_Box"
+			"288th_75Rnd_15x50",
+			"288th_75Rnd_15x50_Tracer",
+			"288th_75Rnd_15x50_HVAP",
+			"288th_75Rnd_15x50_HVAPT",
+			"288th_75Rnd_15x50_HEDP",
+			"288th_75Rnd_15x50_HEDPT",
+			"288th_75Rnd_15x50_AP",
+			"288th_75Rnd_15x50_APT",
+			"288th_75Rnd_15x50_HE",
+			"288th_75Rnd_15x50_HET",
+			"288th_75Rnd_15x50_SS",
+			"288th_75Rnd_15x50_SST",
+			"288th_75Rnd_15x50_SLAP",
+			"288th_75Rnd_15x50_SLAPT",
+			"288th_150Rnd_15x50",
+			"288th_150Rnd_15x50_Tracer",
+			"288th_150Rnd_15x50_HVAP",
+			"288th_150Rnd_15x50_HVAPT",
+			"288th_150Rnd_15x50_HEDP",
+			"288th_150Rnd_15x50_HEDPT",
+			"288th_150Rnd_15x50_AP",
+			"288th_150Rnd_15x50_APT",
+			"288th_150Rnd_15x50_HE",
+			"288th_150Rnd_15x50_HET",
+			"288th_150Rnd_15x50_SS",
+			"288th_150Rnd_15x50_SST",
+			"288th_150Rnd_15x50_SLAP",
+			"288th_150Rnd_15x50_SLAPT"
+		};
+	};
+	class 288th_MG338
+	{
+		CfgMagazines[] =
+		{
+			"288th_120Rnd_86x70_Box",
+			"288th_120Rnd_86x70_Box_Tracer",
+			"288th_120Rnd_86x70_AP_Box",
+			"288th_120Rnd_86x70_APT_Box",
+			"288th_120Rnd_86x70_SLAP_Box",
+			"288th_120Rnd_86x70_SLAPT_Box",
+			"288th_120Rnd_86x70_EHP_Box",
+			"288th_120Rnd_86x70_EHPT_Box",
+			"288th_120Rnd_86x70_SS_Box",
+			"288th_120Rnd_86x70_SST_Box"
 		};
 	};
 	class 288th_AutoGL
@@ -317,7 +361,16 @@ class CfgMagazineWells
 		CfgMagazines[] =
 		{
 			"288th_AutoGL_Mag",
-			"288th_AutoGL_Smoke_Mag"
+			"288th_AutoGL_HEDP_Mag",
+			"288th_AutoGL_HEDPC_Mag",
+			"288th_AutoGL_HEAT_Mag",
+			"288th_AutoGL_W_Smoke_Mag",
+			"288th_AutoGL_R_Smoke_Mag",
+			"288th_AutoGL_O_Smoke_Mag",
+			"288th_AutoGL_Y_Smoke_Mag",
+			"288th_AutoGL_G_Smoke_Mag",
+			"288th_AutoGL_B_Smoke_Mag",
+			"288th_AutoGL_P_Smoke_Mag"
 		};
 	};
 	class 288th_Sniper
@@ -340,7 +393,20 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_M12H_Mag"
+			"288th_65Rnd_127x30",
+			"288th_65Rnd_127x30_Tracer",
+			"288th_65Rnd_127x30_AP",
+			"288th_65Rnd_127x30_APT",
+			"288th_65Rnd_127x30_HVAP",
+			"288th_65Rnd_127x30_HVAPT",
+			"288th_65Rnd_127x30_EHP",
+			"288th_65Rnd_127x30_EHPT",
+			"288th_65Rnd_127x30_SAPHE",
+			"288th_65Rnd_127x30_SAPHET",
+			"288th_65Rnd_127x30_SS",
+			"288th_65Rnd_127x30_SST",
+			"288th_65Rnd_127x30_S",
+			"288th_65Rnd_127x30_ST"
 		};
 	};
 	class 288th_M247Z
@@ -349,6 +415,32 @@ class CfgMagazineWells
 		{
 			"288th_65x85_M247Z",
 			"288th_65x85_M247Z_HE"
+		};
+	};
+	class 288th_MA5B_308
+	{
+		CfgMagazines[] =
+		{
+			"288th_60Rnd_308_Mag",
+			"288th_60Rnd_308_Tazer_Mag"
+		};
+	};
+	class 288th_Microgrenades
+	{
+		CfgMagazines[] =
+		{
+			"288th_10rnd_Microgrenade",
+			"288th_10Rnd_White_Smoke_Microgrenade",
+			"288th_10Rnd_Red_Smoke_Microgrenade",
+			"288th_10Rnd_Orange_Smoke_Microgrenade",
+			"288th_10Rnd_Yellow_Smoke_Microgrenade",
+			"288th_10Rnd_Green_Smoke_Microgrenade",
+			"288th_10Rnd_Blue_Smoke_Microgrenade",
+			"288th_10Rnd_Purple_Smoke_Microgrenade",
+			"288th_10Rnd_HE_Microgrenade",
+			"288th_10Rnd_HEDP_Microgrenade",
+			"288th_10Rnd_HEDPC_Microgrenade",
+			"288th_10Rnd_Heat_Microgrenade"
 		};
 	};
 	/*class 288th_AC_8
@@ -428,6 +520,7 @@ class cfgWeapons
 	class OPTRE_SRS99C_Scope;
 	class srifle_LRR_F;
 	class SMG_02_F;
+	class arifle_SDAR_F;
 	class OPTRE_LongRifle_Base : Rifle_Base_F
 	{
 		class Single;
@@ -536,6 +629,12 @@ class cfgWeapons
 	class OPTRE_FC_Plasma_Pistol: OPTRE_Rifle_Base
 	{
 		initspeed=190;
+		LEBA_SWS = 1;
+		LEBA_SWS_Tracking_Distance = 30;
+		LEBA_SWS_Tracking_Angle = 20;
+		LEBA_SWS_Autoaim_Cutoff = 0.2;
+		LEBA_SWS_Tracking_Random_Chance = 50;
+		LEBA_SWS_Tracking_Speed = 150;
 	};
 	class OPTRE_FC_T25_Rifle: OPTRE_Rifle_Base
 	{
@@ -544,6 +643,15 @@ class cfgWeapons
 	class OPTRE_FC_T25J_Rifle: OPTRE_FC_T25_Rifle
 	{
 		initspeed=264;
+	};
+	class OPTRE_FC_Needler: OPTRE_FC_T25_Rifle
+	{
+		LEBA_SWS = 1;
+		LEBA_SWS_Tracking_Distance = 30;
+		LEBA_SWS_Tracking_Angle = 20;
+		LEBA_SWS_Autoaim_Cutoff = 0.2;
+		LEBA_SWS_Tracking_Random_Chance = 50;
+		LEBA_SWS_Tracking_Speed = 150;
 	};
 	class OPTRE_FC_T50_SRS: OPTRE_Rifle_Base
 	{
@@ -560,6 +668,12 @@ class cfgWeapons
 	class OPTRE_FC_Jackal_Shield: OPTRE_Rifle_Base
 	{
 		initspeed=190;
+		LEBA_SWS = 1;
+		LEBA_SWS_Tracking_Distance = 30;
+		LEBA_SWS_Tracking_Angle = 20;
+		LEBA_SWS_Autoaim_Cutoff = 0.2;
+		LEBA_SWS_Tracking_Random_Chance = 50;
+		LEBA_SWS_Tracking_Speed = 150;
 	};
 
 	class 288th_M99A2S3 : OPTRE_M99A2S3
@@ -774,6 +888,63 @@ class cfgWeapons
 			textureType = "fastAuto";
 		};
 	};
+	class 288th_Kennedy_M73: OPTRE_M73
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] Kennedy's 'Battle Rifle'";
+		baseWeapon = "288th_Kennedy_M73";
+		magazines[] = {};
+		magazineWell[] = {"TCF_Magwell_M73H"};
+		HUD_BulletInARows = 3;
+		HUD_TotalPosibleBullet = 300;
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M73X\M73_co.paa"};
+		cursor = "OPTRE_M73";
+		modes[] = { "FullAutoFast","FullAutoSlow" };
+		class FullAutoSlow : Mode_FullAuto
+		{
+			class BaseSoundModeType;
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] = { "MMG02_Shot_SoundSet","MMG02_Tail_SoundSet","MMG02_InteriorTail_SoundSet" };
+			};
+			class SilencedSound : BaseSoundModeType
+			{
+				soundsetshot[] = { "MMG02_silencerShot_SoundSet","MMG02_silencerTail_SoundSet","MMG02_silencerInteriorTail_SoundSet" };
+			};
+			dispersion = 5e-05;
+			reloadTime = 0.1;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 150;
+			midRangeProbab = 0.7;
+			maxRange = 250;
+			maxRangeProbab = 0.2;
+		};
+		class FullAutoFast : FullAutoSlow
+		{
+			reloadTime = 0.05;
+			textureType = "fastAuto";
+		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "optre_m73_smartlink";
+			};
+			class LinkedItemsPointer
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M12_Laser";
+			};
+		};
+	};
 
 	class 288th_MMG: TKE_UCNMMG
 	{
@@ -822,7 +993,233 @@ class cfgWeapons
 			};
 			class PointerSlot : PointerSlot
 			{
-				compatibleitems[] = { "TCF_M6_Flashlight_IR","TCF_Rifle_Flashlight_IR","TCF_M7_Flashlight_IR","OPTRE_BMR_Laser","OPTRE_BMR_Flashlight","OPTRE_M7_Flashlight","OPTRE_M7_Laser","OPTRE_M12_Laser","acc_pointer_ir","ACE_acc_pointer_red","ace_acc_pointer_green","ACE_acc_pointer_green_IR","acc_flashlight","optre_m45_flashlight","optre_m45_flashlight_red","OPTRE_M45_Flashlight_green","OPTRE_M45_Flashlight_blue","OPTRE_DMR_Light","OPTRE_M6C_Laser","OPTRE_M6G_Flashlight" };
+				compatibleitems[] = { "TCF_M6_Flashlight_IR","TCF_Rifle_Flashlight_IR","OPTRE_BMR_Laser","OPTRE_BMR_Flashlight","OPTRE_M12_Laser","acc_pointer_ir","ACE_acc_pointer_red","ace_acc_pointer_green","ACE_acc_pointer_green_IR","acc_flashlight","optre_m45_flashlight","optre_m45_flashlight_red","OPTRE_M45_Flashlight_green","OPTRE_M45_Flashlight_blue","OPTRE_DMR_Light" };
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				compatibleitems[] = { "bipod_01_F_blk","bipod_02_F_blk","bipod_03_F_blk" };
+			};
+			mass = 200;
+		};
+	};
+	class 288th_Johnson_MG338 : 288th_MMG
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] MG338";
+		baseWeapon = "288th_Johnson_MG338";
+		descriptionShort = "Special Oni Derived Armament MG338";
+		magazineWell[] = {"288th_MG338"};
+		magazines[] = {"288th_120Rnd_86x70_Box"};
+		recoil = "recoil_lim";
+		//recoil = "recoil_TKE_MMG338";
+		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\MachineGun\MG_IRON.paa";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_LMG";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_LMG";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
+		HUD_BulletInARows = 4;
+		HUD_TotalPosibleBullet = 120;
+		cursor = "OPTRE_M73";
+		modes[] = { "FullAutoFast","FullAutoSlow" };
+		class FullAutoSlow : Mode_FullAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"WBK_TKE_Cerberus_SoundSet","MMG02_Tail_SoundSet","MMG02_InteriorTail_SoundSet"};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"WBK_TKE_ARBSilenced_SoundSet","MMG02_silencerTail_SoundSet","MMG02_silencerInteriorTail_SoundSet"};
+			};
+			dispersion = 5e-05;
+			reloadTime = 0.17143;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 150;
+			midRangeProbab = 0.7;
+			maxRange = 250;
+			maxRangeProbab = 0.2;
+		};
+		class FullAutoFast : FullAutoSlow
+		{
+			reloadTime = 0.12;
+			textureType = "fastAuto";
+		};
+		/*modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
+		class manual: Mode_FullAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"WBK_TKE_Cerberus_SoundSet","MMG02_Tail_SoundSet","MMG02_InteriorTail_SoundSet"};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"WBK_TKE_ARBSilenced_SoundSet","MMG02_silencerTail_SoundSet","MMG02_silencerInteriorTail_SoundSet"};
+			};
+			reloadTime = 0.12;
+			dispersion = 0.00073;
+			soundContinuous = 0;
+			soundBurst = 0;
+		};
+		class close: manual
+		{
+			burst = 10;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 50;
+			minRange = 0;
+			minRangeProbab = 0.05;
+			midRange = 25;
+			midRangeProbab = 0.7;
+			maxRange = 50;
+			maxRangeProbab = 0.04;
+			showToPlayer = 0;
+		};
+		class short: close
+		{
+			burst = 5;
+			aiRateOfFire = 2;
+			aiRateOfFireDistance = 200;
+			minRange = 50;
+			minRangeProbab = 0.05;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.04;
+		};
+		class medium: close
+		{
+			burst = 3;
+			aiRateOfFire = 4;
+			aiRateOfFireDistance = 600;
+			aiRateOfFireDispersion = 2;
+			minRange = 400;
+			minRangeProbab = 0.05;
+			midRange = 600;
+			midRangeProbab = 0.6;
+			maxRange = 800;
+			maxRangeProbab = 0.1;
+		};
+		class far_optic1: close
+		{
+			requiredOpticType = 1;
+			burst = 3;
+			aiRateOfFire = 9;
+			aiRateOfFireDistance = 1000;
+			aiRateOfFireDispersion = 3;
+			minRange = 800;
+			minRangeProbab = 0.04;
+			midRange = 1000;
+			midRangeProbab = 0.5;
+			maxRange = 1200;
+			maxRangeProbab = 0.01;
+		};
+		class far_optic2: far_optic1
+		{
+			requiredOpticType = 2;
+			autoFire = 0;
+			burst = 1;
+			aiRateOfFire = 12;
+			aiRateOfFireDistance = 1600;
+			aiRateOfFireDispersion = 4;
+			minRange = 1200;
+			minRangeProbab = 0.05;
+			midRange = 1600;
+			midRangeProbab = 0.5;
+			maxRange = 2000;
+			maxRangeProbab = 0.01;
+		};*/
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "TKE_4xSight";
+			};
+			class LinkedItemsPointer
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M12_Laser";
+			};
+		};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleitems[] = { "optre_ma5suppressor" };
+			};
+			class CowsSlot : CowsSlot
+			{
+				compatibleitems[] = { "TKE_10xsight","TKE_10xsightv2","TKE_MRCOSight","TKE_4xSight","TKE_RedDotSight","TKE_ReflexSight","TKE_ThermScope","288th_SS_6_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","288th_M6C_Scope","288th_M7_Sight","optic_arco_ak_blk_f","optic_dms","optic_aco_grn","optic_aco","optic_arco_blk_f","optic_holosight_blk_f","optic_mrco","optic_khs_blk","optic_hamr","optic_sos","optic_lrps","optic_nightstalker","optic_erco_blk_f","optic_ams","optic_yorris","optic_ico_01_black_f","optic_aco_smg","optic_aco_grn_smg","optic_holosight_smg_blk_f","optic_mrd_black","ace_optic_lrps_2d","ace_optic_lrps_pip","ace_optic_sos_2d","ace_optic_sos_pip","ace_optic_mrco_2d","ace_optic_hamr_2d","ace_optic_hamr_pip","optre_srs99_scope","optre_srs99c_scope","optre_m393_eotech","optre_m7_sight","optre_m393_acog","optre_m393_scope","optre_m392_scope","optre_br55hb_scope","OPTRE_BR45_Scope","optre_m6c_scope","OPTRE_M6G_Scope","OPTRE_BMR_Scope","OPTRE_M12_Optic","OPTRE_M12_Optic","OPTRE_SRM_Sight","TCF_M393_EOTECH_v2"};
+			};
+			class PointerSlot : PointerSlot
+			{
+				compatibleitems[] = { "TCF_M6_Flashlight_IR","TCF_Rifle_Flashlight_IR","OPTRE_BMR_Laser","OPTRE_BMR_Flashlight","OPTRE_M12_Laser","acc_pointer_ir","ACE_acc_pointer_red","ace_acc_pointer_green","ACE_acc_pointer_green_IR","acc_flashlight","optre_m45_flashlight","optre_m45_flashlight_red","OPTRE_M45_Flashlight_green","OPTRE_M45_Flashlight_blue","OPTRE_DMR_Light" };
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				compatibleitems[] = { "bipod_01_F_blk","bipod_02_F_blk","bipod_03_F_blk" };
+			};
+			mass = 200;
+		};
+	};
+	class 288th_MMG_Eugen: LMG_Mk200_F
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] M99E1 MMG";
+		baseWeapon = "288th_MMG_Eugen";
+		descriptionShort = "Special Oni Derived Armament M99";
+		magazineWell[] = {"288th_M99"};
+		magazines[] = {"288th_200Rnd_308_Box"};
+		recoil = "recoil_lim";
+		//recoil = "recoil_TKE_MMG338";
+		picture = "\a3\Weapons_F_Enoch\Machineguns\M200\Data\UI\icon_LMG_Mk200_black_F_ca.paa";
+		hiddenSelectionsTextures[] = { "a3\Weapons_F_Enoch\Machineguns\M200\Data\1st_person_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\Body_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\grip_black_co.paa" };
+		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\MachineGun\MG_IRON.paa";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_LMG";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_LMG";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
+		HUD_BulletInARows = 4;
+		HUD_TotalPosibleBullet = 200;
+		cursor = "OPTRE_M73";
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "TKE_4xSight";
+			};
+			class LinkedItemsPointer
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M12_Laser";
+			};
+		};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleitems[] = { "optre_ma5suppressor" };
+			};
+			class CowsSlot : CowsSlot
+			{
+				compatibleitems[] = { "TKE_10xsight","TKE_10xsightv2","TKE_MRCOSight","TKE_4xSight","TKE_RedDotSight","TKE_ReflexSight","TKE_ThermScope","288th_SS_6_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","288th_M6C_Scope","288th_M7_Sight","optic_arco_ak_blk_f","optic_dms","optic_aco_grn","optic_aco","optic_arco_blk_f","optic_holosight_blk_f","optic_mrco","optic_khs_blk","optic_hamr","optic_sos","optic_lrps","optic_nightstalker","optic_erco_blk_f","optic_ams","optic_yorris","optic_ico_01_black_f","optic_aco_smg","optic_aco_grn_smg","optic_holosight_smg_blk_f","optic_mrd_black","ace_optic_lrps_2d","ace_optic_lrps_pip","ace_optic_sos_2d","ace_optic_sos_pip","ace_optic_mrco_2d","ace_optic_hamr_2d","ace_optic_hamr_pip","optre_srs99_scope","optre_srs99c_scope","optre_m393_eotech","optre_m7_sight","optre_m393_acog","optre_m393_scope","optre_m392_scope","optre_br55hb_scope","OPTRE_BR45_Scope","optre_m6c_scope","OPTRE_M6G_Scope","OPTRE_BMR_Scope","OPTRE_M12_Optic","OPTRE_M12_Optic","OPTRE_SRM_Sight","TCF_M393_EOTECH_v2"};
+			};
+			class PointerSlot : PointerSlot
+			{
+				compatibleitems[] = { "TCF_M6_Flashlight_IR","TCF_Rifle_Flashlight_IR","OPTRE_BMR_Laser","OPTRE_BMR_Flashlight","OPTRE_M12_Laser","acc_pointer_ir","ACE_acc_pointer_red","ace_acc_pointer_green","ACE_acc_pointer_green_IR","acc_flashlight","optre_m45_flashlight","optre_m45_flashlight_red","OPTRE_M45_Flashlight_green","OPTRE_M45_Flashlight_blue","OPTRE_DMR_Light" };
 			};
 			class UnderBarrelSlot : UnderBarrelSlot
 			{
@@ -846,13 +1243,13 @@ class cfgWeapons
 		inertia = 1;
 		recoil = "recoil_m320";
 		magazineWell[] = { 288th_M50 };
-		magazines[] = { "288th_75Rnd_15x50_Box" };
+		magazines[] = { "288th_75Rnd_15x50" };
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\MachineGun\MG_IRON.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_LMG";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_LMG";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
 		HUD_BulletInARows = 3;
-		HUD_TotalPosibleBullet = 75;
+		HUD_TotalPosibleBullet = 150;
 		cursor = "OPTRE_M73";
 		maxZeroing = 1000;
 		class LinkedItems
@@ -913,6 +1310,102 @@ class cfgWeapons
 			maxRangeProbab = 0.2;
 		};
 	};
+	class 288th_M50_Owlbear: 288th_M50
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] Owlbear's SMG";
+		baseWeapon = "288th_M50_Owlbear";
+		hiddenSelectionsTextures[] = {"\OPTRE_Weapons_MG\m247a1\data\lower_co.paa","\OPTRE_Weapons_MG\m247a1\data\receiver_co.paa","\optre_weapons_mg\m247a1\data\250decal\decal_ca.paa","\OPTRE_Weapons_MG\m247a1\data\50cal_co.paa"};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 120;
+			allowedSlots[] = { 901 };
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleitems[] = { "ACE_muzzle_mzls_B","OPTRE_SRS99D_Suppressor" };
+			};
+			class CowsSlot : CowsSlot
+			{
+				compatibleitems[] = { "288th_SS_6_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","288th_M7_Sight","optic_arco_ak_blk_f","optic_dms","optic_aco_grn","optic_aco","optic_arco_blk_f","optic_holosight_blk_f","optic_mrco","optic_khs_blk","optic_hamr","optic_sos","optic_lrps","optic_nightstalker","optic_erco_blk_f","optic_ams","optic_yorris","optic_ico_01_black_f","optic_aco_smg","optic_aco_grn_smg","optic_holosight_smg_blk_f","optic_mrd_black","ace_optic_lrps_2d","ace_optic_lrps_pip","ace_optic_sos_2d","ace_optic_sos_pip","ace_optic_mrco_2d","ace_optic_hamr_2d","ace_optic_hamr_pip","optre_srs99_scope","optre_srs99c_scope","optre_m393_eotech","optre_m73_smartlink","optre_m7_sight","optre_m393_acog","optre_m393_scope","optre_m392_scope","optre_br55hb_scope","OPTRE_BR45_Scope","optre_m6c_scope","OPTRE_M6G_Scope","OPTRE_BMR_Scope","OPTRE_M12_Optic","OPTRE_MA5_BUIS","OPTRE_M12_Optic","OPTRE_SRM_Sight","TCF_M393_EOTECH_v2"};
+			};
+			class PointerSlot : PointerSlot
+			{
+				compatibleitems[] = { "TCF_M6_Flashlight_IR","TCF_Rifle_Flashlight_IR","TCF_M7_Flashlight_IR","OPTRE_BMR_Laser","OPTRE_BMR_Flashlight","OPTRE_M7_Flashlight","OPTRE_M7_Laser","OPTRE_M12_Laser","acc_pointer_ir","ACE_acc_pointer_red","ace_acc_pointer_green","ACE_acc_pointer_green_IR","acc_flashlight","optre_m45_flashlight","optre_m45_flashlight_red","OPTRE_M45_Flashlight_green","OPTRE_M45_Flashlight_blue","OPTRE_DMR_Light","OPTRE_M6C_Laser","OPTRE_M6G_Flashlight" };
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				compatibleitems[] = { "optre_m250_bipod" };
+			};
+		};
+		modes[] = { "FullAutoSlow" };
+		class FullAutoSlow : Mode_FullAuto
+		{
+			class BaseSoundModeType;
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] =
+				{
+					"DMR02_Shot_SoundSet",
+					"DMR02_tail_SoundSet",
+					"DMR02_InteriorTail_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+				begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_01",1.0,1,300};
+				begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_02",1.0,1,300};
+				begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_03",1.0,1,300};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_interior",1.0,1,300};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_trees",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_forest",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_meadows",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_houses",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			dispersion = 5e-05;
+			reloadTime = 0.225;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 150;
+			midRangeProbab = 0.7;
+			maxRange = 250;
+			maxRangeProbab = 0.2;
+		};
+	};
 
 	class 288th_M247Z_Shield: OPTRE_M247H_Etilka
 	{
@@ -931,9 +1424,9 @@ class cfgWeapons
 		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
 		HUD_BulletInARows = 4;
 		HUD_TotalPosibleBullet = 500;
-		magazines[] = {"288th_65x85_M247Z","288th_65x85_M247Z_HE"};
+		magazines[] = {"288th_65x85_M247Z"};
 		magazineWell[] = {"288th_M247Z"};
-		modes[] = {"FullAutoSlow","FullAutoFast"};
+		modes[] = {"FullAutoFast","FullAutoSlow"};
 		class FullAutoSlow: Mode_FullAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -971,8 +1464,13 @@ class cfgWeapons
 			reloadTime = 0.05;
 			textureType = "fastAuto";
 		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic{};
+			class LinkedItemsPointer{};
+		};
 	};
-	class OPTRE_M73A1: LMG_Mk200_F
+	/*class OPTRE_M73A1: LMG_Mk200_F
 	{
 		scope = 2;
 		scopeArsenal = 2;
@@ -991,7 +1489,7 @@ class cfgWeapons
 		model = "\OPTRE_Weapons_MG\m73a1\m73A1_short.p3d";
 		baseWeapon = "OPTRE_M73A1_Short";
 		displayName = "M73A1 (Para)";
-	};
+	};*/
 
 	/*class 288th_Wildebeest: WRS_Weapon_LMG
 	{
@@ -1020,7 +1518,7 @@ class cfgWeapons
 		baseWeapon = "288th_M318";
 		descriptionshort = "Special Oni Derived Armament M318";
 		magazineWell[] = { 288th_AutoGL };
-		magazines[] = { "288th_AutoGL_Mag","288th_AutoGL_Smoke_Mag"};
+		magazines[] = { "288th_AutoGL_Mag"};
 		//picture = "\a3\Weapons_F_Enoch\Machineguns\M200\Data\UI\icon_LMG_Mk200_black_F_ca.paa";
 		//hiddenSelectionsTextures[] = { "a3\Weapons_F_Enoch\Machineguns\M200\Data\1st_person_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\Body_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\grip_black_co.paa" };
 		cursor = "EmptyCursor";
@@ -1298,6 +1796,9 @@ class cfgWeapons
 		scopeArsenal = 1;
 		autoReload = true;
 		magazineReloadTime = 2.0;
+		cursor = "EmptyCursor";
+		cursoraim = "OPTRE_M45";
+		cursorAimOn = "";
 	};
 	class 288th_Bulldog_Riot_Shield: 288th_CQS_48X
 	{
@@ -1408,7 +1909,7 @@ class cfgWeapons
 		fireSpreadAngle = 1;
 		canShootInWater = 1;
 		magazineWell[] = { 288th_M45TAC };
-		magazines[] = { "288th_Loose_Buckshot","288th_Loose_Slugs" };
+		magazines[] = { "288th_Loose_Buckshot" };
 		baseWeapon = "288th_M45TAC";
 		picture = "\OPTRE_weapons\shotgun\icons\M452.paa";
 		/*ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
@@ -1433,7 +1934,7 @@ class cfgWeapons
 		};
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{
-			mass = 30;
+			mass = 50;
 			class MuzzleSlot : MuzzleSlot_556
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -1520,143 +2021,101 @@ class cfgWeapons
 			recoilProne = "recoil_single_prone_ksg";
 		};
 	};
-	
-	//GLs
-	/*class 288th_Autocannon : SC_Rifle_SSR55C
+	class 288th_M90A: 288th_M45TAC
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		displayName = "[288th] AC-8 Autocannon";
-		descriptionshort = "Special Oni Derived Armament AC-8";
-		model="\sc_weapons\data\ssr55\ssr55c.p3d";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\288th_Weapons\Data\Weapons\SRS99\SSR_Body_NBlue.paa",
-			"sc_weapons\data\ssr55\textures\mag_co.paa"
-		};
-		baseWeapon = "288th_Autocannon";
-		recoil = "recoil_lim";
-		recoil = "recoil_m320";
-		magazines[] =
-		{
-			"288th_Autocannon_mag"
-		};
-		magazineWell[] = { 288th_AC_8 };
-		visionMode[] =
-		{
-			"Normal",
-			"NVG"
-		};
-		cursor = "OPTRE_M41R";
+		model = "\OPTRE_Weapons\Shotgun\m90a.p3d";
+		displayName = "[288th] M90A CAWS";
+		baseWeapon = "288th_M90A";
+		magazineWell[] = { 288th_Shotgun_Pump };
+		magazines[] = { "288th_Loose_Normal_Buckshot" };
+		picture = "\OPTRE_weapons\shotgun\icons\m90caws_icon.paa";
+		handAnim[] = {"OFP2_ManSkeleton","\OPTRE_Weapons\Shotgun\data\anim\optre_shotgunHALO3_idle.rtm","Spartan_ManSkeleton","\OPTRE_MJOLNIR\data\anims\OPTRE_anims\Weapons\benelli_Spartan.rtm"};
 		class LinkedItems
 		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "SC_T1";
-			};
 			class LinkedItemsPointer
 			{
 				slot = "PointerSlot";
-				item = "OPTRE_M12_Laser";
+				item = "OPTRE_M45_Flashlight_red";
 			};
 		};
-		class WeaponSlotsInfo
+		class WeaponSlotsInfo : WeaponSlotsInfo
 		{
-			mass = 95;
+			mass = 45;
 			class MuzzleSlot : MuzzleSlot_556
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-		
-				};
+				compatibleitems[] =	{};
 			};
-			class CowsSlot : CowsSlot_Rail
+			class CowsSlot : CowsSlot
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleitems[] =	{};
+			};
+			class PointerSlot : PointerSlot
+			{
 				compatibleitems[] =
 				{
-					"SC_T1"
+					"OPTRE_M45_Flashlight",
+					"OPTRE_M45_Flashlight_red",
+					"OPTRE_M45_Flashlight_green",
+					"OPTRE_M45_Flashlight_blue",
+					"OPTRE_M45_Flashlight_yellow",
+					"OPTRE_M45_Flashlight_cyan",
+					"OPTRE_M45_Flashlight_purple",
+					"acc_pointer_IR",
+					"acc_flashlight"
 				};
-			};
-			class PointerSlot : PointerSlot_Rail
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M12_Laser",
-					"acc_flashlight",
-					"acc_pointer_ir"
-				};
-			};
-			class UnderBarrelSlot : UnderBarrelSlot_Rail
-			{
-				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-
-				};
-				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
-				iconPinpoint = "Bottom";
 			};
 		};
-		modes[] = { "Single","FullAuto" };
-		class Single: Mode_SemiAuto
+		hiddenSelections[] = {"camo","camo_reticle"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\Shotgun\m90_Wood.paa","#(argb,8,8,3)color(0.215686,0.945098,0.984314,1.0,co)"};
+	};
+	class 288th_M90A_Glitch: 288th_M90A
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Baltimore's Boomstick";
+		baseWeapon = "288th_M90A_Glitch";
+		modes[] = { "Single" };
+		class Single : Mode_SemiAuto
 		{
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
+			sounds[] = { "StandardSound","SilencedSound" };
+			class BaseSoundModeType
 			{
-				soundSetShot[] = {"DMR02_Shot_SoundSet","DMR02_tail_SoundSet","DMR02_InteriorTail_SoundSet"};
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = { "",1.0,1,200 };
+				closure2[] = { "",1.0,1,200 };
+				soundClosure[] = { "closure1",0.5 };
 			};
-			class SilencedSound: BaseSoundModeType{};
-			reloadTime = 0.25;
-			dispersion = 5e-05;
-			minRange = 2;
-			minRangeProbab = 0.1;
-			midRange = 250;
-			midRangeProbab = 0.7;
-			maxRange = 350;
-			maxRangeProbab = 0.05;
-			aiRateOfFire = 3;
-			aiRateOfFireDistance = 500;
-		};
-		class FullAuto : Mode_FullAuto
-		{
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
+			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = {"DMR02_Shot_SoundSet","DMR02_tail_SoundSet","DMR02_InteriorTail_SoundSet"};
+				soundsetshot[] = { "OPTRE_Shotgun_SoundSet","M320_Tail_SoundSet","M320_InteriorTail_SoundSet" };
 			};
-			class SilencedSound: BaseSoundModeType{};
+			class SilencedSound : BaseSoundModeType
+			{
+				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
+			};
 			reloadTime = 0.2;
 			dispersion = 5e-05;
 			minRange = 2;
-			minRangeProbab = 0.1;
-			midRange = 250;
-			midRangeProbab = 0.7;
-			maxRange = 350;
-			maxRangeProbab = 0.05;
-			aiRateOfFire = 3;
-			aiRateOfFireDistance = 500;
+			minRangeProbab = 0.2;
+			midRange = 75;
+			midRangeProbab = 0.35;
+			maxRange = 200;
+			maxRangeProbab = 0.45;
+			distanceZoomMin = 60;
+			distanceZoomMax = 60;
+			recoil = "recoil_single_ksg";
+			recoilProne = "recoil_single_prone_ksg";
 		};
-		allowedslots[] = {901};
-		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\Commando\VK.paa";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_DMR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_DMR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_DMR";
-		HUD_BulletInARows = 5;
-		HUD_TotalPosibleBullet = 10;
-	};*/
-
+	};
+	
+	//GLs
 	class 288th_M319X : optre_m319n
 	{
 		canShootInWater = 1;
@@ -1671,329 +2130,63 @@ class cfgWeapons
 		magazineWell[] = { "288th_GL","UGL_40x36","CBA_40mm_M203","CBA_40mm_EGLM" };
 	};
 
-	//DMR
-	// 288th Whiskey's DMR
-	class 288th_DMR_Whiskey : OPTRE_M393_DMR
+	class 288th_GL15R : arifle_SDAR_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
+		reloadTime = 0.5;
 		scope = 2;
 		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		displayName = "[288th] Whiskey's Gun...of all time";
-		descriptionshort = "Whiskey's DMR";
-		/*magazines[] ={"288th_32Rnd_127x40","288th_32Rnd_127x40_AP","288th_32Rnd_127x40_APT","288th_32Rnd_127x40_Mag_NARQ"};
-		magazineWell[] = { 288th_M6C };*/
-		picture = "\OPTRE_Weapons\DMR\icons\M395_Icon.paa";
-		baseWeapon = "288th_DMR_Whiskey";
-		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
-		Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
-		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
-		HUD_BulletInARows = 2;
-		HUD_TotalPosibleBullet = 32;
-		maxZeroing = 1000;
-		hiddenSelections[] = { "camo","camo1","camo2" };
-		hiddenSelectionsTextures[] = { "\288th_Weapons\Data\Weapons\M392\Whiskey\mainbody1e_co.paa","\288th_Weapons\Data\Weapons\M392\Whiskey\mainbody2e_co.paa","\288th_Weapons\Data\Weapons\M392\Whiskey\muzzlee_co.paa" };
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "288th_Hamr_Scope";
-			};
-		};
+		displayName = "[288th] GL15R";
+		descriptionshort = "Special Oni Derived Armament GL15R";
+		baseWeapon = "288th_GL15R";
+		modes[] ={"Single"};
+		magazines[] ={"288th_10rnd_Microgrenade"};
+		magazineWell[] = { 288th_Microgrenades };
+		recoil = "recoil_lim";
+		visionMode[] ={"Normal","NVG","TI"};
 		class WeaponSlotsInfo
 		{
-			mass = 55;
+			mass = 50;
 			class MuzzleSlot : MuzzleSlot_556
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor",
-					"optre_m6_silencer",
-					"OPTRE_M12_Suppressor"
-				};
+				compatibleitems[] =	{};
 			};
 			class CowsSlot : CowsSlot_Rail
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleitems[] =
 				{
-					"288th_Hamr_Scope",
-					"288th_SS_6_Scope",
-					"Optre_Recon_Sight",
-					"Optre_Recon_Sight_Red",
-					"Optre_Recon_Sight_Green",
-					"Optre_Recon_Sight_Desert",
-					"Optre_Recon_Sight_UNSC",
-					"Optre_Recon_Sight_Snow",
-					"288th_M12_Sight",
-					"288th_M6C_Scope",
-					"288th_M7_Sight",
-					"optic_dms",
-					"OPTRE_SRM_Sight",
-					"optic_khs_blk",
-					"optic_hamr",
-					"optic_sos",
-					"optic_lrps",
+					"OPTRE_M6S_Scope",
+					"OPTRE_M7_Sight_v2",
+					"optic_aco_grn",
+					"optic_aco",
+					"optic_arco_blk_f",
 					"optic_erco_blk_f",
-					"optic_ams",
 					"optic_yorris",
+					"optic_aco_smg",
+					"optic_aco_grn_smg",
+					"optic_mrd_black",
 					"optre_m7_sight",
 					"optre_m392_scope",
-					"optre_br55hb_scope",
-					"OPTRE_BR45_Scope",
+					"optre_m6c_scope",
 					"OPTRE_M12_Optic"
 				};
 			};
 			class PointerSlot : PointerSlot_Rail
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
-				compatibleitems[] =
-				{
-					"OPTRE_M12_Laser",
-					"acc_flashlight",
-					"acc_pointer_ir"
-				};
+				compatibleitems[] =	{};
 			};
 			class UnderBarrelSlot : UnderBarrelSlot_Rail
 			{
 				linkProxy = "\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
-				compatibleItems[] =
-				{
-					"bipod_01_F_blk",
-					"bipod_02_F_blk",
-					"bipod_03_F_blk",
-				};
+				compatibleItems[] =	{};
 				iconPicture = "\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
 				iconPinpoint = "Bottom";
 			};
-		};
-		modes[] = {"Single"};
-		class Single: Mode_SemiAuto
-		{
-			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[] = {"OPTRE_DMR_SoundSet","SyndikatLMG_Tail_SoundSet","SyndikatLMG_InteriorTail_SoundSet"};
-				begin1[] = {"\OPTRE_Weapons\DMR\Data\sounds\DMR_1.ogg",2.5,1,1500};
-				soundBegin[] = {"begin1",1};
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",2.2387211,1,1800};
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",1.0,1,1800};
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",1.0,1,1800};
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",1.0,1,1800};
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",1.0,1,1800};
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
-				begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",0.7943282,1,400};
-				begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",0.7943282,1,400};
-				begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",0.7943282,1,400};
-				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",1.0,1,400};
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",1.0,1,400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",1.0,1,400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",1.0,1,400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",1.0,1,400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			reloadTime = 0.04;
-			dispersion = 5e-05;
-			recoil = "recoil_single_ebr";
-			recoilProne = "recoil_single_prone_ebr";
-			minRange = 2;
-			minRangeProbab = 0.3;
-			midRange = 300;
-			midRangeProbab = 0.7;
-			maxRange = 1000;
-			maxRangeProbab = 0.05;
-		};
-	};
-
-	// 288th Error's DMR
-	class 288th_DMR_Error : OPTRE_M393S_DMR
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		canShootInWater = 1;
-		displayName = "[288th] Error's M395";
-		descriptionshort = "Error's's DMR";
-		//magazines[] = { "288th_DMR_M395", "OPTRE_15Rnd_762x51_Mag" };
-		//magazineWell[] = { "" };
-		//recoil = "recoil_Assault";
-		picture = "\OPTRE_Weapons\DMR\icons\M395_Icon.paa";
-		baseWeapon = "288th_DMR_Error";
-		hiddenSelections[] = { "camo","camo1","camo2" };
-		hiddenSelectionsTextures[] = { "288th_Weapons\Data\Weapons\AR_Rifles\Error\mainbody1e_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Error\mainbody2e_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Error\muzzlee_co.paa" };
-		modes[] = { "Single" };
-		class Single : Mode_SemiAuto
-		{
-			sounds[] = { "StandardSound","SilencedSound" };
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = { "closure1",0.5,"closure2",0.5 };
-			};
-			class StandardSound : BaseSoundModeType
-			{
-				soundSetShot[] = { "OPTRE_DMR_SoundSet","SyndikatLMG_Tail_SoundSet","SyndikatLMG_InteriorTail_SoundSet" };
-				begin1[] = { "\OPTRE_Weapons\DMR\Data\sounds\DMR_1.ogg",2.5,1,1500 };
-				soundBegin[] = { "begin1",1 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",2.2387211,1,1800 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",1.0,1,1800 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			class SilencedSound : BaseSoundModeType
-			{
-				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
-				begin1[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",0.7943282,1,400 };
-				begin2[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",0.7943282,1,400 };
-				begin3[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",0.7943282,1,400 };
-				soundBegin[] = { "begin1",0.33,"begin2",0.33,"begin1",0.34 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",1.0,1,400 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			reloadTime = 0.04;
-			dispersion = 5e-05;
-			recoil = "recoil_single_ebr";
-			recoilProne = "recoil_single_prone_ebr";
-			minRange = 2;
-			minRangeProbab = 0.3;
-			midRange = 300;
-			midRangeProbab = 0.7;
-			maxRange = 1000;
-			maxRangeProbab = 0.05;
 		};
 	};
 
@@ -2018,6 +2211,13 @@ class cfgWeapons
 		reloadAction = "SCI_FI_Pistol_Reload";
 		reloadMagazineSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
 		reloadSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
+		initspeed=190;
+		LEBA_SWS = 1;
+		LEBA_SWS_Tracking_Distance = 30;
+		LEBA_SWS_Tracking_Angle = 20;
+		LEBA_SWS_Autoaim_Cutoff = 0.2;
+		LEBA_SWS_Tracking_Random_Chance = 50;
+		LEBA_SWS_Tracking_Speed = 150;
 		class SemiAuto: Mode_SemiAuto
 		{
 			minRangeProbab = 0.5;
@@ -2139,91 +2339,4 @@ class cfgWeapons
 			};
 		};
 	};
-
-	/*class OPTRE_FC_T51_Carbine;
-	class test_FC_T51_Carbine: OPTRE_FC_T51_Carbine
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		canShootInWater = 1;
-		displayName = "[288th] Test Type-51 Carbine";
-		baseWeapon = "test_FC_T51_Carbine";
-		modes[] = {"SemiAuto"};
-		class SemiAuto: Mode_SemiAuto
-		{
-			sounds[] = {"StandardSound"};
-			reloadTime = 0.15;
-			dispersion = 0;
-			class BaseSoundModeType
-			{
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"\OPTRE_FC_Weapons\Data\sounds\Carbine_Fire.ogg",1.0,1,2000};
-				soundBegin[] = {"begin1",2.0};
-			};
-			class SilencedSound : BaseSoundModeType
-			{
-				SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
-				begin1[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",0.7943282,1,400 };
-				begin2[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",0.7943282,1,400 };
-				begin3[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",0.7943282,1,400 };
-				soundBegin[] = { "begin1",0.33,"begin2",0.33,"begin1",0.34 };
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",1.0,1,400 };
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = { "A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",1.0,1,400 };
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-			};
-			minRange = 2;
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot : MuzzleSlot_556
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleitems[] =
-				{
-					"optre_ma5suppressor"
-				};
-			};
-			mass = 80;
-		};
-	};*/
 };

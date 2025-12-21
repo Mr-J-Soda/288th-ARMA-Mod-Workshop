@@ -68,7 +68,7 @@ class CfgWeapons
 			mass = 1;
 			opticType = 1;
 			optics = 1;
-			modelOptics = "\OPTRE_Weapons\MG\M73_SmartLink";
+			modelOptics = "\OPTRE_Weapons_MG\m73\M73_SmartLink";
 			class OpticsModes
 			{
 				class M73_IS_v2

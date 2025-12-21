@@ -2306,8 +2306,8 @@ class cfgWeapons
 		thermalMode[] = {1};
 	};
 
-	class MA_ODST_CustomNVG_37;
-	class 288th_Glitch_NVG: MA_ODST_CustomNVG_37
+	class MA_ODST_CustomNVG_17;
+	class 288th_Glitch_NVG: MA_ODST_CustomNVG_17
 	{
 		scope = 2;
 		scopeArsenal = 2;
@@ -2329,7 +2329,7 @@ class cfgWeapons
 
 	class catears_nvg5;
 	class catears_nvg1_helm;
-	class 288th_Johnson_NVG: catears_nvg5
+	class 288th_Johnson_NVG: NVGoggles
 	{
 		scope = 2;
 		scopeArsenal = 2;
@@ -2337,6 +2337,16 @@ class cfgWeapons
 		dlc = "288DJP";
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Custom NVG (Johnson)";
+		picture = "\288th_Gear\Data\NVG\Catears\icon_black.paa";
+		nameSound = "nvgoggles";
+		simulation = "NVGoggles";
+		showEmpty = 0;
+		muzzlePos = "usti hlavne";
+		muzzleEnd = "konec hlavne";
+		value = 5;
+		opticsZoomMin = 1;
+		opticsZoomMax = 1;
+
 		ace_nightVision_grain = 0;
 		ace_nightVision_blur = 0;
 		ace_nightVision_radBlur = 0;
@@ -2347,5 +2357,14 @@ class cfgWeapons
 		thermalMode[] = {0};
 		visionMode[] = {"Normal","NVG","TI"};
 		modelOptics = "";
+
+		class ItemInfo 
+		{
+			type = 616;
+			hmdType = 0;
+			uniformModel = "\288th_Gear\Data\NVG\Catears\Catears_Black.p3d";
+			modelOff = "\288th_Gear\Data\NVG\Catears\Catears_Black.p3d";
+			mass = 24;
+		};
 	};
 };

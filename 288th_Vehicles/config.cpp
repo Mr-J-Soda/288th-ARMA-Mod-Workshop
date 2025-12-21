@@ -1,27 +1,13 @@
 class CfgPatches {
-	class 288th_UNSC{
-		units[] = {
-			"288th_SW_Rifleman",
-			"288th_SW_AT",
-			"288th_SW_Medic",
-			"288th_SW_Marksman",
-			"288th_SW_Autorifleman",
-			"288th_SW_Crewman",
-			"288th_SW_Breacher",
-			"288th_SW_Grenadier",
-			"288th_SW_RTO",
-			"288th_SW_FL",
-			"288th_SW_SL"
-		};
-		weapons[] = {};
+	class 288th_UNSC
+	{
+		units[] = {"288th_SW_Rifleman","288th_SW_AT","288th_SW_Medic","288th_SW_Marksman","288th_SW_Autorifleman","288th_SW_Crewman","288th_SW_Breacher","288th_SW_Grenadier","288th_SW_RTO","288th_SW_FL","288th_SW_SL","288th_Hornet","288th_Falcon","288th_Pelican","288th_mongoose_crate","288th_Banshee_Soda","288th_Rocket_Elephant","288th_Oryx","288th_Oryx_APC","288th_Oryx_APC_RCWS","288th_IFV_76","288th_APC_76","288th_Pander_III","288th_VAF19","288th_YSS_1000_A","288th_YSS_1000_A_VTOL","288th_YSS_1000_A_Single","288th_YSS_1000_A_VTOL_Single","288th_M808S","288th_Timberwolf","288th_Railgun_Warthog","288th_salamander","288th_salamander_Agl","288th_salamander_HMG","288th_Groundhog","288th_Remote_M41","288th_Remote_M68","288th_Remote_M79","288th_Remote_AU_44","288th_Ed_1E","288th_Ed_1C","288th_Ed_1F","288th_MQ_94","288th_SRS99XT","288th_SRS99XT_High","288th_M12_MLMS","288th_M989","288th_Static_MLMS","288th_Remote_M12_MLMS","288th_Catfish_MLMS","288th_Pvt_Green","288th_OSHA_Marine","288th_OSHA_Marine_H","288th_Forklift","V12_S1000RR2018_Rouge","V12_S1000RR2018_Origine","V12_S1000RR2018_BrosserD","V12_S1000RR2018_VO","V12_S1000RR2018_OR","WBK_Antlion_1_1","WBK_Antlion_1_NoLeap_1","WBK_Antlion_1_0","WBK_Antlion_1_3","WBK_Antlion_1_NoLeap_2","WBK_Antlion_1_NoLeap_3","WBK_AntlionGuardian_1_1","WBK_AntlionGuardian_1_2","WBK_AntlionGuardian_1_3"};
+		weapons[] = {"ED_1E_Kit","ED_1F_Kit","ED_1C_Kit","MQ_94_Kit","288th_SRS99D_Turret_Kit","288th_SRS99D_Turret_High_Kit"};
 		requiredVersion = 1.62;
-		requiredAddons[] = {
-			"V_FZ_Units",
-			"OPTRE_UNSC_Units",
-			"OPTRE_ACE_Compat_Medical"
-		};
+		requiredAddons[] = {"OPTRE_UNSC_Units","OPTRE_ACE_Compat_Medical"};
 		author = "Misriah 288 DJP";
 		authors[] = {"Misriah 288 DJP"};
+		worlds[] = {};
 	};
 };
 
@@ -116,29 +102,6 @@ class CfgFactionClasses
 		flag = "\288th_Core\Logos\Misriah_Logo_CA.paa";
 		primaryLanguage = "EN";
 		backpack_tf_faction_radio_api = "OPTRE_Como_pack_2";
-	};
-};
-class CfgVehicleClasses
-{
-	class 288th_Subgroups_LandVehicles
-	{
-		displayName = "Land Vehicles";
-	};
-	class 288th_Subgroups_AirVehicles
-	{
-		displayName = "Air Vehicles";
-	};
-	class 288th_Subgroups_Covenant
-	{
-		displayName = "Covenant";
-	};
-	class 288th_Subgroups_SW
-	{
-		displayName = "Silver Wolves";
-	};
-	class 288th_Subgroups_Memes
-	{
-		displayName = "Memes";
 	};
 };
 class CBA_Extended_EventHandlers_base;
@@ -415,8 +378,6 @@ class cfgVehicles
 		class AnimationSources;
 		class Components;
 	};
-	class Optics_Gunner_APC_01;
-	class WeaponFireGun;
 	class TCF_UAV_01_F;
 	class CargoTurret;
 	class CopilotTurret;
@@ -491,7 +452,7 @@ class cfgVehicles
 	class B_AFV_Wheeled_01_up_cannon_F;
 	class OPTRE_forklift;
 	class OPTRE_AU_44_Mortar;
-	class TCF_UNSC_Nightingale;
+	//class TCF_UNSC_Nightingale;
 	class OPTRE_YSS_1000_A;
 	class B_UGV_02_Demining_F;
 	class B_UGV_02_Science_F;
@@ -528,6 +489,7 @@ class cfgVehicles
 		class ViewOptics;
 	};
 	class optre_catfish_aa_f;
+	class WBK_WRS_WGP1_Ver1;
 
 	class Man;
 	class CaManbase: Man
@@ -605,15 +567,11 @@ class cfgVehicles
 		faction = "288th_UNSC";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Helicopter";
-		vehicleClass = "288th_Subgroups_AirVehicles";
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Pilot";
 		tf_hasLRradio = 1;
-		tf_isolatedAmount = 0.40000001;
+		tf_isolatedAmount = 0.4;
 		tf_range = 120000;
-		hiddenSelections[] =
-		{
-			"camo1"
-		};
+		hiddenSelections[] ={"camo1"};
 		hiddenSelectionsTextures[] = { "288th_Vehicles\Hornet\hornet_hull_green_co" };
 		class TextureSources
 		{
@@ -891,8 +849,7 @@ class cfgVehicles
 		faction = "288th_UNSC";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Helicopter";
-		vehicleClass = "288th_Subgroups_AirVehicles";
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Pilot";
 		tf_hasLRradio = 1;
 		tf_isolatedAmount = 0.40000001;
 		tf_range = 120000;
@@ -1060,8 +1017,7 @@ class cfgVehicles
 		faction = "288th_UNSC";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Helicopter";
-		vehicleClass = "288th_Subgroups_AirVehicles";
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Pilot";
 		forceInGarage = 1;
 		scope = 2;
 		scopecurator = 2;
@@ -1518,210 +1474,6 @@ class cfgVehicles
 			};
 		};
 	};
-	class 288th_Nightingale: TCF_UNSC_Nightingale{
-		faction = "288th_UNSC";
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_Helicopter";
-		vehicleClass = "288th_Subgroups_AirVehicles";
-		crew = "288th_SW_Crewman";
-		scope = 2;
-		scopecurator = 2;
-		scopeArsenal = 2;
-		side = 1;
-		fuelConsumptionRate = 0.02;
-		dlc = "288th";
-		author = "Misriah 288 DJP";
-		displayName = "EV-41 Nightingale (288th)";
-		class UserActions
-		{
-			class PelLift_LoadVehicle
-			{
-				userActionID = 6;
-				displayName = "Load Vehicle";
-				displayNameDefault = "Load Vehicle";
-				textToolTip = "Load Vehicle";
-				position = "cargo_door_handle";
-				showWindow = 0;
-				radius = 15;
-				priority = 2;
-				onlyForPlayer = 0;
-				condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND (str (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"") AND (vehicle player != player)";
-				statement = "0 = [this,vehicle player] spawn Air_fnc_PelicanLoadValidate;";
-			};
-			class PelLift_LoadPodMenu
-			{
-				userActionID = 9;
-				displayName = "Load Supply Pods";
-				displayNameDefault = "Load Supply Pods";
-				textToolTip = "Load Supply Pods";
-				position = "cargo_door_handle";
-				showWindow = 0;
-				radius = 15;
-				priority = 2;
-				onlyForPlayer = 0;
-				condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
-				statement = "OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_PelicanLoadSupplyPods_Menu""; OPTRE_PelicanLoadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;  OPTRE_PelicanLoadSupplyPods_Menu_cam CamSetTarget OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject; OPTRE_PelicanLoadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_PelicanLoadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_PelicanLoadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
-			};
-			class PelLift_UnLoadVehicle
-			{
-				userActionID = 7;
-				displayName = "Unload Vehicle / Supply Pods";
-				displayNameDefault = "Unload Vehicle / Supply Pods";
-				textToolTip = "Unload Vehicle / Supply Pods";
-				position = "cargo_door_handle";
-				showWindow = 0;
-				radius = 5;
-				priority = 3;
-				onlyForPlayer = 0;
-				condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
-				statement = "0 = [this] spawn OPTRE_fnc_PelicanUnLoadValidate;";
-			};
-			class PelLift_OpenDetachPodMenu
-			{
-				userActionID = 8;
-				displayName = "Detach Individual Supply Pod Menu";
-				displayNameDefault = "Detach Individual Supply Pod Menu";
-				textToolTip = "Detach Individual Supply Pod Menu";
-				position = "cargo_door_handle";
-				showWindow = 0;
-				radius = 5;
-				priority = 3;
-				onlyForPlayer = 0;
-				condition = "(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
-				statement = "0 = this spawn OPTRE_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
-			};
-			class RampOpen
-			{
-				userActionID = 50;
-				displayName = "Open Ramp";
-				displayNameDefault = "Open Ramp";
-				textToolTip = "Open Ramp";
-				position = "cargo_door_handle";
-				showWindow = 0;
-				radius = 100000;
-				priority = 4;
-				onlyForPlayer = 0;
-				condition = "((this animationPhase ""cargoDoor_1"" < 0.5) AND (alive this) AND (player in [gunner this, driver this]))";
-				statement = "this animate [""cargoDoor_1"",1]";
-				animPeriod = 5;
-			};
-			class RampClose: RampOpen
-			{
-				userActionID = 51;
-				displayName = "Close Ramp";
-				displayNameDefault = "Close Ramp";
-				textToolTip = "Close Ramp";
-				priority = 4;
-				condition = "((this animationPhase ""cargoDoor_1"" > 0.5) AND (alive this) AND (player in [gunner this, driver this]))";
-				statement = "this animate [""cargoDoor_1"",0]";
-				animPeriod = 5;
-			};
-			class ThrusterEngage : RampOpen
-			{
-				userActionID = 52;
-				displayName = "$STR_OPTRE_Functions_AirThrust_Label";
-				displayNameDefault = "$STR_OPTRE_Functions_AirThrust_Label";
-				textToolTip = "$STR_OPTRE_Functions_AirThrust_Tooltip";
-				priority = 10;
-				condition = "(!(this getvariable [""OPTRE_Thruster_EngagedStatus"",false])) AND (player == driver this) AND (alive this) AND (isEngineOn this)";
-				statement = "0 = this spawn OPTRE_fnc_ThrusterEngage";
-			};
-			class ThrusterDisengage : ThrusterEngage
-			{
-				userActionID = 53;
-				displayName = "DISENGAGE FORWARD THRUSTERS";
-				displayNameDefault = "DISENGAGE FORWARD THRUSTERS";
-				textToolTip = "DISENGAGE FORWARD THRUSTERS";
-				condition = "(this getvariable [""OPTRE_Thruster_EngagedStatus"",false]) AND (player == driver this) AND (alive this)";
-				statement = "0 = this spawn OPTRE_fnc_ThrusterDisengage";
-			};
-			class AirbrakeEngage : ThrusterEngage
-			{
-				userActionID = 54;
-				displayName = "$STR_OPTRE_Functions_AirBrake_Label";
-				displayNameDefault = "$STR_OPTRE_Functions_AirBrake_Label";
-				textToolTip = "$STR_OPTRE_Functions_AirBrake_Tooltip";
-				condition = "(!(this getvariable [""OPTRE_Thruster_EngagedStatus"",false])) AND (player == driver this) AND (alive this) AND ((speed this) > 100)";
-				statement = "0 = this spawn OPTRE_fnc_AirbrakeEngage";
-			};
-		};
-		class textureSources
-		{
-			class TCF_desert
-			{
-				author = "Vespade";
-				displayName = "Desert";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_DES_CO.paa"};
-			};
-			class TCF_woodland
-			{
-				author = "Vespade";
-				displayName = "Woodland";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_WDL_CO.paa"};
-			};
-			class TCF_jungle
-			{
-				author = "Vespade";
-				displayName = "Jungle";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_JUN_CO.paa"};
-			};
-			class TCF_urban
-			{
-				author = "Vespade";
-				displayName = "Urban";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_URB_CO.paa"};
-			};
-			class TCF_black
-			{
-				author = "Vespade";
-				displayName = "Black";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_BLK_CO.paa"};
-			};
-			class TCF_frost
-			{
-				author = "Vespade";
-				displayName = "Frost";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_FRO_CO.paa"};
-			};
-			class TCF_tundra
-			{
-				author = "Vespade";
-				displayName = "Tundra";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_TUN_CO.paa"};
-			};
-			class TCF_dunes
-			{
-				author = "Vespade";
-				displayName = "Dunes";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_DUN_CO.paa"};
-			};
-			class TCF_classic
-			{
-				author = "Vespade";
-				displayName = "Classic";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_CLS_CO.paa"};
-			};
-			class TCF_olive
-			{
-				author = "Vespade";
-				displayName = "Olive";
-				textures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_OD3_CO.paa"};
-			};
-		};
-		hiddenSelectionsTextures[] = {"TCF_Vehicles\EV_41_Nightingale\data\TCF_EV41_OD3_CO.paa"};
-		textureList[] = {"TCF_desert",1,"TCF_woodland",1,"TCF_jungle",1,"TCF_urban",1,"TCF_black",1,"TCF_frost",1,"TCF_tundra",1,"TCF_dunes",1,"TCF_classic",1,"TCF_olive",1};
-		slingLoadMaxCargoMass = 10000;
-		maximumLoad = 5000;
-		armor = 200;
-		altFullForce = 10000;
-		altNoForce = 20000;
-		maxSpeed = 900;
-		tf_range = 25000;
-		tf_isolatedAmount = 0.4;
-		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
-		enableRadio = 1;
-	};
 
 	//Misc
 	class 288th_mongoose_crate : OPTRE_M274_ATV{
@@ -1735,7 +1487,6 @@ class cfgVehicles
 		faction = "288th_UNSC";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Misc";
-		vehicleClass = "288th_Subgroups_LandVehicles";
 		tf_hasLRradio = 1;
 		tf_isolatedAmount = 0.40000001;
 		tf_range = 120000;
@@ -1762,10 +1513,9 @@ class cfgVehicles
 		forceInGarage = 1;
 		side = 1;
 		faction = "288th_UNSC";
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Pilot";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Misc";
-		vehicleClass = "288th_Subgroups_Covenant";
 		enableGPS = 1;
 		radarTargetSize = 0.1;
 		visualTargetSize = 0.1;
@@ -2052,7 +1802,6 @@ class cfgVehicles
 		tf_range = 120000;
 		armor = 6000;
 		maxSpeed = 300;
-		vehicleClass = "288th_Subgroups_LandVehicles";
 		class UserActions
 		{
 			class Flip
@@ -2167,7 +1916,6 @@ class cfgVehicles
 		displayName = "M494 Oryx IFV (288th)";
 		forceInGarage = 1;
 		faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";
 		crew = "288th_SW_Crewman";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_IFV";
@@ -3089,7 +2837,6 @@ class cfgVehicles
 		editorSubcategory = "288th_Eden_IFV";
 		forceInGarage = 1;
 		faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";
 		crew = "288th_SW_Crewman";
 		side = 1;
 		setMass = 100;
@@ -3377,8 +3124,8 @@ class cfgVehicles
 		{
 			class MainTurret: MainTurret 
 			{
-				weapons[] = { "TCF_MG460_APC","288th_M50_V","SmokeLauncher" };
-				magazines[] = { "288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","TCF_40Rnd_HEDP_Belt","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag" };
+				weapons[] = { "288th_M318_20mm_Autocannon_Small","288th_M50_V","SmokeLauncher" };
+				magazines[] = { "288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_75Rnd_15x50_Box","288th_350Rnd_20mm_HE","288th_350Rnd_20mm_HE","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag" };
 			};
 		};
 	};
@@ -3410,7 +3157,6 @@ class cfgVehicles
 		editorSubcategory = "288th_Eden_IFV";
 		forceInGarage = 1;
 		faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";
 		crew = "288th_SW_Crewman";
 		side = 1;
 		setMass = 100;
@@ -3470,7 +3216,7 @@ class cfgVehicles
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Plane";
 		faction = "288th_UNSC";
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Pilot";
 		cost = 10000;
 		availableForSupportTypes[] = {"CAS_Bombing"};
 		class textureSources
@@ -3755,7 +3501,7 @@ class cfgVehicles
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Plane";
 		faction = "288th_UNSC";
-		crew = "288th_SW_Crewman";
+		crew = "288th_SW_Pilot";
 		vehicleClass = "OPTRE_UNSC_Air_class";
 		gunnerAction = "Heli_Attack_01_Gunner";
 		gunnerInAction = "Heli_Attack_01_Gunner";
@@ -6743,7 +6489,7 @@ class cfgVehicles
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"288th_Vehicles\Salamander\OPTRE_Salamander_01.paa","288th_Vehicles\Salamander\OPTRE_GHMG_01.paa"};
 	};
-	class 288th_salamander_HMG: I_MRAP_03_gmg_F{
+	class 288th_salamander_HMG: I_MRAP_03_hmg_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
 		editorCategory = "288th_Eden";
@@ -6885,7 +6631,6 @@ class cfgVehicles
 		tf_range = 120000;
 		cargoCanControlUAV = 1;
 		faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";
 		hiddenSelections[] = { "camo1","camo2","camo3" };
 		hiddenSelectionsTextures[] = { "\288th_Vehicles\Stomper\Black\UGV_3_Turret","\288th_Vehicles\Stomper\Black\UGV_2_Black","\288th_Vehicles\Stomper\Black\UGV_1_Black" };
 		class textureSources
@@ -7144,8 +6889,7 @@ class cfgVehicles
 		uavCameraGunnerDir = "Barrel";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Turret";
-		/*faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		//faction = "288th_UNSC";
 		displayName = "Remote M41 LAAG (288th)";
 		armor = 600;
 		crew = "B_UAV_AI";
@@ -7273,8 +7017,7 @@ class cfgVehicles
 		uavCameraGunnerDir = "Barrel";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Turret";
-		/*faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		//faction = "288th_UNSC";
 		displayName = "Remote M68 Gauss (288th)";
 		armor = 600;
 		crew = "B_UAV_AI";
@@ -7407,8 +7150,7 @@ class cfgVehicles
 		uavCameraGunnerDir = "Barrel";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Turret";
-		/*faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		//faction = "288th_UNSC";
 		displayName = "Remote M79 AA (288th)";
 		armor = 600;
 		crew = "B_UAV_AI";
@@ -7541,8 +7283,7 @@ class cfgVehicles
 		uavCameraGunnerDir = "Barrel";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Turret";
-		/*faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		//faction = "288th_UNSC";
 		displayName = "Remote AU-144 (288th)";
 		crew = "B_UAV_AI";
 		availableForSupportTypes = "[""Artillery""]";
@@ -7928,7 +7669,7 @@ class cfgVehicles
 			{
 				canAccessMineDetector = 1;
 				weapons[] = {"288th_CQS_48X_V","SmokeLauncher","Laserdesignator_mounted"};
-				magazines[] = {"Laserbatteries","288th_Buckshot","288th_Buckshot","288th_Buckshot","288th_Buckshot","288th_Buckshot","SmokeLauncherMag","SmokeLauncherMag"};
+				magazines[] = {"Laserbatteries","288th_Buckshot","288th_Buckshot","288th_Buckshot","288th_Buckshot","288th_Slug_EMP","288th_Slug_Taser","SmokeLauncherMag","SmokeLauncherMag"};
 				gunBeg = "gun_end";
 				gunEnd = "gun_start";
 				selectionFireAnim = "muzzleFlash";
@@ -8109,6 +7850,31 @@ class cfgVehicles
 		};
         /*hiddenSelectionsTextures[] = { "\288th_Vehicles\MQ_94\MQ_94_co.paa" };
         textureList[] = { "Blufor",1 };*/
+    };
+
+	//Mech
+	class 332nd_TUM5: WBK_WRS_WGP1_Ver1
+    {
+        identityTypes[] = {"LanguageENGVR_F","Head_NATO","NoGlasses"};
+        side = 0;
+        hiddenSelections[] = {"Lower_inner","Lower_outer","upper_Exterior","upper_Extras","Muzzleflash_1","Muzzleflash_2","Muzzleflash_3","Muzzleflash_4"};
+        hiddenSelectionsTextures[] = 
+		{
+			"\WRS_Mech\textures\WGP_LowInt_FS_CO.paa",
+			"288th_Vehicles\Mech\TUM5_Strider_Lower.paa",
+			"288th_Vehicles\Mech\TUM5_Strider_Upper.paa",
+			"\WRS_Mech\textures\WGP_UpEx_FS_CO.paa",
+			"",
+			"",
+			"",
+			""
+		};
+        items[] = {};
+        displayName = "TU-M5 (Strider)";
+        armor = 7;
+        magazines[] = {};
+        respawnweapons[] = {"Throw","Put"};
+        respawnMagazines[] = {};
     };
 
 	//Turrets
@@ -8881,8 +8647,7 @@ class cfgVehicles
 		uavCameraGunnerDir = "Barrel";
 		editorCategory = "288th_Eden";
 		editorSubcategory = "288th_Eden_Turret";
-		/*faction = "288th_UNSC";
-		vehicleClass = "288th_Subgroups_LandVehicles";*/
+		//faction = "288th_UNSC";
 		displayName = "Remote M12 MLMS (288th)";
 		crew = "B_UAV_AI";
 		availableForSupportTypes = "[""Artillery""]";
@@ -9200,7 +8965,7 @@ class cfgVehicles
 		hiddenSelectionsTextures[] = {"OPTRE_UNSC_Units\Army\data\uniform_a_woodland_co.paa","OPTRE_UNSC_Units\Army\data\uniform_b_woodland_co.paa"};
 		faction = "288th_UNSC";
 
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
+		identityTypes[] = {"Head_NATO","LanguageENG_F","noglasses"};
 
 		uniformClass = "288th_Black_Uniform_S";
 
@@ -9216,7 +8981,7 @@ class cfgVehicles
 		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_AT : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9224,23 +8989,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves AT";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		Items[] = { "288th_Armor_Marine_Rifleman","288th_CH252_Marine","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
@@ -9248,14 +8996,14 @@ class cfgVehicles
 		linkedItems[] = {"288th_Armor_Marine_Rifleman","288th_Balaclava","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 		respawnlinkedItems[] = {"288th_Armor_Marine_Rifleman","288th_Balaclava","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 
-		weapons[] = {"288th_AR1X","288th_M57_Launcher","288th_FNX_99_Tactical","Binocular","Throw","Put" };
-		respawnWeapons[] = {"288th_AR1X","288th_M57_Launcher","288th_FNX_99_Tactical","Binocular","Throw","Put" };
+		weapons[] = {"288th_AR1X","288th_M41_Launcher","288th_FNX_99_Tactical","Binocular","Throw","Put" };
+		respawnWeapons[] = {"288th_AR1X","288th_M41_Launcher","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M57_Cricket_SACLOS","288th_M57_Cricket_Thermal","288th_M57_Cricket_HE","288th_M57_Cricket_SACLOS","288th_M57_Cricket_Thermal","288th_M57_Cricket_HE", };
-		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M57_Cricket_SACLOS","288th_M57_Cricket_Thermal","288th_M57_Cricket_HE","288th_M57_Cricket_SACLOS","288th_M57_Cricket_Thermal","288th_M57_Cricket_HE", };
+		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M41_Twin_HEAT_Thermal"};
+		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M41_Twin_HEAT_Thermal"};
 
-		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		backpack = "288th_Kitbag_AT";
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_Medic : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9263,23 +9011,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Medic";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		Items[] = { "288th_Armor_Marine_Medic","288th_CH252_Marine","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam","288th_Biofoam" };
@@ -9294,7 +9025,7 @@ class cfgVehicles
 		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_Marksman : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9302,23 +9033,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Marksman";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		linkedItems[] = {"288th_Armor_Marine_Marksman","288th_Balaclava","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
@@ -9331,7 +9045,7 @@ class cfgVehicles
 		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_Autorifleman : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9339,23 +9053,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Autorifleman";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		linkedItems[] = {"288th_Armor_Marine_AutoRifleman","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
@@ -9368,7 +9065,7 @@ class cfgVehicles
 		respawnMagazines[] = {"288th_500Rnd_65x85_Box","288th_32Rnd_127x40","288th_500Rnd_65x85_Box","288th_32Rnd_127x40","288th_500Rnd_65x85_Box","288th_32Rnd_127x40","288th_500Rnd_65x85_Box","288th_32Rnd_127x40" ,"288th_500Rnd_65x85_Box","288th_32Rnd_127x40","288th_500Rnd_65x85_Box","288th_32Rnd_127x40" };
 
 		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_Crewman : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9376,34 +9073,37 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Crewman";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
-		linkedItems[] = {"288th_Armor_Marine_Rifleman","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
-		respawnlinkedItems[] = {"288th_Armor_Marine_Rifleman","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		linkedItems[] = {"288th_Armor_Marine_Light","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		respawnlinkedItems[] = {"288th_Armor_Marine_Light","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 
-		weapons[] = {"288th_M7V_SMG","288th_FNX_99_Tactical","Binocular","Throw","Put" };
-		respawnWeapons[] = {"288th_M7V_SMG","288th_FNX_99_Tactical","Binocular","Throw","Put" };
+		weapons[] = {"288th_M12H","288th_FNX_99_Tactical","Binocular","Throw","Put" };
+		respawnWeapons[] = {"288th_M12H","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = {"288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40" };
-		respawnMagazines[] = {"288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40","288th_45ACP_Mag_AP","288th_32Rnd_127x40" };
-		headgearList[] = { "288th_CH252_Marine",1, };
+		magazines[] = {"288th_65Rnd_127x30","288th_65Rnd_127x30","288th_65Rnd_127x30","288th_65Rnd_127x30","288th_65Rnd_127x30","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_16Rnd_127x40_FR" };
+		respawnMagazines[] = {"288th_65Rnd_127x30","288th_32Rnd_127x40","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_65Rnd_127x30","288th_32Rnd_127x40","288th_16Rnd_127x40_FR" };
+		backpack = "";
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
+	};
+	class 288th_SW_Pilot : 288th_SW_Rifleman{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Silver Wolves Pilot";
+		uniformClass = "288th_Black_Uniform_S";
+
+		linkedItems[] = {"288th_Armor_Marine_Vest","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		respawnlinkedItems[] = {"288th_Armor_Marine_Vest","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+
+		weapons[] = {"288th_FNX_99_Tactical","Binocular","Throw","Put" };
+		respawnWeapons[] = {"288th_FNX_99_Tactical","Binocular","Throw","Put" };
+
+		magazines[] = {"288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_16Rnd_127x40_FR"};
+		respawnMagazines[] = {"288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_16Rnd_127x40_FR"};
+		backpack = "";
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_Breacher : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9411,23 +9111,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Breacher";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		linkedItems[] = {"288th_Armor_Marine_Breacher","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
@@ -9440,7 +9123,7 @@ class cfgVehicles
 		respawnMagazines[] = { "288th_Buckshot","288th_32Rnd_127x40","288th_Buckshot","288th_32Rnd_127x40","288th_Buckshot","288th_32Rnd_127x40","288th_Slug","288th_32Rnd_127x40","288th_Slug","288th_32Rnd_127x40","288th_Slug","288th_32Rnd_127x40" };
 
 		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 	};
 	class 288th_SW_Grenadier : 288th_SW_Rifleman{
 		dlc = "288th";
@@ -9448,23 +9131,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Grenadier";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		linkedItems[] = {"288th_Armor_Marine_Grenadier","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
@@ -9477,7 +9143,28 @@ class cfgVehicles
 		respawnMagazines[] = {"288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", };
 
 		backpack = "288th_Kitbag";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
+		 
+	};
+	class 288th_SW_Heavy : 288th_SW_Rifleman{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Silver Wolves Heavy";
+		uniformClass = "288th_Black_Uniform_S";
+
+		linkedItems[] = {"288th_Armor_Marine_Heavy","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		respawnlinkedItems[] = {"288th_Armor_Marine_Heavy","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+
+		weapons[] = {"288th_M247Z_Shield","288th_FNX_99_Tactical","Binocular","Throw","Put" };
+		respawnWeapons[] = {"288th_M247Z_Shield","288th_FNX_99_Tactical","Binocular","Throw","Put" };
+
+		magazines[] = { "288th_65x85_M247Z","288th_65x85_M247Z","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40" };
+		respawnMagazines[] = {"288th_65x85_M247Z","288th_65x85_M247Z","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40","288th_32Rnd_127x40" };
+
+		backpack = "288th_Kitbag_M247Z";
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 		 
 	};
 	class 288th_SW_RTO : 288th_SW_Rifleman{
@@ -9486,27 +9173,10 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves RTO";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
-		linkedItems[] = {"288th_Armor_Marine_Rifleman","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
-		respawnlinkedItems[] = {"288th_Armor_Marine_Rifleman","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		linkedItems[] = {"288th_Armor_Marine_Medium","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
+		respawnlinkedItems[] = {"288th_Armor_Marine_Medium","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
 
 		weapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 		respawnWeapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
@@ -9515,7 +9185,7 @@ class cfgVehicles
 		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_RTO_pack_Black";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 		 
 	};
 	class 288th_SW_FL : 288th_SW_Rifleman{
@@ -9524,23 +9194,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Fireteam Lead";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		linkedItems[] = {"288th_Armor_Marine","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
@@ -9553,7 +9206,7 @@ class cfgVehicles
 		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", };
 
 		backpack = "288th_RTO_pack_Black";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 		 
 	};
 	class 288th_SW_SL : 288th_SW_Rifleman{
@@ -9562,23 +9215,6 @@ class cfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Silver Wolves Squad Lead";
-		side = 1;
-		editorCategory = "288th_Eden";
-		editorSubcategory = "288th_Eden_SW";
-		impactDamageMultiplier = 0.2;
-		canCarryBackPack = 1;
-		oxygenCapacity = 80;
-		accuracy = 2.3;
-		sensitivity = 3;
-		camouflage = 0.75;
-		minFireTime = 3;
-		primaryAmmoCoef = 10;
-		secondaryAmmoCoef = 3;
-		handgunAmmoCoef = 5;
-		faction = "288th_UNSC";
-
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-
 		uniformClass = "288th_Black_Uniform_S";
 
 		linkedItems[] = {"288th_Armor_Marine","288th_CH252_Marine","ItemMap","ItemGPS","ItemRadio","ItemCompass","ACE_Altimeter","288th_Mk5_NVG"};
@@ -9591,7 +9227,7 @@ class cfgVehicles
 		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", };
 
 		backpack = "288th_RTO_pack_Black";
-		headgearList[] = { "288th_CH252_Marine",1, };
+		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
 		 
 	};
 
@@ -9657,7 +9293,7 @@ class cfgVehicles
 		handgunAmmoCoef = 5;
 		faction = "288th_UNSC";
 
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
+		identityTypes[] = {"Head_NATO","LanguageENG_F","noglasses"};
 
 		uniformClass = "OPTRE_UNSC_Army_Uniform_T_URB";
 
@@ -9686,7 +9322,7 @@ class cfgVehicles
 		displayName = "OSHA High-Vis Marine";
 		faction = "288th_UNSC";
 
-		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
+		identityTypes[] = {"Head_NATO","LanguageENG_F","noglasses"};
 
 		uniformClass = "OPTRE_UNSC_Army_Uniform_T_URB";
 
@@ -10059,7 +9695,7 @@ class CfgGroups {
 	class WEST 
 	{
 		class 288th_UNSC{
-			name = "288th DJP";
+			name = "288th";
 
 			class Silver_Wolves {
 				name = "Silver Wolves";
@@ -10282,7 +9918,7 @@ class CfgGroups {
 						position[] = {10,-10,0};
 						rank = "PRIVATE";
 						side = 1;
-						vehicle = "288th_SW_AT";
+						vehicle = "288th_SW_Heavy";
 					};
 					class Unit4 {
 						position[] = {-10,-10,0};

@@ -5,7 +5,7 @@ class CfgPatches
 		author = "Festive Neira / Misriah 288";
 		addonRootClass = "288th_Core";
 		units[] = {"288th_BiofoamItem"};
-		weapons[] = {"288th_Biofoam","288th_Emergency_MedKit","288th_PlasmaIV","ACE_Banana"};
+		weapons[] = {"288th_Biofoam","288th_Emergency_MedKit","288th_PlasmaIV"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"288th_Core"};
 	};
@@ -66,10 +66,10 @@ class cfgWeapons
 	};
 	class 288th_CoffeeIV_500 : 288th_PlasmaIV
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Coffee IV (500ml)";
 		descriptionShort = "Liquid caffeine in a bag";
@@ -84,10 +84,10 @@ class cfgWeapons
 	};
 	class 288th_CoffeeIV_1000 : 288th_CoffeeIV_500
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Coffee IV (1000ml)";
 		descriptionUse = "Give Coffee 1000ml";
@@ -99,13 +99,31 @@ class cfgWeapons
 	};
 	class 288th_CoffeeIV_250 : 288th_CoffeeIV_500
 	{
-		scope = 1;
-		scopeArsenal = 1;
-		ace_arsenal_hide = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Coffee IV (250ml)";
 		descriptionUse = "Give Coffee 250ml";
+		ACE_isMedicalItem = 1;
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 2.5;
+		};
+	};
+	class 288th_MilkIV_250 : 288th_CoffeeIV_500
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		scopeCurator = 2;
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Chocolate Milk Bag";
+		descriptionShort = "Kynetik deserves this";
+		descriptionUse = "Give Chocolate Milk 250ml";
+		picture = "\288th_Medical\Coffee\gear_CMilk_ca";
+		hiddenSelectionsTextures[] = {"\288th_Medical\Coffee\IVBag_CMilk_250ml_ca.paa"};
 		ACE_isMedicalItem = 1;
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -162,9 +180,12 @@ class cfgWeapons
 		descriptionShort = "A single use quick acting medical injector?";
 		ACE_isMedicalItem = 1;
 	};
-	/*class 288th_HelloKitt_Bandage: ElasticBandage
+	class 288th_HelloKitt_Bandage: ACE_fieldDressing
 	{
-		scope = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
 		author = "Soda / Misriah 288";
 		displayName = "[288th] Hello Kitty Band-aid";
 		picture = "\288th_Medical\Hello_Kitty.paa";
@@ -173,7 +194,7 @@ class cfgWeapons
 		{
 			mass = 0.6;
 		};
-	};*/
+	};
 };
 class cfgVehicles
 {
@@ -858,7 +879,6 @@ class ACE_Medical_Treatment
 				reopeningChance = 0;
 			};
 		};
-		//class 288th_HK_Bandage: ElasticBandage
 	};
 	class PlasmaIV;
 	class Morphine;
@@ -886,7 +906,7 @@ class ACE_Medical_Treatment
 			incompatibleMedication[] = {};
 			viscosityChange = -1;
 		};
-		class ACE_Banana : Morphine
+		/*class ACE_Banana : Morphine
 		{
 			painReduce = 0.0;
 			hrIncreaseLow[] = { 9000,9000 };
@@ -897,7 +917,7 @@ class ACE_Medical_Treatment
 			maxDose = 0.1;
 			incompatibleMedication[] = {};
 			viscosityChange = -100;
-		};
+		};*/
 		class 288th_Biofoam{
 			painReduce = 1;
 		};
@@ -924,6 +944,10 @@ class ACE_Medical_Treatment
 			volume = 2500;
 		};
 		class 288th_CoffeeIV_250 : PlasmaIV
+		{
+			volume = 250;
+		};
+		class 288th_MilkIV_250 : PlasmaIV
 		{
 			volume = 250;
 		};
@@ -995,13 +1019,13 @@ class ACE_Medical_Treatment_Actions
 		consumeItem = 0;
 		category = "bandage";
 	};
-	class ACE_Banana : Morphine{
+	/*class ACE_Banana : Morphine{
 		displayName = "Banana";
 		displayNameProgress = "Committing unga bunga long sleep";
 		allowedSelections[] = { "Head" };
 		items[] = { "ACE_Banana" };
 		treatmentTime = 3;
-	};
+	};*/
 	class 288th_PlasmaIV : PlasmaIV{
 		displayName = "Give Plasma IV (2500ml)";
 		displayNameProgress = "Transfusing Plasma";
@@ -1014,6 +1038,12 @@ class ACE_Medical_Treatment_Actions
 		treatmentTime = 6;
 		items[] = { "288th_CoffeeIV_250" };
 	};
+	class 288th_MilkIV_250 : PlasmaIV{
+		displayName = "Give Chocolate Milk (250ml)";
+		displayNameProgress = "Milk builds strong bones!";
+		treatmentTime = 6;
+		items[] = { "288th_MilkIV_250" };
+	};
 	class 288th_CoffeeIV_500 : PlasmaIV{
 		displayName = "Give Coffee IV (500ml)";
 		displayNameProgress = "Transfusing Coffee";
@@ -1021,7 +1051,7 @@ class ACE_Medical_Treatment_Actions
 		items[] = { "288th_CoffeeIV_500" };
 	};
 	class 288th_CoffeeIV_1000 : PlasmaIV{
-		displayName = "Give Coffee IV (10500ml)";
+		displayName = "Give Coffee IV (1000ml)";
 		displayNameProgress = "Transfusing Coffee";
 		treatmentTime = 12;
 		items[] = { "288th_CoffeeIV_1000" };

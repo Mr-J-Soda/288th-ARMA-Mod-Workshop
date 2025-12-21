@@ -22,7 +22,8 @@ class CfgMagazineWells
 		CfgMagazines[] =
 		{
 			"288th_45ACP_Mag_AP",
-			"288th_45ACP_Mag_EHP"
+			"288th_45ACP_Mag_EHP",
+			"288th_45ACP_Mag_Silver"
 		};
 	};
 };
@@ -636,5 +637,8 @@ class cfgWeapons
 		scopeArsenal = 1;
 		autoReload = true;
 		magazineReloadTime = 2.0;
+		cursor = "EmptyCursor";
+		cursoraim = "OPTRE_M7";
+		cursorAimOn = "";
 	};
 };

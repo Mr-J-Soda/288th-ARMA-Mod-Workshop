@@ -94,7 +94,7 @@ class cfgWeapons
 		weaponLockSystem = "2 + 16";
 		cmImmunity = 0.75;
 		lockAcquire = 1;
-		magazines[] ={"288th_M41_Twin_HEAT_SACLOS"};
+		magazines[] ={"288th_M41_Twin_HEAT_Thermal"};
 		magazineWell[] ={"288th_M41"};
 		modes[] ={"Single"};
 		lockingTargetSound[] =

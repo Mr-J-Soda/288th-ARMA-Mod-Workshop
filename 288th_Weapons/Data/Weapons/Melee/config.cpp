@@ -50,6 +50,7 @@ class cfgWeapons
 	class Rifle_Long_Base_F;
 	class Shovel_Russian_Rotated;
 	class Casey_Energy_Sword_1;
+	class WBK_pipeStyledSword;
 
 	// 288th Shovel
 	class 288th_Shovel : Shovel_Russian_Rotated
@@ -152,5 +153,28 @@ class cfgWeapons
 				iconScale = 0.25;
 			};
 		};
+	};
+	class WBK_Mantis_Blades: WBK_pipeStyledSword
+    {
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+        picture="mantisBlades\Data\Mantis.paa";
+        displayName="[ERA] Mantis Blades";
+        IMS_Melee_Param_Damage = 1;
+        model="mantisBlades\Assasin_Clone_Weapon.p3d";
+        IMS_WeaponType = "BrassKnuckless";
+        IMS_SecondMeleeObjectSpawnArray = [["W_WBK_MORKET_CLONEASSASIN_RIGHTHAND","LeftForeArm",[-0.25,0,-0.15],[0,0,0]],["W_WBK_MORKET_CLONEASSASIN_LEFTHAND","RightForeArm",[0.25,0,-0.15],[0,0,0]]];
+		IMS_LightsaberColor = [1.0, 0.0, 0.0];
+		IMS_CanWeaponBeStuck = "NO";
+    };
+	class 288th_Mantis_Blades: WBK_Mantis_Blades
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		displayName="[288th] Mantis Blades";
 	};
 };

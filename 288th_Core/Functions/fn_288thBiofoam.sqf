@@ -5,5 +5,4 @@ params ["_caller", "_target", "_selection", "_className"];
 _this call ace_medical_treatment_fnc_bandage;
 _this call ace_medical_treatment_fnc_bandage;
 _this call ace_medical_treatment_fnc_bandage;
-_this call ace_medical_treatment_fnc_bandage;
 //_this call ace_medical_treatment_fnc_ivBag;

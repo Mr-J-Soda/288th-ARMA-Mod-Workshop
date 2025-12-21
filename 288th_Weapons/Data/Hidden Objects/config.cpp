@@ -860,12 +860,12 @@ class cfgWeapons
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class itemWatch;
+	/*class itemWatch;
 	class rolex: itemWatch
 	{
 		scope = 2;
 		scopeArsenal = 2;
-	};
+	};*/
 	class Bat_Clear;
 	class SC_BoceanSpear: Bat_Clear
 	{
@@ -2906,5 +2906,22 @@ class cfgWeapons
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
+	};
+	class ToolKit;
+	class WBK_Health_ArmorPlate: ToolKit
+	{
+		ACE_isTool = 0;
+	};
+	class WBK_Health_Bandage: ToolKit
+	{
+		ACE_isTool = 0;
+	};
+	class WBK_Health_Syringe: ToolKit
+	{
+		ACE_isTool = 0;
+	};
+	class WBK_Health_Battery: ToolKit
+	{
+		ACE_isTool = 0;
 	};
 };
