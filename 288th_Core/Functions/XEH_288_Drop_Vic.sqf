@@ -25,6 +25,7 @@
     "288th_Catfish_MLMS",
     "288th_M989",
     "OPTRE_M412_IFV_UNSC",  
+    "288th_Banshee_Soda",
   "OPTRE_M413_MGS_UNSC",  
   "OPTRE_M494",  
   "OPTRE_M875_SPH",  

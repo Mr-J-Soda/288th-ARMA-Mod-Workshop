@@ -50,7 +50,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class 288th_beret_Brim: 288th_Beret_Base
+	class 288th_Beret_Brim: 288th_Beret_Base
 	{
 		displayName = "[288th] Beret (Brimstone)";
 		hiddenSelections[] = {"Camo"};

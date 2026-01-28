@@ -400,17 +400,17 @@ class cfgVehicles
 			class _xx_288th_M41_Twin_HEAT_SACLOS
 			{
 				name = "288th_M41_Twin_HEAT_SACLOS";
-				count = 2;
+				count = 1;
 			};
 			class _xx_288th_M41_Twin_HE
 			{
 				name = "288th_M41_Twin_HE";
-				count = 2;
+				count = 1;
 			};
 			class _xx_288th_M41_Twin_HEAT_Thermal
 			{
 				name = "288th_M41_Twin_HEAT_Thermal";
-				count = 2;
+				count = 1;
 			};
 		};
 	};
@@ -586,5 +586,195 @@ class cfgVehicles
 		model = "\OPTRE_weapons\backpacks\jetpack_on.p3d";
 		hiddenSelections[] = {"camo1","camo"};
 		hiddenSelectionsTextures[] = {"optre_vehicles\pelican\data\bolt_blue_ca.paa","optre_weapons\backpacks\data\jetpack_co.paa"};
+	};
+};
+class XtdGearModels
+{
+	class CfgVehicles
+	{
+		class M52D_Backpack
+		{
+			label = "M52D";
+			options[] = {"camo"};
+			class camo
+			{
+				alwaysSelectable = 1;
+				label = "M52D";
+				values[] = {"Basic","Red","Orange","Yellow","Green","Teal","Blue","Purple","Pink","White","Invisible"};
+			};
+		};
+		class Blahaj
+		{
+			label = "Blahaj";
+			options[] = {"camo"};
+			class camo
+			{
+				alwaysSelectable = 1;
+				label = "Blahaj";
+				values[] = {"Basic","Pirate","Green","Lava"};
+			};
+		};
+		class Misc
+		{
+			label = "Misc";
+			options[] = {"camo"};
+			class camo
+			{
+				alwaysSelectable = 1;
+				label = "Misc";
+				values[] = {"LAAG","Gauss","AA","Mortar","MLSM","Boat"};
+			};
+		};
+		class Radio
+		{
+			label = "Radio";
+			options[] = {"camo"};
+			class camo
+			{
+				alwaysSelectable = 1;
+				label = "Radio";
+				values[] = {"497","515","Mil-Tech","Zeus","Invisible"};
+			};
+		};
+	};
+};
+class XtdGearInfos
+{
+	class CfgVehicles
+	{
+		//M52D
+		class 288th_M52D_Rucksack
+		{
+			model = "M52D_Backpack";
+			camo = "Basic";
+		};
+		class 288th_M52D_Rucksack_Red
+		{
+			model = "M52D_Backpack";
+			camo = "Red";
+		};
+		class 288th_M52D_Rucksack_Orange
+		{
+			model = "M52D_Backpack";
+			camo = "Orange";
+		};
+		class 288th_M52D_Rucksack_Yellow
+		{
+			model = "M52D_Backpack";
+			camo = "Yellow";
+		};
+		class 288th_M52D_Rucksack_Green
+		{
+			model = "M52D_Backpack";
+			camo = "Green";
+		};
+		class 288th_M52D_Rucksack_Blue
+		{
+			model = "M52D_Backpack";
+			camo = "Blue";
+		};
+		class 288th_M52D_Rucksack_Purple
+		{
+			model = "M52D_Backpack";
+			camo = "Purple";
+		};
+		class 288th_M52D_Rucksack_Pink
+		{
+			model = "M52D_Backpack";
+			camo = "Pink";
+		};
+		class 288th_M52D_Rucksack_Teal
+		{
+			model = "M52D_Backpack";
+			camo = "Teal";
+		};
+		class 288th_M52D_Rucksack_White
+		{
+			model = "M52D_Backpack";
+			camo = "White";
+		};
+		class 288th_Invisible_Backpack
+		{
+			model = "M52D_Backpack";
+			camo = "Invisible";
+		};
+		//Blahaj
+		class 288th_Blahaj
+		{
+			model = "Blahaj";
+			camo = "Basic";
+		};
+		class 288th_Blahaj_Pirate
+		{
+			model = "Blahaj";
+			camo = "Pirate";
+		};
+		class 288th_Blahaj_Green
+		{
+			model = "Blahaj";
+			camo = "Green";
+		};
+		class 288th_Blahaj_Lava
+		{
+			model = "Blahaj";
+			camo = "Lava";
+		};
+		//Deployables
+		class 288th_Remote_M41_Bag
+		{
+			model = "Misc";
+			camo = "LAAG";
+		};
+		class 288th_Remote_M68_Bag
+		{
+			model = "Misc";
+			camo = "Gauss";
+		};
+		class 288th_Remote_M79_Bag
+		{
+			model = "Misc";
+			camo = "AA";
+		};
+		class 288th_Remote_AU_44_Bag
+		{
+			model = "Misc";
+			camo = "Mortar";
+		};
+		class 288th_Remote_M12_Bag
+		{
+			model = "Misc";
+			camo = "MLMS";
+		};
+		class 288th_Boat_Bag
+		{
+			model = "Misc";
+			camo = "Boat";
+		};
+		//Radios
+		class 288th_RTO_Invisible
+		{
+			model = "Radio";
+			camo = "Invisible";
+		};
+		class 288th_Zeus_pack
+		{
+			model = "Radio";
+			camo = "Zeus";
+		};
+		class 288th_RTO_pack_1
+		{
+			model = "Radio";
+			camo = "515";
+		};
+		class 288th_Rucksack_Radio
+		{
+			model = "Radio";
+			camo = "497";
+		};
+		class 288th_RTO_pack_Black
+		{
+			model = "Radio";
+			camo = "Mil-Tech";
+		};
 	};
 };

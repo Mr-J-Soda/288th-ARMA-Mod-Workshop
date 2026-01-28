@@ -6274,9 +6274,9 @@ class cfgVehicles
 		};
 		class TransportMagazines
 		{
-			class xx_288th_Stanag
+			class xx_288th_30Rnd_65x85_Mag
 			{
-				magazine = "288th_Stanag";
+				magazine = "288th_30Rnd_65x85_Mag";
 				count = 30;
 			};
 		};
@@ -7383,7 +7383,7 @@ class cfgVehicles
 			{
 				canAccessMineDetector = 1;
 				weapons[] = {"288th_M7X_SMG_V","SmokeLauncher","Laserdesignator_mounted"};
-				magazines[] = {"Laserbatteries","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","288th_45ACP_Mag_AP","SmokeLauncherMag","SmokeLauncherMag"};
+				magazines[] = {"Laserbatteries","288th_60Rnd_45_Mag","288th_60Rnd_45_Mag","288th_60Rnd_45_Mag","288th_60Rnd_45_Mag","SmokeLauncherMag","SmokeLauncherMag"};
 				gunBeg = "gun_end";
 				gunEnd = "gun_start";
 				selectionFireAnim = "muzzleFlash";
@@ -7856,6 +7856,9 @@ class cfgVehicles
 	class 332nd_TUM5: WBK_WRS_WGP1_Ver1
     {
         identityTypes[] = {"LanguageENGVR_F","Head_NATO","NoGlasses"};
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
         side = 0;
         hiddenSelections[] = {"Lower_inner","Lower_outer","upper_Exterior","upper_Extras","Muzzleflash_1","Muzzleflash_2","Muzzleflash_3","Muzzleflash_4"};
         hiddenSelectionsTextures[] = 
@@ -8977,8 +8980,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put"};
 		respawnWeapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put"};
 
-		magazines[] = {"288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		magazines[] = {"288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		respawnMagazines[] = {"288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -8999,8 +9002,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR1X","288th_M41_Launcher","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 		respawnWeapons[] = {"288th_AR1X","288th_M41_Launcher","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M41_Twin_HEAT_Thermal"};
-		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M41_Twin_HEAT_Thermal"};
+		magazines[] = { "288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M41_Twin_HEAT_Thermal"};
+		respawnMagazines[] = { "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_M41_Twin_HEAT_Thermal"};
 
 		backpack = "288th_Kitbag_AT";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -9021,8 +9024,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 		respawnWeapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		magazines[] = { "288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		respawnMagazines[] = { "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -9041,8 +9044,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR3X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 		respawnWeapons[] = {"288th_AR3X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		magazines[] = { "288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		respawnMagazines[] = { "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -9139,8 +9142,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR4X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 		respawnWeapons[] = {"288th_AR4X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", };
-		respawnMagazines[] = {"288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_Stanag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", };
+		magazines[] = { "288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", };
+		respawnMagazines[] = {"288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","3Rnd_HE_Grenade_shell","288th_32Rnd_127x40", };
 
 		backpack = "288th_Kitbag";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -9181,8 +9184,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 		respawnWeapons[] = {"288th_AR1X","288th_FNX_99_Tactical","Binocular","Throw","Put" };
 
-		magazines[] = { "288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
-		respawnMagazines[] = { "288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		magazines[] = { "288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
+		respawnMagazines[] = { "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_M12_Frag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag","288th_White_Smoke_Mag" };
 
 		backpack = "288th_RTO_pack_Black";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -9202,8 +9205,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR1X","288th_FNX_99_Tactical","OPTRE_Smartfinder","Throw","Put" };
 		respawnWeapons[] = {"288th_AR1X","288th_FNX_99_Tactical","OPTRE_Smartfinder","Throw","Put" };
 
-		magazines[] = {"288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", };
-		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", };
+		magazines[] = {"288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", };
+		respawnMagazines[] = {"288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", };
 
 		backpack = "288th_RTO_pack_Black";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };
@@ -9223,8 +9226,8 @@ class cfgVehicles
 		weapons[] = {"288th_AR1X","288th_M6C","OPTRE_Smartfinder","Throw","Put" };
 		respawnWeapons[] = {"288th_AR1X","288th_M6C","OPTRE_Smartfinder","Throw","Put" };
 
-		magazines[] = {"288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", };
-		respawnMagazines[] = {"288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40","Laserbatteries","288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", "288th_Stanag","288th_32Rnd_127x40", };
+		magazines[] = {"288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", };
+		respawnMagazines[] = {"288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40","Laserbatteries","288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", "288th_30Rnd_65x85_Mag","288th_32Rnd_127x40", };
 
 		backpack = "288th_RTO_pack_Black";
 		headgearList[] = { "288th_CH252_Marine",0.25,"288th_CH252_Marine_Red",0.25,"288th_CH252_Marine_Silver",0.25,"288th_CH252_Marine_Gold",0.25 };

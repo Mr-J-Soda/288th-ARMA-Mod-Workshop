@@ -30,7 +30,7 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_Stanag",
+			"288th_30Rnd_65x85_Mag",
 			"288th_Plasma_Red_Mag",
 			"288th_Plasma_Orange_Mag",
 			"288th_Plasma_Yellow_Mag",
@@ -229,6 +229,7 @@ class cfgWeapons
 		};
 		class secondary : 288th_Railgun_Underbarrel
 		{
+			canShootInWater = 1;
 			displayName = "Experimental Railgun Modification";
 			modes[] =
 			{

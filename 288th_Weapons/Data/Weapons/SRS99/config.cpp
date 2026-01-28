@@ -27,6 +27,8 @@ class CfgPatches
 class CfgWeapons
 {
 	class OPTRE_SRS99D;
+	class srifle_EBR_F;
+	class Mode_SemiAuto;
 
 	// SRS99C Sniper Rifle W. Suppressor
 	class 288th_SRS99C : OPTRE_SRS99D
@@ -90,11 +92,68 @@ class CfgWeapons
 		dispersion = 0;
 		autoReload = true;
 		magazineReloadTime = 2;
-		magazines[] = 
-		{ 
-			"288th_SRS99XT_Mag" 
-		};
+		magazines[] = { "288th_SRS99XT_Mag" };
 		magazineWell[] = { "" };
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType{};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"OPTRE_SniperRifle_SoundSet","DMR05_tail_SoundSet","DMR05_InteriorTail_SoundSet"};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+				begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_01",1.0,1,300};
+				begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_02",1.0,1,300};
+				begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_03",1.0,1,300};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_interior",1.0,1,300};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_trees",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_forest",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_meadows",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_houses",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			reloadTime = 0.35;
+			dispersion = 0.00015;
+			recoil = "recoil_single_gm6";
+			recoilProne = "recoil_single_gm6";
+			minRange = 2;
+			minRangeProbab = 0.25;
+			midRange = 800;
+			midRangeProbab = 0.75;
+			maxRange = 2000;
+			maxRangeProbab = 0.25;
+		};
 	};
-
 };

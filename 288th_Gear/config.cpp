@@ -449,22 +449,6 @@ class cfgWeapons
 		displayName = "[288th] CH252D (Butcher)";
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets\Butcher\MA_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\Human_ODST\Color_Variants\MA_ODST_Depolarized_Visor_CA.paa","MA_Armor\data\Attachments\Balaclava\Marine_Balaclava_CO.paa"};
 	};
-	class 288th_CH252D_Helmet_Egg: 288th_CH252D_Helmet
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] CH252D (RG)";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets\RG\MA_ODST_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets\RG\MA_ODST_Visor_CO.paa","MA_Armor\data\Attachments\Balaclava\Marine_Balaclava_CO.paa"};
-	};
-	class 288th_CH252D_Helmet_Egg_dp: 288th_CH252D_Helmet_dp
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] CH252D (RG)";
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets\RG\MA_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\Human_ODST\Color_Variants\MA_ODST_Depolarized_Visor_CA.paa","MA_Armor\data\Attachments\Balaclava\Marine_Balaclava_CO.paa"};
-	};
 	class 288th_CH252D_Helmet_Bandit: 288th_CH252D_Helmet
 	{
 		scope = 2;
@@ -1006,6 +990,22 @@ class cfgWeapons
 		optreVarietys[] = {"","","_broken"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Gungnir\Eugen\Gungnir_Helmet_Eugen_CO.paa"};
 	};
+	class 288th_Gungnir_Helmet_Kynetik: 288th_Gungnir_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] MK VG (Kynetik)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Gungnir\Kynetik\Gungnir_Helmet_CO.paa"};
+	};
+	class 288th_Gungnir_Helmet_Snow: 288th_Gungnir_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] MK VG (Snow)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Gungnir\Snow\Gungnir_Helmet_CO.paa"};
+	};
 
 	//MA Commando Helmet
 	class 288th_Commando_Helmet: MA_Spartan_Helmet_Base
@@ -1503,6 +1503,16 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\JFO_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\JFO_Visor_Teal_CO.paa"};
 	};
 
+	////MA JFO Personal Helmets
+	class 288th_JFO_Helmet_Kennedy: 288th_JFO_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] JFO (Kennedy)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\Kennedy\JFO_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\Kennedy\JFO_Visor_CO.paa"};
+	};
+
 	//MA JFO ONI Helmet
 	class 288th_JFO_Helmet_ONI: 288th_JFO_Helmet
 	{
@@ -1872,6 +1882,14 @@ class cfgWeapons
 		displayName = "[288th] EVA (Spice)";
 		optreVarietys[] = {"","","_broken"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_EVA\Spice\EVA_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_EVA\Spice\EVA_Visor_CO.paa"};
+	};
+	class 288th_EVA_Helmet_Meyers: 288th_EVA_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] EVA (Meyers)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_EVA\Meyers\EVA_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_EVA\Meyers\EVA_Visor_CO.paa"};
 	};
 
 	//MA MKV Helmets
@@ -2351,7 +2369,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Grenadier_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Grenadier_Visor_Teal_CO.paa"};
 	};
 
-	////MA Gungnir Personal Helmets
+	////MA Grenadier Personal Helmets
 	class 288th_Grenadier_Helmet_Glitch: 288th_Grenadier_Helmet
 	{
 		dlc = "288thDJP_Aux";
@@ -2359,6 +2377,14 @@ class cfgWeapons
 		displayName = "[288th] MK IV G (Glitch)";
 		optreVarietys[] = {"","","_broken"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Glitch\Grenadier_Helmet_Glitch_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Glitch\Grenadier_Visor_Glitch_CO.paa"};
+	};
+	class 288th_Grenadier_Helmet_Logic: 288th_Grenadier_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] MK IV G (Logic)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Logic\Grenadier_Helmet_Logic_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Logic\Grenadier_Visor_Logic_CO.paa"};
 	};
 
 
@@ -3720,6 +3746,105 @@ class cfgWeapons
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"
 		};
+		class ItemInfo: ItemInfo
+		{
+			vestType = "Rebreather";
+			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Right","ODST_Left","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","WaistGLeft","WaistGRight","WaistPLeft","WaistPRight","WaistRLeft","WaistRRight","WaistSLeft","WaistSRight"};
+			uniformModel = "MA_Armor\data\Vests\M52_ODST\M52_ODST_Vest.p3d";
+			hiddenSelectionsTextures[] = 
+			{
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Green\MA_ODST_CQB_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Green\MA_ODST_CQB_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Green\Whiskey\MA_ODST_Marksman_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Green\Whiskey\MA_ODST_Marksman_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Green\Whiskey\MA_ODST_Shoulders_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Green\Whiskey\MA_ODST_Shoulders_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"
+			};
+			containerClass = "Supply350";
+			mass = 20;
+			passThrough = 0.1;
+			modelSides[] = {6};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 20;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 20;
+					passThrough = 0.1;
+				};
+			};
+		};
 	};
 	class 288th_ODST_Vest_Butcher: 288th_ODST_Vest_Demolitions
 	{
@@ -3776,7 +3901,102 @@ class cfgWeapons
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Right","ODST_Left","LShoulderRadio","RShoulderRadio","ChestPMLeft","ChestPMRight","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGRight","WaistRLeft","WaistRRight","WaistSLeft","LegPouchL","LegPouchR"};
 		class ItemInfo: ItemInfo
 		{
+			vestType = "Rebreather";
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Right","ODST_Left","LShoulderRadio","RShoulderRadio","ChestPMLeft","ChestPMRight","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGRight","WaistRLeft","WaistRRight","WaistSLeft","LegPouchL","LegPouchR"};
+			uniformModel = "MA_Armor\data\Vests\M52_ODST\M52_ODST_Vest.p3d";
+			containerClass = "Supply200";
+			hiddenSelectionsTextures[] = 
+			{
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\MA_ODST_CQB_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\MA_ODST_CQB_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Marksman_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Marksman_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Shoulders_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\Eugen\MA_ODST_Shoulders_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa"
+			};
+			mass = 20;
+			passThrough = 0.1;
+			modelSides[] = {6};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 60;
+					passThrough = 0.1;
+				};
+			};
 		};
 		hiddenSelectionsTextures[] = 
 		{
@@ -3811,51 +4031,6 @@ class cfgWeapons
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa"
 		};
 	};
-	class 288th_ODST_Vest_Egg: 288th_ODST_Vest_Rifleman
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] M56D MISC (RG)";
-		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","LShoulderRadio","RShoulderRadio","WaistGLeft","WaistGRight","WaistRLeft","WaistRRight","WaistSLeft","WaistSRight"};
-		hiddenSelectionsTextures[] = 
-		{
-			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_CQB_co.paa",
-			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_CQB_co.paa",
-			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_Marksman_co.paa",
-			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_Marksman_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\RG\MA_ODST_Vest_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\RG\MA_ODST_Vest_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\RG\MA_ODST_Vest_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\RG\MA_ODST_Shoulders_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\RG\MA_ODST_Shoulders_co.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
-			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
-			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
-			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
-			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
-			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"
-		};
-		class ItemInfo: ItemInfo
-		{
-			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","LShoulderRadio","RShoulderRadio","WaistGLeft","WaistGRight","WaistRLeft","WaistRRight","WaistSLeft","WaistSRight"};
-		};
-	};
 	class 288th_ODST_Vest_Error: 288th_ODST_Vest_Rifleman
 	{
 		scope = 2;
@@ -3870,11 +4045,11 @@ class cfgWeapons
 			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_CQB_co.paa",
 			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_Marksman_co.paa",
 			"MA_Armor\data\Vests\M52_ODST\Color_Variants\MA_ODST_Marksman_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Error\MA_ODST_Vest_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Error\MA_ODST_Vest_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Error\MA_ODST_Vest_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Error\MA_ODST_Shoulders_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Error\MA_ODST_Shoulders_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Error\MA_ODST_Vest_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Error\MA_ODST_Vest_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Error\MA_ODST_Vest_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Error\MA_ODST_Shoulders_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Error\MA_ODST_Shoulders_co.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
@@ -3915,15 +4090,15 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\MA_ODST_CQB_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\MA_ODST_CQB_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\Johnson\ODST_Marksman_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\Johnson\ODST_Marksman_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\Johnson\ODST_Vest_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\Johnson\ODST_Vest_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\Johnson\ODST_Vest_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\MA_ODST_Shoulders_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\White\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_CQB_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_CQB_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Command\Johnson\MA_ODST_Marksman_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Command\Johnson\MA_ODST_Marksman_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Command\Johnson\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Command\Johnson\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Command\Johnson\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Shoulders_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
@@ -3956,7 +4131,65 @@ class cfgWeapons
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","LShoulderRadio","RShoulderRadio","ChestPouch","TorsoPouch","TorsoPMLeft","TorsoPMRight","WaistRLeft","WaistGLeft","WaistSRight","LegPouchL"};
 		class ItemInfo: ItemInfo
 		{
+			containerClass = "Supply300";
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","LShoulderRadio","RShoulderRadio","ChestPouch","TorsoPouch","TorsoPMLeft","TorsoPMRight","WaistRLeft","WaistGLeft","WaistSRight","LegPouchL"};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 30;
+					passThrough = 0.1;
+				};
+			};
 		};
 		hiddenSelectionsTextures[] = 
 		{
@@ -3964,11 +4197,11 @@ class cfgWeapons
 			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_CQB_co.paa",
 			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Marksman_co.paa",
 			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Marksman_co.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Glitch\MA_ODST_Vest_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Glitch\MA_ODST_Vest_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Glitch\MA_ODST_Vest_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Glitch\MA_ODST_Shoulders_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Glitch\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Glitch\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Glitch\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Glitch\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Glitch\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\command\Glitch\MA_ODST_Shoulders_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
@@ -4002,6 +4235,65 @@ class cfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Right","Marksman_Left","Marksman_Right","ODST_Left","ChestPouch","LShoulderRadio","TorsoPouch","WaistRLeft","WaistRRight","WaistSLeft","WaistSRight"};
+			hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_CQB_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_CQB_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Marksman_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Marksman_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Shoulders_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Shoulders_co.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa","MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"};
+			containerClass = "Supply200";
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 50;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 50;
+					passThrough = 0.1;
+				};
+			};
 		};
 		hiddenSelectionsTextures[] = 
 		{
@@ -4075,6 +4367,190 @@ class cfgWeapons
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"
 		};
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Right","Marksman_Left","Marksman_Right","ODST_Left","LShoulderRadio","RShoulderRadio","ChestPMLeft","ChestPMRight","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGRight","WaistRLeft","WaistRRight","WaistSLeft","LegPouchL","LegPouchR"};
+			containerClass = "Supply150";
+			hiddenSelectionsTextures[] = 
+			{
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_CQB_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_CQB_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Marksman_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Marksman_co.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_Vest_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_Shoulders_CO.paa",
+				"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Weekers\MA_ODST_Shoulders_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+				"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Hands
+				{
+					hitpointName = "HitHands";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 60;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+	class 288th_ODST_Vest_Kynetik: 288th_ODST_Vest_Rifleman
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M56D Blue (Kynetik)";
+		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","ODST_Left","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","ODST_Left","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_CQB_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_CQB_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Marksman_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Marksman_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Kynetik\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Kynetik\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Kynetik\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Kynetik\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Kynetik\MA_ODST_Shoulders_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Eng_TrooperExtras_B_CO.paa"
+		};
+	};
+	class 288th_ODST_Vest_Logic: 288th_ODST_Vest_Medic
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M56D Blue (Logic)";
+		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","ODST_Left","ODST_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","LShoulderRadio","RShoulderRadio","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistGLeft","WaistGRight","WaistRLeft","WaistRRight","WaistSRight","LegPouchR"};
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","ODST_Left","ODST_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","LShoulderRadio","RShoulderRadio","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistGLeft","WaistGRight","WaistRLeft","WaistRRight","WaistSRight","LegPouchR"};
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Logic\MA_ODST_CQB_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Logic\MA_ODST_CQB_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Marksman_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Marksman_co.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Logic\MA_ODST_Vest_Logic_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Logic\MA_ODST_Vest_Logic_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\Logic\MA_ODST_Vest_Logic_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Blue\MA_ODST_Shoulders_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa"
+		};
 	};
 
 	//MA ODST ONI Vests
@@ -4139,6 +4615,7 @@ class cfgWeapons
 		};
 	};
 
+	//Testing Armors
 	class 288th_ODST_Vest_Experimental_Light: 288th_ODST_Vest_Rifleman
 	{
 		scope = 2;
@@ -4147,7 +4624,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		displayName = "[288th] M56D Experimental (Light Armor)";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
-		class ItemInfo: VestItem
+		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
@@ -4224,7 +4701,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		displayName = "[288th] M56D Experimental (Ultra Light Armor)";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
-		class ItemInfo: VestItem
+		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
@@ -4301,7 +4778,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		displayName = "[288th] M56D Experimental (Heavy Armor)";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
-		class ItemInfo: VestItem
+		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
@@ -4378,7 +4855,7 @@ class cfgWeapons
 		author = "Soda / Misriah 288";
 		displayName = "[288th] M56D Experimental (Ultra Heavy Armor)";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
-		class ItemInfo: VestItem
+		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
 			hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","Camo5","Camo6","Camo7","Camo8","Camo9","Camo10","Camo11","Camo12","Camo13","Camo14","Camo15","Camo16","Camo17","Camo18","Camo19","Camo20","Camo21","Camo22","Camo23","Camo24","Camo25","Camo26","Camo27","Camo28","Camo29","CQB_Left","CQB_Right","Marksman_Left","Marksman_Right","ChestPMLeft","ChestPMRight","ChestPouch","LShoulderRadio","RShoulderRadio","StomachPouch","TorsoPMLeft","TorsoPMRight","TorsoPouch","WaistBack","WaistGLeft","WaistRLeft","WaistRRight","WaistSRight","LegPouchL","LegPouchR"};
@@ -4791,15 +5268,15 @@ class cfgWeapons
 			modelSides[] = {6};
 		};
 	};
-	class 288th_BDU_ODST_EGG: 288th_BDU_ODST_NC
+	class 288th_BDU_ODST_Logic: 288th_BDU_ODST_NC
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		displayName = "[288th] M56D Uniform (RG)";
+		displayName = "[288th] M56D Uniform (Logic)";
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "288th_ODST_BDU_EGG";
+			uniformClass = "288th_ODST_BDU_Logic";
 			containerClass = "Supply200";
 			mass = 10;
 			uniformType = "Neopren";
@@ -5213,19 +5690,19 @@ class cfgVehicles
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa"
 		};
 	};
-	class 288th_ODST_BDU_EGG: 288th_ODST_BDU_NC
+	class 288th_ODST_BDU_Logic: 288th_ODST_BDU_NC
 	{
 		scope = 2;
 		scopeArsenal = 2;
 		hiddenSelectionsTextures[] = 
 		{
-			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_Grey_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTLowerBDU_Grey_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODST_Collar_Grey_CO.paa",
-			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\TrooperSoftpadding_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_Winter_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTLowerBDU_Winter_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODST_Collar_Winter_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\Logic\MA_ODST_TrooperSoftpadding_Logic_CO.paa",
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\TrooperArmorStraps_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\RG\MA_ODST_UpperArmor_CO.paa",
-			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\RG\MA_ODSTLowerArmor_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperArmor_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\Logic\MA_ODST_LowerArmor_Logic_CO.paa",
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa",
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa",
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa"
@@ -5247,6 +5724,1707 @@ class cfgVehicles
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa",
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa",
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa"
+		};
+	};
+};
+
+class XtdGearModels
+{
+	class CfgWeapons
+	{
+		class CH252D_Helmet
+		{
+			label = "CH252D";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "CH252D";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy","Lego"};
+			};
+		};
+		class CH252A_Helmet
+		{
+			label = "CH252A";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "CH252A";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon"};
+			};
+		};
+		class MKVB_Helmet
+		{
+			label = "MK VB";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MKVB";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class Gungnir_Helmet
+		{
+			label = "MK VG";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Gungnir";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class Commando_Helmet
+		{
+			label = "MK VK";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Commando";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class Scout_Helmet
+		{
+			label = "MK IV S";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Scout";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class JFO_Helmet
+		{
+			label = "JFO";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "JFO";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy","Kennedy"};
+			};
+		};
+		class Recon_Helmet
+		{
+			label = "MK VR";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Recon";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class EVA_Helmet
+		{
+			label = "EVA";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "EVA";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy","Blood","Meta"};
+			};
+		};
+		class MKV_Helmet
+		{
+			label = "MK V";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MKV";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class MKIV_Helmet
+		{
+			label = "MK IV";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MKIV";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class Grenadier_Helmet
+		{
+			label = "MK IV G";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Grenadier";
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
+			};
+		};
+		class ONI_Helmet
+		{
+			label = "ONI";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "ONI";
+				values[] = {"Recon","JFO","Commando","CH252D"};
+			};
+		};
+		class Personal_Helmet
+		{
+			label = "Personal";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Personal";
+				values[] = {"Whiskey","Butcher","Error","Bandit","Kelkuza","Johnson","Eugen","Kynetik","Snow","Weekers","Owlbear","Spice","Meyers","Glitch","Logic"};
+			};
+		};
+		class Basic_Armor
+		{
+			label = "Basic";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Basic";
+				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic"};
+			};
+		};
+		class WT_Armor
+		{
+			label = "White Team";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "White Team";
+				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic"};
+			};
+		};
+		class YT_Armor
+		{
+			label = "Yellow Team";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Yellow Team";
+				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic","Butcher","Eugen","Bandit"};
+			};
+		};
+		class BT_Armor
+		{
+			label = "Blue Team";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Blue Team";
+				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic","Kynetik","Weekers","Logic"};
+			};
+		};
+		class GT_Armor
+		{
+			label = "Green Team";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Green Team";
+				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic","Whiskey"};
+			};
+		};
+		class CMM_Armor
+		{
+			label = "Command";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Command";
+				values[] = {"Error","Johnson","Glitch"};
+			};
+		};
+		/*class MISC_Armor
+		{
+			label = "MISC";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MISC";
+				values[] = {};
+			};
+		};*/
+		class DEV_Armor
+		{
+			label = "Testing";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Testing";
+				values[] = {"Light","Ultra Light","Heavy","Ultra Heavy"};
+			};
+		};
+		class ONI_Armor
+		{
+			label = "ONI";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "ONI";
+				values[] = {"Main","Alt"};
+			};
+		};
+		class Uniform
+		{
+			label = "Collared";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Collared";
+				values[] = {"Basic","Grey","Winter","ERDL","C Chip","Tiger","Brown","Grassland","Desert","Woodland"};
+			};
+		};
+		class Uniform_NC
+		{
+			label = "Uncollared";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Uncollared";
+				values[] = {"Basic","Grey","Winter","ERDL","C Chip","Tiger","Brown","Grassland","Desert","Woodland"};
+			};
+		};
+		class Uniform_Custom
+		{
+			label = "Custom";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Custom";
+				values[] = {"ONI","Bandit","Error","Logic"};
+			};
+		};
+	};
+};
+
+class XtdGearInfos
+{
+	class CfgWeapons
+	{
+		//Ch252D
+		class 288th_CH252D_Helmet
+		{
+			model = "CH252D_Helmet";
+			member = "Ice";
+		};
+		class 288th_CH252D_Helmet_Red
+		{
+			model = "CH252D_Helmet";
+			member = "Red";
+		};
+		class 288th_CH252D_Helmet_Orange
+		{
+			model = "CH252D_Helmet";
+			member = "Orange";
+		};
+		class 288th_CH252D_Helmet_Yellow
+		{
+			model = "CH252D_Helmet";
+			member = "Yellow";
+		};
+		class 288th_CH252D_Helmet_Green
+		{
+			model = "CH252D_Helmet";
+			member = "Green";
+		};
+		class 288th_CH252D_Helmet_Lime
+		{
+			model = "CH252D_Helmet";
+			member = "Lime";
+		};
+		class 288th_CH252D_Helmet_Teal
+		{
+			model = "CH252D_Helmet";
+			member = "Teal";
+		};
+		class 288th_CH252D_Helmet_Blue
+		{
+			model = "CH252D_Helmet";
+			member = "Blue";
+		};
+		class 288th_CH252D_Helmet_Purple
+		{
+			model = "CH252D_Helmet";
+			member = "Purple";
+		};
+		class 288th_CH252D_Helmet_Pink
+		{
+			model = "CH252D_Helmet";
+			member = "Pink";
+		};
+		class 288th_CH252D_Helmet_White
+		{
+			model = "CH252D_Helmet";
+			member = "White";
+		};
+		class 288th_CH252D_Helmet_Black
+		{
+			model = "CH252D_Helmet";
+			member = "Black";
+		};
+		class 288th_CH252D_Helmet_Navy
+		{
+			model = "CH252D_Helmet";
+			member = "Navy";
+		};
+		class 288th_CH252D_Helmet_Maroon
+		{
+			model = "CH252D_Helmet";
+			member = "Maroon";
+		};
+		class 288th_CH252D_Helmet_Galaxy
+		{
+			model = "CH252D_Helmet";
+			member = "Galaxy";
+		};
+		class 288th_CH252D_Helmet_Lego
+		{
+			model = "CH252D_Helmet";
+			member = "Lego";
+		};
+		//CH252A
+		class 288th_CH252A_Helmet
+		{
+			model = "CH252A_Helmet";
+			member = "Ice";
+		};
+		class 288th_CH252A_Helmet_Red
+		{
+			model = "CH252A_Helmet";
+			member = "Red";
+		};
+		class 288th_CH252A_Helmet_Orange
+		{
+			model = "CH252A_Helmet";
+			member = "Orange";
+		};
+		class 288th_CH252A_Helmet_Yellow
+		{
+			model = "CH252A_Helmet";
+			member = "Yellow";
+		};
+		class 288th_CH252A_Helmet_Green
+		{
+			model = "CH252A_Helmet";
+			member = "Green";
+		};
+		class 288th_CH252A_Helmet_Lime
+		{
+			model = "CH252A_Helmet";
+			member = "Lime";
+		};
+		class 288th_CH252A_Helmet_Teal
+		{
+			model = "CH252A_Helmet";
+			member = "Teal";
+		};
+		class 288th_CH252A_Helmet_Blue
+		{
+			model = "CH252A_Helmet";
+			member = "Blue";
+		};
+		class 288th_CH252A_Helmet_Purple
+		{
+			model = "CH252A_Helmet";
+			member = "Purple";
+		};
+		class 288th_CH252A_Helmet_Pink
+		{
+			model = "CH252A_Helmet";
+			member = "Pink";
+		};
+		class 288th_CH252A_Helmet_White
+		{
+			model = "CH252A_Helmet";
+			member = "White";
+		};
+		class 288th_CH252A_Helmet_Black
+		{
+			model = "CH252A_Helmet";
+			member = "Black";
+		};
+		class 288th_CH252A_Helmet_Navy
+		{
+			model = "CH252A_Helmet";
+			member = "Navy";
+		};
+		class 288th_CH252A_Helmet_Maroon
+		{
+			model = "CH252A_Helmet";
+			member = "Maroon";
+		};
+		class 288th_CH252A_Helmet_Galaxy
+		{
+			model = "CH252A_Helmet";
+			member = "Galaxy";
+		};
+		class 288th_CH252A_Helmet_Lego
+		{
+			model = "CH252A_Helmet";
+			member = "Lego";
+		};
+		//MK VB
+		class 288th_MKVB_Helmet
+		{
+			model = "MKVB_Helmet";
+			member = "Ice";
+		};
+		class 288th_MKVB_Helmet_Red
+		{
+			model = "MKVB_Helmet";
+			member = "Red";
+		};
+		class 288th_MKVB_Helmet_Orange
+		{
+			model = "MKVB_Helmet";
+			member = "Orange";
+		};
+		class 288th_MKVB_Helmet_Yellow
+		{
+			model = "MKVB_Helmet";
+			member = "Yellow";
+		};
+		class 288th_MKVB_Helmet_Green
+		{
+			model = "MKVB_Helmet";
+			member = "Green";
+		};
+		class 288th_MKVB_Helmet_Lime
+		{
+			model = "MKVB_Helmet";
+			member = "Lime";
+		};
+		class 288th_MKVB_Helmet_Teal
+		{
+			model = "MKVB_Helmet";
+			member = "Teal";
+		};
+		class 288th_MKVB_Helmet_Blue
+		{
+			model = "MKVB_Helmet";
+			member = "Blue";
+		};
+		class 288th_MKVB_Helmet_Purple
+		{
+			model = "MKVB_Helmet";
+			member = "Purple";
+		};
+		class 288th_MKVB_Helmet_Pink
+		{
+			model = "MKVB_Helmet";
+			member = "Pink";
+		};
+		class 288th_MKVB_Helmet_White
+		{
+			model = "MKVB_Helmet";
+			member = "White";
+		};
+		class 288th_MKVB_Helmet_Black
+		{
+			model = "MKVB_Helmet";
+			member = "Black";
+		};
+		class 288th_MKVB_Helmet_Navy
+		{
+			model = "MKVB_Helmet";
+			member = "Navy";
+		};
+		class 288th_MKVB_Helmet_Maroon
+		{
+			model = "MKVB_Helmet";
+			member = "Maroon";
+		};
+		class 288th_MKVB_Helmet_Galaxy
+		{
+			model = "MKVB_Helmet";
+			member = "Galaxy";
+		};
+		//MK VG
+		class 288th_Gungnir_Helmet
+		{
+			model = "Gungnir_Helmet";
+			member = "Ice";
+		};
+		class 288th_Gungnir_Helmet_Red
+		{
+			model = "Gungnir_Helmet";
+			member = "Red";
+		};
+		class 288th_Gungnir_Helmet_Orange
+		{
+			model = "Gungnir_Helmet";
+			member = "Orange";
+		};
+		class 288th_Gungnir_Helmet_Yellow
+		{
+			model = "Gungnir_Helmet";
+			member = "Yellow";
+		};
+		class 288th_Gungnir_Helmet_Green
+		{
+			model = "Gungnir_Helmet";
+			member = "Green";
+		};
+		class 288th_Gungnir_Helmet_Lime
+		{
+			model = "Gungnir_Helmet";
+			member = "Lime";
+		};
+		class 288th_Gungnir_Helmet_Teal
+		{
+			model = "Gungnir_Helmet";
+			member = "Teal";
+		};
+		class 288th_Gungnir_Helmet_Blue
+		{
+			model = "Gungnir_Helmet";
+			member = "Blue";
+		};
+		class 288th_Gungnir_Helmet_Purple
+		{
+			model = "Gungnir_Helmet";
+			member = "Purple";
+		};
+		class 288th_Gungnir_Helmet_Pink
+		{
+			model = "Gungnir_Helmet";
+			member = "Pink";
+		};
+		class 288th_Gungnir_Helmet_White
+		{
+			model = "Gungnir_Helmet";
+			member = "White";
+		};
+		class 288th_Gungnir_Helmet_Black
+		{
+			model = "Gungnir_Helmet";
+			member = "Black";
+		};
+		class 288th_Gungnir_Helmet_Navy
+		{
+			model = "Gungnir_Helmet";
+			member = "Navy";
+		};
+		class 288th_Gungnir_Helmet_Maroon
+		{
+			model = "Gungnir_Helmet";
+			member = "Maroon";
+		};
+		class 288th_Gungnir_Helmet_Galaxy
+		{
+			model = "Gungnir_Helmet";
+			member = "Galaxy";
+		};
+		//MK VK
+		class 288th_Commando_Helmet
+		{
+			model = "Commando_Helmet";
+			member = "Ice";
+		};
+		class 288th_Commando_Helmet_Red
+		{
+			model = "Commando_Helmet";
+			member = "Red";
+		};
+		class 288th_Commando_Helmet_Orange
+		{
+			model = "Commando_Helmet";
+			member = "Orange";
+		};
+		class 288th_Commando_Helmet_Yellow
+		{
+			model = "Commando_Helmet";
+			member = "Yellow";
+		};
+		class 288th_Commando_Helmet_Green
+		{
+			model = "Commando_Helmet";
+			member = "Green";
+		};
+		class 288th_Commando_Helmet_Lime
+		{
+			model = "Commando_Helmet";
+			member = "Lime";
+		};
+		class 288th_Commando_Helmet_Teal
+		{
+			model = "Commando_Helmet";
+			member = "Teal";
+		};
+		class 288th_Commando_Helmet_Blue
+		{
+			model = "Commando_Helmet";
+			member = "Blue";
+		};
+		class 288th_Commando_Helmet_Purple
+		{
+			model = "Commando_Helmet";
+			member = "Purple";
+		};
+		class 288th_Commando_Helmet_Pink
+		{
+			model = "Commando_Helmet";
+			member = "Pink";
+		};
+		class 288th_Commando_Helmet_White
+		{
+			model = "Commando_Helmet";
+			member = "White";
+		};
+		class 288th_Commando_Helmet_Black
+		{
+			model = "Commando_Helmet";
+			member = "Black";
+		};
+		class 288th_Commando_Helmet_Navy
+		{
+			model = "Commando_Helmet";
+			member = "Navy";
+		};
+		class 288th_Commando_Helmet_Maroon
+		{
+			model = "Commando_Helmet";
+			member = "Maroon";
+		};
+		class 288th_Commando_Helmet_Galaxy
+		{
+			model = "Commando_Helmet";
+			member = "Galaxy";
+		};
+		//MK IV S
+		class 288th_Scout_Helmet
+		{
+			model = "Scout_Helmet";
+			member = "Ice";
+		};
+		class 288th_Scout_Helmet_Red
+		{
+			model = "Scout_Helmet";
+			member = "Red";
+		};
+		class 288th_Scout_Helmet_Orange
+		{
+			model = "Scout_Helmet";
+			member = "Orange";
+		};
+		class 288th_Scout_Helmet_Yellow
+		{
+			model = "Scout_Helmet";
+			member = "Yellow";
+		};
+		class 288th_Scout_Helmet_Green
+		{
+			model = "Scout_Helmet";
+			member = "Green";
+		};
+		class 288th_Scout_Helmet_Lime
+		{
+			model = "Scout_Helmet";
+			member = "Lime";
+		};
+		class 288th_Scout_Helmet_Teal
+		{
+			model = "Scout_Helmet";
+			member = "Teal";
+		};
+		class 288th_Scout_Helmet_Blue
+		{
+			model = "Scout_Helmet";
+			member = "Blue";
+		};
+		class 288th_Scout_Helmet_Purple
+		{
+			model = "Scout_Helmet";
+			member = "Purple";
+		};
+		class 288th_Scout_Helmet_Pink
+		{
+			model = "Scout_Helmet";
+			member = "Pink";
+		};
+		class 288th_Scout_Helmet_White
+		{
+			model = "Scout_Helmet";
+			member = "White";
+		};
+		class 288th_Scout_Helmet_Black
+		{
+			model = "Scout_Helmet";
+			member = "Black";
+		};
+		class 288th_Scout_Helmet_Navy
+		{
+			model = "Scout_Helmet";
+			member = "Navy";
+		};
+		class 288th_Scout_Helmet_Maroon
+		{
+			model = "Scout_Helmet";
+			member = "Maroon";
+		};
+		class 288th_Scout_Helmet_Galaxy
+		{
+			model = "Scout_Helmet";
+			member = "Galaxy";
+		};
+		//JFO
+		class 288th_JFO_Helmet
+		{
+			model = "JFO_Helmet";
+			member = "Ice";
+		};
+		class 288th_JFO_Helmet_Red
+		{
+			model = "JFO_Helmet";
+			member = "Red";
+		};
+		class 288th_JFO_Helmet_Orange
+		{
+			model = "JFO_Helmet";
+			member = "Orange";
+		};
+		class 288th_JFO_Helmet_Yellow
+		{
+			model = "JFO_Helmet";
+			member = "Yellow";
+		};
+		class 288th_JFO_Helmet_Green
+		{
+			model = "JFO_Helmet";
+			member = "Green";
+		};
+		class 288th_JFO_Helmet_Lime
+		{
+			model = "JFO_Helmet";
+			member = "Lime";
+		};
+		class 288th_JFO_Helmet_Teal
+		{
+			model = "JFO_Helmet";
+			member = "Teal";
+		};
+		class 288th_JFO_Helmet_Blue
+		{
+			model = "JFO_Helmet";
+			member = "Blue";
+		};
+		class 288th_JFO_Helmet_Purple
+		{
+			model = "JFO_Helmet";
+			member = "Purple";
+		};
+		class 288th_JFO_Helmet_Pink
+		{
+			model = "JFO_Helmet";
+			member = "Pink";
+		};
+		class 288th_JFO_Helmet_White
+		{
+			model = "JFO_Helmet";
+			member = "White";
+		};
+		class 288th_JFO_Helmet_Black
+		{
+			model = "JFO_Helmet";
+			member = "Black";
+		};
+		class 288th_JFO_Helmet_Navy
+		{
+			model = "JFO_Helmet";
+			member = "Navy";
+		};
+		class 288th_JFO_Helmet_Maroon
+		{
+			model = "JFO_Helmet";
+			member = "Maroon";
+		};
+		class 288th_JFO_Helmet_Galaxy
+		{
+			model = "JFO_Helmet";
+			member = "Galaxy";
+		};
+		//MK VR
+		class 288th_Recon_Helmet
+		{
+			model = "Recon_Helmet";
+			member = "Ice";
+		};
+		class 288th_Recon_Helmet_Red
+		{
+			model = "Recon_Helmet";
+			member = "Red";
+		};
+		class 288th_Recon_Helmet_Orange
+		{
+			model = "Recon_Helmet";
+			member = "Orange";
+		};
+		class 288th_Recon_Helmet_Yellow
+		{
+			model = "Recon_Helmet";
+			member = "Yellow";
+		};
+		class 288th_Recon_Helmet_Green
+		{
+			model = "Recon_Helmet";
+			member = "Green";
+		};
+		class 288th_Recon_Helmet_Lime
+		{
+			model = "Recon_Helmet";
+			member = "Lime";
+		};
+		class 288th_Recon_Helmet_Teal
+		{
+			model = "Recon_Helmet";
+			member = "Teal";
+		};
+		class 288th_Recon_Helmet_Blue
+		{
+			model = "Recon_Helmet";
+			member = "Blue";
+		};
+		class 288th_Recon_Helmet_Purple
+		{
+			model = "Recon_Helmet";
+			member = "Purple";
+		};
+		class 288th_Recon_Helmet_Pink
+		{
+			model = "Recon_Helmet";
+			member = "Pink";
+		};
+		class 288th_Recon_Helmet_White
+		{
+			model = "Recon_Helmet";
+			member = "White";
+		};
+		class 288th_Recon_Helmet_Black
+		{
+			model = "Recon_Helmet";
+			member = "Black";
+		};
+		class 288th_Recon_Helmet_Navy
+		{
+			model = "Recon_Helmet";
+			member = "Navy";
+		};
+		class 288th_Recon_Helmet_Maroon
+		{
+			model = "Recon_Helmet";
+			member = "Maroon";
+		};
+		class 288th_Recon_Helmet_Galaxy
+		{
+			model = "Recon_Helmet";
+			member = "Galaxy";
+		};
+		//EVA
+		class 288th_EVA_Helmet
+		{
+			model = "EVA_Helmet";
+			member = "Ice";
+		};
+		class 288th_EVA_Helmet_Red
+		{
+			model = "EVA_Helmet";
+			member = "Red";
+		};
+		class 288th_EVA_Helmet_Orange
+		{
+			model = "EVA_Helmet";
+			member = "Orange";
+		};
+		class 288th_EVA_Helmet_Yellow
+		{
+			model = "EVA_Helmet";
+			member = "Yellow";
+		};
+		class 288th_EVA_Helmet_Green
+		{
+			model = "EVA_Helmet";
+			member = "Green";
+		};
+		class 288th_EVA_Helmet_Lime
+		{
+			model = "EVA_Helmet";
+			member = "Lime";
+		};
+		class 288th_EVA_Helmet_Teal
+		{
+			model = "EVA_Helmet";
+			member = "Teal";
+		};
+		class 288th_EVA_Helmet_Blue
+		{
+			model = "EVA_Helmet";
+			member = "Blue";
+		};
+		class 288th_EVA_Helmet_Purple
+		{
+			model = "EVA_Helmet";
+			member = "Purple";
+		};
+		class 288th_EVA_Helmet_Pink
+		{
+			model = "EVA_Helmet";
+			member = "Pink";
+		};
+		class 288th_EVA_Helmet_White
+		{
+			model = "EVA_Helmet";
+			member = "White";
+		};
+		class 288th_EVA_Helmet_Black
+		{
+			model = "EVA_Helmet";
+			member = "Black";
+		};
+		class 288th_EVA_Helmet_Navy
+		{
+			model = "EVA_Helmet";
+			member = "Navy";
+		};
+		class 288th_EVA_Helmet_Maroon
+		{
+			model = "EVA_Helmet";
+			member = "Maroon";
+		};
+		class 288th_EVA_Helmet_Galaxy
+		{
+			model = "EVA_Helmet";
+			member = "Galaxy";
+		};
+		class 288th_EVA_Helmet_Blood
+		{
+			model = "EVA_Helmet";
+			member = "Blood";
+		};
+		class 288th_EVA_Helmet_Meta
+		{
+			model = "EVA_Helmet";
+			member = "Meta";
+		};
+		//MK V
+		class 288th_MKV_Helmet
+		{
+			model = "MKV_Helmet";
+			member = "Ice";
+		};
+		class 288th_MKV_Helmet_Red
+		{
+			model = "MKV_Helmet";
+			member = "Red";
+		};
+		class 288th_MKV_Helmet_Orange
+		{
+			model = "MKV_Helmet";
+			member = "Orange";
+		};
+		class 288th_MKV_Helmet_Yellow
+		{
+			model = "MKV_Helmet";
+			member = "Yellow";
+		};
+		class 288th_MKV_Helmet_Green
+		{
+			model = "MKV_Helmet";
+			member = "Green";
+		};
+		class 288th_MKV_Helmet_Lime
+		{
+			model = "MKV_Helmet";
+			member = "Lime";
+		};
+		class 288th_MKV_Helmet_Teal
+		{
+			model = "MKV_Helmet";
+			member = "Teal";
+		};
+		class 288th_MKV_Helmet_Blue
+		{
+			model = "MKV_Helmet";
+			member = "Blue";
+		};
+		class 288th_MKV_Helmet_Purple
+		{
+			model = "MKV_Helmet";
+			member = "Purple";
+		};
+		class 288th_MKV_Helmet_Pink
+		{
+			model = "MKV_Helmet";
+			member = "Pink";
+		};
+		class 288th_MKV_Helmet_White
+		{
+			model = "MKV_Helmet";
+			member = "White";
+		};
+		class 288th_MKV_Helmet_Black
+		{
+			model = "MKV_Helmet";
+			member = "Black";
+		};
+		class 288th_MKV_Helmet_Navy
+		{
+			model = "MKV_Helmet";
+			member = "Navy";
+		};
+		class 288th_MKV_Helmet_Maroon
+		{
+			model = "MKV_Helmet";
+			member = "Maroon";
+		};
+		class 288th_MKV_Helmet_Galaxy
+		{
+			model = "MKV_Helmet";
+			member = "Galaxy";
+		};
+		//MKIV
+		class 288th_MKIV_Helmet
+		{
+			model = "MKIV_Helmet";
+			member = "Ice";
+		};
+		class 288th_MKIV_Helmet_Red
+		{
+			model = "MKIV_Helmet";
+			member = "Red";
+		};
+		class 288th_MKIV_Helmet_Orange
+		{
+			model = "MKIV_Helmet";
+			member = "Orange";
+		};
+		class 288th_MKIV_Helmet_Yellow
+		{
+			model = "MKIV_Helmet";
+			member = "Yellow";
+		};
+		class 288th_MKIV_Helmet_Green
+		{
+			model = "MKIV_Helmet";
+			member = "Green";
+		};
+		class 288th_MKIV_Helmet_Lime
+		{
+			model = "MKIV_Helmet";
+			member = "Lime";
+		};
+		class 288th_MKIV_Helmet_Teal
+		{
+			model = "MKIV_Helmet";
+			member = "Teal";
+		};
+		class 288th_MKIV_Helmet_Blue
+		{
+			model = "MKIV_Helmet";
+			member = "Blue";
+		};
+		class 288th_MKIV_Helmet_Purple
+		{
+			model = "MKIV_Helmet";
+			member = "Purple";
+		};
+		class 288th_MKIV_Helmet_Pink
+		{
+			model = "MKIV_Helmet";
+			member = "Pink";
+		};
+		class 288th_MKIV_Helmet_White
+		{
+			model = "MKIV_Helmet";
+			member = "White";
+		};
+		class 288th_MKIV_Helmet_Black
+		{
+			model = "MKIV_Helmet";
+			member = "Black";
+		};
+		class 288th_MKIV_Helmet_Navy
+		{
+			model = "MKIV_Helmet";
+			member = "Navy";
+		};
+		class 288th_MKIV_Helmet_Maroon
+		{
+			model = "MKIV_Helmet";
+			member = "Maroon";
+		};
+		class 288th_MKIV_Helmet_Galaxy
+		{
+			model = "MKIV_Helmet";
+			member = "Galaxy";
+		};
+		//Grenadier
+		class 288th_Grenadier_Helmet
+		{
+			model = "Grenadier_Helmet";
+			member = "Ice";
+		};
+		class 288th_Grenadier_Helmet_Red
+		{
+			model = "Grenadier_Helmet";
+			member = "Red";
+		};
+		class 288th_Grenadier_Helmet_Orange
+		{
+			model = "Grenadier_Helmet";
+			member = "Orange";
+		};
+		class 288th_Grenadier_Helmet_Yellow
+		{
+			model = "Grenadier_Helmet";
+			member = "Yellow";
+		};
+		class 288th_Grenadier_Helmet_Green
+		{
+			model = "Grenadier_Helmet";
+			member = "Green";
+		};
+		class 288th_Grenadier_Helmet_Lime
+		{
+			model = "Grenadier_Helmet";
+			member = "Lime";
+		};
+		class 288th_Grenadier_Helmet_Teal
+		{
+			model = "Grenadier_Helmet";
+			member = "Teal";
+		};
+		class 288th_Grenadier_Helmet_Blue
+		{
+			model = "Grenadier_Helmet";
+			member = "Blue";
+		};
+		class 288th_Grenadier_Helmet_Purple
+		{
+			model = "Grenadier_Helmet";
+			member = "Purple";
+		};
+		class 288th_Grenadier_Helmet_Pink
+		{
+			model = "Grenadier_Helmet";
+			member = "Pink";
+		};
+		class 288th_Grenadier_Helmet_White
+		{
+			model = "Grenadier_Helmet";
+			member = "White";
+		};
+		class 288th_Grenadier_Helmet_Black
+		{
+			model = "Grenadier_Helmet";
+			member = "Black";
+		};
+		class 288th_Grenadier_Helmet_Navy
+		{
+			model = "Grenadier_Helmet";
+			member = "Navy";
+		};
+		class 288th_Grenadier_Helmet_Maroon
+		{
+			model = "Grenadier_Helmet";
+			member = "Maroon";
+		};
+		class 288th_Grenadier_Helmet_Galaxy
+		{
+			model = "Grenadier_Helmet";
+			member = "Galaxy";
+		};
+		//ONI
+		class 288th_Recon_Helmet_ONI
+		{
+			model = "ONI_Helmet";
+			member = "Recon";
+		};
+		class 288th_JFO_Helmet_ONI
+		{
+			model = "ONI_Helmet";
+			member = "JFO";
+		};
+		class 288th_Commando_Helmet_ONI
+		{
+			model = "ONI_Helmet";
+			member = "Commando";
+		};
+		class 288th_CH252D_Helmet_ONI
+		{
+			model = "ONI_Helmet";
+			member = "CH252D";
+		};
+
+		//Personals
+		class 288th_CH252D_Helmet_Whiskey
+		{
+			model = "Personal_Helmet";
+			member = "Whiskey";
+		};
+		class 288th_CH252D_Helmet_Butcher
+		{
+			model = "CH252D_Helmet";
+			member = "Butcher";
+		};
+		class 288th_CH252D_Helmet_Error
+		{
+			model = "Personal_Helmet";
+			member = "Error";
+		};
+		class 288th_Gungnir_Helmet_Snow
+		{
+			model = "Personal_Helmet";
+			member = "Snow";
+		};
+		class 288th_CH252D_Helmet_Bandit
+		{
+			model = "Personal_Helmet";
+			member = "Bandit";
+		};
+		class 288th_CH252A_Helmet_Kelkuza
+		{
+			model = "Personal_Helmet";
+			member = "Kelkuza";
+		};
+		class 288th_EVA_Helmet_Owlbear
+		{
+			model = "Personal_Helmet";
+			member = "Owlbear";
+		};
+		class 288th_EVA_Helmet_Spice
+		{
+			model = "Personal_Helmet";
+			member = "Spice";
+		};
+		class 288th_EVA_Helmet_Meyers
+		{
+			model = "Personal_Helmet";
+			member = "Meyers";
+		};
+		class 288th_Grenadier_Helmet_Glitch
+		{
+			model = "Personal_Helmet";
+			member = "Glitch";
+		};
+		class 288th_Grenadier_Helmet_Logic
+		{
+			model = "Personal_Helmet";
+			member = "Logic";
+		};
+		class 288th_MKVB_Helmet_Johnson
+		{
+			model = "Personal_Helmet";
+			member = "Johnson";
+		};
+		class 288th_Gungnir_Helmet_Eugen
+		{
+			model = "Personal_Helmet";
+			member = "Eugen";
+		};
+		class 288th_Gungnir_Helmet_Kynetik
+		{
+			model = "Personal_Helmet";
+			member = "Kynetik";
+		};
+		class 288th_Commando_Helmet_Glaceon
+		{
+			model = "Personal_Helmet";
+			member = "Weekers";
+		};
+		class 288th_JFO_Helmet_Kennedy
+		{
+			model = "Personal_Helmet";
+			member = "Kennedy";
+		};
+
+		//Armors
+		class 288th_ODST_Vest_Rifleman
+		{
+			model = "Basic_Armor";
+			member = "Rifleman";
+		};
+		class 288th_ODST_Vest_Rifleman_Blue
+		{
+			model = "BT_Armor";
+			member = "Rifleman";
+		};
+		class 288th_ODST_Vest_Rifleman_Green
+		{
+			model = "GT_Armor";
+			member = "Rifleman";
+		};
+		class 288th_ODST_Vest_Rifleman_Yellow
+		{
+			model = "YT_Armor";
+			member = "Rifleman";
+		};
+		class 288th_ODST_Vest_Rifleman_White
+		{
+			model = "WT_Armor";
+			member = "Rifleman";
+		};
+
+		class 288th_ODST_Vest_Grenadier
+		{
+			model = "Basic_Armor";
+			member = "Grenadier";
+		};
+		class 288th_ODST_Vest_Grenadier_Blue
+		{
+			model = "BT_Armor";
+			member = "Grenadier";
+		};
+		class 288th_ODST_Vest_Grenadier_Green
+		{
+			model = "GT_Armor";
+			member = "Grenadier";
+		};
+		class 288th_ODST_Vest_Grenadier_White
+		{
+			model = "WT_Armor";
+			member = "Grenadier";
+		};
+		class 288th_ODST_Vest_Grenadier_Yellow
+		{
+			model = "YT_Armor";
+			member = "Grenadier";
+		};
+		
+		class 288th_ODST_Vest_Autorifleman
+		{
+			model = "Basic_Armor";
+			member = "Autorifleman";
+		};
+		class 288th_ODST_Vest_Autorifleman_Blue
+		{
+			model = "BT_Armor";
+			member = "Autorifleman";
+		};
+		class 288th_ODST_Vest_Autorifleman_Green
+		{
+			model = "GT_Armor";
+			member = "Autorifleman";
+		};
+		class 288th_ODST_Vest_Autorifleman_White
+		{
+			model = "WT_Armor";
+			member = "Autorifleman";
+		};
+		class 288th_ODST_Vest_Autorifleman_Yellow
+		{
+			model = "YT_Armor";
+			member = "Autorifleman";
+		};
+
+		class 288th_ODST_Vest_Marksman
+		{
+			model = "Basic_Armor";
+			member = "Marksman";
+		};
+		class 288th_ODST_Vest_Marksman_Blue
+		{
+			model = "BT_Armor";
+			member = "Marksman";
+		};
+		class 288th_ODST_Vest_Marksman_Green
+		{
+			model = "GT_Armor";
+			member = "Marksman";
+		};
+		class 288th_ODST_Vest_Marksman_White
+		{
+			model = "WT_Armor";
+			member = "Marksman";
+		};
+		class 288th_ODST_Vest_Marksman_Yellow
+		{
+			model = "YT_Armor";
+			member = "Marksman";
+		};
+
+		class 288th_ODST_Vest_Demolitions
+		{
+			model = "Basic_Armor";
+			member = "Demolitions";
+		};
+		class 288th_ODST_Vest_Demolitions_Blue
+		{
+			model = "BT_Armor";
+			member = "Demolitions";
+		};
+		class 288th_ODST_Vest_Demolitions_Green
+		{
+			model = "GT_Armor";
+			member = "Demolitions";
+		};
+		class 288th_ODST_Vest_Demolitions_White
+		{
+			model = "WT_Armor";
+			member = "Demolitions";
+		};
+		class 288th_ODST_Vest_Demolitions_Yellow
+		{
+			model = "YT_Armor";
+			member = "Demolitions";
+		};
+
+		class 288th_ODST_Vest_Medic
+		{
+			model = "Basic_Armor";
+			member = "Medic";
+		};
+		class 288th_ODST_Vest_Medic_Blue
+		{
+			model = "BT_Armor";
+			member = "Medic";
+		};
+		class 288th_ODST_Vest_Medic_Green
+		{
+			model = "GT_Armor";
+			member = "Medic";
+		};
+		class 288th_ODST_Vest_Medic_White
+		{
+			model = "WT_Armor";
+			member = "Medic";
+		};
+		class 288th_ODST_Vest_Medic_Yellow
+		{
+			model = "YT_Armor";
+			member = "Medic";
+		};
+
+		//ONI Armor
+		class 288th_ODST_Vest_ONI
+		{
+			model = "ONI_Armor";
+			member = "Main";
+		};
+		class 288th_ODST_Vest_ONI_Alt
+		{
+			model = "ONI_Armor";
+			member = "Alt";
+		};
+
+		//Personal Armors
+		class 288th_ODST_Vest_Whiskey
+		{
+			model = "GT_Armor";
+			member = "Whiskey";
+		};
+		class 288th_ODST_Vest_Butcher
+		{
+			model = "YT_Armor";
+			member = "Butcher";
+		};
+		class 288th_ODST_Vest_Eugen
+		{
+			model = "YT_Armor";
+			member = "Eugen";
+		};
+		class 288th_ODST_Vest_Kynetik
+		{
+			model = "BT_Armor";
+			member = "Kynetik";
+		};
+		class 288th_ODST_Vest_Error
+		{
+			model = "CMM_Armor";
+			member = "Error";
+		};
+		class 288th_ODST_Vest_Johnson
+		{
+			model = "CMM_Armor";
+			member = "Johnson";
+		};
+		class 288th_ODST_Vest_Glitch
+		{
+			model = "CMM_Armor";
+			member = "Glitch";
+		};
+		class 288th_ODST_Vest_Bandit
+		{
+			model = "YT_Armor";
+			member = "Bandit";
+		};
+		class 288th_ODST_Vest_Weekers
+		{
+			model = "BT_Armor";
+			member = "Weekers";
+		};
+		class 288th_ODST_Vest_Logic
+		{
+			model = "BT_Armor";
+			member = "Logic";
+		};
+
+		//Test Armors
+		class 288th_ODST_Vest_Experimental_Light
+		{
+			model = "DEV_Armor";
+			member = "Light";
+		};
+		class 288th_ODST_Vest_Experimental_ULight
+		{
+			model = "DEV_Armor";
+			member = "Ultra Light";
+		};
+		class 288th_ODST_Vest_Experimental_Heavy
+		{
+			model = "DEV_Armor";
+			member = "Heavy";
+		};
+		class 288th_ODST_Vest_Experimental_UHeavy
+		{
+			model = "DEV_Armor";
+			member = "Ultra Heavy";
+		};
+
+		//Uniforms
+		class 288th_BDU_ODST_HJ
+		{
+			model = "Uniform";
+			member = "Basic";
+		};
+		class 288th_BDU_ODST_Grey_HJ
+		{
+			model = "Uniform";
+			member = "Grey";
+		};
+		class 288th_BDU_ODST_Winter_HJ
+		{
+			model = "Uniform";
+			member = "Winter";
+		};
+		class 288th_BDU_ODST_ERDL_HJ
+		{
+			model = "Uniform";
+			member = "ERDL";
+		};
+		class 288th_BDU_ODST_Chip_HJ
+		{
+			model = "Uniform";
+			member = "C Chip";
+		};
+		class 288th_BDU_ODST_Tiger_HJ
+		{
+			model = "Uniform";
+			member = "Tiger";
+		};
+		class 288th_BDU_ODST_Brown_HJ
+		{
+			model = "Uniform";
+			member = "Brown";
+		};
+		class 288th_BDU_ODST_Grassland_HJ
+		{
+			model = "Uniform";
+			member = "Grassland";
+		};
+		class 288th_BDU_ODST_Desert_HJ
+		{
+			model = "Uniform";
+			member = "Desert";
+		};
+		class 288th_BDU_ODST_Woodland_HJ
+		{
+			model = "Uniform";
+			member = "Woodland";
+		};
+
+		class 288th_BDU_ODST_NC
+		{
+			model = "Uniform_NC";
+			member = "Basic";
+		};
+		class 288th_BDU_ODST_Grey_NC
+		{
+			model = "Uniform_NC";
+			member = "Grey";
+		};
+		class 288th_BDU_ODST_Winter_NC
+		{
+			model = "Uniform_NC";
+			member = "Winter";
+		};
+		class 288th_BDU_ODST_ERDL_NC
+		{
+			model = "Uniform_NC";
+			member = "ERDL";
+		};
+		class 288th_BDU_ODST_Chip_NC
+		{
+			model = "Uniform_NC";
+			member = "C Chip";
+		};
+		class 288th_BDU_ODST_Tiger_NC
+		{
+			model = "Uniform_NC";
+			member = "Tiger";
+		};
+		class 288th_BDU_ODST_Brown_NC
+		{
+			model = "Uniform_NC";
+			member = "Brown";
+		};
+		class 288th_BDU_ODST_Grassland_NC
+		{
+			model = "Uniform_NC";
+			member = "Grassland";
+		};
+		class 288th_BDU_ODST_Desert_NC
+		{
+			model = "Uniform_NC";
+			member = "Desert";
+		};
+		class 288th_BDU_ODST_Woodland_NC
+		{
+			model = "Uniform_NC";
+			member = "Woodland";
+		};
+		class 288th_BDU_ODST_ONI
+		{
+			model = "Uniform_Custom";
+			member = "ONI";
+		};
+		class 288th_BDU_ODST_Logic
+		{
+			model = "Uniform_Custom";
+			member = "Logic";
+		};
+		class 288th_BDU_ODST_Bandit
+		{
+			model = "Uniform_Custom";
+			member = "Bandit";
+		};
+		class 288th_BDU_ODST_Error_HJ
+		{
+			model = "Uniform_Custom";
+			member = "Error";
 		};
 	};
 };

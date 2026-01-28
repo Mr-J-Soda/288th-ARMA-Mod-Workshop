@@ -121,7 +121,7 @@ class cfgWeapons
 		reloadAction = "GestureReloadSMG_02";
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\reload_sting",1.0,1,10};
 		baseWeapon = "288th_AR1X";
-		magazines[] = {"288th_Stanag"};
+		magazines[] = {"288th_30Rnd_65x85_Mag"};
 		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_Assault";
 		visionMode[] = {"Normal","NVG"};
@@ -224,7 +224,7 @@ class cfgWeapons
 		modes[] = {"Single","Burst","FullAuto"};
 		class Single: Single
 		{
-			/*reloadTime = 0.05;*/
+			//reloadTime = 0.05;
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
@@ -238,7 +238,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -263,7 +263,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -299,7 +299,7 @@ class cfgWeapons
 		baseWeapon = "288th_AR2X";
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]={"\288th_Weapons\Data\Weapons\AR_Rifles\mxlmgblak.paa"};
-		magazines[] = {"288th_Stanag_LMG","288th_EHP_LMG","288th_Silver_LMG"};
+		magazines[] = {"288th_150Rnd_65x85_Mag","288th_EHP_LMG","288th_Silver_LMG"};
 		magazineWell[] = { "288th_Standard" };
 		recoil = "recoil_Assault";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
@@ -443,7 +443,7 @@ class cfgWeapons
 		displayName = "[288th] AR3X";
 		descriptionshort = "Special Oni Derived Armament AR3X";
 		baseWeapon = "288th_AR3X";
-		magazines[] = {"288th_Stanag"};
+		magazines[] = {"288th_30Rnd_65x85_Mag"};
 		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_Assault";
 		visionMode[] ={	"Normal","NVG"	};
@@ -563,7 +563,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -588,7 +588,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -612,7 +612,7 @@ class cfgWeapons
 		displayName = "[288th] AR4X";
 		descriptionshort = "Special Oni Derived Armament AR4X";
 		baseWeapon = "288th_AR4X";
-		magazines[] = {"288th_Stanag"};
+		magazines[] = {"288th_30Rnd_65x85_Mag"};
 		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_Assault";
 		visionMode[] =	{"Normal","NVG"};
@@ -729,7 +729,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -754,7 +754,7 @@ class cfgWeapons
 				begin2[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Scar\sound\ScarLKSilenced.ogg",1,1.1,300};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -819,7 +819,7 @@ class cfgWeapons
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
-		magazines[] = {"288th_Stanag"};
+		magazines[] = {"288th_30Rnd_65x85_Mag"};
 		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_Assault";
 		picture = "\288th_Weapons\Data\Weapons\AR_Rifles\M28A3\arifle_ARX_blk_F_X_CA.paa";
@@ -926,18 +926,18 @@ class cfgWeapons
 		};
 		class secondary : 288th_M6C
 		{
+			canShootInWater = 1;
 			displayName = "M28A3 Underbarrel Sidearm";
 			magazines[] ={"288th_32Rnd_127x40"};
 			picture = "";
 			recoil = "recoil_ARX_secondary";
 			reloadAction = "GestureReloadARX2";
 			reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
-
 		};
 		modes[] = {"Single","FullAuto"};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -963,7 +963,7 @@ class cfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -990,29 +990,6 @@ class cfgWeapons
 		};
 	};
 
-	class 288th_M28A3_RG : 288th_M28A3_BR
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] RG's M28A3";
-		baseWeapon = "288th_M28A3_RG";
-		hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\V_MA4_CO_GREEN","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co"};
-		class secondary : 288th_M90A
-		{
-			displayName = "Shotgun Modification";
-			modes[] =
-			{
-				"Single"
-			};
-			picture = "";
-			magazineWell[] = { 288th_Shotgun };
-			magazines[] = { "288th_Loose_Normal_Buckshot","288th_Loose_Slugs" };
-			recoil = "recoil_ARX_secondary";
-			reloadAction = "GestureReloadARX2";
-			reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
-		};
-	};
-
 	class 288th_M28A3_Breach : 288th_M28A3_BR
 	{
 		dlc = "288thDJP_Aux";
@@ -1021,16 +998,10 @@ class cfgWeapons
 		baseWeapon = "288th_M28A3_Breach";
 		class secondary : 288th_CQS_48X
 		{
+			canShootInWater = 1;
 			displayName = "M28A3 Underbarrel w. Shotgun Modification";
-			modes[] =
-			{
-				"Single"
-			};
-			magazines[] =
-			{
-				"288th_Slug",
-				"288th_Buckshot"
-			};
+			modes[] =	{"Single"};
+			magazines[] ={"288th_Slug","288th_Buckshot"};
 			picture = "";
 			recoil = "recoil_ARX_secondary";
 			reloadAction = "GestureReloadARX2";
@@ -1056,6 +1027,16 @@ class cfgWeapons
 		HUD_BulletInARows = 1;
 		HUD_TotalPosibleBullet = 15;
 		modes[] = {"Single"};
+		class secondary : 288th_M90A
+		{
+			canShootInWater = 1;
+			displayName = "M28A3 Underbarrel w. Shotgun Modification";
+			magazines[] ={"288th_Loose_Normal_Buckshot"};
+			picture = "";
+			recoil = "recoil_ARX_secondary";
+			reloadAction = "GestureReloadARX2";
+			reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
+		};
 	};
 
 	class 288th_M28A3_Kelkuza : OPTRE_M26_Shotgun_F
@@ -1066,7 +1047,7 @@ class cfgWeapons
 		baseWeapon = "288th_M28A3_Kelkuza";
 		modes[] = { "FullAutoSlow","FullAutoFast" };
 		visionMode[] ={"Normal","NVG"};
-		magazines[] = {"288th_Stanag_LMG","288th_EHP_LMG","288th_Silver_LMG"};
+		magazines[] = {"288th_150Rnd_65x85_Mag","288th_EHP_LMG","288th_Silver_LMG"};
 		magazineWell[] = { "288th_Standard" };
 		recoil = "recoil_M7V_SMG";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
@@ -1075,6 +1056,7 @@ class cfgWeapons
 		Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 150;
+		canShootInWater = 1;
 		class FullAutoSlow : Mode_FullAuto
 		{
 			class BaseSoundModeType;
@@ -1103,11 +1085,12 @@ class cfgWeapons
 		class FullAutoFast : FullAutoSlow
 		{
 			dispersion = 5e-05;
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			textureType = "fastAuto";
 		};
 		class secondary : 288th_CQS_48X
 		{
+			canShootInWater = 1;
 			displayName = "Shotgun Modification";
 			magazines[] =
 			{
@@ -1160,7 +1143,7 @@ class cfgWeapons
         displayName = "[288th] AR1G";
         descriptionshort = "Special Oni Derived Armament AR1G";
         baseWeapon = "288th_AR1G";
-        magazines[] = {"288th_Stanag"};
+        magazines[] = {"288th_30Rnd_65x85_Mag"};
         magazineWell[] = {"288th_Standard"};
         recoil = "recoil_Assault";
         //hiddenSelectionsTextures = ["\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"];
@@ -1454,7 +1437,7 @@ class cfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		ace_arsenal_hide = 0;
-		magazines[] = {"288th_Stanag"};
+		magazines[] = {"288th_30Rnd_65x85_Mag"};
 		magazineWell[] = {"288th_Standard"};
 		recoil = "recoil_Assault";
 		pictureWire = "\288th_Weapons\Data\Weapons\AR_Rifles\V_M28_HUD_CA.paa";
@@ -1503,7 +1486,7 @@ class cfgWeapons
 		modes[] = {"Single","FullAuto"};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -1529,7 +1512,7 @@ class cfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime = 0.06;
+			reloadTime = 0.0667;
 			dispersion = 5e-05;
 			minRange = 0;
 			minRangeProbab = 0.9;
@@ -1652,6 +1635,7 @@ class cfgWeapons
 		pictureMjolnirHud = "\OPTRE_Suit_Scripts\textures\weaponIcons\AssaultRifles\MA5CGL_icon.paa";
 		class 288th_M301UGL: UGL_F
 		{
+			canShootInWater = 1;
 			displayName = "M301 Grenade Launcher";
 			descriptionShort = "M301 GL";
 			cursor = "EmptyCursor";
@@ -1704,6 +1688,7 @@ class cfgWeapons
 		};
 		class 288th_M301UGL: UGL_F
 		{
+			canShootInWater = 1;
 			displayName = "Shotgun";
 			descriptionShort = "Shotgun";
 			cursor = "OPTRE_M45";
@@ -1718,7 +1703,7 @@ class cfgWeapons
 			reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\MX_UGL_reload",1,1,10};
 			recoil = "recoil_lim";
 			magazines[] ={"288th_Buckshot","288th_Slug"};
-			magazineWell[] = { 288th_shotgun };
+			magazineWell[] = { 288th_Shotgun };
 			class Single: Single
 			{
 				sounds[] = {"StandardSound"};

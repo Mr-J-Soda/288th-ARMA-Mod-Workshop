@@ -187,7 +187,7 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_Stanag",
+			"288th_30Rnd_65x85_Mag",
 			"288th_Plasma_Red_Mag",
 			"288th_Plasma_Orange_Mag",
 			"288th_Plasma_Yellow_Mag",
@@ -303,7 +303,32 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] = 
 		{
-			"288th_200Rnd_308_Box"
+			"288th_200Rnd_308",
+			"288th_200Rnd_308_Tracer",
+			"288th_200Rnd_308_AP",
+			"288th_200Rnd_308_APT",
+			"288th_200Rnd_308_SLAP",
+			"288th_200Rnd_308_SLAPT",
+			"288th_200Rnd_308_FMJ",
+			"288th_200Rnd_308_FMJT",
+			"288th_200Rnd_308_HV",
+			"288th_200Rnd_308_HVT",
+			"288th_200Rnd_308_HVAP",
+			"288th_200Rnd_308_HVAPT",
+			"288th_200Rnd_308_HPSAP",
+			"288th_200Rnd_308_HPSAPT",
+			"288th_200Rnd_308_EHP",
+			"288th_200Rnd_308_EHPT",
+			"288th_200Rnd_308_SAPHE",
+			"288th_200Rnd_308_SAPHET",
+			"288th_200Rnd_308_HE",
+			"288th_200Rnd_308_HET",
+			"288th_200Rnd_308_SS",
+			"288th_200Rnd_308_SST",
+			"288th_200Rnd_308_UW",
+			"288th_200Rnd_308_UWT",
+			"288th_200Rnd_308_S",
+			"288th_200Rnd_308_ST"
 		};
 	};
 	class 288th_M50
@@ -360,17 +385,17 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_AutoGL_Mag",
-			"288th_AutoGL_HEDP_Mag",
-			"288th_AutoGL_HEDPC_Mag",
-			"288th_AutoGL_HEAT_Mag",
-			"288th_AutoGL_W_Smoke_Mag",
-			"288th_AutoGL_R_Smoke_Mag",
-			"288th_AutoGL_O_Smoke_Mag",
-			"288th_AutoGL_Y_Smoke_Mag",
-			"288th_AutoGL_G_Smoke_Mag",
-			"288th_AutoGL_B_Smoke_Mag",
-			"288th_AutoGL_P_Smoke_Mag"
+			"288th_50Rnd_20mm_HE",
+			"288th_50Rnd_20mm_HEDP",
+			"288th_50Rnd_20mm_HEDPC",
+			"288th_50Rnd_20mm_HEAT",
+			"288th_50Rnd_20mm_SMK_W",
+			"288th_50Rnd_20mm_SMK_R",
+			"288th_50Rnd_20mm_SMK_O",
+			"288th_50Rnd_20mm_SMK_Y",
+			"288th_50Rnd_20mm_SMK_G",
+			"288th_50Rnd_20mm_SMK_B",
+			"288th_50Rnd_20mm_SMK_P"
 		};
 	};
 	class 288th_Sniper
@@ -397,14 +422,26 @@ class CfgMagazineWells
 			"288th_65Rnd_127x30_Tracer",
 			"288th_65Rnd_127x30_AP",
 			"288th_65Rnd_127x30_APT",
+			"288th_65Rnd_127x30_SLAP",
+			"288th_65Rnd_127x30_SLAP",
+			"288th_65Rnd_127x30_FMJ",
+			"288th_65Rnd_127x30_FMJT",
+			"288th_65Rnd_127x30_HV",
+			"288th_65Rnd_127x30_HVT",
 			"288th_65Rnd_127x30_HVAP",
 			"288th_65Rnd_127x30_HVAPT",
+			"288th_65Rnd_127x30_HPSAP",
+			"288th_65Rnd_127x30_HPSAPT",
 			"288th_65Rnd_127x30_EHP",
 			"288th_65Rnd_127x30_EHPT",
 			"288th_65Rnd_127x30_SAPHE",
 			"288th_65Rnd_127x30_SAPHET",
+			"288th_65Rnd_127x30_HE",
+			"288th_65Rnd_127x30_HET",
 			"288th_65Rnd_127x30_SS",
 			"288th_65Rnd_127x30_SST",
+			"288th_65Rnd_127x30_UW",
+			"288th_65Rnd_127x30_UWT",
 			"288th_65Rnd_127x30_S",
 			"288th_65Rnd_127x30_ST"
 		};
@@ -899,7 +936,7 @@ class cfgWeapons
 		displayName = "[288th] Kennedy's 'Battle Rifle'";
 		baseWeapon = "288th_Kennedy_M73";
 		magazines[] = {};
-		magazineWell[] = {"TCF_Magwell_M73H"};
+		magazineWell[] = {"OPTRE_Magwell_M73","TCF_Magwell_M73H"};
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 300;
 		hiddenSelections[] = {"camo1"};
@@ -958,7 +995,7 @@ class cfgWeapons
 		baseWeapon = "288th_MMG";
 		descriptionShort = "Special Oni Derived Armament M99";
 		magazineWell[] = {"288th_M99"};
-		magazines[] = {"288th_200Rnd_308_Box"};
+		magazines[] = {"288th_200Rnd_308"};
 		recoil = "recoil_lim";
 		//recoil = "recoil_TKE_MMG338";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\MachineGun\MG_IRON.paa";
@@ -1182,7 +1219,7 @@ class cfgWeapons
 		baseWeapon = "288th_MMG_Eugen";
 		descriptionShort = "Special Oni Derived Armament M99";
 		magazineWell[] = {"288th_M99"};
-		magazines[] = {"288th_200Rnd_308_Box"};
+		magazines[] = {"288th_200Rnd_308"};
 		recoil = "recoil_lim";
 		//recoil = "recoil_TKE_MMG338";
 		picture = "\a3\Weapons_F_Enoch\Machineguns\M200\Data\UI\icon_LMG_Mk200_black_F_ca.paa";
@@ -1518,7 +1555,7 @@ class cfgWeapons
 		baseWeapon = "288th_M318";
 		descriptionshort = "Special Oni Derived Armament M318";
 		magazineWell[] = { 288th_AutoGL };
-		magazines[] = { "288th_AutoGL_Mag"};
+		magazines[] = { "288th_50Rnd_30mm_HE"};
 		//picture = "\a3\Weapons_F_Enoch\Machineguns\M200\Data\UI\icon_LMG_Mk200_black_F_ca.paa";
 		//hiddenSelectionsTextures[] = { "a3\Weapons_F_Enoch\Machineguns\M200\Data\1st_person_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\Body_black_co.paa","a3\Weapons_F_Enoch\Machineguns\M200\Data\grip_black_co.paa" };
 		cursor = "EmptyCursor";
@@ -2160,7 +2197,6 @@ class cfgWeapons
 				compatibleitems[] =
 				{
 					"OPTRE_M6S_Scope",
-					"OPTRE_M7_Sight_v2",
 					"optic_aco_grn",
 					"optic_aco",
 					"optic_arco_blk_f",

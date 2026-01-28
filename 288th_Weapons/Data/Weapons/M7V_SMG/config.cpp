@@ -21,9 +21,9 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_45ACP_Mag_AP",
-			"288th_45ACP_Mag_EHP",
-			"288th_45ACP_Mag_Silver"
+			"288th_60Rnd_45_Mag",
+			"288th_60Rnd_45_Mag_EHP",
+			"288th_60Rnd_45_Mag_Silver"
 		};
 	};
 };
@@ -78,7 +78,7 @@ class cfgWeapons
 		baseWeapon = "288th_M7V_SMG";
 		magazines[] =
 		{
-			288th_45ACP_Mag_AP
+			288th_60Rnd_45_Mag
 		};
 		hiddenSelectionsTextures[] =
 		{
@@ -185,7 +185,7 @@ class cfgWeapons
 		descriptionshort = "Special Oni Derived Armament M7K SMG";
 		baseWeapon = "288th_M7K_SMG";
 		maxZeroing = 300;
-		magazines[] ={"288th_45ACP_Mag_AP"};
+		magazines[] ={"288th_60Rnd_45_Mag"};
 		magazineWell[] = { 288th_M7V_SMG };
 		recoil = "recoil_M7V_SMG";
 		visionMode[] =
@@ -278,7 +278,7 @@ class cfgWeapons
 		displayName = "[288th] M7X SMG";
 		descriptionshort = "Special Oni Derived Armament M7X SMG";
 		baseWeapon = "288th_M7X_SMG";
-		magazines[] ={288th_45ACP_Mag_AP};
+		magazines[] ={288th_60Rnd_45_Mag};
 		magazineWell[] = { 288th_M7V_SMG };
 		recoil = "recoil_M7V_SMG";
 		visionMode[] ={"Normal","NVG"};
@@ -377,7 +377,7 @@ class cfgWeapons
 		displayName = "[288th] M7X SMG";
 		descriptionshort = "Special Oni Derived Armament M7X SMG";
 		baseWeapon = "288th_M7X_SMG_Folded";
-		magazines[] ={288th_45ACP_Mag_AP};
+		magazines[] ={288th_60Rnd_45_Mag};
 		magazineWell[] = { 288th_M7V_SMG };
 		//recoil = "recoil_M7V_SMG";
 		visionMode[] ={"Normal","NVG"};
@@ -484,7 +484,7 @@ class cfgWeapons
 		type = 1;
 		inertia = 0.5;
 		dexterity = 1.25;
-		magazines[] ={288th_45ACP_Mag_AP};
+		magazines[] ={288th_60Rnd_45_Mag};
 		magazineWell[] = { 288th_M7V_SMG };
 		recoil = "recoil_M7V_SMG";
 		visionMode[] ={"Normal","NVG"};

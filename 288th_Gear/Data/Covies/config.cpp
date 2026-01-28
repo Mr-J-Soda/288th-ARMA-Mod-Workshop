@@ -22,9 +22,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Armor (Minor)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Minor_Body_Armor_CO.paa","\288th_Gear\Data\Covies\Minor_Legs_and_Arms_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -36,9 +36,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Helmet (Minor)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Minor_Helmet_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -48,9 +48,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Armor (Major)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Major_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Major_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -62,9 +62,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Helmet (Major)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Major_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -74,9 +74,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Armor (Officer)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Officer_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Officer_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -88,9 +88,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Helmet (Officer)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Officer_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -100,9 +100,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Armor (SpecOps)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\SpecOps_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\SpecOps_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -114,9 +114,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Helmet (SpecOps)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\SpecOps_Helmet_SpecOps_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};
@@ -126,9 +126,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Armor (Ultra)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Ultra_Body_Armor_SpecOps_CO.paa","\288th_Gear\Data\Covies\Ultra_Legs_and_Arms_SpecOps_CO.paa"};
 		class ItemInfo: ItemInfo
@@ -140,9 +140,9 @@ class cfgWeapons
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
 		displayName = "[288th] Sangheili Helmet (Ultra)";
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Covies\Ultra_Helmet_Camo_CO.paa"};
 		subItems[] = {"288th_Mk5_NVG"};

@@ -30,7 +30,32 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_762_Mag",
+			"288th_20Rnd_308",
+			"288th_20Rnd_308_Tracer",
+			"288th_20Rnd_308_AP",
+			"288th_20Rnd_308_APT",
+			"288th_20Rnd_308_SLAP",
+			"288th_20Rnd_308_SLAPT",
+			"288th_20Rnd_308_FMJ",
+			"288th_20Rnd_308_FMJT",
+			"288th_20Rnd_308_HV",
+			"288th_20Rnd_308_HVT",
+			"288th_20Rnd_308_HVAP",
+			"288th_20Rnd_308_HVAPT",
+			"288th_20Rnd_308_HPSAP",
+			"288th_20Rnd_308_HPSAPT",
+			"288th_20Rnd_308_EHP",
+			"288th_20Rnd_308_EHPT",
+			"288th_20Rnd_308_SAPHE",
+			"288th_20Rnd_308_SAPHET",
+			"288th_20Rnd_308_HE",
+			"288th_20Rnd_308_HET",
+			"288th_20Rnd_308_SS",
+			"288th_20Rnd_308_SST",
+			"288th_20Rnd_308_UW",
+			"288th_20Rnd_308_UWT",
+			"288th_20Rnd_308_S",
+			"288th_20Rnd_308_ST"
 		};
 	};
 };
@@ -82,10 +107,7 @@ class cfgWeapons
 			"288th_Weapons\Data\Weapons\288th_Snowfox\m14_ebr01_Fiy_Yellow_CO.paa",
 			"288th_Weapons\Data\Weapons\288th_Snowfox\m14_ebr01_Fiy_CO.paa"
 		};
-		magazines[] =
-		{
-			"288th_762_Mag"
-		};
+		magazines[] ={"288th_20Rnd_308"};
 		magazineWell[] = { 288th_Snowfox };
 		modes[] =
 		{

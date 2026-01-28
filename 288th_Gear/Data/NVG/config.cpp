@@ -2327,8 +2327,6 @@ class cfgWeapons
 		visionMode[] = {"Normal","NVG","TI"};
 	};
 
-	class catears_nvg5;
-	class catears_nvg1_helm;
 	class 288th_Johnson_NVG: NVGoggles
 	{
 		scope = 2;
@@ -2365,6 +2363,1924 @@ class cfgWeapons
 			uniformModel = "\288th_Gear\Data\NVG\Catears\Catears_Black.p3d";
 			modelOff = "\288th_Gear\Data\NVG\Catears\Catears_Black.p3d";
 			mass = 24;
+		};
+	};
+};
+
+class XtdGearModels
+{
+	class CfgWeapons
+	{
+		class CNM_MVI_HURS
+		{
+			label = "CNM/MVI/HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "CNM/MVI/HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class CNM_UAB_HURS
+		{
+			label = "CNM/UAB/HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "CNM/UAB/HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class CNM
+		{
+			label = "CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UL
+		{
+			label = "UL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HUL
+		{
+			label = "HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HUL3
+		{
+			label = "HUL 3";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HUL 3";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HUL3G
+		{
+			label = "HUL 3G";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HUL 3G";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HURS
+		{
+			label = "HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HUL_MVI_HURS
+		{
+			label = "HUL/MVI/HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HUL/MVI/HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HUL_UAB_HURS
+		{
+			label = "HUL/UAB/HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HUL/UAB/HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HURS_CNM
+		{
+			label = "HURS/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HURS/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class HURS_HUL
+		{
+			label = "HURS/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "HURS/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI
+		{
+			label = "MVI";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI_CNM
+		{
+			label = "MVI/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI_HUL
+		{
+			label = "MVI/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI_HURS
+		{
+			label = "MVI/HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI/HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI_UL
+		{
+			label = "MVI/UL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI/UL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI_UL_CNM
+		{
+			label = "MVI/UL/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI/UL/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class MVI_UL_HUL
+		{
+			label = "MVI/UL/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "MVI/UL/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_CNM
+		{
+			label = "UA/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_HUL
+		{
+			label = "UA/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_HURS
+		{
+			label = "UA/HURS";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/HURS";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_HURS_CNM
+		{
+			label = "UA/HURS/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/HURS/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_HURS_HUL
+		{
+			label = "UA/HURS/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/HURS/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_UL
+		{
+			label = "UA/UL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/UL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_UL_CNM
+		{
+			label = "UA/UL/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA/UL/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB_CNM
+		{
+			label = "UAB/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB_HUL
+		{
+			label = "UAB/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB_UL
+		{
+			label = "UAB/UL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB/UL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB_UL_CNM
+		{
+			label = "UAB/UL/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB/UL/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB_UL_HUL
+		{
+			label = "UAB/UL/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB/UL/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UL_CNM
+		{
+			label = "UL/CNM";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UL/CNM";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UL_HUL
+		{
+			label = "UL/HUL";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UL/HUL";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA
+		{
+			label = "UA";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UA_Spartan
+		{
+			label = "UA Spartan";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UA Spartan";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB
+		{
+			label = "UAB";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class UAB_Spartan
+		{
+			label = "UAB Spartan";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "UAB Spartan";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class Visor
+		{
+			label = "Visor";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Visor";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class NVG_Blank
+		{
+			label = "Blank";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Blank";
+				values[] = {"MK 2","MK 3","MK 4","MK 5","MK 6","MK 7","MK 8"};
+			};
+		};
+		class Custom
+		{
+			label = "Custom";
+			options[] = {"member"};
+			class member
+			{
+				alwaysSelectable = 1;
+				label = "Custom";
+				values[] = {"Johnson","Glitch","Kelkuza","Whiskey"};
+			};
+		};
+	};
+};
+
+class XtdGearInfos
+{
+	class CfgWeapons
+	{
+		//CNM/MVI/HURS
+		class 288th_MK2_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_CNM_MVI_HURS
+		{
+			model = "CNM_MVI_HURS";
+			member = "MK 8";
+		};
+
+		//CNM/UAB/HURS
+		class 288th_MK2_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_CNM_UAB_HURS
+		{
+			model = "CNM_UAB_HURS";
+			member = "MK 8";
+		};
+
+		//CNM
+		class 288th_MK2_CNM
+		{
+			model = "CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_CNM
+		{
+			model = "CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_CNM
+		{
+			model = "CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_CNM
+		{
+			model = "CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_CNM
+		{
+			model = "CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_CNM
+		{
+			model = "CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_CNM
+		{
+			model = "CNM";
+			member = "MK 8";
+		};
+
+		//UL
+		class 288th_MK2_UL
+		{
+			model = "UL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UL
+		{
+			model = "UL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UL
+		{
+			model = "UL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UL
+		{
+			model = "UL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UL
+		{
+			model = "UL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UL
+		{
+			model = "UL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UL
+		{
+			model = "UL";
+			member = "MK 8";
+		};
+
+		//HHUL
+		class 288th_MK2_HUL
+		{
+			model = "HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_HUL
+		{
+			model = "HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_HUL
+		{
+			model = "HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_HUL
+		{
+			model = "HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_HUL
+		{
+			model = "HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_HUL
+		{
+			model = "HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_HUL
+		{
+			model = "HUL";
+			member = "MK 8";
+		};
+
+		//HUL3
+		class 288th_MK2_HUL3
+		{
+			model = "HUL3";
+			member = "MK 2";
+		};
+		class 288th_MK3_HUL3
+		{
+			model = "HUL3";
+			member = "MK 3";
+		};
+		class 288th_MK4_HUL3
+		{
+			model = "HUL3";
+			member = "MK 4";
+		};
+		class 288th_MK5_HUL3
+		{
+			model = "HUL3";
+			member = "MK 5";
+		};
+		class 288th_MK6_HUL3
+		{
+			model = "HUL3";
+			member = "MK 6";
+		};
+		class 288th_MK7_HUL3
+		{
+			model = "HUL3";
+			member = "MK 7";
+		};
+		class 288th_MK8_HUL3
+		{
+			model = "HUL3";
+			member = "MK 8";
+		};
+
+		//HUL3 Gray
+		class 288th_MK2_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 2";
+		};
+		class 288th_MK3_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 3";
+		};
+		class 288th_MK4_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 4";
+		};
+		class 288th_MK5_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 5";
+		};
+		class 288th_MK6_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 6";
+		};
+		class 288th_MK7_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 7";
+		};
+		class 288th_MK8_HUL3_Gray
+		{
+			model = "HUL3G";
+			member = "MK 8";
+		};
+
+		//HURS
+		class 288th_MK2_HURS
+		{
+			model = "HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_HURS
+		{
+			model = "HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_HURS
+		{
+			model = "HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_HURS
+		{
+			model = "HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_HURS
+		{
+			model = "HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_HURS
+		{
+			model = "HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_HURS
+		{
+			model = "HURS";
+			member = "MK 8";
+		};
+
+		//HUL/MVI/HURS
+		class 288th_MK2_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_HUL_MVI_HURS
+		{
+			model = "HUL_MVI_HURS";
+			member = "MK 8";
+		};
+
+		//HUL/UAB/HURS
+		class 288th_MK2_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_HUL_UAB_HURS
+		{
+			model = "HUL_UAB_HURS";
+			member = "MK 8";
+		};
+
+		//HURS/CNM
+		class 288th_MK2_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_HURS_CNM
+		{
+			model = "HURS_CNM";
+			member = "MK 8";
+		};
+
+		//HURS/HUL
+		class 288th_MK2_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_HURS_HUL
+		{
+			model = "HURS_HUL";
+			member = "MK 8";
+		};
+
+		//MVI
+		class 288th_MK2_MVI
+		{
+			model = "MVI";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI
+		{
+			model = "MVI";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI
+		{
+			model = "MVI";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI
+		{
+			model = "MVI";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI
+		{
+			model = "MVI";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI
+		{
+			model = "MVI";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI
+		{
+			model = "MVI";
+			member = "MK 8";
+		};
+
+		//MVI/CNM
+		class 288th_MK2_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI_CNM
+		{
+			model = "MVI_CNM";
+			member = "MK 8";
+		};
+
+		//MVI/HUL
+		class 288th_MK2_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI_HUL
+		{
+			model = "MVI_HUL";
+			member = "MK 8";
+		};
+
+		//MVI/HURS
+		class 288th_MK2_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI_HURS
+		{
+			model = "MVI_HURS";
+			member = "MK 8";
+		};
+
+		//MVI/UL
+		class 288th_MK2_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI_UL
+		{
+			model = "MVI_UL";
+			member = "MK 8";
+		};
+
+		//MVI/UL/CNM
+		class 288th_MK2_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI_UL_CNM
+		{
+			model = "MVI_UL_CNM";
+			member = "MK 8";
+		};
+
+		//MVI/UL/HUL
+		class 288th_MK2_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_MVI_UL_HUL
+		{
+			model = "MVI_UL_HUL";
+			member = "MK 8";
+		};
+
+		//UA/CNM
+		class 288th_MK2_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_CNM
+		{
+			model = "UA_CNM";
+			member = "MK 8";
+		};
+
+		//UA/HUL
+		class 288th_MK2_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_HUL
+		{
+			model = "UA_HUL";
+			member = "MK 8";
+		};
+
+		//UA/HURS
+		class 288th_MK2_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_HURS
+		{
+			model = "UA_HURS";
+			member = "MK 8";
+		};
+
+		//UA/HURS/CNM
+		class 288th_MK2_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_HURS_CNM
+		{
+			model = "UA_HURS_CNM";
+			member = "MK 8";
+		};
+
+		//UA/HURS/HUL
+		class 288th_MK2_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_HURS_HUL
+		{
+			model = "UA_HURS_HUL";
+			member = "MK 8";
+		};
+
+		//UA/UL
+		class 288th_MK2_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_UL
+		{
+			model = "UA_UL";
+			member = "MK 8";
+		};
+
+		//UA/UL/CNM
+		class 288th_MK2_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_UL_CNM
+		{
+			model = "UA_UL_CNM";
+			member = "MK 8";
+		};
+
+		//UAB/CNM
+		class 288th_MK2_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB_CNM
+		{
+			model = "UAB_CNM";
+			member = "MK 8";
+		};
+
+		//UAB/HUL
+		class 288th_MK2_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB_HUL
+		{
+			model = "UAB_HUL";
+			member = "MK 8";
+		};
+
+		//UAB/UL
+		class 288th_MK2_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB_UL
+		{
+			model = "UAB_UL";
+			member = "MK 8";
+		};
+
+		//UAB/UL/CNM
+		class 288th_MK2_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB_UL_CNM
+		{
+			model = "UAB_UL_CNM";
+			member = "MK 8";
+		};
+
+		//UAB/UL/HUL
+		class 288th_MK2_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB_UL_HUL
+		{
+			model = "UAB_UL_HUL";
+			member = "MK 8";
+		};
+
+		//UL/CNM
+		class 288th_MK2_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 2";
+		};
+		class 288th_MK3_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 3";
+		};
+		class 288th_MK4_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 4";
+		};
+		class 288th_MK5_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 5";
+		};
+		class 288th_MK6_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 6";
+		};
+		class 288th_MK7_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 7";
+		};
+		class 288th_MK8_UL_CNM
+		{
+			model = "UL_CNM";
+			member = "MK 8";
+		};
+
+		//UL/HUL
+		class 288th_MK2_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 2";
+		};
+		class 288th_MK3_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 3";
+		};
+		class 288th_MK4_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 4";
+		};
+		class 288th_MK5_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 5";
+		};
+		class 288th_MK6_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 6";
+		};
+		class 288th_MK7_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 7";
+		};
+		class 288th_MK8_UL_HUL
+		{
+			model = "UL_HUL";
+			member = "MK 8";
+		};
+
+		//UA
+		class 288th_MK2_UA
+		{
+			model = "UA";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA
+		{
+			model = "UA";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA
+		{
+			model = "UA";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA
+		{
+			model = "UA";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA
+		{
+			model = "UA";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA
+		{
+			model = "UA";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA
+		{
+			model = "UA";
+			member = "MK 8";
+		};
+
+		//UA Spartan
+		class 288th_MK2_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 2";
+		};
+		class 288th_MK3_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 3";
+		};
+		class 288th_MK4_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 4";
+		};
+		class 288th_MK5_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 5";
+		};
+		class 288th_MK6_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 6";
+		};
+		class 288th_MK7_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 7";
+		};
+		class 288th_MK8_UA_Spartan
+		{
+			model = "UA_Spartan";
+			member = "MK 8";
+		};
+
+		//UAB
+		class 288th_MK2_UAB
+		{
+			model = "UAB";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB
+		{
+			model = "UAB";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB
+		{
+			model = "UAB";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB
+		{
+			model = "UAB";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB
+		{
+			model = "UAB";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB
+		{
+			model = "UAB";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB
+		{
+			model = "UAB";
+			member = "MK 8";
+		};
+
+		//UAB Spartan
+		class 288th_MK2_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 2";
+		};
+		class 288th_MK3_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 3";
+		};
+		class 288th_MK4_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 4";
+		};
+		class 288th_MK5_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 5";
+		};
+		class 288th_MK6_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 6";
+		};
+		class 288th_MK7_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 7";
+		};
+		class 288th_MK8_UAB_Spartan
+		{
+			model = "UAB_Spartan";
+			member = "MK 8";
+		};
+
+		//Visor
+		class 288th_MK2_Visor
+		{
+			model = "Visor";
+			member = "MK 2";
+		};
+		class 288th_MK3_Visor
+		{
+			model = "Visor";
+			member = "MK 3";
+		};
+		class 288th_MK4_Visor
+		{
+			model = "Visor";
+			member = "MK 4";
+		};
+		class 288th_MK5_Visor
+		{
+			model = "Visor";
+			member = "MK 5";
+		};
+		class 288th_MK6_Visor
+		{
+			model = "Visor";
+			member = "MK 6";
+		};
+		class 288th_MK7_Visor
+		{
+			model = "Visor";
+			member = "MK 7";
+		};
+		class 288th_MK8_Visor
+		{
+			model = "Visor";
+			member = "MK 8";
+		};
+
+		//Blank
+		class 288th_MK2_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 2";
+		};
+		class 288th_MK3_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 3";
+		};
+		class 288th_MK4_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 4";
+		};
+		class 288th_MK5_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 5";
+		};
+		class 288th_MK6_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 6";
+		};
+		class 288th_MK7_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 7";
+		};
+		class 288th_MK8_NVG
+		{
+			model = "NVG_Blank";
+			member = "MK 8";
+		};
+
+		//Customs
+		class 288th_Whiskey_NVG
+		{
+			model = "Custom";
+			member = "Whiskey";
+		};
+		class 288th_Kelkuza_NVG
+		{
+			model = "Custom";
+			member = "Kelkuza";
+		};
+		class 288th_Glitch_NVG
+		{
+			model = "Custom";
+			member = "Glitch";
+		};
+		class 288th_Johnson_NVG
+		{
+			model = "Custom";
+			member = "Johnson";
 		};
 	};
 };
