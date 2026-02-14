@@ -348,10 +348,20 @@ class cfgVehicles
 		displayName = "[288th] Flightpack";
 		maximumLoad = 500;
 		tf_hasLRradio = 0;
+		/*NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
+		NSM_jumppack_energy_capacity = 100;
+		NSM_jumppack_recharge = 0.5;
+		NSM_jumppack_jump_types[] = {{"Short Jump",{15,5,25,5,1,1}}, {"Vert. Jump",{5,20,75,0,0,0}}, {"Afterburn",{35,15,100,10,1,0}}};*/
+		NSM_jumppack_is_jumppack = 1;
+		NSM_jumppack_spam_delay = 1;
+		NSM_jumppack_energy_capacity = 100;
+		NSM_jumppack_recharge = 0.5;
+		NSM_jumppack_jump_types[] = {{"Short Jump",{15,5,25,5,1,1}}, {"Vert. Jump",{2.5,30,75,0,0,0}}, {"Afterburn",{35,15,100,10,1,0}}};
+		/*NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 300;
 		NSM_jumppack_recharge = 1;
-		NSM_jumppack_jump_types[] = {{"Short Jump",{25,7,20,0,1,1}},{"Vertical Jump",{0,20,20,0,0,0}}};
+		NSM_jumppack_jump_types[] = {{"Short Jump",{25,7,20,0,1,1}},{"Vertical Jump",{0,20,20,0,0,0}}};*/
 	};
 	class 288th_Flightpack_RTO: 288th_Flightpack
 	{

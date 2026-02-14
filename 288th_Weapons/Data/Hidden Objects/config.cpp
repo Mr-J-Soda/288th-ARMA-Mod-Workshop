@@ -594,7 +594,7 @@ class cfgWeapons
 		scopeCurator = 1;
 	};
 	class Pistol_Base_F;
-	class ace_vmh3: Pistol_Base_F
+	/*class ace_vmh3: Pistol_Base_F
 	{
 		scope = 1;
 		scopeArsenal = 1;
@@ -607,7 +607,7 @@ class cfgWeapons
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-	};
+	};*/
 	class hgun_P07_F;
 	class DSA_MachinePistol9mm: hgun_P07_F
 	{

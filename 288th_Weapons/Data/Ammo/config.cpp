@@ -662,6 +662,7 @@ class cfgAmmo
 		submunitionAmmo = "65x85_EHP";
 		triggerDistance = 100;
 		triggerTime = 0.05;
+		deleteParentWhenTriggered = 1;
 	};
 	class 288th_HEDP_Buckshot : 288th_Buckshot_Pellet
 	{
@@ -684,9 +685,8 @@ class cfgAmmo
 	{
 		//cartridge = "288th_fx_slug_red";
 		submunitionConeType[] = { "poissondisc",8 };
-		submunitionAmmo[] = {"65x85_APFS",0.1,"288th_Plasma_Blue",0.1,"288th_Plasma_Green",0.1,"288th_Plasma_Red",0.1,"288th_Plasma_Pink",0.1,"288th_Plasma_Orange",0.1,"288th_Plasma_Yellow",0.1,"288th_Plasma_Purple",0.1,"288th_Plasma_White",0.1,"288th_Plasma_Black",0.1};
+		submunitionAmmo[] = {"288th_Plasma_Blue",0.111,"288th_Plasma_Green",0.111,"288th_Plasma_Red",0.111,"288th_Plasma_Pink",0.111,"288th_Plasma_Orange",0.111,"288th_Plasma_Yellow",0.111,"288th_Plasma_Purple",0.111,"288th_Plasma_White",0.111,"288th_Plasma_Black",0.112};
 	};
-	
 	//custom Plasma Bullets
 	class 288th_Plasma_Blue : 65x85_APFS
 	{
@@ -1027,6 +1027,16 @@ class cfgAmmo
 			hitVirtual = "ImpactPlasmaBlack";
 		};
 	};
+	class 288th_Plasma_Rainbow : 65x85_APFS
+	{
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		submunitionConeAngle = 0;
+		submunitionCount = 1;
+		submunitionAmmo[] = {"288th_Plasma_Blue",0.111,"288th_Plasma_Green",0.111,"288th_Plasma_Red",0.111,"288th_Plasma_Pink",0.111,"288th_Plasma_Orange",0.111,"288th_Plasma_Yellow",0.111,"288th_Plasma_Purple",0.111,"288th_Plasma_White",0.111,"288th_Plasma_Black",0.112};
+		tracerScale = 1;
+		deleteParentWhenTriggered = 1;
+		triggerTime = 0.001;
+	};
 	class 288th_Plasma_Soda : B_762x51_Ball
 	{
 		hit = 24.0;
@@ -1175,11 +1185,11 @@ class cfgAmmo
 	class 288th_KO_shell : 288th_EMP
 	{
 		typicalSpeed = 400;
-		submunitionConeAngle = 0.01;
-		submunitionConeType[] = { "poissondisc",4 };
-		submunitionAmmo = "288th_Taser_ammo_KO";
+		submunitionConeAngle = 0;
+		submunitionCount = 1;
+		submunitionAmmo = {"288th_Taser_ammo_KO",1};
 		triggerDistance = 0.5;
-		triggerTime = 0.01;
+		triggerTime = 0.001;
 	};
 
 	//Custom M41 Ammo
@@ -2774,6 +2784,13 @@ class CfgMagazines
 		displaynameshort = "6.5x85 Black Plasma Mag";
 		descriptionshort = "A custom designed 6.5x85 mag loaded with black plasma tips";
 		ammo = "288th_Plasma_Black";
+	};
+	class 288th_Plasma_Rainbow_Mag : 288th_Plasma_Blue_Mag
+	{
+		displayname = "[288th] 30Rnd Rainbow Plasma 6.5x85 Mag";
+		displaynameshort = "6.5x85 Rainbow Plasma Mag";
+		descriptionshort = "A custom designed 6.5x85 mag loaded with Rainbow plasma tips";
+		ammo = "288th_Plasma_Rainbow";
 	};
 	class 288th_Plasma_Soda_Mag : 288th_Plasma_Blue_Mag
 	{
@@ -5320,16 +5337,15 @@ class CfgMagazines
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
-		initSpeed = 50;
 		scope = 2;
 		scopearsenal = 2;
 		displayname = "[288th] 50Rnd Test Mag";
 		displaynameshort = "288th Test Mag";
 		descriptionshort = "A test magazine loaded with who knows what";
-		ammo = "OPTRE_c7_remote_ammo_thrown_sticky";
+		ammo = "288th_Plasma_Rainbow";
 		count = 50;
 		mass = 1;
-		tracersEvery = 1;
+		tracersEvery = 0;
 	};
 	class 288th_65x85_M247Z: OPTRE_200Rnd_127x99_M247H_Etilka
 	{

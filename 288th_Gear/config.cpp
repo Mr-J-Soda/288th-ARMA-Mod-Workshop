@@ -5305,8 +5305,9 @@ class cfgVehicles
 	class MA_Marine_BDU_Base;
 	class 288th_ODST_BDU_HJ: MA_Marine_BDU_Base
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		UniformClass = "MA_Marine_BDU_ODST_HJ";
 		model = "\MA_Armor\data\Uniforms\M52_ODST_Uniform\M52_ODST_Uniform.p3d";
 		picture = "\MA_Armor\data\Icons\H3_ODST_Uniform.paa";
@@ -5490,8 +5491,9 @@ class cfgVehicles
 
 	class 288th_ODST_BDU_NC: MA_Marine_BDU_Base
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		UniformClass = "MA_Marine_BDU_ODST_HJ_NC";
 		model = "\MA_Armor\data\Uniforms\M52_ODST_Uniform\M52_ODST_Uniform.p3d";
 		picture = "\MA_Armor\data\Icons\H3_ODST_Uniform.paa";
@@ -5512,8 +5514,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Grey_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_Grey_CO.paa",
@@ -5530,8 +5533,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Winter_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_Winter_CO.paa",
@@ -5548,8 +5552,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_ERDL_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_ERDL_CO.paa",
@@ -5566,8 +5571,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Chip_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_CChip_CO.paa",
@@ -5584,8 +5590,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Tiger_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_Tiger_CO.paa",
@@ -5602,8 +5609,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Brown_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_Brown_TrooperUpperBDU_CO.paa",
@@ -5620,8 +5628,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Grassland_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_Base_TrooperUpperBDU_CO.paa",
@@ -5638,8 +5647,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Desert_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_Desert_TrooperUpperBDU_CO.paa",
@@ -5656,8 +5666,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Woodland_NC: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_Woodland_TrooperUpperBDU_CO.paa",
@@ -5674,8 +5685,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_ONI: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\ONI\MA_ODSTUpperBDU_CO.paa",
@@ -5692,8 +5704,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Logic: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_Winter_CO.paa",
@@ -5710,8 +5723,9 @@ class cfgVehicles
 	};
 	class 288th_ODST_BDU_Bandit: 288th_ODST_BDU_NC
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
 		hiddenSelectionsTextures[] = 
 		{
 			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperBDU_CChip_CO.paa",
@@ -5751,7 +5765,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "CH252A";
-				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon"};
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
 			};
 		};
 		class MKVB_Helmet

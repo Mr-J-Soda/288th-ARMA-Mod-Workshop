@@ -197,6 +197,7 @@ class CfgMagazineWells
 			"288th_Plasma_Pink_Mag",
 			"288th_Plasma_White_Mag",
 			"288th_Plasma_Black_Mag",
+			"288th_Plasma_Rainbow_Mag",
 			"288th_EHP_Mag",
 			"288th_Silver_Mag",
 			"288th_EMP"
@@ -606,6 +607,15 @@ class cfgWeapons
 	class TKE_UCNMMG;
 	class WRS_Weapon_LMG;
 	class OPTRE_M247H_Etilka;
+	class OPTRE_AIE_486H_Minigun_MMG_Weapon_Base;
+	class OPTRE_M41_SSR_G;
+	class OPAEX_M6GGNR: OPTRE_M41_SSR_G
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+	};
 
 	//ACE Keys
 	class ACE_ItemCore;
@@ -1005,6 +1015,8 @@ class cfgWeapons
 		HUD_BulletInARows = 4;
 		HUD_TotalPosibleBullet = 200;
 		cursor = "OPTRE_M73";
+		hiddenSelections[] = {"camo","camo1"};
+		hiddenSelectionsTextures[] = {"\TKE_Kuiper_Engagements\TKE_Weapons\data\TKE_UCNMMGBack_co.paa","\TKE_Kuiper_Engagements\TKE_Weapons\data\TKE_UCNMMGFront_co.paa"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -1507,6 +1519,91 @@ class cfgWeapons
 			class LinkedItemsPointer{};
 		};
 	};
+
+	class 288th_M827_MMG: OPTRE_AIE_486H_Minigun_MMG_Weapon_Base
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] M827 'Handzaag' HRMG";
+		baseWeapon = "288th_M827_MMG";
+		recoil = "OPTRE_AIE_486H_Recoil";
+		magazines[] = {"OPTRE_AIE_1000Rnd_762x51_M118_Belt_Tracer_Red"};
+		magazineWell[] = {"OPTRE_Magwell_AIE_486H"};
+		modes[] = {"FullAutoSlow","FullAutoFast"};
+		class FullAutoSlow: Mode_FullAuto
+		{
+			//sounds[] = {"standardsound"};
+			class BaseSoundModeType;
+			class standardsound
+			{
+				begin1[] = {"\OPTRE_Weapons_Turrets\AIE_486H\data\sounds\minichaingun-fire-01.wav",0.5,1,2200,{2,36879}};
+				soundbegin[] = {"begin1",1};
+				soundsetshot[] = {"OPTRE_MMGMinigun762mm_Shot_SoundSet"};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+				begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_01",1.0,1,300};
+				begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_02",1.0,1,300};
+				begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_short_03",1.0,1,300};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_interior",1.0,1,300};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_trees",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_forest",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_meadows",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\silencer_DMR_05_tail_houses",1.0,1,300};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			reloadTime = 0.2;
+			dispersion = 0.000581776;
+			soundContinuous = 0;
+			soundBurst = 1;
+			minRange = 0;
+			minRangeProbab = 0;
+			midRange = 0;
+			midRangeProbab = 0;
+			maxRange = 0;
+			maxRangeProbab = 0;
+			textureType = "fullAuto";
+		};
+		class FullAutoFast : FullAutoSlow
+		{
+			reloadTime = 0.1;
+			textureType = "fastAuto";
+		};
+
+	};
 	/*class OPTRE_M73A1: LMG_Mk200_F
 	{
 		scope = 2;
@@ -1526,20 +1623,6 @@ class cfgWeapons
 		model = "\OPTRE_Weapons_MG\m73a1\m73A1_short.p3d";
 		baseWeapon = "OPTRE_M73A1_Short";
 		displayName = "M73A1 (Para)";
-	};*/
-
-	/*class 288th_Wildebeest: WRS_Weapon_LMG
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		displayName = "[288th] M247X";
-		baseWeapon = "288th_Wildebeest";
-		descriptionshort = "Special Oni Derived Armament M247X";
-		magazineWell[] = {};
-		magazines[] = {"200Rnd_556x45_Box_Tracer_F"};
 	};*/
 
 	//288th Auto GL Rifle

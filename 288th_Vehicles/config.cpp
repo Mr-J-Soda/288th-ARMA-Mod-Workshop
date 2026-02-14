@@ -3478,7 +3478,6 @@ class cfgVehicles
 		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio = 1;
 		enableRadio = 1;
-		visualTarget = .5;
 		waterLeakiness = 0.5;
 		airBrakeFrictionCoef = 5;
 		radarTargetSize = 0.4;
@@ -3517,7 +3516,6 @@ class cfgVehicles
 		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio = 1;
 		enableRadio = 1;
-		visualTarget = .5;
 		waterLeakiness = 0.5;
 		radarTargetSize = 0.4;
 		visualTargetSize = 0.5;
@@ -7832,6 +7830,7 @@ class cfgVehicles
         cost = 10;
 		audible = 0.0085;
         camouflage = 0.025;
+		visualTargetSize = 0.1;
 		class UserActions
 		{
 			class MQ_94_Pickup
