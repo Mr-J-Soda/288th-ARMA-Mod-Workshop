@@ -376,6 +376,25 @@ class cfgVehicles
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
 	};
+	class 288th_Flightpack_Spartan: 288th_Flightpack
+	{
+		displayName = "[288th] Flightpack (Spartan)";
+		model = "\OPTRE_weapons\backpacks\jetpack_Spartan.p3d";
+		NSM_jumppack_effect_points[] = {{"spine3",{0,-0.3,-0.1}}};
+	};
+	class 288th_Flightpack_Spartan_RTO: 288th_Flightpack_Spartan
+	{
+		displayName = "[288th] Flightpack RTO (Spartan)";
+		tf_isolatedAmount = 0.65;
+		tf_range = 40000;
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "rt1523g_radio_dialog";
+		tf_subtype = "digital_lr";
+		transportMaxWeapons = 20;
+		transportMaxMagazines = 200;
+	};
 	class 288th_Kitbag: OPTRE_UNSC_Rucksack
 	{
 		scope = 1;

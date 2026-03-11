@@ -488,6 +488,15 @@ class CfgMagazineWells
 			"288th_Autocannon_mag"
 		};
 	};*/
+	class 288th_Magwell_Handzaag
+	{
+		CfgMagazines[]=
+		{
+			"288th_600Rnd_762_AP",
+			"288th_600Rnd_762_GP",
+			"288th_600Rnd_762_SLAPT"
+		};	
+	};
 };
 
 class CfgRecoils
@@ -582,7 +591,6 @@ class cfgWeapons
 	//class SC_Rifle_Bastard;
 	class OPTRE_MachineGun_Base;
 	class srifle_DMR_04_F;
-	class OPTRE_M393_DMR;
 	class OPTRE_M393S_DMR;
 	// Attachment Slots
 	class WeaponSlotsInfo;
@@ -722,6 +730,11 @@ class cfgWeapons
 		LEBA_SWS_Tracking_Random_Chance = 50;
 		LEBA_SWS_Tracking_Speed = 150;
 	};
+	class OPTRE_M392_DMR;
+	class OPTRE_M393_DMR: OPTRE_M392_DMR
+    {
+        magazineWell[] = {"OPTRE_Magwell_M392_DMR"};
+    };
 
 	class 288th_M99A2S3 : OPTRE_M99A2S3
 	{
@@ -935,7 +948,7 @@ class cfgWeapons
 			textureType = "fastAuto";
 		};
 	};
-	class 288th_Kennedy_M73: OPTRE_M73
+	/*class 288th_Kennedy_M73: OPTRE_M73
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -978,6 +991,37 @@ class cfgWeapons
 			reloadTime = 0.05;
 			textureType = "fastAuto";
 		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "optre_m73_smartlink";
+			};
+			class LinkedItemsPointer
+			{
+				slot = "PointerSlot";
+				item = "OPTRE_M12_Laser";
+			};
+		};
+	};*/
+	class 288th_Butcher_M73: OPTRE_M73
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		displayName = "[288th] Butcher's Shoota";
+		baseWeapon = "288th_Butcher_M73";
+		magazines[] = {};
+		magazineWell[] = {"OPTRE_Magwell_M73","TCF_Magwell_M73H"};
+		HUD_BulletInARows = 3;
+		HUD_TotalPosibleBullet = 300;
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M73X\Butcher\Butchers_M73_co.paa"};
+		cursor = "OPTRE_M73";
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -1073,6 +1117,8 @@ class cfgWeapons
 		HUD_BulletInARows = 4;
 		HUD_TotalPosibleBullet = 120;
 		cursor = "OPTRE_M73";
+		hiddenSelections[] = {"camo","camo1"};
+		hiddenSelectionsTextures[] = {"\TKE_Kuiper_Engagements\TKE_Weapons\data\TKE_UCNMMGBack_co.paa","\288th_Weapons\Data\Weapons\MMG\JohnsonGunFront_co.paa"};
 		modes[] = { "FullAutoFast","FullAutoSlow" };
 		class FullAutoSlow : Mode_FullAuto
 		{
@@ -1531,9 +1577,15 @@ class cfgWeapons
 		displayName = "[288th] M827 'Handzaag' HRMG";
 		baseWeapon = "288th_M827_MMG";
 		recoil = "OPTRE_AIE_486H_Recoil";
-		magazines[] = {"OPTRE_AIE_1000Rnd_762x51_M118_Belt_Tracer_Red"};
-		magazineWell[] = {"OPTRE_Magwell_AIE_486H"};
+		magazines[] = {"288th_600Rnd_762_GP","288th_600Rnd_762_AP",	"288th_600Rnd_762_SLAPT"};
+		magazineWell[] = {"288th_Magwell_Handzaag"};
 		modes[] = {"FullAutoSlow","FullAutoFast"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M827\AIE_co.paa","OPTRE_Weapons_Turrets\AIE_486H\data\Tripod_co.paa","288th_Weapons\Data\Weapons\M827\Decal_ca.paa"};
+		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_LMG";
+		Glasses = "OPTRE_GLASS_HUD_AmmoCount_LMG";
+		Eye = "OPTRE_EYE_HUD_AmmoCount_LMG";
+		HUD_BulletInARows = 6;
+		HUD_TotalPosibleBullet = 600;
 		class FullAutoSlow: Mode_FullAuto
 		{
 			//sounds[] = {"standardsound"};
@@ -2246,8 +2298,17 @@ class cfgWeapons
 		baseWeapon = "288th_M319X";
 		hiddenSelections[] = {"camoBody","camoLogo","camosight","camoreticle","camoScope"};
 		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\GL\gl_co.paa","optre_weapons\gl\data\logos_ca.paa","optre_weapons\br\data\gl\sight_co.paa","optre_weapons\br\data\gl\ubgl_reticle.paa","optre_weapons\gl\data\scope_co.paa"};
-		magazines[] = {"288th_Potato","M319_HE_Grenade_Shell","M319_HEDP_Grenade_Shell","M319_HEDPC_Grenade_Shell","M319_HEAT_Grenade_Shell","M319_Buckshot","M319_Smoke","M319_Smoke_Orange","M319_Smoke_Green","M319_Smoke_Red","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+		magazines[] = {"288th_Potato","M319_HE_Grenade_Shell","M319_HEDP_Grenade_Shell","M319_HEDPC_Grenade_Shell","M319_HEAT_Grenade_Shell","M319_Buckshot","M319_Smoke","M319_Smoke_Orange","M319_Smoke_Green","M319_Smoke_Red","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","OPTRE_3rnd_Masterkey_Slugs","OPTRE_3rnd_Masterkey_Pellets"};
 		magazineWell[] = { "288th_GL","UGL_40x36","CBA_40mm_M203","CBA_40mm_EGLM" };
+	};
+	class 288th_Bandit_M319X: 288th_M319X
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] Bandit's Blunderbuss";
+		descriptionShort = "Grenade Launcher";
+		baseWeapon = "288th_Butcher_M319X";
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\GL\Bandit_GL_CO.paa","optre_weapons\gl\data\logos_ca.paa","optre_weapons\br\data\gl\sight_co.paa","optre_weapons\br\data\gl\ubgl_reticle.paa","optre_weapons\gl\data\scope_co.paa"};
 	};
 
 	class 288th_GL15R : arifle_SDAR_F

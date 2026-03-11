@@ -105,6 +105,8 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets\MA_ODST_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets\MA_ODST_Visor_CO_IE.paa","MA_Armor\data\Attachments\Balaclava\Marine_Balaclava_CO.paa"};
 		optreVarietys[] = {"_dp","","_broken"};
 		optreHUDStyle = "ODST_1";
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Human_ODST\Reach_ODST_Helm.p3d";
@@ -149,6 +151,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\Human_ODST\Reach_ODST_Helm_dp.p3d";
 		picture = "\MA_Armor\data\Icons\H3_ODST_Helmet.paa";
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets\MA_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\Human_ODST\Color_Variants\MA_ODST_Depolarized_Visor_CA.paa","MA_Armor\data\Attachments\Balaclava\Marine_Balaclava_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Human_ODST\Reach_ODST_Helm_dp.p3d";
@@ -498,6 +502,8 @@ class cfgWeapons
 		optreVarietys[] = {"","","_broken"};
 		optreHUDStyle = "ODST_1";
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_AA\AA_Helm_co.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_AA\AA_Visor_Ice_co.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\AA\AA_Helmet.p3d";
@@ -665,6 +671,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\MKVB\MKVB_Helm.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKVB\MKVB_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKVB\MKVB_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\MKVB\MKVB_Helm.p3d";
@@ -835,6 +843,8 @@ class cfgWeapons
 		picture = "\MA_Armor\data\Icons\Gungnir_Helmet.paa";
 		hiddenSelections[] = {"Camo1"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Gungnir\Gungnir_Helmet_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Gungnir\Gungnir_Helmet.p3d";
@@ -1019,6 +1029,8 @@ class cfgWeapons
 		picture = "\288th_Gear\Data\ODST\Brimstone_MA\Helmets_Commando\commando_image.paa";
 		model = "MA_Armor\data\Helmets\Commando\Commando_Helmet.p3d";
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Commando\Commando_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Commando\Commando_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Commando\Commando_Helmet.p3d";
@@ -1198,6 +1210,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\Scout\HR_Scout_Helmet.p3d";
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Scout\Scout_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Scout\Scout_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Scout\HR_Scout_Helmet.p3d";
@@ -1357,6 +1371,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\JFO\JFO_Helmet.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\JFO_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\JFO_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\JFO\JFO_Helmet.p3d";
@@ -1536,6 +1552,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\Recon\Recon_Helmet.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Recon\Recon_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Recon\Recon_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Recon\Recon_Helmet.p3d";
@@ -1704,6 +1722,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\EVA\EVA_Helmet.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_EVA\EVA_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_EVA\EVA_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\EVA\EVA_Helmet.p3d";
@@ -1905,6 +1925,8 @@ class cfgWeapons
 		picture = "\288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKV\Icon_MK_V_image.paa";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKV\MKV_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKV\MKV_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformmodel = "MA_Armor\data\Helmets\MKV\MKV_Helmet.p3d";
@@ -2064,6 +2086,8 @@ class cfgWeapons
 		picture = "\288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKIV\Icon_MK_IV_image.paa";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKIV\MKIV_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_MKIV\MKIV_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformmodel = "MA_Armor\data\Helmets\MKIV\MKIV_Helm.p3d";
@@ -2222,6 +2246,8 @@ class cfgWeapons
 		model = "MA_Armor\data\Helmets\Grenadier\Grenadier_Helmet.p3d";
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Grenadier_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Grenadier_Visor_Ice_CO.paa"};
+		ace_hearing_protection = 1;
+		ace_hearing_lowerVolume = 0;
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Grenadier\Grenadier_Helmet.p3d";

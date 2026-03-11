@@ -807,4 +807,18 @@ class cfgWeapons
 			mass = 18;
 		};
 	};
+
+	class 288th_M6W_CarBean: 288th_M6D_SMG
+    {
+        displayName = "[288th] M6W Car-Bean";
+        baseWeapon = "288th_M6W_CarBean";
+        descriptionShort = "Special Heinz Derived Bean Armament M6W";
+        hiddenSelectionsTextures[]=
+        {
+            "288th_Weapons\Data\Weapons\M6_Pistols\CarBean\CarBean_Main_co.paa",
+            "OPTRE_Weapons_Pistols\M6D\Data\M6D_Emmisve_co.paa",
+            "288th_Weapons\Data\Weapons\M6_Pistols\CarBean\CarBean_Furniture_co.paa",
+            "288th_Weapons\Data\Weapons\M6_Pistols\CarBean\CarBean_Furniture_co.paa"
+        };
+    };
 };

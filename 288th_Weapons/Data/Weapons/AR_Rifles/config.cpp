@@ -1312,32 +1312,6 @@ class cfgWeapons
 		};
 	};
 
-	//Butcher's BR55
-	class 288th_Butcher_BR55HB: OPTRE_BR55HB
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		canShootInWater = 1;
-		displayName = "[288th] Butchers Blaster";
-		descriptionshort = "Special Oni Derived Armament BR55HB";
-		baseWeapon = "288th_Butcher_BR55HB";
-		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\AR_Rifles\Butcher\br55_1_co.paa","288th_Weapons\Data\Weapons\AR_Rifles\Butcher\br55_2_co.paa"};
-		magazines[] = {"OPTRE_36Rnd_95x40_Mag"};
-		magazineWell[] = {"OPTRE_Magwell_BR55"};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "OPTRE_BR45_Scope";
-			};
-		};
-	};
-
 	//Steven's Grey Wolf
 	/*class 288th_Stevens_Rifle: WRS_Weapon_AR_Ver1
 	{
@@ -1665,60 +1639,6 @@ class cfgWeapons
 					soundSetShot[] = {"Msbs65_01_Ugl_Shot_SoundSet","Msbs65_01_Ugl_Tail_SoundSet","Msbs65_01_Ugl_InteriorTail_SoundSet"};
 				};
 				reloadTime = 0.1;
-			};
-		};
-	};
-	class 288th_Fade_MA5BGL: 288th_MA5BGL
-	{
-		canShootInWater = 1;
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] Fade's MA5B-GL";
-		muzzles[] = {"this","288th_M301UGL"};
-		baseWeapon = "288th_Fade_MA5BGL";
-		magazines[] = {"288th_60Rnd_308_Mag"};
-		magazineWell[] = {"288th_MA5B_308"};
-		recoil = "recoil_lim";
-		hiddenSelectionsTextures[] = 
-		{
-			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\weapon_co.paa",
-			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\smartlink_co.paa",
-			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\cover_co.paa",
-			"288th_Weapons\Data\Weapons\AR_Rifles\Fade\ma5_reticle_red.paa"
-		};
-		class 288th_M301UGL: UGL_F
-		{
-			canShootInWater = 1;
-			displayName = "Shotgun";
-			descriptionShort = "Shotgun";
-			cursor = "OPTRE_M45";
-			cursorAim = "EmptyCursor";
-			useModelOptics = 0;
-			useExternalOptic = 0;
-			cameraDir = "OP_look";
-			discreteDistance[] = {100,200,300,400};
-			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
-			discreteDistanceInitIndex = 0;
-			reloadAction = "GestureReloadMXUGL";
-			reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\MX_UGL_reload",1,1,10};
-			recoil = "recoil_lim";
-			magazines[] ={"288th_Buckshot","288th_Slug"};
-			magazineWell[] = { 288th_Shotgun };
-			class Single: Single
-			{
-				sounds[] = {"StandardSound"};
-				class BaseSoundModeType
-				{
-					weaponSoundEffect = "DefaultRifle";
-					closure1[] = {};
-					closure2[] = {};
-					soundClosure[] = {"closure1",0.5,"closure2",0.5};
-				};
-				class StandardSound: BaseSoundModeType
-				{
-					soundSetShot[] = {"Msbs65_01_Ugl_Shot_SoundSet","Msbs65_01_Ugl_Tail_SoundSet","Msbs65_01_Ugl_InteriorTail_SoundSet"};
-				};
-				reloadTime = 0.2;
 			};
 		};
 	};

@@ -21,9 +21,32 @@ class CfgMagazineWells
 	{
 		CfgMagazines[] =
 		{
-			"288th_60Rnd_45_Mag",
-			"288th_60Rnd_45_Mag_EHP",
-			"288th_60Rnd_45_Mag_Silver"
+			"288th_60Rnd_45",
+			"288th_60Rnd_45_Tracer",
+			"288th_60Rnd_45_AP",
+			"288th_60Rnd_45_APT",
+			"288th_60Rnd_45_SLAP",
+			"288th_60Rnd_45_SLAPT",
+			"288th_60Rnd_45_FMJ",
+			"288th_60Rnd_45_FMJT",
+			"288th_60Rnd_45_HV",
+			"288th_60Rnd_45_HVT",
+			"288th_60Rnd_45_HVAP",
+			"288th_60Rnd_45_HVAPT",
+			"288th_60Rnd_45_HPSAP",
+			"288th_60Rnd_45_HPSAPT",
+			"288th_60Rnd_45_EHP",
+			"288th_60Rnd_45_EHPT",
+			"288th_60Rnd_45_SAPHE",
+			"288th_60Rnd_45_SAPHET",
+			"288th_60Rnd_45_HE",
+			"288th_60Rnd_45_HET",
+			"288th_60Rnd_45_SS",
+			"288th_60Rnd_45_SST",
+			"288th_60Rnd_45_UW",
+			"288th_60Rnd_45_UWT",
+			"288th_60Rnd_45_S",
+			"288th_60Rnd_45_ST"
 		};
 	};
 };
@@ -78,11 +101,11 @@ class cfgWeapons
 		baseWeapon = "288th_M7V_SMG";
 		magazines[] =
 		{
-			288th_60Rnd_45_Mag
+			288th_60Rnd_45
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"288th_Weapons\Data\Weapons\M7V_SMG\M7V_SMG.paa",
+			"288th_Weapons\Data\Weapons\m7\M7V_SMG.paa",
 			"\a3\weapons_f\data\vectoratt_co.paa",
 			"\a3\weapons_f\acc\data\battlesight_co.paa"
 		};
@@ -94,7 +117,7 @@ class cfgWeapons
 			"NVG"
 		};
 		cursor = "OPTRE_M7";
-		picture = "\288th_Weapons\Data\Weapons\M7V_SMG\M7V\gear_SMG_01_X_CA";
+		picture = "\288th_Weapons\Data\Weapons\m7\M7V\gear_SMG_01_X_CA";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\SMG\SMG_IRON.paa";
 		//pictureMjolnirHud = "OPTRE_Suit_Scripts\textures\weaponIcons\SubMachineGuns\M7_icon.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_SMG";
@@ -185,7 +208,7 @@ class cfgWeapons
 		descriptionshort = "Special Oni Derived Armament M7K SMG";
 		baseWeapon = "288th_M7K_SMG";
 		maxZeroing = 300;
-		magazines[] ={"288th_60Rnd_45_Mag"};
+		magazines[] ={"288th_60Rnd_45"};
 		magazineWell[] = { 288th_M7V_SMG };
 		recoil = "recoil_M7V_SMG";
 		visionMode[] =
@@ -195,14 +218,14 @@ class cfgWeapons
 		};
 		inertia = 0.25;
 		cursor = "OPTRE_M7";
-		picture = "\288th_Weapons\Data\Weapons\M7V_SMG\M7K\icon_SMG_05_F_X_CA";
+		picture = "\288th_Weapons\Data\Weapons\m7\M7K\icon_SMG_05_F_X_CA";
 		pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\SMG\SMG_IRON.paa";
 		ODST_1 = "OPTRE_ODST_HUD_AmmoCount_SMG";
 		Glasses = "OPTRE_GLASS_HUD_AmmoCount_SMG";
 		Eye = "OPTRE_EYE_HUD_AmmoCount_SMG";
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 60;
-		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M7V_SMG\signalis_type84_black_co.paa","288th_Weapons\Data\Weapons\M7V_SMG\signalis_type84_black_acc_co.paa"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\m7\signalis_type84_black_co.paa","288th_Weapons\Data\Weapons\m7\signalis_type84_black_acc_co.paa"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -278,7 +301,7 @@ class cfgWeapons
 		displayName = "[288th] M7X SMG";
 		descriptionshort = "Special Oni Derived Armament M7X SMG";
 		baseWeapon = "288th_M7X_SMG";
-		magazines[] ={288th_60Rnd_45_Mag};
+		magazines[] ={288th_60Rnd_45};
 		magazineWell[] = { 288th_M7V_SMG };
 		recoil = "recoil_M7V_SMG";
 		visionMode[] ={"Normal","NVG"};
@@ -291,7 +314,7 @@ class cfgWeapons
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 60;
 		hiddenSelections[] = {"camo","camo1"};
-		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M7V_SMG\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\m7\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
 		class GunParticles
 		{
 			class EffectShotCloud
@@ -366,6 +389,18 @@ class cfgWeapons
 		aiDispersionCoefY = 10;
 		aiDispersionCoefX = 10;
 	};
+	class 288th_Whiskey_M7X: 288th_M7X_SMG
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		canShootInWater = 1;
+		baseWeapon = "288th_Whiskey_M7X";
+		displayName = "[288th] Cock Bite";
+		hiddenSelectionsTextures[] = {"P:\288th_Weapons\Data\Weapons\m7\Whiskey\whiskey_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
+	};
 	class 288th_M7X_SMG_Folded: OPTRE_M7_Folded
 	{
 		dlc = "288thDJP_Aux";
@@ -377,7 +412,7 @@ class cfgWeapons
 		displayName = "[288th] M7X SMG";
 		descriptionshort = "Special Oni Derived Armament M7X SMG";
 		baseWeapon = "288th_M7X_SMG_Folded";
-		magazines[] ={288th_60Rnd_45_Mag};
+		magazines[] ={288th_60Rnd_45};
 		magazineWell[] = { 288th_M7V_SMG };
 		//recoil = "recoil_M7V_SMG";
 		visionMode[] ={"Normal","NVG"};
@@ -390,7 +425,7 @@ class cfgWeapons
 		HUD_BulletInARows = 3;
 		HUD_TotalPosibleBullet = 60;
 		hiddenSelections[] = {"camo","camo1"};
-		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M7V_SMG\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\m7\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
 		class GunParticles
 		{
 			class EffectShotCloud
@@ -478,13 +513,13 @@ class cfgWeapons
 		baseWeapon = "288th_M7X_Riot_Shield";
 		displayName = "[288th] Riot Shield (M7X)";
 		hiddenSelections[] = {"camoShield","camoWindshield","camo","camo1"};
-		hiddenSelectionsTextures[] = {"OPTRE_Weapons\RiotShield\data\police\body_co.paa","OPTRE_Weapons\riotshield\data\body_ca.paa","288th_Weapons\Data\Weapons\M7V_SMG\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
+		hiddenSelectionsTextures[] = {"OPTRE_Weapons\RiotShield\data\police\body_co.paa","OPTRE_Weapons\riotshield\data\body_ca.paa","288th_Weapons\Data\Weapons\m7\m7_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
 		hiddenSelectionsMaterials[] = {"OPTRE_Weapons\RiotShield\data\body.rvmat","OPTRE_Weapons\riotshield\data\glass.rvmat","optre_weapons\smg\data\m7_m7.rvmat","optre_weapons\smg\data\m7_magazine.rvmat"};
 		handAnim[] = {"OFP2_ManSkeleton","\OPTRE_Weapons\RiotShield\data\anim\m7_human.rtm","Spartan_ManSkeleton","\OPTRE_Weapons\RiotShield\data\anim\spartan\m7_spartan.rtm"};
 		type = 1;
 		inertia = 0.5;
 		dexterity = 1.25;
-		magazines[] ={288th_60Rnd_45_Mag};
+		magazines[] ={288th_60Rnd_45};
 		magazineWell[] = { 288th_M7V_SMG };
 		recoil = "recoil_M7V_SMG";
 		visionMode[] ={"Normal","NVG"};

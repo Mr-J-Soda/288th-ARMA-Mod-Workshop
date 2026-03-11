@@ -466,12 +466,14 @@ class cfgVehicles
 	class ViewOptics;
 	class AnimationSources;
 	class OPTRE_M12R_AA;
+	class OPTRE_M12_TD_ins;
 	class B_MBT_01_cannon_F;
 	class B_HMG_01_F;
 	class B_HMG_01_high_F;
 	class I_MRAP_03_F;
 	class I_MRAP_03_gmg_F;
 	class I_MRAP_03_hmg_F;
+	class ACE_SelfActions;
 	class Ship;
 	class Boat_F: Ship
 	{
@@ -6179,6 +6181,37 @@ class cfgVehicles
 	};
 
 	//cars
+	class OPTRE_M12_Base: Car_F{
+        class ACE_SelfActions: ACE_SelfActions
+        {
+            class TFAR_IntercomChannel
+            {
+                displayName = "$STR_tfar_core_Intercom_ACESelfAction_Name";
+                condition = "true";
+                statement = "";
+                icon = "";
+                class TFAR_IntercomChannel_disabled
+                {
+                    displayName = "Disabled";
+                    condition = "[_target,_player,-1] call TFAR_fnc_canSetIntercomChannel";
+                    statement = "[_target,_player,-1] call TFAR_fnc_setIntercomChannel";
+                };
+                class TFAR_IntercomChannel_1
+                {
+                    displayName = "$STR_tfar_core_Intercom_ACESelfAction_Channel1";
+                    condition = "[_target,_player,0] call TFAR_fnc_canSetIntercomChannel";
+                    statement = "[_target,_player,0] call TFAR_fnc_setIntercomChannel";
+                };
+                class TFAR_IntercomChannel_2
+                {
+                    displayName = "$STR_tfar_core_Intercom_ACESelfAction_Channel2";
+                    condition = "[_target,_player,1] call TFAR_fnc_canSetIntercomChannel";
+                    statement = "[_target,_player,1] call TFAR_fnc_setIntercomChannel";
+                };
+            };
+        };
+        TFAR_hasIntercom = 1;
+    };
 	class 288th_Railgun_Warthog: OPTRE_M12G1_LRV{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -6329,6 +6362,45 @@ class cfgVehicles
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","camo_details","camo_interior","camo_doors"};
 		hiddenSelectionsTextures[] = {"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
 	};
+	class 288th_M12_FSV: OPTRE_M12_TD_ins{
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+		faction = "288th_UNSC";
+		side = 1;
+        displayName = "M12 FSV (288th)";
+        crew = "288th_SW_Rifleman";
+		armor = 250;
+		cost = 250000;
+        hiddenSelections[] = 
+        {
+            "Camo1",
+            "Camo2",
+            "Camo3",
+            "Camo4",
+            "Camo5",
+            "Camo6",
+            "camo_details",
+            "camo_interior",
+            "camo_console"
+        };
+        hiddenSelectionsTextures[] = 
+        {
+            "288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+            "OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa",
+            "OPTRE_Vehicles\Warthog\data\night\transp_lopo_night_co.paa",
+            "OPTRE_Vehicles\Warthog\data\night\hog_apc_night_co.paa",
+            "288th_Vehicles\Warthog\FSV\288th_cannon_co.paa",
+            "OPTRE_Weapons_Turrets\FG75\data\carriage_co.paa",
+            "OPTRE_Vehicles\Warthog\data\decals_ca.paa",
+            "OPTRE_Vehicles\Warthog\data\m12hogmaav_interior_co.paa",
+            "OPTRE_Weapons_Turrets\FG75\data\console_co.paa"
+        };
+    };
 	class 288th_salamander: I_MRAP_03_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -7381,7 +7453,7 @@ class cfgVehicles
 			{
 				canAccessMineDetector = 1;
 				weapons[] = {"288th_M7X_SMG_V","SmokeLauncher","Laserdesignator_mounted"};
-				magazines[] = {"Laserbatteries","288th_60Rnd_45_Mag","288th_60Rnd_45_Mag","288th_60Rnd_45_Mag","288th_60Rnd_45_Mag","SmokeLauncherMag","SmokeLauncherMag"};
+				magazines[] = {"Laserbatteries","288th_60Rnd_45","288th_60Rnd_45","288th_60Rnd_45","288th_60Rnd_45","SmokeLauncherMag","SmokeLauncherMag"};
 				gunBeg = "gun_end";
 				gunEnd = "gun_start";
 				selectionFireAnim = "muzzleFlash";
