@@ -57,7 +57,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th] AN/PRC-515";
 		allowedSlots[] = {901};
-		maximumLoad = 500;
+		maximumLoad = 300;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -85,7 +85,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th] Mil-Tech Radio (Black)";
 		allowedSlots[] = {901};
-		maximumLoad = 500;
+		maximumLoad = 300;
 		mass = 30;
 		tf_isolatedAmount = 0.65;
 		tf_range = 40000;
@@ -112,7 +112,7 @@ class cfgVehicles
 		displayName = "[288th] AN-PRC-497";
 		model = "MA_Armor\data\Backpacks\Marine_Rucksack\Marine_Rucksack.p3d";
 		picture = "\OPTRE_weapons\backpacks\icons\icon_b_anprc521_ca.paa";
-		maximumLoad = 500;
+		maximumLoad = 300;
 		hiddenSelections[] = {"camo1","camo2","camo3","camo4","camo5"};
 		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Attachments_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Radio_Box_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Main_Shell_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\ANPRC_497\Side_Box_co.paa","MA_Armor\data\Backpacks\Marine_Rucksack\Marine_Rucksack_CO.paa"};
 		tf_encryptionCode = "tf_west_radio_code";
@@ -131,7 +131,7 @@ class cfgVehicles
 		displayName = "[288th] M52D Rucksack";
 		model = "MA_Armor\data\Backpacks\M52_Rucksack\M52_Rucksack.p3d";
 		picture = "\MA_Armor\data\Icons\ODST_Rucksack.paa";
-		maximumLoad = 500;
+		maximumLoad = 350;
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Backpack\Backpack_CO.paa","MA_Armor\data\Backpacks\M52_Rucksack\Straps_CO.paa"};
 	};
@@ -229,7 +229,7 @@ class cfgVehicles
 		displayName = "[288th] Blahaj";
 		picture = "288th_Gear\Data\Backpacks\IKEA\blahaj_ico.paa";
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\IKEA\blahaj_co.paa"};
-		maximumLoad = 500;
+		maximumLoad = 350;
 		mass = 30;
 		autocenter = 0; 
 	};
@@ -271,14 +271,14 @@ class cfgVehicles
 		displayName = "[288th] Armor Upgrade (Storage)";
 		model = "\A3\weapons_f\empty";
 		allowedSlots[] = {901};
-		maximumLoad = 500;
+		maximumLoad = 350;
 		mass = 30;
 	};
 	class 288th_RTO_Invisible: 288th_RTO_pack_1
 	{
 		displayName = "[288th] Armor Upgrade (Radio)";
 		model = "\A3\weapons_f\empty";
-		maximumLoad = 500;
+		maximumLoad = 300;
 		mass = 30;
 		tf_isolatedAmount = 0.65;
 		tf_range = 30000;
@@ -311,7 +311,7 @@ class cfgVehicles
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\288th_Gear\Data\Backpacks\jetpack_co.paa"};
 		allowedSlots[] = {901};
-		maximumLoad = 500;
+		maximumLoad = 300;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -346,7 +346,7 @@ class cfgVehicles
 		scopeCurator = 2;
 		isbackpack = 1;
 		displayName = "[288th] Flightpack";
-		maximumLoad = 500;
+		maximumLoad = 300;
 		tf_hasLRradio = 0;
 		/*NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
@@ -406,7 +406,7 @@ class cfgVehicles
 		isbackpack = 1;
 		displayName = "[288th] Kitbag";
 		allowedSlots[] = {901};
-		maximumLoad = 500;
+		maximumLoad = 350;
 		mass = 30;
 		transportMaxWeapons = 20;
 		transportMaxMagazines = 200;
@@ -472,7 +472,7 @@ class cfgVehicles
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\Backpacks\Recon_Gunbag.paa"};
 		icon = "\z\ace\addons\gunbag\ui\gunbag_icon_ca.paa";
 		mass = 30;
-		maximumLoad = 300;
+		maximumLoad = 350;
 		model = "\z\ace\addons\gunbag\data\ace_gunbag.p3d";
 		picture = "\z\ace\addons\gunbag\ui\gunbag_ca.paa";
 		scope = 2;

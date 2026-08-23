@@ -1,0 +1,9 @@
+titleParam1 = "Time limit:";
+textsParam1[] = { "Unlimited", "5 min", "10 min", "15 min" };
+valuesParam1[] = { 0, 300, 600, 900 };
+defValueParam1 = 900;
+
+titleParam2 = "Score to win:";
+textsParam2[] = { "Don't keep score", "50", "100", "150" };
+valuesParam2[] = { 0, 50, 100, 150 };
+defValueParam2 = 50;

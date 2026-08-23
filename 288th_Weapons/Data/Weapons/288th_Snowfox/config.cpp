@@ -101,7 +101,7 @@ class cfgWeapons
 		displayName = "[288th] Snowfox";
 		descriptionshort = "Special Oni Derived Armament Snowfox";
 		baseWeapon = "288th_Snowfox";
-		recoil = "recoil_lim";
+		//recoil = "recoil_lim";
 		hiddenSelectionsTextures[] =
 		{
 			"288th_Weapons\Data\Weapons\288th_Snowfox\m14_ebr01_Fiy_Yellow_CO.paa",

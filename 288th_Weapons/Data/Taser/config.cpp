@@ -252,6 +252,12 @@ class CfgAmmo
 	{
 		ExplosionEffects="288th_TaserExplosion_Long";
 	};
+	class 288th_Taser_ammo_Rifle: 288th_Taser_ammo
+	{
+		ExplosionEffects = "288th_TaserExplosion_Long";
+		typicalSpeed = 760;
+		caliber = 0.1;
+	};
 	class 288th_Taser_ammo_KO: 288th_Taser_ammo
 	{
 		ExplosionEffects="288th_TaserExplosion_KO";

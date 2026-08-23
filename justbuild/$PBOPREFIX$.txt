@@ -1,0 +1,4 @@
+//<'justbuild.pbo' properties via Mikero's dos tools, dll version 9.87>
+prefix=justbuild;
+//PboType=Arma Campaign addon;
+//</properties>

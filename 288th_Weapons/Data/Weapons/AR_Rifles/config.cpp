@@ -1039,7 +1039,7 @@ class cfgWeapons
 		};
 	};
 
-	class 288th_M28A3_Kelkuza : OPTRE_M26_Shotgun_F
+	/*class 288th_M28A3_Kelkuza : OPTRE_M26_Shotgun_F
 	{
 		dlc = "288thDJP_Aux";
 		author = "Soda / Misriah 288";
@@ -1111,7 +1111,7 @@ class cfgWeapons
 					SoundSetShot[] = { "DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet" };
 				};
 				dispersion = 5e-05;
-				reloadTime = 0.25;
+				reloadTime = 0.15;
 				minRange = 2;
 				minRangeProbab = 0.5;
 				midRange = 150;
@@ -1128,8 +1128,111 @@ class cfgWeapons
 			drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\LongRangeRifles\DMR07\DMR07_dry",0.562341,1,10};
 			reloadMagazineSound[] = {"\OPTRE_Wbk_WeaponImprovements\reload\shotgun_reload.ogg",2,1,25};
 		};
-	};
+	};*/
 
+	class 288th_GL15R;
+	class 288th_M28A3_Kelkuza: OPTRE_M26_Shotgun_F
+    {
+        displayName = "[288th] Kelkuza's Stomper";
+        baseWeapon = "288th_M28A3_Kelkuza";
+        modes[] = {"Single", "FullAuto"};
+        visionMode[] = {"Normal","NVG"};
+        magazines[] = {"288th_Slug_Box","288th_Buckshot_Box"};
+        magazineWell[] = {"288th_shotgun_box"};
+        recoil = "recoil_lim";
+        pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";
+        ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
+        Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
+        Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+        HUD_BulletInARows = 2;
+        HUD_TotalPosibleBullet = 30;
+        cursor = "OPTRE_M45";        
+        class Single: Single
+        {
+            class BaseSoundModeType;
+                class StandardSound: BaseSoundModeType
+                {
+                    soundsetshot[] = {"OPTRE_Shotgun_SoundSet","M320_Tail_SoundSet","M320_InteriorTail_SoundSet"};
+                };
+                class SilencedSound: BaseSoundModeType
+                {
+                    SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+                };
+            dispersion = 5e-05;
+            reloadTime = 0.1333;
+            minRange = 2;
+            minRangeProbab = 0.5;
+            midRange = 150;
+            midRangeProbab = 0.7;
+            maxRange = 250;
+            maxRangeProbab = 0.2;
+        };        
+        
+        class FullAuto: Mode_FullAuto
+        {
+            class BaseSoundModeType;
+                class StandardSound: BaseSoundModeType
+                {
+                    soundsetshot[] = {"OPTRE_Shotgun_SoundSet","M320_Tail_SoundSet","M320_InteriorTail_SoundSet"};
+                };
+                class SilencedSound: BaseSoundModeType
+                {
+                    SoundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+                };
+            dispersion = 5e-05;
+            reloadTime = 0.1333;
+            minRange = 2;
+            minRangeProbab = 0.5;
+            midRange = 150;
+            midRangeProbab = 0.7;
+            maxRange = 250;
+            maxRangeProbab = 0.2;
+        };
+        muzzles[] = {"this","secondary"};
+        class secondary: 288th_GL15R
+        {
+            canShootInWater = 1;
+            displayName = "Microgrenade Launcher";
+            magazines[] = {"288th_10rnd_Microgrenade_Drum"};
+            magazineWell[] = {"288th_Microgrenades_Drum"};        
+            picture = "";
+            modes[] = {"Single"};
+            class Single: Single
+            {
+                dispersion = 5e-05;
+                reloadTime = 0.1;
+                minRange = 2;
+                minRangeProbab = 0.5;
+                midRange = 150;
+                midRangeProbab = 0.7;
+                maxRange = 250;
+                maxRangeProbab = 0.2;
+            };
+            cursor = "EmptyCursor";
+            cursorAim = "OPTRE_GRNDLNCH";
+            recoil = "recoil_lim";
+            fireSpreadAngle = 0.95;
+            autoFire = 0;
+            reloadTime = 0.5;
+            reloadAction = "OPTRE_GestureReload_M26_LMG_Shotgun";
+            drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\LongRangeRifles\DMR07\DMR07_dry",0.562341,1,10};
+            reloadMagazineSound[] = {"\OPTRE_Wbk_WeaponImprovements\reload\shotgun_reload.ogg",2,1,25};
+        };
+        hiddenSelections[]=
+        {
+            "camoTop",
+            "camoMid",
+            "camoIrons",
+            "camoShotgun"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "\288th_Weapons\Data\Weapons\AR_Rifles\Kelkuza\top_kel_co.paa",
+            "\288th_Weapons\Data\Weapons\AR_Rifles\Kelkuza\mid_kel_co.paa",
+            "\optre_weapons_mg\m26\data\ironsights_co.paa",
+            "\optre_weapons_mg\m26\data\shotgun_co.paa"
+        };
+    };
 
 	// 288th AR1G
     class 288th_AR1G : WRS_Weapon_AR_Bronze
@@ -1513,6 +1616,165 @@ class cfgWeapons
 		};
 	};*/
 
+	class TKE_KMCSMG;
+	class 288th_G43M: TKE_KMCSMG
+    {
+        dlc = "288thDJP_Aux";
+        author = "Weekers";
+        displayName = "[288th] G43M 'The Cold One'";
+        baseWeapon = "288th_G43M";        
+        scope = 2;
+        scopeArsenal = 2;
+        ace_arsenal_hide = 0;
+        magazines[] = {"OPTRE_60Rnd_762x51_Mag"};        
+        magazineWell[] = {"OPTRE_Magwell_MA5B"};
+        maxZeroing = 1000;
+        recoil="recoil_lim";
+        pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\AssaultRifle\AR.paa";    
+        ODST_1 = "OPTRE_ODST_HUD_AmmoCount_AR";
+        Glasses = "OPTRE_GLASS_HUD_AmmoCount_AR";
+        Eye = "OPTRE_EYE_HUD_AmmoCount_AR";
+        HUD_BulletInARows = 2;
+        HUD_TotalPosibleBullet = 60;
+		canShootInWater = 1;        
+        cursor = "OPTRE_MA5";
+        class WeaponSlotsInfo: WeaponSlotsInfo
+        {
+            class MuzzleSlot: MuzzleSlot
+            {
+                compatibleitems[] = {"optre_ma5suppressor","optre_m7_silencer","optre_m6_silencer","OPTRE_M393_Suppressor","OPTRE_M12_Suppressor","OPTRE_MA37KSuppressor","OPTRE_M6C_compensator","OPTRE_SRS99D_Suppressor"};
+            };
+        };
+        hiddenSelections[]=
+        {
+            "camo"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "288th_Weapons\Data\Weapons\AR_Rifles\Weekers\TKE_KMCSMG_co.paa"
+        };
+        modes[]=
+        {
+            "Single",
+            "Burst",
+            "FullAuto"
+        };
+        class Single: Single
+        {
+            sounds[]=
+            {
+                "StandardSound",
+                "SilencedSound"
+            };
+            class BaseSoundModeType;
+            class StandardSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "WBK_TKE_KMCSMG_SoundSet",
+                    "Msbs65_01_Tail_SoundSet",
+                    "Mx_Tail_Contact_SoundSet"
+                };
+            };
+            class SilencedSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "WBK_TKE_ARBSilenced_SoundSet",
+                    "Msbs65_01_Tail_Int_Silencer_SoundSet"
+                };
+            };
+            reloadTime=0.050000001;
+            dispersion=5e-05;
+            minRange=2;
+            minRangeProbab=0.30000001;
+            midRange=100;
+            midRangeProbab=0.69999999;
+            maxRange=150;
+            maxRangeProbab=0.050000001;
+            aiRateOfFire=2;
+            aiRateOfFireDistance=300;
+        };
+        class FullAuto: Mode_FullAuto
+        {
+            sounds[]=
+            {
+                "StandardSound",
+                "SilencedSound"
+            };
+            class BaseSoundModeType;
+            class StandardSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "WBK_TKE_KMCSMG_SoundSet",
+                    "Msbs65_01_Tail_SoundSet",
+                    "Mx_Tail_Contact_SoundSet"
+                };
+            };
+            class SilencedSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "WBK_TKE_ARBSilenced_SoundSet",
+                    "Msbs65_01_Tail_Int_Silencer_SoundSet"
+                };
+            };
+            reloadTime=0.06;
+            dispersion=5e-05;
+            minRange=0;
+            minRangeProbab=0.89999998;
+            midRange=15;
+            midRangeProbab=0.69999999;
+            maxRange=30;
+            maxRangeProbab=0.1;
+            aiRateOfFire=1e-006;
+            aiRateOfFireDistance=50;
+        };
+		class Burst: FullAuto
+        {
+            sounds[]=
+            {
+                "StandardSound",
+                "SilencedSound"
+            };
+            class BaseSoundModeType
+            {
+            };
+            class StandardSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "WBK_TKE_KMCSMG_SoundSet",
+                    "Msbs65_01_Tail_SoundSet",
+                    "Mx_Tail_Contact_SoundSet"
+                };
+            };
+            class SilencedSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "WBK_TKE_ARBSilenced_SoundSet",
+                    "Msbs65_01_Tail_Int_Silencer_SoundSet"
+                };
+            };
+            soundBurst=0;
+            textureType="dual";
+			autoFire = 0;
+            burst=2;
+            reloadTime=0.04;
+            dispersion=5e-05;
+            minRange=2;
+            minRangeProbab=0.30000001;
+            midRange=50;
+            midRangeProbab=0.69999999;
+            maxRange=100;
+            maxRangeProbab=0.050000001;
+            aiRateOfFire=1;
+            aiRateOfFireDistance=250;
+        };
+    };
+
 	//Custom MA5B
 	class 288th_MA5B: OPTRE_MA5B
 	{
@@ -1642,4 +1904,72 @@ class cfgWeapons
 			};
 		};
 	};
+
+	class OPTRE_BR45GL;
+	class FullAuto;
+	class 288th_XBR45GL_Sparky: OPTRE_BR45GL
+    {
+        author = "Tetra / Misriah 288";
+        scope = 2;
+        scopeArsenal = 2;
+		canShootInWater = 1;
+        displayName = "[288th] XBR45GL (Sparky's Roman Candle)";
+        baseWeapon = "288th_XBR45GL_Sparky";
+        cursor = "OPTRE_BR55";
+        pictureWire = "\OPTRE_Weapons\data\Pictures\WireWeaponIcons\Prime\BattleRifle\BR_SCOPE.paa";
+        pictureMjolnirHud = "\OPTRE_Suit_Scripts\textures\weaponIcons\BattleRifles\BR55_icon.paa";
+        ODST_1 = "OPTRE_ODST_HUD_AmmoCount_BR";
+        Glasses = "OPTRE_GLASS_HUD_AmmoCount_BR";
+        Eye = "OPTRE_EYE_HUD_AmmoCount_BR";
+        HUD_BulletInARows = 2;
+        HUD_TotalPosibleBullet = 36;
+        recoil = "recoil_lim";        
+        magazines[] = {"288th_36Rnd_95_Mag"};
+        magazineWell[] = {"288th_Magwell_BR"};
+        hiddenSelections[] = {"camo","camo_details","camolauncher","camosight","camoreticle","camoglass"};
+        hiddenSelectionsTextures[] = {"OPTRE_Weapons\br\data\br45_co.paa","optre_weapons\br\data\br45decals_ca.paa","OPTRE_Weapons\br\data\GL\GrenadeLauncher_co.paa","OPTRE_Weapons\br\data\GL\Sight_co.paa","optre_weapons\br\data\gl\ubgl_reticle.paa","optre_weapons\br\data\gl\sight_ca.paa"};
+        hiddenSelectionsMaterials[] = {"OPTRE_Weapons\br\data\BR45.rvmat","optre_weapons\br\data\br45decals.rvmat","optre_weapons\br\data\gl\grenadelauncher.rvmat","OPTRE_Weapons\br\data\GL\Sight.rvmat","optre_weapons\br\data\gl\reticle.rvmat","optre_weapons\br\data\gl\sight_transparent.rvmat"};
+        descriptionShort = "Special Oni Derived Armament BR45GL Sparky Pattern";
+        modes[] = {"Single","Burst","FullAuto"};    
+        class Single: Single
+        {
+            reloadTime = 0.075;
+            dispersion = 5e-05;
+            minRange = 2;
+            minRangeProbab = 0.3;
+            midRange = 300;
+            midRangeProbab = 0.7;
+            maxRange = 600;
+            maxRangeProbab = 0.05;
+        };
+        class Burst: FullAuto
+        {
+            textureType = "burst";
+            reloadTime = 0.05;
+            dispersion = 5e-05;            
+            minRange = 2;
+            minRangeProbab = 0.3;
+            midRange = 300;
+            midRangeProbab = 0.7;
+            maxRange = 600;
+            maxRangeProbab = 0.05;
+            soundBurst = 0;
+            burst = 3;
+            autoFire = 0;
+        };
+        class FullAuto: FullAuto
+        {
+            reloadTime = 0.13;
+            dispersion = 0.00085;
+            recoil = "recoil_auto_trg";
+            recoilProne = "recoil_auto_prone_trg";
+            minRange = 2;
+            minRangeProbab = 0.3;
+            midRange = 300;
+            midRangeProbab = 0.7;
+            maxRange = 600;
+            maxRangeProbab = 0.05;
+        };
+        
+    }; 
 };

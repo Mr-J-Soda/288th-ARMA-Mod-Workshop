@@ -460,6 +460,12 @@ class cfgVehicles
 	class O_MBT_02_railgun_base_F;
 	class OPTRE_M12G1_LRV;
 	class OPTRE_M914_RV;
+	class OPTRE_M12A1_LRV;
+    class OPTRE_M12_FAV_APC;
+    class OPTRE_M12_FAV_APC_MED;
+    class OPTRE_M813_TT;
+    class OPTRE_M12_LRV;
+    class OPTRE_M12_ins_APC;
 	class Turrets;
 	class MainTurret;
 	class NewTurret;
@@ -6357,8 +6363,14 @@ class cfgVehicles
 				author = "Misriah 288 DJP";
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extupper_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m68_turret_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa"};
 			};
+			class Brimstone
+			{
+				displayName = "Brimstone";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
+			};
 		};
-		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
+		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1,"Brimstone",1};
 		hiddenSelections[] = {"Camo1","Camo2","Camo3","Camo4","camo_details","camo_interior","camo_doors"};
 		hiddenSelectionsTextures[] = {"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
 	};
@@ -6401,6 +6413,298 @@ class cfgVehicles
             "OPTRE_Weapons_Turrets\FG75\data\console_co.paa"
         };
     };
+	class 288th_M12A1_LRV: OPTRE_M12A1_LRV{
+		displayName = "M12A1 Rocket Warthog (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"camo_details",
+			"camo_interior",
+			"camo_turret",
+			"camo_turret_decals",
+			"camo_doors"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\turrets\m39_turret_co.paa",
+			"\OPTRE_Vehicles\warthog\data\turrets\m12_turret_decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"
+		};
+	};
+	class 288th_M12_FAV_APC: OPTRE_M12_FAV_APC{
+		displayName = "M12 Warthog APC (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_transport_details",
+			"camo_net"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\transp_lopo_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\apc_lopo_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa"
+		};	
+	};
+	class 288th_M12_FAV_APC_MED: OPTRE_M12_FAV_APC_MED{
+		displayName = "M12 Warthog Field Ambulance (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_transport_details",
+			"camo_net",
+			"camo_medical"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\transp_lopo_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\apc_lopo_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\medical_lopo_co.paa"
+		};	
+	};	
+	class 288th_M914_RV: OPTRE_M914_RV{
+		displayName = "M914 Warthog Recovery Vehicle (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"camo_details",
+			"camo_interior",
+			"camo_net",
+			"camo_doors"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\net_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"
+		};	
+	};	
+	class 288th_M12G1_LRV: OPTRE_M12G1_LRV{
+		displayName = "M12G1 Gauss Warthog (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_doors"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa",			
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"
+		};	
+	};	
+	class 288th_M12R_AA: OPTRE_M12R_AA{
+		displayName = "M12R Anti-Air Warthog (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"camo_details",
+			"camo_interior",
+			"camo_doors"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\turrets\m79_turret_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"
+		};	
+	};	
+	class 288th_M813_TT: OPTRE_M813_TT{
+		displayName = "M813TT Warthog (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"camo_details",
+			"camo_interior",
+			"camo_net",
+			"camo_transport_details"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\transp_lopo_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa"
+		};	
+	};	
+	class 288th_M12_LRV: OPTRE_M12_LRV{
+		displayName = "M12 Warthog LRV (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"camo_details",
+			"camo_interior",
+			"camo_turret_decal",
+			"camo_sight",
+			"camo_doors"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\turrets\m12_turret_decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\turrets\sight_co.paa",
+			"\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"
+		};	
+	};	
+	class 288th_M12_Gunner_APC: OPTRE_M12_ins_APC{
+		displayName = "M12 APC  (288th)";
+		faction = "288th_UNSC";
+		dlc = "288th";
+		author = "Misriah 288 DJP";
+		editorCategory = "288th_Eden";
+		editorSubcategory = "288th_Eden_Car";
+		side = 1;
+		crew = "288th_SW_Rifleman";		
+		armor = 250;
+		cost = 250000;
+		hiddenSelections[] = 
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"camo_details",
+			"camo_interior",
+			"camo_rollcage"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa",
+			"\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa",
+			"288th_Vehicles\Warthog\FSV\288th_apc_lopo_co.paa",
+			"\OPTRE_Vehicles\warthog\data\decals_ca.paa",
+			"\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa",
+			"\OPTRE_Vehicles\warthog\data\apc_ind_det1_lopo_co.paa"
+		};	
+	};		
 	class 288th_salamander: I_MRAP_03_F{
 		dlc = "288th";
 		author = "Misriah 288 DJP";
@@ -7924,7 +8228,7 @@ class cfgVehicles
     };
 
 	//Mech
-	class 332nd_TUM5: WBK_WRS_WGP1_Ver1
+	/*class 332nd_TUM5: WBK_WRS_WGP1_Ver1
     {
         identityTypes[] = {"LanguageENGVR_F","Head_NATO","NoGlasses"};
 		scope = 2;
@@ -7949,7 +8253,7 @@ class cfgVehicles
         magazines[] = {};
         respawnweapons[] = {"Throw","Put"};
         respawnMagazines[] = {};
-    };
+    };*/
 
 	//Turrets
 	class 288th_SRS99XT: B_HMG_01_F
@@ -8383,8 +8687,14 @@ class cfgVehicles
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extupper_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m79_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa"};
 				factions[] = { "288th_UNSC" };
 			};
+			class Brimstone
+			{
+				displayName = "Brimstone";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
+			};
 		};
-		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
+		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1,"Brimstone",1};
 	};
 	class 288th_M12_MLMS_AI: 288th_M12_MLMS{
 		dlc = "288th";
@@ -8620,8 +8930,14 @@ class cfgVehicles
 				textures[] = {"\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extupper_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\net_ca.paa"};
 				factions[] = { "288th_UNSC" };
 			};
+			class Brimstone
+			{
+				displayName = "Brimstone";
+				author = "Misriah 288 DJP";
+				textures[] = {"288th_Vehicles\Warthog\FSV\288th_M12HogMaav_extupper_co.paa","\OPTRE_Vehicles\Warthog\data\M12HogMaav_extunder_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m68_turret_co.paa","\OPTRE_Vehicles\Warthog\data\turrets\m12_turret_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\apc_lopo_co.paa"};
+			};
 		};
-		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1};
+		textureList[] = {"colorstand",1,"colornight",1,"colorsand",1,"colorsnow",1,"colorwood",1,"Brimstone",1};
 	};
 	class 288th_Static_MLMS: OPTRE_Static_AA{
 		dlc = "288th";
@@ -9738,7 +10054,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		scopeCurator = 2;
-		displayName = "[288th] SRS99XT Kit";
+		displayName = "SRS99XT Kit";
 		model = "\z\ace\addons\apl\ACE_CSW_Bag.p3d";
 		modes = [];
 		picture = "\OPTRE_weapons\sniper\icons\sniper.paa";
@@ -9761,7 +10077,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		scopeCurator = 2;
-		displayName = "[288th] SRS99XT Kit (High)";
+		displayName = "SRS99XT Kit (High)";
 	};
 };
 

@@ -1,0 +1,11 @@
+////////////////////////////////////////////
+// Function file for ArmA 3
+// Created by: justokin
+///// Addon : justbuild
+//////////////////////////////////////////////////////////////////
+params ["_obj"];
+
+
+_cost = _this;
+
+/////unused code for anitsatsi cost (subtractr from global variable for money)

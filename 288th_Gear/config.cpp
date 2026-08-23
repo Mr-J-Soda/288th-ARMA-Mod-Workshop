@@ -1519,16 +1519,6 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\JFO_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\JFO_Visor_Teal_CO.paa"};
 	};
 
-	////MA JFO Personal Helmets
-	class 288th_JFO_Helmet_Kennedy: 288th_JFO_Helmet
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		displayName = "[288th] JFO (Kennedy)";
-		optreVarietys[] = {"","","_broken"};
-		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\Kennedy\JFO_Helmet_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_JFO\Kennedy\JFO_Visor_CO.paa"};
-	};
-
 	//MA JFO ONI Helmet
 	class 288th_JFO_Helmet_ONI: 288th_JFO_Helmet
 	{
@@ -2411,6 +2401,56 @@ class cfgWeapons
 		displayName = "[288th] MK IV G (Logic)";
 		optreVarietys[] = {"","","_broken"};
 		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Logic\Grenadier_Helmet_Logic_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Logic\Grenadier_Visor_Logic_CO.paa"};
+	};
+	class 288th_Grenadier_Helmet_Altman: 288th_Grenadier_Helmet
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] MK IV G (Altman)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Altman\Grenadier_Helmet_Altman_CO.paa","288th_Gear\Data\ODST\Brimstone_MA\Helmets_Grenadier\Altman\Grenadier_Visor_Altman_CO.paa"};
+	};
+
+	//Dummy Helmet
+	class OPTRE_UNSC_CH252D_Helmet;
+	class 288th_CH252D_Dummy: OPTRE_UNSC_CH252D_Helmet
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] CH252D (Dummy)";
+		optreVarietys[] = {"","","_broken"};
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Dummy\ODST_Dummy_Helmet.paa","288th_Gear\Data\ODST\Dummy\ODST_Dummy_Visor.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
+		subItems[] = {"288th_Mk5_NVG"};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel = "\OPTRE_UNSC_Units\Army\odst_helmet.p3d";
+			hiddenSelections[] = {"camo","camo2","camo3","camo4","H_Ghillie"};
+			hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Dummy\ODST_Dummy_Helmet.paa","288th_Gear\Data\ODST\Dummy\ODST_Dummy_Visor.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa"};
+			modelSides[] = {6};
+			passThrough = 0.1;
+			mass = 5;
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 45;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+					explosionShielding = 0.1;
+				};
+				class Head
+				{
+					armor = 45;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+					explosionShielding = 0.1;
+				};
+			};
+		};
+		ctab_camera = 0;
 	};
 
 
@@ -4578,6 +4618,46 @@ class cfgWeapons
 			"MA_Armor\data\vests\Marine_Pouches\data\MA_Med_TrooperExtras_B_CO.paa"
 		};
 	};
+	class 288th_ODST_Vest_Altman: 288th_ODST_Vest_Demolitions
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M56D Yellow (Altman)";
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\altman\MA_ODST_CQB_Diffuse.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\altman\MA_ODST_CQB_Diffuse.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\altman\MA_ODST_Marksman_Diffuse.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\altman\MA_ODST_Marksman_Diffuse.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\MA_ODST_Vest_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\MA_ODST_Shoulders_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Vests\Yellow\MA_ODST_Shoulders_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_A_CO.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa",
+			"MA_Armor\data\vests\Marine_Pouches\data\MA_TrooperExtras_B_CO.paa"
+		};
+	};
 
 	//MA ODST ONI Vests
 	class 288th_ODST_Vest_ONI: 288th_ODST_Vest_Rifleman
@@ -4951,6 +5031,79 @@ class cfgWeapons
 		};
 	};
 
+	//Dummy Armor
+	class 288th_M52D_Dummy: OPTRE_UNSC_M52D_Armor
+	{
+		dlc = "288thDJP_Aux";
+		scope = 2;
+		scopeArsenal = 2;
+		ace_arsenal_hide = 0;
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M52D (Dummy)";
+		model = "\OPTRE_UNSC_Units\Army\armor.p3d";
+		hiddenSelectionsTextures[] = {"288th_Gear\Data\ODST\Dummy\ODST_Dummy_Vest","288th_Gear\Data\ODST\Dummy\ODST_Dummy_Vest2","288th_Gear\Data\ODST\Dummy\ODST_Dummy_Legs.paa","OPTRE_UNSC_Units\army\data\ghillie_woodland_co.paa","288th_Gear\Data\ODST\Dummy\ODST_Dummy_Armor.paa"};
+		class ItemInfo: VestItem
+		{
+			vestType = "Rebreather";
+			uniformModel = "\OPTRE_UNSC_Units\Army\armor.p3d";
+			mass = 5;
+			modelSides[] = {6};
+			containerClass = "Supply250";
+			hiddenSelections[] = {"camo","camo2","camo3","camo4","camo5","A_Ghillie","A_KneesMarLeft","A_KneesMarRight","AS_BaseLeft","AS_BaseRight","AS_LargeLeft","AS_LargeRight","AS_MediumLeft","AS_MediumRight","AS_ODSTCQBLeft","AS_ODSTCQBRight","AS_ODSTSniperLeft","AS_ODSTSniperRight","AS_SmallLeft","AS_SmallRight","AP_AR","AP_BR","AP_Canteen","AP_GL","AP_Knife","AP_MGThigh","AP_AR","AP_Pack","AP_Pistol","AP_Rounds","AP_SG","AP_SMG","AP_Sniper","AP_Smoke","APO_AR","APO_Sniper","CustomKit_Scorch"};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 45;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
 	//MA Uniforms
 	class U_B_CombatUniform_mcam;
 	class 288th_BDU_ODST_HJ: U_B_CombatUniform_mcam
@@ -5318,6 +5471,21 @@ class cfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "288th_ODST_BDU_Bandit";
+			containerClass = "Supply200";
+			mass = 10;
+			uniformType = "Neopren";
+			modelSides[] = {6};
+		};
+	};
+	class 288th_BDU_ODST_Altman: 288th_BDU_ODST_NC
+	{
+		dlc = "288thDJP_Aux";
+		author = "Soda / Misriah 288";
+		displayName = "[288th] M56D Uniform (Altman)";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "288th_ODST_BDU_Altman";
 			containerClass = "Supply200";
 			mass = 10;
 			uniformType = "Neopren";
@@ -5766,6 +5934,25 @@ class cfgVehicles
 			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa"
 		};
 	};
+	class 288th_ODST_BDU_Altman: 288th_ODST_BDU_NC
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		scopeCurator = 0;
+		hiddenSelectionsTextures[] = 
+		{
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\Altman\MA_ODSTUpperBDU_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\Altman\MA_ODSTLowerBDU_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODST_Collar_CChip_CO.paa",
+			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\TrooperSoftpadding_CO.paa",
+			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\TrooperArmorStraps_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\MA_ODSTUpperArmor_CO.paa",
+			"288th_Gear\Data\ODST\Brimstone_MA\Uniform\Altman\MA_ODSTLowerArmor_CO.paa",
+			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa",
+			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa",
+			"MA_Armor\data\Uniforms\Marine\data\Color_Variants\MA_ODST_TrooperShoulders_CO.paa"
+		};
+	};
 };
 
 class XtdGearModels
@@ -5846,7 +6033,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "JFO";
-				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy","Kennedy"};
+				values[] = {"Ice","Red","Orange","Yellow","Green","Lime","Teal","Blue","Purple","Pink","White","Black","Navy","Maroon","Galaxy"};
 			};
 		};
 		class Recon_Helmet
@@ -5923,7 +6110,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Personal";
-				values[] = {"Whiskey","Butcher","Error","Bandit","Kelkuza","Johnson","Eugen","Kynetik","Snow","Weekers","Owlbear","Spice","Meyers","Glitch","Logic"};
+				values[] = {"Whiskey","Butcher","Error","Bandit","Kelkuza","Johnson","Eugen","Kynetik","Snow","Weekers","Owlbear","Spice","Meyers","Glitch","Logic","Altman"};
 			};
 		};
 		class Basic_Armor
@@ -5956,7 +6143,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Yellow Team";
-				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic","Butcher","Eugen","Bandit"};
+				values[] = {"Rifleman","Grenadier","Autorifleman","Marksman","Demolitions","Medic","Butcher","Eugen","Bandit","Altman"};
 			};
 		};
 		class BT_Armor
@@ -7075,6 +7262,11 @@ class XtdGearInfos
 			model = "Personal_Helmet";
 			member = "Logic";
 		};
+		class 288th_Grenadier_Helmet_Altman
+		{
+			model = "Personal_Helmet";
+			member = "Altman";
+		};
 		class 288th_MKVB_Helmet_Johnson
 		{
 			model = "Personal_Helmet";
@@ -7094,11 +7286,6 @@ class XtdGearInfos
 		{
 			model = "Personal_Helmet";
 			member = "Weekers";
-		};
-		class 288th_JFO_Helmet_Kennedy
-		{
-			model = "Personal_Helmet";
-			member = "Kennedy";
 		};
 
 		//Armors
@@ -7320,6 +7507,11 @@ class XtdGearInfos
 		{
 			model = "BT_Armor";
 			member = "Logic";
+		};
+		class 288th_ODST_Vest_Altman
+		{
+			model = "YT_Armor";
+			member = "Altman";
 		};
 
 		//Test Armors

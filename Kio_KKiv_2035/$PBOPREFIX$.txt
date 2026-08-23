@@ -1,0 +1,5 @@
+//<'Kio_KKiv_2035.pbo' properties via Mikero's dos tools, dll version 9.87>
+prefix=Kio_KKiv_2035;
+Mikero=DePbo.dll.6.19;
+//PboType=Arma Addon;
+//</properties>

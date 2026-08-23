@@ -290,6 +290,25 @@ class CfgMagazineWells
 			"288th_Loose_Slug_Smoke"
 		};
 	};
+	class 288th_shotgun_box
+    {
+        CfgMagazines[]=
+        {
+            "288th_Slug_Box",
+            "288th_Buckshot_Box",
+            "288th_Slug_Incendiary_Box",
+            "288th_Slug_Flechette_Box",
+            "288th_Slug_Taser_Box",
+            "288th_Slug_HEDP_Box",
+            "288th_Slug_EMP_Box",
+            "288th_Slug_SS_Box",
+            "288th_Slug_KO_Box",
+            "288th_Slug_Smoke_Box",
+            "288th_HEDP_Buckshot_Box",
+            "288th_Incendiary_Buckshot_Box",
+            "288th_Flechette_Buckshot_Box"
+        };
+    };
 	class 288th_M73X
 	{
 		CfgMagazines[] =
@@ -481,6 +500,24 @@ class CfgMagazineWells
 			"288th_10Rnd_Heat_Microgrenade"
 		};
 	};
+	class 288th_Microgrenades_Drum
+    {
+        CfgMagazines[] = 
+        {
+            "288th_10rnd_Microgrenade_Drum",
+            "288th_10Rnd_White_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_Red_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_Orange_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_Yellow_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_Green_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_Blue_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_Purple_Smoke_Microgrenade_Drum",
+            "288th_10Rnd_HE_Microgrenade_Drum",
+            "288th_10Rnd_HEDP_Microgrenade_Drum",
+            "288th_10Rnd_HEDPC_Microgrenade_Drum",
+            "288th_10Rnd_Heat_Microgrenade_Drum"
+        };
+    };
 	/*class 288th_AC_8
 	{
 		CfgMagazines[] =
@@ -497,6 +534,39 @@ class CfgMagazineWells
 			"288th_600Rnd_762_SLAPT"
 		};	
 	};
+	class 288th_Magwell_BR
+    {
+        CfgMagazines[]=
+        {
+            "288th_36Rnd_95_Mag",
+			"288th_36Rnd_95_Mag_Tracer",
+            "288th_36Rnd_95_Mag_AP",
+			"288th_36Rnd_95_Mag_APT",
+            "288th_36Rnd_95_Mag_SLAP",
+			"288th_36Rnd_95_Mag_SLAPT",
+            "288th_36Rnd_95_Mag_FMJ",
+            "288th_36Rnd_95_Mag_FMJT",
+            "288th_36Rnd_95_Mag_HV",
+			"288th_36Rnd_95_Mag_HVT",
+            "288th_36Rnd_95_Mag_HVAP",
+            "288th_36Rnd_95_Mag_HVAPT",
+            "288th_36Rnd_95_Mag_HPSAP",
+			"288th_36Rnd_95_Mag_HPSAPT",
+            "288th_36Rnd_95_Mag_EHP",
+            "288th_36Rnd_95_Mag_EHPT",
+            "288th_36Rnd_95_Mag_SAPHE",
+			"288th_36Rnd_95_Mag_SAPHET",
+            "288th_36Rnd_95_Mag_HE",
+            "288th_36Rnd_95_Mag_HET",
+            "288th_36Rnd_95_Mag_SS",
+			"288th_36Rnd_95_Mag_SST",
+            "288th_36Rnd_95_Mag_UW",
+            "288th_36Rnd_95_Mag_UWT",
+			"288th_36Rnd_95_Mag_S",
+			"288th_36Rnd_95_Mag_ST",
+            "288th_36Rnd_95_Mag_Taser"
+        };
+    };
 };
 
 class CfgRecoils
@@ -730,11 +800,48 @@ class cfgWeapons
 		LEBA_SWS_Tracking_Random_Chance = 50;
 		LEBA_SWS_Tracking_Speed = 150;
 	};
+
+	class arifle_MSBS65_UBS_black_F;
+	class EQPLUS_ShoulderTurret_WEP: arifle_MSBS65_UBS_black_F
+	{
+		magazineWell[] = {"288th_M99"};
+		magazines[] = {"288th_200Rnd_308"};
+	};
+
 	class OPTRE_M392_DMR;
 	class OPTRE_M393_DMR: OPTRE_M392_DMR
     {
         magazineWell[] = {"OPTRE_Magwell_M392_DMR"};
     };
+
+	class OPTRE_MA5C;
+	class OPTRE_MA5CGL;
+	class arifle_Mk20_F;
+	class OPTRE_MA37: OPTRE_MA5C
+    {
+        magazines[] = {"OPTRE_60Rnd_762x51_Mag"};        
+        magazineWell[] = {"OPTRE_Magwell_MA5B"};
+    };
+    class OPTRE_MA37GL: OPTRE_MA5CGL
+    {
+        magazines[] = {"OPTRE_60Rnd_762x51_Mag"};        
+        magazineWell[] = {"OPTRE_Magwell_MA5B"};
+    };    
+    class OPTRE_MA37B: OPTRE_MA37
+    {
+        magazines[] = {"OPTRE_60Rnd_762x51_Mag"};        
+        magazineWell[] = {"OPTRE_Magwell_MA5B"};
+    };    
+    class OPTRE_MA37BGL: OPTRE_MA37GL
+    {
+        magazines[] = {"OPTRE_60Rnd_762x51_Mag"};        
+        magazineWell[] = {"OPTRE_Magwell_MA5B"};
+    };    
+    class OPTRE_MA37K: arifle_Mk20_F
+    {
+        magazines[] = {"OPTRE_60Rnd_762x51_Mag"};        
+        magazineWell[] = {"OPTRE_Magwell_MA5B"};
+    }; 
 
 	class 288th_M99A2S3 : OPTRE_M99A2S3
 	{
@@ -937,9 +1044,9 @@ class cfgWeapons
 			reloadTime = 0.15;
 			minRange = 2;
 			minRangeProbab = 0.5;
-			midRange = 150;
+			midRange = 250;
 			midRangeProbab = 0.7;
-			maxRange = 250;
+			maxRange = 500;
 			maxRangeProbab = 0.2;
 		};
 		class FullAutoFast : FullAutoSlow
@@ -948,63 +1055,6 @@ class cfgWeapons
 			textureType = "fastAuto";
 		};
 	};
-	/*class 288th_Kennedy_M73: OPTRE_M73
-	{
-		dlc = "288thDJP_Aux";
-		author = "Soda / Misriah 288";
-		scope = 2;
-		scopeArsenal = 2;
-		ace_arsenal_hide = 0;
-		canShootInWater = 1;
-		displayName = "[288th] Kennedy's 'Battle Rifle'";
-		baseWeapon = "288th_Kennedy_M73";
-		magazines[] = {};
-		magazineWell[] = {"OPTRE_Magwell_M73","TCF_Magwell_M73H"};
-		HUD_BulletInARows = 3;
-		HUD_TotalPosibleBullet = 300;
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\M73X\M73_co.paa"};
-		cursor = "OPTRE_M73";
-		modes[] = { "FullAutoFast","FullAutoSlow" };
-		class FullAutoSlow : Mode_FullAuto
-		{
-			class BaseSoundModeType;
-			class StandardSound : BaseSoundModeType
-			{
-				soundSetShot[] = { "MMG02_Shot_SoundSet","MMG02_Tail_SoundSet","MMG02_InteriorTail_SoundSet" };
-			};
-			class SilencedSound : BaseSoundModeType
-			{
-				soundsetshot[] = { "MMG02_silencerShot_SoundSet","MMG02_silencerTail_SoundSet","MMG02_silencerInteriorTail_SoundSet" };
-			};
-			dispersion = 5e-05;
-			reloadTime = 0.1;
-			minRange = 2;
-			minRangeProbab = 0.5;
-			midRange = 150;
-			midRangeProbab = 0.7;
-			maxRange = 250;
-			maxRangeProbab = 0.2;
-		};
-		class FullAutoFast : FullAutoSlow
-		{
-			reloadTime = 0.05;
-			textureType = "fastAuto";
-		};
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "optre_m73_smartlink";
-			};
-			class LinkedItemsPointer
-			{
-				slot = "PointerSlot";
-				item = "OPTRE_M12_Laser";
-			};
-		};
-	};*/
 	class 288th_Butcher_M73: OPTRE_M73
 	{
 		dlc = "288thDJP_Aux";
@@ -2285,6 +2335,8 @@ class cfgWeapons
 			recoil = "recoil_single_ksg";
 			recoilProne = "recoil_single_prone_ksg";
 		};
+		hiddenSelections[] = {"camo","camo_reticle"};
+		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\Shotgun\m90_Ken_Wood.paa","#(argb,8,8,3)color(0.215686,0.945098,0.984314,1.0,co)"};
 	};
 	
 	//GLs
@@ -2393,7 +2445,7 @@ class cfgWeapons
 		reloadSound[] = {"WBK_SciFi_Weaponary\sounds\pistol_reload.ogg",2,1,30};
 		initspeed=190;
 		LEBA_SWS = 1;
-		LEBA_SWS_Tracking_Distance = 30;
+		LEBA_SWS_Tracking_Distance = 300;
 		LEBA_SWS_Tracking_Angle = 20;
 		LEBA_SWS_Autoaim_Cutoff = 0.2;
 		LEBA_SWS_Tracking_Random_Chance = 50;
@@ -2516,6 +2568,151 @@ class cfgWeapons
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\Side";
 				compatibleitems[] ={"OPTRE_M6G_Flashlight"};
+			};
+		};
+	};
+};
+class CfgVehicles
+{
+	class WeaponHolder;
+	class Item_ItemWatch;
+	class Land;
+	class House_F;
+	class LandVehicle: Land
+	{
+		class ViewPilot;
+		class NewTurret;
+	};
+	class StaticWeapon: LandVehicle
+	{
+		class AnimationSources;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class HitPoints;
+			};
+		};
+	};
+	class StaticMGWeapon: StaticWeapon
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+	class HMG_01_base_F: StaticMGWeapon
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret;
+			class ViewOptics;
+		};
+	};
+	class EQPLUS_ShoulderTurret: HMG_01_base_F
+	{
+		displayName = "ShoulderMountedTurret";
+		scope = 2;
+		scopeCurator = 2;
+		model = "\EquipmentPLUS\Turret\shoulderturret.p3d";
+		crew = "B_UAV_AI";
+		side = 1;
+		faction = "BLU_F";
+		class SimpleObject
+		{
+			eden = 1;
+			animate[] = {{"mainturret",0},{"maingun",0}};
+			hide[] = {};
+			verticalOffset = 1.206;
+			verticalOffsetWorld = 0.074;
+			init = "''";
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				selectionFireAnim = "muzzleflash";
+				body = "MainTurret";
+				gun = "MainGun";
+				animationsourcebody = "MainTurret";
+				animationSourceGun = "MainGun";
+				turretAxis = "gunh_axis";
+				gunAxis = "gunv_axis";
+				minElev = -60;
+				maxElev = 90;
+				minTurn = -45;
+				maxTurn = 180;
+				initTurn = 0;
+				maxHorizontalRotSpeed = 1.75;
+				maxVerticalRotSpeed = 1.5;
+				hideWeaponsGunner = 1;
+				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
+				stabilizedInAxes = 3;
+				outGunnerMayFire = 1;
+				inGunnerMayFire = 1;
+				commanding = 1;
+				primaryGunner = 1;
+				turretInfoType = "RscWeaponRangeZeroing";
+				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				memoryPointGun = "usti hlavne";
+				gunBeg = "usti hlavne";
+				gunEnd = "konec hlavne";
+				weapons[] = {"EQPLUS_ShoulderTurret_WEP"};
+				magazineWell[] = {"288th_M99"};
+				magazines[] = {"288th_200Rnd_308","288th_200Rnd_308","288th_200Rnd_308"};
+				memoryPointGunnerOptics = "gunnerview";
+				memoryPointGunnerOutOptics = "gunnerview";
+				gunnerOpticsShowCursor = 0;
+				castGunnerShadow = 0;
+				startEngine = 0;
+				enableManualFire = 0;
+				gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+				gunnerForceOptics = 0;
+				hasGunner = 1;
+				ejectDeadGunner = 0;
+				class ViewGunner: ViewOptics
+				{
+					initAngleX = 0;
+					initAngleY = 0;
+					minAngleX = -100;
+					maxAngleX = 100;
+					minAngleY = -180;
+					maxAngleY = 45;
+					initFov = 0.155;
+					minFov = 0.034;
+					maxFov = 0.155;
+					visionMode[] = {"Ti"};
+					gunnerOpticsColor[] = {0.91,0.23,0.91,1};
+					thermalMode[] = {0,1};
+					gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class GunDeactivate
+			{
+				source = "user";
+				initPhase = 1;
+				animPeriod = 2;
+			};
+			class bolt
+			{
+				source = "reload";
+				weapon = "EQPLUS_ShoulderTurret_WEP";
+			};
+			class bolt_2: bolt{};
+			class bolt_empty: bolt{};
+			class bolt_reload_move_1: bolt{};
+			class bolt_reload_move_2: bolt{};
+			class muzzleFlashROT
+			{
+				source = "ammoRandom";
+				weapon = "EQPLUS_ShoulderTurret_WEP";
 			};
 		};
 	};

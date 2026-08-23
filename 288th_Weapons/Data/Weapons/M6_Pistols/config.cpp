@@ -699,6 +699,78 @@ class cfgWeapons
 		};
 	};
 
+	class 288th_M6C_Riot_Shield: OPTRE_M6C_Riot_Shield
+    {
+        displayName = "[288th] Riot Shield (M6C)";
+        baseWeapon = "288th_M6C_Riot_Shield";
+        descriptionShort = "Riot Shield & 12.7mm Automatic Handgun";
+        ODST_1="OPTRE_ODST_HUD_AmmoCount_AR";
+        Glasses="OPTRE_GLASS_HUD_AmmoCount_AR";
+        Eye="OPTRE_EYE_HUD_AmmoCount_AR";
+        cursor="OPTRE_M6C";
+        HUD_BulletInARows=2;
+        HUD_TotalPosibleBullet=32;
+        modes[]=
+        {
+            "Single",
+            "FullAuto"
+        };
+        class Single: Single
+        {
+            sounds[]=
+            {
+                "StandardSound",
+                "SilencedSound"
+            };
+            class BaseSoundModeType;
+            class StandardSound: BaseSoundModeType
+            {
+                soundSetShot[]=
+                {
+                    "OPTRE_M6_Pistol_Shot_SoundSet",
+                    "4Five_Tail_SoundSet",
+                    "4Five_InteriorTail_SoundSet"
+                };
+            };
+            class SilencedSound: BaseSoundModeType
+            {
+                SoundSetShot[]=
+                {
+                    "4Five_silencerShot_SoundSet",
+                    "4Five_silencerTail_SoundSet",
+                    "4Five_silencerInteriorTail_SoundSet"
+                };
+            };
+            dispersion=4.9999999e-005;
+            reloadTime=0.075000003;
+            minRange=10;
+            minRangeProbab=0.5;
+            midRange=250;
+            midRangeProbab=0.1;
+            maxRange=500;
+            maxRangeProbab=0.050000001;
+            distanceZoomMin=100;
+            distanceZoomMax=500;
+        };
+        class FullAuto: Single
+        {
+            dispersion=4.9999999e-005;
+            displayName="FullAuto";
+            autoFire=1;
+            textureType="fullAuto";
+            reloadTime=0.075000003;
+        };
+        magazines[]=
+        {
+            "288th_32Rnd_127x40"
+        };
+        magazineWell[]=
+        {
+            "288th_M6C"
+        };
+        recoil="recoil_288_pistols";
+    };
+
 	//288th Sidearm SMG
 	class 288th_M6D_SMG: OPTRE_M6D_Carbine_F
 	{

@@ -22,7 +22,7 @@ class CfgMusicClasses
 
 class CfgMusic
 {
-	tracks[] = {KEYGEN_CHURCH,Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop,Battlefield_VI,Crazy_Train,Deadline,Hard_Reset};
+	tracks[] = {KEYGEN_CHURCH,Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop,Battlefield_VI,Crazy_Train,Deadline,Hard_Reset,Halo_Mashup,GOD_And_The_Broken_Ribs};
 	class Daredevil_AC7
 	{
 		name	= "Daredevil Ace Combat 7";
@@ -250,10 +250,26 @@ class CfgMusic
 	};
 	class Hard_Reset
 	{
-		name	= "Hard_Reset";
+		name	= "Hard Reset";
 		sound[]	= { "\288th_Music\HARD-RESET.ogg", db + 10, 1.0 };
         musicClass = "288th_Music_List";
         duration=198;
 		//https://www.youtube.com/watch?v=e7LYM4N_bxM
+	};
+	class Halo_Mashup
+	{
+		name	= "Halo Theme Mashup";
+		sound[]	= { "\288th_Music\Every_Halo_Theme_overlapped.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=300;
+		//https://www.youtube.com/watch?v=cZwFJClScX0
+	};
+	class GOD_And_The_Broken_Ribs
+	{
+		name	= "G.O.D. And The Broken Ribs";
+		sound[]	= { "\288th_Music\GOD_And_The_Broken_Ribs.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=223;
+		//https://www.youtube.com/watch?v=RCVe8rM-qw0
 	};
 };

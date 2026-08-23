@@ -185,6 +185,20 @@ class CfgMagazines
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
+	class 6Rnd_45ACP_Cylinder;
+	class MAR_Mangler_Mag_DHE: 6Rnd_45ACP_Cylinder
+	{
+		scope = 1;
+		scopeArsenal = 1;
+		ace_arsenal_hide = 1;
+		scopeCurator = 1;
+		displayName = "Mangler Rounds [DHE]";
+		displaynameshort = "DHE Mangler Rounds";
+		ammo = "B_ManglerRND_Spec";
+		count = 8;
+		tracersEvery = 1;
+		initspeed = 400;
+	};
 };
 
 class CfgGlasses
@@ -472,7 +486,7 @@ class CfgGlasses
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
 	};
-	class G_RegulatorMask_F;
+	/*class G_RegulatorMask_F;
 	class kat_mask_M50: G_RegulatorMask_F
 	{
 		scope = 1;
@@ -486,7 +500,7 @@ class CfgGlasses
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-	};
+	};*/
 };
 class cfgWeapons
 {
@@ -1462,7 +1476,7 @@ class cfgWeapons
 		scope = 1;
 	};
 	class ACE_ItemCore;
-	class kat_Armband_Red_Cross_Item: ACE_ItemCore
+	/*class kat_Armband_Red_Cross_Item: ACE_ItemCore
 	{
 		scope = 1;
 		scopeArsenal = 1;
@@ -1532,7 +1546,7 @@ class cfgWeapons
 		scopeArsenal = 1;
 		ace_arsenal_hide = 1;
 		scopeCurator = 1;
-	};
+	};*/
 	class Vest_Camo_Base;
 	class dev_flood_combat_vest: Vest_Camo_Base
 	{
