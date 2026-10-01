@@ -22,7 +22,7 @@ class CfgMusicClasses
 
 class CfgMusic
 {
-	tracks[] = {KEYGEN_CHURCH,Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop,Battlefield_VI,Crazy_Train,Deadline,Hard_Reset,Halo_Mashup,GOD_And_The_Broken_Ribs};
+	tracks[] = {KEYGEN_CHURCH,Daredevil_AC7,Fear_Liber_Tea,MECHANIZED_TRINITY,Hopeless,Purge_Protocol,Shadow_Work,Boss_Fight_PT_1,Boss_Fight_PT_2,Battle_for_Ganzir,Event_Horizon,Winged_Hussars,Generals_Theme,Steel_Haze,The_Only_Way,Cyberpsychosis,Sharkface,Artic_Battle_1,Artic_Battle_2,Artic_Battle_3,Mining_Facility,The_Union,Crumbling_lies,Klendathu_Drop,Battlefield_VI,Crazy_Train,Deadline,Hard_Reset,Halo_Mashup,GOD_And_The_Broken_Ribs,Raven_Crown,eidolon_boss,Final_Push};
 	class Daredevil_AC7
 	{
 		name	= "Daredevil Ace Combat 7";
@@ -271,5 +271,37 @@ class CfgMusic
         musicClass = "288th_Music_List";
         duration=223;
 		//https://www.youtube.com/watch?v=RCVe8rM-qw0
+	};
+	class Raven_Crown
+	{
+		name	= "Raven Crown";
+		sound[]	= { "\288th_Music\Raven_Crown.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=209;
+		//https://www.youtube.com/watch?v=RCVe8rM-qw0
+	};
+	class eidolon_boss
+	{
+		name	= "Mechanical Boss Fight";
+		sound[]	= { "\288th_Music\eidolon_boss.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=206;
+		//https://www.youtube.com/watch?v=RCVe8rM-qw0
+	};
+	class Final_Push
+	{
+		name	= "Final Push";
+		sound[]	= { "\288th_Music\Final_Push.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=162;
+		//https://www.youtube.com/watch?v=p-UTEUS8fqY
+	};
+	class Hot_Drop
+	{
+		name	= "Dropping in Hot";
+		sound[]	= { "\288th_Music\Dropping_In_Hot.ogg", db + 10, 1.0 };
+        musicClass = "288th_Music_List";
+        duration=171;
+		//https://www.youtube.com/watch?v=SLC3DblFaoA
 	};
 };

@@ -2346,6 +2346,20 @@ class cfgAmmo
 	{
 		cartridge = "FxCartridge_small";
 	};
+
+	class M319_HE;
+    class 288th_40_Oliver_HCHE: M319_HE
+    {
+        hit = 150;
+        indirectHit = 60;
+        caliber = 5;
+    };
+    class 288th_40_Oliver_Shrapnel: 288th_Buckshot_Pellet
+    {
+        submunitionConeType[] = {"poissondisc",20};
+        submunitionAmmo = "288th_127x40_EHP";
+    };
+
 	//custom 14.5x114 Sub-Sonic
 	class 288th_145x114_SS: OPTRE_B_145x114_APFSDS
 	{

@@ -1038,6 +1038,60 @@ class cfgWeapons
 			reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
 		};
 	};
+	class 288th_Breach_Meyers: 288th_M28A3_Breach
+    {
+        dlc = "288thDJP_Aux";
+        author = "Tetra";
+        displayName = "[288th] XM28A4E1 Multipurpose Rifle";
+        baseWeapon = "288th_Breach_Meyers";
+        modes[] = {"FullAuto","Single"};
+        magazineWell[] = {"288th_Snowfox"};
+        magazines[] = {"288th_20Rnd_308"};
+        hiddenSelectionsTextures[] = {"\288th_Weapons\Data\Weapons\AR_Rifles\Meyers\Meyers_M28_co.paa","\A3\Weapons_F_Exp\Rifles\ARX\Data\arifle_ARX_blk_02_F_co.paa"};
+        class FullAuto: FullAuto
+        {
+            reloadTime = 0.075;
+            dispersion = 5e-05;
+            minRange = 0;
+            minRangeProbab = 0.9;
+            midRange = 15;
+            midRangeProbab = 0.7;
+            maxRange = 30;
+            maxRangeProbab = 0.1;
+            aiRateOfFire = 1e-06;
+            class BaseSoundModeType
+            {
+                weaponSoundEffect = "DefaultRifle";
+                closure1[] = {};
+                closure2[] = {};
+                soundClosure[] = {"closure1",0.5,"closure2",0.5};
+            };
+            class SilencedSound
+            {
+                soundSetShot[] = {"DMR05_silencerShot_SoundSet","DMR05_silencerTail_SoundSet","DMR05_silencerInteriorTail_SoundSet"};
+            };
+            class StandardSound
+            {
+                soundSetShot[] = {"DMR05_Shot_SoundSet","DMR05_tail_SoundSet","DMR05_InteriorTail_SoundSet"};
+            };
+        };
+        class secondary: 288th_CQS_48X
+        {
+            canShootInWater = 1;
+            displayName = "XM28A4E1 Underbarrel w. Shotgun Modification";
+            modes[] = {"FullAuto"};
+            magazines[] = {"288th_Loose_Normal_Buckshot"};
+            magazineWell[] = {"288th_Shotgun_Pump"};
+            picture = "";
+            recoil = "recoil_ARX_secondary";
+            reloadAction = "GestureReloadARX2";
+            reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
+            class FullAuto: FullAuto
+            {
+                reloadTime = 0.3;
+            };
+        };
+    };
 
 	/*class 288th_M28A3_Kelkuza : OPTRE_M26_Shotgun_F
 	{
@@ -1969,6 +2023,13 @@ class cfgWeapons
             midRangeProbab = 0.7;
             maxRange = 600;
             maxRangeProbab = 0.05;
+        };
+		class WeaponSlotsInfo: WeaponSlotsInfo
+        {
+            class CowsSlot: CowsSlot
+            {
+                compatibleitems[] = {"Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","288th_M6C_Scope","288th_M7_Sight","288th_Hamr_Scope","optic_dms","optic_aco_grn","optic_aco","optic_holosight_blk_f","optic_khs_blk","optic_hamr","optic_sos","optic_lrps","optic_erco_blk_f","optic_ams","optic_yorris","optic_aco_smg","optic_aco_grn_smg","optic_holosight_smg_blk_f","optic_mrd_black","optre_m393_eotech","optre_m7_sight","optre_m392_scope","optre_br55hb_scope","OPTRE_BR45_Scope","OPTRE_M12_Optic","TCF_M393_EOTECH_v2"};
+            };
         };
         
     }; 

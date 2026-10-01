@@ -539,32 +539,70 @@ class CfgMagazineWells
         CfgMagazines[]=
         {
             "288th_36Rnd_95_Mag",
-			"288th_36Rnd_95_Mag_Tracer",
+			"288th_36Rnd_95_Mag_T",
             "288th_36Rnd_95_Mag_AP",
 			"288th_36Rnd_95_Mag_APT",
             "288th_36Rnd_95_Mag_SLAP",
-			"288th_36Rnd_95_Mag_SLAPT",
+	        "288th_36Rnd_95_Mag_SLAPT",
             "288th_36Rnd_95_Mag_FMJ",
-            "288th_36Rnd_95_Mag_FMJT",
+			"288th_36Rnd_95_Mag_FMJT",
             "288th_36Rnd_95_Mag_HV",
 			"288th_36Rnd_95_Mag_HVT",
             "288th_36Rnd_95_Mag_HVAP",
-            "288th_36Rnd_95_Mag_HVAPT",
+			"288th_36Rnd_95_Mag_HVAPT",
             "288th_36Rnd_95_Mag_HPSAP",
 			"288th_36Rnd_95_Mag_HPSAPT",
             "288th_36Rnd_95_Mag_EHP",
-            "288th_36Rnd_95_Mag_EHPT",
+			"288th_36Rnd_95_Mag_EHPT",
             "288th_36Rnd_95_Mag_SAPHE",
 			"288th_36Rnd_95_Mag_SAPHET",
             "288th_36Rnd_95_Mag_HE",
-            "288th_36Rnd_95_Mag_HET",
+			"288th_36Rnd_95_Mag_HET",
             "288th_36Rnd_95_Mag_SS",
 			"288th_36Rnd_95_Mag_SST",
             "288th_36Rnd_95_Mag_UW",
             "288th_36Rnd_95_Mag_UWT",
-			"288th_36Rnd_95_Mag_S",
-			"288th_36Rnd_95_Mag_ST",
             "288th_36Rnd_95_Mag_Taser"
+        };
+    };
+	class 288th_40_Oliver_Magwell
+    {
+        CfgMagazines[]=
+        {
+            "UGL_FlareWhite_F",
+            "UGL_FlareGreen_F",
+            "UGL_FlareRed_F",
+            "UGL_FlareYellow_F",
+            "UGL_FlareWhite_Illumination_F",
+            "UGL_FlareGreen_Illumination_F",
+            "UGL_FlareRed_Illumination_F",
+            "UGL_FlareYellow_Illumination_F",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "1Rnd_SmokeYellow_Grenade_shell",
+            "1Rnd_SmokePurple_Grenade_shell",
+            "1Rnd_SmokeBlue_Grenade_shell",
+            "1Rnd_SmokeOrange_Grenade_shell",
+            "M319_Smoke",
+            "M319_Smoke_Orange",
+            "M319_Smoke_Green",
+            "M319_Smoke_Red",
+            "UGL_FlareCIR_F",
+            "3Rnd_UGL_FlareWhite_F",
+            "3Rnd_UGL_FlareGreen_F",
+            "3Rnd_UGL_FlareRed_F",
+            "3Rnd_UGL_FlareYellow_F",
+            "3Rnd_UGL_FlareCIR_F",
+            "3Rnd_Smoke_Grenade_shell",
+            "3Rnd_SmokeRed_Grenade_shell",
+            "3Rnd_SmokeGreen_Grenade_shell",
+            "3Rnd_SmokeYellow_Grenade_shell",
+            "3Rnd_SmokePurple_Grenade_shell",
+            "3Rnd_SmokeBlue_Grenade_shell",
+            "3Rnd_SmokeOrange_Grenade_shell",
+            "288th_1Rnd_40_HCHE",
+            "288th_1Rnd_40_Shrapnel"
         };
     };
 };
@@ -694,6 +732,12 @@ class cfgWeapons
 		ace_arsenal_hide = 0;
 		canShootInWater = 1;
 	};
+	class OPTRE_Handgun_Base;
+	class OPTRE_M319M: OPTRE_Handgun_Base
+    {
+        ace_arsenal_hide = 0;
+        scopeCurator = 0;
+    };
 
 	//ACE Keys
 	class ACE_ItemCore;
@@ -2362,6 +2406,22 @@ class cfgWeapons
 		baseWeapon = "288th_Butcher_M319X";
 		hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\GL\Bandit_GL_CO.paa","optre_weapons\gl\data\logos_ca.paa","optre_weapons\br\data\gl\sight_co.paa","optre_weapons\br\data\gl\ubgl_reticle.paa","optre_weapons\gl\data\scope_co.paa"};
 	};
+	class 288th_Oliver_M319M: OPTRE_M319M
+    {
+        scope = 2;
+        scopeArsenal = 2;
+        ace_arsenal_hide = 0;
+        scopeCurator = 0;
+        baseWeapon = "288th_Oliver_M319M";
+        dlc = "288thDJP_Aux";
+        author = "Tetra";
+        displayName = "[288th] M319M 'Noisy Rabbit'";
+        descriptionShort = "Modified Handheld Signal Launcher";
+        hiddenSelections[] = {"camoLogo","camoBody"};
+        hiddenSelectionsTextures[] = {"288th_Weapons\Data\Weapons\GL\Oliver\oliver_logos_ca.paa","288th_Weapons\Data\Weapons\GL\Oliver\oliver_mini_co.paa"};
+        magazineWell[] = {"288th_40_Oliver_Magwell","CBA_40mm_M203","CBA_40mm_EGLM"};
+        magazines[] = {"M319_Smoke","M319_Smoke_Orange","M319_Smoke_Green","M319_Smoke_Red","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};    
+    };
 
 	class 288th_GL15R : arifle_SDAR_F
 	{
